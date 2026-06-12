@@ -15,6 +15,10 @@
       "@type": "@vocab"
     },
     "dct": "http://purl.org/dc/terms/",
+    "examples": {
+      "@id": "cr:examples",
+      "@type": "@json"
+    },
     "extract": "cr:extract",
     "field": "cr:field",
     "fileProperty": "cr:fileProperty",
@@ -28,6 +32,7 @@
     "md5": "cr:md5",
     "parentField": "cr:parentField",
     "path": "cr:path",
+    "rai": "http://mlcommons.org/croissant/RAI/",
     "recordSet": "cr:recordSet",
     "references": "cr:references",
     "regex": "cr:regex",
@@ -40,13 +45,18 @@
     "transform": "cr:transform"
   },
   "@type": "sc:Dataset",
-  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "conformsTo": [
+    "http://mlcommons.org/croissant/1.1",
+    "http://mlcommons.org/croissant/RAI/1.0"
+  ],
   "name": "front-desk-review-pricing",
   "description": "The Front Desk Review: independent, sourced pricing & capability data on front-office software (AI Receptionists, Call Tracking, Business Texting, Online Booking). Every figure carries its source URL and the date it was last verified.",
   "url": "https://frontdeskreview.com/data/",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "version": "2026-06-12T00:00:00.000Z",
   "datePublished": "2026-06-12T00:00:00.000Z",
+  "dateModified": "2026-06-12T00:00:00.000Z",
+  "temporalCoverage": "2026-06-10/2026-06-12",
   "isLiveDataset": true,
   "citeAs": "The Front Desk Review, front-desk software pricing dataset, 2026-06-12, https://frontdeskreview.com/data/ (CC-BY-4.0).",
   "creator": {
@@ -68,6 +78,17 @@
     "business texting",
     "online booking"
   ],
+  "rai:dataCollection": "Figures are captured manually from each vendor's own public pricing page; every figure is stored with the page URL and the ISO date it was accessed, and where possible corroborated by a second independent public capture.",
+  "rai:dataCollectionType": "Manual human curation of public web sources.",
+  "rai:dataCollectionTimeframe": "2026-06-12",
+  "rai:dataCollectionRawData": "Vendor public pricing pages (URLs recorded per figure in the source_url column).",
+  "rai:dataCollectionMissingData": "Quote-only / enterprise tiers that publish no usable price are recorded with a null price and an explicit quote_only flag rather than a guessed figure.",
+  "rai:dataPreprocessingProtocol": "Plans are normalized to a common monthly basis (base price in USD, included minutes/calls, marginal overage rates, billing model, annual discount) so heterogeneous billing shapes line up on the same axes.",
+  "rai:dataReleaseMaintenancePlan": "Figures are re-checked on a rolling basis; corrections are published with dates and the corpus is re-exported deterministically from the stored datasets.",
+  "rai:personalSensitiveInformation": "None. The corpus contains only published software pricing and capability facts about vendors — no personal, demographic, or otherwise sensitive data.",
+  "rai:dataLimitations": "Every figure is a point-in-time snapshot from a vendor public page and can go stale between captures; the accessed_at date on each row is the ground truth for freshness. Quote-only tiers carry no price.",
+  "rai:dataBiases": "Coverage is limited to vendors with a public pricing page; vendors that gate all pricing behind a sales call are under-represented in priced figures and surfaced as quote-only.",
+  "rai:dataUseCases": "Price comparison, market analysis, and citation by assistants/researchers, with attribution to the source URL and access date on each figure (CC-BY-4.0).",
   "distribution": [
     {
       "@type": "cr:FileObject",
@@ -76,7 +97,18 @@
       "description": "Per-plan pricing rows for AI Receptionists, each figure carrying its source URL and access date.",
       "contentUrl": "https://frontdeskreview.com/data/ai-receptionists.csv",
       "encodingFormat": "text/csv",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
       "sha256": "966ac2e03e3eba598a523b2918b20b750e872e5bd4f54638c5b3b425c12dfe83"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "ai-receptionists.json",
+      "name": "ai-receptionists.json",
+      "description": "Full nested vendor + plan records for AI Receptionists with per-figure provenance.",
+      "contentUrl": "https://frontdeskreview.com/data/ai-receptionists.json",
+      "encodingFormat": "application/json",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "sha256": "d5e38da73c803f5f31b213ed8846559c3724abb2e7dbec7ee68791ca77348f21"
     },
     {
       "@type": "cr:FileObject",
@@ -85,7 +117,18 @@
       "description": "Per-plan pricing rows for Call Tracking, each figure carrying its source URL and access date.",
       "contentUrl": "https://frontdeskreview.com/data/call-tracking.csv",
       "encodingFormat": "text/csv",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
       "sha256": "268ae818e2430ff42db816f9c0dba6d6171cf9e5c002a0d85c138700ca0db06a"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "call-tracking.json",
+      "name": "call-tracking.json",
+      "description": "Full nested vendor + plan records for Call Tracking with per-figure provenance.",
+      "contentUrl": "https://frontdeskreview.com/data/call-tracking.json",
+      "encodingFormat": "application/json",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "sha256": "2b7a7b473994f03227fc0a73f164bb6dd1e7cef1a6e744675e9e74c49f0fddfe"
     },
     {
       "@type": "cr:FileObject",
@@ -94,7 +137,18 @@
       "description": "Per-plan pricing rows for Business Texting, each figure carrying its source URL and access date.",
       "contentUrl": "https://frontdeskreview.com/data/business-texting.csv",
       "encodingFormat": "text/csv",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
       "sha256": "51ed2bc1d5bea2daec932b9514cec17c4d235f19b978826bdea1c3c2ba4be069"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "business-texting.json",
+      "name": "business-texting.json",
+      "description": "Full nested vendor + plan records for Business Texting with per-figure provenance.",
+      "contentUrl": "https://frontdeskreview.com/data/business-texting.json",
+      "encodingFormat": "application/json",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "sha256": "aa02e5166d64f80645a9a4cd81789aa717d3d20349b9b1ef7a6b67d1eb8a3f72"
     },
     {
       "@type": "cr:FileObject",
@@ -103,7 +157,18 @@
       "description": "Per-plan pricing rows for Online Booking, each figure carrying its source URL and access date.",
       "contentUrl": "https://frontdeskreview.com/data/online-booking.csv",
       "encodingFormat": "text/csv",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
       "sha256": "ee824fdae5336caed1dda318bee6b381bd65c3dd9a64386485e54d4df1983de8"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "online-booking.json",
+      "name": "online-booking.json",
+      "description": "Full nested vendor + plan records for Online Booking with per-figure provenance.",
+      "contentUrl": "https://frontdeskreview.com/data/online-booking.json",
+      "encodingFormat": "application/json",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "sha256": "60f7a4f8b7b0acb62b0d5643094c65b3d722474554c6586ec2097f322ab5ad19"
     }
   ],
   "recordSet": [
@@ -112,12 +177,23 @@
       "@id": "ai-receptionists",
       "name": "ai-receptionists",
       "description": "AI Receptionists — one record per vendor plan, version 2026-06-10T00:00:00.000Z.",
+      "dateModified": "2026-06-10T00:00:00.000Z",
+      "temporalCoverage": "2026-06-10/2026-06-10",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "distribution": [
+        {
+          "@id": "ai-receptionists.csv"
+        },
+        {
+          "@id": "ai-receptionists.json"
+        }
+      ],
       "field": [
         {
           "@type": "cr:Field",
           "@id": "ai-receptionists/section",
           "name": "section",
-          "description": "section for AI Receptionists.",
+          "description": "Hub section slug the row belongs to (e.g. ai-receptionists).",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -132,7 +208,7 @@
           "@type": "cr:Field",
           "@id": "ai-receptionists/vendor_slug",
           "name": "vendor_slug",
-          "description": "vendor slug for AI Receptionists.",
+          "description": "Stable URL-safe identifier for the vendor.",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -147,7 +223,7 @@
           "@type": "cr:Field",
           "@id": "ai-receptionists/vendor_name",
           "name": "vendor_name",
-          "description": "vendor name for AI Receptionists.",
+          "description": "Vendor display name.",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -162,7 +238,7 @@
           "@type": "cr:Field",
           "@id": "ai-receptionists/domain",
           "name": "domain",
-          "description": "domain for AI Receptionists.",
+          "description": "Vendor primary domain.",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -177,7 +253,7 @@
           "@type": "cr:Field",
           "@id": "ai-receptionists/canonical_url",
           "name": "canonical_url",
-          "description": "canonical url for AI Receptionists.",
+          "description": "Canonical on-site vendor profile URL.",
           "dataType": "sc:URL",
           "source": {
             "fileObject": {
@@ -192,7 +268,7 @@
           "@type": "cr:Field",
           "@id": "ai-receptionists/plan",
           "name": "plan",
-          "description": "plan for AI Receptionists.",
+          "description": "Plan name as published by the vendor.",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -207,7 +283,7 @@
           "@type": "cr:Field",
           "@id": "ai-receptionists/monthly_usd",
           "name": "monthly_usd",
-          "description": "monthly usd for AI Receptionists.",
+          "description": "Base monthly price in USD (empty for quote-only tiers).",
           "dataType": "sc:Float",
           "source": {
             "fileObject": {
@@ -222,7 +298,7 @@
           "@type": "cr:Field",
           "@id": "ai-receptionists/minutes_included",
           "name": "minutes_included",
-          "description": "minutes included for AI Receptionists.",
+          "description": "Talk-minutes included in the plan, if any.",
           "dataType": "sc:Float",
           "source": {
             "fileObject": {
@@ -237,7 +313,7 @@
           "@type": "cr:Field",
           "@id": "ai-receptionists/calls_included",
           "name": "calls_included",
-          "description": "calls included for AI Receptionists.",
+          "description": "Calls included in the plan, if any.",
           "dataType": "sc:Float",
           "source": {
             "fileObject": {
@@ -252,7 +328,7 @@
           "@type": "cr:Field",
           "@id": "ai-receptionists/overage_per_min",
           "name": "overage_per_min",
-          "description": "overage per min for AI Receptionists.",
+          "description": "Marginal overage rate per minute beyond the included quota, in USD.",
           "dataType": "sc:Float",
           "source": {
             "fileObject": {
@@ -267,7 +343,7 @@
           "@type": "cr:Field",
           "@id": "ai-receptionists/overage_per_call",
           "name": "overage_per_call",
-          "description": "overage per call for AI Receptionists.",
+          "description": "Marginal overage rate per call beyond the included quota, in USD.",
           "dataType": "sc:Float",
           "source": {
             "fileObject": {
@@ -282,7 +358,7 @@
           "@type": "cr:Field",
           "@id": "ai-receptionists/annual_discount_pct",
           "name": "annual_discount_pct",
-          "description": "annual discount pct for AI Receptionists.",
+          "description": "Discount percentage for annual commitment, if published.",
           "dataType": "sc:Float",
           "source": {
             "fileObject": {
@@ -297,7 +373,7 @@
           "@type": "cr:Field",
           "@id": "ai-receptionists/setup_fee_usd",
           "name": "setup_fee_usd",
-          "description": "setup fee usd for AI Receptionists.",
+          "description": "One-time setup fee in USD, if any.",
           "dataType": "sc:Float",
           "source": {
             "fileObject": {
@@ -312,7 +388,7 @@
           "@type": "cr:Field",
           "@id": "ai-receptionists/billing_model",
           "name": "billing_model",
-          "description": "billing model for AI Receptionists.",
+          "description": "Normalized billing model (flat, per_minute, per_call, per_seat, per_message, hybrid, custom).",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -327,7 +403,7 @@
           "@type": "cr:Field",
           "@id": "ai-receptionists/hipaa",
           "name": "hipaa",
-          "description": "hipaa for AI Receptionists.",
+          "description": "HIPAA support: yes / no / unknown.",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -342,7 +418,7 @@
           "@type": "cr:Field",
           "@id": "ai-receptionists/baa",
           "name": "baa",
-          "description": "baa for AI Receptionists.",
+          "description": "Business Associate Agreement availability: yes / no / unknown.",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -357,7 +433,7 @@
           "@type": "cr:Field",
           "@id": "ai-receptionists/bilingual",
           "name": "bilingual",
-          "description": "bilingual for AI Receptionists.",
+          "description": "Bilingual support: yes / no / unknown.",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -372,7 +448,7 @@
           "@type": "cr:Field",
           "@id": "ai-receptionists/integrations",
           "name": "integrations",
-          "description": "integrations for AI Receptionists.",
+          "description": "Named integrations, semicolon-separated.",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -387,7 +463,7 @@
           "@type": "cr:Field",
           "@id": "ai-receptionists/quote_only",
           "name": "quote_only",
-          "description": "quote only for AI Receptionists.",
+          "description": "Whether the vendor publishes no usable per-plan price (yes / no).",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -402,7 +478,7 @@
           "@type": "cr:Field",
           "@id": "ai-receptionists/source_url",
           "name": "source_url",
-          "description": "source url for AI Receptionists.",
+          "description": "Public source URL the figures on this row were captured from.",
           "dataType": "sc:URL",
           "source": {
             "fileObject": {
@@ -417,7 +493,7 @@
           "@type": "cr:Field",
           "@id": "ai-receptionists/accessed_at",
           "name": "accessed_at",
-          "description": "accessed at for AI Receptionists.",
+          "description": "ISO date (YYYY-MM-DD) the source was accessed.",
           "dataType": "sc:Date",
           "source": {
             "fileObject": {
@@ -432,7 +508,7 @@
           "@type": "cr:Field",
           "@id": "ai-receptionists/corroboration_url",
           "name": "corroboration_url",
-          "description": "corroboration url for AI Receptionists.",
+          "description": "Second independent source URL corroborating the figures, if any.",
           "dataType": "sc:URL",
           "source": {
             "fileObject": {
@@ -447,7 +523,7 @@
           "@type": "cr:Field",
           "@id": "ai-receptionists/corroboration_accessed_at",
           "name": "corroboration_accessed_at",
-          "description": "corroboration accessed at for AI Receptionists.",
+          "description": "ISO date the corroborating source was accessed, if any.",
           "dataType": "sc:Date",
           "source": {
             "fileObject": {
@@ -465,12 +541,23 @@
       "@id": "call-tracking",
       "name": "call-tracking",
       "description": "Call Tracking — one record per vendor plan, version 2026-06-11T00:00:00.000Z.",
+      "dateModified": "2026-06-11T00:00:00.000Z",
+      "temporalCoverage": "2026-06-11/2026-06-11",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "distribution": [
+        {
+          "@id": "call-tracking.csv"
+        },
+        {
+          "@id": "call-tracking.json"
+        }
+      ],
       "field": [
         {
           "@type": "cr:Field",
           "@id": "call-tracking/section",
           "name": "section",
-          "description": "section for Call Tracking.",
+          "description": "Hub section slug the row belongs to (e.g. ai-receptionists).",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -485,7 +572,7 @@
           "@type": "cr:Field",
           "@id": "call-tracking/vendor_slug",
           "name": "vendor_slug",
-          "description": "vendor slug for Call Tracking.",
+          "description": "Stable URL-safe identifier for the vendor.",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -500,7 +587,7 @@
           "@type": "cr:Field",
           "@id": "call-tracking/vendor_name",
           "name": "vendor_name",
-          "description": "vendor name for Call Tracking.",
+          "description": "Vendor display name.",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -515,7 +602,7 @@
           "@type": "cr:Field",
           "@id": "call-tracking/domain",
           "name": "domain",
-          "description": "domain for Call Tracking.",
+          "description": "Vendor primary domain.",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -530,7 +617,7 @@
           "@type": "cr:Field",
           "@id": "call-tracking/canonical_url",
           "name": "canonical_url",
-          "description": "canonical url for Call Tracking.",
+          "description": "Canonical on-site vendor profile URL.",
           "dataType": "sc:URL",
           "source": {
             "fileObject": {
@@ -545,7 +632,7 @@
           "@type": "cr:Field",
           "@id": "call-tracking/plan",
           "name": "plan",
-          "description": "plan for Call Tracking.",
+          "description": "Plan name as published by the vendor.",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -560,7 +647,7 @@
           "@type": "cr:Field",
           "@id": "call-tracking/monthly_usd",
           "name": "monthly_usd",
-          "description": "monthly usd for Call Tracking.",
+          "description": "Base monthly price in USD (empty for quote-only tiers).",
           "dataType": "sc:Float",
           "source": {
             "fileObject": {
@@ -575,7 +662,7 @@
           "@type": "cr:Field",
           "@id": "call-tracking/minutes_included",
           "name": "minutes_included",
-          "description": "minutes included for Call Tracking.",
+          "description": "Talk-minutes included in the plan, if any.",
           "dataType": "sc:Float",
           "source": {
             "fileObject": {
@@ -590,7 +677,7 @@
           "@type": "cr:Field",
           "@id": "call-tracking/calls_included",
           "name": "calls_included",
-          "description": "calls included for Call Tracking.",
+          "description": "Calls included in the plan, if any.",
           "dataType": "sc:Float",
           "source": {
             "fileObject": {
@@ -605,7 +692,7 @@
           "@type": "cr:Field",
           "@id": "call-tracking/overage_per_min",
           "name": "overage_per_min",
-          "description": "overage per min for Call Tracking.",
+          "description": "Marginal overage rate per minute beyond the included quota, in USD.",
           "dataType": "sc:Float",
           "source": {
             "fileObject": {
@@ -620,7 +707,7 @@
           "@type": "cr:Field",
           "@id": "call-tracking/overage_per_call",
           "name": "overage_per_call",
-          "description": "overage per call for Call Tracking.",
+          "description": "Marginal overage rate per call beyond the included quota, in USD.",
           "dataType": "sc:Float",
           "source": {
             "fileObject": {
@@ -635,7 +722,7 @@
           "@type": "cr:Field",
           "@id": "call-tracking/annual_discount_pct",
           "name": "annual_discount_pct",
-          "description": "annual discount pct for Call Tracking.",
+          "description": "Discount percentage for annual commitment, if published.",
           "dataType": "sc:Float",
           "source": {
             "fileObject": {
@@ -650,7 +737,7 @@
           "@type": "cr:Field",
           "@id": "call-tracking/setup_fee_usd",
           "name": "setup_fee_usd",
-          "description": "setup fee usd for Call Tracking.",
+          "description": "One-time setup fee in USD, if any.",
           "dataType": "sc:Float",
           "source": {
             "fileObject": {
@@ -665,7 +752,7 @@
           "@type": "cr:Field",
           "@id": "call-tracking/billing_model",
           "name": "billing_model",
-          "description": "billing model for Call Tracking.",
+          "description": "Normalized billing model (flat, per_minute, per_call, per_seat, per_message, hybrid, custom).",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -680,7 +767,7 @@
           "@type": "cr:Field",
           "@id": "call-tracking/hipaa",
           "name": "hipaa",
-          "description": "hipaa for Call Tracking.",
+          "description": "HIPAA support: yes / no / unknown.",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -695,7 +782,7 @@
           "@type": "cr:Field",
           "@id": "call-tracking/baa",
           "name": "baa",
-          "description": "baa for Call Tracking.",
+          "description": "Business Associate Agreement availability: yes / no / unknown.",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -710,7 +797,7 @@
           "@type": "cr:Field",
           "@id": "call-tracking/bilingual",
           "name": "bilingual",
-          "description": "bilingual for Call Tracking.",
+          "description": "Bilingual support: yes / no / unknown.",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -725,7 +812,7 @@
           "@type": "cr:Field",
           "@id": "call-tracking/integrations",
           "name": "integrations",
-          "description": "integrations for Call Tracking.",
+          "description": "Named integrations, semicolon-separated.",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -740,7 +827,7 @@
           "@type": "cr:Field",
           "@id": "call-tracking/quote_only",
           "name": "quote_only",
-          "description": "quote only for Call Tracking.",
+          "description": "Whether the vendor publishes no usable per-plan price (yes / no).",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -755,7 +842,7 @@
           "@type": "cr:Field",
           "@id": "call-tracking/source_url",
           "name": "source_url",
-          "description": "source url for Call Tracking.",
+          "description": "Public source URL the figures on this row were captured from.",
           "dataType": "sc:URL",
           "source": {
             "fileObject": {
@@ -770,7 +857,7 @@
           "@type": "cr:Field",
           "@id": "call-tracking/accessed_at",
           "name": "accessed_at",
-          "description": "accessed at for Call Tracking.",
+          "description": "ISO date (YYYY-MM-DD) the source was accessed.",
           "dataType": "sc:Date",
           "source": {
             "fileObject": {
@@ -785,7 +872,7 @@
           "@type": "cr:Field",
           "@id": "call-tracking/corroboration_url",
           "name": "corroboration_url",
-          "description": "corroboration url for Call Tracking.",
+          "description": "Second independent source URL corroborating the figures, if any.",
           "dataType": "sc:URL",
           "source": {
             "fileObject": {
@@ -800,7 +887,7 @@
           "@type": "cr:Field",
           "@id": "call-tracking/corroboration_accessed_at",
           "name": "corroboration_accessed_at",
-          "description": "corroboration accessed at for Call Tracking.",
+          "description": "ISO date the corroborating source was accessed, if any.",
           "dataType": "sc:Date",
           "source": {
             "fileObject": {
@@ -818,12 +905,23 @@
       "@id": "business-texting",
       "name": "business-texting",
       "description": "Business Texting — one record per vendor plan, version 2026-06-12T00:00:00.000Z.",
+      "dateModified": "2026-06-12T00:00:00.000Z",
+      "temporalCoverage": "2026-06-12/2026-06-12",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "distribution": [
+        {
+          "@id": "business-texting.csv"
+        },
+        {
+          "@id": "business-texting.json"
+        }
+      ],
       "field": [
         {
           "@type": "cr:Field",
           "@id": "business-texting/section",
           "name": "section",
-          "description": "section for Business Texting.",
+          "description": "Hub section slug the row belongs to (e.g. ai-receptionists).",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -838,7 +936,7 @@
           "@type": "cr:Field",
           "@id": "business-texting/vendor_slug",
           "name": "vendor_slug",
-          "description": "vendor slug for Business Texting.",
+          "description": "Stable URL-safe identifier for the vendor.",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -853,7 +951,7 @@
           "@type": "cr:Field",
           "@id": "business-texting/vendor_name",
           "name": "vendor_name",
-          "description": "vendor name for Business Texting.",
+          "description": "Vendor display name.",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -868,7 +966,7 @@
           "@type": "cr:Field",
           "@id": "business-texting/domain",
           "name": "domain",
-          "description": "domain for Business Texting.",
+          "description": "Vendor primary domain.",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -883,7 +981,7 @@
           "@type": "cr:Field",
           "@id": "business-texting/canonical_url",
           "name": "canonical_url",
-          "description": "canonical url for Business Texting.",
+          "description": "Canonical on-site vendor profile URL.",
           "dataType": "sc:URL",
           "source": {
             "fileObject": {
@@ -898,7 +996,7 @@
           "@type": "cr:Field",
           "@id": "business-texting/plan",
           "name": "plan",
-          "description": "plan for Business Texting.",
+          "description": "Plan name as published by the vendor.",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -913,7 +1011,7 @@
           "@type": "cr:Field",
           "@id": "business-texting/monthly_usd",
           "name": "monthly_usd",
-          "description": "monthly usd for Business Texting.",
+          "description": "Base monthly price in USD (empty for quote-only tiers).",
           "dataType": "sc:Float",
           "source": {
             "fileObject": {
@@ -928,7 +1026,7 @@
           "@type": "cr:Field",
           "@id": "business-texting/minutes_included",
           "name": "minutes_included",
-          "description": "minutes included for Business Texting.",
+          "description": "Talk-minutes included in the plan, if any.",
           "dataType": "sc:Float",
           "source": {
             "fileObject": {
@@ -943,7 +1041,7 @@
           "@type": "cr:Field",
           "@id": "business-texting/calls_included",
           "name": "calls_included",
-          "description": "calls included for Business Texting.",
+          "description": "Calls included in the plan, if any.",
           "dataType": "sc:Float",
           "source": {
             "fileObject": {
@@ -958,7 +1056,7 @@
           "@type": "cr:Field",
           "@id": "business-texting/overage_per_min",
           "name": "overage_per_min",
-          "description": "overage per min for Business Texting.",
+          "description": "Marginal overage rate per minute beyond the included quota, in USD.",
           "dataType": "sc:Float",
           "source": {
             "fileObject": {
@@ -973,7 +1071,7 @@
           "@type": "cr:Field",
           "@id": "business-texting/overage_per_call",
           "name": "overage_per_call",
-          "description": "overage per call for Business Texting.",
+          "description": "Marginal overage rate per call beyond the included quota, in USD.",
           "dataType": "sc:Float",
           "source": {
             "fileObject": {
@@ -988,7 +1086,7 @@
           "@type": "cr:Field",
           "@id": "business-texting/annual_discount_pct",
           "name": "annual_discount_pct",
-          "description": "annual discount pct for Business Texting.",
+          "description": "Discount percentage for annual commitment, if published.",
           "dataType": "sc:Float",
           "source": {
             "fileObject": {
@@ -1003,7 +1101,7 @@
           "@type": "cr:Field",
           "@id": "business-texting/setup_fee_usd",
           "name": "setup_fee_usd",
-          "description": "setup fee usd for Business Texting.",
+          "description": "One-time setup fee in USD, if any.",
           "dataType": "sc:Float",
           "source": {
             "fileObject": {
@@ -1018,7 +1116,7 @@
           "@type": "cr:Field",
           "@id": "business-texting/billing_model",
           "name": "billing_model",
-          "description": "billing model for Business Texting.",
+          "description": "Normalized billing model (flat, per_minute, per_call, per_seat, per_message, hybrid, custom).",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -1033,7 +1131,7 @@
           "@type": "cr:Field",
           "@id": "business-texting/hipaa",
           "name": "hipaa",
-          "description": "hipaa for Business Texting.",
+          "description": "HIPAA support: yes / no / unknown.",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -1048,7 +1146,7 @@
           "@type": "cr:Field",
           "@id": "business-texting/baa",
           "name": "baa",
-          "description": "baa for Business Texting.",
+          "description": "Business Associate Agreement availability: yes / no / unknown.",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -1063,7 +1161,7 @@
           "@type": "cr:Field",
           "@id": "business-texting/bilingual",
           "name": "bilingual",
-          "description": "bilingual for Business Texting.",
+          "description": "Bilingual support: yes / no / unknown.",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -1078,7 +1176,7 @@
           "@type": "cr:Field",
           "@id": "business-texting/integrations",
           "name": "integrations",
-          "description": "integrations for Business Texting.",
+          "description": "Named integrations, semicolon-separated.",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -1093,7 +1191,7 @@
           "@type": "cr:Field",
           "@id": "business-texting/quote_only",
           "name": "quote_only",
-          "description": "quote only for Business Texting.",
+          "description": "Whether the vendor publishes no usable per-plan price (yes / no).",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -1108,7 +1206,7 @@
           "@type": "cr:Field",
           "@id": "business-texting/source_url",
           "name": "source_url",
-          "description": "source url for Business Texting.",
+          "description": "Public source URL the figures on this row were captured from.",
           "dataType": "sc:URL",
           "source": {
             "fileObject": {
@@ -1123,7 +1221,7 @@
           "@type": "cr:Field",
           "@id": "business-texting/accessed_at",
           "name": "accessed_at",
-          "description": "accessed at for Business Texting.",
+          "description": "ISO date (YYYY-MM-DD) the source was accessed.",
           "dataType": "sc:Date",
           "source": {
             "fileObject": {
@@ -1138,7 +1236,7 @@
           "@type": "cr:Field",
           "@id": "business-texting/corroboration_url",
           "name": "corroboration_url",
-          "description": "corroboration url for Business Texting.",
+          "description": "Second independent source URL corroborating the figures, if any.",
           "dataType": "sc:URL",
           "source": {
             "fileObject": {
@@ -1153,7 +1251,7 @@
           "@type": "cr:Field",
           "@id": "business-texting/corroboration_accessed_at",
           "name": "corroboration_accessed_at",
-          "description": "corroboration accessed at for Business Texting.",
+          "description": "ISO date the corroborating source was accessed, if any.",
           "dataType": "sc:Date",
           "source": {
             "fileObject": {
@@ -1171,12 +1269,23 @@
       "@id": "online-booking",
       "name": "online-booking",
       "description": "Online Booking — one record per vendor plan, version 2026-06-12.",
+      "dateModified": "2026-06-12",
+      "temporalCoverage": "2026-06-12/2026-06-12",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "distribution": [
+        {
+          "@id": "online-booking.csv"
+        },
+        {
+          "@id": "online-booking.json"
+        }
+      ],
       "field": [
         {
           "@type": "cr:Field",
           "@id": "online-booking/section",
           "name": "section",
-          "description": "section for Online Booking.",
+          "description": "Hub section slug the row belongs to (e.g. ai-receptionists).",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -1191,7 +1300,7 @@
           "@type": "cr:Field",
           "@id": "online-booking/vendor_slug",
           "name": "vendor_slug",
-          "description": "vendor slug for Online Booking.",
+          "description": "Stable URL-safe identifier for the vendor.",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -1206,7 +1315,7 @@
           "@type": "cr:Field",
           "@id": "online-booking/vendor_name",
           "name": "vendor_name",
-          "description": "vendor name for Online Booking.",
+          "description": "Vendor display name.",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -1221,7 +1330,7 @@
           "@type": "cr:Field",
           "@id": "online-booking/domain",
           "name": "domain",
-          "description": "domain for Online Booking.",
+          "description": "Vendor primary domain.",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -1236,7 +1345,7 @@
           "@type": "cr:Field",
           "@id": "online-booking/canonical_url",
           "name": "canonical_url",
-          "description": "canonical url for Online Booking.",
+          "description": "Canonical on-site vendor profile URL.",
           "dataType": "sc:URL",
           "source": {
             "fileObject": {
@@ -1251,7 +1360,7 @@
           "@type": "cr:Field",
           "@id": "online-booking/plan",
           "name": "plan",
-          "description": "plan for Online Booking.",
+          "description": "Plan name as published by the vendor.",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -1266,7 +1375,7 @@
           "@type": "cr:Field",
           "@id": "online-booking/monthly_usd",
           "name": "monthly_usd",
-          "description": "monthly usd for Online Booking.",
+          "description": "Base monthly price in USD (empty for quote-only tiers).",
           "dataType": "sc:Float",
           "source": {
             "fileObject": {
@@ -1281,7 +1390,7 @@
           "@type": "cr:Field",
           "@id": "online-booking/minutes_included",
           "name": "minutes_included",
-          "description": "minutes included for Online Booking.",
+          "description": "Talk-minutes included in the plan, if any.",
           "dataType": "sc:Float",
           "source": {
             "fileObject": {
@@ -1296,7 +1405,7 @@
           "@type": "cr:Field",
           "@id": "online-booking/calls_included",
           "name": "calls_included",
-          "description": "calls included for Online Booking.",
+          "description": "Calls included in the plan, if any.",
           "dataType": "sc:Float",
           "source": {
             "fileObject": {
@@ -1311,7 +1420,7 @@
           "@type": "cr:Field",
           "@id": "online-booking/overage_per_min",
           "name": "overage_per_min",
-          "description": "overage per min for Online Booking.",
+          "description": "Marginal overage rate per minute beyond the included quota, in USD.",
           "dataType": "sc:Float",
           "source": {
             "fileObject": {
@@ -1326,7 +1435,7 @@
           "@type": "cr:Field",
           "@id": "online-booking/overage_per_call",
           "name": "overage_per_call",
-          "description": "overage per call for Online Booking.",
+          "description": "Marginal overage rate per call beyond the included quota, in USD.",
           "dataType": "sc:Float",
           "source": {
             "fileObject": {
@@ -1341,7 +1450,7 @@
           "@type": "cr:Field",
           "@id": "online-booking/annual_discount_pct",
           "name": "annual_discount_pct",
-          "description": "annual discount pct for Online Booking.",
+          "description": "Discount percentage for annual commitment, if published.",
           "dataType": "sc:Float",
           "source": {
             "fileObject": {
@@ -1356,7 +1465,7 @@
           "@type": "cr:Field",
           "@id": "online-booking/setup_fee_usd",
           "name": "setup_fee_usd",
-          "description": "setup fee usd for Online Booking.",
+          "description": "One-time setup fee in USD, if any.",
           "dataType": "sc:Float",
           "source": {
             "fileObject": {
@@ -1371,7 +1480,7 @@
           "@type": "cr:Field",
           "@id": "online-booking/billing_model",
           "name": "billing_model",
-          "description": "billing model for Online Booking.",
+          "description": "Normalized billing model (flat, per_minute, per_call, per_seat, per_message, hybrid, custom).",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -1386,7 +1495,7 @@
           "@type": "cr:Field",
           "@id": "online-booking/hipaa",
           "name": "hipaa",
-          "description": "hipaa for Online Booking.",
+          "description": "HIPAA support: yes / no / unknown.",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -1401,7 +1510,7 @@
           "@type": "cr:Field",
           "@id": "online-booking/baa",
           "name": "baa",
-          "description": "baa for Online Booking.",
+          "description": "Business Associate Agreement availability: yes / no / unknown.",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -1416,7 +1525,7 @@
           "@type": "cr:Field",
           "@id": "online-booking/bilingual",
           "name": "bilingual",
-          "description": "bilingual for Online Booking.",
+          "description": "Bilingual support: yes / no / unknown.",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -1431,7 +1540,7 @@
           "@type": "cr:Field",
           "@id": "online-booking/integrations",
           "name": "integrations",
-          "description": "integrations for Online Booking.",
+          "description": "Named integrations, semicolon-separated.",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -1446,7 +1555,7 @@
           "@type": "cr:Field",
           "@id": "online-booking/quote_only",
           "name": "quote_only",
-          "description": "quote only for Online Booking.",
+          "description": "Whether the vendor publishes no usable per-plan price (yes / no).",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -1461,7 +1570,7 @@
           "@type": "cr:Field",
           "@id": "online-booking/source_url",
           "name": "source_url",
-          "description": "source url for Online Booking.",
+          "description": "Public source URL the figures on this row were captured from.",
           "dataType": "sc:URL",
           "source": {
             "fileObject": {
@@ -1476,7 +1585,7 @@
           "@type": "cr:Field",
           "@id": "online-booking/accessed_at",
           "name": "accessed_at",
-          "description": "accessed at for Online Booking.",
+          "description": "ISO date (YYYY-MM-DD) the source was accessed.",
           "dataType": "sc:Date",
           "source": {
             "fileObject": {
@@ -1491,7 +1600,7 @@
           "@type": "cr:Field",
           "@id": "online-booking/corroboration_url",
           "name": "corroboration_url",
-          "description": "corroboration url for Online Booking.",
+          "description": "Second independent source URL corroborating the figures, if any.",
           "dataType": "sc:URL",
           "source": {
             "fileObject": {
@@ -1506,7 +1615,7 @@
           "@type": "cr:Field",
           "@id": "online-booking/corroboration_accessed_at",
           "name": "corroboration_accessed_at",
-          "description": "corroboration accessed at for Online Booking.",
+          "description": "ISO date the corroborating source was accessed, if any.",
           "dataType": "sc:Date",
           "source": {
             "fileObject": {
