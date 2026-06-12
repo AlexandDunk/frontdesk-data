@@ -1,0 +1,1523 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "citeAs": "cr:citeAs",
+    "column": "cr:column",
+    "conformsTo": "dct:conformsTo",
+    "cr": "http://mlcommons.org/croissant/",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "dct": "http://purl.org/dc/terms/",
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileProperty": "cr:fileProperty",
+    "fileObject": "cr:fileObject",
+    "fileSet": "cr:fileSet",
+    "format": "cr:format",
+    "includes": "cr:includes",
+    "isLiveDataset": "cr:isLiveDataset",
+    "jsonPath": "cr:jsonPath",
+    "key": "cr:key",
+    "md5": "cr:md5",
+    "parentField": "cr:parentField",
+    "path": "cr:path",
+    "recordSet": "cr:recordSet",
+    "references": "cr:references",
+    "regex": "cr:regex",
+    "repeated": "cr:repeated",
+    "replace": "cr:replace",
+    "sc": "https://schema.org/",
+    "separator": "cr:separator",
+    "source": "cr:source",
+    "subField": "cr:subField",
+    "transform": "cr:transform"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "front-desk-review-pricing",
+  "description": "The Front Desk Review: independent, sourced pricing & capability data on front-office software (AI Receptionists, Call Tracking, Business Texting, Online Booking). Every figure carries its source URL and the date it was last verified.",
+  "url": "https://frontdeskreview.com/data/",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "version": "2026-06-12T00:00:00.000Z",
+  "datePublished": "2026-06-12T00:00:00.000Z",
+  "isLiveDataset": true,
+  "citeAs": "The Front Desk Review, front-desk software pricing dataset, 2026-06-12, https://frontdeskreview.com/data/ (CC-BY-4.0).",
+  "creator": {
+    "@type": "sc:Organization",
+    "name": "The Front Desk Review",
+    "url": "https://frontdeskreview.com"
+  },
+  "publisher": {
+    "@type": "sc:Organization",
+    "name": "The Front Desk Review",
+    "url": "https://frontdeskreview.com"
+  },
+  "keywords": [
+    "pricing",
+    "software",
+    "front office",
+    "AI receptionist",
+    "call tracking",
+    "business texting",
+    "online booking"
+  ],
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "ai-receptionists.csv",
+      "name": "ai-receptionists.csv",
+      "description": "Per-plan pricing rows for AI Receptionists, each figure carrying its source URL and access date.",
+      "contentUrl": "https://frontdeskreview.com/data/ai-receptionists.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "966ac2e03e3eba598a523b2918b20b750e872e5bd4f54638c5b3b425c12dfe83"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "call-tracking.csv",
+      "name": "call-tracking.csv",
+      "description": "Per-plan pricing rows for Call Tracking, each figure carrying its source URL and access date.",
+      "contentUrl": "https://frontdeskreview.com/data/call-tracking.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "268ae818e2430ff42db816f9c0dba6d6171cf9e5c002a0d85c138700ca0db06a"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "business-texting.csv",
+      "name": "business-texting.csv",
+      "description": "Per-plan pricing rows for Business Texting, each figure carrying its source URL and access date.",
+      "contentUrl": "https://frontdeskreview.com/data/business-texting.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "51ed2bc1d5bea2daec932b9514cec17c4d235f19b978826bdea1c3c2ba4be069"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "online-booking.csv",
+      "name": "online-booking.csv",
+      "description": "Per-plan pricing rows for Online Booking, each figure carrying its source URL and access date.",
+      "contentUrl": "https://frontdeskreview.com/data/online-booking.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "ee824fdae5336caed1dda318bee6b381bd65c3dd9a64386485e54d4df1983de8"
+    }
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "ai-receptionists",
+      "name": "ai-receptionists",
+      "description": "AI Receptionists — one record per vendor plan, version 2026-06-10T00:00:00.000Z.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "ai-receptionists/section",
+          "name": "section",
+          "description": "section for AI Receptionists.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ai-receptionists.csv"
+            },
+            "extract": {
+              "column": "section"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "ai-receptionists/vendor_slug",
+          "name": "vendor_slug",
+          "description": "vendor slug for AI Receptionists.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ai-receptionists.csv"
+            },
+            "extract": {
+              "column": "vendor_slug"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "ai-receptionists/vendor_name",
+          "name": "vendor_name",
+          "description": "vendor name for AI Receptionists.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ai-receptionists.csv"
+            },
+            "extract": {
+              "column": "vendor_name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "ai-receptionists/domain",
+          "name": "domain",
+          "description": "domain for AI Receptionists.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ai-receptionists.csv"
+            },
+            "extract": {
+              "column": "domain"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "ai-receptionists/canonical_url",
+          "name": "canonical_url",
+          "description": "canonical url for AI Receptionists.",
+          "dataType": "sc:URL",
+          "source": {
+            "fileObject": {
+              "@id": "ai-receptionists.csv"
+            },
+            "extract": {
+              "column": "canonical_url"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "ai-receptionists/plan",
+          "name": "plan",
+          "description": "plan for AI Receptionists.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ai-receptionists.csv"
+            },
+            "extract": {
+              "column": "plan"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "ai-receptionists/monthly_usd",
+          "name": "monthly_usd",
+          "description": "monthly usd for AI Receptionists.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "ai-receptionists.csv"
+            },
+            "extract": {
+              "column": "monthly_usd"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "ai-receptionists/minutes_included",
+          "name": "minutes_included",
+          "description": "minutes included for AI Receptionists.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "ai-receptionists.csv"
+            },
+            "extract": {
+              "column": "minutes_included"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "ai-receptionists/calls_included",
+          "name": "calls_included",
+          "description": "calls included for AI Receptionists.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "ai-receptionists.csv"
+            },
+            "extract": {
+              "column": "calls_included"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "ai-receptionists/overage_per_min",
+          "name": "overage_per_min",
+          "description": "overage per min for AI Receptionists.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "ai-receptionists.csv"
+            },
+            "extract": {
+              "column": "overage_per_min"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "ai-receptionists/overage_per_call",
+          "name": "overage_per_call",
+          "description": "overage per call for AI Receptionists.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "ai-receptionists.csv"
+            },
+            "extract": {
+              "column": "overage_per_call"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "ai-receptionists/annual_discount_pct",
+          "name": "annual_discount_pct",
+          "description": "annual discount pct for AI Receptionists.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "ai-receptionists.csv"
+            },
+            "extract": {
+              "column": "annual_discount_pct"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "ai-receptionists/setup_fee_usd",
+          "name": "setup_fee_usd",
+          "description": "setup fee usd for AI Receptionists.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "ai-receptionists.csv"
+            },
+            "extract": {
+              "column": "setup_fee_usd"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "ai-receptionists/billing_model",
+          "name": "billing_model",
+          "description": "billing model for AI Receptionists.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ai-receptionists.csv"
+            },
+            "extract": {
+              "column": "billing_model"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "ai-receptionists/hipaa",
+          "name": "hipaa",
+          "description": "hipaa for AI Receptionists.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ai-receptionists.csv"
+            },
+            "extract": {
+              "column": "hipaa"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "ai-receptionists/baa",
+          "name": "baa",
+          "description": "baa for AI Receptionists.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ai-receptionists.csv"
+            },
+            "extract": {
+              "column": "baa"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "ai-receptionists/bilingual",
+          "name": "bilingual",
+          "description": "bilingual for AI Receptionists.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ai-receptionists.csv"
+            },
+            "extract": {
+              "column": "bilingual"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "ai-receptionists/integrations",
+          "name": "integrations",
+          "description": "integrations for AI Receptionists.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ai-receptionists.csv"
+            },
+            "extract": {
+              "column": "integrations"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "ai-receptionists/quote_only",
+          "name": "quote_only",
+          "description": "quote only for AI Receptionists.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ai-receptionists.csv"
+            },
+            "extract": {
+              "column": "quote_only"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "ai-receptionists/source_url",
+          "name": "source_url",
+          "description": "source url for AI Receptionists.",
+          "dataType": "sc:URL",
+          "source": {
+            "fileObject": {
+              "@id": "ai-receptionists.csv"
+            },
+            "extract": {
+              "column": "source_url"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "ai-receptionists/accessed_at",
+          "name": "accessed_at",
+          "description": "accessed at for AI Receptionists.",
+          "dataType": "sc:Date",
+          "source": {
+            "fileObject": {
+              "@id": "ai-receptionists.csv"
+            },
+            "extract": {
+              "column": "accessed_at"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "ai-receptionists/corroboration_url",
+          "name": "corroboration_url",
+          "description": "corroboration url for AI Receptionists.",
+          "dataType": "sc:URL",
+          "source": {
+            "fileObject": {
+              "@id": "ai-receptionists.csv"
+            },
+            "extract": {
+              "column": "corroboration_url"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "ai-receptionists/corroboration_accessed_at",
+          "name": "corroboration_accessed_at",
+          "description": "corroboration accessed at for AI Receptionists.",
+          "dataType": "sc:Date",
+          "source": {
+            "fileObject": {
+              "@id": "ai-receptionists.csv"
+            },
+            "extract": {
+              "column": "corroboration_accessed_at"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "call-tracking",
+      "name": "call-tracking",
+      "description": "Call Tracking — one record per vendor plan, version 2026-06-11T00:00:00.000Z.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "call-tracking/section",
+          "name": "section",
+          "description": "section for Call Tracking.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "call-tracking.csv"
+            },
+            "extract": {
+              "column": "section"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "call-tracking/vendor_slug",
+          "name": "vendor_slug",
+          "description": "vendor slug for Call Tracking.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "call-tracking.csv"
+            },
+            "extract": {
+              "column": "vendor_slug"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "call-tracking/vendor_name",
+          "name": "vendor_name",
+          "description": "vendor name for Call Tracking.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "call-tracking.csv"
+            },
+            "extract": {
+              "column": "vendor_name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "call-tracking/domain",
+          "name": "domain",
+          "description": "domain for Call Tracking.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "call-tracking.csv"
+            },
+            "extract": {
+              "column": "domain"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "call-tracking/canonical_url",
+          "name": "canonical_url",
+          "description": "canonical url for Call Tracking.",
+          "dataType": "sc:URL",
+          "source": {
+            "fileObject": {
+              "@id": "call-tracking.csv"
+            },
+            "extract": {
+              "column": "canonical_url"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "call-tracking/plan",
+          "name": "plan",
+          "description": "plan for Call Tracking.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "call-tracking.csv"
+            },
+            "extract": {
+              "column": "plan"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "call-tracking/monthly_usd",
+          "name": "monthly_usd",
+          "description": "monthly usd for Call Tracking.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "call-tracking.csv"
+            },
+            "extract": {
+              "column": "monthly_usd"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "call-tracking/minutes_included",
+          "name": "minutes_included",
+          "description": "minutes included for Call Tracking.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "call-tracking.csv"
+            },
+            "extract": {
+              "column": "minutes_included"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "call-tracking/calls_included",
+          "name": "calls_included",
+          "description": "calls included for Call Tracking.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "call-tracking.csv"
+            },
+            "extract": {
+              "column": "calls_included"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "call-tracking/overage_per_min",
+          "name": "overage_per_min",
+          "description": "overage per min for Call Tracking.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "call-tracking.csv"
+            },
+            "extract": {
+              "column": "overage_per_min"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "call-tracking/overage_per_call",
+          "name": "overage_per_call",
+          "description": "overage per call for Call Tracking.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "call-tracking.csv"
+            },
+            "extract": {
+              "column": "overage_per_call"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "call-tracking/annual_discount_pct",
+          "name": "annual_discount_pct",
+          "description": "annual discount pct for Call Tracking.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "call-tracking.csv"
+            },
+            "extract": {
+              "column": "annual_discount_pct"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "call-tracking/setup_fee_usd",
+          "name": "setup_fee_usd",
+          "description": "setup fee usd for Call Tracking.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "call-tracking.csv"
+            },
+            "extract": {
+              "column": "setup_fee_usd"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "call-tracking/billing_model",
+          "name": "billing_model",
+          "description": "billing model for Call Tracking.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "call-tracking.csv"
+            },
+            "extract": {
+              "column": "billing_model"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "call-tracking/hipaa",
+          "name": "hipaa",
+          "description": "hipaa for Call Tracking.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "call-tracking.csv"
+            },
+            "extract": {
+              "column": "hipaa"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "call-tracking/baa",
+          "name": "baa",
+          "description": "baa for Call Tracking.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "call-tracking.csv"
+            },
+            "extract": {
+              "column": "baa"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "call-tracking/bilingual",
+          "name": "bilingual",
+          "description": "bilingual for Call Tracking.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "call-tracking.csv"
+            },
+            "extract": {
+              "column": "bilingual"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "call-tracking/integrations",
+          "name": "integrations",
+          "description": "integrations for Call Tracking.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "call-tracking.csv"
+            },
+            "extract": {
+              "column": "integrations"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "call-tracking/quote_only",
+          "name": "quote_only",
+          "description": "quote only for Call Tracking.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "call-tracking.csv"
+            },
+            "extract": {
+              "column": "quote_only"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "call-tracking/source_url",
+          "name": "source_url",
+          "description": "source url for Call Tracking.",
+          "dataType": "sc:URL",
+          "source": {
+            "fileObject": {
+              "@id": "call-tracking.csv"
+            },
+            "extract": {
+              "column": "source_url"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "call-tracking/accessed_at",
+          "name": "accessed_at",
+          "description": "accessed at for Call Tracking.",
+          "dataType": "sc:Date",
+          "source": {
+            "fileObject": {
+              "@id": "call-tracking.csv"
+            },
+            "extract": {
+              "column": "accessed_at"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "call-tracking/corroboration_url",
+          "name": "corroboration_url",
+          "description": "corroboration url for Call Tracking.",
+          "dataType": "sc:URL",
+          "source": {
+            "fileObject": {
+              "@id": "call-tracking.csv"
+            },
+            "extract": {
+              "column": "corroboration_url"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "call-tracking/corroboration_accessed_at",
+          "name": "corroboration_accessed_at",
+          "description": "corroboration accessed at for Call Tracking.",
+          "dataType": "sc:Date",
+          "source": {
+            "fileObject": {
+              "@id": "call-tracking.csv"
+            },
+            "extract": {
+              "column": "corroboration_accessed_at"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "business-texting",
+      "name": "business-texting",
+      "description": "Business Texting — one record per vendor plan, version 2026-06-12T00:00:00.000Z.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "business-texting/section",
+          "name": "section",
+          "description": "section for Business Texting.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "business-texting.csv"
+            },
+            "extract": {
+              "column": "section"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "business-texting/vendor_slug",
+          "name": "vendor_slug",
+          "description": "vendor slug for Business Texting.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "business-texting.csv"
+            },
+            "extract": {
+              "column": "vendor_slug"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "business-texting/vendor_name",
+          "name": "vendor_name",
+          "description": "vendor name for Business Texting.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "business-texting.csv"
+            },
+            "extract": {
+              "column": "vendor_name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "business-texting/domain",
+          "name": "domain",
+          "description": "domain for Business Texting.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "business-texting.csv"
+            },
+            "extract": {
+              "column": "domain"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "business-texting/canonical_url",
+          "name": "canonical_url",
+          "description": "canonical url for Business Texting.",
+          "dataType": "sc:URL",
+          "source": {
+            "fileObject": {
+              "@id": "business-texting.csv"
+            },
+            "extract": {
+              "column": "canonical_url"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "business-texting/plan",
+          "name": "plan",
+          "description": "plan for Business Texting.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "business-texting.csv"
+            },
+            "extract": {
+              "column": "plan"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "business-texting/monthly_usd",
+          "name": "monthly_usd",
+          "description": "monthly usd for Business Texting.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "business-texting.csv"
+            },
+            "extract": {
+              "column": "monthly_usd"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "business-texting/minutes_included",
+          "name": "minutes_included",
+          "description": "minutes included for Business Texting.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "business-texting.csv"
+            },
+            "extract": {
+              "column": "minutes_included"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "business-texting/calls_included",
+          "name": "calls_included",
+          "description": "calls included for Business Texting.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "business-texting.csv"
+            },
+            "extract": {
+              "column": "calls_included"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "business-texting/overage_per_min",
+          "name": "overage_per_min",
+          "description": "overage per min for Business Texting.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "business-texting.csv"
+            },
+            "extract": {
+              "column": "overage_per_min"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "business-texting/overage_per_call",
+          "name": "overage_per_call",
+          "description": "overage per call for Business Texting.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "business-texting.csv"
+            },
+            "extract": {
+              "column": "overage_per_call"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "business-texting/annual_discount_pct",
+          "name": "annual_discount_pct",
+          "description": "annual discount pct for Business Texting.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "business-texting.csv"
+            },
+            "extract": {
+              "column": "annual_discount_pct"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "business-texting/setup_fee_usd",
+          "name": "setup_fee_usd",
+          "description": "setup fee usd for Business Texting.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "business-texting.csv"
+            },
+            "extract": {
+              "column": "setup_fee_usd"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "business-texting/billing_model",
+          "name": "billing_model",
+          "description": "billing model for Business Texting.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "business-texting.csv"
+            },
+            "extract": {
+              "column": "billing_model"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "business-texting/hipaa",
+          "name": "hipaa",
+          "description": "hipaa for Business Texting.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "business-texting.csv"
+            },
+            "extract": {
+              "column": "hipaa"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "business-texting/baa",
+          "name": "baa",
+          "description": "baa for Business Texting.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "business-texting.csv"
+            },
+            "extract": {
+              "column": "baa"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "business-texting/bilingual",
+          "name": "bilingual",
+          "description": "bilingual for Business Texting.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "business-texting.csv"
+            },
+            "extract": {
+              "column": "bilingual"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "business-texting/integrations",
+          "name": "integrations",
+          "description": "integrations for Business Texting.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "business-texting.csv"
+            },
+            "extract": {
+              "column": "integrations"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "business-texting/quote_only",
+          "name": "quote_only",
+          "description": "quote only for Business Texting.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "business-texting.csv"
+            },
+            "extract": {
+              "column": "quote_only"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "business-texting/source_url",
+          "name": "source_url",
+          "description": "source url for Business Texting.",
+          "dataType": "sc:URL",
+          "source": {
+            "fileObject": {
+              "@id": "business-texting.csv"
+            },
+            "extract": {
+              "column": "source_url"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "business-texting/accessed_at",
+          "name": "accessed_at",
+          "description": "accessed at for Business Texting.",
+          "dataType": "sc:Date",
+          "source": {
+            "fileObject": {
+              "@id": "business-texting.csv"
+            },
+            "extract": {
+              "column": "accessed_at"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "business-texting/corroboration_url",
+          "name": "corroboration_url",
+          "description": "corroboration url for Business Texting.",
+          "dataType": "sc:URL",
+          "source": {
+            "fileObject": {
+              "@id": "business-texting.csv"
+            },
+            "extract": {
+              "column": "corroboration_url"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "business-texting/corroboration_accessed_at",
+          "name": "corroboration_accessed_at",
+          "description": "corroboration accessed at for Business Texting.",
+          "dataType": "sc:Date",
+          "source": {
+            "fileObject": {
+              "@id": "business-texting.csv"
+            },
+            "extract": {
+              "column": "corroboration_accessed_at"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "online-booking",
+      "name": "online-booking",
+      "description": "Online Booking — one record per vendor plan, version 2026-06-12.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "online-booking/section",
+          "name": "section",
+          "description": "section for Online Booking.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "online-booking.csv"
+            },
+            "extract": {
+              "column": "section"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "online-booking/vendor_slug",
+          "name": "vendor_slug",
+          "description": "vendor slug for Online Booking.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "online-booking.csv"
+            },
+            "extract": {
+              "column": "vendor_slug"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "online-booking/vendor_name",
+          "name": "vendor_name",
+          "description": "vendor name for Online Booking.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "online-booking.csv"
+            },
+            "extract": {
+              "column": "vendor_name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "online-booking/domain",
+          "name": "domain",
+          "description": "domain for Online Booking.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "online-booking.csv"
+            },
+            "extract": {
+              "column": "domain"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "online-booking/canonical_url",
+          "name": "canonical_url",
+          "description": "canonical url for Online Booking.",
+          "dataType": "sc:URL",
+          "source": {
+            "fileObject": {
+              "@id": "online-booking.csv"
+            },
+            "extract": {
+              "column": "canonical_url"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "online-booking/plan",
+          "name": "plan",
+          "description": "plan for Online Booking.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "online-booking.csv"
+            },
+            "extract": {
+              "column": "plan"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "online-booking/monthly_usd",
+          "name": "monthly_usd",
+          "description": "monthly usd for Online Booking.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "online-booking.csv"
+            },
+            "extract": {
+              "column": "monthly_usd"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "online-booking/minutes_included",
+          "name": "minutes_included",
+          "description": "minutes included for Online Booking.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "online-booking.csv"
+            },
+            "extract": {
+              "column": "minutes_included"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "online-booking/calls_included",
+          "name": "calls_included",
+          "description": "calls included for Online Booking.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "online-booking.csv"
+            },
+            "extract": {
+              "column": "calls_included"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "online-booking/overage_per_min",
+          "name": "overage_per_min",
+          "description": "overage per min for Online Booking.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "online-booking.csv"
+            },
+            "extract": {
+              "column": "overage_per_min"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "online-booking/overage_per_call",
+          "name": "overage_per_call",
+          "description": "overage per call for Online Booking.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "online-booking.csv"
+            },
+            "extract": {
+              "column": "overage_per_call"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "online-booking/annual_discount_pct",
+          "name": "annual_discount_pct",
+          "description": "annual discount pct for Online Booking.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "online-booking.csv"
+            },
+            "extract": {
+              "column": "annual_discount_pct"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "online-booking/setup_fee_usd",
+          "name": "setup_fee_usd",
+          "description": "setup fee usd for Online Booking.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "online-booking.csv"
+            },
+            "extract": {
+              "column": "setup_fee_usd"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "online-booking/billing_model",
+          "name": "billing_model",
+          "description": "billing model for Online Booking.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "online-booking.csv"
+            },
+            "extract": {
+              "column": "billing_model"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "online-booking/hipaa",
+          "name": "hipaa",
+          "description": "hipaa for Online Booking.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "online-booking.csv"
+            },
+            "extract": {
+              "column": "hipaa"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "online-booking/baa",
+          "name": "baa",
+          "description": "baa for Online Booking.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "online-booking.csv"
+            },
+            "extract": {
+              "column": "baa"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "online-booking/bilingual",
+          "name": "bilingual",
+          "description": "bilingual for Online Booking.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "online-booking.csv"
+            },
+            "extract": {
+              "column": "bilingual"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "online-booking/integrations",
+          "name": "integrations",
+          "description": "integrations for Online Booking.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "online-booking.csv"
+            },
+            "extract": {
+              "column": "integrations"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "online-booking/quote_only",
+          "name": "quote_only",
+          "description": "quote only for Online Booking.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "online-booking.csv"
+            },
+            "extract": {
+              "column": "quote_only"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "online-booking/source_url",
+          "name": "source_url",
+          "description": "source url for Online Booking.",
+          "dataType": "sc:URL",
+          "source": {
+            "fileObject": {
+              "@id": "online-booking.csv"
+            },
+            "extract": {
+              "column": "source_url"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "online-booking/accessed_at",
+          "name": "accessed_at",
+          "description": "accessed at for Online Booking.",
+          "dataType": "sc:Date",
+          "source": {
+            "fileObject": {
+              "@id": "online-booking.csv"
+            },
+            "extract": {
+              "column": "accessed_at"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "online-booking/corroboration_url",
+          "name": "corroboration_url",
+          "description": "corroboration url for Online Booking.",
+          "dataType": "sc:URL",
+          "source": {
+            "fileObject": {
+              "@id": "online-booking.csv"
+            },
+            "extract": {
+              "column": "corroboration_url"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "online-booking/corroboration_accessed_at",
+          "name": "corroboration_accessed_at",
+          "description": "corroboration accessed at for Online Booking.",
+          "dataType": "sc:Date",
+          "source": {
+            "fileObject": {
+              "@id": "online-booking.csv"
+            },
+            "extract": {
+              "column": "corroboration_accessed_at"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
