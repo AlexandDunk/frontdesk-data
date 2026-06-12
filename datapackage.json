@@ -1,0 +1,593 @@
+{
+  "profile": "data-package",
+  "name": "front-desk-review-pricing",
+  "title": "The Front Desk Review — front-office software pricing",
+  "description": "Independent, sourced pricing & capability data on front-office software (AI Receptionists, Call Tracking, Business Texting, Online Booking). Every figure carries its source URL and the date it was last verified.",
+  "homepage": "https://frontdeskreview.com/data",
+  "version": "2026-06-12T00:00:00.000Z",
+  "created": "2026-06-12T00:00:00.000Z",
+  "keywords": [
+    "pricing",
+    "software",
+    "front office",
+    "AI receptionist",
+    "call tracking",
+    "business texting",
+    "online booking"
+  ],
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/",
+      "title": "Creative Commons Attribution 4.0 International"
+    }
+  ],
+  "sources": [
+    {
+      "title": "The Front Desk Review",
+      "path": "https://frontdeskreview.com/data/"
+    }
+  ],
+  "resources": [
+    {
+      "name": "ai-receptionists-csv",
+      "profile": "tabular-data-resource",
+      "title": "AI Receptionists — per-plan pricing (CSV)",
+      "path": "https://frontdeskreview.com/data/ai-receptionists.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "schema": {
+        "fields": [
+          {
+            "name": "section",
+            "type": "string",
+            "description": "Hub section slug the row belongs to (e.g. ai-receptionists)."
+          },
+          {
+            "name": "vendor_slug",
+            "type": "string",
+            "description": "Stable URL-safe identifier for the vendor."
+          },
+          {
+            "name": "vendor_name",
+            "type": "string",
+            "description": "Vendor display name."
+          },
+          {
+            "name": "domain",
+            "type": "string",
+            "description": "Vendor primary domain."
+          },
+          {
+            "name": "canonical_url",
+            "type": "string",
+            "format": "uri",
+            "description": "Canonical on-site vendor profile URL."
+          },
+          {
+            "name": "plan",
+            "type": "string",
+            "description": "Plan name as published by the vendor."
+          },
+          {
+            "name": "monthly_usd",
+            "type": "number",
+            "description": "Base monthly price in USD (empty for quote-only tiers)."
+          },
+          {
+            "name": "minutes_included",
+            "type": "number",
+            "description": "Talk-minutes included in the plan, if any."
+          },
+          {
+            "name": "calls_included",
+            "type": "number",
+            "description": "Calls included in the plan, if any."
+          },
+          {
+            "name": "overage_per_min",
+            "type": "number",
+            "description": "Marginal overage rate per minute beyond the included quota, in USD."
+          },
+          {
+            "name": "overage_per_call",
+            "type": "number",
+            "description": "Marginal overage rate per call beyond the included quota, in USD."
+          },
+          {
+            "name": "annual_discount_pct",
+            "type": "number",
+            "description": "Discount percentage for annual commitment, if published."
+          },
+          {
+            "name": "setup_fee_usd",
+            "type": "number",
+            "description": "One-time setup fee in USD, if any."
+          },
+          {
+            "name": "billing_model",
+            "type": "string",
+            "description": "Normalized billing model (flat, per_minute, per_call, per_seat, per_message, hybrid, custom)."
+          },
+          {
+            "name": "hipaa",
+            "type": "string",
+            "description": "HIPAA support: yes / no / unknown."
+          },
+          {
+            "name": "baa",
+            "type": "string",
+            "description": "Business Associate Agreement availability: yes / no / unknown."
+          },
+          {
+            "name": "bilingual",
+            "type": "string",
+            "description": "Bilingual support: yes / no / unknown."
+          },
+          {
+            "name": "integrations",
+            "type": "string",
+            "description": "Named integrations, semicolon-separated."
+          },
+          {
+            "name": "quote_only",
+            "type": "string",
+            "description": "Whether the vendor publishes no usable per-plan price (yes / no)."
+          },
+          {
+            "name": "source_url",
+            "type": "string",
+            "format": "uri",
+            "description": "Public source URL the figures on this row were captured from."
+          },
+          {
+            "name": "accessed_at",
+            "type": "date",
+            "description": "ISO date (YYYY-MM-DD) the source was accessed."
+          },
+          {
+            "name": "corroboration_url",
+            "type": "string",
+            "format": "uri",
+            "description": "Second independent source URL corroborating the figures, if any."
+          },
+          {
+            "name": "corroboration_accessed_at",
+            "type": "date",
+            "description": "ISO date the corroborating source was accessed, if any."
+          }
+        ]
+      }
+    },
+    {
+      "name": "ai-receptionists-json",
+      "profile": "data-resource",
+      "title": "AI Receptionists — full nested vendor + plan records (JSON)",
+      "path": "https://frontdeskreview.com/data/ai-receptionists.json",
+      "format": "json",
+      "mediatype": "application/json",
+      "encoding": "utf-8"
+    },
+    {
+      "name": "call-tracking-csv",
+      "profile": "tabular-data-resource",
+      "title": "Call Tracking — per-plan pricing (CSV)",
+      "path": "https://frontdeskreview.com/data/call-tracking.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "schema": {
+        "fields": [
+          {
+            "name": "section",
+            "type": "string",
+            "description": "Hub section slug the row belongs to (e.g. ai-receptionists)."
+          },
+          {
+            "name": "vendor_slug",
+            "type": "string",
+            "description": "Stable URL-safe identifier for the vendor."
+          },
+          {
+            "name": "vendor_name",
+            "type": "string",
+            "description": "Vendor display name."
+          },
+          {
+            "name": "domain",
+            "type": "string",
+            "description": "Vendor primary domain."
+          },
+          {
+            "name": "canonical_url",
+            "type": "string",
+            "format": "uri",
+            "description": "Canonical on-site vendor profile URL."
+          },
+          {
+            "name": "plan",
+            "type": "string",
+            "description": "Plan name as published by the vendor."
+          },
+          {
+            "name": "monthly_usd",
+            "type": "number",
+            "description": "Base monthly price in USD (empty for quote-only tiers)."
+          },
+          {
+            "name": "minutes_included",
+            "type": "number",
+            "description": "Talk-minutes included in the plan, if any."
+          },
+          {
+            "name": "calls_included",
+            "type": "number",
+            "description": "Calls included in the plan, if any."
+          },
+          {
+            "name": "overage_per_min",
+            "type": "number",
+            "description": "Marginal overage rate per minute beyond the included quota, in USD."
+          },
+          {
+            "name": "overage_per_call",
+            "type": "number",
+            "description": "Marginal overage rate per call beyond the included quota, in USD."
+          },
+          {
+            "name": "annual_discount_pct",
+            "type": "number",
+            "description": "Discount percentage for annual commitment, if published."
+          },
+          {
+            "name": "setup_fee_usd",
+            "type": "number",
+            "description": "One-time setup fee in USD, if any."
+          },
+          {
+            "name": "billing_model",
+            "type": "string",
+            "description": "Normalized billing model (flat, per_minute, per_call, per_seat, per_message, hybrid, custom)."
+          },
+          {
+            "name": "hipaa",
+            "type": "string",
+            "description": "HIPAA support: yes / no / unknown."
+          },
+          {
+            "name": "baa",
+            "type": "string",
+            "description": "Business Associate Agreement availability: yes / no / unknown."
+          },
+          {
+            "name": "bilingual",
+            "type": "string",
+            "description": "Bilingual support: yes / no / unknown."
+          },
+          {
+            "name": "integrations",
+            "type": "string",
+            "description": "Named integrations, semicolon-separated."
+          },
+          {
+            "name": "quote_only",
+            "type": "string",
+            "description": "Whether the vendor publishes no usable per-plan price (yes / no)."
+          },
+          {
+            "name": "source_url",
+            "type": "string",
+            "format": "uri",
+            "description": "Public source URL the figures on this row were captured from."
+          },
+          {
+            "name": "accessed_at",
+            "type": "date",
+            "description": "ISO date (YYYY-MM-DD) the source was accessed."
+          },
+          {
+            "name": "corroboration_url",
+            "type": "string",
+            "format": "uri",
+            "description": "Second independent source URL corroborating the figures, if any."
+          },
+          {
+            "name": "corroboration_accessed_at",
+            "type": "date",
+            "description": "ISO date the corroborating source was accessed, if any."
+          }
+        ]
+      }
+    },
+    {
+      "name": "call-tracking-json",
+      "profile": "data-resource",
+      "title": "Call Tracking — full nested vendor + plan records (JSON)",
+      "path": "https://frontdeskreview.com/data/call-tracking.json",
+      "format": "json",
+      "mediatype": "application/json",
+      "encoding": "utf-8"
+    },
+    {
+      "name": "business-texting-csv",
+      "profile": "tabular-data-resource",
+      "title": "Business Texting — per-plan pricing (CSV)",
+      "path": "https://frontdeskreview.com/data/business-texting.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "schema": {
+        "fields": [
+          {
+            "name": "section",
+            "type": "string",
+            "description": "Hub section slug the row belongs to (e.g. ai-receptionists)."
+          },
+          {
+            "name": "vendor_slug",
+            "type": "string",
+            "description": "Stable URL-safe identifier for the vendor."
+          },
+          {
+            "name": "vendor_name",
+            "type": "string",
+            "description": "Vendor display name."
+          },
+          {
+            "name": "domain",
+            "type": "string",
+            "description": "Vendor primary domain."
+          },
+          {
+            "name": "canonical_url",
+            "type": "string",
+            "format": "uri",
+            "description": "Canonical on-site vendor profile URL."
+          },
+          {
+            "name": "plan",
+            "type": "string",
+            "description": "Plan name as published by the vendor."
+          },
+          {
+            "name": "monthly_usd",
+            "type": "number",
+            "description": "Base monthly price in USD (empty for quote-only tiers)."
+          },
+          {
+            "name": "minutes_included",
+            "type": "number",
+            "description": "Talk-minutes included in the plan, if any."
+          },
+          {
+            "name": "calls_included",
+            "type": "number",
+            "description": "Calls included in the plan, if any."
+          },
+          {
+            "name": "overage_per_min",
+            "type": "number",
+            "description": "Marginal overage rate per minute beyond the included quota, in USD."
+          },
+          {
+            "name": "overage_per_call",
+            "type": "number",
+            "description": "Marginal overage rate per call beyond the included quota, in USD."
+          },
+          {
+            "name": "annual_discount_pct",
+            "type": "number",
+            "description": "Discount percentage for annual commitment, if published."
+          },
+          {
+            "name": "setup_fee_usd",
+            "type": "number",
+            "description": "One-time setup fee in USD, if any."
+          },
+          {
+            "name": "billing_model",
+            "type": "string",
+            "description": "Normalized billing model (flat, per_minute, per_call, per_seat, per_message, hybrid, custom)."
+          },
+          {
+            "name": "hipaa",
+            "type": "string",
+            "description": "HIPAA support: yes / no / unknown."
+          },
+          {
+            "name": "baa",
+            "type": "string",
+            "description": "Business Associate Agreement availability: yes / no / unknown."
+          },
+          {
+            "name": "bilingual",
+            "type": "string",
+            "description": "Bilingual support: yes / no / unknown."
+          },
+          {
+            "name": "integrations",
+            "type": "string",
+            "description": "Named integrations, semicolon-separated."
+          },
+          {
+            "name": "quote_only",
+            "type": "string",
+            "description": "Whether the vendor publishes no usable per-plan price (yes / no)."
+          },
+          {
+            "name": "source_url",
+            "type": "string",
+            "format": "uri",
+            "description": "Public source URL the figures on this row were captured from."
+          },
+          {
+            "name": "accessed_at",
+            "type": "date",
+            "description": "ISO date (YYYY-MM-DD) the source was accessed."
+          },
+          {
+            "name": "corroboration_url",
+            "type": "string",
+            "format": "uri",
+            "description": "Second independent source URL corroborating the figures, if any."
+          },
+          {
+            "name": "corroboration_accessed_at",
+            "type": "date",
+            "description": "ISO date the corroborating source was accessed, if any."
+          }
+        ]
+      }
+    },
+    {
+      "name": "business-texting-json",
+      "profile": "data-resource",
+      "title": "Business Texting — full nested vendor + plan records (JSON)",
+      "path": "https://frontdeskreview.com/data/business-texting.json",
+      "format": "json",
+      "mediatype": "application/json",
+      "encoding": "utf-8"
+    },
+    {
+      "name": "online-booking-csv",
+      "profile": "tabular-data-resource",
+      "title": "Online Booking — per-plan pricing (CSV)",
+      "path": "https://frontdeskreview.com/data/online-booking.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "schema": {
+        "fields": [
+          {
+            "name": "section",
+            "type": "string",
+            "description": "Hub section slug the row belongs to (e.g. ai-receptionists)."
+          },
+          {
+            "name": "vendor_slug",
+            "type": "string",
+            "description": "Stable URL-safe identifier for the vendor."
+          },
+          {
+            "name": "vendor_name",
+            "type": "string",
+            "description": "Vendor display name."
+          },
+          {
+            "name": "domain",
+            "type": "string",
+            "description": "Vendor primary domain."
+          },
+          {
+            "name": "canonical_url",
+            "type": "string",
+            "format": "uri",
+            "description": "Canonical on-site vendor profile URL."
+          },
+          {
+            "name": "plan",
+            "type": "string",
+            "description": "Plan name as published by the vendor."
+          },
+          {
+            "name": "monthly_usd",
+            "type": "number",
+            "description": "Base monthly price in USD (empty for quote-only tiers)."
+          },
+          {
+            "name": "minutes_included",
+            "type": "number",
+            "description": "Talk-minutes included in the plan, if any."
+          },
+          {
+            "name": "calls_included",
+            "type": "number",
+            "description": "Calls included in the plan, if any."
+          },
+          {
+            "name": "overage_per_min",
+            "type": "number",
+            "description": "Marginal overage rate per minute beyond the included quota, in USD."
+          },
+          {
+            "name": "overage_per_call",
+            "type": "number",
+            "description": "Marginal overage rate per call beyond the included quota, in USD."
+          },
+          {
+            "name": "annual_discount_pct",
+            "type": "number",
+            "description": "Discount percentage for annual commitment, if published."
+          },
+          {
+            "name": "setup_fee_usd",
+            "type": "number",
+            "description": "One-time setup fee in USD, if any."
+          },
+          {
+            "name": "billing_model",
+            "type": "string",
+            "description": "Normalized billing model (flat, per_minute, per_call, per_seat, per_message, hybrid, custom)."
+          },
+          {
+            "name": "hipaa",
+            "type": "string",
+            "description": "HIPAA support: yes / no / unknown."
+          },
+          {
+            "name": "baa",
+            "type": "string",
+            "description": "Business Associate Agreement availability: yes / no / unknown."
+          },
+          {
+            "name": "bilingual",
+            "type": "string",
+            "description": "Bilingual support: yes / no / unknown."
+          },
+          {
+            "name": "integrations",
+            "type": "string",
+            "description": "Named integrations, semicolon-separated."
+          },
+          {
+            "name": "quote_only",
+            "type": "string",
+            "description": "Whether the vendor publishes no usable per-plan price (yes / no)."
+          },
+          {
+            "name": "source_url",
+            "type": "string",
+            "format": "uri",
+            "description": "Public source URL the figures on this row were captured from."
+          },
+          {
+            "name": "accessed_at",
+            "type": "date",
+            "description": "ISO date (YYYY-MM-DD) the source was accessed."
+          },
+          {
+            "name": "corroboration_url",
+            "type": "string",
+            "format": "uri",
+            "description": "Second independent source URL corroborating the figures, if any."
+          },
+          {
+            "name": "corroboration_accessed_at",
+            "type": "date",
+            "description": "ISO date the corroborating source was accessed, if any."
+          }
+        ]
+      }
+    },
+    {
+      "name": "online-booking-json",
+      "profile": "data-resource",
+      "title": "Online Booking — full nested vendor + plan records (JSON)",
+      "path": "https://frontdeskreview.com/data/online-booking.json",
+      "format": "json",
+      "mediatype": "application/json",
+      "encoding": "utf-8"
+    }
+  ]
+}
