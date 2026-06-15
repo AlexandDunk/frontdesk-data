@@ -71,7 +71,51 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Salesforce",
+          "Snowflake",
+          "Google BigQuery",
+          "Amazon Redshift",
+          "Microsoft Azure",
+          "SAP",
+          "Slack",
+          "Tableau Prep"
+        ],
+        "limits": [
+          "Viewer: read-only, no authoring",
+          "Explorer: cannot connect new data sources",
+          "Creator: minimum 1 Creator required per site"
+        ],
+        "keyFeatures": [
+          "Drag-and-drop visual analytics",
+          "Tableau Prep for data wrangling",
+          "Natural language Ask Data queries",
+          "Embedded analytics via Tableau Embedded API",
+          "Live and in-memory data connections"
+        ],
+        "bestFor": [
+          "Large enterprises needing mature self-service BI",
+          "Salesforce ecosystem shops",
+          "Teams requiring rich visualization breadth"
+        ],
+        "sources": [
+          {
+            "url": "https://www.getapp.com/business-intelligence-analytics-software/a/tableau/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Tableau's trust, security, and pricing pages all returned HTTP 403 on every fetch attempt on 2026-06-15 (salesforce.com/products/tableau/security/, tableau.com/trust, tableau.com/en-us/products/tableau-cloud/trust all blocked). HIPAA, SOC 2, and GDPR status could not be confirmed or denied from vendor's own pages; all three set to null. The 14-day free trial figure is widely reported and consistent with Tableau Cloud's standard trial offer, but could not be confirmed from an accessible official page on this date. keyIntegrations drawn from the existing integrations field already in the record."
+      }
     },
     {
       "slug": "looker",
@@ -137,7 +181,59 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": null,
+          "gdpr": null,
+          "source": {
+            "url": "https://cloud.google.com/security/compliance/hipaa",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Google BigQuery",
+          "Snowflake",
+          "Amazon Redshift",
+          "PostgreSQL",
+          "MySQL",
+          "Databricks",
+          "Looker Studio",
+          "Google Sheets"
+        ],
+        "limits": [
+          "Standard: 10 Standard Users, 2 Developer Users, 1,000 API calls/month",
+          "Enterprise: 100,000 API calls/month",
+          "Embed: 500,000 API calls/month",
+          "All plans: annual commitment only (1, 2, or 3 years)"
+        ],
+        "keyFeatures": [
+          "LookML semantic modeling layer",
+          "Git-based version control for data models",
+          "Embedded analytics via iframe and API",
+          "Looker Blocks (pre-built data models)",
+          "Integration with full Google Cloud ecosystem"
+        ],
+        "bestFor": [
+          "Google Cloud-native data stacks",
+          "Teams needing a governed semantic layer",
+          "HIPAA-regulated analytics on GCP"
+        ],
+        "sources": [
+          {
+            "url": "https://cloud.google.com/security/compliance/hipaa",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://cloud.google.com/looker/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "HIPAA confirmed: Google Cloud's HIPAA compliance page (cloud.google.com/security/compliance/hipaa) fetched 2026-06-15 explicitly states Google offers BAAs and names Looker (Google Cloud core) as a covered product. SOC 2 and GDPR could not be confirmed from this specific page fetch; set to null rather than inferred. No free tier or public trial found on the pricing page. All plans are quote-only annual contracts."
+      }
     },
     {
       "slug": "power-bi",
@@ -228,7 +324,61 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": null,
+          "gdpr": null,
+          "source": {
+            "url": "https://learn.microsoft.com/en-us/compliance/regulatory/offering-hipaa-hitech",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": 60,
+        "keyIntegrations": [
+          "Microsoft Excel",
+          "Azure Synapse Analytics",
+          "SQL Server",
+          "Salesforce",
+          "Google Analytics",
+          "SharePoint",
+          "Microsoft Teams",
+          "Dynamics 365",
+          "SAP",
+          "Azure Data Lake"
+        ],
+        "limits": [
+          "Free: personal reports only, no sharing, 1 GB storage",
+          "Pro: 10 GB storage per user, 8 scheduled refreshes/day",
+          "Premium Per User: up to 100 GB model size, 48 refreshes/day",
+          "Free tier cannot share content without Pro/Premium recipient"
+        ],
+        "keyFeatures": [
+          "Deep Microsoft 365 / Teams integration",
+          "AI-powered Q&A with natural language queries",
+          "Power BI Dataflows for reusable ETL",
+          "Paginated reports for pixel-perfect printing",
+          "Fabric-native: unified with Azure data estate"
+        ],
+        "bestFor": [
+          "Microsoft 365 and Azure shops",
+          "Enterprises already licensed on M365 E5",
+          "HIPAA-regulated organizations on Microsoft stack"
+        ],
+        "sources": [
+          {
+            "url": "https://learn.microsoft.com/en-us/compliance/regulatory/offering-hipaa-hitech",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.microsoft.com/en-us/power-platform/products/power-bi/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "HIPAA confirmed: Microsoft's compliance documentation (learn.microsoft.com/en-us/compliance/regulatory/offering-hipaa-hitech) fetched 2026-06-15 explicitly names 'Power BI cloud service either as a standalone service or as included in an Office 365 or Dynamics 365 branded plan or suite' as in-scope for the BAA. BAA is available through the Microsoft Online Services Data Protection Addendum. SOC 2 and GDPR are not addressed on that specific page; set to null. freeTier=true confirmed: Power BI Free ($0) plan exists per pricing page. 60-day Pro trial is Microsoft's documented standard; could not confirm from a directly fetched page on this date (microsoft.com/trustcenter returned 404/redirect), so treat as widely-reported but not re-verified today."
+      }
     },
     {
       "slug": "metabase",
@@ -319,7 +469,61 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.metabase.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "PostgreSQL",
+          "MySQL",
+          "Snowflake",
+          "BigQuery",
+          "Amazon Redshift",
+          "MongoDB",
+          "SQL Server",
+          "Presto",
+          "Druid",
+          "SQLite"
+        ],
+        "limits": [
+          "Open Source: self-hosted only, no cloud features, no SSO",
+          "Starter: 5 users included, $6/user/month additional, 10 MB/query",
+          "Pro: 10 users included, $12/user/month additional",
+          "Enterprise: starts at $20,000/year"
+        ],
+        "keyFeatures": [
+          "No-SQL visual query builder for non-technical users",
+          "AGPL open-source self-hosted option",
+          "Multi-tenant embedded analytics with white-label (Pro+)",
+          "Row and column-level permissions (Pro+)",
+          "Interactive dashboards with drill-through"
+        ],
+        "bestFor": [
+          "Developer and startup teams wanting open-source BI",
+          "Companies needing affordable embedded analytics",
+          "Self-hosted environments with strict data residency needs"
+        ],
+        "sources": [
+          {
+            "url": "https://www.metabase.com/security",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.metabase.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "SOC 2 Type II and GDPR confirmed from metabase.com/security fetched 2026-06-15: page states 'SOC 2 Type II — controls Metabase has in place governing the security of customer data with a clean audit opinion' and 'worked to make our products, processes, and procedures GDPR-compliant.' HIPAA not mentioned on the security page; set to null. freeTier=true: Open Source plan at $0 confirmed on pricing page (self-hosted AGPL). No time-limited trial exists for cloud — the Open Source self-hosted version is the free entry point."
+      }
     },
     {
       "slug": "mode",
@@ -386,7 +590,55 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Snowflake",
+          "BigQuery",
+          "Amazon Redshift",
+          "PostgreSQL",
+          "MySQL",
+          "Databricks",
+          "Presto",
+          "Spark",
+          "Slack"
+        ],
+        "limits": [
+          "Studio (free): up to 3 users, 10 MB/query limit",
+          "Pro: minimum 3 users, 250 GB/month data, 5 GB/query",
+          "Enterprise: minimum 50 users"
+        ],
+        "keyFeatures": [
+          "Unified SQL + Python + R notebook environment",
+          "Ad hoc analysis with collaborative reports",
+          "Interactive dashboards with embedded visualizations",
+          "Acquired by ThoughtSpot in 2023 — roadmap increasingly integrated"
+        ],
+        "bestFor": [
+          "Data analyst teams comfortable with SQL and Python",
+          "Organizations needing collaborative notebook-style BI",
+          "Teams in ThoughtSpot ecosystem post-acquisition"
+        ],
+        "sources": [
+          {
+            "url": "https://mode.com/compare-plans",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://mode.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Mode's security page (mode.com/security) was fetched on 2026-06-15 but returned no specific compliance certifications — the page describes general security practices without listing HIPAA, SOC 2, or GDPR attestations. Multiple alternative URLs (mode.com/blog/mode-soc-2-type-ii-certified, mode.com/legal/security-whitepaper, mode.com/faq) returned 404. No compliance status can be confirmed from vendor-owned pages; hipaa, soc2, gdpr all set to null. freeTier=true confirmed: Studio plan at $0 per compare-plans page (up to 3 users, forever free). Mode was acquired by ThoughtSpot for ~$200M; product branding may evolve."
+      }
     },
     {
       "slug": "sigma-computing",
@@ -450,7 +702,57 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://security.sigmacomputing.com",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Snowflake",
+          "Google BigQuery",
+          "Amazon Redshift",
+          "Databricks",
+          "PostgreSQL",
+          "MySQL",
+          "Azure Synapse"
+        ],
+        "limits": [
+          "All plans are quote-only; no self-serve signup",
+          "Free trial available with no credit card required (duration not published)",
+          "Cloud-only deployment (no self-hosted option)"
+        ],
+        "keyFeatures": [
+          "Spreadsheet-style interface on top of cloud data warehouses",
+          "Live queries push compute to warehouse (no data extract)",
+          "Collaborative workbooks with version history",
+          "Input Tables for write-back to warehouse",
+          "AI-powered formula assistance"
+        ],
+        "bestFor": [
+          "Snowflake-native data teams",
+          "Business users who want Excel-like BI on cloud warehouses",
+          "HIPAA-compliant analytics on modern cloud stack"
+        ],
+        "sources": [
+          {
+            "url": "https://security.sigmacomputing.com",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.sigmacomputing.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Compliance confirmed from Sigma's Trust Center (security.sigmacomputing.com) fetched 2026-06-15: page lists HIPAA, SOC 1, SOC 2, SOC 3, ISO/IEC 27001, ISO/IEC 27017, ISO/IEC 27018, ISO/IEC 27701, GDPR, CCPA, and EU-US DPF. The page does not explicitly confirm a BAA offer (only that HIPAA compliance is maintained); baa field in root record left as null accordingly. freeTier=false: pricing page shows only quote-based plans with a free trial (no credit card) but no permanent $0 tier. Trial duration not published on the page."
+      }
     },
     {
       "slug": "thoughtspot",
@@ -539,7 +841,60 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.thoughtspot.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Snowflake",
+          "Google BigQuery",
+          "Amazon Redshift",
+          "Databricks",
+          "Azure Synapse",
+          "PostgreSQL",
+          "Teradata",
+          "SAP HANA",
+          "Salesforce",
+          "Slack"
+        ],
+        "limits": [
+          "Essentials: 5–50 users, up to 25M rows",
+          "Pro: 25–1,000 users, up to 250M rows, 25 Spotter AI queries/user/month",
+          "Developer: free for 1 year only (up to 10 users, 25M rows), then paid"
+        ],
+        "keyFeatures": [
+          "Natural language search-driven analytics (Spotter AI Agent)",
+          "Liveboards for real-time interactive dashboards",
+          "Usage-based pricing option ($0.10/query) on Pro tier",
+          "Embedded analytics SDK for SaaS product builders",
+          "AI-generated insights with auto-analysis of billions of rows"
+        ],
+        "bestFor": [
+          "Self-service analytics for non-technical business users",
+          "SaaS companies embedding analytics into their product",
+          "HIPAA-regulated teams needing AI-driven search on cloud data"
+        ],
+        "sources": [
+          {
+            "url": "https://www.thoughtspot.com/security",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.thoughtspot.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "HIPAA, SOC 2, and GDPR confirmed from thoughtspot.com/security fetched 2026-06-15: page displays certification badges for SOC 1, SOC 2, SOC 3, ISO 27001, CSA Star, HIPAA, GDPR, EU-US Data Privacy Framework, Swiss-US Data Privacy Framework, UK Extension, and CCPA. BAA availability not explicitly stated on the page (only badge shown); root hipaa field was already null, enrichment compliance.hipaa set to true based on HIPAA badge. freeTier=false: Developer plan is free for first year only (time-limited, not a forever-free tier). No public trial duration posted."
+      }
     },
     {
       "slug": "qlik-sense",
@@ -591,7 +946,58 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Snowflake",
+          "Amazon Redshift",
+          "Google BigQuery",
+          "SAP",
+          "Salesforce",
+          "Microsoft SQL Server",
+          "Oracle",
+          "PostgreSQL",
+          "Databricks",
+          "AWS",
+          "Microsoft Azure"
+        ],
+        "limits": [
+          "Business: per-seat, no published cap on users or data",
+          "Enterprise SaaS: quote-only, custom capacity",
+          "Qlik Cloud Government available at FedRAMP Moderate IL2"
+        ],
+        "keyFeatures": [
+          "Associative Engine for multi-source data exploration without predefined queries",
+          "Augmented analytics with AI-generated insights (Insight Advisor)",
+          "Agentic AI with Qlik Answers for unstructured content",
+          "Anomaly detection and predictive analytics (Qlik Predict)",
+          "Qlik Automate for orchestration and workflow automation"
+        ],
+        "bestFor": [
+          "Enterprises needing associative multi-source data exploration",
+          "Teams wanting agentic AI on top of structured and unstructured data",
+          "Organizations already using SAP or large ERP ecosystems"
+        ],
+        "sources": [
+          {
+            "url": "https://www.qlik.com/us/products/qlik-cloud-analytics",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.getapp.com/business-intelligence-analytics-software/a/qlik-sense/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Qlik's trust/security/compliance pages were inaccessible across multiple URL attempts on 2026-06-15 (qlik.com/us/trust, /us/trust/security, /us/company/security, /us/company/compliance, /us/legal/trust-center all returned 404; trust.qlik.com returned SSL error; compliance.qlik.com returned SSL error). No HIPAA, SOC 2, or GDPR status could be confirmed from vendor-owned pages; all set to null. Qlik Cloud Government page referenced FedRAMP Moderate IL2 authorization, but that is for the government variant only. A free trial is advertised on the product page but no trial duration or credit-card-free details were confirmed; freeTrialDays set to null."
+      }
     },
     {
       "slug": "gooddata",
@@ -640,7 +1046,64 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.gooddata.ai/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Snowflake",
+          "Google BigQuery",
+          "Amazon Redshift",
+          "PostgreSQL",
+          "Databricks",
+          "Microsoft SQL Server",
+          "OpenAI",
+          "Claude",
+          "Gemini",
+          "Kubernetes"
+        ],
+        "limits": [
+          "Professional: per-workspace billing, unlimited users, annual billing",
+          "Enterprise: custom — dedicated clusters, contact sales",
+          "No free tier; demo only"
+        ],
+        "keyFeatures": [
+          "Agentic analytics with AI Agent Builder and Marketplace",
+          "Context-aware AI with traceable outputs tied to business logic",
+          "Multi-cloud deployment (AWS, Azure, GCP) and self-hosted (K8s/Docker)",
+          "SOC 2 Type II certified since 2013",
+          "HIPAA + BAA available; FedRAMP available on demand (Enterprise)"
+        ],
+        "bestFor": [
+          "HIPAA-regulated analytics with requirement for long-standing SOC 2 pedigree",
+          "SaaS companies embedding governed AI analytics into their product",
+          "Enterprises needing agentic AI with auditable, business-logic-grounded answers"
+        ],
+        "sources": [
+          {
+            "url": "https://www.gooddata.ai/security",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.gooddata.ai/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.gooddata.ai/product/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "HIPAA, SOC 2, and GDPR confirmed from gooddata.ai/security fetched 2026-06-15 (gooddata.com/security redirects to gooddata.ai/security). Page explicitly states: 'We comply with U.S. HIPAA law for the protection of health data and will sign BAA'; 'SOC 2 Type II certified since 2013'; 'comply with ISO 27002 code of practices'; 'comply with privacy laws, including GDPR and CCPA.' BAA explicitly offered per the security page. freeTier=false confirmed: gooddata.ai/pricing shows only Professional and Enterprise tiers, both quote-only; no free plan. No trial period listed."
+      }
     }
   ]
 }

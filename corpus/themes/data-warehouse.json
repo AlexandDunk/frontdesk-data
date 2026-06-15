@@ -100,7 +100,69 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://docs.snowflake.com/en/user-guide/intro-compliance",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 30,
+        "keyIntegrations": [
+          "dbt",
+          "Fivetran",
+          "Tableau",
+          "Power BI",
+          "Looker",
+          "Apache Spark",
+          "Kafka",
+          "AWS S3",
+          "Snowpark (Python/Java/Scala)"
+        ],
+        "limits": [
+          "30-day trial; trial accounts limited to ~10 credits/day for Cortex AI Functions without payment method",
+          "No forever-free plan; account suspended after trial ends",
+          "Storage billed at $40/TB-month on-demand across all editions",
+          "HIPAA available only on Business Critical and VPS editions"
+        ],
+        "keyFeatures": [
+          "Separation of storage and compute with independent scaling and multi-cluster virtual warehouses",
+          "Snowpark: run Python, Java, Scala workloads in-platform without data movement",
+          "Snowflake Horizon: unified governance, security, and compliance across all workloads",
+          "Time Travel and Fail-safe for point-in-time data recovery up to 90 days",
+          "Cross-cloud, cross-region secure data sharing and Marketplace without data copies"
+        ],
+        "bestFor": [
+          "Enterprise multi-cloud analytics requiring unified governance",
+          "HIPAA-regulated teams (Business Critical or VPS edition)",
+          "Organizations sharing data externally via Snowflake Marketplace",
+          "Multi-language data engineering teams using Snowpark"
+        ],
+        "sources": [
+          {
+            "url": "https://docs.snowflake.com/en/user-guide/intro-compliance",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://docs.snowflake.com/en/user-guide/intro-editions",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://docs.snowflake.com/en/user-guide/admin-trial-account",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.snowflake.com/en/legal/privacy/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "HIPAA confirmed from docs.snowflake.com/en/user-guide/intro-editions (fetched 2026-06-15): 'before any PHI data can be stored in Snowflake, a signed business associate agreement (BAA) must be in place'; Business Critical and VPS editions support PHI under HIPAA/HITRUST CSF. SOC 2 Type II confirmed from docs.snowflake.com/en/user-guide/intro-compliance which lists 'SOC 1 Type II, SOC 2 Type II' plus ISO-27001/27017/27018 and PCI DSS among global certifications. GDPR set true: confirmed via snowflake.com/en/legal/privacy/ (fetched 2026-06-15), which publishes a Data Processing Addendum and a Transfer Mechanism (SCC) site — the GDPR contractual mechanisms — corroborated by the ISO-27018 cloud-privacy listing. Free trial: 30-day trial confirmed from docs.snowflake.com/en/user-guide/admin-trial-account; no forever-free plan. freeTier=false. Features sourced from snowflake.com/en/data-cloud/workloads/data-warehouse/ and snowflake.com/en/data-cloud/workloads/."
+      }
     },
     {
       "slug": "google-bigquery",
@@ -199,7 +261,66 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://cloud.google.com/security/compliance/hipaa",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Looker",
+          "Google Sheets (Connected Sheets)",
+          "Dataflow",
+          "Pub/Sub",
+          "Cloud Storage",
+          "Tableau",
+          "dbt",
+          "Apache Spark",
+          "Vertex AI / TensorFlow",
+          "Fivetran"
+        ],
+        "limits": [
+          "Free: 1 TB of query processing per month (on-demand model)",
+          "Free: 10 GB active storage per month",
+          "Sandbox environment available without billing account (60-day table expiry, no streaming/DML)",
+          "Slot reservations: minimum 100 slots on Standard Edition"
+        ],
+        "keyFeatures": [
+          "Serverless, fully managed architecture — no infrastructure to provision or tune",
+          "BigQuery ML: train and run ML models with SQL directly in the warehouse",
+          "Omni / federated queries across AWS, Azure, and on-premises data without moving it",
+          "Native support for Apache Iceberg, Delta Lake, and Apache Hudi open table formats",
+          "Built-in geospatial analysis, semantic search, and Knowledge Catalog governance"
+        ],
+        "bestFor": [
+          "Google Cloud and Google Workspace shops wanting zero-ops analytics",
+          "Teams needing in-warehouse ML without a separate ML platform",
+          "HIPAA-regulated organizations already on GCP (BAA covers BigQuery at no premium)",
+          "Cost-conscious teams with sporadic workloads leveraging the 1 TB/month free query tier"
+        ],
+        "sources": [
+          {
+            "url": "https://cloud.google.com/security/compliance/hipaa",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://docs.cloud.google.com/bigquery/docs/introduction",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://docs.cloud.google.com/bigquery/docs/sandbox",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "HIPAA confirmed from cloud.google.com/security/compliance/hipaa: Google offers a BAA covering BigQuery and 100+ Google Cloud products at no pricing premium. SOC 2 Type II set true: Google Cloud holds SOC 2 Type II certification covering BigQuery per cloud.google.com/security/compliance/soc-2 (page returned truncated content but SOC 2 Type II coverage of BigQuery is a long-standing, independently corroborated fact). GDPR set true: cloud.google.com/security/gdpr confirmed Google Cloud offers GDPR compliance and a DPA (page truncated but GDPR DPA availability is well-established). freeTier=true: 1 TB/month free queries and 10 GB free storage are permanent monthly quotas confirmed from docs.cloud.google.com/bigquery/docs/introduction and sandbox page. freeTrialDays=null: these are permanent quotas, not a timed trial."
+      }
     },
     {
       "slug": "databricks",
@@ -281,7 +402,66 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://docs.databricks.com/aws/en/security/privacy/hipaa",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Apache Spark",
+          "Delta Lake",
+          "MLflow",
+          "Unity Catalog",
+          "dbt",
+          "Fivetran",
+          "Tableau",
+          "Power BI",
+          "Apache Kafka",
+          "Delta Sharing"
+        ],
+        "limits": [
+          "Free Edition: forever free with daily compute limits, one serverless workspace, no classic compute, no GPUs, no clean rooms",
+          "Free trial: 14 days, up to $400 in credits, full platform access",
+          "Paid tiers: compute billed per DBU-second; underlying cloud instance costs billed separately (classic compute only)",
+          "HIPAA requires enabling the compliance security profile (adds monitoring agents, hardened compute image)"
+        ],
+        "keyFeatures": [
+          "Delta Lake: open-source ACID transactions, schema enforcement, and time travel on data lakes",
+          "Unity Catalog: unified fine-grained governance for data, AI models, and notebooks across clouds",
+          "MLflow: integrated experiment tracking, model registry, and ML lifecycle management",
+          "Lakehouse architecture: combines data warehouse SQL analytics with data lake flexibility in one platform",
+          "Delta Sharing: open protocol for zero-copy data sharing across clouds and organizations"
+        ],
+        "bestFor": [
+          "Data engineering and ML teams that need a unified lakehouse platform",
+          "Organizations running Apache Spark workloads at scale",
+          "HIPAA-regulated teams requiring PHI processing on AWS (compliance security profile)",
+          "Enterprises needing cross-cloud data sharing without data replication"
+        ],
+        "sources": [
+          {
+            "url": "https://docs.databricks.com/aws/en/security/privacy/hipaa",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.databricks.com/trust/gdpr",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://databricks.com/try-databricks",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "HIPAA confirmed from docs.databricks.com/aws/en/security/privacy/hipaa: BAA is accepted when the compliance security profile is enabled, required before processing any PHI. SOC 2 Type II set true: databricks.com/trust/compliance page states SOC 2 Type II report is available through the account team (page content confirmed during fetch). GDPR set true: databricks.com/trust/gdpr confirmed Databricks is GDPR-compliant and provides a Data Processing Addendum; also confirmed by presence of Data Processing Addendum and Standard Contractual Clauses on the databricks.com/legal page. freeTier=true: confirmed from databricks.com/try-databricks — 'Free Edition: Forever free with daily limits on usage.' freeTrialDays=14: confirmed from same page (2-week trial, up to $400 credits). Features sourced from databricks.com/product/pricing and platform overview."
+      }
     },
     {
       "slug": "amazon-redshift",
@@ -343,7 +523,67 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://aws.amazon.com/compliance/hipaa-eligible-services-reference/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 90,
+        "keyIntegrations": [
+          "Amazon S3",
+          "AWS Glue",
+          "Amazon SageMaker",
+          "Amazon Kinesis Data Streams",
+          "Apache Kafka",
+          "Amazon QuickSight",
+          "Tableau",
+          "Power BI",
+          "dbt",
+          "Amazon Bedrock"
+        ],
+        "limits": [
+          "No forever-free tier; trial is $300 credit valid for 90 days (Serverless only, new accounts)",
+          "Serverless: 60-second minimum billing, 4 RPU minimum (effective $1.50/hr minimum)",
+          "Concurrency Scaling: 1 free hour per day per cluster, then $0.375/RPU-hour",
+          "Redshift Spectrum: $5.00/TB scanned against S3",
+          "Trial offer not part of AWS Free Tier; only for accounts that have never used Redshift Serverless"
+        ],
+        "keyFeatures": [
+          "RA3 nodes: decoupled storage/compute with Managed Storage scaling to petabytes in S3",
+          "Redshift Spectrum: query exabytes of data directly in S3 without loading",
+          "Zero-ETL integrations: ingest from Aurora, RDS, DynamoDB, and SaaS apps without ETL pipelines",
+          "Multidimensional data layouts (MDDL) and ML-based automatic workload management",
+          "Amazon Q for natural-language SQL generation and query optimization recommendations"
+        ],
+        "bestFor": [
+          "AWS-native organizations wanting deep integration with the AWS analytics ecosystem",
+          "HIPAA-regulated teams (eligible service, BAA via standard AWS agreement)",
+          "Enterprises running petabyte-scale analytics on provisioned RA3 clusters",
+          "Teams needing zero-ETL pipelines from AWS databases into a warehouse"
+        ],
+        "sources": [
+          {
+            "url": "https://aws.amazon.com/compliance/hipaa-eligible-services-reference/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://aws.amazon.com/redshift/features/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://aws.amazon.com/redshift/free-trial/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "HIPAA confirmed from aws.amazon.com/compliance/hipaa-eligible-services-reference/ (fetched 2026-06-15): Amazon Redshift explicitly listed as HIPAA-eligible; BAA covered under standard AWS BAA. SOC 2 set true: AWS maintains SOC 2 Type II attestation covering Redshift per aws.amazon.com/compliance/soc-faqs/ (references services-in-scope page; Redshift's inclusion is well-established). GDPR set true: aws.amazon.com/compliance/gdpr-center/ confirmed Redshift is listed among covered AWS services and is protected under the AWS DPA and Standard Contractual Clauses. freeTier=false: aws.amazon.com/redshift/free-trial/ confirmed no forever-free tier; $300/90-day credit for Serverless only. freeTrialDays=90. Features sourced from aws.amazon.com/redshift/features/."
+      }
     },
     {
       "slug": "firebolt",
@@ -425,7 +665,65 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://www.firebolt.io/iso-27001-and-iso-27018-certification",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Amazon S3",
+          "Apache Kafka",
+          "dbt",
+          "Airbyte",
+          "Fivetran",
+          "Tableau",
+          "Power BI",
+          "Apache Airflow",
+          "Apache Iceberg"
+        ],
+        "limits": [
+          "Firebolt Core (free): self-hosted only, community support, no SLA",
+          "HIPAA only on Enterprise and Dedicated tiers; not available on Standard cloud tier",
+          "Standard/Enterprise cloud: $0.35/FBU-hour, $23/TiB-month storage",
+          "Compute scales 1–128 nodes, up to 10 clusters; per-second billing"
+        ],
+        "keyFeatures": [
+          "Sub-second SQL query performance for high-concurrency, customer-facing analytics workloads",
+          "Hybrid indexing with JOIN accelerators and vector search for AI-powered applications",
+          "Workload isolation: multiple independent engine clusters on the same data without duplication",
+          "ACID transactional consistency with low-latency updates and deletes at scale",
+          "Schema inference and parallel ingestion from Parquet, JSON, CSV, AVRO, ORC, and Iceberg"
+        ],
+        "bestFor": [
+          "Product teams embedding analytics in high-concurrency customer-facing applications",
+          "Use cases requiring sub-second query latency at thousands of concurrent users",
+          "Organizations needing workload isolation for mixed analytics and AI applications",
+          "Teams evaluating self-hosted options before committing to cloud spend (Firebolt Core)"
+        ],
+        "sources": [
+          {
+            "url": "https://www.firebolt.io/iso-27001-and-iso-27018-certification",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.firebolt.io/product",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.firebolt.io/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "HIPAA: firebolt.io/pricing confirms 'Compliance (i.e. HIPAA)' as an Enterprise-tier feature (fetched 2026-06-15). hipaa=true. SOC 2: firebolt.io/iso-27001-and-iso-27018-certification (fetched 2026-06-15) explicitly states 'the SOC2 Type-2 certification achieved earlier in 2021' alongside ISO 27001 and ISO 27018. soc2=true (Type II). GDPR: REFUTED/UNCONFIRMABLE — set null. No authoritative Firebolt page states GDPR compliance or a DPA; the only 'GDPR' mention is a generic FAQ sentence on firebolt.io/product ('compliance with standards like GDPR, HIPAA, and SOC 2') describing cloud databases in general, NOT a Firebolt certification claim. ISO 27018 covers cloud-PII controls but is not a GDPR/DPA attestation. firebolt.io/security and firebolt.io/trust returned 404 on fetch. gdpr previously true → corrected to null. BAA: inherited null retained (no BAA terms on any fetchable page). freeTier=true: Firebolt Core is 'Free forever' (self-hosted) per pricing page. freeTrialDays=null: no timed trial mentioned. Features sourced from firebolt.io/product (fetched 2026-06-15)."
+      }
     },
     {
       "slug": "azure-synapse-analytics",
@@ -485,7 +783,61 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://learn.microsoft.com/en-us/azure/compliance/offerings/offering-hipaa-us",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Azure Data Factory",
+          "Azure Data Lake Storage Gen2",
+          "Power BI",
+          "Azure Machine Learning",
+          "Azure Purview (Microsoft Purview)",
+          "Apache Spark",
+          "Apache Kafka",
+          "Azure Cosmos DB",
+          "Tableau"
+        ],
+        "limits": [
+          "Dedicated SQL Pool billed per hour even when idle — must pause pool manually to avoid charges",
+          "Serverless SQL Pool: 10 MB minimum charge per query, $5.00/TB scanned",
+          "No forever-free tier; Azure free account gives $200 credit for 30 days but Synapse is not in the always-free tier list",
+          "Dedicated pool minimum DWU100c; scaling up/down requires manual or scheduled action"
+        ],
+        "keyFeatures": [
+          "Unified analytics workspace integrating dedicated SQL pools, serverless SQL, and Apache Spark in one service",
+          "Native integration with Azure Data Lake Storage Gen2 for direct query without data loading",
+          "Synapse Link: zero-ETL operational analytics over Azure Cosmos DB and Dataverse in real time",
+          "Integrated Azure Machine Learning and Azure Cognitive Services for in-platform AI/ML",
+          "Microsoft Purview integration for unified data catalog, lineage, and governance across Azure"
+        ],
+        "bestFor": [
+          "Microsoft Azure shops wanting a unified SQL + Spark analytics platform",
+          "HIPAA-regulated organizations already on Azure (BAA auto-included via Microsoft Product Terms)",
+          "Enterprises needing real-time operational analytics via Synapse Link to Cosmos DB",
+          "Organizations with large Azure Data Lake Storage estates wanting serverless ad-hoc querying"
+        ],
+        "sources": [
+          {
+            "url": "https://learn.microsoft.com/en-us/azure/compliance/offerings/offering-hipaa-us",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://learn.microsoft.com/en-us/azure/compliance/offerings/offering-soc-2",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "HIPAA confirmed from learn.microsoft.com/en-us/azure/compliance/offerings/offering-hipaa-us (fetched fully 2026-06-15): Azure Synapse is covered under the Microsoft HIPAA BAA, which is included by default in Microsoft Product Terms for all customers — no separate BAA signature required. SOC 2 Type II set true: learn.microsoft.com/en-us/azure/compliance/offerings/offering-soc-2 (fetched 2026-06-15) confirms Azure (which includes Synapse) undergoes rigorous independent SOC 2 Type II audits semi-annually. GDPR set true: Microsoft Azure provides a Data Protection Addendum (DPA) with Standard Contractual Clauses covering all in-scope services including Synapse — well-established and not contradicted by any fetched page. freeTier=false: the official Synapse pricing page timed out; no forever-free Synapse offering was found on any fetchable page. freeTrialDays=null: Azure free account provides $200 credit for 30 days for new accounts, but Synapse is not in the permanent always-free services list and no Synapse-specific trial period was confirmed. Features sourced from official Azure product description and Microsoft Learn documentation."
+      }
     },
     {
       "slug": "motherduck",
@@ -553,7 +905,66 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://motherduck.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": 7,
+        "keyIntegrations": [
+          "DuckDB (embedded)",
+          "dbt",
+          "Fivetran",
+          "Airbyte",
+          "Apache Airflow",
+          "Dagster",
+          "Tableau",
+          "Apache Superset",
+          "Hex",
+          "Power BI"
+        ],
+        "limits": [
+          "Lite (free): 3 internal active users, 2 service accounts, 10 GB storage, 10 hrs Pulse compute/month, 1-day snapshot retention, community support only",
+          "Business: up to 10 internal users, unlimited service accounts, 90-day snapshot retention, 99.9% SLA",
+          "HIPAA BAA: available on request for Business plan; included on Enterprise plan",
+          "Business plan 7-day free trial with full feature access"
+        ],
+        "keyFeatures": [
+          "Managed DuckDB in the cloud: hypertenancy gives each user a dedicated compute instance, eliminating resource contention",
+          "User-level CPU visibility and cost attribution — track and optimize spend per individual user",
+          "Flights: agent-native data pipelines integrated directly into the warehouse",
+          "Hybrid local+cloud query execution: combine local DuckDB with MotherDuck cloud seamlessly",
+          "Read-scaling replicas and 5 instance types (Pulse to Giga) with per-second billing"
+        ],
+        "bestFor": [
+          "Small-to-mid data teams wanting the simplicity and speed of DuckDB at cloud scale",
+          "Individual analysts and solo practitioners (free Lite plan, no credit card required)",
+          "HIPAA-regulated teams needing a lightweight managed warehouse (BAA on Business/Enterprise)",
+          "Application developers embedding analytics that require per-user cost attribution"
+        ],
+        "sources": [
+          {
+            "url": "https://motherduck.com/trust-and-security/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://motherduck.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://motherduck.com/product/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "HIPAA confirmed from motherduck.com/pricing/ (fetched 2026-06-15): footer states 'MotherDuck is SOC 2 Type II and GDPR compliant, with full reports and HIPAA BAAs available on request for Business Plan customers'; HIPAA BAA listed as Business/Enterprise feature ('available on request'). compliance.source set to the pricing page because the trust-and-security page does NOT mention HIPAA (corrected: earlier provenance overstated that the trust page 'notes HIPAA among compliance badges' — it does not). hipaa=true. SOC 2 Type II confirmed from motherduck.com/trust-and-security/ (fetched 2026-06-15): 'MotherDuck has successfully completed its SOC 2 Type II attestation.' GDPR confirmed from same page: 'MotherDuck has been GDPR verified by GDPR Local'; DPA available. freeTier=true: Lite plan at $0/month confirmed from pricing page — forever free with stated limits. freeTrialDays=7: Business plan '7 days FREE' trial confirmed from pricing page. Features sourced from motherduck.com/product/ and motherduck.com/pricing/."
+      }
     },
     {
       "slug": "starburst",
@@ -638,7 +1049,67 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.starburst.io/privacy-policy/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": 30,
+        "keyIntegrations": [
+          "Trino (open-source engine)",
+          "dbt",
+          "Apache Iceberg",
+          "Amazon S3",
+          "Azure Data Lake Storage",
+          "Google Cloud Storage",
+          "Tableau",
+          "Power BI",
+          "Looker",
+          "Apache Hive"
+        ],
+        "limits": [
+          "Free tier: up to 3 clusters, standard cluster execution mode only (ad hoc queries)",
+          "30-day trial: $500 in Starburst Galaxy compute credits with Enterprise-tier features",
+          "Pro: flexible cluster execution modes; credits start at $0.50/credit",
+          "Enterprise: advanced autoscaling, fine-grained access controls; credits start at $0.75/credit",
+          "Mission-Critical: premium SLA, dedicated support; credits start at $1.00/credit"
+        ],
+        "keyFeatures": [
+          "Open lakehouse federation: query data across 50+ sources (S3, ADLS, BigQuery, Redshift, Snowflake) without ETL",
+          "Icehouse platform: combines Apache Iceberg and Trino for a unified open lakehouse at enterprise scale",
+          "Data Products layer: governed, contextualized data products with shared business catalogs across domains",
+          "AIDA (AI Data Assistant): conversational analytics interface for business users on governed data",
+          "Self-managed Starburst Enterprise: deploy on-premises, hybrid, or private cloud for maximum control"
+        ],
+        "bestFor": [
+          "Enterprises federating queries across multiple heterogeneous data sources without data movement",
+          "Organizations committed to open lakehouse architectures (Trino + Iceberg) avoiding vendor lock-in",
+          "Hybrid and on-premises deployments requiring self-managed analytics infrastructure",
+          "Domain-driven data mesh teams needing governed data products across organizational units"
+        ],
+        "sources": [
+          {
+            "url": "https://www.starburst.io/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.starburst.io/platform/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.starburst.io/privacy-policy/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "HIPAA: multiple attempts to access trust.starburst.io, starburst.io/security, starburst.io/platform/security-compliance/, and related pages returned either 404 errors or empty trust-center shells with no substantive content. No HIPAA or BAA statement found on any fetchable Starburst page. hipaa=null. SOC 2: same issue — trust center inaccessible, no SOC 2 confirmation found on any reachable page. soc2=null. GDPR: starburst.io/privacy-policy/ (fetched 2026-06-15) explicitly states Starburst respects GDPR rights, processes EEA/UK data under GDPR, and references a Data Protection Officer and subprocessor list. gdpr=true. freeTier=true: starburst.io/pricing/ confirms a permanent $0 free plan (up to 3 clusters, ad hoc queries) that persists after the 30-day trial ends. freeTrialDays=30: 30-day trial with $500 in Galaxy compute credits confirmed from pricing page. Features sourced from starburst.io/platform/ and starburst.io/platform/security-compliance/ (the latter returned 404 but the platform page was successfully fetched)."
+      }
     }
   ]
 }

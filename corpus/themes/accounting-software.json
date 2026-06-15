@@ -116,7 +116,57 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": 30,
+        "keyIntegrations": [
+          "QuickBooks Payments",
+          "QuickBooks Payroll",
+          "Bill.com",
+          "Shopify",
+          "PayPal",
+          "Square",
+          "TurboTax"
+        ],
+        "limits": [
+          "Solopreneur Lite: 1 user only",
+          "Simple Start: 1 user",
+          "Essentials: up to 3 users",
+          "Plus: up to 5 users",
+          "Advanced: up to 25 users",
+          "No free-forever plan — 30-day free trial only"
+        ],
+        "keyFeatures": [
+          "Largest accountant/bookkeeper ecosystem in US",
+          "Mileage tracking via mobile app",
+          "Project profitability reporting (Plus+)",
+          "Batch invoicing and custom user roles (Advanced)",
+          "Built-in payroll and payments add-ons"
+        ],
+        "bestFor": [
+          "Small businesses wanting the broadest accountant network",
+          "Businesses scaling from 1 to 25 users",
+          "US sole proprietors needing tax estimate tools"
+        ],
+        "sources": [
+          {
+            "url": "https://quickbooks.intuit.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.nerdwallet.com/business/software/learn/quickbooks-pricing",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Attempted to fetch quickbooks.intuit.com/pricing, /r/security, /global/security, /accounting, and intuit.com/privacy, /company/security — all returned HTTP 429, 503, or timeout errors. Compliance fields (HIPAA, SOC2, GDPR) could not be confirmed from vendor's own trust/security page and are therefore null; this does not imply non-compliance. freeTier set to false: there is no $0 plan in the plans array, and independent sources (NerdWallet, FitSmallBusiness, certumsolutions) confirm QuickBooks Online has no free-forever tier — only a 30-day free trial (the existing plan note's 'Free $0 entry tier' wording is not supported by current pricing). 30-day free trial is widely reported by multiple independent sources; could not confirm from live pricing page due to access blocks. Integrations and key features sourced from existing vendor-provided data and corroborating NerdWallet article."
+      }
     },
     {
       "slug": "xero",
@@ -193,7 +243,53 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": 30,
+        "keyIntegrations": [
+          "Stripe",
+          "Gusto",
+          "HubSpot",
+          "Shopify",
+          "PayPal",
+          "Square",
+          "Bill.com"
+        ],
+        "limits": [
+          "Early plan: 20 invoices/quotes and 5 bills per month",
+          "All plans: unlimited users per organization"
+        ],
+        "keyFeatures": [
+          "Unlimited users on all plans (flat per-org pricing)",
+          "800+ app marketplace integrations",
+          "Multi-currency support (Established plan)",
+          "Project tracking and expense claims (Established)",
+          "Bulk bank reconciliation tools"
+        ],
+        "bestFor": [
+          "Teams with many users wanting flat per-org pricing",
+          "International businesses needing multi-currency",
+          "Businesses migrating from QuickBooks seeking a modern UI"
+        ],
+        "sources": [
+          {
+            "url": "https://www.xero.com/us/pricing-plans/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://costbench.com/software/accounting/xero/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "All xero.com security, trust, privacy, and about pages returned HTTP 503 or timeout on every fetch attempt. Compliance fields (HIPAA, SOC2, GDPR) could not be confirmed from vendor's own pages and are therefore null; this does not imply non-compliance. No free tier exists per the plans in this file (lowest plan is $25/mo). 30-day free trial is widely reported and consistent with Xero's standard offering; could not confirm from a live Xero page due to persistent 503 errors. Integrations and features sourced from existing vendor-provided integrations list and costbench corroboration."
+      }
     },
     {
       "slug": "freshbooks",
@@ -273,7 +369,62 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.freshbooks.com/policies/privacy",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 30,
+        "keyIntegrations": [
+          "Stripe",
+          "PayPal",
+          "Gusto",
+          "Shopify",
+          "HubSpot",
+          "Zapier",
+          "Squarespace"
+        ],
+        "limits": [
+          "Lite: up to 5 billable clients",
+          "Plus: up to 50 billable clients",
+          "Premium/Select: unlimited clients",
+          "Additional team members $11/mo each across all plans"
+        ],
+        "keyFeatures": [
+          "Client-centric invoicing with built-in retainers and recurring billing",
+          "PCI DSS Level 1 certified payment processing",
+          "Time tracking with automatic invoice population",
+          "Project profitability reporting (Premium+)",
+          "100+ app integrations via FreshBooks AppStore"
+        ],
+        "bestFor": [
+          "Freelancers and service businesses billing by client",
+          "Agencies managing multiple clients and retainers",
+          "Solopreneurs wanting polished client-facing invoicing"
+        ],
+        "sources": [
+          {
+            "url": "https://www.freshbooks.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.freshbooks.com/policies/security-safeguards",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.freshbooks.com/policies/privacy",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "freshbooks.com/pricing fetched successfully and confirmed 30-day free trial and no free forever plan. freshbooks.com/policies/security-safeguards confirmed PCI DSS Level 1 compliance; HIPAA and SOC 2 were not mentioned on that page. freshbooks.com/policies/privacy confirmed GDPR compliance via reference to EU Standard Contractual Clauses and Regulation (EU) 2017/679. HIPAA and BAA were not mentioned on any fetched page — set to null (cannot confirm, not explicitly denied). SOC 2 not found on any fetched page — set to null."
+      }
     },
     {
       "slug": "wave",
@@ -337,7 +488,54 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Wave Payments",
+          "Wave Payroll",
+          "Stripe",
+          "PayPal",
+          "Zapier",
+          "Google Sheets",
+          "Etsy"
+        ],
+        "limits": [
+          "Starter: unlimited invoices/bills/records but no automatic bank import",
+          "Pro: automatic bank import and auto-categorization",
+          "Card processing fee: 2.9% + $0.60 per transaction (Starter); first 10 tx/mo at 2.9%+$0 (Pro)"
+        ],
+        "keyFeatures": [
+          "Genuinely free accounting and invoicing forever (Starter plan)",
+          "Built-in payment processing without third-party gateway",
+          "Automatic bank transaction import and categorization (Pro)",
+          "Dedicated human bookkeeper available (Advisors tier)",
+          "Mobile receipt scanning"
+        ],
+        "bestFor": [
+          "Freelancers and micro-businesses wanting $0 accounting software",
+          "Solopreneurs who need invoicing without a subscription",
+          "Very early-stage businesses with simple books"
+        ],
+        "sources": [
+          {
+            "url": "https://www.waveapps.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.waveapps.com/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "waveapps.com/pricing and waveapps.com fetched successfully and confirmed the free Starter plan (forever free, $0). waveapps.com/security returned 404 and support.waveapps.com article returned 403 — no security/compliance page was accessible. HIPAA, SOC 2, and GDPR could not be confirmed or denied from any vendor page and are set to null. No traditional free trial period exists — the free Starter plan IS the ongoing no-cost option. Key integrations sourced from existing vendor data and homepage."
+      }
     },
     {
       "slug": "zoho-books",
@@ -447,7 +645,64 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.zoho.com/compliance.html",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Zoho CRM",
+          "Zoho Payroll",
+          "Stripe",
+          "PayPal",
+          "Razorpay",
+          "Slack",
+          "Zapier"
+        ],
+        "limits": [
+          "Free plan: 1 user + 1 accountant, requires annual revenue under $50K",
+          "Standard: 3 users max",
+          "Professional: 5 users max",
+          "Premium/Elite: 10 users max",
+          "Ultimate: 15 users max",
+          "Additional users $3/mo (monthly) or $2.50/mo (annual)"
+        ],
+        "keyFeatures": [
+          "SOC 2 + HIPAA Type 2 audited (Dec 2023–Sep 2024)",
+          "Native Zoho ecosystem integration (CRM, Payroll, Analytics, Inventory)",
+          "Advanced inventory and warehouse management (Elite)",
+          "Workflow automation and custom modules (Premium+)",
+          "Vendor and customer portals (Premium+)"
+        ],
+        "bestFor": [
+          "Businesses already using Zoho CRM or the broader Zoho suite",
+          "Cost-conscious teams wanting a free tier with a clear upgrade path",
+          "Growing companies needing inventory management alongside accounting"
+        ],
+        "sources": [
+          {
+            "url": "https://www.zoho.com/compliance.html",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.zoho.com/us/books/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.zoho.com/us/books/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "zoho.com/compliance.html fetched successfully and explicitly lists: SOC 2 Type 2, SOC 2 + HIPAA Type 2 (audit period Dec 2023–Sep 2024), ISO/IEC 27001, ISO/IEC 27701, GDPR, CCPA, PCI DSS, and multiple other certifications. HIPAA=true and BAA availability implied by SOC 2 + HIPAA Type 2 audit. SOC2=true confirmed. GDPR=true confirmed. zoho.com/us/books confirmed 14-day free trial and the $0 Free plan. Free tier=true per the $0 plan in the existing plans array. Integrations sourced from existing vendor data."
+      }
     },
     {
       "slug": "patriot-software",
@@ -494,7 +749,54 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": 30,
+        "keyIntegrations": [
+          "Patriot Payroll",
+          "Stripe",
+          "Plaid",
+          "Apple Pay",
+          "Google Pay",
+          "ACH payments",
+          "1099 Contractor Portal"
+        ],
+        "limits": [
+          "Unlimited customers, invoices, and vendors on both plans",
+          "Multiple user accounts included at no extra cost",
+          "No user-seat caps published"
+        ],
+        "keyFeatures": [
+          "Patented dual-ledger allowing cash and accrual basis toggle without conversion",
+          "Native payroll integration with Patriot Payroll (Basic and Full Service)",
+          "Contractor portal for 1099 management",
+          "Free USA-based customer support",
+          "Automatic bank transaction import via Plaid"
+        ],
+        "bestFor": [
+          "Small US businesses wanting tight payroll-accounting integration at low cost",
+          "Businesses that need both cash and accrual reporting from one ledger",
+          "Budget-conscious teams needing unlimited users without per-seat fees"
+        ],
+        "sources": [
+          {
+            "url": "https://www.patriotsoftware.com/accounting/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.patriotsoftware.com/accounting/features/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "patriotsoftware.com/accounting/pricing confirmed 30-day free trial. Security page (/security, /about/security) returned 404 or empty content on all fetch attempts. Privacy policy page was a metadata-only shell with no compliance text. No compliance certifications (HIPAA, SOC 2, GDPR) could be confirmed or denied from vendor pages — all set to null. No free forever plan; lowest paid tier is $20/mo. Features and integrations sourced from live fetch of patriotsoftware.com/accounting and /accounting/features."
+      }
     },
     {
       "slug": "bench",
@@ -557,7 +859,61 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://www.bench.co/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Gusto",
+          "Stripe",
+          "Shopify",
+          "Square",
+          "Relay",
+          "Bluevine",
+          "Mainstreet"
+        ],
+        "limits": [
+          "Grow plan: for businesses under $250K annual revenue",
+          "Pricing scales with revenue/complexity — 'starting at' rates apply to simplest accounts",
+          "Annual prepay saves ~20% across all plans"
+        ],
+        "keyFeatures": [
+          "SOC 2 Type 2 certified with annual re-examination",
+          "Dedicated human bookkeeping team (not just software)",
+          "AI-assisted transaction categorization plus human review",
+          "Catch-up bookkeeping for businesses behind on their books",
+          "Integrated tax filing with licensed tax professionals (Core + Tax plan)"
+        ],
+        "bestFor": [
+          "Small business owners who want to fully outsource bookkeeping",
+          "Businesses needing catch-up bookkeeping",
+          "Founders wanting combined bookkeeping and tax filing under one service"
+        ],
+        "sources": [
+          {
+            "url": "https://www.bench.co/security",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.bench.co/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.bench.co/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "bench.co/security fetched successfully and explicitly confirms SOC 2 Type 2 annual examination and SOC 3; ISO 27001 noted for data center hosting environment; PCI certification noted for payment handling. HIPAA not mentioned on the security page — set to null. GDPR not mentioned on security or pricing pages — set to null. No free forever plan or defined-day free trial — Bench offers one free prior-month bookkeeping sample, not a timed trial. Integrations sourced from bench.co homepage and pricing page (Gusto, Shopify, Square, Stripe, Relay, Bluevine, Mainstreet partner discounts advertised)."
+      }
     },
     {
       "slug": "bookkeeper360",
@@ -606,7 +962,58 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "QuickBooks Online",
+          "Xero",
+          "Gusto",
+          "Bill.com",
+          "Stripe",
+          "Shopify",
+          "Google Workspace"
+        ],
+        "limits": [
+          "No free trial — free initial consultation only",
+          "Onboarding fee of $1,000 applies",
+          "Optional CFO add-on at $2,000/mo; tax filing add-on at $1,000/yr"
+        ],
+        "keyFeatures": [
+          "Works with both QuickBooks and Xero (client's choice of platform)",
+          "Weekly bookkeeping close available (not just monthly)",
+          "Fractional CFO advisory available as add-on",
+          "AI-powered financial dashboard with real-time metrics",
+          "Dedicated bookkeeper for each client; 4.8/5 from 200+ reviews"
+        ],
+        "bestFor": [
+          "eCommerce, SaaS, healthcare, or real estate businesses wanting outsourced bookkeeping",
+          "Fast-growing companies needing weekly financial visibility",
+          "Businesses wanting optional fractional CFO on top of bookkeeping"
+        ],
+        "sources": [
+          {
+            "url": "https://www.bookkeeper360.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.bookkeeper360.com/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.bookkeeper360.com/services/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "bookkeeper360.com/security returned 404; /about and /privacy-policy pages contained no compliance information. No HIPAA, SOC 2, or GDPR certifications could be found on any accessible Bookkeeper360 page — all set to null. No free tier or defined free trial exists; the company offers a free consultation call only. Integrations and features sourced from live fetches of bookkeeper360.com homepage, /services, and /pricing. The site lists healthcare as a served vertical but makes no HIPAA compliance claim."
+      }
     }
   ]
 }

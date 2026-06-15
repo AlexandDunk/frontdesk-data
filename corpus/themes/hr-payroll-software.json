@@ -96,7 +96,54 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "QuickBooks",
+          "Xero",
+          "Clover",
+          "Deputy",
+          "When I Work",
+          "Shopify",
+          "Greenhouse"
+        ],
+        "limits": [
+          "Simple plan: single-state payroll only",
+          "Plus plan: 25% off first 3 months (promotional)",
+          "Contractor Only: base fee waived for first 6 months"
+        ],
+        "keyFeatures": [
+          "Full-service multi-state payroll",
+          "Automated federal/state/local tax filing",
+          "Employee self-service portal",
+          "Benefits administration (health, dental, vision, 401k)",
+          "Contractor payments and 1099 filings"
+        ],
+        "bestFor": [
+          "US-based SMBs running their first payroll",
+          "Companies with a mix of W-2 employees and contractors",
+          "Small businesses wanting bundled HR + payroll"
+        ],
+        "sources": [
+          {
+            "url": "https://gusto.com/product/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://remotepeople.com/providers/gusto-review/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched gusto.com/product/pricing (HTTP 403), trust.gusto.com (returned only a page title with no accessible content), gusto.com/product/payroll and /features (both 403), and gusto.com/legal/privacy-policy (403). Multiple gusto.com subpaths returned 403 or empty content; compliance status (HIPAA, SOC 2, GDPR) could not be confirmed from any vendor-owned page reached during this session and are therefore set to null. Free tier: no $0 forever plan exists across any listed plan; Contractor Only waives the base fee for 6 months but charges per-contractor, so freeTier is false. Free trial duration could not be confirmed and is set to null."
+      }
     },
     {
       "slug": "rippling",
@@ -153,7 +200,63 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://rippling.com/trust/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Slack",
+          "Google Workspace",
+          "Microsoft 365",
+          "GitHub",
+          "Salesforce",
+          "Jira",
+          "QuickBooks Online",
+          "Xero",
+          "Checkr"
+        ],
+        "limits": [
+          "Platform base fee starts at $35/mo regardless of seat count",
+          "Per-module pricing; HR, Payroll, IT, Finance each add cost",
+          "Full configuration requires custom quote"
+        ],
+        "keyFeatures": [
+          "Unified HR, IT, and Finance platform (600+ integrations)",
+          "Automated employee onboarding and offboarding across apps and devices",
+          "Global payroll across 50+ countries",
+          "Device management and identity/access provisioning",
+          "Workflow Studio for no-code automation"
+        ],
+        "bestFor": [
+          "Mid-market companies wanting HR + IT unified",
+          "Tech companies with distributed or remote workforces",
+          "Organizations requiring automated provisioning/deprovisioning"
+        ],
+        "sources": [
+          {
+            "url": "https://rippling.com/trust/security",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.rippling.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.rippling.com/integrations",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched rippling.com/trust/security successfully — page explicitly states SOC 1 Type II, SOC 2 Type II, SOC 3, ISO 27001, ISO 27018, ISO 42001, CSA STAR Level 2, and 'Rippling complies with all applicable privacy and data protection laws, including GDPR and CCPA.' HIPAA and BAA were not mentioned on this page or rippling.com/industries/healthcare (which confirmed 1,500+ healthcare customers but made no HIPAA/BAA claim), so hipaa is set to null. No free tier or confirmed free trial duration found on pricing page. Integration list sourced from rippling.com/integrations."
+      }
     },
     {
       "slug": "bamboohr",
@@ -229,7 +332,54 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": 7,
+        "keyIntegrations": [
+          "Slack",
+          "Greenhouse",
+          "Indeed",
+          "QuickBooks",
+          "Google Workspace",
+          "Workday",
+          "Zapier"
+        ],
+        "limits": [
+          "Minimum spend $250/mo for companies with 25 or fewer employees",
+          "Payroll module is a paid add-on, not included in Core/Pro/Elite base plans",
+          "Elite plan required for compensation benchmarking and advanced analytics"
+        ],
+        "keyFeatures": [
+          "Centralized employee records with org chart and reporting",
+          "Applicant tracking system (ATS) with job board integrations",
+          "Performance management with 360 reviews and 1:1 tools",
+          "Compensation planning and salary benchmarking (Elite)",
+          "300+ compliance training courses (Elite)"
+        ],
+        "bestFor": [
+          "SMBs (25–500 employees) standardizing their HRIS",
+          "Companies needing ATS + HR in one platform",
+          "HR teams replacing spreadsheets with structured workflows"
+        ],
+        "sources": [
+          {
+            "url": "https://www.bamboohr.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.hireinsouth.com/post/bamboohr-pricing",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Multiple bamboohr.com paths (bamboohr.com/security, /about/security-privacy, /legal/privacy-policy, /bamboohr-security, /bamboohr-security/, /integrations/, /pricing/, /product/features/, /resources/hr-glossary/soc-2-compliance, /resources/hr-glossary/hipaa-compliance, /blog/bamboohr-soc-2) all returned HTTP 403. No vendor-owned page was accessible to confirm any compliance certification (HIPAA, SOC 2, GDPR); all set to null. The 7-day free trial is widely reported by corroborating sources; no $0 forever plan exists in the confirmed plan set."
+      }
     },
     {
       "slug": "adp-run",
@@ -323,7 +473,57 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://www.adp.com/about-adp/data-security.aspx",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "QuickBooks",
+          "Xero",
+          "Wave",
+          "ClockShark",
+          "Deputy",
+          "ZipRecruiter",
+          "Clover POS"
+        ],
+        "limits": [
+          "All plans are quote-only; no published per-seat or base prices",
+          "Targeted at small businesses with 1–49 employees",
+          "ADP Marketplace integrations may carry additional fees"
+        ],
+        "keyFeatures": [
+          "Automated multi-state payroll tax filing (all 50 states)",
+          "AI-enabled payroll error flagging ('RUN & DONE' autopilot)",
+          "Mobile payroll app for on-the-go pay runs",
+          "Recruiting, onboarding, and compliance training tools",
+          "W-2 and 1099 e-filing included"
+        ],
+        "bestFor": [
+          "Small businesses (1–49 employees) wanting a household-name payroll brand",
+          "Companies needing ADP's broad compliance and tax coverage",
+          "Businesses using Clover POS or ZipRecruiter for hiring"
+        ],
+        "sources": [
+          {
+            "url": "https://www.adp.com/about-adp/data-security.aspx",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.adp.com/what-we-offer/products/run-powered-by-adp.aspx",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched adp.com/about-adp/data-security.aspx successfully — page explicitly states 'ADP issues SOC 1 Type 2 and SOC 2 Type 2 reports over select products and services' and lists ISO 9001, ISO/IEC 27001, ISO/IEC 27701, and PCI DSS. HIPAA is not mentioned on this page; adp.com/what-we-offer/run-powered-by-adp/hipaa.aspx returned 404; HIPAA set to null. GDPR: ADP's privacy page references Binding Corporate Rules for EU data transfers but does not say 'GDPR compliant' in the content fetched; adp.com/privacy.aspx did not mention GDPR explicitly, so gdpr is set to null. adp.com/privacy.aspx itself was flagged as unsafe to fetch by the network. No free tier or trial confirmed."
+      }
     },
     {
       "slug": "deel",
@@ -432,7 +632,63 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.deel.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "QuickBooks",
+          "Xero",
+          "NetSuite",
+          "BambooHR",
+          "Workday",
+          "SAP SuccessFactors",
+          "HiBob",
+          "Employee Navigator",
+          "Human Interest"
+        ],
+        "limits": [
+          "No free tier; demo available on request",
+          "EOR coverage in 110+ countries; US PEO covers all 50 states",
+          "Managed payroll designed for companies under 200 US employees"
+        ],
+        "keyFeatures": [
+          "Employer of Record in 110+ countries (full legal employment)",
+          "Global payroll with multi-currency payments in 120+ currencies",
+          "Contractor of Record to reduce worker misclassification risk",
+          "Modular HRIS (Core HR, Recruit, Develop bundles)",
+          "US PEO for all-50-state HR and compliance"
+        ],
+        "bestFor": [
+          "Companies hiring internationally across 110+ countries",
+          "Startups and scale-ups managing global contractor workforces",
+          "Businesses needing EOR without establishing local entities"
+        ],
+        "sources": [
+          {
+            "url": "https://www.deel.com/security",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.deel.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.deel.com/us-payroll/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched deel.com/security successfully — page explicitly states SOC 2 (with SOC 1 and SOC 3 also listed), ISO 27001, AES-256 encryption, and 'Deel is GDPR compliant.' HIPAA not mentioned on security page or any other reachable Deel page; blog URL returning 404; hipaa set to null. Pricing page confirmed no free tier, only a free demo. Integration list supplemented from deel.com/us-payroll/ and deel.com/integrations/."
+      }
     },
     {
       "slug": "onpay",
@@ -466,7 +722,62 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://onpay.com/about/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 30,
+        "keyIntegrations": [
+          "QuickBooks Online",
+          "QuickBooks Desktop",
+          "Xero",
+          "Deputy",
+          "When I Work",
+          "QuickBooks Time",
+          "TurboTax",
+          "Vestwell"
+        ],
+        "limits": [
+          "Single all-inclusive plan; no tiered feature gating",
+          "First month free (promotional, not a perpetual free tier)",
+          "Multi-state payroll included at no extra cost"
+        ],
+        "keyFeatures": [
+          "Single flat-rate pricing with no feature tiers",
+          "Full-service payroll for W-2 and 1099 workers with unlimited pay runs",
+          "Automated federal/state/local tax filing and year-end forms",
+          "Built-in hiring, onboarding, and PTO management",
+          "Integrated health insurance, 401(k), and workers' compensation"
+        ],
+        "bestFor": [
+          "Small businesses wanting simple, transparent payroll pricing",
+          "Companies with a mix of employees and 1099 contractors",
+          "Industries like restaurants, nonprofits, dental/healthcare offices, and farms"
+        ],
+        "sources": [
+          {
+            "url": "https://onpay.com/about/security",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://onpay.com/payroll/software/costs-pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://onpay.com/payroll/software/integrations",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched onpay.com/about/security successfully — page explicitly states 'OnPay holds third-party auditor certification with the AICPA's SOC program and is SOC 2 Type II compliant.' HIPAA and GDPR not mentioned on the security page; set to null. Pricing page confirmed no forever-free $0 plan; 'first month free' promotion is time-limited, so freeTier=false and freeTrialDays=30. Integration list sourced from onpay.com/payroll/software/integrations (fetched successfully) listing QuickBooks Online, QuickBooks Desktop, Xero, Deputy, When I Work, QuickBooks Time, TurboTax, Vestwell, JazzHR, and others."
+      }
     },
     {
       "slug": "patriot-software",
@@ -512,7 +823,61 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://www.patriotsoftware.com/about/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 30,
+        "keyIntegrations": [
+          "Patriot Accounting",
+          "QuickBooks Online",
+          "Simply Insured",
+          "Vestwell",
+          "Stripe",
+          "PosterElite",
+          "ERGO NEXT"
+        ],
+        "limits": [
+          "Basic Payroll: you must file your own payroll taxes (no auto-filing)",
+          "Full Service: tax filing included but state/local tax is add-on scope",
+          "30-day free trial; 50% off for first 6 months (promotional)"
+        ],
+        "keyFeatures": [
+          "Lowest published base price among full-service payroll vendors ($17/mo base)",
+          "Unlimited payrolls per month with no per-run fees",
+          "Free direct deposit for all workers",
+          "Full-service tax filing with accuracy guarantee (Full Service plan)",
+          "Native integration with Patriot Accounting for full bookkeeping"
+        ],
+        "bestFor": [
+          "Very small businesses (under 20 employees) on a tight budget",
+          "Owners who want to self-file taxes (Basic) or fully outsource them (Full Service)",
+          "US domestic-only companies not needing global HR features"
+        ],
+        "sources": [
+          {
+            "url": "https://www.patriotsoftware.com/about/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.patriotsoftware.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.patriotsoftware.com/integrations/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched patriotsoftware.com/about/ successfully — page states 'As a SOC 2 Type II compliant organization, we follow rigorous data protection standards.' HIPAA and GDPR not mentioned on this or any other accessible page (patriotsoftware.com/about/security/ returned 404, blog HIPAA URL returned 404); both set to null. Pricing page confirmed 30-day free trial promotional offer; no $0 forever plan exists so freeTier=false and freeTrialDays=30. Integration list sourced from patriotsoftware.com/integrations/ (fetched successfully)."
+      }
     },
     {
       "slug": "square-payroll",
@@ -559,7 +924,52 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Square POS",
+          "Square Staff (Team App)",
+          "QuickBooks Online",
+          "Cash App",
+          "Workers' Compensation (add-on)"
+        ],
+        "limits": [
+          "Full-Service plan requires $35/mo base regardless of employee count",
+          "Contractor-Only plan: $6 per contractor paid per month, no base fee",
+          "No free tier or trial; payroll specialist support included in base plan"
+        ],
+        "keyFeatures": [
+          "Native timecard and tip import from Square POS",
+          "Automated multi-state payroll tax filings (federal, state, quarterly, annual)",
+          "Instant deposits to employees via Cash App",
+          "1099-NEC generation and e-filing for contractors",
+          "Payroll management directly inside Square Dashboard (no separate login)"
+        ],
+        "bestFor": [
+          "Square POS merchants (restaurants, retail, services) wanting payroll in one ecosystem",
+          "Food-and-beverage businesses with tip-heavy workforces",
+          "Micro-businesses running contractor-only payroll at minimal cost"
+        ],
+        "sources": [
+          {
+            "url": "https://squareup.com/us/en/payroll",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://squareup.com/us/en/payroll/contractors",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched squareup.com/us/en/payroll and /payroll/contractors successfully — pages describe key features and integrations; no mention of HIPAA, SOC 2, or GDPR compliance. squareup.com/us/en/l/security and squareup.com/us/en/payments/security were fetched but returned only PCI DSS mention with no SOC 2 or HIPAA information. squareup.com/us/en/payroll/pricing could not be fetched (network block). All compliance fields set to null as no vendor-owned page confirmed them. No free tier or free trial found; freeTier=false, freeTrialDays=null."
+      }
     },
     {
       "slug": "justworks",
@@ -635,7 +1045,54 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "QuickBooks",
+          "Xero",
+          "Greenhouse",
+          "Slack",
+          "Google Workspace",
+          "Carta",
+          "Gusto (migration)"
+        ],
+        "limits": [
+          "PEO Basic/Plus: volume tier discounts apply above certain headcounts (exact thresholds not published)",
+          "Health insurance premiums billed separately on top of PEO Plus platform fee",
+          "International payroll not included; Justworks operates US-only PEO"
+        ],
+        "keyFeatures": [
+          "Full-service PEO with co-employment model (shared employer liability)",
+          "Access to large-group health, dental, and vision benefits at small-business pricing",
+          "Automated multi-state payroll and tax filing",
+          "Compliance support and HR advisory included in PEO plans",
+          "Standalone payroll tier available without PEO co-employment"
+        ],
+        "bestFor": [
+          "US startups and SMBs that want big-company benefits at PEO rates",
+          "Companies prioritizing health benefits access alongside payroll",
+          "Businesses wanting a clean PEO with transparent per-seat pricing"
+        ],
+        "sources": [
+          {
+            "url": "https://www.justworks.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://remotepeople.com/providers/justworks-review/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "All justworks.com subpaths attempted (justworks.com/security, /legal/security, /legal/security-policy, /features, /product/peo, /product/benefits-and-perks, /blog/justworks-soc-2-type-ii-certification, /blog/soc-2-type-ii, /blog/hipaa-compliance, /blog/hipaa-peo, /blog/justworks-trust-center, /integrations, /pricing) returned HTTP 403. No vendor-owned page was accessible to confirm any compliance certification; all compliance fields set to null. No free tier exists across the confirmed plan set. Free trial not confirmed; freeTrialDays=null."
+      }
     }
   ]
 }

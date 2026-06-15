@@ -96,7 +96,58 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://trust.datadoghq.com/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "AWS",
+          "Azure",
+          "Google Cloud",
+          "Kubernetes",
+          "OpenTelemetry",
+          "PagerDuty",
+          "Slack",
+          "GitHub"
+        ],
+        "limits": [
+          "No free tier; 14-day free trial",
+          "APM billed per host/month; on-demand rate ~55% higher than annual",
+          "Continuous Profiler requires APM Enterprise tier or above"
+        ],
+        "keyFeatures": [
+          "Watchdog AI for automated anomaly detection and root cause analysis",
+          "End-to-end distributed tracing correlated with logs, metrics, and infrastructure",
+          "Continuous Profiler for code-level CPU/memory/IO visibility in production",
+          "Change tracking correlates deploys and feature flags with performance regressions",
+          "Native and hybrid OpenTelemetry ingestion with remote sampling controls"
+        ],
+        "bestFor": [
+          "Enterprises running multi-cloud, multi-language stacks",
+          "Teams needing full-stack correlation from browser to database",
+          "Organizations requiring FedRAMP High or HIPAA compliance"
+        ],
+        "sources": [
+          {
+            "url": "https://trust.datadoghq.com/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.datadoghq.com/product/apm/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Trust Center at trust.datadoghq.com fetched 2026-06-15: confirms HIPAA, SOC 2 Type I and II, ISO 27001, GDPR, FedRAMP High among listed certifications. Trust Center page does not surface explicit BAA language publicly but HIPAA is listed as a certification alongside FedRAMP, which typically requires a BAA; original file already set baa=true. Free trial of 14 days is widely documented in Datadog's onboarding flow; no permanently free plan exists at the APM level. APM product page fetched for feature details. Datadog's blog post confirmed HIPAA-oriented log management capabilities as a business associate. BAA confirmation on public page was not surfaced in the excerpt — original file already had baa=true based on prior research."
+      }
     },
     {
       "slug": "new-relic",
@@ -186,7 +237,59 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://docs.newrelic.com/docs/security/security-privacy/compliance/regulatory-audits-new-relic-services/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "AWS",
+          "Azure",
+          "Google Cloud",
+          "Kubernetes",
+          "OpenTelemetry",
+          "ServiceNow",
+          "PagerDuty",
+          "Slack"
+        ],
+        "limits": [
+          "Free: 100 GB data ingest/month, 1 full platform user, 8-day retention",
+          "Standard: max 5 full platform users",
+          "HIPAA eligibility requires Data Plus add-on ($0.60/GB vs $0.40/GB ingest)",
+          "780+ integrations available across all plans"
+        ],
+        "keyFeatures": [
+          "Transaction 360 for dynamic views of entire application stacks",
+          "eAPM with no-code instrumentation for Kubernetes workloads",
+          "780+ integrations including full OpenTelemetry support",
+          "Consumption-based pricing: pay for data ingested and users, not hosts",
+          "FedRAMP Moderate and HIPAA eligibility available via Data Plus option"
+        ],
+        "bestFor": [
+          "Teams wanting a generous free tier before committing",
+          "Organizations needing HIPAA or FedRAMP compliance",
+          "Variable-scale environments where host-based pricing is unpredictable"
+        ],
+        "sources": [
+          {
+            "url": "https://newrelic.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://newrelic.com/termsandconditions/services-notices",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Verifier replaced the weak compliance.source (the pricing page, which only mentions HIPAA-via-Data-Plus and is silent on SOC2/GDPR) with New Relic's official compliance docs at docs.newrelic.com/docs/security/security-privacy/compliance/regulatory-audits-new-relic-services/, which enumerates FedRAMP, HIPAA, ISO 27001, ISO 42001, PCI DSS, SOC 1, SOC 2, and TISAX, and confirms GDPR + HIPAA compliance; HIPAA requires a Business Associate Addendum via the account rep. trust.newrelic.com returned only a JS loading screen with no extractable content. Free plan (100 GB/month, 1 full user) is genuinely $0 forever with no trial expiry per the pricing page. HIPAA eligibility is available on the Data Plus data option; BAA was already set to true in the original file and is corroborated by the docs page (BAA via account representative)."
+      }
     },
     {
       "slug": "grafana-cloud",
@@ -259,7 +362,60 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://grafana.com/products/cloud/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Prometheus",
+          "OpenTelemetry",
+          "AWS",
+          "Azure",
+          "Google Cloud",
+          "Kubernetes",
+          "Loki",
+          "Tempo",
+          "Datadog"
+        ],
+        "limits": [
+          "Free: 10k active metrics series (14-day retention), 50 GB logs/traces (14-day retention)",
+          "Free: 50k frontend sessions, 2,232 Kubernetes host-hours",
+          "Pro: 30-day log/trace retention; usage costs apply beyond free allowances",
+          "Enterprise: annual commit starting at $25,000/year"
+        ],
+        "keyFeatures": [
+          "Open ecosystem built on Prometheus, Loki, Tempo, and Mimir — no vendor lock-in",
+          "Adaptive Telemetry automatically filters unnecessary data, saving 35-50% on costs",
+          "AI Assistant with agentic workflows, prebuilt dashboards, and intelligent alerting",
+          "Composable observability: metrics, logs, traces, and profiling in one platform",
+          "FedRAMP High and SOC 2 certified for enterprise and government deployments"
+        ],
+        "bestFor": [
+          "Prometheus-native and OpenTelemetry shops wanting hosted Grafana",
+          "Teams requiring flexible, usage-based pricing with a free starting tier",
+          "Engineering teams already using open-source Grafana wanting a managed upgrade"
+        ],
+        "sources": [
+          {
+            "url": "https://grafana.com/products/cloud/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://grafana.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Products page at grafana.com/products/cloud/ fetched 2026-06-15 and stated 'FedRAMP High, SOC 2, GDPR, and PCI compliance certifications' for enterprise-grade deployments — SOC2=true and GDPR=true set accordingly. HIPAA was not mentioned on any fetched page (security page returned navigation-only content, trust page returned 404, legal DPA page returned 404); hipaa=null retained as in original file. Free tier confirmed: pricing page lists a permanent $0 plan with no trial expiry. Grafana Cloud privacy policy confirms participation in EU-US Data Privacy Framework, consistent with GDPR compliance."
+      }
     },
     {
       "slug": "honeycomb",
@@ -330,7 +486,56 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "OpenTelemetry",
+          "AWS",
+          "Kubernetes",
+          "PagerDuty",
+          "Slack",
+          "GitHub Actions",
+          "Terraform",
+          "Tracetest"
+        ],
+        "limits": [
+          "Free: 20 million events/month, 2 Triggers, no SLOs",
+          "Pro: up to 1.5 billion events/month, 100 Triggers, 2 SLOs",
+          "Enterprise: 10 billion events/year base allowance, 300+ Triggers, 100 SLOs",
+          "Enterprise: AWS PrivateLink available"
+        ],
+        "keyFeatures": [
+          "BubbleUp: automatically surfaces statistically significant dimensions causing slowdowns or errors",
+          "Event-based wide-column data model enabling arbitrary high-cardinality queries",
+          "Canvas AI Copilot for natural-language query generation and investigation",
+          "Honeycomb MCP for AI agent observability integration",
+          "SLO tracking with burn-rate alerting"
+        ],
+        "bestFor": [
+          "Engineering teams practicing observability-driven development",
+          "High-cardinality distributed systems where traditional metrics fall short",
+          "Teams adopting OpenTelemetry as their instrumentation standard"
+        ],
+        "sources": [
+          {
+            "url": "https://www.honeycomb.io/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://docs.honeycomb.io/security-compliance",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing page fetched 2026-06-15 confirmed plan details and free tier (20M events/month, no expiry). Compliance details could not be confirmed: trust.honeycomb.io returned a 'Loading...' page with no extractable content; docs.honeycomb.io/security-compliance returned only a navigation hub referencing a Trust Center without listing specific certifications; enterprise page mentions 'advanced security and compliance' but does not enumerate specific frameworks. All compliance fields set to null per the task rules. Security documentation page confirmed data encrypted at rest and in transit, separate VPCs, and PrivateLink for Enterprise customers."
+      }
     },
     {
       "slug": "dynatrace",
@@ -418,7 +623,61 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.dynatrace.com/company/trust-center/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 15,
+        "keyIntegrations": [
+          "AWS",
+          "Azure",
+          "Google Cloud",
+          "Kubernetes",
+          "OpenTelemetry",
+          "Java",
+          "Node.js",
+          ".NET",
+          "Kafka",
+          "Prometheus"
+        ],
+        "limits": [
+          "No free tier; 15-day free trial available",
+          "Full-Stack Monitoring billed per 8-GiB memory host-hour ($0.01/GiB-hour)",
+          "Kubernetes monitoring billed per pod-hour ($0.002/pod-hour)",
+          "850+ supported technologies via OneAgent auto-instrumentation"
+        ],
+        "keyFeatures": [
+          "Davis AI for automated root cause analysis with causal dependency mapping",
+          "PurePath distributed tracing: automatic code-level transaction tracing with no sampling",
+          "OneAgent auto-instrumentation: zero-code deployment across 850+ technologies",
+          "Smartscape topology: real-time dependency mapping of all monitored entities",
+          "Continuous production profiling with thread, CPU, and memory allocation analysis"
+        ],
+        "bestFor": [
+          "Large enterprises needing zero-config auto-instrumentation at scale",
+          "Organizations requiring HIPAA, FedRAMP Moderate, or SOC 2 Type II compliance",
+          "Teams that want AI-driven automated root cause analysis rather than manual querying"
+        ],
+        "sources": [
+          {
+            "url": "https://www.dynatrace.com/company/trust-center/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.dynatrace.com/platform/application-performance-monitoring/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Trust Center at dynatrace.com/company/trust-center/ fetched 2026-06-15 and listed HIPAA, SOC 1 Type II, SOC 2 Type II, GDPR, ISO 27001:2022, FedRAMP Moderate, and TISAX as confirmed certifications. BAA not explicitly mentioned on public trust page; original file had baa=null, retained. APM product page confirmed key features including Davis AI, PurePath, and OneAgent. No free tier exists; Dynatrace offers a 15-day free trial per their standard onboarding flow (not confirmed from a fetched page on this date; this is widely documented but should be verified directly at dynatrace.com/trial)."
+      }
     },
     {
       "slug": "appsignal",
@@ -549,7 +808,60 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.appsignal.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Ruby on Rails",
+          "Elixir/Phoenix",
+          "Node.js",
+          "Python",
+          "JavaScript",
+          "Heroku",
+          "Fly.io",
+          "Slack",
+          "PagerDuty"
+        ],
+        "limits": [
+          "Free: 50K requests/month, 1 GB log storage, 5-day retention",
+          "Standard: 250K requests/month, 1 GB log storage; extra storage $10/10 GB",
+          "HIPAA BAA available as paid add-on on any plan",
+          "10% discount on all paid plans with annual billing"
+        ],
+        "keyFeatures": [
+          "Only EU-based APM: infrastructure hosted in EU (AWS EMEA) for GDPR-first teams",
+          "ISO 27001 certified with regular third-party penetration testing",
+          "HIPAA BAA available as a paid add-on with PHI protection and breach notification",
+          "APM + error tracking + logging + uptime monitoring in a single platform",
+          "Unlimited apps, hosts, and team members on all plans"
+        ],
+        "bestFor": [
+          "Ruby on Rails and Elixir/Phoenix teams wanting first-class language support",
+          "EU-based companies with strict GDPR data residency requirements",
+          "Small teams needing flat-rate APM without per-seat or per-host pricing"
+        ],
+        "sources": [
+          {
+            "url": "https://www.appsignal.com/security",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.appsignal.com/add-ons/hipaa-baa",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Security page at appsignal.com/security fetched 2026-06-15: confirmed ISO 27001 certified, GDPR compliant ('The only EU-based APM'), HIPAA compliant as an add-on, and BAA available (link to /add-ons/hipaa-baa). HIPAA BAA add-on page confirmed BAA is offered with PHI protection, strict access controls, and breach notification within 5 business days. SOC2 was not mentioned on the security page or add-on page; set to null. Free tier confirmed via pricing data: 50K requests/month at $0 with no expiry. AppSignal official /plans page still returns HTTP 500 as of this session."
+      }
     },
     {
       "slug": "sentry",
@@ -645,7 +957,60 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://sentry.io/security/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "GitHub",
+          "GitLab",
+          "Jira",
+          "Linear",
+          "Slack",
+          "PagerDuty",
+          "Vercel",
+          "Okta",
+          "LaunchDarkly"
+        ],
+        "limits": [
+          "Developer (free): 1 user, 5,000 errors/month, 5M spans/month, 50 session replays",
+          "Team: 50,000 errors/month, 5M spans/month, unlimited users",
+          "Business: adds SAML/SCIM, anomaly detection, unlimited dashboards",
+          "Overage: $0.50/GB for logs/metrics beyond included allowances"
+        ],
+        "keyFeatures": [
+          "HIPAA Attestation with SOC2 Type II and ISO 27001 — rare combination for a free-tier APM",
+          "Session Replay correlated with errors for visual debugging without reproducing bugs",
+          "Source map integration surfaces exact lines of code causing production errors",
+          "Data Scrubber automatically strips PII and sensitive data before ingestion",
+          "Supports 150+ languages and frameworks including React, Vue, Django, Laravel, Spring"
+        ],
+        "bestFor": [
+          "Developer-led teams wanting free error monitoring before paying for APM",
+          "Organizations needing HIPAA attestation at a self-serve price point",
+          "Fullstack teams wanting correlated frontend and backend error tracing"
+        ],
+        "sources": [
+          {
+            "url": "https://sentry.io/security/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://sentry.io/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Security page at sentry.io/security/ fetched twice (2026-06-14 and 2026-06-15): confirmed SOC2 Type I, SOC2 Type II, HIPAA Attestation, and ISO 27001. GDPR confirmed via Data Processing Addendum (DPA) referenced on the same page. BAA not explicitly confirmed as self-serve; sentry.io/trust/compliance returned 404 on 2026-06-15 fetch; original file retains baa=null. Developer plan is genuinely $0 forever (1 user, 5K errors/month). Annual penetration testing by third-party confirmed on security page."
+      }
     },
     {
       "slug": "signoz",
@@ -718,7 +1083,57 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://signoz.io/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "OpenTelemetry",
+          "AWS",
+          "Azure",
+          "Google Cloud",
+          "Kubernetes",
+          "Prometheus",
+          "Jaeger",
+          "Python",
+          "Java",
+          "Go"
+        ],
+        "limits": [
+          "Community: free self-hosted, unlimited data — user manages own infra and storage costs",
+          "Teams: $49/month base includes ~163 GB logs/traces or 490M metric samples",
+          "Teams: startup program at $19/month for companies <3 years, <30 employees, <$6M raised",
+          "Enterprise: starting at $4,000/month with dedicated cloud environment or BYOC"
+        ],
+        "keyFeatures": [
+          "OpenTelemetry-native: built from the ground up on OTel with no proprietary agents required",
+          "Single pane for logs, metrics, and traces with correlated views across all three signals",
+          "SOC2 Type II and HIPAA compliance on the Teams cloud plan; signed BAA available on the Enterprise plan",
+          "Open-source Community edition: full APM features, self-hosted with no seat limits",
+          "Columnar storage via ClickHouse for fast high-cardinality log and trace queries"
+        ],
+        "bestFor": [
+          "OpenTelemetry-first teams wanting a fully OTel-native managed backend",
+          "Startups needing HIPAA and SOC2 compliance without enterprise pricing",
+          "Teams evaluating via open-source self-hosted before committing to cloud"
+        ],
+        "sources": [
+          {
+            "url": "https://signoz.io/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing page at signoz.io/pricing/ re-fetched 2026-06-15: Teams plan lists 'SOC2 Type II & HIPAA Compliant'; the BAA Agreement is listed under the Enterprise plan ('HIPAA, BAA agreement and other certifications'), NOT the Teams plan. Verifier corrected the keyFeatures claim that previously stated BAA was 'included in the Teams cloud plan' — BAA requires Enterprise. HIPAA/SOC2 compliance booleans remain true (Teams offers HIPAA compliance). trust.signoz.io redirected and returned only a page title with no content. GDPR was not mentioned on the pricing page or in any fetched content; set to null. Community plan (self-hosted open source) counts as a freeTier=true since it is genuinely $0 forever with full feature access; cloud free trial was not mentioned separately."
+      }
     },
     {
       "slug": "elastic-observability",
@@ -794,7 +1209,61 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.elastic.co/trust",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "OpenTelemetry (EDOT)",
+          "Prometheus",
+          "AWS",
+          "Azure",
+          "Google Cloud",
+          "Kubernetes",
+          "Logstash",
+          "Beats",
+          "Grafana",
+          "Jaeger"
+        ],
+        "limits": [
+          "No free tier; 14-day free trial on Elastic Cloud",
+          "Serverless: no minimum spend; egress free up to 50 GB/month then $0.05/GB",
+          "Serverless ingest from $0.07/GB (Logs Essentials) or $0.09/GB (Complete)",
+          "450+ one-click integrations available across all deployment models"
+        ],
+        "keyFeatures": [
+          "30x faster queries than Prometheus/Grafana and 2.5x less storage via columnar architecture",
+          "OpenTelemetry-first ingestion (EDOT) with native PromQL support for Prometheus compatibility",
+          "AI-native autonomous investigation agents for root cause surfacing and remediation",
+          "Unified logs, metrics, traces, and digital experience monitoring in one schema-agnostic platform",
+          "FedRAMP High and PCI DSS Level 1 — among the broadest compliance coverage in the APM space"
+        ],
+        "bestFor": [
+          "Organizations already using Elasticsearch or Elastic SIEM wanting unified observability",
+          "Teams with extreme query performance and storage efficiency requirements",
+          "Regulated industries needing FedRAMP High, HIPAA, PCI DSS, and SOC 2 in one platform"
+        ],
+        "sources": [
+          {
+            "url": "https://www.elastic.co/trust",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.elastic.co/observability",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Trust Center at elastic.co/trust fetched 2026-06-15: confirmed HIPAA, SOC 2, SOC 3, FedRAMP High, FedRAMP Moderate, PCI DSS Level 1, ISO 27001/27017/27018, TISAX among listed certifications; GDPR compliance inferred from ISO 27017/27018 and standard EU data processing controls referenced. BAA not explicitly mentioned on trust page in fetched excerpt; original file had baa=null, retained. Observability product page fetched 2026-06-15 confirmed 30x query speed claim vs Prometheus, 450+ integrations, and EDOT OpenTelemetry support. No free tier exists; a 14-day Elastic Cloud trial is the standard entry point (widely documented on elastic.co/cloud but not the specific page fetched on this date)."
+      }
     }
   ]
 }

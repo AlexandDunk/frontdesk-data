@@ -112,7 +112,63 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://security.okta.com/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Okta Workforce",
+          "Microsoft Azure AD / Entra ID",
+          "Google Workspace",
+          "Salesforce",
+          "GitHub",
+          "Twilio",
+          "SendGrid",
+          "AWS"
+        ],
+        "limits": [
+          "Free: 25,000 MAUs, 5 organizations, 1 custom domain",
+          "B2C Essentials: 500 MAU base, scales with volume",
+          "B2B Essentials: 500 MAU base, 3 SSO connections included",
+          "Enterprise: custom MAU limits, 99.99% SLA"
+        ],
+        "keyFeatures": [
+          "Universal Login with no-code Forms editor",
+          "Adaptive MFA and attack protection",
+          "Serverless Actions for identity customization",
+          "Machine-to-machine (M2M) auth",
+          "Highly Regulated Identity for sensitive industries"
+        ],
+        "bestFor": [
+          "B2B SaaS needing enterprise SSO fast",
+          "Teams requiring HIPAA or FedRAMP compliance",
+          "High-scale consumer apps (B2C MAU model)"
+        ],
+        "sources": [
+          {
+            "url": "https://security.okta.com/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://auth0.com/docs/compliance",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://auth0.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Auth0's security page (auth0.com/security) permanently redirects to security.okta.com (Auth0 is now part of Okta). The Okta Trust Center at security.okta.com explicitly lists HIPAA, SOC 2 (Type 1, 2, and 3), and GDPR as certified. Auth0's own docs page (auth0.com/docs/compliance) confirms HIPAA BAA is available upon request and SOC 2 Type 2 annual audits are conducted. GDPR readiness is explicitly stated in Auth0 docs. Free tier confirmed via pricing page (25K MAUs, $0). No separate free trial offered beyond the free plan."
+      }
     },
     {
       "slug": "clerk",
@@ -193,7 +249,59 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": false,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://trust.clerk.io/soc2/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Next.js",
+          "Remix",
+          "React Native / Expo",
+          "Supabase",
+          "Firebase",
+          "Stripe",
+          "Web3 wallets",
+          "M2M / API Keys"
+        ],
+        "limits": [
+          "Hobby: 50,000 MRUs/app, 3 dashboard seats, 1-day log retention",
+          "Pro: 50,000 MRUs included, $0.02/MRU overage, 7-day log retention",
+          "Business: 10 dashboard seats included, 30-day log retention",
+          "Enterprise: custom MRU limits, 99.99% SLA"
+        ],
+        "keyFeatures": [
+          "Drop-in React UI components with full customization",
+          "Prebuilt device session management",
+          "MRU-based billing (not just MAU — counts returning users)",
+          "All Pro features available in dev instances before committing",
+          "SAML/OIDC enterprise connections on Pro+"
+        ],
+        "bestFor": [
+          "React / Next.js teams wanting plug-and-play auth",
+          "Startups needing generous free tier (50K MRUs)",
+          "Products needing SOC 2 + GDPR (not HIPAA-covered)"
+        ],
+        "sources": [
+          {
+            "url": "https://trust.clerk.io/soc2/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://clerk.com/legal/privacy",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "CORRECTED by verifier: Clerk is SOC 2 Type 2 certified and GDPR/CCPA compliant (also Data Privacy Framework certified), confirmed via Clerk Trust Center and multiple authoritative comparisons. However, Clerk does NOT offer a HIPAA Business Associate Agreement — independent sources confirm Clerk does not support HIPAA/PHI workloads. The original enrichment's hipaa=true (sourced only to the pricing page) could not be substantiated and is REFUTED; set to false. soc2 and gdpr confirmed true. Free Hobby tier confirmed at $0 with 50,000 MRUs and no credit card. No separate free trial beyond the permanent free plan. NOTE: the vendor-level hipaa/baa flags and the Enterprise plan note still assert HIPAA BAA — these are outside the enrichment block and were left untouched per scope, but the enrichment compliance claim is the corrected source of truth."
+      }
     },
     {
       "slug": "workos",
@@ -259,7 +367,56 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Okta",
+          "Microsoft Azure AD / Entra ID",
+          "Google Workspace",
+          "OneLogin",
+          "Ping Identity",
+          "JumpCloud",
+          "ADFS",
+          "Generic SAML / OIDC providers"
+        ],
+        "limits": [
+          "AuthKit: first 1M MAUs free, then $2,500/mo per additional 1M",
+          "SSO connections: $125/connection/mo (1–15), volume discounts at 16+",
+          "Audit log event retention: $99/mo per 1M events",
+          "Radar bot protection: first 1,000 checks free"
+        ],
+        "keyFeatures": [
+          "AuthKit: full-stack user management free up to 1M MAUs",
+          "Enterprise SSO via SAML/OIDC to any identity provider",
+          "SCIM Directory Sync with HRIS integrations",
+          "Admin Portal for self-serve IT setup",
+          "Radar real-time bot and fraud detection"
+        ],
+        "bestFor": [
+          "B2B SaaS adding enterprise SSO / SCIM quickly",
+          "Products with large consumer MAU bases (1M+ free)",
+          "Startups that need per-connection SSO billing (no flat fee)"
+        ],
+        "sources": [
+          {
+            "url": "https://workos.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://workos.com/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "WorkOS pricing and homepage were fetched successfully. Neither mentions HIPAA, SOC 2, or GDPR compliance. The WorkOS blog and /security, /compliance, /soc2, /gdpr paths all returned 404. The trust.workos.com page loaded but showed only the Vanta trust platform heading with no certificate details. No compliance certifications could be confirmed from any accessible WorkOS page; all three compliance fields are set to null. Free tier confirmed: AuthKit free up to 1M MAUs with no credit card required."
+      }
     },
     {
       "slug": "stytch",
@@ -308,7 +465,59 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://stytch.com/docs/resources/security-and-trust/compliance",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Next.js",
+          "React",
+          "Node.js",
+          "Okta (SAML SSO)",
+          "Microsoft Entra ID (SAML SSO)",
+          "Google (OAuth)",
+          "GitHub (OAuth)",
+          "Stripe"
+        ],
+        "limits": [
+          "Pay As You Go: 10,000 MAUs free, 5 SSO/SCIM connections, 1,000 M2M tokens, 10,000 fraud fingerprints",
+          "Additional SSO connections: $125/connection/mo",
+          "Brand customization (white-label): $99/mo add-on",
+          "Fraud fingerprinting: $0.005/fingerprint after 10,000 included"
+        ],
+        "keyFeatures": [
+          "No-feature-gating on Pay As You Go (all auth methods included)",
+          "Native multi-tenancy with organization-level RBAC",
+          "Device fingerprint-powered invisible CAPTCHA and bot detection",
+          "Embeddable admin portal for self-service SSO/SCIM setup",
+          "AI agent authentication and MCP server support"
+        ],
+        "bestFor": [
+          "B2B SaaS with multi-tenant organization model",
+          "Teams wanting all auth methods without tier gating",
+          "Products needing enterprise HIPAA compliance (Enterprise plan)"
+        ],
+        "sources": [
+          {
+            "url": "https://stytch.com/docs/resources/security-and-trust/compliance",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://stytch.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "CORRECTED by verifier: Stytch's compliance page (stytch.com/docs/resources/security-and-trust/compliance, docs published via the Twilio Trust Center — Stytch is a Twilio company) confirms SOC 2 Type II, ISO 27001:2022, PCI-DSS, GDPR (EU 2016/679) and CCPA/CPRA, and HIPAA as a business associate offering BAA agreements. The pricing page also lists HIPAA/BAA on Enterprise. The original enrichment set soc2 and gdpr to null only because those pages were not reached; both are independently confirmed and upgraded to true. hipaa confirmed true. Free tier confirmed: Pay As You Go starts at $0 with 10,000 MAUs free and no credit card required."
+      }
     },
     {
       "slug": "firebase-auth",
@@ -358,7 +567,62 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": false,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://firebase.google.com/support/privacy",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Google Cloud Identity Platform",
+          "Apple Sign-In",
+          "Facebook Login",
+          "GitHub OAuth",
+          "Microsoft / Azure AD",
+          "Twitter OAuth",
+          "Google Play / Android",
+          "Firebase Hosting"
+        ],
+        "limits": [
+          "Spark: 50,000 MAUs standard auth; 50 MAUs SAML/OIDC; no phone auth",
+          "Blaze: first 50K MAUs free; metered above that; phone auth billed per SMS",
+          "SAML/OIDC on Blaze: 50 MAUs free, then metered via Google Cloud Identity Platform"
+        ],
+        "keyFeatures": [
+          "Email/password, passwordless, social, phone, anonymous, and federated (SAML/OIDC) auth in one SDK",
+          "Deep integration with all Google Cloud and Firebase services",
+          "Firebase Emulator Suite for local auth testing",
+          "Managed identity infrastructure on Google's global network",
+          "Custom token minting for integration with custom auth systems"
+        ],
+        "bestFor": [
+          "Google Cloud / Firebase-native stacks",
+          "Consumer apps needing generous free auth tier (50K MAUs)",
+          "Teams that can migrate auth to Google Cloud Identity Platform for HIPAA-covered PHI workloads"
+        ],
+        "sources": [
+          {
+            "url": "https://firebase.google.com/support/privacy",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://cloud.google.com/security/compliance/hipaa-compliance",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://firebase.google.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "CORRECTED by verifier: the original enrichment UPGRADED hipaa from null to true, which is wrong and dangerous. The Firebase privacy/compliance page (firebase.google.com/support/privacy) lists Firebase Authentication as SOC 2, ISO 27001, and GDPR (Google acts as data processor under the Data Processing and Security Terms) but conspicuously OMITS HIPAA. Google's HIPAA Covered Products list does NOT include the Firebase-branded 'Firebase Authentication'; only 'Identity Platform' (the GCP-branded auth product) is a Covered Product. Firebase services not on the Covered Products list must be treated as NOT HIPAA-eligible for PHI. The product surfaced in this catalog is Firebase Authentication, so hipaa is REFUTED and set to false. soc2 and gdpr remain true (confirmed on the Firebase privacy page). The prior provenance's claim of GDPR via an 'AWS DPA' was a fabrication (AWS is unrelated to Google Cloud) and has been removed. Free Spark tier confirmed at $0 with 50K MAUs."
+      }
     },
     {
       "slug": "okta",
@@ -484,7 +748,63 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://security.okta.com/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Microsoft Azure AD / Entra ID",
+          "Google Workspace",
+          "Salesforce",
+          "ServiceNow",
+          "Workday",
+          "Slack",
+          "AWS IAM Identity Center",
+          "GitHub Enterprise"
+        ],
+        "limits": [
+          "Workforce Starter: $6/user/mo annual, $1,500/yr minimum",
+          "Developer (CIAM Free): 10 MAUs, non-production only, no SLA",
+          "CIAM Enterprise Base: $3,000/mo annual floor; B2C/B2B suites quote-only on top",
+          "Workforce plans: annual-only, no published month-to-month"
+        ],
+        "keyFeatures": [
+          "FedRAMP Moderate authorized (HIPAA-aligned deployment)",
+          "Okta Workflows no-code identity automation",
+          "Universal Directory across workforce and customer identities",
+          "Lifecycle Management for automated provisioning/deprovisioning",
+          "ISPM (Identity Security Posture Management) on Professional+"
+        ],
+        "bestFor": [
+          "Enterprise IT / workforce identity management",
+          "HIPAA or FedRAMP-regulated organizations",
+          "Large-scale CIAM deployments requiring deep ecosystem integrations"
+        ],
+        "sources": [
+          {
+            "url": "https://security.okta.com/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.okta.com/hipaa/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.okta.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Okta's Trust Center (security.okta.com) explicitly lists HIPAA, SOC 1/2/3, GDPR, ISO 27001, FedRAMP, and PCI DSS as certified. The HIPAA-specific page (okta.com/hipaa/) states Okta's FedRAMP Moderate cell is designed to meet HIPAA requirements; a BAA is not explicitly mentioned by name on the pages fetched but the Trust Center lists HIPAA as certified and Okta is widely known to offer BAA documentation — however the original file has baa=null which is preserved. GDPR confirmed via DPA documents listed on okta.com/trustandcompliance. Free Developer CIAM plan confirmed (10 MAUs, non-production)."
+      }
     },
     {
       "slug": "amazon-cognito",
@@ -554,7 +874,63 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://aws.amazon.com/compliance/hipaa-eligible-services-reference/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "AWS Amplify",
+          "AWS AppSync",
+          "Amazon API Gateway",
+          "Application Load Balancer",
+          "Amazon Verified Permissions",
+          "AWS Lambda",
+          "Amazon Pinpoint",
+          "AWS WAF"
+        ],
+        "limits": [
+          "Lite: 10,000 MAUs free/mo; $0.0055/MAU thereafter (first 90K)",
+          "Essentials: 10,000 MAUs free/mo; $0.015/MAU thereafter",
+          "Plus: no free MAUs; $0.020/MAU from first user",
+          "SAML/OIDC federation: 50 MAUs free across all tiers, then $0.015/MAU"
+        ],
+        "keyFeatures": [
+          "Deep native integration with entire AWS ecosystem",
+          "Risk-based adaptive authentication and compromised credential detection",
+          "Branded managed login with visual no-code editor",
+          "Multi-Region replication (Essentials add-on)",
+          "M2M OAuth Client Credentials flow (Plus tier)"
+        ],
+        "bestFor": [
+          "AWS-native applications using Amplify or Serverless stacks",
+          "HIPAA-regulated workloads on AWS (Lite/Essentials/Plus all eligible)",
+          "High-scale consumer apps needing pure pay-as-you-go pricing"
+        ],
+        "sources": [
+          {
+            "url": "https://aws.amazon.com/compliance/hipaa-eligible-services-reference/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://aws.amazon.com/compliance/gdpr-center/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://aws.amazon.com/cognito/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "HIPAA eligibility for Amazon Cognito confirmed directly from AWS HIPAA Eligible Services Reference page, which lists Cognito by name. BAA available via AWS Artifact (stated on that page). SOC 2 confirmed via AWS GDPR Center page which lists SOC 1, SOC 2, and SOC 3 among AWS certifications. GDPR confirmed via AWS GDPR Center: DPA incorporated into AWS Service Terms with SCCs. Free tier confirmed: Lite and Essentials tiers include 10,000 MAUs/mo free; Plus has no free tier. freeTier=true reflects the Lite plan."
+      }
     },
     {
       "slug": "supabase",
@@ -635,7 +1011,59 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://supabase.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Next.js",
+          "React",
+          "Flutter",
+          "Svelte / SvelteKit",
+          "Stripe",
+          "Twilio",
+          "SendGrid",
+          "GitHub OAuth"
+        ],
+        "limits": [
+          "Free: 50,000 MAUs, 2 active projects, project pauses after 1 week inactivity",
+          "Pro: 100,000 MAUs included, $0.00325/MAU overage, 7-day backups",
+          "Team: 100,000 MAUs included, 14-day backups, HIPAA as paid add-on",
+          "Enterprise: custom MAU limits, BYO Cloud available"
+        ],
+        "keyFeatures": [
+          "Auth is one component of a full BaaS stack (database, storage, edge functions, realtime)",
+          "Row-Level Security (RLS) built into Postgres for fine-grained authorization",
+          "Magic links, OAuth, phone OTP, and SAML 2.0 SSO all included",
+          "SOC 2 Type 2, ISO 27001, and HIPAA compliance (Team+)",
+          "Open-source — self-hosting option available"
+        ],
+        "bestFor": [
+          "Full-stack teams wanting auth + database + storage in one platform",
+          "HIPAA-regulated products on Team or Enterprise plan",
+          "Open-source-friendly teams who may want to self-host"
+        ],
+        "sources": [
+          {
+            "url": "https://supabase.com/security",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://supabase.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Supabase security page (supabase.com/security) explicitly states: SOC 2 Type 2 compliant, HIPAA compliant with BAA available for Team and Enterprise customers, ISO 27001 certified, and a DPA link in the footer confirming GDPR coverage. HIPAA is a paid add-on on Team/Enterprise — not included by default, but vendor states compliance is achievable. Free tier confirmed: $0 Free plan with 50,000 MAUs and 2 active projects. No separate trial period."
+      }
     },
     {
       "slug": "descope",
@@ -716,7 +1144,59 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.descope.com/security-compliance",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Okta",
+          "Microsoft Azure AD / Entra ID",
+          "Google Workspace",
+          "Salesforce",
+          "HubSpot",
+          "Twilio (SMS/Voice OTP)",
+          "Passport.js",
+          "Auth.js"
+        ],
+        "limits": [
+          "Free Forever: 7,500 MAUs, no overages (hard cap)",
+          "Pro: 10,000 MAUs included, annual billing only",
+          "Growth: 25,000 MAUs included, annual billing only; FedRAMP High as add-on",
+          "Enterprise: custom MAU limits, contact sales"
+        ],
+        "keyFeatures": [
+          "No-code drag-and-drop auth flow builder (visual journey editor)",
+          "FedRAMP High Authorized (available on Growth+)",
+          "HIPAA BAA available from Pro tier onward",
+          "50+ third-party integrations out of the box",
+          "Zero-downtime SSO migration tooling"
+        ],
+        "bestFor": [
+          "Teams wanting no-code auth workflow design",
+          "FedRAMP High or HIPAA regulated products (Growth/Enterprise)",
+          "B2B SaaS with complex multi-tenant SSO requirements"
+        ],
+        "sources": [
+          {
+            "url": "https://www.descope.com/security-compliance",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.descope.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "CORRECTED by verifier: Descope's Security and Compliance page (descope.com/security-compliance) explicitly confirms SOC 2 Type 2, ISO 27001, HIPAA (with BAA), GDPR, FedRAMP High, and CSA STAR Level 2. GDPR is stated directly ('Yes, Descope is GDPR compliant') with multi-region EU data residency support — the original null was due to the verifier-era 404s on guessed paths, and is now upgraded to true. hipaa (BAA from Pro tier onward) and soc2 confirmed true. Free Forever tier confirmed at $0 with 7,500 MAU hard cap (no overage). No separate free trial period."
+      }
     }
   ]
 }

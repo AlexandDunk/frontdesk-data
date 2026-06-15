@@ -80,7 +80,66 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.docusign.com/trust/compliance",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Salesforce",
+          "Microsoft 365",
+          "Google Workspace",
+          "HubSpot",
+          "Workday",
+          "SAP",
+          "Oracle"
+        ],
+        "limits": [
+          "Personal: 5 envelopes/month, 1 user",
+          "Standard: 100 envelopes/user/year (annual) or 10/user/month (monthly)",
+          "Business Pro: 100 envelopes/user/year (annual) or 10/user/month (monthly)",
+          "Enterprise: custom envelope limits"
+        ],
+        "keyFeatures": [
+          "AI-assisted document summary and Q&A",
+          "1,000+ pre-built integrations via App Center",
+          "Multi-language support: sign in 43 languages, send in 13",
+          "Payment collection during signing (Business Pro+)",
+          "SOC 2 Type 2 and ISO 27001:2022 certified infrastructure"
+        ],
+        "bestFor": [
+          "HIPAA-regulated healthcare organizations",
+          "Enterprise teams needing deep CRM/ERP integration",
+          "High-volume contract workflows with Salesforce or SAP"
+        ],
+        "sources": [
+          {
+            "url": "https://www.docusign.com/trust/compliance",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.docusign.com/trust/privacy/gdpr",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://ecom.docusign.com/plans-and-pricing/esignature",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.docusign.com/products/electronic-signature/how-docusign-works",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Verified 2026-06-15. HIPAA and SOC 2 Type 2 confirmed from docusign.com/trust/compliance, which explicitly lists adherence to 21 CFR Part 11, HIPAA, Sarbanes-Oxley, and provides SOC 1 Type 2 / SOC 2 Type 2 reports plus ISO 27001. GDPR is NOT named on the /trust/compliance page; the GDPR claim is grounded instead by docusign.com/trust/privacy/gdpr (DocuSign holds EU-approved Binding Corporate Rules as processor and controller, the recognized GDPR transfer mechanism), so gdpr remains true with that page added to sources. BAA availability is carried from existing file fields. Pricing page confirmed no free tier exists; DocuSign offers a 30-day money-back guarantee on annual plans but no free trial period, so freeTrialDays is null. All integrations and features confirmed from the how-docusign-works and pricing pages."
+      }
     },
     {
       "slug": "pandadoc",
@@ -160,7 +219,63 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.pandadoc.com/hipaa/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Salesforce",
+          "HubSpot",
+          "Pipedrive",
+          "Monday.com",
+          "Stripe",
+          "QuickBooks",
+          "Zapier",
+          "Slack"
+        ],
+        "limits": [
+          "Free eSign: 60 documents/year, 5 eSignatures/month, unlimited seats",
+          "Starter: 110 documents/year per user",
+          "Business: unlimited documents, up to 3 deal rooms",
+          "Enterprise: unlimited documents, unlimited workspaces"
+        ],
+        "keyFeatures": [
+          "Built-in drag-and-drop document editor with rich media support",
+          "CPQ (Configure, Price, Quote) with interactive pricing tables",
+          "AI data extraction and intelligent document processing",
+          "Qualified Electronic Signature (QES) for EU eIDAS compliance",
+          "Payment collection (Stripe, Square, PayPal, ACH) directly within documents"
+        ],
+        "bestFor": [
+          "Sales teams needing proposals, quotes, and contracts in one tool",
+          "HIPAA-regulated organizations requiring BAA",
+          "Companies seeking CRM-native document workflows (Salesforce/HubSpot)"
+        ],
+        "sources": [
+          {
+            "url": "https://www.pandadoc.com/hipaa/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.pandadoc.com/compliance/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.pandadoc.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "HIPAA and BAA confirmed from pandadoc.com/hipaa/ (fetched 2026-06-15), which explicitly states PandaDoc is HIPAA-compliant and that a BAA must be signed to transmit ePHI. SOC 2 Type II and GDPR confirmed from pandadoc.com/compliance/ (fetched 2026-06-15). Free tier confirmed from pricing page: $0 Free eSign plan with 60 documents/year. The direct security/ and security-and-compliance/ sub-paths returned 404; compliance data was sourced from the /hipaa/ and /compliance/ pages instead. Trial length is not specified on the pricing page — nulled."
+      }
     },
     {
       "slug": "dropbox-sign",
@@ -224,7 +339,57 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://trust.dropbox.com/?product=dropboxsign",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 30,
+        "keyIntegrations": [
+          "Google Drive",
+          "Microsoft Word",
+          "HubSpot",
+          "Salesforce",
+          "Slack",
+          "Dropbox",
+          "Gmail"
+        ],
+        "limits": [
+          "Essentials: 1 user, 5 signature templates",
+          "Standard: 2-5 users, 15 signature templates",
+          "Premium: unlimited users, unlimited templates (quote-only)"
+        ],
+        "keyFeatures": [
+          "Unlimited signature requests on all paid plans (no envelope caps)",
+          "SOC 2 Type 2 and ISO 27001/27018 certified",
+          "Data residency options (Premium tier)",
+          "Embedded signing via HelloSign API (same underlying platform)",
+          "SMS signer authentication and bulk send (Standard+)"
+        ],
+        "bestFor": [
+          "Small teams wanting unlimited signatures without envelope limits",
+          "Dropbox-ecosystem users needing native storage integration",
+          "HIPAA-regulated organizations requiring BAA"
+        ],
+        "sources": [
+          {
+            "url": "https://trust.dropbox.com/?product=dropboxsign",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://sign.dropbox.com/products/dropbox-sign/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Compliance data fetched from Dropbox Trust Center (trust.dropbox.com redirected from sign.dropbox.com/security), which explicitly lists HIPAA, SOC 2 Type 2, GDPR Privacy and Data Protection Paper, ISO 27001, ISO 27018, PCI DSS, and eIDAS. The 30-day free trial confirmed from the pricing page ('30-day trials give you access to features only available in our paid plans'). No free forever plan exists — the lowest paid tier is Essentials at $15/month."
+      }
     },
     {
       "slug": "signnow",
@@ -319,7 +484,59 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.signnow.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Salesforce",
+          "Microsoft 365",
+          "Google Workspace",
+          "NetSuite",
+          "Box",
+          "ChatGPT",
+          "Claude"
+        ],
+        "limits": [
+          "Business: 100 signature invites/user/year; overage $1.50/invite",
+          "Business Premium: 100 signature invites/user/year",
+          "Enterprise: 100 signature invites/user/year",
+          "Site License: per-invite volume pricing (~$1.50/invite)",
+          "Free API sandbox: 250 signature invites"
+        ],
+        "keyFeatures": [
+          "HIPAA-compliant eSignature for healthcare workflows",
+          "Kiosk mode for in-person signing on mobile",
+          "Conditional fields and advanced signer authentication (Enterprise+)",
+          "SMS signature invites (Enterprise+)",
+          "eIDAS, ESIGN/UETA, 21 CFR Part 11, and CCPA compliance"
+        ],
+        "bestFor": [
+          "Healthcare organizations needing HIPAA-compliant signing",
+          "High-volume per-invite workflows via Site License",
+          "SMBs wanting affordable annual rates with deep Microsoft/Google integration"
+        ],
+        "sources": [
+          {
+            "url": "https://www.signnow.com/security",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.signnow.com/features",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Compliance data fetched from signnow.com/security (2026-06-15), which explicitly states HIPAA compliance, SOC 2 Type II attestation, GDPR adherence, and EU-U.S. Data Privacy Framework participation. Features page confirmed Microsoft Teams/Dynamics 365, Google Workspace, Salesforce, ChatGPT, and Claude integrations. No free forever plan exists; the API sandbox offers 250 free signature invites for developers but is not a consumer free tier. Free trial available (no credit card required per features page) but exact trial length in days was not stated, so freeTrialDays is nulled."
+      }
     },
     {
       "slug": "adobe-acrobat-sign",
@@ -433,7 +650,62 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.adobe.com/trust/compliance.html",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Microsoft 365",
+          "Salesforce",
+          "Workday",
+          "ServiceNow",
+          "Google Drive",
+          "Box",
+          "SharePoint"
+        ],
+        "limits": [
+          "Standard Individual: basic e-signature requests only",
+          "Pro Individual: multi-recipient signing; single user",
+          "Teams plans: require annual billing commitment",
+          "Enterprise: transaction-based volume pricing, contact sales"
+        ],
+        "keyFeatures": [
+          "Best-in-class PDF editing bundled with e-signature in a single tool",
+          "21 CFR Part 11 compliance for pharmaceutical/life sciences",
+          "Deep Microsoft 365 and Salesforce native integrations",
+          "Admin Console with SSO for team plans",
+          "Transaction-based enterprise pricing for high-volume API use"
+        ],
+        "bestFor": [
+          "Organizations already in the Adobe Creative Cloud / Document Cloud ecosystem",
+          "Life sciences and pharma teams needing 21 CFR Part 11",
+          "Microsoft 365-centric enterprises needing combined PDF + eSign"
+        ],
+        "sources": [
+          {
+            "url": "https://www.adobe.com/trust/compliance.html",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.adobe.com/trust/compliance/hipaa-hds/hipaa-ready.html",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.adobe.com/acrobat/business/esignature/acrobat-sign.html",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Verified 2026-06-15. Adobe Trust Center HTML pages time out via direct fetch, but the compliance claims were independently confirmed through authoritative adobe.com sources surfaced via search: Adobe publishes an 'Acrobat Sign SOC2+HIPAA Certification' resource and maintains SOC 2 Type 2, ISO 27001, and PCI DSS attestations; HIPAA readiness for Acrobat Sign requires a Business Associate Agreement (BAA) with Adobe and is available only on enterprise/business subscription plans (adobe.com/trust/compliance/hipaa-hds/hipaa-ready.html); Adobe enterprise solutions are GDPR-ready and covered by Adobe's GDPR DPA. compliance.source therefore now points to adobe.com/trust/compliance.html rather than null, since hipaa/soc2/gdpr are all confirmed. No free tier exists — lowest plan is $12.99/month. Free trial length was not confirmed from a live page; freeTrialDays nulled."
+      }
     },
     {
       "slug": "signwell",
@@ -512,7 +784,58 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.signwell.com/security/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Google Drive",
+          "Dropbox",
+          "Slack",
+          "Zapier",
+          "Salesforce",
+          "HubSpot",
+          "SeguriData (NOM-151)"
+        ],
+        "limits": [
+          "Free: 1 sender, 3 documents/month, 1 template",
+          "Light: unlimited documents, 5 templates per sender",
+          "Business: unlimited documents and templates, 3 senders included",
+          "Enterprise: custom limits, high-volume API"
+        ],
+        "keyFeatures": [
+          "SOC 2 Type II certified (Security, Availability, Confidentiality)",
+          "HIPAA-compliant with third-party audit verification",
+          "21 CFR Part 11 support with tamper-evident audit trails and AES-256 encryption",
+          "NOM-151 support via SeguriData for legally admissible documents in Mexico",
+          "Signers do not need an account to sign"
+        ],
+        "bestFor": [
+          "Small businesses wanting a genuine free tier with no time limit",
+          "HIPAA-regulated teams needing independently audited compliance",
+          "Companies with Mexico-based signers needing NOM-151 certificates"
+        ],
+        "sources": [
+          {
+            "url": "https://www.signwell.com/security/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.signwell.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Compliance data fetched from signwell.com/security/ (2026-06-15), which explicitly states SOC 2 Type II certification (Security, Availability, Confidentiality), HIPAA compliance with third-party audit verification, GDPR compliance, 21 CFR Part 11 support, NOM-151 support, and eIDAS/ESIGN/UETA compliance. Free tier confirmed from pricing page: $0 plan with 1 sender, 3 documents/month, 1 template — a genuine forever-free plan. No time-limited free trial mentioned separately, so freeTrialDays is null."
+      }
     },
     {
       "slug": "signaturely",
@@ -574,7 +897,53 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": {
+            "url": "https://signaturely.com/security/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Google Drive",
+          "Dropbox",
+          "OneDrive",
+          "Box"
+        ],
+        "limits": [
+          "Free: 1 document/month",
+          "Personal: 5 signature requests/month, 1 template, 1 user",
+          "Business: unlimited signature requests, unlimited templates, per-user pricing"
+        ],
+        "keyFeatures": [
+          "Simple, lightweight interface targeting small business and freelancers",
+          "Legally binding signatures compliant with ESIGN Act and eIDAS",
+          "Chain-of-custody audit log on all plans",
+          "Data centers ISO 27001 and FISMA certified (via Amazon AWS)",
+          "AATL-compliant document signing"
+        ],
+        "bestFor": [
+          "Freelancers and micro-businesses wanting a simple, low-cost eSign tool",
+          "Teams with minimal compliance requirements and cloud storage-centric workflows"
+        ],
+        "sources": [
+          {
+            "url": "https://signaturely.com/security/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://signaturely.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "The signaturely.com/security/ page was successfully fetched (2026-06-15) and mentions ISO 27001 and FISMA certified data centers via Amazon, AATL compliance, and PCI compliance via Stripe, but makes no mention of HIPAA compliance, BAA availability, SOC 2 attestation, or GDPR — all three are therefore set to null. Multiple other security/compliance sub-paths (signaturely.com/blog/signaturely-security/, signaturely.com/electronic-signature-security/, signaturely.com/features/) returned 404. Free tier confirmed from pricing page: $0 plan allows 1 document/month (no time limit stated, consistent with existing file notes). Free trial mentioned as 'unlimited documents for free' but duration not specified; freeTrialDays set to null."
+      }
     },
     {
       "slug": "signeasy",
@@ -653,7 +1022,62 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://signeasy.com/security/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Google Workspace",
+          "Microsoft 365",
+          "SharePoint",
+          "HubSpot",
+          "Salesforce",
+          "Teamtailor",
+          "OneDrive"
+        ],
+        "limits": [
+          "Personal: 5 contracts sent/month, 1 seat",
+          "Business: unlimited document sending, per seat",
+          "Business Pro: unlimited documents, advanced features, per seat",
+          "Enterprise: 5+ seats, SSO, HIPAA add-on required for PHI"
+        ],
+        "keyFeatures": [
+          "AI contract insights: key term extraction, summaries, and search",
+          "Contract repository with renewal tracking and alerts",
+          "21 CFR Part 11 compliance option (Enterprise)",
+          "SOC 2 certified with regular independent security audits",
+          "Role-based access control and team usage analytics (Business Pro+)"
+        ],
+        "bestFor": [
+          "HR and recruitment teams using Google Workspace or Microsoft 365",
+          "HIPAA-regulated organizations (HIPAA available as Enterprise add-on)",
+          "Small businesses needing affordable per-seat eSign with AI contract insights"
+        ],
+        "sources": [
+          {
+            "url": "https://signeasy.com/security/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://signeasy.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://signeasy.com/features/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Compliance data fetched from signeasy.com/security/ (2026-06-15), which explicitly states HIPAA compliance, SOC 2 certification with regular independent audits, GDPR adherence, eIDAS, UETA, 21 CFR Part 11, and ESIGN Act compliance. Note from existing pricing plan notes: HIPAA is an add-on for Enterprise tier, not included on standard plans. No free forever plan: the pricing page shows a 'Free Plan' for single one-off signing but this is a sign-only experience, not a recurring sender tier — the lowest sender plan is Personal at $10/month. Free trial duration not explicitly stated on the pricing page; freeTrialDays set to null. Salesforce and Teamtailor integrations confirmed from features page."
+      }
     }
   ]
 }

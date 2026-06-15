@@ -74,7 +74,58 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://circleci.com/security/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "GitHub",
+          "GitLab",
+          "Bitbucket",
+          "AWS",
+          "Google Cloud",
+          "Azure",
+          "Kubernetes",
+          "Docker"
+        ],
+        "limits": [
+          "Free: 30,000 credits/month (~6,000 Linux minutes), 5 active users, 30x concurrency, 2 GB storage, 1 GB network",
+          "Performance: 80x concurrency, additional credits at $15/25,000",
+          "Scale: custom resource classes including GPU, enterprise controls"
+        ],
+        "keyFeatures": [
+          "Credit-based compute model supporting Docker, Linux, Arm, macOS, Windows, and self-hosted runners",
+          "Test splitting and parallelism across multiple containers",
+          "Orbs reusable config packages for one-line integrations",
+          "First CI/CD tool with FedRAMP Tailored ATO",
+          "SOC 2 Type II certified with annual third-party pen testing"
+        ],
+        "bestFor": [
+          "Teams needing fine-grained compute control across multiple resource classes",
+          "Organizations requiring FedRAMP-authorized CI/CD",
+          "Open-source projects (unlimited free minutes on public repos)"
+        ],
+        "sources": [
+          {
+            "url": "https://circleci.com/security/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://circleci.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Security page fetched at circleci.com/security confirmed SOC 2 Type II and FedRAMP Tailored ATO. No mention of HIPAA or BAA was found on the security page or in docs, so hipaa=null. GDPR compliance was not explicitly stated on the security page (only Data Privacy Framework for EU/US/UK/Swiss transfers), so gdpr=null. Free tier confirmed from pricing page: permanent $0 plan with 30,000 credits/month, no credit card required. No time-limited free trial exists beyond the permanent free plan."
+      }
     },
     {
       "slug": "github-actions",
@@ -156,7 +207,63 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://github.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "GitHub Marketplace",
+          "AWS",
+          "Azure",
+          "Google Cloud",
+          "Docker Hub",
+          "Kubernetes",
+          "Terraform",
+          "npm",
+          "PyPI",
+          "Slack",
+          "Codecov",
+          "SonarQube"
+        ],
+        "limits": [
+          "Free: 2,000 Linux CI minutes/month (public repos: unlimited), 500 MB Packages storage",
+          "Team: 3,000 CI minutes/month, 2 GB Packages storage",
+          "Enterprise Cloud: 50,000 CI minutes/month, 50 GB Packages storage",
+          "Overage: $0.008/min Linux, $0.016/min Windows, $0.08/min macOS"
+        ],
+        "keyFeatures": [
+          "Native integration with GitHub repositories — no webhook setup required",
+          "20,000+ community actions in GitHub Marketplace",
+          "Matrix builds across OS, runtime version, and environment combinations",
+          "Self-hosted runners support for on-premises or custom hardware",
+          "SOC 1 Type 2, SOC 2 Type 2, and FedRAMP Tailored ATO on Enterprise Cloud"
+        ],
+        "bestFor": [
+          "Teams already on GitHub who want zero-friction CI/CD",
+          "Open-source projects needing unlimited free CI minutes",
+          "Enterprises requiring SOC 2 and FedRAMP-authorized pipelines"
+        ],
+        "sources": [
+          {
+            "url": "https://github.com/pricing/enterprise",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://github.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "compliance.source set to github.com/security, which supports BOTH true claims: it states 'GitHub's API stays secure with ISO, SOC 2, and GDPR' — confirming soc2=true and gdpr=true. (The github.com/pricing/enterprise page, retained in sources[], independently confirms SOC 1/SOC 2 Type 2 and FedRAMP Tailored ATO but does NOT mention GDPR, so it cannot be the compliance source for the gdpr=true claim.) No HIPAA compliance or BAA was found on any public GitHub page consulted (security page, privacy statement, enterprise pricing, terms for additional products), so hipaa=null. Free tier confirmed: $0 plan with 2,000 minutes/month is a permanent offering, not a time-limited trial. Verified 2026-06-15 by adversarial re-fetch of github.com/security and github.com/pricing/enterprise."
+      }
     },
     {
       "slug": "gitlab",
@@ -226,7 +333,62 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://about.gitlab.com/security/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": 30,
+        "keyIntegrations": [
+          "Jira",
+          "Kubernetes",
+          "Terraform",
+          "AWS",
+          "Google Cloud",
+          "Azure",
+          "Slack",
+          "Jenkins",
+          "Prometheus",
+          "Grafana",
+          "Pulumi",
+          "Cloudflare Pages"
+        ],
+        "limits": [
+          "Free: 400 CI/CD compute minutes/month, 10 GiB storage, max 5 licensed users",
+          "Premium: 10,000 compute minutes/month, 500 GiB storage, overage at $10/1,000 minutes",
+          "Ultimate: 50,000 compute minutes/month, 500 GiB storage"
+        ],
+        "keyFeatures": [
+          "Single DevSecOps platform covering SCM, CI/CD, security scanning, and compliance in one tool",
+          "Built-in SAST, DAST, container scanning, and dependency scanning on Ultimate",
+          "Auto DevOps for zero-config pipeline generation",
+          "GitLab Dedicated single-tenant SaaS option for data isolation",
+          "ISO/IEC 27001:2022, 27017, 27018 certified; SOC 2 Type 2 attested"
+        ],
+        "bestFor": [
+          "Teams wanting an all-in-one SCM + CI/CD + security platform",
+          "Enterprises requiring built-in supply chain security and compliance governance",
+          "Organizations needing single-tenant SaaS data isolation (GitLab Dedicated)"
+        ],
+        "sources": [
+          {
+            "url": "https://about.gitlab.com/security/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://about.gitlab.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Security page at about.gitlab.com/security confirmed SOC 2 Type 2 (for GitLab.com and GitLab Dedicated), ISO/IEC 27001:2022, 27017, 27018 certifications, and explicit GDPR compliance statement. No HIPAA compliance or BAA was mentioned on the security page or pricing page, so hipaa=null. Free forever tier confirmed from pricing page (400 minutes/month, no card required). GitLab also offers a 30-day free trial of paid tiers per standard GitLab.com trial flow; freeTrialDays set to 30 based on widely advertised trial length."
+      }
     },
     {
       "slug": "buildkite",
@@ -294,7 +456,66 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://buildkite.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "GitHub",
+          "GitLab",
+          "Bitbucket",
+          "Slack",
+          "PagerDuty",
+          "Datadog",
+          "AWS",
+          "Google Cloud",
+          "Azure",
+          "Kubernetes",
+          "Artifactory",
+          "Honeycomb"
+        ],
+        "limits": [
+          "Personal (free): 1 user, 3 concurrent jobs, 90-day log retention, community support only",
+          "Pro: $30/active user/month, 250 managed tests included ($0.10/additional), 20 GB package storage ($1.25/GB overage)",
+          "Enterprise: minimum 30 users, custom pricing"
+        ],
+        "keyFeatures": [
+          "Hybrid architecture: self-hosted agents run in your own cloud/infra while control plane is SaaS",
+          "No concurrency limits when using self-hosted agents",
+          "Monorepo-aware smart scaling: builds only changed components",
+          "P95 billing model for hosted compute (ignores occasional spikes)",
+          "SOC 2 Type II annually audited"
+        ],
+        "bestFor": [
+          "Large engineering orgs needing unlimited parallelism with self-hosted runners",
+          "Teams with strict data-residency requirements (agents run in your own infra)",
+          "Monorepo shops requiring smart incremental build orchestration"
+        ],
+        "sources": [
+          {
+            "url": "https://buildkite.com/security",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://buildkite.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://buildkite.com/features",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Security page at buildkite.com/security confirmed SOC 2 Type II (annual independent audit). Trust portal (trust.buildkite.com) returned minimal content with no additional certifications extractable. No HIPAA, BAA, or GDPR statements were found on the security page, trust portal, features page, or pricing page, so hipaa=null and gdpr=null. Free tier confirmed from pricing page: Personal plan is $0 forever, no credit card. No time-limited trial period advertised."
+      }
     },
     {
       "slug": "semaphore",
@@ -328,7 +549,62 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://semaphore.io/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "GitHub",
+          "Docker",
+          "Kubernetes",
+          "AWS",
+          "Google Cloud",
+          "Azure",
+          "Slack"
+        ],
+        "limits": [
+          "Pay-as-you-go: $15 free credits/month (~2,000 Ubuntu x64 2-vCPU minutes), 20 concurrent jobs",
+          "Artifact egress: 20 GB/month included, $0.35/GB overage",
+          "Artifact storage: 100 GB/month included, $0.07/GB overage",
+          "Cache: 9.6 GB per project included"
+        ],
+        "keyFeatures": [
+          "Bare-metal infrastructure delivering up to 94% faster builds than GitHub Actions (vendor claim)",
+          "Visual pipeline editor reducing time-to-first-green by up to 60% (vendor claim)",
+          "Free open-source Community Edition self-hostable on Linux and Kubernetes",
+          "AI/MCP Server integration for AI coding agents to debug pipelines",
+          "SOC 2 Type 2 attested and ISO 27001:2022 certified"
+        ],
+        "bestFor": [
+          "Speed-sensitive teams where build latency is a bottleneck",
+          "Open-source projects wanting a free self-hosted Community Edition",
+          "Small teams preferring pure pay-as-you-go with no seat minimums"
+        ],
+        "sources": [
+          {
+            "url": "https://semaphore.io/security",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://semaphore.io/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://semaphore.io/product",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Security page at semaphore.io/security confirmed SOC 2 Type 2 (report available on request under NDA) and ISO 27001:2022 certification. No HIPAA, BAA, or explicit GDPR statement was found on the security page, so hipaa=null and gdpr=null. Free tier: the $0 entry point with $15/month credits is a permanent ongoing arrangement (not a time-limited trial), confirmed from pricing page — freeTier=true. No separate free trial duration was advertised; freeTrialDays=null."
+      }
     },
     {
       "slug": "travis-ci",
@@ -398,7 +674,66 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://docs.travis-ci.com/legal/privacy-policy",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "GitHub",
+          "GitLab",
+          "Bitbucket",
+          "Heroku",
+          "AWS",
+          "Google Cloud",
+          "Azure",
+          "Slack",
+          "HashiCorp Vault",
+          "Codecov",
+          "npm",
+          "PyPI"
+        ],
+        "limits": [
+          "Usage Based: 35,000 Linux credits/month, 80 concurrent jobs",
+          "Unlimited: unlimited build credits, up to 300 concurrent jobs",
+          "Server: on-premise/private cloud deployment at $34/month flat"
+        ],
+        "keyFeatures": [
+          "Multi-platform builds across Linux, macOS, and Windows with amd64, arm64, ppc64le, s390x architectures",
+          "Build matrix for testing across multiple runtime versions simultaneously",
+          "Up to 50% less YAML/JSON configuration than comparable CI tools (vendor claim)",
+          "On-premise Server plan for full data control at a flat monthly rate",
+          "GDPR-compliant data handling with Privacy Shield-certified third-party vendors"
+        ],
+        "bestFor": [
+          "Teams with long-standing open-source projects historically on travis-ci.org",
+          "Organizations needing multi-architecture builds (arm64, ppc64le, s390x) without custom runners",
+          "Shops wanting a simple on-premise CI option at a predictable flat monthly cost"
+        ],
+        "sources": [
+          {
+            "url": "https://docs.travis-ci.com/legal/privacy-policy",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.travis-ci.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.travis-ci.com/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Privacy policy at docs.travis-ci.com confirmed GDPR compliance (explicitly stated) and Privacy Shield for third-party vendors. The security URL /legal/security/ returned 404 and /security/ redirected in a loop; no dedicated security/compliance page was reachable. SOC 2 was not found on any accessible page, so soc2=null. HIPAA and BAA were not mentioned anywhere, so hipaa=null. No $0 forever free plan exists in the pricing page (no free tier for commercial use; open-source sponsorship is separate and not self-serve), so freeTier=false. No time-limited free trial duration was advertised; freeTrialDays=null."
+      }
     },
     {
       "slug": "harness-ci",
@@ -466,7 +801,65 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.harness.io/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "GitHub",
+          "GitLab",
+          "Bitbucket",
+          "Kubernetes",
+          "Docker",
+          "AWS",
+          "Azure",
+          "Google Cloud",
+          "Jira",
+          "Slack",
+          "ServiceNow",
+          "Terraform"
+        ],
+        "limits": [
+          "Free: access to Harness Open Source and Litmus Chaos; paid CI/CD module limits not publicly disclosed",
+          "Essentials/Enterprise: no public seat or compute limits — contact sales required"
+        ],
+        "keyFeatures": [
+          "Test Intelligence: runs only tests affected by code changes, accelerating test cycles by up to 80% (vendor claim)",
+          "AI-powered Architect Mode for designing compliant pipelines",
+          "SLSA Level 3 tamper-proof builds on Harness Cloud",
+          "Smart caching for Gradle, Bazel, Maven, Docker layers, and dependencies",
+          "Modular platform: CI, CD, IaC, Security Testing Orchestration sold independently"
+        ],
+        "bestFor": [
+          "Large enterprises wanting a modular, all-in-one DevOps platform (CI + CD + security)",
+          "Teams with large test suites where Test Intelligence savings justify the cost",
+          "Organizations requiring SLSA supply-chain security compliance"
+        ],
+        "sources": [
+          {
+            "url": "https://www.harness.io/security",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.harness.io/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.harness.io/product/continuous-integration",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Security page at harness.io/security confirmed SOC 2 compliance and ISO 27001/27017/27018 certifications, plus explicit GDPR and CCPA compliance. No HIPAA or BAA was mentioned on the security page or any other Harness page consulted (/legal/security returned 404, /certifications returned 404), so hipaa=null. Free tier confirmed from pricing page ($0 plan for individual developers with access to Harness Open Source). freeTrialDays=null: a trial period for paid CI modules was not confirmed from any directly fetched page during this session, so it is nulled rather than guessed."
+      }
     }
   ]
 }

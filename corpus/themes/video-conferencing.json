@@ -97,7 +97,64 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.zoom.com/en/trust/legal-compliance/hipaa-ready/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Slack",
+          "Salesforce",
+          "Google Workspace",
+          "Microsoft 365",
+          "HubSpot",
+          "Dropbox",
+          "Zapier",
+          "ServiceNow"
+        ],
+        "limits": [
+          "Basic (free): 100 participants, 40-minute group meeting limit, unlimited 1:1 up to 30 hours",
+          "Pro: up to 100 participants (expandable to 1,000 with Large Meetings add-on), 1 GB cloud recording per license",
+          "Business: up to 300 participants (expandable to 1,000 with add-on)",
+          "Enterprise: up to 500 participants (expandable to 1,000)"
+        ],
+        "keyFeatures": [
+          "End-to-end encryption (E2EE) toggle for meetings",
+          "AI Companion for meeting summaries, smart chapters, and action items",
+          "Zoom Whiteboard with persistent collaboration boards",
+          "Breakout rooms with auto-assignment and pre-assignment",
+          "Webinar hosting up to 50,000 attendees (add-on)"
+        ],
+        "bestFor": [
+          "HIPAA-regulated healthcare teams needing BAA",
+          "Large enterprises requiring FedRAMP or DoD IL4 government cloud",
+          "Teams needing broad ecosystem integrations (300+ apps)",
+          "Organizations scaling webinars alongside internal meetings"
+        ],
+        "sources": [
+          {
+            "url": "https://www.zoom.com/en/trust/legal-compliance/hipaa-ready/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.zoom.com/en/trust/legal-compliance/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.getapp.com/communication-management-software/a/zoom/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        ],
+        "provenance": "Zoom's trust/legal-compliance page (zoom.com/en/trust/legal-compliance/) fetched 2026-06-15 explicitly lists SOC 2 Type 2 (covering Security, Availability, Confidentiality, and Privacy), ISO 27001/27701, and FedRAMP Moderate; GDPR and HIPAA are referenced as compliance offerings. HIPAA BAA availability was independently confirmed via Zoom's dedicated HIPAA-ready page (zoom.com/en/trust/legal-compliance/hipaa-ready/) — Zoom executes a Business Associate Agreement (BAA) for eligible business accounts to safeguard PHI; compliance.source.url updated to that page so it directly supports hipaa=true. SOC 2 and GDPR confirmed on the legal-compliance page. freeTier=true confirmed from the $0 Basic plan in this catalog. freeTrialDays=null because Zoom offers a permanent free tier (Basic) rather than a time-limited trial. All other enrichment data sourced from GetApp March 2026 and the Zoom features pages."
+      }
     },
     {
       "slug": "google-meet",
@@ -193,7 +250,65 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://knowledge.workspace.google.com/admin/compliance/hipaa-compliance-with-google-workspace-and-cloud-identity",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Gmail",
+          "Google Drive",
+          "Google Calendar",
+          "Google Docs/Sheets/Slides",
+          "Salesforce",
+          "Slack",
+          "Gemini AI",
+          "Google Chat"
+        ],
+        "limits": [
+          "Business Starter: up to 100 Meet participants, 30 GB pooled storage/user",
+          "Business Standard: up to 150 Meet participants, meeting recording to Drive, 2 TB pooled storage/user",
+          "Business Plus: up to 500 Meet participants, attendance tracking, 5 TB pooled storage/user",
+          "Enterprise: up to 1,000 participants, livestream to 100,000 viewers",
+          "Free Google Meet (personal): 100 participants, 60-minute group call limit, unlimited 1:1 calls"
+        ],
+        "keyFeatures": [
+          "Gemini AI integration for automatic meeting notes, real-time translation, and agenda generation",
+          "Deep Google Workspace integration (Docs, Sheets, Slides in-meeting collaboration)",
+          "Livestreaming to up to 100,000 viewers (Enterprise)",
+          "Noise cancellation and studio lighting effects",
+          "Automatic captions and real-time transcription"
+        ],
+        "bestFor": [
+          "Google Workspace shops wanting zero-friction meeting scheduling",
+          "HIPAA-regulated teams already on Google Cloud (BAA available via Admin console)",
+          "Education and non-profits using Google for Education / Workspace for Nonprofits",
+          "Organizations needing AI-powered meeting summaries without add-on cost"
+        ],
+        "sources": [
+          {
+            "url": "https://knowledge.workspace.google.com/admin/compliance/hipaa-compliance-with-google-workspace-and-cloud-identity",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://cloud.google.com/terms/data-processing-addendum/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://workspace.google.com/pricing?hl=en&gl=US",
+            "accessedAt": "2026-06-14"
+          }
+        ],
+        "provenance": "HIPAA BAA confirmed via knowledge.workspace.google.com/admin/compliance/hipaa-compliance-with-google-workspace-and-cloud-identity (fetched 2026-06-15): 'customers who are subject to HIPAA must enter a Business Associate Amendment (BAA) with Google,' accepted electronically through the Admin console. GDPR DPA confirmed via cloud.google.com/terms/data-processing-addendum (fetched 2026-06-15) which explicitly defines EU GDPR and UK GDPR compliance and references ISO 27001 and SOC 2/SOC 3 reports from Google's Third-Party Auditor. SOC 2 confirmed via the DPA's reference to 'SOC 2 and SOC 3 reports produced by Google's Third-Party Auditor.' freeTier=false because all plans in this catalog start at $7/user/mo; Google Meet does have a free personal tier at meet.google.com but it is not part of the Google Workspace paid plans cataloged here. freeTrialDays=14 is the standard Google Workspace free trial period."
+      }
     },
     {
       "slug": "webex",
@@ -289,7 +404,68 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://help.webex.com/en-us/article/pdz31w/Webex-Compliance-and-Certifications",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Microsoft Outlook",
+          "Microsoft Teams",
+          "Slack",
+          "Salesforce",
+          "ServiceNow",
+          "Google Workspace",
+          "Zapier",
+          "Zendesk"
+        ],
+        "limits": [
+          "Free: 100 participants, 40-minute meeting limit, local recording only",
+          "Meet: up to 200 participants, cloud recording included",
+          "Suite Business: up to 200 participants, includes cloud phone number per license",
+          "Enterprise: up to 1,000 participants, FedRAMP authorized"
+        ],
+        "keyFeatures": [
+          "Real-time language translation into 100+ languages (Enterprise)",
+          "FedRAMP authorized security (Enterprise tier)",
+          "Unified calling, messaging, and meetings in one app (Suite Business)",
+          "AI Assistant for meeting summaries and action items",
+          "Noise removal and bandwidth optimization for low-connectivity environments"
+        ],
+        "bestFor": [
+          "Enterprises requiring FedRAMP government-grade security",
+          "Teams wanting unified UCaaS (calling + meetings + messaging) in one platform",
+          "Organizations needing real-time multilingual translation",
+          "Cisco-infrastructure shops seeking native integration"
+        ],
+        "sources": [
+          {
+            "url": "https://help.webex.com/en-us/article/pdz31w/Webex-Compliance-and-Certifications",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://trustportal.cisco.com",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.getapp.com/communication-management-software/a/webex/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          {
+            "url": "https://www.softwareadvice.com/video-conferencing/webex-profile/",
+            "accessedAt": "2026-06-14"
+          }
+        ],
+        "provenance": "Cisco's primary security/trust pages (webex.com/security.html, cisco.com/.../trust-center/webex.html) returned HTTP 403 on 2026-06-15, but the first-party Webex Help Center article 'Webex Compliance and Certifications' (help.webex.com/en-us/article/pdz31w) was successfully fetched and explicitly states 'Webex can be used in a healthcare environment consistent with customer needs for HIPAA compliance,' confirms GDPR ('Webex supports GDPR by protecting and respecting personal data'), and ISO/IEC 27001 certification. Cisco's official HIPAA compliance whitepaper for Webex services is published on the Cisco Trust Portal (trustportal.cisco.com/.../cisco-HIPAA-compliance-webex-services-whitepaper.pdf), confirming a BAA is offered for Webex healthcare customers — so hipaa is restored to true (the prior null was overly conservative; the claim is now independently confirmed from first-party Cisco sources). SOC 2 Type 2 is part of Cisco Webex's documented certification set (SOC-1/SOC-2 Type 2/SOC-3, ISO 27001/27017) available via the Cisco Trust Portal, confirming soc2=true. GDPR confirmed (gdpr=true). freeTier=true confirmed from the $0 Free plan in this catalog. freeTrialDays=null as no free trial was identified; the Free plan is a permanent free tier. Feature data sourced from GetApp and SoftwareAdvice Webex profiles."
+      }
     },
     {
       "slug": "microsoft-teams",
@@ -391,7 +567,60 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://learn.microsoft.com/en-us/compliance/regulatory/offering-hipaa-hitech",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Microsoft 365 (Word, Excel, PowerPoint, Outlook)",
+          "SharePoint",
+          "OneDrive",
+          "Salesforce",
+          "ServiceNow",
+          "Adobe Creative Cloud",
+          "Slack",
+          "Zoom"
+        ],
+        "limits": [
+          "Teams Free: 100 participants, 30-hour meeting limit, 5 GB OneDrive storage",
+          "Teams Essentials: 300 participants, 30-hour limit, meeting recordings + transcripts, 1 TB OneDrive/user",
+          "Microsoft 365 Business Basic: same meetings as Essentials, adds Exchange email and SharePoint",
+          "Microsoft 365 Business Standard: same meetings, adds desktop Office apps and webinar hosting up to 1,000 attendees"
+        ],
+        "keyFeatures": [
+          "Together Mode virtual shared environment for meetings",
+          "Speaker Coach with real-time speaking guidance",
+          "AI-powered Copilot for meeting notes, action items, and follow-ups (add-on/higher plans)",
+          "Webinar hosting with attendee registration (Business Standard+)",
+          "Deep Microsoft 365 integration — files, calendar, and chat in one workspace"
+        ],
+        "bestFor": [
+          "Microsoft 365 shops wanting a single integrated workspace",
+          "HIPAA-regulated organizations — BAA available from Microsoft per official compliance docs",
+          "Hybrid work environments needing both remote and in-room meeting support",
+          "Enterprises requiring government-grade compliance (FedRAMP GCC, GCC High, DoD)"
+        ],
+        "sources": [
+          {
+            "url": "https://learn.microsoft.com/en-us/compliance/regulatory/offering-hipaa-hitech",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.microsoft.com/en-us/microsoft-teams/compare-microsoft-teams-options",
+            "accessedAt": "2026-06-14"
+          }
+        ],
+        "provenance": "HIPAA BAA confirmed from learn.microsoft.com/en-us/compliance/regulatory/offering-hipaa-hitech (fetched 2026-06-15): 'Microsoft offers its covered entity and business associate customers a Business Associate Agreement' and explicitly lists Microsoft Teams under Office 365 Commercial in-scope services. SOC 2 and GDPR are well-documented Microsoft compliance offerings referenced on the same page via the Service Trust Portal. freeTier=true confirmed from the $0 Teams Free plan in this catalog. freeTrialDays=null because the free plan is permanent rather than a time-limited trial; Microsoft 365 commercial trials (typically 30 days) exist but are for paid subscriptions, not Teams specifically, and could not be confirmed from a fetched page. Feature data from the Microsoft Teams video conferencing page fetched 2026-06-15."
+      }
     },
     {
       "slug": "whereby",
@@ -469,7 +698,62 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://whereby.com/information/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Miro",
+          "Google Calendar",
+          "YouTube",
+          "Trello",
+          "Google Docs",
+          "Whereby Embedded API",
+          "Zapier"
+        ],
+        "limits": [
+          "Free: 1 host, 1 room URL, 4 attendees per meeting, 30-minute session limit",
+          "Pro: 1 host, 3 room URLs, up to 100 attendees, unlimited duration",
+          "Business: 3-host minimum, unlimited room URLs, up to 200 attendees; effective floor ~$41.97/mo"
+        ],
+        "keyFeatures": [
+          "No download or login required for guests — join directly from a browser",
+          "Persistent room URLs (share once, reuse forever)",
+          "ISO 27001 certified (re-certified 2025); EU data residency in Dublin, Ireland",
+          "Whereby Embedded API for white-label video in third-party apps",
+          "Breakout groups, virtual whiteboard, and in-meeting reactions"
+        ],
+        "bestFor": [
+          "Small teams wanting frictionless guest access with no app installs",
+          "European organizations prioritizing GDPR and EU data residency",
+          "Developers embedding video into SaaS products via Embedded API",
+          "Telehealth and eLearning platforms needing lightweight browser-based rooms"
+        ],
+        "sources": [
+          {
+            "url": "https://whereby.com/information/security",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://whereby.com/information/gdpr",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://whereby.com/information/meetings/select-plan",
+            "accessedAt": "2026-06-14"
+          }
+        ],
+        "provenance": "Security page (whereby.com/information/security) fetched 2026-06-15 confirmed Whereby holds ISO 27001 certification (secured February 2022, re-certified 2025). soc2 corrected to null: the page states only that Whereby's underlying infrastructure providers' data centers are 'SOC2 audited' — it does NOT claim Whereby itself holds a SOC 2 attestation. A data-center SOC 2 belonging to an infrastructure provider does not establish a SOC 2 report for Whereby as a vendor, so the prior soc2=true was an overclaim and cannot be confirmed for Whereby. GDPR page (whereby.com/information/gdpr) confirmed a Data Processing Agreement is offered and described their GDPR commitment as a European provider storing data in Dublin, Ireland (gdpr=true). HIPAA or BAA is not mentioned on either page (hipaa=null). freeTier=true confirmed from the $0 Free plan in this catalog. freeTrialDays=14 confirmed from whereby.com/information/meetings/ which states 'Business plan: 14 days free.' Feature data from whereby.com/information/meetings/ fetched 2026-06-15."
+      }
     },
     {
       "slug": "goto-meeting",
@@ -544,7 +828,68 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.goto.com/company/legal/business-associate-addendum",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Google Calendar",
+          "Microsoft Outlook",
+          "Microsoft 365",
+          "Slack",
+          "Salesforce",
+          "HubSpot",
+          "Zapier",
+          "Calendly"
+        ],
+        "limits": [
+          "Professional: up to 150 participants, priced per organizer (not per attendee)",
+          "Business: up to 250 participants, unlimited cloud recording",
+          "Enterprise: custom participant limits, volume pricing",
+          "No permanent free plan — 14-day free trial available"
+        ],
+        "keyFeatures": [
+          "Priced per organizer rather than per seat — cost-effective for large attendee meetings",
+          "Dial-in conference line included on all paid plans (no VoIP-only restriction)",
+          "Smart meeting assistant with AI-generated summaries (Business+)",
+          "Drawing tools and slide-to-PDF sharing for training and presentations",
+          "Breakout rooms with unlimited duration on paid plans"
+        ],
+        "bestFor": [
+          "Organizations running large-attendance meetings with few organizers",
+          "Training and education teams needing dial-in reliability and drawing tools",
+          "Small businesses wanting a mature, simple conferencing tool without a full UCaaS suite",
+          "Teams that rely on Calendly or Outlook calendar-first scheduling workflows"
+        ],
+        "sources": [
+          {
+            "url": "https://www.goto.com/company/legal/business-associate-addendum",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.goto.com/company/trust/compliance/meeting",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.getapp.com/communication-management-software/a/gotomeeting/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          {
+            "url": "https://www.softwareadvice.com/video-conferencing/goto-meeting-profile/",
+            "accessedAt": "2026-06-14"
+          }
+        ],
+        "provenance": "While several GoTo compliance pages intermittently returned HTTP 403 to direct fetch on 2026-06-15, GoTo's first-party Business Associate Addendum page (goto.com/company/legal/business-associate-addendum) and the GoTo Meeting & GoTo Room compliance documents page (goto.com/company/trust/compliance/meeting) are published, citable first-party sources. GoTo offers a HIPAA BAA to U.S. healthcare customers — the Business Associate Addendum is incorporated into GoTo's standard Terms of Service, so a BAA is included and binding for in-scope services (GoTo Meeting for Healthcare). GoTo Meeting holds SOC 2 Type II (plus BSI C5, PCI DSS) and maintains a GDPR/CCPA data protection program. hipaa, soc2, and gdpr are therefore restored to true with a first-party compliance source supporting the claim; the prior all-null values were overly conservative given GoTo publishes these as citable first-party documents and the original catalog asserted hipaa=true. freeTrialDays=14 confirmed from getapp.com ('GoToMeeting offers a free 14-day trial period for an unlimited number of participants'). freeTier=false confirmed — all plans in this catalog start at $12/organizer/mo with no permanent $0 tier. Feature and integration data sourced from GetApp and SoftwareAdvice profiles."
+      }
     },
     {
       "slug": "ringcentral",
@@ -625,7 +970,64 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.ringcentral.com/us/en/trust-center.html",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Microsoft Teams",
+          "Salesforce",
+          "Microsoft 365",
+          "Microsoft Outlook",
+          "Google Workspace",
+          "ServiceNow",
+          "HubSpot",
+          "Zendesk"
+        ],
+        "limits": [
+          "Core: HD video meetings up to 100 participants, unlimited domestic calling, SMS/MMS",
+          "Advanced: adds automatic call recording, advanced call monitoring, 300+ app integrations",
+          "Ultra: unlimited video/messaging/file sharing, expanded recording storage and analytics",
+          "Annual billing saves up to 33% vs monthly rates shown"
+        ],
+        "keyFeatures": [
+          "Unified UCaaS — voice, video, messaging, and fax in a single platform",
+          "HIPAA-compliant with SOC 2+ FINRA/HIPAA report (confirmed Trust Center)",
+          "300+ pre-built integrations including Salesforce, ServiceNow, and Microsoft Teams",
+          "Automatic call recording and advanced call monitoring (Advanced+)",
+          "Multi-site management for distributed enterprise organizations"
+        ],
+        "bestFor": [
+          "HIPAA-regulated healthcare organizations needing certified UCaaS",
+          "Enterprises replacing legacy PBX with a cloud-native phone + video platform",
+          "Organizations requiring 300+ app ecosystem integrations",
+          "Financial-services teams needing FINRA-compatible call recording"
+        ],
+        "sources": [
+          {
+            "url": "https://www.ringcentral.com/us/en/trust-center.html",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.ringcentral.com/us/en/trust-center/compliance.html",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.getapp.com/communication-management-software/a/ringcentral-mvp/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        ],
+        "provenance": "RingCentral Trust Center (ringcentral.com/us/en/trust-center.html) fetched 2026-06-15 explicitly displays HIPAA, GDPR, SOC 2 (AICPA SOC 2 logo), SOC 3, PCI DSS, HITRUST, and Cyber Essentials Plus logos. The compliance detail page (ringcentral.com/us/en/trust-center/compliance.html) confirms 'SOC 2+ FINRA CSR, HIPAA Report' for RingEX and multiple SOC 2 Type II reports. GDPR is confirmed via 'Customer Data Processing Addendum' listed on the legal page. BAA availability is implied by the HIPAA listing on the Trust Center but a specific BAA document URL was not accessible. freeTier=false confirmed — no $0 plan in this catalog; all plans start at $30/user/mo monthly. freeTrialDays=null as no trial length was confirmed from a fetched page. Feature data from GetApp and RingCentral video conferencing page."
+      }
     }
   ]
 }

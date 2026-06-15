@@ -94,7 +94,63 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://sentry.io/security/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "GitHub",
+          "GitLab",
+          "Jira",
+          "Slack",
+          "PagerDuty",
+          "Vercel",
+          "Linear",
+          "Azure DevOps"
+        ],
+        "limits": [
+          "Developer (free): 1 user, 5,000 errors/month, 10 dashboards",
+          "Team: 50,000 errors/month, unlimited users",
+          "Business: 50,000 errors/month baseline, anomaly detection, SAML+SCIM",
+          "Error overage billed per event above quota"
+        ],
+        "keyFeatures": [
+          "Full-stack error monitoring with distributed tracing",
+          "Session replay linked to errors",
+          "Performance tracing to slow DB queries and API calls",
+          "Cron monitoring and uptime checks",
+          "HIPAA attestation + BAA on Business and Enterprise tiers"
+        ],
+        "bestFor": [
+          "Full-stack engineering teams needing one platform for errors, performance, and replay",
+          "HIPAA-regulated software products",
+          "Teams already on GitHub/GitLab/Vercel workflows"
+        ],
+        "sources": [
+          {
+            "url": "https://sentry.io/security/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://sentry.io/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://sentry.io/features/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Security/compliance page fetched from sentry.io/security/ on 2026-06-15, confirming HIPAA attestation ('performs risk assessments per HIPAA Security Rule'), SOC 2 Type I and Type II, ISO 27001, and a Data Processing Addendum for GDPR. Features fetched from sentry.io/features/. Free Developer tier confirmed from sentry.io/pricing/ (previously fetched 2026-06-14). No free trial separate from the free tier was found. freeTrialDays set to null."
+      }
     },
     {
       "slug": "rollbar",
@@ -175,7 +231,59 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://docs.rollbar.com/docs/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "GitHub",
+          "GitLab",
+          "Bitbucket",
+          "Jira",
+          "Slack",
+          "PagerDuty",
+          "OpsGenie",
+          "Datadog"
+        ],
+        "limits": [
+          "Free: 5,000 occurrences/month, 1,000 replays/month, 30-day retention, unlimited users",
+          "Essentials: 10K–50M occurrences/month, up to 90-day retention",
+          "Advanced: 10K–50M occurrences/month, up to 180-day retention, SCIM provisioning",
+          "Enterprise: 80M+ events, custom retention, minimum $4M annual"
+        ],
+        "keyFeatures": [
+          "Real-time error alerts in under 3 seconds",
+          "Session replay linked directly to error stack traces",
+          "Deploy and version tracking (GitHub Actions, CircleCI)",
+          "SOC 2 Type I+II and ISO 27001 certified",
+          "HIPAA BAA included on Advanced/Enterprise (Advanced 4M plan minimum)"
+        ],
+        "bestFor": [
+          "Teams needing HIPAA compliance with error monitoring",
+          "High-volume SaaS applications (up to 80M+ events/month)",
+          "Engineering teams using PagerDuty/OpsGenie on-call workflows"
+        ],
+        "sources": [
+          {
+            "url": "https://docs.rollbar.com/docs/security",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://rollbar.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Security/compliance fetched from docs.rollbar.com/docs/security on 2026-06-15 (rollbar.com/security/ redirects there). Page explicitly states: 'Rollbar Compliant SaaS is fully compliant with HIPAA and the HITECH Act' with BAA at no additional cost (minimum Advanced 4M plan). SOC 2 Type I and Type II confirmed. ISO 27001 confirmed. GDPR Data Processing Addendum confirmed. 14-day full-access free trial confirmed from rollbar.com/pricing/. SAML SSO via Okta/Azure confirmed. Free tier (5,000 occurrences/month) confirmed."
+      }
     },
     {
       "slug": "bugsnag",
@@ -258,7 +366,59 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": {
+            "url": "https://www.bugsnag.com/security/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "GitHub",
+          "GitLab",
+          "Jira",
+          "Slack",
+          "PagerDuty",
+          "Datadog",
+          "Splunk",
+          "Azure DevOps"
+        ],
+        "limits": [
+          "Free: 1 user, 7,500 events/month, 1M spans/month, 7-day retention",
+          "Select: unlimited users, 50K–3M events/month, 60-day retention",
+          "Preferred: 100K–3M events/month, dedicated CSM, SSO, feature flags",
+          "Enterprise: custom volume, on-premises option available"
+        ],
+        "keyFeatures": [
+          "Stability score tracking per release across mobile and web",
+          "Distributed tracing waterfall graphs correlating crashes to microservices",
+          "OpenTelemetry-compatible performance monitoring",
+          "ISO 27001, PCI, SOC, and CSA STAR logos displayed (types unconfirmed from public pages)",
+          "On-premises deployment option on Enterprise tier"
+        ],
+        "bestFor": [
+          "Mobile-first teams (Android, iOS, React Native, Flutter)",
+          "Enterprises requiring on-premises deployment",
+          "Teams needing stability score visibility across app versions"
+        ],
+        "sources": [
+          {
+            "url": "https://www.bugsnag.com/security/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.bugsnag.com/product/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Security page fetched from bugsnag.com/security/ on 2026-06-15. Page displays ISO 27001, PCI, SOC, and CSA STAR certification logos with the statement 'We meet the industry's strictest certifications for security, privacy, and control,' but does not specify SOC 2 type (I or II), does not mention HIPAA or a BAA, and does not mention GDPR or a DPA. All three compliance fields are set to null as the public security page does not confirm them. Product page fetched from bugsnag.com/product/ confirming integrations and features. Free tier (1 user, 7,500 events/month) confirmed from pricing page. No time-limited trial mentioned."
+      }
     },
     {
       "slug": "honeybadger",
@@ -350,7 +510,59 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://honeybadger.io/security/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": 30,
+        "keyIntegrations": [
+          "GitHub",
+          "GitLab",
+          "Jira",
+          "Slack",
+          "PagerDuty",
+          "OpsGenie",
+          "Datadog",
+          "Heroku"
+        ],
+        "limits": [
+          "Developer (free): 1 user, 5,000 errors/month, 50 MB/day logging, 1 uptime monitor",
+          "Team: unlimited users, 50,000 errors/month, 100 MB/day logging, 5 uptime monitors",
+          "Business: same quotas as Team plus HIPAA BAA and SOC 2",
+          "30-day free trial available (no credit card required)"
+        ],
+        "keyFeatures": [
+          "Error tracking, uptime monitoring, cron monitoring, and status pages in one platform",
+          "SOC 2 Type II certified",
+          "HIPAA BAA on Business and Enterprise tiers",
+          "Built-in logging (50–100 MB/day) alongside error tracking",
+          "Public status pages included in all paid plans"
+        ],
+        "bestFor": [
+          "Small-to-mid engineering teams wanting error tracking plus uptime monitoring without extra tooling",
+          "HIPAA-regulated applications on a mid-market budget ($80/mo)",
+          "Ruby/Rails and Python teams (historically strong SDK support)"
+        ],
+        "sources": [
+          {
+            "url": "https://honeybadger.io/security/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.honeybadger.io/plans/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Security page fetched from honeybadger.io/security/ on 2026-06-15. Page explicitly states: 'We also support HIPAA via a standard Business Associate Agreement (BAA)' and 'Honeybadger is SOC2 Type II certified' and 'We comply with Europe's General Data Protection Regulation (GDPR).' Plans page confirmed free Developer tier and 30-day free trial ('Try Honeybadger free for 30 days. No credit card required.'). GDPR DPA not explicitly confirmed on the security page but GDPR compliance explicitly stated."
+      }
     },
     {
       "slug": "raygun",
@@ -435,7 +647,64 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://raygun.com/privacy",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "GitHub",
+          "GitLab",
+          "Bitbucket",
+          "Jira",
+          "Slack",
+          "Microsoft Teams",
+          "Azure DevOps",
+          "PagerDuty"
+        ],
+        "limits": [
+          "Basic: 100,000 errors/month, $0.001/error overage, 180-day retention",
+          "Team: 200,000 errors/month, unlimited dashboards, 180-day retention",
+          "Business: 1,000,000 errors/month, SAML SSO included, 5 custom reports",
+          "Enterprise: custom BAA, custom data retention, invoiced billing",
+          "No free forever tier — 14-day trial only"
+        ],
+        "keyFeatures": [
+          "AI Error Resolution providing instant suggested fixes",
+          "Combined Crash Reporting, Real User Monitoring, and APM in one suite",
+          "Spike protection to prevent alert storms",
+          "Source map decoding for minified JS",
+          "Custom BAA available on Enterprise tier only"
+        ],
+        "bestFor": [
+          "Teams wanting combined error monitoring and real user monitoring from one vendor",
+          "Applications with high error volumes needing per-event overage pricing",
+          "New Zealand / Australia-based companies (Raygun is NZ-headquartered)"
+        ],
+        "sources": [
+          {
+            "url": "https://raygun.com/privacy",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://raygun.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://raygun.com/features",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Privacy policy fetched from raygun.com/privacy on 2026-06-15. GDPR compliance confirmed: 'To comply with GDPR legislation we provide functionality that allows Raygun customers to permanently delete PII' and DPA contact email (dpa@raygun.com) listed. HIPAA not mentioned anywhere in privacy policy or features page. SOC 2 not mentioned. Multiple attempts to fetch raygun.com/security-and-compliance and raygun.com/about/legal/security returned 404. Custom BAA for Enterprise confirmed from pricing page (original provenance 2026-06-14). No free forever tier confirmed from pricing page. 14-day free trial confirmed from raygun.com/pricing and raygun.com/features."
+      }
     },
     {
       "slug": "airbrake",
@@ -534,7 +803,65 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://airbrake.io/privacy",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "GitHub",
+          "GitLab",
+          "Jira",
+          "Slack",
+          "PagerDuty",
+          "Bitbucket",
+          "Okta",
+          "OneLogin"
+        ],
+        "limits": [
+          "Tier 1: 1 user, 1 team, 25,000 errors/month, 30-day retention",
+          "Essential: unlimited users, 3 teams, 100,000 errors/month",
+          "Startup: unlimited users and teams, 300,000 errors/month",
+          "Growth: 1,000,000 errors/month",
+          "Business: 5,000,000 errors/month",
+          "No free forever tier; free trial available but duration not published"
+        ],
+        "keyFeatures": [
+          "Error monitoring, performance monitoring, and deploy tracking in one platform",
+          "Intelligent error grouping to reduce noise",
+          "Deploy correlation to identify regressions by release",
+          "2FA via GitHub, OneLogin, and Okta",
+          "Part of LogicMonitor family (enterprise observability ecosystem)"
+        ],
+        "bestFor": [
+          "Teams needing straightforward per-errors-per-month flat-rate pricing",
+          "Organizations using LogicMonitor for broader observability",
+          "Developers on Ruby/Rails, Python, Node.js, and .NET stacks"
+        ],
+        "sources": [
+          {
+            "url": "https://airbrake.io/privacy",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://airbrake.io/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://airbrake.io/product",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Privacy policy fetched from airbrake.io/privacy on 2026-06-15. GDPR rights acknowledged and a DPA link referenced in the footer ('Airbrake DPA' document linked), confirming GDPR compliance infrastructure exists. HIPAA not mentioned in privacy policy or any reachable page. SOC 2 not mentioned. Dedicated security/compliance pages (airbrake.io/security, airbrake.io/compliance, airbrake.io/security-compliance) returned 404. Pricing page fetched confirming no free forever tier; a free trial 'Start Free Trial' CTA exists but exact trial duration is not published on the page. freeTrialDays set to null as duration could not be confirmed."
+      }
     },
     {
       "slug": "trackjs",
@@ -617,7 +944,64 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": false,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://trackjs.com/dpa/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "React",
+          "Angular",
+          "Vue",
+          "Next.js",
+          "Node.js",
+          "Axios",
+          "Redux",
+          "SSO"
+        ],
+        "limits": [
+          "Starter: 1 app, 100K page views/month, 10-day retention, 3 alert channels",
+          "Professional: 5 apps, 1M page views/month, 15-day retention, unlimited alert channels",
+          "Business: 10+ apps, up to 100M page views/month, 30-day retention",
+          "Pricing is page-view-based, not error-volume-based",
+          "No free tier; free trial available but duration not confirmed on pricing page"
+        ],
+        "keyFeatures": [
+          "Telemetry Timeline — chronological log of network, user interactions, console, and navigation before each error",
+          "AI Code Debugger that analyzes telemetry and source code to explain root cause and fix",
+          "Page-view-based pricing (not error-count-based) — unlimited error submissions per plan",
+          "Privacy-first: never collects passwords, PII, or sensitive form data by default",
+          "Server-side ignore rules to filter third-party noise without code changes"
+        ],
+        "bestFor": [
+          "Frontend-focused teams monitoring JavaScript errors in browsers",
+          "Privacy-conscious teams that need GDPR compliance without vendor data collection risk",
+          "Teams wanting predictable costs tied to traffic volume rather than error spikes"
+        ],
+        "sources": [
+          {
+            "url": "https://trackjs.com/dpa/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.trackjs.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://trackjs.com/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "DPA page fetched from trackjs.com/dpa/ on 2026-06-15. This is a formal GDPR Data Processing Agreement referencing GDPR 2016/679, CCPA, and EU standard contractual clauses — confirming gdpr=true. The DPA explicitly prohibits submission of 'special categories of personal data' including health data, making HIPAA compliance inapplicable and setting hipaa=false (not merely unknown — the product's own DPA prohibits PHI). SOC 2 not mentioned anywhere; soc2=null. Security page at trackjs.com/security/ fetched — references the DPA but contains no SOC 2 or HIPAA claims. No free forever tier confirmed. Free trial mentioned on homepage but no duration found on pricing page; freeTrialDays set to null."
+      }
     },
     {
       "slug": "logrocket",
@@ -698,7 +1082,64 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://cpq.logrocket.com/trust",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "GitHub",
+          "GitLab",
+          "Jira",
+          "Slack",
+          "Datadog",
+          "Intercom",
+          "Segment",
+          "Amplitude"
+        ],
+        "limits": [
+          "Free: 1,000 sessions/month, 3 seats, 1-month retention",
+          "Core: 10,000–50,000 sessions/month, 5–10 seats, starts at $69/mo",
+          "Professional: custom session volume, custom seats, annual commitment required",
+          "Enterprise: 1M+ sessions/month, unlimited seats, self-hosted option",
+          "BAA available on Enterprise tier only"
+        ],
+        "keyFeatures": [
+          "Session replay correlated directly with error stack traces and network logs",
+          "Galileo AI: proactively surfaces UX issues, severity analysis, and reproduction steps",
+          "Product analytics (funnels, path analysis, timeseries) alongside error monitoring",
+          "SOC 2 Type II certified",
+          "Self-hosted deployment option on Enterprise tier"
+        ],
+        "bestFor": [
+          "Product and engineering teams wanting session replay plus error monitoring in one tool",
+          "SaaS companies combining UX analytics with debugging workflows",
+          "Enterprises requiring self-hosted deployment or custom BAA"
+        ],
+        "sources": [
+          {
+            "url": "https://cpq.logrocket.com/trust",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://logrocket.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://logrocket.com/features/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Trust center fetched from cpq.logrocket.com/trust on 2026-06-15 (logrocket.com/trust redirects there). SOC 2 Type II confirmed as a gated document available to verified work emails. GDPR confirmed via EU-U.S. Data Privacy Framework self-certification and Data Protection Impact Assessment document referenced on trust page. HIPAA not mentioned on trust page, pricing page, or features page; hipaa=null (the original vendor provenance notes BAA for Enterprise but does not assert HIPAA compliance explicitly — BAA alone does not confirm HIPAA). Free tier (1,000 sessions/month, 3 seats) confirmed from pricing page. Core plan 14-day trial confirmed from pricing page."
+      }
     }
   ]
 }
