@@ -1,0 +1,800 @@
+{
+  "vertical": "observability-apm",
+  "generatedAt": "2026-06-14",
+  "methodologyNotes": "Pricing fetched directly from each vendor's official pricing page using WebFetch on 2026-06-14. All USD figures reflect self-serve published rates. 'monthlyUsd' for annual plans is the annualized monthly rate (annual total divided by 12); month-to-month rates are noted where published. Stackify Retrace was excluded because it is in end-of-life maintenance mode (EOL March 31, 2027) with no meaningful new-customer pricing. AppSignal pricing was sourced from GetApp (reputable aggregator) because the official /plans page returned HTTP 500; noted in provenance. New Relic HIPAA eligibility requires the Data Plus add-on per official documentation. Dynatrace uses a fully consumption-based DPS model; the 'Full-Stack Monitoring' tier ($58/mo per 8-GiB host) is the primary APM entry point. Grafana Cloud has a $19/month platform fee on the Pro tier on top of usage costs; the flat $19 is used as monthlyUsd for the Pro plan. SigNoz Teams plan includes $49 of usage credits per month. minutesIncluded, callsIncluded, overagePerMin, and overagePerCall are null on all plans as this is a non-telephony vertical.",
+  "vendors": [
+    {
+      "slug": "datadog-apm",
+      "name": "Datadog APM",
+      "domain": "datadoghq.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "AWS",
+        "Azure",
+        "Google Cloud",
+        "Kubernetes",
+        "Docker",
+        "Python",
+        "Java",
+        "Node.js",
+        ".NET",
+        "Go",
+        "Ruby",
+        "PHP",
+        "PostgreSQL",
+        "MySQL",
+        "MongoDB",
+        "Redis",
+        "Kafka",
+        "OpenTelemetry"
+      ],
+      "provenance": "Official pricing page https://www.datadoghq.com/pricing/ fetched 2026-06-14. HIPAA/BAA confirmed via Datadog Trust Center at https://trust.datadoghq.com/ (lists HIPAA certification). Prices are per-host per month; standalone APM tiers are priced without bundled infrastructure monitoring.",
+      "plans": [
+        {
+          "name": "APM (with Infra)",
+          "monthlyUsd": 31,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Annual commitment rate: $31/host/month. On-demand (month-to-month): $48/host/month. Includes infrastructure monitoring and end-to-end distributed traces.",
+          "source": {
+            "url": "https://www.datadoghq.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.datadoghq.com/pricing/?product=apm",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "APM Pro (with Infra)",
+          "monthlyUsd": 35,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Annual commitment rate: $35/host/month. On-demand: $54/host/month. Adds Data Streams Monitoring for streaming data pipelines.",
+          "source": {
+            "url": "https://www.datadoghq.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "APM Enterprise (with Infra)",
+          "monthlyUsd": 40,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Annual commitment rate: $40/host/month. On-demand: $60/host/month. Adds Continuous Profiler (code-level CPU/IO/memory tracing).",
+          "source": {
+            "url": "https://www.datadoghq.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "APM Standalone",
+          "monthlyUsd": 36,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Annual rate: $36/host/month without bundled infrastructure monitoring. Standalone APM Pro: $41/host/month. Standalone APM Enterprise: $47/host/month.",
+          "source": {
+            "url": "https://www.datadoghq.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "new-relic",
+      "name": "New Relic",
+      "domain": "newrelic.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "AWS",
+        "Azure",
+        "Google Cloud",
+        "Kubernetes",
+        "OpenTelemetry",
+        "Java",
+        "Python",
+        "Node.js",
+        ".NET",
+        "Go",
+        "Ruby",
+        "PHP",
+        "PostgreSQL",
+        "MySQL",
+        "MongoDB",
+        "Redis",
+        "Kafka"
+      ],
+      "provenance": "Official pricing page https://newrelic.com/pricing fetched 2026-06-14. HIPAA eligibility is available on the Data Plus data option (noted on pricing page: 'FedRAMP Moderate and HIPAA eligibility with Data Plus'). BAA available for qualifying accounts. Pricing is consumption-based: data ingestion cost + per-user cost.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "100 GB data ingest/month, 1 full platform user, unlimited basic users, 8-day minimum data retention. No credit card required.",
+          "source": {
+            "url": "https://newrelic.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Standard",
+          "monthlyUsd": 10,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "First full platform user: $10/month. Additional full platform users: $99/month each (max 5 users on Standard). Core users: $49/user/month. Data ingest: $0.40/GB beyond 100 GB free. Up to 5 full platform users.",
+          "source": {
+            "url": "https://newrelic.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 349,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Full platform user: $349/user/month (annual) or $418.80/user/month (pay-as-you-go). Core users: $49/user/month. Data ingest: $0.40/GB beyond 100 GB free (Original) or $0.60/GB (Data Plus). Unlimited full platform users.",
+          "source": {
+            "url": "https://newrelic.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing, contact sales. Includes FedRAMP Moderate and HIPAA eligibility with Data Plus, 1-hour critical support SLA.",
+          "source": {
+            "url": "https://newrelic.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "grafana-cloud",
+      "name": "Grafana Cloud",
+      "domain": "grafana.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Prometheus",
+        "OpenTelemetry",
+        "AWS",
+        "Azure",
+        "Google Cloud",
+        "Kubernetes",
+        "Loki",
+        "Tempo",
+        "Mimir",
+        "Pyroscope",
+        "PostgreSQL",
+        "MySQL",
+        "Elasticsearch",
+        "Kafka",
+        "Grafana k6"
+      ],
+      "provenance": "Official pricing page https://grafana.com/pricing/ fetched 2026-06-14. HIPAA/BAA status could not be confirmed from publicly accessible pages; set to null. Grafana Cloud pricing is composable and usage-based beyond the $19/month Pro platform fee.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "10k active metrics series (14-day retention), 50 GB logs/traces ingested (14-day retention), 2,232 host hours Kubernetes monitoring, 50k frontend sessions. Always free, no credit card required.",
+          "source": {
+            "url": "https://grafana.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 19,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "$19/month platform fee plus usage-based costs: metrics $6.50/1k series, logs $0.50/GB (write+process), traces $0.50/GB, Kubernetes monitoring $0.01/host-hour (~$7.20/host/month), application observability $0.025/host-hour (~$18/host/month), Grafana visualization $8/active-user, IRM $20/active-user. 30-day retention on logs/traces.",
+          "source": {
+            "url": "https://grafana.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Annual commit starting at $25,000/year. Volume discounts: metrics from $3/1k series, custom retention. Includes enterprise plugins, priority support.",
+          "source": {
+            "url": "https://grafana.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "honeycomb",
+      "name": "Honeycomb",
+      "domain": "honeycomb.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "OpenTelemetry",
+        "AWS",
+        "Azure",
+        "Google Cloud",
+        "Kubernetes",
+        "Prometheus",
+        "Slack",
+        "PagerDuty",
+        "GitHub Actions",
+        "ServiceNow",
+        "Terraform",
+        "Pulumi",
+        "Tracetest"
+      ],
+      "provenance": "Official pricing page https://www.honeycomb.io/pricing fetched 2026-06-14. HIPAA/BAA status: enterprise page mentions 'advanced security and compliance' but does not explicitly confirm HIPAA or BAA on public pages; set to null. Integrations sourced from https://www.honeycomb.io/integrations fetched 2026-06-14.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Up to 20 million events/month. Includes distributed tracing, BubbleUp, OpenTelemetry support, Canvas AI Copilot, Honeycomb MCP, 2 Triggers. Best for testing and individual projects.",
+          "source": {
+            "url": "https://www.honeycomb.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 130,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Starting at $130/month. Up to 1.5 billion events/month. Includes 100 Triggers, 2 SLOs, Single Sign-On. Monthly or annual subscription. Best for teams with a production application.",
+          "source": {
+            "url": "https://www.honeycomb.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing, contact sales. Base allowance of 10 billion events/year. 300+ Triggers, 100 SLOs, Service Map, Query Data API, AWS PrivateLink, enterprise-grade support and onboarding.",
+          "source": {
+            "url": "https://www.honeycomb.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "dynatrace",
+      "name": "Dynatrace",
+      "domain": "dynatrace.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "AWS",
+        "Azure",
+        "Google Cloud",
+        "Kubernetes",
+        "OpenTelemetry",
+        "Java",
+        "Python",
+        "Node.js",
+        ".NET",
+        "Go",
+        "PHP",
+        "Redis",
+        "Kafka",
+        "Fluent Bit",
+        "Prometheus"
+      ],
+      "provenance": "Official pricing page https://www.dynatrace.com/pricing/ fetched 2026-06-14. HIPAA/BAA status could not be confirmed from public pages (trust center returned 404); set to null. Dynatrace uses a consumption-based Davis Platform Subscription (DPS) model billed per hour; monthly figures shown are approximations at the stated hourly rates for a 720-hour month.",
+      "plans": [
+        {
+          "name": "Foundation & Discovery",
+          "monthlyUsd": 7,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "$7/month per host ($0.01/hour). Basic infrastructure monitoring and IT inventory. Not a full APM tier.",
+          "source": {
+            "url": "https://www.dynatrace.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Infrastructure Monitoring",
+          "monthlyUsd": 29,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "$29/month per host ($0.04/hour). Cloud and data center infrastructure observability.",
+          "source": {
+            "url": "https://www.dynatrace.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Full-Stack Monitoring",
+          "monthlyUsd": 58,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "$58/month per 8-GiB host ($0.01/memory-GiB-hour). Comprehensive APM + infrastructure observability including automatic distributed tracing (PurePath), AI-powered root cause analysis (Davis AI), and service topology mapping.",
+          "source": {
+            "url": "https://www.dynatrace.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Kubernetes Platform Monitoring",
+          "monthlyUsd": 1.4,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "$1.40/month per pod ($0.002/hour per pod). Kubernetes cluster visibility add-on.",
+          "source": {
+            "url": "https://www.dynatrace.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "appsignal",
+      "name": "AppSignal",
+      "domain": "appsignal.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Ruby on Rails",
+        "Elixir/Phoenix",
+        "Node.js",
+        "Python",
+        "JavaScript",
+        "Heroku",
+        "Render",
+        "Fly.io",
+        "AWS",
+        "OpenTelemetry",
+        "Slack",
+        "PagerDuty",
+        "GitHub"
+      ],
+      "provenance": "Official pricing page https://www.appsignal.com/plans returned HTTP 500. Prices sourced from GetApp aggregator listing at https://www.getapp.com/it-management-software/a/appsignal/pricing/ (reputable B2B software directory), fetched 2026-06-14. 10% annual discount noted by GetApp. HIPAA available as optional paid add-on per GetApp listing.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free plan: 50K requests/month, 1 GB log storage, 5-day retention. Unlimited apps, hosts, and team members. (250K requests is the paid Standard tier, not the free tier.)",
+          "source": {
+            "url": "https://www.getapp.com/it-management-software/a/appsignal/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Standard",
+          "monthlyUsd": 23,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "$23/month (month-to-month). Save 10% on annual plan. 250K requests/month. Unlimited apps and hosts. 1 GB log storage included; extra storage $10/10 GB.",
+          "source": {
+            "url": "https://www.getapp.com/it-management-software/a/appsignal/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Professional",
+          "monthlyUsd": 59,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "$59/month. 3M requests/month. Save 10% on annual plan.",
+          "source": {
+            "url": "https://www.getapp.com/it-management-software/a/appsignal/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 139,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "$139/month. 10M requests/month. Save 10% on annual plan.",
+          "source": {
+            "url": "https://www.getapp.com/it-management-software/a/appsignal/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": 239,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "$239/month. 25M requests/month. Save 10% on annual plan.",
+          "source": {
+            "url": "https://www.getapp.com/it-management-software/a/appsignal/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Premium Enterprise",
+          "monthlyUsd": 309,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "$309/month. 50M requests/month. Save 10% on annual plan.",
+          "source": {
+            "url": "https://www.getapp.com/it-management-software/a/appsignal/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Ultimate",
+          "monthlyUsd": 529,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "$529/month. 125M requests/month. Save 10% on annual plan.",
+          "source": {
+            "url": "https://www.getapp.com/it-management-software/a/appsignal/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "sentry",
+      "name": "Sentry",
+      "domain": "sentry.io",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "GitHub",
+        "GitLab",
+        "Bitbucket",
+        "Azure DevOps",
+        "Jira",
+        "Linear",
+        "Slack",
+        "Microsoft Teams",
+        "PagerDuty",
+        "Opsgenie",
+        "Vercel",
+        "Netlify",
+        "Heroku",
+        "AWS",
+        "Datadog",
+        "Grafana",
+        "LaunchDarkly",
+        "Auth0",
+        "Okta"
+      ],
+      "provenance": "Official pricing page https://sentry.io/pricing/ fetched 2026-06-14 (two separate fetches confirmed consistent data). HIPAA attestation confirmed via https://sentry.io/security/ (SOC2 Type I, SOC2 Type II, HIPAA Attestation, ISO 27001). BAA details require contacting enterprise sales; not confirmed as self-serve, so baa set to null.",
+      "plans": [
+        {
+          "name": "Developer",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free forever. 1 user, 5,000 errors/month, 5M spans/month for tracing, 50 session replays, 10 custom dashboards.",
+          "source": {
+            "url": "https://sentry.io/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Team",
+          "monthlyUsd": 26,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$26/month (annual billing). 50,000 errors/month, 5M spans/month, unlimited users, third-party integrations, 20 dashboards. Monthly billing option available at same stated rate. Additional overages: logs/metrics $0.50/GB beyond included.",
+          "source": {
+            "url": "https://sentry.io/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://sentry.io/security/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 80,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$80/month. Unlimited dashboards, metric monitors with anomaly detection, SAML/SCIM support, advanced quota management.",
+          "source": {
+            "url": "https://sentry.io/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing. Dedicated TAM, premium support, custom data retention, advanced compliance options.",
+          "source": {
+            "url": "https://sentry.io/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "signoz",
+      "name": "SigNoz",
+      "domain": "signoz.io",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "OpenTelemetry",
+        "AWS",
+        "Azure",
+        "Google Cloud",
+        "Kubernetes",
+        "Docker",
+        "Prometheus",
+        "Jaeger",
+        "Python",
+        "Java",
+        "Node.js",
+        "Go",
+        ".NET",
+        "Ruby",
+        "PHP"
+      ],
+      "provenance": "Official pricing page https://signoz.io/pricing/ fetched 2026-06-14 (two separate fetches). HIPAA compliance (SOC2 Type II + HIPAA) and BAA availability confirmed on pricing page: 'SOC2 Type II & HIPAA Compliant' with 'BAA Agreement' listed as an included feature for the Teams plan and above.",
+      "plans": [
+        {
+          "name": "Community (Self-Hosted)",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Open source, free to self-host. No managed support included. Full feature access; user manages own infrastructure.",
+          "source": {
+            "url": "https://signoz.io/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Teams (Cloud)",
+          "monthlyUsd": 49,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$49/month base includes $49 of usage credits (~163 GB logs/traces or 490M metric samples). Usage beyond credits: traces $0.30/GB, logs $0.30/GB, metrics $0.10/million samples. Unlimited team members. SOC2 Type II + HIPAA + BAA included. Startup program: $19/month for qualifying companies (<3 years old, <30 employees, <$6M raised).",
+          "source": {
+            "url": "https://signoz.io/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Starting at $4,000/month (custom). Dedicated SigNoz Cloud environment, bring-your-own-cloud option, or self-hosted with support contract. Volume discounts, annual contracts, dedicated support, professional services.",
+          "source": {
+            "url": "https://signoz.io/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "elastic-observability",
+      "name": "Elastic Observability",
+      "domain": "elastic.co",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "AWS",
+        "Azure",
+        "Google Cloud",
+        "Kubernetes",
+        "OpenTelemetry",
+        "Logstash",
+        "Beats",
+        "Elastic Agent",
+        "APM Server",
+        "Java",
+        "Python",
+        "Node.js",
+        ".NET",
+        "Go",
+        "Ruby",
+        "PHP",
+        "Prometheus",
+        "Jaeger"
+      ],
+      "provenance": "Elastic main pricing page https://www.elastic.co/pricing/ fetched 2026-06-14 — returned deployment model overview without specific tier prices. Serverless Observability pricing page https://www.elastic.co/pricing/serverless-observability fetched 2026-06-14 provided ingestion/retention rates. Elastic uses fully usage-based serverless pricing or resource-based hosted pricing; no flat self-serve tiers with fixed USD amounts. HIPAA status could not be confirmed from public pages fetched; set to null.",
+      "plans": [
+        {
+          "name": "Serverless Observability — Logs Essentials",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Usage-based, no fixed monthly floor. Ingest: as low as $0.07/GB. Retention: as low as $0.017/GB/month. Egress: 50 GB free then $0.05/GB. Prices effective November 1, 2025.",
+          "source": {
+            "url": "https://www.elastic.co/pricing/serverless-observability",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Serverless Observability — Complete",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Usage-based, no fixed monthly floor. Ingest: as low as $0.09/GB. Retention: as low as $0.019/GB/month. Egress: 50 GB free then $0.05/GB. Adds APM, profiling, synthetic monitoring, and full observability features beyond Logs Essentials. Prices effective November 1, 2025.",
+          "source": {
+            "url": "https://www.elastic.co/pricing/serverless-observability",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Hosted / Self-Managed",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Resource-based pricing for Elastic Cloud Hosted or license-based for self-managed deployments. Prices vary by instance size, region, and commitment. Contact sales or use Elastic's cloud pricing calculator.",
+          "source": {
+            "url": "https://www.elastic.co/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    }
+  ]
+}

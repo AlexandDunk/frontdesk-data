@@ -1,0 +1,376 @@
+{
+  "vertical": "fitness-apps",
+  "generatedAt": "2026-06-14",
+  "methodologyNotes": "Pricing fetched from official vendor pricing pages and iOS App Store listings (apps.apple.com/us) as the primary USD source, then independently verified against reputable comparison sources during adversarial review. The App Store listing is treated as an authoritative USD source because it is served in US dollars regardless of server geo-location. Several official sites (whoop.com, strava.com, fitbit.com, myfitnesspal.com) geo-detected the research server as EU and served EUR pricing; for those, USD figures were confirmed via independent comparison sources and/or App Store IAP listings. ADVERSARIAL-REVIEW CORRECTIONS (2026-06-14): (1) WHOOP USD prices, previously recorded as null due to EUR geo-block, were confirmed from a reputable comparison source and filled in (One $199/yr, Peak $239/yr, Life $359/yr; new members are annual-only, monthlyUsd shown as the annualized equivalent). (2) Fitbit Premium annual price corrected from a stale $79.99/yr to the current $99.99/yr (rises May 19 2026 alongside the Fitbit->Google Health rebrand; monthly unchanged at $9.99). (3) MyFitnessPal Premium monthlyUsd corrected $9.99->$19.99. (4) MyFitnessPal Premium+ monthlyUsd corrected $19.99->$24.99 and the fabricated $49.99/yr annual replaced with the confirmed $99.99/yr. (5) Future first-month introductory price corrected $50->$99. Apple Fitness+ ($9.99/$79.99), Peloton App One ($15.99 App Store IAP) and App+ ($28.99), and Strava ($11.99/mo, $79.99/yr) were re-verified and left unchanged. accessedAt = 2026-06-14 on all sources.",
+  "vendors": [
+    {
+      "slug": "peloton-app",
+      "name": "Peloton App",
+      "domain": "onepeloton.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Apple Health",
+        "Google Fit",
+        "Strava"
+      ],
+      "provenance": "App Store listing apps.apple.com/us/app/peloton-fitness-workout-app/id792750948 — official iOS IAP prices in USD. Official site onepeloton.com/membership rendered JS-only placeholder values and was not usable for pricing. Note: App One is $15.99/mo via Apple App Store IAP but $12.99/mo when purchased directly on web/Google Play; the App Store IAP figure is recorded here per methodology.",
+      "plans": [
+        {
+          "name": "App One",
+          "monthlyUsd": 15.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "Annual plan billed at $159/yr ($13.25/mo). Free tier (Peloton App One Free) also exists with limited access. Monthly rate $15.99 via Apple App Store IAP ($12.99/mo if purchased directly on web or Google Play). App One iOS price rose to $15.99 effective Oct 1, 2025.",
+          "source": {
+            "url": "https://apps.apple.com/us/app/peloton-fitness-workout-app/id792750948",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.onepeloton.com/membership",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "App+",
+          "monthlyUsd": 28.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "Annual plan billed at $289/yr ($24.08/mo). Full access to all equipment class types plus Peloton Strength+. Monthly rate $28.99 (rose to $28.99 effective Oct 1, 2025).",
+          "source": {
+            "url": "https://apps.apple.com/us/app/peloton-fitness-workout-app/id792750948",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.onepeloton.com/membership",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "apple-fitness-plus",
+      "name": "Apple Fitness+",
+      "domain": "apple.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Apple Watch",
+        "Apple TV",
+        "iPad",
+        "iPhone",
+        "Apple Health"
+      ],
+      "provenance": "Official page apple.com/apple-fitness-plus/ confirmed $9.99/mo and $79.99/yr. Re-verified via web search (multiple 2026 sources concur). Individual plan includes Family Sharing for up to 5 members at no extra cost.",
+      "plans": [
+        {
+          "name": "Individual",
+          "monthlyUsd": 9.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 33,
+          "billingModel": "flat",
+          "notes": "Annual plan billed at $79.99/yr ($6.67/mo). Monthly rate $9.99. Includes Family Sharing for up to 5 members. Requires Apple Watch for some metrics. 1-month free trial for new subscribers; 3 months free with eligible device purchase. Also bundled in Apple One Premier.",
+          "source": {
+            "url": "https://www.apple.com/apple-fitness-plus/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://apps.apple.com/us/app/fitness/id1208224953",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "fitbit-premium",
+      "name": "Fitbit Premium",
+      "domain": "fitbit.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Google Fit",
+        "MyFitnessPal",
+        "Strava",
+        "Calm"
+      ],
+      "provenance": "App Store listing apps.apple.com/us/app/fitbit-health-fitness/id462638897. Adversarial review (2026-06-14) found the previously recorded $79.99/yr annual price was stale: the annual subscription rises to $99.99/yr effective May 19, 2026, when the Fitbit app rebrands to Google Health (Premium becomes Google Health Premium). Monthly price unchanged at $9.99. Confirmed via Android Authority and gHacks (May 2026).",
+      "plans": [
+        {
+          "name": "Premium",
+          "monthlyUsd": 9.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "Annual plan billed at $99.99/yr ($8.33/mo) following a price increase from $79.99/yr effective May 19, 2026 (Fitbit app rebrands to Google Health; Premium becomes Google Health Premium). Monthly rate $9.99 (unchanged). Includes advanced sleep analysis, stress management scores, and guided wellness programs. Free-trial periods included with some Fitbit devices.",
+          "source": {
+            "url": "https://www.androidauthority.com/google-health-premium-price-inclusions-features-3664507/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://apps.apple.com/us/app/fitbit-health-fitness/id462638897",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "strava",
+      "name": "Strava",
+      "domain": "strava.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Garmin",
+        "Apple Watch",
+        "Wahoo",
+        "Whoop",
+        "Polar",
+        "Suunto",
+        "Fitbit",
+        "Apple Health",
+        "Google Fit"
+      ],
+      "provenance": "Official site strava.com/pricing returned EUR pricing only (EUR10.99/mo, EUR74.99/yr) due to geo-detection. US USD figures confirmed via App Store listing and multiple comparison sources (CheckThat.ai, Cyclingnews): individual subscriber $11.99/mo or $79.99/yr. One recent secondary source claims a reduction to $9.99/mo, but this is not corroborated by the official page or majority of sources, so the well-supported $11.99/mo is retained.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free tier includes activity recording, community features, safety features (Beacon), and basic route functionality. No time limit.",
+          "source": {
+            "url": "https://www.strava.com/subscribe",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Subscriber",
+          "monthlyUsd": 11.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 44,
+          "billingModel": "flat",
+          "notes": "Annual plan billed at $79.99/yr ($6.67/mo). Monthly rate $11.99 (US, confirmed by CheckThat.ai and Cyclingnews; a single recent source claims a drop to $9.99/mo but this is uncorroborated). Includes advanced training analytics, route planning, segment leaderboards, and heart rate analysis. 30-day free trial available.",
+          "source": {
+            "url": "https://apps.apple.com/us/app/strava-run-bike-hike/id426826309",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.strava.com/subscribe",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "whoop",
+      "name": "WHOOP",
+      "domain": "whoop.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Apple Health",
+        "Google Fit",
+        "Strava",
+        "TrainingPeaks",
+        "Oura"
+      ],
+      "provenance": "Official site whoop.com (including /us/en/membership/) geo-detected the research server as EU and returned EUR pricing exclusively. Adversarial review (2026-06-14) confirmed the US USD prices from a reputable comparison source (TrackerVS): WHOOP One $199/yr, WHOOP Peak $239/yr, WHOOP Life $359/yr. New members are billed annually only; monthly billing is available solely to existing members with a 12-month commitment. monthlyUsd is recorded as the annualized monthly equivalent for comparability.",
+      "plans": [
+        {
+          "name": "WHOOP One",
+          "monthlyUsd": 16.58,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Annual-only for new members: $199/yr (monthlyUsd shown as the $199/12 = $16.58 annualized equivalent). Entry-level tier. Includes WHOOP 5.0 hardware with wired charger. USD price confirmed via TrackerVS comparison source (official site geo-served EUR).",
+          "source": {
+            "url": "https://trackervs.com/pricing/whoop-pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.whoop.com/us/en/membership/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "WHOOP Peak",
+          "monthlyUsd": 19.92,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Annual-only for new members: $239/yr (monthlyUsd shown as the $239/12 = $19.92 annualized equivalent). Mid-tier. Includes WHOOP 5.0 hardware with wireless PowerPack charger. Advanced health and longevity insights. USD price confirmed via TrackerVS comparison source (official site geo-served EUR).",
+          "source": {
+            "url": "https://trackervs.com/pricing/whoop-pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.whoop.com/us/en/membership/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "WHOOP Life",
+          "monthlyUsd": 29.92,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Annual-only for new members: $359/yr (monthlyUsd shown as the $359/12 = $29.92 annualized equivalent). Top-tier. Includes WHOOP MG hardware (medical-grade biosensors, ECG/blood-pressure) with wireless PowerPack. USD price confirmed via TrackerVS comparison source (official site geo-served EUR).",
+          "source": {
+            "url": "https://trackervs.com/pricing/whoop-pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.whoop.com/us/en/membership/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "future",
+      "name": "Future",
+      "domain": "future.co",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Apple Watch",
+        "Garmin",
+        "Apple Health"
+      ],
+      "provenance": "Official site future.co and App Store (Future Pro) confirm $199/mo for the single Future Pro plan. Introductory first month is $99 (occasional promos as low as $19). No annual billing option published.",
+      "plans": [
+        {
+          "name": "Future Pro",
+          "monthlyUsd": 199,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "First month billed at $99 (introductory; promos occasionally as low as $19), then $199/mo. Includes a dedicated human coach who programs and adjusts workouts weekly. Requires an Apple Watch. No annual billing option.",
+          "source": {
+            "url": "https://www.future.co/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://apps.apple.com/us/app/future-pro-personal-training/id1288178982",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "myfitnesspal",
+      "name": "MyFitnessPal",
+      "domain": "myfitnesspal.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Fitbit",
+        "Garmin",
+        "Apple Health",
+        "Google Fit",
+        "Jawbone",
+        "Nike+",
+        "Under Armour Record",
+        "MapMyFitness",
+        "Strava",
+        "Withings"
+      ],
+      "provenance": "App Store listing apps.apple.com/us/app/myfitnesspal-calorie-counter/id341232718; official site myfitnesspal.com geo-served EUR. Adversarial review (2026-06-14) corrected the monthly prices, which were understated: Premium is $19.99/mo (was incorrectly $9.99) and Premium+ is $24.99/mo (was incorrectly $19.99). The previously listed Premium+ annual of $49.99/yr was unsupported and replaced with the confirmed $99.99/yr. Confirmed via FitBudd and PulseSignal comparison sources.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free tier includes calorie and macro tracking, food database access, exercise logging, and basic reporting.",
+          "source": {
+            "url": "https://www.myfitnesspal.com/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": 19.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 67,
+          "billingModel": "flat",
+          "notes": "Annual plan billed at $79.99/yr ($6.67/mo). Monthly rate $19.99 (corrected from a previously incorrect $9.99). Includes intermittent fasting tracker, custom macro goals, net carbs tracking, food analysis, and ad-free experience. 7-day free trial. Confirmed via FitBudd and PulseSignal (2026).",
+          "source": {
+            "url": "https://www.fitbudd.com/post/myfitnesspal-app-cost",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://getpulsesignal.com/pricing/myfitnesspal",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Premium+",
+          "monthlyUsd": 24.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 67,
+          "billingModel": "flat",
+          "notes": "Annual plan billed at $99.99/yr ($8.34/mo). Monthly rate $24.99 (corrected from a previously incorrect $19.99). Adds the Meal Planner and advanced nutrition analysis on top of Premium. The previously listed $49.99/yr annual was unsupported and corrected to $99.99/yr. Confirmed via FitBudd and PulseSignal (2026).",
+          "source": {
+            "url": "https://www.fitbudd.com/post/myfitnesspal-app-cost",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://getpulsesignal.com/pricing/myfitnesspal",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,704 @@
+{
+  "vertical": "error-monitoring",
+  "generatedAt": "2026-06-14",
+  "methodologyNotes": "Prices sourced by fetching each vendor's official /pricing page directly on 2026-06-14. Rollbar (rollbar.com/pricing) and Bugsnag (bugsnag.com/pricing) render prices exclusively via client-side JavaScript; no dollar amounts appeared in the fetched HTML — those vendors' paid plan prices are recorded as null with aggregator fall-back notes. Raygun prices fetched from raygun.com/pricing and confirmed 33% annual discount stated on-page. Sentry prices confirmed on sentry.io/pricing and corroborated by getapp.com. Honeybadger prices confirmed on honeybadger.io/plans and corroborated by sourceforge.net. Airbrake prices confirmed on airbrake.io/pricing and cross-checked against slashdot.org listing. TrackJS prices confirmed on trackjs.com/pricing. LogRocket included as a widely-used adjacent vendor with public pricing on logrocket.com/pricing. All telephony fields (minutesIncluded, callsIncluded, overagePerMin, overagePerCall) are null — this is a non-telephony vertical.",
+  "vendors": [
+    {
+      "slug": "sentry",
+      "name": "Sentry",
+      "domain": "sentry.io",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "GitHub",
+        "GitLab",
+        "Jira",
+        "Slack",
+        "PagerDuty",
+        "Vercel",
+        "Linear",
+        "Azure DevOps"
+      ],
+      "provenance": "Prices fetched directly from https://sentry.io/pricing/ on 2026-06-14. HIPAA and BAA availability confirmed on the same page for Business and Enterprise tiers. Corroborated by getapp.com listing showing identical Team $26/mo and Business $80/mo figures.",
+      "plans": [
+        {
+          "name": "Developer",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "1 user, 5,000 errors/month, 10 custom dashboards. Free forever.",
+          "source": {
+            "url": "https://sentry.io/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/it-management-software/a/sentry/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Team",
+          "monthlyUsd": 26,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Unlimited users, 50,000 errors/month, third-party integrations, 20 dashboards. Billed annually; month-to-month rate not separately published on pricing page.",
+          "source": {
+            "url": "https://sentry.io/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/it-management-software/a/sentry/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 80,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Unlimited users, 50,000 errors/month, anomaly detection, advanced quota management, SAML+SCIM, HIPAA security and BAA included.",
+          "source": {
+            "url": "https://sentry.io/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/it-management-software/a/sentry/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Contact sales. Includes dedicated support, technical account manager, data locality options, single-tenant deployment.",
+          "source": {
+            "url": "https://sentry.io/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "rollbar",
+      "name": "Rollbar",
+      "domain": "rollbar.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "GitHub",
+        "GitLab",
+        "Jira",
+        "Slack",
+        "PagerDuty",
+        "Bitbucket",
+        "Trello",
+        "Asana"
+      ],
+      "provenance": "Fetched https://rollbar.com/pricing/ on 2026-06-14. Page renders tier names (Free, Essentials, Advanced, Enterprise), credit allocations, and feature lists, but all USD dollar amounts for Essentials and Advanced are rendered exclusively via client-side JavaScript and did not appear in the fetched HTML. Free tier ($0) and Enterprise (custom) are confirmed. Paid plan prices recorded as null. sourceforge.net lists a starting price of $19/mo for Rollbar but this may be outdated given the credit-based model change. HIPAA BAA confirmed on the pricing page (standard BAA included; custom BAA for Enterprise).",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "5,000 occurrences/month, 1,000 replays/month, 30-day data retention. Unlimited users.",
+          "source": {
+            "url": "https://rollbar.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Essentials",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "10K–50M occurrences/month, 4,000 credits/month included, up to 90-day data retention. USD price not rendered on fetched page — JS-gated pricing.",
+          "source": {
+            "url": "https://rollbar.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Advanced",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "10K–50M occurrences/month, 8,000 credits/month included, up to 180-day data retention, SCIM provisioning. USD price not rendered on fetched page — JS-gated pricing.",
+          "source": {
+            "url": "https://rollbar.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Minimum $4M annual plan per page content. 80M+ events, custom data retention, direct Slack support, priority SLAs.",
+          "source": {
+            "url": "https://rollbar.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "bugsnag",
+      "name": "Bugsnag",
+      "domain": "bugsnag.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "GitHub",
+        "GitLab",
+        "Jira",
+        "Slack",
+        "PagerDuty",
+        "Bitbucket"
+      ],
+      "provenance": "Fetched https://www.bugsnag.com/pricing/ on 2026-06-14. Page renders plan names (Free, Select, Preferred, Enterprise) and feature lists but all USD prices for Select and Preferred display '$0 /month' as a placeholder — actual pricing is JS-gated and not in fetched HTML. Alternativeto.net lists '$27–$59/month' range; sourceforge.net lists '$59/month' starting price billed annually; slashdot.org lists '$59/month'. These aggregators are likely outdated and do not agree on current structure. All paid plan prices recorded as null until a JS-rendered fetch is possible. On-premises PHI/PCI compliance mentioned but no explicit HIPAA BAA statement found.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "1 user, 7,500 events and 1M spans/month, 7-day data retention, 30+ integrations.",
+          "source": {
+            "url": "https://www.bugsnag.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Select",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Unlimited users, 50K–3M events/month (tiered), 60-day data retention. USD price JS-gated; not visible in fetched HTML. Aggregators list starting price around $59/month billed annually but figures are unverified.",
+          "source": {
+            "url": "https://www.bugsnag.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://alternativeto.net/software/bugsnag/about/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Preferred",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Unlimited users, 100K–3M events/month, dedicated Customer Success Manager, SSO, feature flags. USD price JS-gated.",
+          "source": {
+            "url": "https://www.bugsnag.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Contact sales. Custom events/spans, sensitive data management, on-premises option, enhanced support.",
+          "source": {
+            "url": "https://www.bugsnag.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "honeybadger",
+      "name": "Honeybadger",
+      "domain": "honeybadger.io",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "GitHub",
+        "GitLab",
+        "Jira",
+        "Slack",
+        "PagerDuty",
+        "OpsGenie",
+        "Heroku"
+      ],
+      "provenance": "Prices fetched directly from https://www.honeybadger.io/plans/ on 2026-06-14. HIPAA security and BAA confirmed on the same page for the Business plan. Annual prices explicitly listed: Team $286/yr (vs $312/yr monthly), Business $880/yr (vs $960/yr monthly). Corroborated by sourceforge.net listing starting price at $26/month.",
+      "plans": [
+        {
+          "name": "Developer",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "1 user, 5,000 errors/month, 50 MB/day logging, 1 uptime monitor, 1 status page. Free forever.",
+          "source": {
+            "url": "https://www.honeybadger.io/plans/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://sourceforge.net/software/product/Honeybadger/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Team",
+          "monthlyUsd": 26,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 8,
+          "billingModel": "flat",
+          "notes": "Unlimited users, 50,000 errors/month, 100 MB/day logging, 5 uptime monitors, 1 status page. Monthly: $26/mo. Annual: $286/yr ($23.83/mo effective, ~8% off). Most popular tier.",
+          "source": {
+            "url": "https://www.honeybadger.io/plans/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://sourceforge.net/software/product/Honeybadger/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 80,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 8,
+          "billingModel": "flat",
+          "notes": "Unlimited users, 50,000 errors/month, 100 MB/day logging, HIPAA security and BAA included, SOC2. Monthly: $80/mo. Annual: $880/yr ($73.33/mo effective, ~8% off).",
+          "source": {
+            "url": "https://www.honeybadger.io/plans/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://sourceforge.net/software/product/Honeybadger/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Contact sales for high-volume or custom requirements.",
+          "source": {
+            "url": "https://www.honeybadger.io/plans/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "raygun",
+      "name": "Raygun",
+      "domain": "raygun.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "GitHub",
+        "GitLab",
+        "Jira",
+        "Slack",
+        "PagerDuty",
+        "HipChat",
+        "Bitbucket",
+        "Trello"
+      ],
+      "provenance": "Prices fetched directly from https://raygun.com/pricing on 2026-06-14. Crash Reporting (error monitoring) plan prices confirmed from the same page. Annual discount explicitly stated as 33% on the page. BAA mentioned only for Enterprise ('custom BAA and security review'). No explicit HIPAA statement. Corroborated by getapp.com listing starting price at $40/feature/month (annual rate for Basic).",
+      "plans": [
+        {
+          "name": "Crash Reporting Basic",
+          "monthlyUsd": 40,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 33,
+          "billingModel": "flat",
+          "notes": "100,000 errors/month. Monthly billing: $60/mo; annual billing: $40/mo (33% discount). Unlimited apps and members. Overage: $0.001/error. Includes AI Error Resolution, spike protection.",
+          "source": {
+            "url": "https://raygun.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/it-management-software/a/raygun/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Crash Reporting Team",
+          "monthlyUsd": 80,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 33,
+          "billingModel": "flat",
+          "notes": "200,000 errors/month. Monthly billing: $120/mo; annual billing: $80/mo (33% discount). Unlimited apps and members. Third-party integrations, unlimited dashboards.",
+          "source": {
+            "url": "https://raygun.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Crash Reporting Business",
+          "monthlyUsd": 400,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 33,
+          "billingModel": "flat",
+          "notes": "1,000,000 errors/month. Monthly billing: $600/mo; annual billing: $400/mo (33% discount). SAML SSO, dedicated account manager, 5 custom reports.",
+          "source": {
+            "url": "https://raygun.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Crash Reporting Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom volume, custom BAA and security review, unlimited reports, custom data retention, invoiced billing.",
+          "source": {
+            "url": "https://raygun.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "airbrake",
+      "name": "Airbrake",
+      "domain": "airbrake.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "GitHub",
+        "GitLab",
+        "Jira",
+        "Slack",
+        "PagerDuty",
+        "Bitbucket",
+        "HipChat"
+      ],
+      "provenance": "Prices fetched directly from https://airbrake.io/pricing on 2026-06-14. Five error-monitoring tiers confirmed with monthly prices. 10% annual discount stated on page. No HIPAA or BAA mention found. Corroborated by slashdot.org listing starting at $49/month (likely references annual rate of $17/mo × 12 = $204/yr; the $49 figure does not match current page exactly — official page used as primary).",
+      "plans": [
+        {
+          "name": "Tier 1",
+          "monthlyUsd": 19,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "1 user, 1 team, unlimited projects, 25,000 errors/month, 30-day retention. Annual rate: ~$17/mo. Month-to-month: $19/mo.",
+          "source": {
+            "url": "https://airbrake.io/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://slashdot.org/software/p/Airbrake/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Essential",
+          "monthlyUsd": 59,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "Unlimited users, 3 teams, unlimited projects, 100,000 errors/month. Annual rate: ~$53/mo. Month-to-month: $59/mo.",
+          "source": {
+            "url": "https://airbrake.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Startup",
+          "monthlyUsd": 129,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "Unlimited users, unlimited teams, unlimited projects, 300,000 errors/month. Annual rate: ~$116/mo. Month-to-month: $129/mo.",
+          "source": {
+            "url": "https://airbrake.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Growth",
+          "monthlyUsd": 299,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "Unlimited users and projects, 1,000,000 errors/month. Annual rate: ~$269/mo.",
+          "source": {
+            "url": "https://airbrake.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 799,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "Unlimited users and projects, 5,000,000 errors/month. Annual rate: ~$719/mo.",
+          "source": {
+            "url": "https://airbrake.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "trackjs",
+      "name": "TrackJS",
+      "domain": "trackjs.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "GitHub",
+        "GitLab",
+        "Jira",
+        "Slack",
+        "PagerDuty",
+        "Sentry"
+      ],
+      "provenance": "Prices fetched directly from https://www.trackjs.com/pricing/ on 2026-06-14. Three self-serve tiers confirmed with monthly and annual prices. Annual discount is equivalent to 'one month free' (~8.3%). Enterprise tier is quote-only. No HIPAA/BAA mention on pricing page. Corroborated by sourceforge.net listing starting price at $49/month.",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": 49,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 8,
+          "billingModel": "flat",
+          "notes": "1 application, 100K page views/month, 10-day data retention, 3 alert channels. Monthly: $49/mo. Annual: $45/mo (one month free, ~8% off).",
+          "source": {
+            "url": "https://www.trackjs.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://sourceforge.net/software/product/TrackJS/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Professional",
+          "monthlyUsd": 99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 8,
+          "billingModel": "flat",
+          "notes": "5 applications, 1M page views/month, 15-day data retention, unlimited alert channels. Monthly: $99/mo. Annual: $91/mo (one month free, ~8% off).",
+          "source": {
+            "url": "https://www.trackjs.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 199,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 8,
+          "billingModel": "flat",
+          "notes": "10+ applications, 5–100M page views/month, 30-day data retention, unlimited alert channels. Monthly: $199/mo. Annual: $183/mo (one month free, ~8% off).",
+          "source": {
+            "url": "https://www.trackjs.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Customized contracts, compliance, security, billing, and volume. Contact sales.",
+          "source": {
+            "url": "https://www.trackjs.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "logrocket",
+      "name": "LogRocket",
+      "domain": "logrocket.com",
+      "hipaa": null,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "GitHub",
+        "GitLab",
+        "Jira",
+        "Slack",
+        "Datadog",
+        "Intercom",
+        "Segment",
+        "Amplitude"
+      ],
+      "provenance": "Prices fetched directly from https://logrocket.com/pricing/ on 2026-06-14. Free, Core, and Professional tiers have published prices. Enterprise is quote-only. BAA availability confirmed for Enterprise tier on same page. HIPAA not explicitly mentioned. Annual commitment required for Professional tier; month-to-month rate not separately published for Professional.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "1,000 sessions/month, 3 seats, 1-month data retention. Session replay, console logs, stack traces.",
+          "source": {
+            "url": "https://logrocket.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Core",
+          "monthlyUsd": 69,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Starting at $69/mo for 10,000 sessions/month (5 seats); $139/mo for 25,000 sessions. 14-day free trial. Month-to-month commitment.",
+          "source": {
+            "url": "https://logrocket.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Professional",
+          "monthlyUsd": 295,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Custom session volume, custom seats, AI Galileo, product analytics, MCP access. Annual commitment required. Free trial included.",
+          "source": {
+            "url": "https://logrocket.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "1M+ sessions/month, unlimited seats, self-hosted option, custom BAA/legal/security. Annual commitment, free pilot.",
+          "source": {
+            "url": "https://logrocket.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    }
+  ]
+}

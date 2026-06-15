@@ -1,0 +1,540 @@
+{
+  "vertical": "meal-kit-delivery",
+  "generatedAt": "2026-06-13",
+  "methodologyNotes": "Published self-serve pricing was collected for each provider on the accessed date; because the official providers' plan pages are JavaScript-rendered or returned HTTP 403 to fetch, prices were taken from dedicated 2026 pricing-guide and hands-on-review sources that quote the providers' own published rates, with a corroborating second source where available. Meal kits do not sell flat monthly subscription tiers, so each 'plan' is a published per-serving (or, for prepared-meal services Factor, per-meal) rate keyed to box size; that figure is recorded in monthlyUsd with a per-serving/per-meal note rather than a per-month total, billingModel is flat (a flat published rate per serving/meal, not per seat), and the flat weekly shipping fee is described in notes. minutesIncluded/callsIncluded/overage and HIPAA/BAA are not applicable to consumer meal delivery and are recorded null.",
+  "vendors": [
+    {
+      "slug": "hellofresh",
+      "name": "HelloFresh",
+      "domain": "hellofresh.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "Official hellofresh.com plan selector is JS-rendered and not fetchable; US 2026 per-serving rates taken from NerdWallet's HelloFresh cost guide and corroborated by SeniorLiving.org's 2026 HelloFresh pricing review.",
+      "plans": [
+        {
+          "name": "2 meals/week for 2 (smallest box)",
+          "monthlyUsd": 12.49,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$12.49 per serving (not per month) — the highest per-serving rate, applies to the smallest 2-meals-for-2-people box ($49.96 base before shipping/tax). A weekly shipping fee plus sales tax in some states is added.",
+          "source": {
+            "url": "https://www.nerdwallet.com/finance/learn/how-much-does-hello-fresh-cost",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://www.seniorliving.org/internet/food-delivery/hellofresh/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "3+ meals/week (volume rate)",
+          "monthlyUsd": 10.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$10.99 per serving (not per month) — the volume rate that applies once you order more than two meals per week; e.g. 6 meals for 6 people totals $395.64 before shipping/tax. Weekly shipping fee added.",
+          "source": {
+            "url": "https://www.nerdwallet.com/finance/learn/how-much-does-hello-fresh-cost",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://www.seniorliving.org/internet/food-delivery/hellofresh/",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "blue-apron",
+      "name": "Blue Apron",
+      "domain": "blueapron.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "Official support.blueapron.com cost article returned HTTP 403 to fetch; US 2026 per-serving rates by box size taken from TrueBlueApron's Blue Apron pricing guide quoting Blue Apron's published structure.",
+      "plans": [
+        {
+          "name": "4 servings total/week",
+          "monthlyUsd": 11.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$11.99 per serving (not per month); 4 servings total = $47.96 base box. Flat $10.99 weekly shipping fee added to all orders.",
+          "source": {
+            "url": "https://trueblueapron.com/blue-apron/pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "8 servings total/week",
+          "monthlyUsd": 9.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$9.99 per serving (not per month); 8 servings total = $79.92 base box. Flat $10.99 weekly shipping fee.",
+          "source": {
+            "url": "https://trueblueapron.com/blue-apron/pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "12 servings total/week",
+          "monthlyUsd": 9.49,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$9.49 per serving (not per month); 12 servings total = $113.88 base box. Flat $10.99 weekly shipping fee.",
+          "source": {
+            "url": "https://trueblueapron.com/blue-apron/pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "16 servings total/week (largest)",
+          "monthlyUsd": 8.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$8.99 per serving (not per month) — the lowest per-serving rate; 16 servings total = $143.84 base box. Flat $10.99 weekly shipping fee.",
+          "source": {
+            "url": "https://trueblueapron.com/blue-apron/pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "home-chef",
+      "name": "Home Chef",
+      "domain": "homechef.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "Official support.homechef.com cost article returned HTTP 403 to fetch; US 2026 starting per-serving rate, plan minimums, and shipping fee taken from ThePricer's Home Chef cost guide (citing Fortune's review) and corroborated by web-search summaries of Home Chef's plan minimums.",
+      "plans": [
+        {
+          "name": "Home Chef Plan (standard, per serving)",
+          "monthlyUsd": 9.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "From $9.99 per serving (not per month) for standard recipes; per-serving cost varies by order size and menu. $50.95 minimum weekly order value; flat $10.99 shipping per box. Premium 'Culinary Collection' recipes carry per-serving upcharges.",
+          "source": {
+            "url": "https://www.thepricer.org/how-much-does-home-chef-cost/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Family Plan (4-serving recipes)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "4-serving family recipes; sources do not publish a single fixed per-serving rate for this plan (figures vary by recipe and order size), so price is null. Practical floor is the $82.91-$90.91 minimum weekly order value; flat $10.99 shipping per box.",
+          "source": {
+            "url": "https://www.thepricer.org/how-much-does-home-chef-cost/",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "factor",
+      "name": "Factor",
+      "domain": "factormeals.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "Official factormeals.com plan selector is JS-rendered and not fetchable; US 2026 per-meal rates by weekly plan size taken from PrettySweet's Factor cost guide and corroborated by MealFan's Feb-2026 hands-on Factor review (which lists $11.79/$11.59 for the 12/14-meal tiers vs PrettySweet's $11.99/$11.49). Factor sells fully-prepared ready-to-eat single-serving meals, so prices are per meal.",
+      "plans": [
+        {
+          "name": "6 meals/week",
+          "monthlyUsd": 13.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$13.99 per meal (not per month) — highest per-meal rate, smallest plan. Shipping $10.99 first box, then $13.99 per box.",
+          "source": {
+            "url": "https://prettysweet.com/factor-cost/",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://mealfan.com/reviews/factor/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "8 meals/week",
+          "monthlyUsd": 12.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$12.99 per meal (not per month). Shipping $10.99 first box, then $13.99 per box.",
+          "source": {
+            "url": "https://prettysweet.com/factor-cost/",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://mealfan.com/reviews/factor/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "10 meals/week",
+          "monthlyUsd": 12.49,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$12.49 per meal (not per month). Shipping $10.99 first box, then $13.99 per box.",
+          "source": {
+            "url": "https://prettysweet.com/factor-cost/",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://mealfan.com/reviews/factor/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "12 meals/week",
+          "monthlyUsd": 11.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$11.99 per meal (not per month) per PrettySweet; MealFan's Feb-2026 review lists $11.79 for this tier. Shipping $10.99 first box, then $13.99 per box.",
+          "source": {
+            "url": "https://prettysweet.com/factor-cost/",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://mealfan.com/reviews/factor/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "14 meals/week",
+          "monthlyUsd": 11.49,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$11.49 per meal (not per month) per PrettySweet; MealFan's Feb-2026 review lists $11.59 for this tier. Shipping $10.99 first box, then $13.99 per box.",
+          "source": {
+            "url": "https://prettysweet.com/factor-cost/",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://mealfan.com/reviews/factor/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "18 meals/week (largest)",
+          "monthlyUsd": 11.49,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$11.49 per meal (not per month) — lowest per-meal rate; 18 meals = $224.82 before shipping/promos. Shipping $10.99 first box, then $13.99 per box.",
+          "source": {
+            "url": "https://prettysweet.com/factor-cost/",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://mealfan.com/reviews/factor/",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "green-chef",
+      "name": "Green Chef",
+      "domain": "greenchef.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "Official greenchef.com plan selector is JS-rendered and not fetchable; US 2026 per-serving rates by plan taken from MealFan's 2026 Green Chef review pricing table. Green Chef is the first USDA-certified-organic meal kit.",
+      "plans": [
+        {
+          "name": "2 people / 2 meals per week",
+          "monthlyUsd": 13.49,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$13.49 per serving (not per month) — highest rate, smallest 2-person plan. Flat $10.99 shipping per box.",
+          "source": {
+            "url": "https://mealfan.com/reviews/green-chef/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "2 people / 3 meals per week",
+          "monthlyUsd": 12.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$12.99 per serving (not per month). Flat $10.99 shipping per box.",
+          "source": {
+            "url": "https://mealfan.com/reviews/green-chef/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "4 people / 2 meals per week",
+          "monthlyUsd": 12.49,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$12.49 per serving (not per month). Flat $10.99 shipping per box.",
+          "source": {
+            "url": "https://mealfan.com/reviews/green-chef/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "4 people / 3 meals per week",
+          "monthlyUsd": 11.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$11.99 per serving (not per month). Flat $10.99 shipping per box.",
+          "source": {
+            "url": "https://mealfan.com/reviews/green-chef/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "4 people / 4 meals per week (largest)",
+          "monthlyUsd": 11.49,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$11.49 per serving (not per month) — lowest rate, largest 4-person plan. Flat $10.99 shipping per box.",
+          "source": {
+            "url": "https://mealfan.com/reviews/green-chef/",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "everyplate",
+      "name": "EveryPlate",
+      "domain": "everyplate.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "Official everyplate.com/plans selector renders only $0 placeholders to fetch; US 2026 per-serving rates taken from Yahoo Health's 2026 EveryPlate review (corroborated by multiple 2026 budget-meal-kit guides). EveryPlate is positioned as the cheapest mainstream meal kit.",
+      "plans": [
+        {
+          "name": "Standard (any box size, 2/4/6 servings)",
+          "monthlyUsd": 6.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$6.99 per serving (not per month) regardless of box size for 2, 4, or 6 servings per recipe; plan types include Smart & Fit, Meat & Veggie, Quick & Easy, Family Faves, Veggie. Flat $10.99 shipping per box.",
+          "source": {
+            "url": "https://health.yahoo.com/wellness/nutrition/meal-kits/review/every-plate-review-195810143.html",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Max box (5 recipes x 6 servings)",
+          "monthlyUsd": 5.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$5.99 per serving (not per month) — the only rate below the $6.99 standard, available when ordering 5 recipes per week at 6 servings each. Flat $10.99 shipping per box.",
+          "source": {
+            "url": "https://health.yahoo.com/wellness/nutrition/meal-kits/review/every-plate-review-195810143.html",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "marley-spoon",
+      "name": "Marley Spoon",
+      "domain": "marleyspoon.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "Official marleyspoon.com plan selector is JS-rendered and not fetchable; US 2026 starting per-serving rates by household size taken from Omellody's 2026 Marley Spoon review. Per-meal-count breakdown is not published by the source, so only the two starting rates are recorded.",
+      "plans": [
+        {
+          "name": "2-person plan (starting)",
+          "monthlyUsd": 12.49,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Starting at $12.49 per serving (not per month) for the 2-person plan; rate drops with more meals/week. Flat $10.99 shipping per box.",
+          "source": {
+            "url": "https://omellody.com/meal-delivery/marley-spoon/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "4-person plan (starting)",
+          "monthlyUsd": 9.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Starting at $9.99 per serving (not per month) for the 4-person plan — the lowest published Marley Spoon rate. Flat $10.99 shipping per box.",
+          "source": {
+            "url": "https://omellody.com/meal-delivery/marley-spoon/",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "dinnerly",
+      "name": "Dinnerly",
+      "domain": "dinnerly.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "Official dinnerly.com plan selector is JS-rendered and not fetchable; US 2026 per-serving rates by plan taken from MealFan's 2026 Dinnerly review pricing table. Dinnerly (Marley Spoon's budget brand) is among the cheapest meal kits.",
+      "plans": [
+        {
+          "name": "2 people / 3 meals per week",
+          "monthlyUsd": 5.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$5.99 per serving (not per month) — highest standard rate, smallest plan. $8.99 shipping per box.",
+          "source": {
+            "url": "https://mealfan.com/reviews/dinnerly/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "2 people / 4 meals per week",
+          "monthlyUsd": 5.49,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$5.49 per serving (not per month). $8.99 shipping per box.",
+          "source": {
+            "url": "https://mealfan.com/reviews/dinnerly/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "2 people / 5 meals per week",
+          "monthlyUsd": 5.09,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$5.09 per serving (not per month). $8.99 shipping per box.",
+          "source": {
+            "url": "https://mealfan.com/reviews/dinnerly/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "4 people / 5 meals per week (largest)",
+          "monthlyUsd": 4.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$4.99 per serving (not per month) — lowest standard rate, largest 4-person/5-meal plan. Saver dishes run $3.99-$4.69/serving and PremiYUM premium dishes $7-9/serving. $8.99 shipping per box.",
+          "source": {
+            "url": "https://mealfan.com/reviews/dinnerly/",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,713 @@
+{
+  "vertical": "pos-systems",
+  "generatedAt": "2026-06-14",
+  "methodologyNotes": "Published self-serve USD pricing was collected from each vendor's official pricing page and/or reputable 2025-2026 review sources where the official page returned 403, JS-only content, or non-USD geolocated prices. Toast's official pricing page returned HTTP 403; pricing confirmed via NerdWallet (Jan 2026) and MerchantMaverick (Jan 2026). Clover's official website rendered JS-only with no pricing content; pricing confirmed via NerdWallet (updated May 2026) and MerchantMaverick (Dec 2025). Shopify's pricing page geolocated to EUR; USD pricing confirmed via NerdWallet (Feb 2026) corroborated by the NerdWallet Shopify POS review (Feb 2026). Lightspeed Retail pricing obtained from the official lightspeedhq.com/pos/retail/pricing page (annual rates) cross-referenced with MerchantMaverick (Dec 2025) for monthly equivalents. Lightspeed Restaurant pricing from the official restaurant pricing page corroborated by MerchantMaverick (Dec 2025). Where a vendor publishes only annual billing, the monthly equivalent (annual total / 12) is recorded in monthlyUsd with the month-to-month rate in notes. Quote-only tiers have monthlyUsd null. minutesIncluded, callsIncluded, overagePerMin, and overagePerCall are null on every plan as this is a non-telephony vertical.",
+  "vendors": [
+    {
+      "slug": "square-pos",
+      "name": "Square POS",
+      "domain": "squareup.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "QuickBooks",
+        "WooCommerce",
+        "Wix",
+        "BigCommerce",
+        "Mailchimp",
+        "Xero",
+        "DoorDash",
+        "Grubhub"
+      ],
+      "provenance": "https://squareup.com/us/en/point-of-sale/software/pricing (official page; rendered with limited content, plan names and structure confirmed). Prices confirmed via NerdWallet review updated 2026-02-10.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "No monthly fee. Includes POS app, payments, and free online store. In-person processing at 2.6% + $0.15; online at 3.3% + $0.30. No long-term contracts or termination fees. Free magstripe card reader included on signup.",
+          "source": {
+            "url": "https://squareup.com/us/en/point-of-sale/software/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.nerdwallet.com/article/small-business/square-pos-review",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Plus",
+          "monthlyUsd": 49,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$49/month per location. In-person processing at 2.5% + $0.15; online at 2.9% + $0.30. Adds advanced reporting, item variants, and enhanced inventory tools. Free trial available.",
+          "source": {
+            "url": "https://squareup.com/us/en/point-of-sale/software/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.nerdwallet.com/article/small-business/square-pos-review",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": 149,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$149/month per location. In-person processing at 2.4% + $0.15; online at 2.9% + $0.30. Adds lowest processing rates, dedicated customer success, and advanced inventory. Free trial available.",
+          "source": {
+            "url": "https://squareup.com/us/en/point-of-sale/software/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.merchantmaverick.com/reviews/square-pos/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pro (Custom)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only. Available to businesses processing over $250,000/year. Includes custom processing rates, onboarding support, and dedicated account management.",
+          "source": {
+            "url": "https://squareup.com/us/en/point-of-sale/software/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "toast-pos",
+      "name": "Toast POS",
+      "domain": "pos.toasttab.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "QuickBooks",
+        "Restaurant365",
+        "7shifts",
+        "Compeat",
+        "MarketMan",
+        "OpenTable",
+        "Grubhub",
+        "DoorDash"
+      ],
+      "provenance": "Toast official pricing page (pos.toasttab.com/pricing) returned HTTP 403 on fetch. Pricing sourced from NerdWallet review (accessed 2026-06-14, data noted as current as of January 13, 2026) and corroborated by MerchantMaverick review (January 9, 2026).",
+      "plans": [
+        {
+          "name": "Quick Start Bundle",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free for restaurants with up to two POS terminals. Pay-as-you-go processing at 3.09%–3.69% + $0.15 per transaction. Hardware can be obtained at $0 upfront in exchange for higher processing rates (e.g., Handheld Starter Kit $449.10 or $0 with PAYG rates). Two-year contract required; early termination fees apply.",
+          "source": {
+            "url": "https://www.nerdwallet.com/article/small-business/toast-pos-review",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.merchantmaverick.com/reviews/toast-pos/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Point of Sale (Core)",
+          "monthlyUsd": 69,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$69/month. Card-present processing at 2.49% + $0.15 (with hardware prepaid). Includes core restaurant POS features. Hardware costs apply separately or subsidized via higher processing rates. Two-year contract; early termination fees apply.",
+          "source": {
+            "url": "https://www.nerdwallet.com/article/small-business/toast-pos-review",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.merchantmaverick.com/reviews/toast-pos/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Custom",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only for larger or multi-location restaurants. Add-on bundles (Toast Now $75/mo, Toast Now Plus $100/mo, Toast Now Premium $175/mo) also available but most individual add-on prices not published online.",
+          "source": {
+            "url": "https://www.nerdwallet.com/article/small-business/toast-pos-review",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.merchantmaverick.com/reviews/toast-pos/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "clover",
+      "name": "Clover",
+      "domain": "clover.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "QuickBooks",
+        "Xero",
+        "WooCommerce",
+        "Mailchimp",
+        "Constant Contact",
+        "Homebase",
+        "Deputy"
+      ],
+      "provenance": "Clover official site (clover.com/us/en/pricing) renders JS-only with no pricing content. Pricing sourced from NerdWallet review updated May 20, 2026 and corroborated by MerchantMaverick review dated December 2, 2025. Plans vary by business type; prices below reflect the primary retail and restaurant verticals.",
+      "plans": [
+        {
+          "name": "Clover Go Starter",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Mobile payments only, no full POS hardware required. In-person processing at 2.6% + $0.10. Card reader starts at $199.",
+          "source": {
+            "url": "https://www.nerdwallet.com/article/small-business/clover-review",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.merchantmaverick.com/reviews/clover-pos/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Clover Go Essentials",
+          "monthlyUsd": 29.95,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$29.95/month. Enhanced mobile POS features. Hardware: countertop reader from $349. In-person processing at 2.3%–2.6% + $0.10.",
+          "source": {
+            "url": "https://www.nerdwallet.com/article/small-business/clover-review",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.merchantmaverick.com/reviews/clover-pos/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Retail Standard",
+          "monthlyUsd": 84.95,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$84.95/month for retail businesses. Includes inventory management, returns, and exchanges. Hardware: Station Solo $1,799, Station Duo $1,899, Mini POS $849. Standard contract is 3 years; shorter terms available through some resellers. In-person processing at 2.3%–2.6% + $0.10.",
+          "source": {
+            "url": "https://www.nerdwallet.com/article/small-business/clover-review",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.merchantmaverick.com/reviews/clover-pos/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Full-Service Dining Starter",
+          "monthlyUsd": 89.95,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$89.95/month for full-service restaurants. Includes table management, floor plans, and order management. Kitchen display system available at $799–$899 hardware + $25/month. Self-ordering kiosk $3,499 + $34.95/month.",
+          "source": {
+            "url": "https://www.nerdwallet.com/article/small-business/clover-review",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.merchantmaverick.com/reviews/clover-pos/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Full-Service Dining Advanced",
+          "monthlyUsd": 129.85,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$129.85/month for multi-terminal full-service restaurant setups with advanced features. Hardware prices same as Dining Starter tier.",
+          "source": {
+            "url": "https://www.nerdwallet.com/article/small-business/clover-review",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.merchantmaverick.com/reviews/clover-pos/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "lightspeed-retail",
+      "name": "Lightspeed Retail",
+      "domain": "lightspeedhq.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "QuickBooks",
+        "Xero",
+        "Shopify",
+        "WooCommerce",
+        "Mailchimp",
+        "Google Analytics",
+        "Klaviyo",
+        "Salesforce"
+      ],
+      "provenance": "https://www.lightspeedhq.com/pos/retail/pricing/ (official page, fetched directly, prices confirmed in USD). Monthly-when-billed-annually rates are published on the official page. Month-to-month rates from MerchantMaverick review dated December 2, 2025.",
+      "plans": [
+        {
+          "name": "Basic",
+          "monthlyUsd": 89,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 18,
+          "billingModel": "flat",
+          "notes": "$89/month when billed annually; $109/month billed monthly. Includes 1 register. Essential day-to-day needs for independent retailers. Card-present processing at 1.5%. Additional registers $59/month each.",
+          "source": {
+            "url": "https://www.lightspeedhq.com/pos/retail/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.merchantmaverick.com/reviews/lightspeed-retail/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Core",
+          "monthlyUsd": 149,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "$149/month when billed annually; $179/month billed monthly. Includes 1 register. Adds management tools, purchase orders, and loyalty. Card-present processing at 1.5%.",
+          "source": {
+            "url": "https://www.lightspeedhq.com/pos/retail/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.merchantmaverick.com/reviews/lightspeed-retail/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Plus",
+          "monthlyUsd": 289,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 15,
+          "billingModel": "flat",
+          "notes": "$289/month when billed annually; $339/month billed monthly. Includes 1 register. Advanced customization, API access, and dedicated support. Card-present processing at 1.5%.",
+          "source": {
+            "url": "https://www.lightspeedhq.com/pos/retail/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.merchantmaverick.com/reviews/lightspeed-retail/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only for multi-location businesses. Custom hardware and software package with dedicated support.",
+          "source": {
+            "url": "https://www.lightspeedhq.com/pos/retail/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "lightspeed-restaurant",
+      "name": "Lightspeed Restaurant",
+      "domain": "lightspeedhq.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "QuickBooks",
+        "Xero",
+        "7shifts",
+        "OpenTable",
+        "Mailchimp",
+        "Deliverect",
+        "Uber Eats",
+        "DoorDash"
+      ],
+      "provenance": "https://www.lightspeedhq.com/pos/restaurant/pricing/ (official page, fetched directly, prices confirmed in USD). Corroborated by MerchantMaverick review dated December 2, 2025.",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": 69,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$69/month. Core POS software, integrated payments, menu manager, floor planner, card pre-authorizations, and online ordering. Additional register licenses $59/month each. KDS screen $30/month per screen.",
+          "source": {
+            "url": "https://www.lightspeedhq.com/pos/restaurant/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.merchantmaverick.com/reviews/lightspeed-restaurant/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Essential",
+          "monthlyUsd": 189,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$189/month. Adds loyalty program, advanced inventory, contactless ordering, and multi-location management. Additional register licenses $59/month each.",
+          "source": {
+            "url": "https://www.lightspeedhq.com/pos/restaurant/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.merchantmaverick.com/reviews/lightspeed-restaurant/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": 399,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$399/month. Adds custom payment processing rates, raw API access, and hotel revenue management integration. Additional register licenses $59/month each.",
+          "source": {
+            "url": "https://www.lightspeedhq.com/pos/restaurant/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.merchantmaverick.com/reviews/lightspeed-restaurant/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only. Customized software and hardware package with dedicated account management for large or multi-location restaurant groups.",
+          "source": {
+            "url": "https://www.lightspeedhq.com/pos/restaurant/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "shopify-pos",
+      "name": "Shopify POS",
+      "domain": "shopify.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "QuickBooks",
+        "Xero",
+        "Mailchimp",
+        "Klaviyo",
+        "Google Analytics",
+        "Meta Ads",
+        "TikTok",
+        "Amazon"
+      ],
+      "provenance": "shopify.com/pos/pricing geolocated to EUR. USD pricing sourced from NerdWallet Shopify POS review dated February 4, 2026, corroborated by NerdWallet Shopify general review (February 4, 2026). All USD figures are consistent between both NerdWallet sources.",
+      "plans": [
+        {
+          "name": "Basic (with POS Lite)",
+          "monthlyUsd": 29,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 26,
+          "billingModel": "flat",
+          "notes": "$29/month when billed annually; $39/month billed monthly. POS Lite included (basic in-person selling). In-person processing at 2.6% + $0.10. Add POS Pro for $89/month per location for advanced brick-and-mortar features (staff roles, inventory, advanced reports). No long-term contracts.",
+          "source": {
+            "url": "https://www.nerdwallet.com/article/small-business/shopify-pos-review",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.nerdwallet.com/article/small-business/shopify-review",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Shopify (with POS Lite)",
+          "monthlyUsd": 79,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 25,
+          "billingModel": "flat",
+          "notes": "$79/month when billed annually; $105/month billed monthly. POS Lite included. In-person processing at 2.5% + $0.10. Add POS Pro for $89/month per location.",
+          "source": {
+            "url": "https://www.nerdwallet.com/article/small-business/shopify-pos-review",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.nerdwallet.com/article/small-business/shopify-review",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Advanced (with POS Lite)",
+          "monthlyUsd": 299,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 25,
+          "billingModel": "flat",
+          "notes": "$299/month when billed annually; $399/month billed monthly. POS Lite included. In-person processing at 2.4% + $0.10. Add POS Pro for $89/month per location.",
+          "source": {
+            "url": "https://www.nerdwallet.com/article/small-business/shopify-pos-review",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.nerdwallet.com/article/small-business/shopify-review",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Plus (with POS Lite)",
+          "monthlyUsd": 2300,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "From $2,300/month on 1- or 3-year term. POS Lite included; POS Pro included for up to 20 locations with Shopify Payments. Negotiated rates for high-volume merchants.",
+          "source": {
+            "url": "https://www.nerdwallet.com/article/small-business/shopify-pos-review",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.nerdwallet.com/article/small-business/shopify-review",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "POS Pro Add-on",
+          "monthlyUsd": 89,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$89/month per location, added to any base Shopify plan. Includes staff roles and permissions, advanced inventory management, omnichannel selling tools, and rich customer profiles. Required for serious brick-and-mortar operations.",
+          "source": {
+            "url": "https://www.nerdwallet.com/article/small-business/shopify-pos-review",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.nerdwallet.com/article/small-business/shopify-review",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "touchbistro",
+      "name": "TouchBistro",
+      "domain": "touchbistro.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "QuickBooks",
+        "Xero",
+        "7shifts",
+        "Wagepoint",
+        "Mailchimp",
+        "OpenTable",
+        "Uber Eats",
+        "DoorDash"
+      ],
+      "provenance": "https://www.touchbistro.com/pricing/ (official page, fetched directly, prices confirmed in USD). Corroborated by MerchantMaverick review dated December 2, 2025.",
+      "plans": [
+        {
+          "name": "Point of Sale",
+          "monthlyUsd": 69,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Starting at $69/month for a single license. Includes menu management, reporting and analytics, floor plan and table management, and staff management. Hardware costs are separate and must be quoted. Payment processing fees apply separately. For multiple licenses, pricing is by quote. 24/7 customer support included.",
+          "source": {
+            "url": "https://www.touchbistro.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.merchantmaverick.com/reviews/touchbistro/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Essentials Bundle",
+          "monthlyUsd": 119,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Starting at $119/month. Labeled 'Best Value – Hardware Included.' Bundles the Point of Sale software with integrated payments and restaurant-grade iPad hardware. Payment processing and additional fees apply. Hardware financing available for venues with two or more terminals.",
+          "source": {
+            "url": "https://www.touchbistro.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.merchantmaverick.com/reviews/touchbistro/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Custom",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only. Includes all Point of Sale features plus integrated payments, hardware, front-of-house tools, back-of-house solutions, guest engagement products, and direct integrations with leading software platforms. Add-ons (Gift Cards $25/mo, Loyalty $99/mo, Marketing $99/mo, Reservations $229/mo, Online Ordering $50/mo) also available separately.",
+          "source": {
+            "url": "https://www.touchbistro.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.merchantmaverick.com/reviews/touchbistro/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "epos-now",
+      "name": "Epos Now",
+      "domain": "eposnow.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "QuickBooks",
+        "Xero",
+        "Mailchimp",
+        "WooCommerce",
+        "Lightspeed Payments",
+        "PayPal",
+        "Sage"
+      ],
+      "provenance": "https://www.eposnow.com/us/pricing/ (official US pricing page, fetched directly). Software subscription pricing is quote-only; the page mentions 'monthly subscription starting at $79' only in small-print disclaimer text adjacent to hardware promotional pricing. Corroborated by MerchantMaverick review dated December 2, 2025 which also confirms opaque quote-based pricing.",
+      "plans": [
+        {
+          "name": "Complete Solution (Hardware + Software)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 349,
+          "notes": "Quote-only for software subscription. Hardware bundle (countertop POS system) promoted from $349 (was $1,049) requiring a monthly subscription starting at $79/month per disclaimer text — but the specific software plan tiers and monthly fees are not published; customers must contact sales. 24-month minimum service contract; hardware leases up to 5 years. Payment processing at 2.6% + $0.10 per transaction flat rate.",
+          "source": {
+            "url": "https://www.eposnow.com/us/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.merchantmaverick.com/reviews/epos-now/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    }
+  ]
+}

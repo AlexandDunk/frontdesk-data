@@ -1,0 +1,600 @@
+{
+  "vertical": "sales-engagement",
+  "generatedAt": "2026-06-14",
+  "methodologyNotes": "Published self-serve USD pricing was collected directly from each vendor's official pricing page (or, where the vendor page returned 403/JS-only or redirected to a non-pricing landing, from a reputable 2026 comparison source) on 2026-06-14, then adversarially re-verified against current 2026 sources. Outreach (outreach.ai) and Salesloft both confirmed quote-only models with no public per-seat figures — all tiers carry null monthlyUsd. Apollo.io's pricing page renders JS-only; current 2026 rates (Free/$0, Basic/$49, Professional/$79, Organization/$119 per user/mo annual) verified via CloudTalk's 2026 Apollo guide and corroborated by Warmly 2026 — Organization is a published self-serve tier. (An earlier draft used a March-2024 bardeen.ai guide that listed a stale $39 Basic and treated Organization as custom; corrected.) Reply.io's pricing page returned HTTP 403; Email Volume/$49 and Multichannel/$89 per user/mo are ANNUAL rates (Multichannel ~$99 monthly), verified via Amplemarket's 2026 cost guide — an earlier draft mislabeled these as month-to-month rates and was corrected. Groove was acquired by Clari (groove.co redirects to clari.com) and Clari publishes no self-serve pricing; included with null plans. Klenty (Starter $50/Growth $70/Plus $99 per user/mo annual), lemlist, and Yesware pricing fetched from official pages and confirmed. Woodpecker uses usage-based pricing at $4.80 per 100 contacted prospects/month with a free base tier; the included plan reflects an estimated ~$29/mo for 500 prospects on monthly billing (annual saves 33%). All telephony fields (minutesIncluded, callsIncluded, overagePerMin, overagePerCall) are null — this is a non-telephony vertical. monthlyUsd reflects the effective per-seat or flat monthly cost at the smallest billable unit on annual billing unless noted otherwise.",
+  "vendors": [
+    {
+      "slug": "outreach",
+      "name": "Outreach",
+      "domain": "outreach.ai",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Zoom",
+        "Microsoft Teams",
+        "Google Meet",
+        "Cisco Webex",
+        "Slack"
+      ],
+      "provenance": "Official pricing page at outreach.ai/pricing fetched directly (outreach.io redirects 301 to outreach.ai). Page confirmed three tiers — Amplify Core, Amplify Plus, Amplify Pro — differentiated by AI credit allocations (25K/50K/100K). No USD prices are published; page states 'Reach out to our team for custom pricing based on your team needs' with no dollar figures anywhere on page.",
+      "plans": [
+        {
+          "name": "Amplify Core",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "25,000 AI Credits/month. Includes Research Agent, Revenue Agent, Personalization Agent, AI Assist, Data Enrichment, multi-channel engagement, account planning, conversation intelligence. Per-user pricing stated but no dollar amount published.",
+          "source": {
+            "url": "https://www.outreach.ai/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Amplify Plus",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "50,000 AI Credits/month. Adds Meeting Prep Agent, Deal Agent, Live Coaching, AI Summaries, real-time transcription. Listed as 'Most Popular'. No dollar amount published.",
+          "source": {
+            "url": "https://www.outreach.ai/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Amplify Pro",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "100,000 AI Credits/month. Adds AI Forecast Projection, Scenario Planner, Territory Management, advanced managed services. No dollar amount published.",
+          "source": {
+            "url": "https://www.outreach.ai/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "salesloft",
+      "name": "Salesloft",
+      "domain": "salesloft.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "Official pricing page at salesloft.com/pricing fetched directly. Page shows three plan names (Essentials, Advanced, Premier) but prices did not load — the pricing section displayed 'Loading...' and the page directed all visitors to 'Get in Contact' or 'Talk to Sales'. No USD figures are published anywhere on the page. Multiple fallback sources (getapp.com, bardeen.ai) also confirmed no public pricing is available.",
+      "plans": [
+        {
+          "name": "Essentials",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Core features including email automation, calendaring, CRM sync. For small teams. Price requires contacting sales.",
+          "source": {
+            "url": "https://salesloft.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Advanced",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Adds Conversations for call recording/analysis, Deals for pipeline management. For teams focused on closing. Price requires contacting sales.",
+          "source": {
+            "url": "https://salesloft.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Premier",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Advanced automation, dialer, messenger. Full revenue lifecycle solution. Price requires contacting sales.",
+          "source": {
+            "url": "https://salesloft.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "apollo",
+      "name": "Apollo.io",
+      "domain": "apollo.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Salesforce",
+        "HubSpot",
+        "Gmail",
+        "Outlook",
+        "LinkedIn",
+        "Zapier"
+      ],
+      "provenance": "Official pricing page at apollo.io/pricing renders JS-only and returned no price figures on direct fetch. Current 2026 prices verified via CloudTalk's Apollo pricing guide (2026) and corroborated by multiple 2026 comparison sources (Warmly, Vendr, Costbench): Free/$0, Basic/$49 per user/mo annual ($59 monthly), Professional/$79 per user/mo annual ($99 monthly), Organization/$119 per user/mo annual ($149 monthly) — Organization is a published self-serve tier, not quote-only. NOTE: an earlier draft cited a bardeen.ai buyer guide from March 2024 listing Basic at $39 and Organization as custom; that figure is stale (2023-2024 pricing) and Basic has since risen to $49, so it was replaced with current 2026 sources.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Free forever. Limited credits (50 email credits/month, 5 mobile credits), basic email automation, AI writing assistant. No credit card required.",
+          "source": {
+            "url": "https://www.cloudtalk.io/blog/apollo-pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.warmly.ai/p/blog/apollo-pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Basic",
+          "monthlyUsd": 49,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$49 per user/month billed annually ($59 month-to-month). More credits and additional features vs Free. Official pricing page is JS-only; price verified via CloudTalk 2026 guide and corroborated by Warmly 2026. (Corrected from a stale $39 figure that reflected 2023-2024 pricing.)",
+          "source": {
+            "url": "https://www.cloudtalk.io/blog/apollo-pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.warmly.ai/p/blog/apollo-pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Professional",
+          "monthlyUsd": 79,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$79 per user/month billed annually ($99 month-to-month). Unlimited email credits, advanced sequences, AI-assisted email writing, buying intent signals. Official pricing page is JS-only; price verified via CloudTalk 2026 guide and corroborated by Warmly 2026.",
+          "source": {
+            "url": "https://www.cloudtalk.io/blog/apollo-pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.warmly.ai/p/blog/apollo-pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Organization",
+          "monthlyUsd": 119,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$119 per user/month billed annually ($149 month-to-month), minimum seat count applies. Adds advanced security, customizable reports, call transcriptions, and admin controls. Published self-serve tier (not quote-only). Verified via CloudTalk 2026 guide and corroborated by Warmly 2026. (Corrected from an earlier draft that marked this as custom/quote-only.)",
+          "source": {
+            "url": "https://www.cloudtalk.io/blog/apollo-pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.warmly.ai/p/blog/apollo-pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "reply-io",
+      "name": "Reply.io",
+      "domain": "reply.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Salesforce",
+        "HubSpot",
+        "Pipedrive",
+        "Gmail",
+        "Outlook",
+        "LinkedIn",
+        "Zapier"
+      ],
+      "provenance": "Official pricing page at reply.io/pricing returned HTTP 403 Forbidden on direct fetch. Prices verified via Amplemarket's 2026 Reply.io cost guide and corroborated by 2026 comparison sources. Email Volume $49/user/mo and Multichannel $89/user/mo are ANNUAL-billing per-seat rates (monthly billing is higher — Multichannel is ~$99/user/mo month-to-month); the smallest-billable-unit annual figure is used per methodology. Agency is a flat ~$166/mo plan requiring an annual commitment. The AI SDR product (Jason AI) starts at $500/mo (annual). NOTE: an earlier draft labeled the $49/$89 figures as 'month-to-month' rates; that framing was incorrect — they are annual rates — and the notes were corrected.",
+      "plans": [
+        {
+          "name": "Email Volume",
+          "monthlyUsd": 49,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$49 per user/month billed annually (entry tier; scales with active contacts). Includes 1,000 active contacts/month, email automation, unlimited mailboxes. Official page 403'd; verified via Amplemarket 2026 cost guide.",
+          "source": {
+            "url": "https://www.amplemarket.com/blog/how-much-does-reply-io-really-cost",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://lagrowthmachine.com/reply-io-pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Multichannel",
+          "monthlyUsd": 89,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$89 per user/month billed annually ($99 month-to-month). Unlimited active contacts, multichannel automation (email plus add-on channels), multiple mailboxes per user. Some channels (LinkedIn, calls) may be priced as separate add-ons. Official page 403'd; verified via Amplemarket 2026 cost guide.",
+          "source": {
+            "url": "https://www.amplemarket.com/blog/how-much-does-reply-io-really-cost",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://lagrowthmachine.com/reply-io-pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Agency",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Flat ~$166/month, annual commitment required; contact sales to finalize exact terms. Unlimited clients, users, agency dashboard, white-label, dedicated support. Price varies by channels, user count, and credit usage. Listed as billingModel custom because the published $166 is a starting flat rate subject to negotiation; monthlyUsd kept null.",
+          "source": {
+            "url": "https://www.amplemarket.com/blog/how-much-does-reply-io-really-cost",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://lagrowthmachine.com/reply-io-pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "AI SDR",
+          "monthlyUsd": 500,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$500/month flat (not per-seat), starting tier of the Jason AI SDR product, sold separately from the outreach platform. AI-created ideal customer profiles, high-accuracy email finding, ~1,000 real-time B2B contacts/month, fully autonomous outreach. Verified via Amplemarket 2026 cost guide.",
+          "source": {
+            "url": "https://www.amplemarket.com/blog/how-much-does-reply-io-really-cost",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://lagrowthmachine.com/reply-io-pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "groove-clari",
+      "name": "Groove (by Clari)",
+      "domain": "groove.co",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "groove.co redirects (HTTP 301) to clari.com. Clari's pricing page at clari.com/pricing was fetched; it shows only 'Priced to run revenue, not hurt the bottom line' with a single 'Get a quote' CTA — no USD tiers are published. Groove was acquired by Clari and is now part of their platform. No public self-serve pricing exists.",
+      "plans": [
+        {
+          "name": "Groove Platform",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Groove is now integrated into Clari's revenue platform. No public pricing; all tiers require requesting a quote from Clari sales.",
+          "source": {
+            "url": "https://clari.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "klenty",
+      "name": "Klenty",
+      "domain": "klenty.com",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Salesforce",
+        "HubSpot",
+        "Pipedrive",
+        "Zoho",
+        "MS Dynamics"
+      ],
+      "provenance": "Official pricing page at klenty.com/pricing fetched directly without errors. Three plans clearly listed with annual billing rates. Quarterly billing toggle shown but quarterly prices not displayed on page. HIPAA Certificate badge shown in footer. No BAA explicitly mentioned.",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": 50,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$50/month billed annually (flat, not per-seat at this tier per page description). Includes 15,000 monthly contacts, 75,000 monthly emails, email deliverability, custom domain tracking, A/B testing, email personalization, Zapier, API. Annual billing saves up to 20% vs quarterly.",
+          "source": {
+            "url": "https://www.klenty.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Growth",
+          "monthlyUsd": 70,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$70 per user/month billed annually. Adds cold calling, number auto-rotation, AI voicemail/IVR detection, AI outcome detection, multichannel outreach, 1-click-to-call dialer, social selling, SMS automation, CRM integrations, sales stage automation. Month-to-month rate not shown on page.",
+          "source": {
+            "url": "https://www.klenty.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Plus",
+          "monthlyUsd": 99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$99 per user/month billed annually. Adds 4,000 credits (phone+email), account-based selling, Action AI, account prioritization, call coaching, AI battlecards, live transcription, AI objection detection, AI call scorecard. Month-to-month rate not shown.",
+          "source": {
+            "url": "https://www.klenty.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "lemlist",
+      "name": "lemlist",
+      "domain": "lemlist.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "HubSpot",
+        "Salesforce",
+        "Pipedrive",
+        "Gmail",
+        "LinkedIn",
+        "Zapier",
+        "Make",
+        "n8n",
+        "Clay",
+        "Aircall",
+        "Ringover"
+      ],
+      "provenance": "Official pricing page at lemlist.com/pricing fetched directly without errors. Both monthly and annual rates confirmed. All plan details including integrations confirmed from official page.",
+      "plans": [
+        {
+          "name": "Email",
+          "monthlyUsd": 31,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "$31/month when billed annually (20% savings). Month-to-month rate: $39/month. Flat rate — unlimited users at this tier. Includes 5,000 emails/month, email and phone finder, 650M+ leads database, lemAgent AI, unified inbox, deliverability hub. Quarterly billing saves 10%.",
+          "source": {
+            "url": "https://www.lemlist.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Multichannel",
+          "monthlyUsd": 87,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "per_seat",
+          "notes": "$87 per user/month when billed annually (20% savings). Month-to-month rate: $109/user/month. Includes unlimited emails and messages, 5 senders per user, LinkedIn/SMS/WhatsApp automation, built-in call dialer, task management.",
+          "source": {
+            "url": "https://www.lemlist.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing, minimum 5 users. Adds custom user roles, dedicated account manager, SSO/SAML, 1:1 onboarding, priority support, advanced API.",
+          "source": {
+            "url": "https://www.lemlist.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "yesware",
+      "name": "Yesware",
+      "domain": "yesware.com",
+      "hipaa": false,
+      "baa": false,
+      "bilingual": null,
+      "integrations": [
+        "Gmail",
+        "Outlook",
+        "Salesforce",
+        "LinkedIn",
+        "Zoom",
+        "Google Meet",
+        "Microsoft Teams",
+        "RingCentral",
+        "Vendasta"
+      ],
+      "provenance": "Official pricing page at yesware.com/pricing fetched directly without errors. Both monthly and annual rates confirmed for all tiers. HIPAA not mentioned; security certifications are SOC 2 Type II, GDPR, CCPA only. No BAA mentioned.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Free forever. Basic email open tracking, basic attachment tracking, 10 campaign recipients/month, meeting scheduler, weekly webinar trainings, email support.",
+          "source": {
+            "url": "https://www.yesware.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 15,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 21,
+          "billingModel": "per_seat",
+          "notes": "$15/seat/month billed annually. Month-to-month rate: $19/seat/month. Unlimited email tracking, link tracking, attachment tracking, 20 campaign recipients/month, personal and recipient engagement reports, email and phone support.",
+          "source": {
+            "url": "https://www.yesware.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": 35,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 22,
+          "billingModel": "per_seat",
+          "notes": "$35/seat/month billed annually. Month-to-month rate: $45/seat/month. Adds hide Yesware branding, unlimited campaigns, unlimited teams, shared templates and campaigns, team reporting, centralized team billing, customer success on-demand. Listed as 'Most Popular'.",
+          "source": {
+            "url": "https://www.yesware.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": 65,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 24,
+          "billingModel": "per_seat",
+          "notes": "$65/seat/month billed annually. Month-to-month rate: $85/seat/month. Adds Salesforce inbox sidebar, email sent/reply/calendar sync, bi-directional activity sync, add contacts to campaigns, import list views, Single Sign-On, trusted IP ranges.",
+          "source": {
+            "url": "https://www.yesware.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "woodpecker",
+      "name": "Woodpecker",
+      "domain": "woodpecker.co",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Pipedrive",
+        "HubSpot",
+        "Zoho",
+        "Calendly",
+        "Zapier",
+        "Google Sheets",
+        "Clay",
+        "Hunter",
+        "Aircall"
+      ],
+      "provenance": "Official pricing page at woodpecker.co/pricing fetched directly. Woodpecker uses a usage-based model priced per 100 contacted prospects (not per seat or flat). Annual billing saves 33% vs monthly. The interactive calculator is JS-rendered and did not return specific dollar totals; monthly-billing rate of $4.80 per 100 prospects (annual: ~$3.22 per 100 after 33% discount) confirmed from the page. Entry-level price of $29/month for 500 contacted prospects (monthly billing) sourced from Woodpecker's own blog post at woodpecker.co/blog/cold-email-tools. No HIPAA or BAA mentioned; ISO-certified, GDPR, CCPA, CASA tier 2.",
+      "plans": [
+        {
+          "name": "Contacted Prospects (500/mo, monthly billing)",
+          "monthlyUsd": 29,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "Usage-based pricing: $4.80 per 100 contacted prospects/month (monthly billing). At 500 prospects/month: ~$24-29/month. Annual billing saves 33%; estimated ~$24/mo for 500 prospects annually. Price scales linearly with contacted prospects volume. Includes unlimited email accounts, unlimited team members, free email verification, 4 free warm-ups, 100 Lead Finder credits, 16,000 emails/month, 4,000 stored prospects. Add-ons: LinkedIn Outreach +$29/connected account, Agency Panel +$27/active client.",
+          "source": {
+            "url": "https://woodpecker.co/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://woodpecker.co/blog/cold-email-tools/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    }
+  ]
+}

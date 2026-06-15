@@ -1,0 +1,924 @@
+{
+  "vertical": "business-texting-sms",
+  "generatedAt": "2026-06-12T00:00:00.000Z",
+  "methodologyNotes": "Business texting / SMS-for-SMBs software (SimpleTexting / EZ Texting / Salesmsg / Heymarket / Textline class). This is a front-office-adjacent vertical: the same local-service SMB that buys an AI receptionist and call-tracking also runs a shared-inbox texting line for two-way conversations, missed-call-text-back, appointment reminders, and review requests — frequently on the very same phone number. Pricing figures were collected from each vendor's public pricing page on the accessedAt date recorded per source; where a second independent source (G2/Capterra listing, vendor pricing-guide, or comparison roundup) confirms the same figure on the same date it is attached as 'corroboration', satisfying the two-source rule. No figure is ever invented. This category bills as subscription + bundled message credits: most vendors charge a flat monthly base that INCLUDES a fixed monthly credit allowance (1 credit ~= 1 outbound 160-char SMS segment; MMS and long messages consume more), then meter overage per additional credit. The dataset shape is applied as follows: monthlyUsd is the recurring base; callsIncluded carries the bundled monthly MESSAGE-CREDIT allowance the vendor publishes (the closest analog to 'included quota' for an SMS product — there is no per-minute concept here, so minutesIncluded is null for every vendor); overagePerMin is null throughout (SMS is not metered per minute) and the marginal per-extra-credit/per-segment rate is preserved in plan notes rather than forced into a minute field; annualDiscountPct reflects the published annual saving (commonly '2 months free' ~= 17%, or an explicit 20%). Per-user-seat vendors (Heymarket, Avochato, Quo) are flagged: their monthlyUsd is the per-user list price and minimum-seat counts and per-segment message fees are recorded in notes. A sub-segment bills purely per-message with no bundled allowance (Textla $0.01/SMS, Text-Em-All pay-as-you-go) — for these callsIncluded is null and the per-message rate is in notes. FABRICATION-GUARD: several well-known front-office vendors are quote-gated or have moved pricing behind a sales form and are recorded with empty plans[] plus a provenance note stating where pricing was sought and why no figure was recorded — never a guessed number. Specifically: Podium (its live pricing page now routes entirely to 'talk to sales'; the $399 Core / $599 Pro figures that appear in 2026 third-party roundups are NOT on the live vendor page and are therefore noted as secondary-only, not recorded as plans); TextUs (publishes only a '$499/mo base' headline, with Essentials/Plus tier prices quote-gated); Textline (publishes tier NAMES, included-credit minimums and per-credit overage, but the monthly base price for Essentials/Pro is not on the live page — third-party reviews cite ~$59.97/$249.95 but that is noted, not recorded as a vendor-confirmed plan); Trumpia (live pricing page redirected to a platform host that returned 404/inaccessible at capture, so third-party G2 figures alone do not satisfy the live-page rule); Textel (contact-center SMS, no public per-plan pricing). HIPAA/BAA and integration fields reflect what each vendor states publicly; null means not published, not absence — e.g. SimpleTexting and SlickText market HIPAA-compliant texting in collateral but do not state BAA terms on the pricing page (hipaa recorded where the vendor explicitly claims it, baa only where a BAA is named). This is a static snapshot intended to be refreshed from our scheduled public-page monitoring pipeline.",
+  "vendors": [
+    {
+      "slug": "simpletexting",
+      "name": "SimpleTexting",
+      "domain": "simpletexting.com",
+      "plans": [
+        {
+          "name": "500 Credits",
+          "monthlyUsd": 39,
+          "minutesIncluded": null,
+          "callsIncluded": 500,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "hybrid",
+          "notes": "500 SMS credits/mo (1 credit = 1 standard 160-char SMS; MMS/long msgs use more). Extra credits 5.5 cents each. 3 user seats included (+$20/mo per extra seat). Local number $10/mo (+$4 one-time), toll-free free, short code from $1,000/mo. Credits roll over. Carrier pass-through ~$0.0025/msg US. 15% nonprofit discount.",
+          "corroboration": {
+            "url": "https://costbench.com/software/sms-marketing/simpletexting/",
+            "accessedAt": "2026-06-12"
+          },
+          "source": {
+            "url": "https://simpletexting.com/pricing/",
+            "accessedAt": "2026-06-12"
+          }
+        },
+        {
+          "name": "1,000 Credits",
+          "monthlyUsd": 59,
+          "minutesIncluded": null,
+          "callsIncluded": 1000,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "hybrid",
+          "notes": "1,000 credits/mo. Same seat/number add-ons and per-credit overage as entry tier.",
+          "source": {
+            "url": "https://simpletexting.com/pricing/",
+            "accessedAt": "2026-06-12"
+          }
+        },
+        {
+          "name": "2,000 Credits",
+          "monthlyUsd": 89,
+          "minutesIncluded": null,
+          "callsIncluded": 2000,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "hybrid",
+          "notes": "2,000 credits/mo.",
+          "source": {
+            "url": "https://simpletexting.com/pricing/",
+            "accessedAt": "2026-06-12"
+          }
+        },
+        {
+          "name": "3,000 Credits",
+          "monthlyUsd": 119,
+          "minutesIncluded": null,
+          "callsIncluded": 3000,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "hybrid",
+          "notes": "3,000 credits/mo. Higher published tiers continue: 7,500 cr/$239, 15,000 cr/$409, 25,000 cr/$559, 50,000 cr/$909; 50,000+ is custom-negotiated.",
+          "corroboration": {
+            "url": "https://costbench.com/software/sms-marketing/simpletexting/",
+            "accessedAt": "2026-06-12"
+          },
+          "source": {
+            "url": "https://simpletexting.com/pricing/",
+            "accessedAt": "2026-06-12"
+          }
+        }
+      ],
+      "hipaa": true,
+      "baa": null,
+      "integrations": [
+        "HubSpot",
+        "Salesforce",
+        "Mailchimp",
+        "Zapier",
+        "Slack",
+        "Google Sheets",
+        "Klaviyo",
+        "Shopify",
+        "Constant Contact",
+        "API"
+      ],
+      "bilingual": null,
+      "demoPhone": null,
+      "provenance": "Credit-based tiers ($39/500 cr, $59/1,000 cr, $89/2,000 cr, $119/3,000 cr, scaling to $909/50,000 cr) from simpletexting.com/pricing on 2026-06-12, corroborated by the costbench 2026 SimpleTexting pricing breakdown listing the same 9-tier ladder ($39-$909). Base plans include 3 seats; +$20/mo per extra seat, +$10/mo per local number, extra credits 5.5 cents each, 20% off annual. SimpleTexting publicly markets HIPAA-compliant healthcare texting (hipaa=true) but the pricing page does not state BAA terms, so baa=null. minutesIncluded null (SMS product); callsIncluded carries the bundled monthly credit allowance."
+    },
+    {
+      "slug": "eztexting",
+      "name": "EZ Texting",
+      "domain": "eztexting.com",
+      "plans": [
+        {
+          "name": "Launch",
+          "monthlyUsd": 25,
+          "minutesIncluded": null,
+          "callsIncluded": 500,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "hybrid",
+          "notes": "500 credits/mo, 1 seat (+$10/mo per extra seat). 1 credit = 1 SMS, 3 credits = 1 MMS. Credits roll over 60 days. $5/mo Telecom Fee on Launch only (waived on higher tiers). Annual ~$20/mo (20% off / 6,000 credits/yr).",
+          "corroboration": {
+            "url": "https://www.business.com/reviews/ez-texting/",
+            "accessedAt": "2026-06-12"
+          },
+          "source": {
+            "url": "https://www.eztexting.com/pricing",
+            "accessedAt": "2026-06-12"
+          }
+        },
+        {
+          "name": "Boost",
+          "monthlyUsd": 75,
+          "minutesIncluded": null,
+          "callsIncluded": 500,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "hybrid",
+          "notes": "500 credits/mo, 1 seat. Telecom Fee waived. Adds shortcodes/advanced features. Annual ~$60/mo.",
+          "source": {
+            "url": "https://www.eztexting.com/pricing",
+            "accessedAt": "2026-06-12"
+          }
+        },
+        {
+          "name": "Scale",
+          "monthlyUsd": 125,
+          "minutesIncluded": null,
+          "callsIncluded": 500,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "hybrid",
+          "notes": "500 credits/mo, 1 seat. Telecom Fee waived. Annual ~$100/mo.",
+          "source": {
+            "url": "https://www.eztexting.com/pricing",
+            "accessedAt": "2026-06-12"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": 3000,
+          "minutesIncluded": null,
+          "callsIncluded": 200000,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Published list $3,000/mo with 200,000 credits/mo and dedicated success manager. Custom-negotiated above this.",
+          "source": {
+            "url": "https://www.eztexting.com/pricing",
+            "accessedAt": "2026-06-12"
+          }
+        }
+      ],
+      "hipaa": null,
+      "baa": null,
+      "integrations": [
+        "HubSpot",
+        "Salesforce",
+        "Mailchimp",
+        "Zapier",
+        "Shopify",
+        "Constant Contact",
+        "Google Sheets",
+        "Slack",
+        "API"
+      ],
+      "bilingual": null,
+      "demoPhone": null,
+      "provenance": "Four tiers (Launch $25 / Boost $75 / Scale $125, each 500 credits/mo + 1 seat; Enterprise $3,000/200,000 credits) from eztexting.com/pricing on 2026-06-12, corroborated by the business.com 2026 EZ Texting review. Note the unusual structure: all three SMB tiers bundle the SAME 500 credits — higher tiers buy features, not volume. $5/mo Telecom Fee applies to Launch only. Annual saves up to 20% (6,000 credits/yr). HIPAA/BAA not stated on the pricing page (null)."
+    },
+    {
+      "slug": "textedly",
+      "name": "Textedly",
+      "domain": "textedly.com",
+      "plans": [
+        {
+          "name": "Basic",
+          "monthlyUsd": 29,
+          "minutesIncluded": null,
+          "callsIncluded": 500,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "hybrid",
+          "notes": "500 msgs/mo (600 on annual via '20% MORE' allocation bonus rather than a price cut). $8/mo telecom surcharge on all paid plans. Incoming texts free. Extra 500-msg blocks $30; extra keywords $10/mo.",
+          "corroboration": {
+            "url": "https://www.business.com/reviews/textedly/",
+            "accessedAt": "2026-06-12"
+          },
+          "source": {
+            "url": "https://www.textedly.com/pricing",
+            "accessedAt": "2026-06-12"
+          }
+        },
+        {
+          "name": "Bronze",
+          "monthlyUsd": 49,
+          "minutesIncluded": null,
+          "callsIncluded": 1000,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "hybrid",
+          "notes": "1,000 msgs/mo (1,200 annual). $8 telecom surcharge. Annual billing adds 20% more messages, not a discount on price.",
+          "source": {
+            "url": "https://www.textedly.com/pricing",
+            "accessedAt": "2026-06-12"
+          }
+        },
+        {
+          "name": "Plus",
+          "monthlyUsd": 79,
+          "minutesIncluded": null,
+          "callsIncluded": 2000,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "hybrid",
+          "notes": "2,000 msgs/mo (2,400 annual). $8 telecom surcharge.",
+          "source": {
+            "url": "https://www.textedly.com/pricing",
+            "accessedAt": "2026-06-12"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": 125,
+          "minutesIncluded": null,
+          "callsIncluded": 3500,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "hybrid",
+          "notes": "3,500 msgs/mo (4,200 annual). $8 telecom surcharge. Note: 'Enterprise' here is a named volume tier, not custom-quote. Elite $169/5,000 msgs and 14 total tiers continue up to ~$5,520/240,000 msgs.",
+          "source": {
+            "url": "https://www.textedly.com/pricing",
+            "accessedAt": "2026-06-12"
+          }
+        }
+      ],
+      "hipaa": null,
+      "baa": null,
+      "integrations": [
+        "Zapier",
+        "Mailchimp",
+        "Salesforce",
+        "HubSpot",
+        "Google Sheets",
+        "API"
+      ],
+      "bilingual": null,
+      "demoPhone": null,
+      "provenance": "Tier ladder (Basic $29/500, Bronze $49/1,000, Plus $79/2,000, Enterprise $125/3,500, Elite $169/5,000, up to ~$5,520/240,000) from textedly.com/pricing on 2026-06-12, corroborated by the business.com 2026 Textedly review. Distinctive: annual billing grants 20% MORE messages rather than a lower price (so annualDiscountPct=null — there is no price discount). $8/mo telecom surcharge on every paid plan. HIPAA/BAA not stated (null)."
+    },
+    {
+      "slug": "slicktext",
+      "name": "SlickText",
+      "domain": "slicktext.com",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": 29,
+          "minutesIncluded": null,
+          "callsIncluded": 500,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "hybrid",
+          "notes": "500 credits/mo. Unlimited contacts, free incoming texts, 1-month rollover. Annual = 2 months free (~17%).",
+          "corroboration": {
+            "url": "https://www.g2.com/products/slicktext/pricing",
+            "accessedAt": "2026-06-12"
+          },
+          "source": {
+            "url": "https://www.slicktext.com/pricing",
+            "accessedAt": "2026-06-12"
+          }
+        },
+        {
+          "name": "Professional",
+          "monthlyUsd": 49,
+          "minutesIncluded": null,
+          "callsIncluded": 1000,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "hybrid",
+          "notes": "1,000 credits/mo. Annual = 2 months free.",
+          "source": {
+            "url": "https://www.slicktext.com/pricing",
+            "accessedAt": "2026-06-12"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 79,
+          "minutesIncluded": null,
+          "callsIncluded": 2000,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "hybrid",
+          "notes": "2,000 credits/mo.",
+          "source": {
+            "url": "https://www.slicktext.com/pricing",
+            "accessedAt": "2026-06-12"
+          }
+        },
+        {
+          "name": "Growth",
+          "monthlyUsd": 129,
+          "minutesIncluded": null,
+          "callsIncluded": 3500,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "hybrid",
+          "notes": "3,500 credits/mo. Adds 1-on-1 onboarding. Growth $169/5,000 credits and higher tiers (dedicated CSM from the $579 plan) continue above this.",
+          "source": {
+            "url": "https://www.slicktext.com/pricing",
+            "accessedAt": "2026-06-12"
+          }
+        }
+      ],
+      "hipaa": true,
+      "baa": null,
+      "integrations": [
+        "Zapier",
+        "Mailchimp",
+        "HubSpot",
+        "Salesforce",
+        "Shopify",
+        "Constant Contact",
+        "Klaviyo",
+        "API"
+      ],
+      "bilingual": null,
+      "demoPhone": null,
+      "provenance": "Credit tiers (Starter $29/500, Professional $49/1,000, Business $79/2,000, Growth $129/3,500, Scale $169/5,000) from slicktext.com/pricing on 2026-06-12, corroborated by the G2 2026 SlickText listing. Annual = 2 months free (~17%). SlickText markets a HIPAA-compliant texting product (hipaa=true); BAA terms not on the pricing page (baa=null)."
+    },
+    {
+      "slug": "salesmsg",
+      "name": "Salesmsg",
+      "domain": "salesmessage.com",
+      "plans": [
+        {
+          "name": "500 Messages",
+          "monthlyUsd": 25,
+          "minutesIncluded": null,
+          "callsIncluded": 500,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "hybrid",
+          "notes": "500 credits/mo. Includes 1 free local/toll-free number, 1 seat, calling on same number. +$10/mo per extra seat, +$5/mo per extra number. Extra credits ~4.0 cents (down to 3.10 cents on higher tiers). 10DLC: $4.50 one-time brand + $1.50-$10/mo campaign. Annual = 2 months free.",
+          "corroboration": {
+            "url": "https://textbolt.com/blog/salesmsg-pricing/",
+            "accessedAt": "2026-06-12"
+          },
+          "source": {
+            "url": "https://www.salesmessage.com/pricing",
+            "accessedAt": "2026-06-12"
+          }
+        },
+        {
+          "name": "1,000 Messages",
+          "monthlyUsd": 49,
+          "minutesIncluded": null,
+          "callsIncluded": 1000,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "hybrid",
+          "notes": "1,000 credits/mo. Same seat/number add-ons.",
+          "source": {
+            "url": "https://www.salesmessage.com/pricing",
+            "accessedAt": "2026-06-12"
+          }
+        },
+        {
+          "name": "2,500 Messages",
+          "monthlyUsd": 99,
+          "minutesIncluded": null,
+          "callsIncluded": 2500,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "hybrid",
+          "notes": "2,500 credits/mo.",
+          "source": {
+            "url": "https://www.salesmessage.com/pricing",
+            "accessedAt": "2026-06-12"
+          }
+        },
+        {
+          "name": "5,000 Messages",
+          "monthlyUsd": 179,
+          "minutesIncluded": null,
+          "callsIncluded": 5000,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "hybrid",
+          "notes": "5,000 credits/mo.",
+          "source": {
+            "url": "https://www.salesmessage.com/pricing",
+            "accessedAt": "2026-06-12"
+          }
+        },
+        {
+          "name": "7,500 Messages",
+          "monthlyUsd": 249,
+          "minutesIncluded": null,
+          "callsIncluded": 7500,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "hybrid",
+          "notes": "7,500 credits/mo. 10,000+ is custom-quoted Enterprise.",
+          "source": {
+            "url": "https://www.salesmessage.com/pricing",
+            "accessedAt": "2026-06-12"
+          }
+        }
+      ],
+      "hipaa": null,
+      "baa": null,
+      "integrations": [
+        "HubSpot",
+        "Salesforce",
+        "Pipedrive",
+        "ActiveCampaign",
+        "Keap",
+        "Zapier",
+        "Slack",
+        "Google",
+        "Make",
+        "API"
+      ],
+      "bilingual": null,
+      "demoPhone": null,
+      "provenance": "Five published tiers ($25/500, $49/1,000, $99/2,500, $179/5,000, $249/7,500; 10,000+ custom) from salesmessage.com/pricing on 2026-06-12, corroborated by the textbolt 2026 Salesmsg breakdown. Bundles calling + texting on one number. +$10/seat, +$5/number, extra credits 3.10-4.0 cents. Annual = 2 months free. HIPAA/BAA not stated on the pricing page (null)."
+    },
+    {
+      "slug": "heymarket",
+      "name": "Heymarket",
+      "domain": "heymarket.com",
+      "plans": [
+        {
+          "name": "Standard",
+          "monthlyUsd": 49,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "per_seat",
+          "notes": "$49/user/mo billed annually (min 2 users). Per-user model: SMS/MMS metered at $0.03/segment on top, email $0.0025/segment. 10DLC $10/mo per campaign. Annual = 2 months free. Some 2026 third-party listings cite a lower legacy $24/user 'Standard' monthly figure; the live vendor page shows $49/user annual, which is recorded here.",
+          "corroboration": {
+            "url": "https://www.g2.com/products/heymarket/pricing",
+            "accessedAt": "2026-06-12"
+          },
+          "source": {
+            "url": "https://www.heymarket.com/pricing/",
+            "accessedAt": "2026-06-12"
+          }
+        },
+        {
+          "name": "Plus",
+          "monthlyUsd": 99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "per_seat",
+          "notes": "$99/user/mo annual (min 2 users). Adds campaigns, automations, advanced analytics, Zapier/Teams. $0.03/segment SMS metered.",
+          "source": {
+            "url": "https://www.heymarket.com/pricing/",
+            "accessedAt": "2026-06-12"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 199,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "per_seat",
+          "notes": "$199/user/mo annual (min 2 users). Adds API access, advanced security, optional Salesforce. $0.03/segment SMS metered. Enterprise is custom.",
+          "source": {
+            "url": "https://www.heymarket.com/pricing/",
+            "accessedAt": "2026-06-12"
+          }
+        }
+      ],
+      "hipaa": true,
+      "baa": null,
+      "integrations": [
+        "HubSpot",
+        "Salesforce",
+        "Microsoft Teams",
+        "Zapier",
+        "Slack",
+        "Shopify",
+        "Google",
+        "API"
+      ],
+      "bilingual": null,
+      "demoPhone": null,
+      "provenance": "Per-user tiers (Standard $49 / Plus $99 / Pro $199 per user/mo billed annually, min 2 users; Enterprise custom) from heymarket.com/pricing on 2026-06-12, corroborated by the G2 2026 Heymarket pricing listing. SMS/MMS metered at $0.03/segment on top of seat price. Annual = 2 months free (~17%). Heymarket states SOC 2 Type 2 + HIPAA enablement across plans (hipaa=true); BAA not explicitly named on the live pricing page (baa=null). monthlyUsd is the per-user list price (billingModel=per_seat); callsIncluded null because messages are metered, not bundled. Legacy ~$24/user 'Standard' monthly figures persist in some third-party directories but the live page is authoritative."
+    },
+    {
+      "slug": "avochato",
+      "name": "Avochato",
+      "domain": "avochato.com",
+      "plans": [
+        {
+          "name": "Pay as You Go",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_message",
+          "notes": "$0 platform fee; $0.08 per segment (US/CA). 5 users included, +$42/mo per extra user. Best under ~2,000 segments/mo. Avo AI optional add-on.",
+          "corroboration": {
+            "url": "https://www.capterra.com/p/161117/Avochato/pricing/",
+            "accessedAt": "2026-06-12"
+          },
+          "source": {
+            "url": "https://www.avochato.com/pricing",
+            "accessedAt": "2026-06-12"
+          }
+        },
+        {
+          "name": "Standard",
+          "monthlyUsd": 210,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 18,
+          "billingModel": "hybrid",
+          "notes": "$210/mo platform fee; drops per-segment rate to $0.03 (US/CA). 5 users included, +$42/mo per extra user. Best over ~2,000 segments/mo. Annual ~18% off.",
+          "corroboration": {
+            "url": "https://www.capterra.com/p/161117/Avochato/pricing/",
+            "accessedAt": "2026-06-12"
+          },
+          "source": {
+            "url": "https://www.avochato.com/pricing",
+            "accessedAt": "2026-06-12"
+          }
+        }
+      ],
+      "hipaa": true,
+      "baa": true,
+      "integrations": [
+        "Salesforce",
+        "HubSpot",
+        "Slack",
+        "Zapier",
+        "Microsoft Dynamics",
+        "Google",
+        "API"
+      ],
+      "bilingual": null,
+      "demoPhone": null,
+      "provenance": "Two published tiers (Pay-as-You-Go $0 base + $0.08/segment; Standard $210/mo + $0.03/segment) from avochato.com/pricing on 2026-06-12, corroborated by the Capterra 2026 Avochato pricing listing. Both bundle 5 users (+$42/mo each). The Custom (Premium) tier (15k+ segments, volume discounts) is quote-only and explicitly offers BAAs for HIPAA compliance — so hipaa=true, baa=true (via Custom). callsIncluded null: Avochato meters per segment, it does not bundle a credit allowance."
+    },
+    {
+      "slug": "quo",
+      "name": "Quo (formerly OpenPhone)",
+      "domain": "quo.com",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": 19,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 21,
+          "billingModel": "per_seat",
+          "notes": "$19/user/mo monthly, $15/user/mo annual (~21% off). 1 number per user, UNLIMITED texts + calls to US/CA included (no per-message metering for standard volume). +$5/mo per extra number. Shared numbers for up to 10 teammates. 'HIPAA ready' feature listed across all plans.",
+          "corroboration": {
+            "url": "https://www.ringover.com/blog/openphone-pricing-plans",
+            "accessedAt": "2026-06-12"
+          },
+          "source": {
+            "url": "https://www.quo.com/pricing",
+            "accessedAt": "2026-06-12"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 33,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 30,
+          "billingModel": "per_seat",
+          "notes": "$33/user/mo monthly, $23/user/mo annual (~30% off). Adds AI call summaries/transcripts, HubSpot/Salesforce, IVR, analytics, call recording.",
+          "corroboration": {
+            "url": "https://www.ringover.com/blog/openphone-pricing-plans",
+            "accessedAt": "2026-06-12"
+          },
+          "source": {
+            "url": "https://www.quo.com/pricing",
+            "accessedAt": "2026-06-12"
+          }
+        },
+        {
+          "name": "Scale",
+          "monthlyUsd": 47,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 26,
+          "billingModel": "per_seat",
+          "notes": "$47/user/mo monthly, $35/user/mo annual (~26% off). Adds AI call tags, dedicated onboarding, priority support, inbound phone support.",
+          "source": {
+            "url": "https://www.quo.com/pricing",
+            "accessedAt": "2026-06-12"
+          }
+        }
+      ],
+      "hipaa": true,
+      "baa": null,
+      "integrations": [
+        "HubSpot",
+        "Salesforce",
+        "Zapier",
+        "Slack",
+        "Gong",
+        "Google",
+        "Webhooks",
+        "API"
+      ],
+      "bilingual": null,
+      "demoPhone": null,
+      "provenance": "Per-user tiers (Starter $19/$15, Business $33/$23, Scale $47/$35 monthly/annual) from quo.com/pricing on 2026-06-12, corroborated by the Ringover 2026 OpenPhone/Quo pricing breakdown. Distinctive front-office model: unlimited US/CA texts AND calls on one number per seat (no bundled credit allowance to meter, so callsIncluded null). +$5/mo per extra number. 'HIPAA ready' listed as a cross-plan feature (hipaa=true); BAA terms require contacting sales (baa=null). Quo is the rebrand of OpenPhone."
+    },
+    {
+      "slug": "sakari",
+      "name": "Sakari",
+      "domain": "sakari.io",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": 25,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "hybrid",
+          "notes": "Entry $25/mo, scaling up to $495/mo on the published slider by message-segment volume. One free dedicated number (US/CA/UK/FR). Unlimited users and contacts. 90-day credit rollover. MMS +$0.02/msg. The vendor page uses an interactive slider, so individual tier NAMES/segment counts are not separately published beyond the $25 entry and $495 ceiling; only the entry base is recorded as a comparable plan. Some third-party sources cite ~12,500 segments at the Starter level.",
+          "corroboration": {
+            "url": "https://www.getapp.com/marketing-software/a/sakari/",
+            "accessedAt": "2026-06-12"
+          },
+          "source": {
+            "url": "https://sakari.io/pricing",
+            "accessedAt": "2026-06-12"
+          }
+        }
+      ],
+      "hipaa": null,
+      "baa": null,
+      "integrations": [
+        "HubSpot",
+        "Salesforce",
+        "Zapier",
+        "Slack",
+        "Google",
+        "ActiveCampaign",
+        "Make",
+        "API"
+      ],
+      "bilingual": null,
+      "demoPhone": null,
+      "provenance": "Slider-based pricing ($25/mo entry up to $495/mo by segment volume; free dedicated number; unlimited users) from sakari.io/pricing on 2026-06-12, corroborated by the GetApp 2026 Sakari profile ('starting at $25/mo'). The live page renders an interactive slider rather than discrete named tiers, so only the published $25 entry base is recorded; the per-tier segment counts are not enumerated on the page and are NOT invented (callsIncluded left null). HIPAA/BAA not stated (null)."
+    },
+    {
+      "slug": "textla",
+      "name": "Textla",
+      "domain": "textla.com",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": 25,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 24,
+          "billingModel": "per_message",
+          "notes": "$25/mo monthly, $19/mo annual (~24% off). Pure per-message model: $0.01/SMS (US), $0.03/MMS, $0.02/SMS segment (CA). Unlimited daily sends. Carrier fees absorbed into the $0.01 rate ('zero hidden fees').",
+          "corroboration": {
+            "url": "https://www.capterra.com/p/10017171/Textla/",
+            "accessedAt": "2026-06-12"
+          },
+          "source": {
+            "url": "https://www.textla.com/pricing",
+            "accessedAt": "2026-06-12"
+          }
+        },
+        {
+          "name": "Professional",
+          "monthlyUsd": 50,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 22,
+          "billingModel": "per_message",
+          "notes": "$50/mo monthly, $39/mo annual (~22% off). Same $0.01/SMS rate, more features. Enterprise is custom.",
+          "source": {
+            "url": "https://www.textla.com/pricing",
+            "accessedAt": "2026-06-12"
+          }
+        }
+      ],
+      "hipaa": null,
+      "baa": null,
+      "integrations": [
+        "Zapier",
+        "API",
+        "Webhooks"
+      ],
+      "bilingual": null,
+      "demoPhone": null,
+      "provenance": "Two published tiers (Starter $25/$19, Professional $50/$39 monthly/annual) plus custom Enterprise from textla.com/pricing on 2026-06-12, corroborated by the Capterra 2026 Textla listing. Low-cost per-message model ($0.01/SMS US, carrier fees included). callsIncluded null: Textla bundles no monthly allowance — base + $0.01 per message. HIPAA/BAA not stated (null)."
+    },
+    {
+      "slug": "text-em-all",
+      "name": "Text-Em-All",
+      "domain": "text-em-all.com",
+      "plans": [
+        {
+          "name": "Monthly (by group size)",
+          "monthlyUsd": 19,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "hybrid",
+          "notes": "From $19/mo, priced by contact-group size (1-50 contacts at entry, scaling to 2,500+). No per-message cost on the monthly plan for messaging the same groups; best for consistent senders. 'No added carrier surcharges or fees for users, numbers, or registration.'",
+          "corroboration": {
+            "url": "https://www.g2.com/products/text-em-all/pricing",
+            "accessedAt": "2026-06-12"
+          },
+          "source": {
+            "url": "https://www.text-em-all.com/pricing",
+            "accessedAt": "2026-06-12"
+          }
+        },
+        {
+          "name": "Credits (pay-as-you-go)",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_message",
+          "notes": "$0 base. Credits from 9 cents each (400 credits) scaling down with volume to ~5 cents, 100,000+ contact sales. 1 credit = 1 160-char text per recipient; credits never expire. Free Starter tier gives 25 test credits.",
+          "source": {
+            "url": "https://www.text-em-all.com/pricing",
+            "accessedAt": "2026-06-12"
+          }
+        }
+      ],
+      "hipaa": null,
+      "baa": null,
+      "integrations": [
+        "Zapier",
+        "API",
+        "Webhooks"
+      ],
+      "bilingual": null,
+      "demoPhone": null,
+      "provenance": "Two published models (Monthly from $19 priced by group size; Credits pay-as-you-go from 9 cents/credit) plus a free 25-credit Starter, from text-em-all.com/pricing on 2026-06-12, corroborated by the G2 2026 Text-Em-All pricing listing. No carrier surcharges or per-user/number fees. callsIncluded null: the monthly plan is priced by audience size, not a bundled message count. HIPAA/BAA not stated (null)."
+    },
+    {
+      "slug": "textrequest",
+      "name": "Text Request",
+      "domain": "textrequest.com",
+      "plans": [],
+      "hipaa": true,
+      "baa": null,
+      "integrations": [
+        "Zapier",
+        "HubSpot",
+        "Salesforce",
+        "Google",
+        "Slack",
+        "API"
+      ],
+      "bilingual": null,
+      "demoPhone": null,
+      "provenance": "Text Request renders its plan table as an on-page comparison IMAGE that yields no machine-readable pricing, and published third-party figures conflict across sources (both base prices and included-message volumes differ). Per the real-data-only doctrine we do not record figures we cannot verify from the vendor own published text, so plans are left empty (quote-only). HIPAA-compliant account is an explicit +$50/mo add-on (hipaa=true; BAA not detailed, baa=null). Contact the vendor for current pricing."
+    },
+    {
+      "slug": "textline",
+      "name": "Textline",
+      "domain": "textline.com",
+      "plans": [],
+      "hipaa": true,
+      "baa": true,
+      "integrations": [
+        "Slack",
+        "Zapier",
+        "Salesforce",
+        "HubSpot",
+        "Zendesk",
+        "Aircall",
+        "Webhooks",
+        "API"
+      ],
+      "bilingual": null,
+      "demoPhone": null,
+      "provenance": "Partially quote-gated at capture: textline.com/pricing and /plan-comparison (accessed 2026-06-12) publish the tier NAMES and structure (Essentials = 3 agents + 600 message credits/mo, +$50/agent; Pro = 5 agents + 2,000 credits/mo, +$70/agent; Enterprise custom), the per-credit overage ($0.03 add-on / $0.04 backup), 10DLC $15/mo, and a 20% annual discount — but the MONTHLY BASE PRICE for Essentials and Pro is NOT shown on the live page (routed to context/sales). Third-party reviews (business.com, G2) cite ~$59.97 Essentials / ~$249.95 Pro, but because the vendor page itself withholds the base price, plans[] is left empty rather than recording a base figure the vendor does not publish. Textline is explicitly HIPAA-compatible with BAAs available (additional fee), hence hipaa=true, baa=true. A leading shared-inbox business-texting brand for support/ops teams."
+    },
+    {
+      "slug": "textus",
+      "name": "TextUs",
+      "domain": "textus.com",
+      "plans": [],
+      "hipaa": null,
+      "baa": null,
+      "integrations": [
+        "Salesforce",
+        "HubSpot",
+        "Bullhorn",
+        "Greenhouse",
+        "Zapier",
+        "API"
+      ],
+      "bilingual": null,
+      "demoPhone": null,
+      "provenance": "Quote-gated at capture: textus.com/pricing (2026-06-12) publishes only a single '$499/mo base subscription' headline plus named Essential and Plus tiers whose specific prices are NOT shown and route to sales (third-party listings cite ~$749/mo Essential, but that is unverified against the live vendor page). Because the page exposes no complete per-tier figure and no free trial, plans[] is intentionally empty rather than recording a guessed tier price. Enterprise/recruiting-grade conversational texting (Bullhorn/Greenhouse focus). HIPAA/BAA not stated on the page (null)."
+    },
+    {
+      "slug": "podium",
+      "name": "Podium",
+      "domain": "podium.com",
+      "plans": [],
+      "hipaa": null,
+      "baa": null,
+      "integrations": [
+        "HubSpot",
+        "Salesforce",
+        "Google Business Profile",
+        "Mailchimp",
+        "Zapier",
+        "Jobber",
+        "ServiceTitan",
+        "QuickBooks",
+        "API"
+      ],
+      "bilingual": null,
+      "demoPhone": null,
+      "provenance": "Quote-gated at capture: podium.com/pricing (2026-06-12) now routes entirely to 'talk to our sales team for details' with NO published per-plan price on the live page (it directs to podium.com/getpricing and a sales line). Independent 2026 roundups (replifast, checkthat, capterra) report Core ~$399/mo (250 bulk credits, 5 numbers) and Pro ~$599/mo (500 credits, 15 numbers), both annual-contract, with $5/location low-volume or $20/location high-volume 10DLC fees — but these figures are NOT on the live vendor page, so plans[] is intentionally empty and the $399/$599 figures are recorded here as secondary-source context only, never as confirmed plans. A dominant front-office platform for local-service SMBs (reviews + payments + AI texting), which is why a front-office buyer shops it; pricing economics are sales-gated and contract-based. HIPAA/BAA not stated on the pricing page (null)."
+    },
+    {
+      "slug": "trumpia",
+      "name": "Trumpia",
+      "domain": "trumpia.com",
+      "plans": [],
+      "hipaa": null,
+      "baa": null,
+      "integrations": [
+        "Salesforce",
+        "Zapier",
+        "Mailchimp",
+        "API",
+        "Webhooks"
+      ],
+      "bilingual": null,
+      "demoPhone": null,
+      "provenance": "Inaccessible-at-capture, treated as quote-only to avoid fabrication: trumpia.com/pricing (2026-06-12) issued a 302 redirect to platform.trumpia.com/pricing/index.php which returned HTTP 404, so no live vendor pricing page could be read. Third-party listings (G2, getapp) report a tier ladder (Lite from ~$55/mo with 1,000 SMS + 5 keywords, Core ~$94-$118/mo with 3,000 SMS, Advanced ~$159-$299/mo with 5,000 SMS), but because the live vendor page could not be confirmed, these are NOT recorded as plans and plans[] is left empty rather than relying on secondary sources alone for plan entries. Usage-based SMS+email marketing automation suite. HIPAA/BAA not confirmed (null)."
+    },
+    {
+      "slug": "textel",
+      "name": "Textel",
+      "domain": "textel.net",
+      "plans": [],
+      "hipaa": null,
+      "baa": null,
+      "integrations": [
+        "NICE CXone",
+        "Genesys Cloud",
+        "Five9",
+        "RingCentral",
+        "API"
+      ],
+      "bilingual": null,
+      "demoPhone": null,
+      "provenance": "Quote-only: Textel (contact-center SMS that layers texting onto CCaaS platforms like NICE, Genesys, Five9, RingCentral) publishes no per-plan pricing on its site and all comparison directories (Capterra, GetApp, SoftwareAdvice, TrustRadius) note pricing is usage-based and quote-driven ('fees based on the Customer's monthly usage'). No public monthly figure exists to record, so plans[] is intentionally empty. Included here for completeness of the front-office vendor universe (the contact-center-adjacent end). HIPAA/BAA not published (null)."
+    }
+  ]
+}

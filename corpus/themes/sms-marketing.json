@@ -1,0 +1,691 @@
+{
+  "vertical": "sms-marketing",
+  "generatedAt": "2026-06-14",
+  "methodologyNotes": "Pricing fetched from official vendor pricing pages via WebFetch on 2026-06-14. Attentive publishes no self-serve USD prices (all quote/demo-only); recorded with null monthlyUsd. Klaviyo pricing page geo-redirected to German locale on first attempt; confirmed USD figures via SoftwareAdvice profile (corroboration). Postscript shows dual rates (old/new) on page — current lower rates recorded. SimpleTexting uses a dynamic calculator; base 500-credit plan confirmed at $29/mo base + $10/mo local number = $39/mo total on official page, and the full tier list confirmed via SoftwareAdvice. Omnisend pricing confirmed at $11.20 Standard / $41.30 Pro from direct site; SoftwareAdvice showed higher figures (likely stale). EZ Texting confirmed monthly and annual prices on official page. SlickText confirmed full plan table on two official page fetches. Textmagic is pure prepaid usage-based with no flat plans. All accessedAt dates set to 2026-06-14 per dataset spec.",
+  "vendors": [
+    {
+      "slug": "attentive",
+      "name": "Attentive",
+      "domain": "attentive.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Shopify",
+        "Klaviyo",
+        "Salesforce",
+        "HubSpot",
+        "Yotpo",
+        "Gorgias",
+        "Recharge",
+        "Okendo"
+      ],
+      "provenance": "Official pricing page https://www.attentive.com/pricing accessed 2026-06-14. Page explicitly states 'Attentive offers usage-based pricing, so you only pay for what you actually use' and directs all visitors to request a demo. No self-serve USD figures published for any plan tier. Pricing determined by message volume, subscriber list size, channels, and AI tools selected.",
+      "plans": [
+        {
+          "name": "SMS / MMS / RCS",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only. Usage-based pricing; no self-serve rate card published. Requires demo to receive a quote tailored to message volume and subscriber count.",
+          "source": {
+            "url": "https://www.attentive.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "SMS + Email",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only. Bundle of SMS and email channels. Pricing determined individually per customer via sales process.",
+          "source": {
+            "url": "https://www.attentive.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom enterprise pricing including Enterprise AI Suite. All pricing gated behind sales contact.",
+          "source": {
+            "url": "https://www.attentive.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "postscript",
+      "name": "Postscript",
+      "domain": "postscript.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Shopify",
+        "Shopify Plus",
+        "Klaviyo",
+        "Gorgias",
+        "Recharge",
+        "Yotpo",
+        "LoyaltyLion",
+        "Fondue"
+      ],
+      "provenance": "Official pricing page https://www.postscript.io/pricing accessed 2026-06-14. Four plans with published monthly base fees and per-message rates. Page shows dual rates (old/new) — current rates recorded. Carrier fees (avg $0.00418 SMS / $0.00841 MMS) are additional.",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "$0/mo platform fee but $49/month minimum spend on messages. SMS: $0.009/msg + carrier fees; MMS: $0.045/msg + carrier fees. Toll-free number included free. $100 trial credit for first 30 days.",
+          "source": {
+            "url": "https://www.postscript.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Growth",
+          "monthlyUsd": 100,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$100/mo platform fee. SMS: $0.008/msg + carrier fees; MMS: $0.03/msg + carrier fees. Toll-free number included free.",
+          "source": {
+            "url": "https://www.postscript.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Professional",
+          "monthlyUsd": 500,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$500/mo platform fee (most popular). SMS: $0.007/msg + carrier fees; MMS: $0.024/msg + carrier fees. Dedicated short code available as add-on at $750/mo.",
+          "source": {
+            "url": "https://www.postscript.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing via sales. Includes managed strategy via Postscript Plus add-on option. Aimed at highest-volume SMS programs.",
+          "source": {
+            "url": "https://www.postscript.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "simpletexting",
+      "name": "SimpleTexting",
+      "domain": "simpletexting.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Shopify",
+        "HubSpot",
+        "Mailchimp",
+        "Zapier",
+        "Salesforce",
+        "Slack",
+        "Google Sheets"
+      ],
+      "provenance": "Official pricing page https://simpletexting.com/pricing/ accessed 2026-06-14. Dynamic calculator-based pricing; base 500-credit plan shows $29/mo (credits) + $10/mo (local number) = $39/mo total. Additional tiers confirmed via SoftwareAdvice profile (corroboration). 20% discount on annual billing. Nonprofits receive 15% off.",
+      "plans": [
+        {
+          "name": "500 Credits",
+          "monthlyUsd": 39,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "$29/mo base credits + $10/mo local number. Annual: $398.40/yr (equiv. $33.20/mo). Extra credits at $0.055 each. Toll-free number available at no extra fee. Dedicated short code from $1,000/mo. Carrier fees ~$0.0025/msg (US). MMS costs 1 credit each.",
+          "source": {
+            "url": "https://simpletexting.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.softwareadvice.com/sms-marketing/simpletexting-profile/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "1,000 Credits",
+          "monthlyUsd": 59,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "$59/mo (includes local number). Annual billing saves 20%. Extra credits at $0.055 each.",
+          "source": {
+            "url": "https://www.softwareadvice.com/sms-marketing/simpletexting-profile/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "2,000 Credits",
+          "monthlyUsd": 89,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "$89/mo (includes local number). Annual billing saves 20%.",
+          "source": {
+            "url": "https://www.softwareadvice.com/sms-marketing/simpletexting-profile/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "3,000 Credits",
+          "monthlyUsd": 119,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "$119/mo (includes local number). Annual billing saves 20%.",
+          "source": {
+            "url": "https://www.softwareadvice.com/sms-marketing/simpletexting-profile/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "7,500 Credits",
+          "monthlyUsd": 239,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "$239/mo (includes local number). Annual billing saves 20%.",
+          "source": {
+            "url": "https://www.softwareadvice.com/sms-marketing/simpletexting-profile/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing for volumes exceeding 50,000 texts/month or for dedicated short codes (from $1,000/mo).",
+          "source": {
+            "url": "https://simpletexting.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "klaviyo-sms",
+      "name": "Klaviyo SMS",
+      "domain": "klaviyo.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Shopify",
+        "Shopify Plus",
+        "WooCommerce",
+        "BigCommerce",
+        "Magento",
+        "Salesforce Commerce Cloud",
+        "Recharge",
+        "Gorgias",
+        "Yotpo",
+        "LoyaltyLion"
+      ],
+      "provenance": "Official pricing page klaviyo.com/pricing geo-redirected to German locale on both attempts; USD amounts not rendered. USD plan prices confirmed via SoftwareAdvice profile https://www.softwareadvice.com/sms-marketing/klaviyo-profile/ accessed 2026-06-14, which listed Free at $0, Email at $20/mo, Email+SMS at $35/mo (500 contacts / 1,250 SMS credits baseline). Free plan of 150 SMS credits/mo corroborated by official page (German locale).",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Up to 250 active profiles. 500 emails/mo. 150 SMS/MMS credits/mo. Email support first 60 days only.",
+          "source": {
+            "url": "https://www.softwareadvice.com/sms-marketing/klaviyo-profile/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.klaviyo.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Email",
+          "monthlyUsd": 20,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Starting price for 251-500 active profiles; 5,000 emails/mo. Pricing scales with active profile count. SMS not included in this plan.",
+          "source": {
+            "url": "https://www.softwareadvice.com/sms-marketing/klaviyo-profile/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Email + SMS",
+          "monthlyUsd": 35,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Starting price at lowest contact tier; includes 1,250 SMS credits/mo. Pricing scales with active profile count and send volume. Additional SMS credits billed at per-credit rates.",
+          "source": {
+            "url": "https://www.softwareadvice.com/sms-marketing/klaviyo-profile/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "ez-texting",
+      "name": "EZ Texting",
+      "domain": "eztexting.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "HubSpot",
+        "Salesforce",
+        "Mailchimp",
+        "Constant Contact",
+        "Zapier",
+        "Shopify"
+      ],
+      "provenance": "Official pricing page https://www.eztexting.com/pricing accessed 2026-06-14. Four plans with transparent monthly and annual USD prices. SMS = 1 credit; MMS = 3 credits. Annual plans provide 6,000 credits upfront (except Enterprise at 200k/mo).",
+      "plans": [
+        {
+          "name": "Launch",
+          "monthlyUsd": 25,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "Up to 500 contacts. 500 monthly credits. Overage $0.04/credit. Local textable number. 1 user. Subject to telecom fee. Annual: $20/mo (6,000 yearly credits).",
+          "source": {
+            "url": "https://www.eztexting.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Boost",
+          "monthlyUsd": 75,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "500–2,000 contacts. 500 monthly credits. Overage $0.035/credit. Local high-volume number. 1 user. Telecom fee waived. Annual: $60/mo (6,000 yearly credits). Most popular tier.",
+          "source": {
+            "url": "https://www.eztexting.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Scale",
+          "monthlyUsd": 125,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "2,000–50,000 contacts. 500 monthly credits. Overage $0.03/credit. High-speed number. Onboarding specialist. Telecom fee waived. Annual: $100/mo (6,000 yearly credits).",
+          "source": {
+            "url": "https://www.eztexting.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": 3000,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "50,000+ contacts. 200,000 monthly credits. Overage $0.01/credit. Dedicated short code. Dedicated success manager. White-glove onboarding.",
+          "source": {
+            "url": "https://www.eztexting.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "slicktext",
+      "name": "SlickText",
+      "domain": "slicktext.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Shopify",
+        "Zapier",
+        "Mailchimp",
+        "HubSpot",
+        "Klaviyo",
+        "ActiveCampaign",
+        "WooCommerce"
+      ],
+      "provenance": "Official pricing page https://www.slicktext.com/pricing.php accessed 2026-06-14 (fetched multiple times for consistency). Prices and credit allocations are stable and confirmed across fetches ($29/500, $49/1k, $79/2k, $129/3.5k, $169/5k, $319/10k, $579/25k, $939/50k). The $169 tier is named 'Scale' on the official page (confirmed twice); earlier draft mislabeled it 'Advanced' — corrected. Names for the $319/$579/$939 tiers vary slightly between fetches; prices are authoritative. Annual billing provides 2 free months of credits (~17% effective discount).",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": 29,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "500 credits/mo. Unlimited contacts. Free incoming texts. Rollover credits (1 month). 1 premium sending number. Annual billing provides 2 free months of credits (~17% savings).",
+          "source": {
+            "url": "https://www.slicktext.com/pricing.php",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Professional",
+          "monthlyUsd": 49,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "1,000 credits/mo. Same features as Starter. Annual plan: 2 free months of credits.",
+          "source": {
+            "url": "https://www.slicktext.com/pricing.php",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 79,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "2,000 credits/mo. Annual plan: 2 free months of credits.",
+          "source": {
+            "url": "https://www.slicktext.com/pricing.php",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Growth",
+          "monthlyUsd": 129,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "3,500 credits/mo. Includes free 1-on-1 onboarding session. Annual plan: 1-year rollover credits.",
+          "source": {
+            "url": "https://www.slicktext.com/pricing.php",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Scale",
+          "monthlyUsd": 169,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "5,000 credits/mo. Includes free 1-on-1 onboarding session. Plan named 'Scale' on official pricing page (confirmed via two independent fetches 2026-06-14).",
+          "source": {
+            "url": "https://www.slicktext.com/pricing.php",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise Plus",
+          "monthlyUsd": 319,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "10,000 credits/mo. Includes onboarding.",
+          "source": {
+            "url": "https://www.slicktext.com/pricing.php",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise Pro",
+          "monthlyUsd": 579,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "25,000 credits/mo. Dedicated Customer Success Manager.",
+          "source": {
+            "url": "https://www.slicktext.com/pricing.php",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise Max",
+          "monthlyUsd": 939,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "50,000 credits/mo. Dedicated Customer Success Manager.",
+          "source": {
+            "url": "https://www.slicktext.com/pricing.php",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Custom Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom-built quote for volumes beyond Enterprise Max.",
+          "source": {
+            "url": "https://www.slicktext.com/pricing.php",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "omnisend",
+      "name": "Omnisend",
+      "domain": "omnisend.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Shopify",
+        "Shopify Plus",
+        "WooCommerce",
+        "BigCommerce",
+        "Magento",
+        "PrestaShop",
+        "Wix",
+        "Squarespace",
+        "Gorgias",
+        "Smile.io"
+      ],
+      "provenance": "Official pricing page https://www.omnisend.com/pricing/ accessed 2026-06-14. Base prices for lowest contact tier (500 contacts Standard, 2,500 contacts Pro). SMS is usage-based add-on billed on volume brackets, not a flat monthly fee. SoftwareAdvice listed $16/$59 — these appear stale; direct page prices of $11.20/$41.30 used as primary.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Up to 250 contacts. 500 emails/mo. 500 web push/mo. No SMS included.",
+          "source": {
+            "url": "https://www.omnisend.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Standard",
+          "monthlyUsd": 11.2,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Base price for 500 contacts; scales up by contact count. 6,000 emails/mo. Unlimited web push. $1 free SMS credit/mo included. SMS overage: $0.009/SMS (for monthly SMS spend $10–$49.99), $0.0085/SMS ($50–$999.99), $0.008/SMS ($1,000–$9,999.99), $0.007/SMS ($10,000+).",
+          "source": {
+            "url": "https://www.omnisend.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 41.3,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Base price for 2,500 contacts; scales up by contact count. Unlimited emails. Unlimited web push. ~3,933 free SMS credits/mo at the 2,500-contact tier. SMS rates same as Standard.",
+          "source": {
+            "url": "https://www.omnisend.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Custom",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "For 150,000+ contacts or custom needs. Tailored features, account expert, dedicated support.",
+          "source": {
+            "url": "https://www.omnisend.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "textmagic",
+      "name": "Textmagic",
+      "domain": "textmagic.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Zapier",
+        "HubSpot",
+        "Salesforce",
+        "Pipedrive",
+        "ActiveCampaign",
+        "Zoho CRM"
+      ],
+      "provenance": "Official pricing page https://www.textmagic.com/pricing/ accessed 2026-06-14. Textmagic is a pure prepaid usage-based system with no flat subscription plans. Customers purchase credit bundles; all services billed per-use. No traditional tiered plans exist.",
+      "plans": [
+        {
+          "name": "Pay-As-You-Go",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "No flat monthly fee. Prepaid credits; unused credits never expire with 100% refund guarantee. Outbound SMS: $0.049/msg (160 chars) standard; $0.01/msg via CPaaS connection. MMS: $0.08/msg. Virtual number: $10/mo (first month free). 10DLC campaign registration: $10/mo (first month free). Email: first 10,000/mo free, then $0.003/email. Voice calls: $0.041/min outbound, $0.023/min inbound.",
+          "source": {
+            "url": "https://www.textmagic.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    }
+  ]
+}

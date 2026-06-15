@@ -1,0 +1,686 @@
+{
+  "vertical": "webinar-platforms",
+  "generatedAt": "2026-06-14",
+  "methodologyNotes": "Self-serve USD pricing collected from each vendor's official pricing page where accessible on 2026-06-14. Zoom's pricing page (zoom.us/pricing/events) renders JS-only and returned empty content; Zapier's best-webinar-software guide (Dec 2025) was used as primary source for Zoom with corroboration from the GetApp listing. GoTo Webinar's official pricing page (goto.com/webinar/pricing) returned HTTP 403; GetApp and SoftwareAdvice listings were used instead, both confirming the same per-user figures. Livestorm's official page serves EUR pricing; GetApp was used for USD amounts. All non-telephony fields (minutesIncluded, callsIncluded, overagePerMin, overagePerCall) are null on every plan. annualDiscountPct is populated only when both monthly and annual rates appear in the same source. Quote-only/enterprise tiers carry monthlyUsd: null and billingModel: 'custom'.",
+  "vendors": [
+    {
+      "slug": "zoom-webinars",
+      "name": "Zoom Webinars",
+      "domain": "zoom.us",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Salesforce",
+        "HubSpot",
+        "Marketo",
+        "Slack",
+        "Microsoft Teams",
+        "Zapier",
+        "Eloqua"
+      ],
+      "provenance": "Official page zoom.us/pricing/events renders JS-only (blank payload on fetch, 2026-06-14). Prices sourced from Zapier 'Best Webinar Software' guide (published 2025-12-22, URL: https://zapier.com/blog/best-webinar-software/) stating '$66.67/month/license billed annually for up to 300 attendees'. Corroboration via GetApp listing at https://www.getapp.com/conference-management-software/a/zoom-webinars/pricing/ (returned 404; SoftwareAdvice listing also 404). Zapier figure is the only independently retrieved USD data point; higher attendee tiers exist but prices were not accessible from any non-JS source.",
+      "plans": [
+        {
+          "name": "Webinars 300 (Annual)",
+          "monthlyUsd": 66.67,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Entry tier — up to 300 attendees, unlimited webinars, billed annually. Month-to-month rate not confirmed from accessible sources. Higher attendee tiers (500, 1000, 3000, 5000, 10000+) available; prices not retrievable from non-JS sources.",
+          "source": {
+            "url": "https://zapier.com/blog/best-webinar-software/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Webinars 500+ (Quote)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Attendee tiers above 300 (500, 1000, 3000, 5000, 10000) exist on zoom.us but prices could not be retrieved from accessible (non-JS) sources on 2026-06-14.",
+          "source": {
+            "url": "https://zapier.com/blog/best-webinar-software/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "demio",
+      "name": "Demio",
+      "domain": "demio.com",
+      "hipaa": false,
+      "baa": false,
+      "bilingual": null,
+      "integrations": [
+        "HubSpot",
+        "Salesforce",
+        "Marketo",
+        "Pardot",
+        "Zapier",
+        "ActiveCampaign"
+      ],
+      "provenance": "Official pricing page demio.com/pricing fetched 2026-06-14 (Starter monthly confirmed at $63; Growth monthly confirmed at placeholder '$/mo' on raw page). GetApp listing https://www.getapp.com/content-management-software/a/demio/pricing/ returned complete figures: Starter $63/mo or $534/yr, Growth $117/mo or $962/yr, Premium $2354/yr, Unlimited $23540/yr. Premium monthly rate not published; annual-only billing confirmed.",
+      "plans": [
+        {
+          "name": "Starter Monthly",
+          "monthlyUsd": 63,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "1 host, 50 attendees per event, 3-hour session limit. Month-to-month billing.",
+          "source": {
+            "url": "https://demio.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/content-management-software/a/demio/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Starter Annual",
+          "monthlyUsd": 44.5,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 29,
+          "billingModel": "flat",
+          "notes": "$534/year ($44.50/month effective). 1 host, 50 attendees per event, 3-hour session limit. Zapier guide cites $45/month billed annually (minor rounding).",
+          "source": {
+            "url": "https://www.getapp.com/content-management-software/a/demio/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://zapier.com/blog/best-webinar-software/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Growth Monthly",
+          "monthlyUsd": 117,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "1 host at base price (additional hosts billed separately). Attendee options: 150, 500, 1000, or 3000 per event. 8-hour session limit. Automated events, custom branding.",
+          "source": {
+            "url": "https://www.getapp.com/content-management-software/a/demio/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://demio.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Growth Annual",
+          "monthlyUsd": 80.17,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 31,
+          "billingModel": "flat",
+          "notes": "$962/year ($80.17/month effective). 1 host at base price; attendee tiers 150–3000. 8-hour session limit.",
+          "source": {
+            "url": "https://www.getapp.com/content-management-software/a/demio/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Premium Annual",
+          "monthlyUsd": 196.17,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$2354/year ($196.17/month effective); no monthly billing option published. Unlimited hosts per account, attendee tiers 150–3000, 10-hour session limit, dedicated account manager, HubSpot/Salesforce/Marketo integrations.",
+          "source": {
+            "url": "https://www.getapp.com/content-management-software/a/demio/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://demio.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Unlimited Annual",
+          "monthlyUsd": 1961.67,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$23540/year ($1961.67/month effective); annual billing only. SSO, unlimited hosts, premium support.",
+          "source": {
+            "url": "https://www.getapp.com/content-management-software/a/demio/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "livestorm",
+      "name": "Livestorm",
+      "domain": "livestorm.co",
+      "hipaa": false,
+      "baa": false,
+      "bilingual": null,
+      "integrations": [
+        "HubSpot",
+        "Salesforce",
+        "Marketo",
+        "Pardot",
+        "Microsoft Dynamics",
+        "Zapier",
+        "Pipedrive",
+        "Intercom"
+      ],
+      "provenance": "Official pricing page livestorm.co/pricing fetched 2026-06-14 — rendered EUR pricing (€2.50 per attendee credit for Pro; Enterprise custom). USD figures sourced from GetApp listing https://www.getapp.com/conference-management-software/a/livestorm/pricing/ showing Free $0 and Pro $110/month. Corroborated by Zapier guide (Dec 2025) citing '$105/month billed annually'. Business and Enterprise prices are not publicly listed on any accessible source.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Up to 30 live attendees, 20-minute session limit, 30 active contacts/month.",
+          "source": {
+            "url": "https://www.getapp.com/conference-management-software/a/livestorm/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://livestorm.co/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 110,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "100–500 live attendees, up to 4-hour sessions, 100–500 active contacts/month. GetApp lists $110/month; Zapier (Dec 2025) cites $105/month billed annually — annualized rate may differ. Annual discount percentage not confirmed from a single source.",
+          "source": {
+            "url": "https://www.getapp.com/conference-management-software/a/livestorm/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://zapier.com/blog/best-webinar-software/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Up to 3000 live attendees, 4-hour sessions, unlimited active contacts. Price not publicly listed — contact sales.",
+          "source": {
+            "url": "https://www.getapp.com/conference-management-software/a/livestorm/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Up to 3000 live attendees, 12-hour sessions, SAML SSO, Salesforce/Marketo/Pardot integrations, dedicated CSM. Price not publicly listed.",
+          "source": {
+            "url": "https://livestorm.co/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "goto-webinar",
+      "name": "GoTo Webinar",
+      "domain": "goto.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Salesforce",
+        "HubSpot",
+        "Zapier",
+        "Microsoft Teams",
+        "Slack",
+        "GoTo Meeting"
+      ],
+      "provenance": "Official pricing page goto.com/webinar/pricing returned HTTP 403 on 2026-06-14. Prices sourced from GetApp listing https://www.getapp.com/conference-management-software/a/gotowebinar/ and corroborated by SoftwareAdvice listing https://www.softwareadvice.com/webinars/goto-webinar-profile/ — both show identical per-user monthly figures: Lite $59, Standard $129, Pro $249, Enterprise pricing on request. Attendee limits per tier not published on either aggregator source; annual pricing not disclosed in available sources.",
+      "plans": [
+        {
+          "name": "Lite",
+          "monthlyUsd": 59,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$59/user/month. Entry tier. Attendee limit not specified in aggregator sources; official page inaccessible. Automated emails, polls, handouts, video sharing included.",
+          "source": {
+            "url": "https://www.getapp.com/conference-management-software/a/gotowebinar/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.softwareadvice.com/webinars/goto-webinar-profile/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Standard",
+          "monthlyUsd": 129,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$129/user/month. Attendee limit not specified in aggregator sources.",
+          "source": {
+            "url": "https://www.getapp.com/conference-management-software/a/gotowebinar/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.softwareadvice.com/webinars/goto-webinar-profile/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 249,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$249/user/month. Attendee limit not specified in aggregator sources.",
+          "source": {
+            "url": "https://www.getapp.com/conference-management-software/a/gotowebinar/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.softwareadvice.com/webinars/goto-webinar-profile/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Pricing available upon request. SoftwareAdvice listed $499/user/month but this conflicts with 'request' language on other sources; recorded as null to be safe.",
+          "source": {
+            "url": "https://www.getapp.com/conference-management-software/a/gotowebinar/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "webinarjam",
+      "name": "WebinarJam",
+      "domain": "webinarjam.com",
+      "hipaa": false,
+      "baa": false,
+      "bilingual": null,
+      "integrations": [
+        "Zapier",
+        "AWeber",
+        "Drip",
+        "GetResponse",
+        "Infusionsoft",
+        "ActiveCampaign",
+        "ConvertKit"
+      ],
+      "provenance": "Official pricing page webinarjam.com/pricing fetched 2026-06-14; complete plan details confirmed. Also fetched home.webinarjam.com/pricing — same data returned. Corroborated by GetApp listing https://www.getapp.com/conference-management-software/a/webinarjam/pricing/ confirming identical monthly prices.",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": 49,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "$49/month or $39/month billed annually ($468/year). 1 host, up to 100 attendees, 1-hour session limit, unlimited webinars.",
+          "source": {
+            "url": "https://webinarjam.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/conference-management-software/a/webinarjam/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Basic",
+          "monthlyUsd": 99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "$99/month or $79/month billed annually ($948/year, saves $240). 2 hosts, up to 500 attendees, 2-hour session limit. Most popular plan. Includes EverWebinar (automated webinars).",
+          "source": {
+            "url": "https://webinarjam.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/conference-management-software/a/webinarjam/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Professional",
+          "monthlyUsd": 299,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 23,
+          "billingModel": "flat",
+          "notes": "$299/month or $229/month billed annually ($2748/year, saves $840). 4 hosts, up to 2000 attendees, 3-hour session limit. Includes EverWebinar.",
+          "source": {
+            "url": "https://webinarjam.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/conference-management-software/a/webinarjam/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": 499,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 24,
+          "billingModel": "flat",
+          "notes": "$499/month or $379/month billed annually ($4548/year, saves $1440). 6 hosts, up to 5000 attendees, 4-hour session limit. Includes EverWebinar.",
+          "source": {
+            "url": "https://webinarjam.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/conference-management-software/a/webinarjam/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "ewebinar",
+      "name": "eWebinar",
+      "domain": "ewebinar.com",
+      "hipaa": false,
+      "baa": false,
+      "bilingual": null,
+      "integrations": [
+        "Zoom",
+        "Slack",
+        "HubSpot",
+        "Marketo",
+        "Salesforce",
+        "SendGrid",
+        "Zapier",
+        "Twilio",
+        "Vimeo",
+        "Chatbase"
+      ],
+      "provenance": "Official pricing page ewebinar.com/pricing fetched 2026-06-14; complete plan details confirmed (Level 1 $99/mo, Level 2 $199/mo, Level 3 $299/mo, Enterprise quote-only). Annual pricing confirmed at 15% discount. Corroborated by GetApp listing https://www.getapp.com/conference-management-software/a/ewebinar/pricing/ confirming identical monthly prices.",
+      "plans": [
+        {
+          "name": "Level 1",
+          "monthlyUsd": 99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 15,
+          "billingModel": "flat",
+          "notes": "$99/month or ~$84/month billed annually ($1010/year, 15% discount per official page; Zapier guide cites $84/month annually). Up to 1 active eWebinar, 1000 registrants/month, unlimited recurring sessions and team members.",
+          "source": {
+            "url": "https://ewebinar.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/conference-management-software/a/ewebinar/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Level 2",
+          "monthlyUsd": 199,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 15,
+          "billingModel": "flat",
+          "notes": "$199/month or ~$169/month billed annually ($2030/year, 15% discount). Up to 5 active eWebinars, 3000 registrants/month.",
+          "source": {
+            "url": "https://ewebinar.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/conference-management-software/a/ewebinar/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Level 3",
+          "monthlyUsd": 299,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 15,
+          "billingModel": "flat",
+          "notes": "$299/month or ~$254/month billed annually ($3050/year, 15% discount). Up to 15 active eWebinars, 5000 registrants/month. Additional eWebinars: $15/month per 5.",
+          "source": {
+            "url": "https://ewebinar.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/conference-management-software/a/ewebinar/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom features by request. Contact sales for pricing.",
+          "source": {
+            "url": "https://ewebinar.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "crowdcast",
+      "name": "Crowdcast",
+      "domain": "crowdcast.io",
+      "hipaa": false,
+      "baa": false,
+      "bilingual": null,
+      "integrations": [
+        "Stripe",
+        "Zapier"
+      ],
+      "provenance": "Official pricing page crowdcast.io/pricing fetched 2026-06-14; complete plan details confirmed (Lite $49, Pro $89, Business $195 monthly; all plans 30% cheaper annually). Corroborated by GetApp listing https://www.getapp.com/conference-management-software/a/crowdcast/pricing/ confirming identical monthly prices.",
+      "plans": [
+        {
+          "name": "Lite",
+          "monthlyUsd": 49,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 30,
+          "billingModel": "flat",
+          "notes": "$49/month or $34.30/month billed annually (30% savings). 1 host seat, 100+ live attendees, 10 streaming hours/month, 2-hour session limit, 1GB studio storage. Overage: $0.15/extra attendee, $20/5 extra hours. Stripe transaction fee: 5%.",
+          "source": {
+            "url": "https://crowdcast.io/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/conference-management-software/a/crowdcast/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 89,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 30,
+          "billingModel": "flat",
+          "notes": "$89/month or $62.30/month billed annually (30% savings). 2 host seats, 250+ live attendees, 20 streaming hours/month, 4-hour session limit, multistream to 1 destination, 5GB storage. Stripe fee: 5%.",
+          "source": {
+            "url": "https://crowdcast.io/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/conference-management-software/a/crowdcast/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 195,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 30,
+          "billingModel": "flat",
+          "notes": "$195/month or $136.50/month billed annually (30% savings). 4 host seats, 1000+ live attendees, 40 streaming hours/month, 6-hour session limit, multistream to 3 destinations, 10GB storage. Stripe fee: 2%.",
+          "source": {
+            "url": "https://crowdcast.io/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/conference-management-software/a/crowdcast/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "bigmarker",
+      "name": "BigMarker",
+      "domain": "bigmarker.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Zapier",
+        "Stripe",
+        "Authorize.net"
+      ],
+      "provenance": "Official pricing page get.bigmarker.com/pricing fetched 2026-06-14 (redirected from bigmarker.com/pricing). All three plans (Basic, Enterprise, Enterprise+) show 'Let's talk — Request a Quote' with no published USD figures. No self-serve pricing available.",
+      "plans": [
+        {
+          "name": "Basic",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Up to 1000 live attendees, 1 host license. Webinars, chat/polls/Q&A, recording, registration, email automation, basic integrations. Quote-only.",
+          "source": {
+            "url": "https://get.bigmarker.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Up to 10000 live attendees, 4 host licenses. Adds virtual events, simulive/evergreen webinars, breakout rooms, certificates, API access, dedicated CSM. Quote-only.",
+          "source": {
+            "url": "https://get.bigmarker.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise+",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Up to 500000 live attendees, 6 host licenses. Adds white-label domains, custom designers, live captions, SSO, MFA, mobile SDK. Quote-only.",
+          "source": {
+            "url": "https://get.bigmarker.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    }
+  ]
+}

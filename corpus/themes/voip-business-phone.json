@@ -1,0 +1,587 @@
+{
+  "vertical": "voip-business-phone",
+  "generatedAt": "2026-06-13",
+  "methodologyNotes": "Published self-serve pricing was collected from each provider's own pricing page on the accessed date, corroborated with dedicated 2026 pricing-review sources where the official page geolocated outside the USA, rendered prices via a JavaScript seat slider, or returned a 403/429. All prices are per-user (per-seat) per month in USD unless the provider sells flat per-account (Grasshopper, noted billingModel flat); where annual billing is required to reach the quoted rate the monthly list rate and annualDiscountPct are recorded. Quote-only tiers (8x8 entirely, plus Enterprise/contact-sales tiers) are recorded with monthlyUsd null, and the minutes/calls/overage fields are null except where a provider publishes a metered per-minute rate (Zoom Phone Metered).",
+  "vendors": [
+    {
+      "slug": "ringcentral",
+      "name": "RingCentral",
+      "domain": "ringcentral.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Microsoft 365",
+        "Google Workspace",
+        "Salesforce",
+        "HubSpot",
+        "Slack",
+        "Zendesk",
+        "ServiceNow"
+      ],
+      "provenance": "https://www.ringcentral.com/office/plansandpricing.html (official; prices render behind a per-user seat selector, so RingEX Core/Advanced/Ultra rates corroborated via cloudtalk.io and getvoip.com 2026 reviews)",
+      "plans": [
+        {
+          "name": "Core",
+          "monthlyUsd": 30,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 33,
+          "billingModel": "per_seat",
+          "notes": "Per-user/month list rate ($20/user/mo billed annually). Unlimited US/Canada calling, business SMS, IVR auto-attendant, single-level IVR, voicemail-to-text, basic integrations.",
+          "source": {
+            "url": "https://www.ringcentral.com/office/plansandpricing.html",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://www.cloudtalk.io/blog/ringcentral-pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Advanced",
+          "monthlyUsd": 35,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 29,
+          "billingModel": "per_seat",
+          "notes": "Per-user/month list rate ($25/user/mo billed annually). Adds auto call recording, multi-level IVR, advanced call handling/monitoring, CRM integrations (Salesforce, Zendesk).",
+          "source": {
+            "url": "https://www.ringcentral.com/office/plansandpricing.html",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://www.cloudtalk.io/blog/ringcentral-pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Ultra",
+          "monthlyUsd": 45,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 22,
+          "billingModel": "per_seat",
+          "notes": "Per-user/month list rate ($35/user/mo billed annually). Adds RingSense AI, unlimited storage, advanced business analytics and device analytics.",
+          "source": {
+            "url": "https://www.ringcentral.com/office/plansandpricing.html",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://www.cloudtalk.io/blog/ringcentral-pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "nextiva",
+      "name": "Nextiva",
+      "domain": "nextiva.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Salesforce",
+        "HubSpot",
+        "Zendesk",
+        "Microsoft 365",
+        "Google Workspace",
+        "Zoho",
+        "ServiceNow"
+      ],
+      "provenance": "https://www.nextiva.com/pricing (official pricing page accessed 2026-06-13)",
+      "plans": [
+        {
+          "name": "Core",
+          "monthlyUsd": 15,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 35,
+          "billingModel": "per_seat",
+          "notes": "Per-user/month, page lists $15/user/mo (monthly) with $23/user/mo shown as the annual reference rate marked 35% savings. Business phone, team messaging, unlimited US/Canada calling, mobile and desktop apps.",
+          "source": {
+            "url": "https://www.nextiva.com/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Engage",
+          "monthlyUsd": 25,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Per-user/month, most-popular small-business tier. Adds multi-channel engagement (voice, SMS, social, email), call recording, and advanced routing on top of Core.",
+          "source": {
+            "url": "https://www.nextiva.com/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Scale",
+          "monthlyUsd": 75,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Per-user/month, newest top small-business tier. Adds higher engagement volume and advanced features; no annual discount shown on the page.",
+          "source": {
+            "url": "https://www.nextiva.com/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Enterprise (Professional / Premium contact center)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Contact-center / enterprise tiers. Essential starts at $75/agent/mo, Professional and Premium are Contact Sales (quote-only, no public price).",
+          "source": {
+            "url": "https://www.nextiva.com/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "dialpad",
+      "name": "Dialpad",
+      "domain": "dialpad.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Salesforce",
+        "HubSpot",
+        "Microsoft 365",
+        "Google Workspace",
+        "Zendesk",
+        "Slack",
+        "Zapier"
+      ],
+      "provenance": "https://www.dialpad.com/pricing/ (official page returned HTTP 403 to fetcher; Dialpad Connect Standard/Pro/Enterprise rates corroborated via cloudtalk.io 2026 review)",
+      "plans": [
+        {
+          "name": "Standard",
+          "monthlyUsd": 27,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 44,
+          "billingModel": "per_seat",
+          "notes": "Dialpad Connect entry tier, per-user/month ($15/user/mo billed annually). Unlimited US/Canada calling, AI call transcription and summaries, SMS/MMS, video meetings, 1+ seat.",
+          "source": {
+            "url": "https://www.dialpad.com/pricing/",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://www.cloudtalk.io/blog/dialpad-pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 35,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 29,
+          "billingModel": "per_seat",
+          "notes": "Per-user/month ($25/user/mo billed annually). Adds CRM integrations (Salesforce, HubSpot, Zendesk), multiple phone numbers per user, local number support in 70+ countries, 24/7 live support.",
+          "source": {
+            "url": "https://www.dialpad.com/pricing/",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://www.cloudtalk.io/blog/dialpad-pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Contact sales / quote-only. Adds SSO, 100% uptime SLA, multiple SIP trunks, priority live support, integrations with extensions.",
+          "source": {
+            "url": "https://www.dialpad.com/pricing/",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://www.cloudtalk.io/blog/dialpad-pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "8x8",
+      "name": "8x8",
+      "domain": "8x8.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Microsoft Teams",
+        "Salesforce",
+        "Microsoft 365",
+        "Google Workspace",
+        "Zendesk",
+        "ServiceNow",
+        "HubSpot"
+      ],
+      "provenance": "https://www.8x8.com/products/plans-and-pricing (official page returned HTTP 429 and no longer publishes prices; quote-only status confirmed via cloudtalk.io and getvoip.com 2026 reviews)",
+      "plans": [
+        {
+          "name": "Unified Communications (formerly X2/X4)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Quote-only; 8x8 removed all prices from its site. UCaaS voice, team chat, video meetings, unlimited calling to multiple countries. Third-party reports of ~$24-$44/user/mo are unverified and not published.",
+          "source": {
+            "url": "https://www.8x8.com/products/plans-and-pricing",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://www.cloudtalk.io/blog/8x8-pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Contact Center (formerly X6)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Quote-only contact-center tier (voice/digital channels, IVR, analytics). No public price published.",
+          "source": {
+            "url": "https://www.8x8.com/products/plans-and-pricing",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://www.cloudtalk.io/blog/8x8-pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "CX Beyond the Contact Center (formerly X7/X8)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Quote-only top customer-experience tier. No public price published.",
+          "source": {
+            "url": "https://www.8x8.com/products/plans-and-pricing",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://www.cloudtalk.io/blog/8x8-pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "ooma-office",
+      "name": "Ooma Office",
+      "domain": "ooma.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Salesforce",
+        "HubSpot",
+        "Microsoft Dynamics 365",
+        "Zoho CRM"
+      ],
+      "provenance": "https://www.ooma.com/small-business-phone-systems/plans/ (official pricing page accessed 2026-06-13)",
+      "plans": [
+        {
+          "name": "Essentials",
+          "monthlyUsd": 19.95,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Per-user/month, no contract. 100+ features, unlimited calling in US/Canada/Mexico/Puerto Rico, virtual receptionist, mobile app, one free toll-free number, digital fax.",
+          "source": {
+            "url": "https://www.ooma.com/small-business-phone-systems/plans/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 24.95,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Per-user/month. Everything in Essentials plus desktop app, text messaging (up to 250/mo), video conferencing (up to 25), call recording, enhanced call blocking.",
+          "source": {
+            "url": "https://www.ooma.com/small-business-phone-systems/plans/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Pro Plus",
+          "monthlyUsd": 29.95,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Per-user/month. Everything in Pro plus AI transcriptions, AI insights (beta), CRM integration, text messaging (up to 1000/mo), video conferencing (up to 100), team chat, hot desking, call queuing.",
+          "source": {
+            "url": "https://www.ooma.com/small-business-phone-systems/plans/",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "zoom-phone",
+      "name": "Zoom Phone",
+      "domain": "zoom.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Salesforce",
+        "Microsoft 365",
+        "Google Workspace",
+        "HubSpot",
+        "Zendesk",
+        "Slack",
+        "ServiceNow"
+      ],
+      "provenance": "https://www.zoom.com/en/products/voip-phone/pricing/ (official page returned HTTP 404 to fetcher; standalone Zoom Phone plan rates corroborated via cloudtalk.io and krispcall.com 2026 reviews)",
+      "plans": [
+        {
+          "name": "US & Canada Metered",
+          "monthlyUsd": 10,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": 0.0242,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Per-user/month base fee ($10/user/mo). Pay-as-you-go domestic calling billed at ~$0.0242/min outbound; includes DID, SMS/MMS, IVR.",
+          "source": {
+            "url": "https://www.zoom.com/en/products/voip-phone/pricing/",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://krispcall.com/general/zoom-phone-pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "US & Canada Unlimited",
+          "monthlyUsd": 15,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Per-user/month ($15/user/mo billed annually). Unlimited US/Canada calling, DID, SMS/MMS, IVR, call recording.",
+          "source": {
+            "url": "https://www.zoom.com/en/products/voip-phone/pricing/",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://www.cloudtalk.io/blog/zoom-phone-pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Global Select",
+          "monthlyUsd": 20,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Per-user/month ($20/user/mo billed annually). Unlimited calling within one of 40+ supported countries plus a local DID; international cross-border dialing is a separate add-on.",
+          "source": {
+            "url": "https://www.zoom.com/en/products/voip-phone/pricing/",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://www.cloudtalk.io/blog/zoom-phone-pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "vonage-business",
+      "name": "Vonage Business Communications",
+      "domain": "vonage.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Salesforce",
+        "Microsoft 365",
+        "Google Workspace",
+        "HubSpot",
+        "Zoho",
+        "Microsoft Teams",
+        "Zapier"
+      ],
+      "provenance": "https://www.vonage.com/unified-communications/small-business/plans-and-pricing/ (official page returned HTTP 403 to fetcher; Mobile/Premium/Advanced per-line rates corroborated via cloudtalk.io 2026 review)",
+      "plans": [
+        {
+          "name": "Mobile",
+          "monthlyUsd": 19.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 30,
+          "billingModel": "per_seat",
+          "notes": "Per-line/month list rate ($13.99/line/mo with annual commitment). Unlimited calls and SMS in US/Canada, mobile and desktop apps, team messaging. Per-line price drops at higher line counts (5-19, 20+).",
+          "source": {
+            "url": "https://www.vonage.com/unified-communications/small-business/plans-and-pricing/",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://www.cloudtalk.io/blog/vonage-pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": 29.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 30,
+          "billingModel": "per_seat",
+          "notes": "Per-line/month list rate ($20.99/line/mo with annual commitment). Adds multi-level auto attendant, CRM integrations, unlimited video meetings (up to 100), IP desk phone support.",
+          "source": {
+            "url": "https://www.vonage.com/unified-communications/small-business/plans-and-pricing/",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://www.cloudtalk.io/blog/vonage-pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Advanced",
+          "monthlyUsd": 39.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 30,
+          "billingModel": "per_seat",
+          "notes": "Per-line/month list rate ($27.99/line/mo with annual commitment). Adds on-demand call recording (15 hrs), call group, visual voicemail. Tiered per-line discounts at 5-19 and 20+ lines.",
+          "source": {
+            "url": "https://www.vonage.com/unified-communications/small-business/plans-and-pricing/",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://www.cloudtalk.io/blog/vonage-pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "grasshopper",
+      "name": "Grasshopper",
+      "domain": "grasshopper.com",
+      "hipaa": false,
+      "baa": false,
+      "bilingual": null,
+      "integrations": [
+        "Google Workspace",
+        "Microsoft 365"
+      ],
+      "provenance": "https://grasshopper.com/plans/ (official page geoblocked to fetcher; flat per-account True Solo/Solo Plus/Small Business rates corroborated via grasshopper.com blog and getvoip.com 2026 reviews). Grasshopper bills flat per account, not per user.",
+      "plans": [
+        {
+          "name": "True Solo",
+          "monthlyUsd": 18,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 22,
+          "billingModel": "flat",
+          "notes": "Flat per-account/month list rate ($14/mo billed annually). 1 phone number, 1 extension, unlimited calls and texts (US/Canada), mobile and desktop apps.",
+          "source": {
+            "url": "https://grasshopper.com/blog/phone-system-pricing",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://www.cloudtalk.io/blog/grasshopper-pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Solo Plus",
+          "monthlyUsd": 32,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 22,
+          "billingModel": "flat",
+          "notes": "Flat per-account/month list rate ($25/mo billed annually). 1 phone number, 3 extensions, unlimited team members on the account at the flat rate.",
+          "source": {
+            "url": "https://grasshopper.com/blog/phone-system-pricing",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://www.cloudtalk.io/blog/grasshopper-pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    }
+  ]
+}

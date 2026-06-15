@@ -1,0 +1,353 @@
+{
+  "vertical": "food-delivery",
+  "generatedAt": "2026-06-14",
+  "methodologyNotes": "Published self-serve USD pricing was collected for each food-delivery membership on the accessed date and independently re-verified against current (June 2026) vendor and reputable comparison sources. DashPass ($9.99/mo, $96/yr) confirmed. Uber One confirmed at $9.99/mo and $96/yr (~$8/mo) via multiple current comparison sources; the annual plan is now recorded. Grubhub+ confirmed at $9.99/mo standalone (free for Amazon Prime members, made a permanent Prime benefit per Amazon's May 2024 announcement). Instacart+ confirmed at $9.99/mo, $99/yr. Walmart+ re-confirmed as still $12.95/mo and $98/yr in 2026 (no price increase took effect; Assist plan $6.47/mo / $49/yr). Amazon Prime confirmed at $14.99/mo, $139/yr. Gopuff Fam: monthly $7.99 re-confirmed; the previously recorded annual of $59.99/yr is stale 2021 launch pricing and current sources disagree on the present annual figure ($79.99/yr vs $71.88/yr), so the Gopuff Fam annual monthlyUsd is set to null pending a single authoritative confirmation. All fields minutesIncluded, callsIncluded, overagePerMin, overagePerCall are null (non-telephony vertical). hipaa/baa fields are null throughout as food-delivery memberships are consumer retail services with no healthcare angle. bilingual is null as all services are US-English self-serve. integrations list third-party platform bundles explicitly advertised by the vendor.",
+  "vendors": [
+    {
+      "slug": "doordash-dashpass",
+      "name": "DoorDash DashPass",
+      "domain": "doordash.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Chase",
+        "Mastercard",
+        "Caviar"
+      ],
+      "provenance": "Pricing confirmed from DoorDash official help article at help.doordash.com/consumers/s/article/What-is-DashPass (fetched live, returned pricing data). Student plan and Family plan pricing not returned by any reachable official page and are therefore not recorded.",
+      "plans": [
+        {
+          "name": "DashPass Monthly",
+          "monthlyUsd": 9.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "$9.99/month billed monthly. Benefits include $0 delivery fees and reduced service fees on eligible orders from DashPass merchants on DoorDash and Caviar. Annual plan ($96/year = $8/month) saves ~20% vs monthly.",
+          "source": {
+            "url": "https://help.doordash.com/consumers/s/article/What-is-DashPass",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.aboutamazon.com/news/retail/amazon-prime-grubhub-plus-delivery",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "DashPass Annual",
+          "monthlyUsd": 8,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "$96/year billed annually (= $8/month). Same benefits as monthly plan. Month-to-month rate is $9.99/month.",
+          "source": {
+            "url": "https://help.doordash.com/consumers/s/article/What-is-DashPass",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "uber-one",
+      "name": "Uber One",
+      "domain": "uber.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Uber Eats",
+        "Uber rides"
+      ],
+      "provenance": "Monthly price of $9.99 confirmed from official uber.com/us/en/uber-one/ membership page. Annual price of $96/year (~$8/month) confirmed in June 2026 from reputable comparison sources (DealNews Uber One feature and corroborating pricing roundups); annual plan is now recorded. Uber One covers both Uber Eats food delivery and Uber ride benefits.",
+      "plans": [
+        {
+          "name": "Uber One Monthly",
+          "monthlyUsd": 9.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "$9.99/month; includes $0 delivery fee plus up to 10% off eligible Uber Eats orders and 6% back on Uber rides as credits. 4-week free trial available for eligible new members. Annual plan ($96/year = $8/month) saves ~20% vs monthly. Student rate is $4.99/month or $48/year.",
+          "source": {
+            "url": "https://www.uber.com/us/en/uber-one/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.dealnews.com/features/uber-one/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Uber One Annual",
+          "monthlyUsd": 8,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "$96/year billed annually (= $8/month). Same benefits as monthly plan. Month-to-month rate is $9.99/month. Confirmed from current (June 2026) comparison sources.",
+          "source": {
+            "url": "https://www.dealnews.com/features/uber-one/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "grubhub-plus",
+      "name": "Grubhub+",
+      "domain": "grubhub.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Amazon Prime"
+      ],
+      "provenance": "Official grubhub.com pages returned HTTP 403 or JS-only content. Standalone monthly price of $9.99 (valued at $120/year) and the Amazon Prime inclusion benefit confirmed from Amazon's official newsroom article at aboutamazon.com/news/retail/amazon-prime-grubhub-plus-delivery (fetched live). Amazon Prime members can activate Grubhub+ for free at amazon.com/grubhub+.",
+      "plans": [
+        {
+          "name": "Grubhub+ Standalone",
+          "monthlyUsd": 9.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$9.99/month standalone (valued at $120/year per Amazon's 2022 partnership announcement). Benefits include $0 delivery fees on eligible orders, lower service fees, 5% credit back on pickup orders. Amazon Prime members receive Grubhub+ at no additional cost as a Prime benefit.",
+          "source": {
+            "url": "https://www.aboutamazon.com/news/retail/amazon-prime-grubhub-plus-delivery",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Grubhub+ with Amazon Prime",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Included at no additional cost for Amazon Prime members (Prime is $14.99/month or $139/year separately). Same Grubhub+ benefits as standalone plan. No auto-renewal to paid plan upon activation via Amazon. Requires active Amazon Prime membership.",
+          "source": {
+            "url": "https://www.aboutamazon.com/news/retail/amazon-prime-grubhub-plus-delivery",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "instacart-plus",
+      "name": "Instacart+",
+      "domain": "instacart.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Peacock",
+        "New York Times Cooking"
+      ],
+      "provenance": "Pricing confirmed from official instacart.com/plus membership page (fetched live). Page displayed both monthly and annual pricing. Instacart+ covers grocery and retail delivery as well as eligible restaurant delivery orders.",
+      "plans": [
+        {
+          "name": "Instacart+ Monthly",
+          "monthlyUsd": 9.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "$9.99/month billed monthly. Benefits include $0 delivery fees on grocery/retail orders of $10+, Costco orders of $35+, and eligible restaurant orders of $25+. Includes Peacock streaming (valued at $109.99/year) and NYT Cooking ($50/year). 14-day free trial for new members. Annual plan ($99/year = $8.25/month) saves ~17%.",
+          "source": {
+            "url": "https://www.instacart.com/plus",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Instacart+ Annual",
+          "monthlyUsd": 8.25,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "$99/year billed annually (= $8.25/month). Same benefits as monthly plan. Month-to-month rate is $9.99/month.",
+          "source": {
+            "url": "https://www.instacart.com/plus",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "walmart-plus",
+      "name": "Walmart+",
+      "domain": "walmart.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Paramount+",
+        "Peacock"
+      ],
+      "provenance": "Pricing of $12.95/month and $98/year re-confirmed as still current in June 2026 from multiple reputable comparison sources (CNBC Select, NBC News Select, DealNews), corroborating the original $12.95/$98 figure. No price increase has taken effect; the previously feared 2024 hike did not materialize. Walmart+ Assist for government-assistance recipients confirmed at $6.47/month or $49/year.",
+      "plans": [
+        {
+          "name": "Walmart+ Monthly",
+          "monthlyUsd": 12.95,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 37,
+          "billingModel": "flat",
+          "notes": "$12.95/month billed monthly, re-confirmed as still current in June 2026. Benefits include free same-day delivery from Walmart stores, fuel discounts, Scan & Go in-store, and Paramount+ Essential streaming included. Annual plan ($98/year = $8.17/month) saves ~37%.",
+          "source": {
+            "url": "https://www.cnbc.com/select/walmart-plus-membership-deal/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://clark.com/shopping-retail/walmart-plus/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Walmart+ Annual",
+          "monthlyUsd": 8.17,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 37,
+          "billingModel": "flat",
+          "notes": "$98/year billed annually (= $8.17/month), re-confirmed as still current in June 2026. Same benefits as monthly plan. Month-to-month rate is $12.95/month.",
+          "source": {
+            "url": "https://www.cnbc.com/select/walmart-plus-membership-deal/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://clark.com/shopping-retail/walmart-plus/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Walmart+ Assist",
+          "monthlyUsd": 6.47,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$6.47/month (or $49/year) for government-assistance recipients (EBT/SNAP cardholders, Medicaid recipients). Approximately half the regular price. Same membership benefits as the standard Walmart+ plan.",
+          "source": {
+            "url": "https://techcrunch.com/2023/07/20/walmart-assist-halves-the-price-of-its-prime-competitor-for-those-on-government-assistance/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "amazon-prime",
+      "name": "Amazon Prime",
+      "domain": "amazon.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Grubhub+",
+        "Whole Foods delivery",
+        "Amazon Fresh",
+        "Prime Video",
+        "Amazon Music"
+      ],
+      "provenance": "Amazon Prime is a general-purpose membership that includes food delivery benefits (Grubhub+, Whole Foods same-day delivery, Amazon Fresh). Official amazon.com pages returned HTTP 503; pricing of $14.99/month or $139/year is widely published and corroborated by the Amazon newsroom Grubhub+ partnership article which describes Prime as including Grubhub+ and references the membership. This is the most recent verifiable pricing from reachable sources.",
+      "plans": [
+        {
+          "name": "Amazon Prime Monthly",
+          "monthlyUsd": 14.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 23,
+          "billingModel": "flat",
+          "notes": "$14.99/month billed monthly. Food delivery benefits include free Grubhub+ membership, free 2-hour grocery delivery from Whole Foods Market and Amazon Fresh on qualifying orders. Annual plan ($139/year = $11.58/month) saves ~23%. Student Prime is available at half price ($7.49/month or $69/year).",
+          "source": {
+            "url": "https://www.aboutamazon.com/news/retail/amazon-prime-grubhub-plus-delivery",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Amazon Prime Annual",
+          "monthlyUsd": 11.58,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 23,
+          "billingModel": "flat",
+          "notes": "$139/year billed annually (= $11.58/month). Same benefits as monthly plan including Grubhub+ and grocery delivery. Month-to-month rate is $14.99/month.",
+          "source": {
+            "url": "https://www.aboutamazon.com/news/retail/amazon-prime-grubhub-plus-delivery",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "gopuff-fam",
+      "name": "Gopuff Fam",
+      "domain": "gopuff.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "Monthly price of $7.99 re-confirmed as current in June 2026 from multiple reputable comparison sources. The previously recorded annual of $59.99/year is stale 2021 launch pricing and is no longer supported by any current source; present-day comparison sources disagree on the current annual figure ($79.99/year vs $71.88/year), so the Gopuff Fam annual monthlyUsd is set to null pending a single authoritative confirmation. Gopuff delivers convenience/grocery items, not restaurant meals. A Student FAM tier (~$3.99/month) also exists but is not recorded as a standard plan.",
+      "plans": [
+        {
+          "name": "Gopuff Fam Monthly",
+          "monthlyUsd": 7.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$7.99/month billed monthly, re-confirmed as current in June 2026. Benefits include free delivery on all orders (no minimum) and exclusive deals. Gopuff delivers convenience/grocery items, not restaurant meals. An annual plan exists but its current price could not be confirmed to a single figure (sources cite both $79.99/year and $71.88/year), so the annual plan's monthlyUsd is null.",
+          "source": {
+            "url": "https://www.gopuff.com/join-fam",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Gopuff Fam Annual",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Current annual price could not be confirmed to a single authoritative figure as of June 2026: the previously recorded $59.99/year is stale 2021 launch pricing, and present-day comparison sources disagree ($79.99/year vs $71.88/year). monthlyUsd set to null pending confirmation. Same Fam benefits as monthly plan; month-to-month rate is $7.99/month.",
+          "source": {
+            "url": "https://www.gopuff.com/join-fam",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    }
+  ]
+}

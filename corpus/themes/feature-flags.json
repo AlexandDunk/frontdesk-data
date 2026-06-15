@@ -1,0 +1,634 @@
+{
+  "vertical": "feature-flags",
+  "generatedAt": "2026-06-14",
+  "methodologyNotes": "Published self-serve USD pricing was collected directly from each vendor's official pricing page on 2026-06-14. Where a page returned 4xx/5xx or contained no prices (Harness/Split — redirects to contact-sales), this is noted in provenance and monthlyUsd is set to null. LaunchDarkly Foundation is usage-based with no flat floor, so monthlyUsd reflects the minimum ($10 per service connection). DevCycle Business monthlyUsd is the annualized monthly rate ($500/mo when billed annually); month-to-month is $625/mo noted in plan notes. ConfigCat prices are monthly billing rates; annual rates were not available in published page markup. PostHog Feature Flags are usage-based with a free tier; monthlyUsd=0 for plans up to the free threshold, then metered. All telephony fields (minutesIncluded, callsIncluded, overagePerMin, overagePerCall) are null — this is a non-telephony vertical.",
+  "vendors": [
+    {
+      "slug": "launchdarkly",
+      "name": "LaunchDarkly",
+      "domain": "launchdarkly.com",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Slack",
+        "Microsoft Teams",
+        "Trello"
+      ],
+      "provenance": "https://launchdarkly.com/pricing/ accessed 2026-06-14; HIPAA listed in Enterprise/Guardian feature comparison table on that page",
+      "plans": [
+        {
+          "name": "Developer",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free tier. Unlimited seats, unlimited feature flags, 10M logs/traces, 5K session replays/errors, 5K AI runs/month. No credit card required.",
+          "source": {
+            "url": "https://launchdarkly.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Foundation",
+          "monthlyUsd": 10,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Usage-based; $10/service connection/mo + $8.33 per 1K client-side MAU/mo + $5 per 1K AI runs past 5K/mo. Billed yearly. monthlyUsd reflects the per-service-connection floor only. Includes user/account/device targeting, SSO, scalable observability and experimentation.",
+          "source": {
+            "url": "https://launchdarkly.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Contact sales. Advanced targeting, release automation, workflows/scheduling/approvals, SAML/SCIM, custom roles, audit logs, HIPAA.",
+          "source": {
+            "url": "https://launchdarkly.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Guardian",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Contact sales. Everything in Enterprise plus release monitoring, guardrail metrics, proactive failure notifications, automatic pause/rollback. HIPAA included.",
+          "source": {
+            "url": "https://launchdarkly.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "harness-feature-management",
+      "name": "Harness Feature Management (formerly Split)",
+      "domain": "harness.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "Split.io was acquired by Harness (acquisition completed 2024-06-11) and now redirects to Harness. The Harness pricing page shows Feature Management & Experimentation (FME) as an Enterprise module with no published USD figures (contact sales). However, Harness Developer Hub documents a self-serve 'Start FME Free Plan' that any account can activate without contacting sales (https://developer.harness.io/docs/feature-management-experimentation/getting-started/split-and-harness/), so a confirmable $0 self-serve Free plan is included below. Enterprise USD figures remain quote-only. Fetched 2026-06-14.",
+      "plans": [
+        {
+          "name": "FME Free Plan",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Self-serve free tier. Activated via 'Start FME Free Plan' in the Harness platform, no sales contact required. Core feature flag management and experimentation. Usage limits apply; advanced/enterprise controls require the Enterprise module.",
+          "source": {
+            "url": "https://developer.harness.io/docs/feature-management-experimentation/getting-started/split-and-harness/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Feature Management & Experimentation (Enterprise)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "No published USD pricing. Available as an Enterprise module; usage-based on active flags and managed users. Contact Harness sales for a quote.",
+          "source": {
+            "url": "https://www.harness.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "flagsmith",
+      "name": "Flagsmith",
+      "domain": "flagsmith.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "https://flagsmith.com/pricing/ accessed 2026-06-14. No HIPAA/BAA mentioned. Integrations page lists 3rd party integrations but names not enumerated on pricing page.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "50K API requests/month, 1 team member, unlimited feature flags, unlimited environments, 1 project.",
+          "source": {
+            "url": "https://flagsmith.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Start-Up",
+          "monthlyUsd": 45,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 11,
+          "billingModel": "flat",
+          "notes": "Month-to-month $45/mo; annual rate $40/mo (~11% saving). 1M API requests/month, up to 3 team members, unlimited flags/environments/projects. Adds 2FA, A/B testing, MVT testing, scheduled flags, email support. Overage: $7 per 100K requests.",
+          "source": {
+            "url": "https://flagsmith.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Scale-Up",
+          "monthlyUsd": 300,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "Month-to-month $300/mo; annual rate $250/mo (~17% saving). 5M+ API requests/month, up to 20 team members, unlimited flags/environments/projects. Adds SAML/SSO, governance, priority support. Overage: $50 per 1M requests.",
+          "source": {
+            "url": "https://flagsmith.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Contact sales. Custom volume, tailored hosting, real-time support, LDAP + SCIM (upcoming), dedicated onboarding/training, SLA.",
+          "source": {
+            "url": "https://flagsmith.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "configcat",
+      "name": "ConfigCat",
+      "domain": "configcat.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Amplitude",
+        "Bitbucket Pipe",
+        "Bitrise",
+        "CircleCI",
+        "Datadog",
+        "GitHub Actions",
+        "GitLab CI/CD",
+        "Google Analytics",
+        "JetBrains",
+        "Jira",
+        "Microsoft Teams",
+        "Mixpanel",
+        "monday.com",
+        "Segment",
+        "Slack",
+        "Terraform",
+        "Trello",
+        "Visual Studio Code",
+        "Zapier",
+        "Zoho Flow"
+      ],
+      "provenance": "https://configcat.com/pricing/ and https://configcat.com/integrations/ accessed 2026-06-14. GDPR and ISO 27001:2022 compliance mentioned; no HIPAA/BAA references found. Annual billing toggle exists on page but specific annual figures were not in page markup.",
+      "plans": [
+        {
+          "name": "Forever Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "10 feature flags, 2 environments, 2 products, 2 segments, 4 targeting rules per flag, 1 permission group, 5M config downloads/month. Unlimited seats.",
+          "source": {
+            "url": "https://configcat.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 110,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Monthly billing rate $110/mo; annual rate not captured from page markup. 100 feature flags, 3 environments, 3 products, 3 segments, 8 targeting rules per flag, 2 permission groups, 25M config downloads/month. Unlimited seats and MAUs.",
+          "source": {
+            "url": "https://configcat.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://configcat.com/integrations/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Smart",
+          "monthlyUsd": 325,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Monthly billing rate $325/mo; annual rate not captured from page markup. Unlimited flags, environments, products, segments, targeting rules, permission groups. 250M config downloads/month. Unlimited seats and MAUs.",
+          "source": {
+            "url": "https://configcat.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": 900,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Monthly billing rate $900/mo; annual rate not captured from page markup. All unlimited features, higher download caps (up to 6B+/mo at Dedicated tier). Unlimited seats.",
+          "source": {
+            "url": "https://configcat.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Dedicated",
+          "monthlyUsd": 4500,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Monthly billing rate $4,500/mo. Private cloud deployment, custom arrangement. All unlimited features at maximum scale (6B+ downloads/month).",
+          "source": {
+            "url": "https://configcat.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "statsig",
+      "name": "Statsig",
+      "domain": "statsig.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Amplitude",
+        "Bugsnag",
+        "Census",
+        "Datadog",
+        "Discord",
+        "Fastly",
+        "Fivetran",
+        "GitHub",
+        "Google Analytics",
+        "Heap",
+        "Jira",
+        "LogDNA",
+        "Microsoft Teams",
+        "Mixpanel",
+        "mParticle",
+        "Pulumi",
+        "RevenueCat",
+        "RudderStack",
+        "Segment",
+        "Slack",
+        "Stitch",
+        "Vercel",
+        "Visual Studio Code",
+        "Webhooks"
+      ],
+      "provenance": "https://www.statsig.com/pricing and https://www.statsig.com/integrations accessed 2026-06-14. HIPAA-eligibility and BAA explicitly listed as Enterprise-tier features on pricing page.",
+      "plans": [
+        {
+          "name": "Developer",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free. 2M events/month, unlimited flag & config checks, 50K session replays/month, 1-year analytics retention, unlimited seats. Core A/B tests, feature flags, product analytics, session replays.",
+          "source": {
+            "url": "https://www.statsig.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 150,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$150/mo base; usage-based overage at $0.05 per 1K events past 5M included events. No annual discount published. 100K session replays/month, unlimited analytics retention. Adds advanced experimentation, change reviews/approvals, API controls.",
+          "source": {
+            "url": "https://www.statsig.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Contact sales. Custom event/experiment volume contracts with large volume discounts. Adds warehouse-native deployment, outgoing data integrations, data warehouse imports (Snowflake, Databricks, BigQuery, Redshift, Athena, Fabric), SSO, RBAC, teams, priority support, HIPAA-eligibility with BAA.",
+          "source": {
+            "url": "https://www.statsig.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "unleash",
+      "name": "Unleash",
+      "domain": "getunleash.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Slack",
+        "Microsoft Teams",
+        "Datadog",
+        "Jira"
+      ],
+      "provenance": "https://www.getunleash.io/pricing accessed 2026-06-14. SOC2 Type II and GDPR mentioned; no HIPAA/BAA reference found. Also available as open-source self-hosted.",
+      "plans": [
+        {
+          "name": "Pay-As-You-Go",
+          "monthlyUsd": 75,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$75/seat/month billed via credit card. No published annual discount. 53M API requests/month included (then $5 per 1M). Unlimited feature flags, projects, environments, experiments, client-side MAU, service connections. SSO (SAML 2.0, OpenID Connect), RBAC, SOC2 Type II. 14-day free trial, no credit card required for trial.",
+          "source": {
+            "url": "https://www.getunleash.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Annual contract via invoice. Custom pricing. Cloud, self-hosted, or hybrid deployment. Adds dedicated customer success manager, private hosted instances, multi-region Enterprise Edge, access logs, IP-based restrictions.",
+          "source": {
+            "url": "https://www.getunleash.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "growthbook",
+      "name": "GrowthBook",
+      "domain": "growthbook.io",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Snowflake",
+        "BigQuery",
+        "Redshift",
+        "Databricks",
+        "ClickHouse"
+      ],
+      "provenance": "https://www.growthbook.io/pricing accessed 2026-06-14. BAA explicitly mentioned in Enterprise plan description ('business-associate agreements supporting HIPAA compliance'). Open-source self-hosted version also available for free.",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free. Up to 3 users. Unlimited feature flags and experiments, unlimited MAU/MTU, core functionality. No credit card required.",
+          "source": {
+            "url": "https://www.growthbook.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 40,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$40/seat/month. Up to 50 users. Unlimited feature flags and experiments, unlimited MAU/MTU, 2M CDN requests/month (then $10/M), 20GB CDN bandwidth/month (then $1/GB), 2M managed warehouse events/month (then $0.03/1K events).",
+          "source": {
+            "url": "https://www.growthbook.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Contact sales. Custom user count, advanced security (SSO, SAML), HIPAA-eligible with BAA, priority support, custom terms.",
+          "source": {
+            "url": "https://www.growthbook.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Open Source (Self-Hosted)",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free open-source self-hosted deployment. Unlimited users, flags, and experiments. No per-user costs. Requires own infrastructure.",
+          "source": {
+            "url": "https://www.growthbook.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "devcycle",
+      "name": "DevCycle",
+      "domain": "devcycle.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "https://devcycle.com/pricing accessed 2026-06-14. No HIPAA/BAA mention found on pricing page. No specific integrations listed on pricing page.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Unlimited seats, up to 1,000 client-side MAUs, unlimited feature flags, unlimited environments and projects. No credit card required.",
+          "source": {
+            "url": "https://devcycle.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 500,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "Annualized monthly rate $500/mo when billed annually ($6,000/yr); month-to-month rate is $625/mo (20% annual discount). Unlimited seats, 100K MAUs, 500K events/month. Overages: $2.50 per 1K MAUs; $2 per 10K cloud config requests; $2 per 100K server config requests; $0.50 per 10K events. Adds AI-generated summaries, audit logging, roles & permissions, custom property storage.",
+          "source": {
+            "url": "https://devcycle.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Contact sales. Annual billing only. Unlimited seats, custom limits, approval workflows, full RBAC, SSO/SAML, SCIM provisioning, uptime SLA.",
+          "source": {
+            "url": "https://devcycle.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "posthog",
+      "name": "PostHog",
+      "domain": "posthog.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "https://posthog.com/pricing and https://posthog.com/docs/privacy/hipaa-compliance accessed 2026-06-14. BAA explicitly offered on Boost, Scale, and Enterprise packages per HIPAA docs page. Feature Flags use usage-based pricing with a monthly free allowance.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "1M feature flag requests/month free. Unlimited team members. No credit card required. Resets monthly.",
+          "source": {
+            "url": "https://posthog.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pay-as-you-go",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "First 1M requests free each month; then usage-based: $0.0001/request (1-2M), $0.000045/request (2-10M), $0.000025/request (10-50M), $0.00001/request (50M+). Unlimited team members. Set per-product billing limits. Experiments billed alongside feature flags. monthlyUsd=0 reflects that many users pay nothing due to free tier.",
+          "source": {
+            "url": "https://posthog.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://posthog.com/docs/privacy/hipaa-compliance",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Contact sales. Custom pricing. Includes HIPAA-eligible BAA, SSO enforcement, advanced permissions, dedicated support, custom contracts.",
+          "source": {
+            "url": "https://posthog.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    }
+  ]
+}

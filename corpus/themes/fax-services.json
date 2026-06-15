@@ -1,0 +1,496 @@
+{
+  "vertical": "fax-services",
+  "generatedAt": "2026-06-14",
+  "methodologyNotes": "Self-serve USD pricing was collected from each vendor's official pricing page or the closest reachable official page on 2026-06-14. eFax's pricing page geo-redirects to a German EUR page and also renders prices via JavaScript (placeholder '$  /mo'); plan tier names, page limits, and overage rates were obtained from efax.com/corporate. The entry-tier (Personal) self-serve price of $18.99/mo is independently corroborated by GetApp, G2, and multiple 2026 pricing reviews (all agreeing on $18.99/mo, 200 pages, $0.10/page overage) and is therefore recorded as 18.99 rather than null. The second tier (Business) price could not be confirmed — secondary sources disagree on both naming and price for the mid tier (variously $24.99, $31.99, $49.99 under names Pro/Protect with differing page counts that do not match the official 500-page/5-user Business tier) — so its monthlyUsd remains null. Corporate is quote-only (null). Dropbox Fax (formerly HelloFax) subscription plan prices are also JavaScript-rendered and not returned in page HTML; the pay-as-you-go rate was directly readable. RingCentral does not sell a standalone online-fax product — fax is bundled into RingEX unified-communications plans whose prices are also JavaScript-rendered; the plan is recorded as custom/null. SRFax pricing is from their official healthcare solutions page which rendered fully. FaxZero, MyFax, and iFax prices are from their respective official pricing pages. annualDiscountPct is recorded only when both monthly and annual rates are explicitly published. minutesIncluded, callsIncluded, overagePerMin, and overagePerCall are null on every plan (non-telephony product).",
+  "vendors": [
+    {
+      "slug": "efax",
+      "name": "eFax",
+      "domain": "efax.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Salesforce",
+        "Microsoft 365",
+        "Google Workspace"
+      ],
+      "provenance": "https://www.efax.com/corporate (official page, accessed 2026-06-14; prices are JavaScript-rendered placeholders '$  /mo' — USD amounts not resolvable). Fallback for starting price: https://www.getapp.com/content-management-software/a/efax/ (aggregator, accessed 2026-06-14, states starting from $18.99/month).",
+      "plans": [
+        {
+          "name": "Personal",
+          "monthlyUsd": 18.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "200 pages/month to US & Canada. 1 user license, 1 fax number. HIPAA compliant. Overage $0.10/page. One-time $10 setup fee; promotional first month ~$4.99. The official page renders prices as '$ /mo' placeholders (JavaScript-rendered, geo-redirects to EUR), so the $18.99/mo self-serve entry price is corroborated independently by GetApp, G2, and multiple 2026 pricing reviews (faxdrop, mFax, ifaxapp efax-pricing guide), all of which agree eFax's entry tier starts at $18.99/mo with 200 pages and $0.10/page overage.",
+          "source": {
+            "url": "https://www.efax.com/corporate",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/it-communications-software/a/efax/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "500 pages/month to 51 countries. 5 user licenses. HIPAA compliant + BAA. Overage $0.07/page. Exact monthly USD price not resolvable from official page (JavaScript-rendered).",
+          "source": {
+            "url": "https://www.efax.com/corporate",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/content-management-software/a/efax/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Corporate",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Fully customizable plan; contact sales for quote. HIPAA + BAA + HITRUST certified. Includes dedicated account management, full API access, admin portal, toll-free numbers.",
+          "source": {
+            "url": "https://www.efax.com/corporate",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "dropbox-fax",
+      "name": "Dropbox Fax (formerly HelloFax)",
+      "domain": "fax.dropbox.com",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Dropbox",
+        "Google Drive",
+        "Box",
+        "OneDrive"
+      ],
+      "provenance": "https://app.hellofax.com/info/pricing (official pricing page via redirect chain hellofax.com → fax.dropbox.com → app.hellofax.com, accessed 2026-06-14; subscription plan prices are JavaScript-rendered and not returned in page HTML). Pay-as-you-go rate and free-tier details were directly readable from https://fax.dropbox.com (accessed 2026-06-14).",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "5 free fax pages included. Sending only (receiving requires paid plan). Additional faxes at $0.99/fax (up to 10 pages), then $0.20/page. No credit card required.",
+          "source": {
+            "url": "https://app.hellofax.com/info/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://fax.dropbox.com",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Paid Subscription Plans",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Paid subscription plans exist that include fax receiving, dedicated fax number (US/UK/Canada), and $0.05/page overage. Exact monthly USD prices are JavaScript-rendered on the pricing page and could not be retrieved. No setup or cancellation fees; monthly or annual billing available.",
+          "source": {
+            "url": "https://app.hellofax.com/info/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "ringcentral-fax",
+      "name": "RingCentral Fax",
+      "domain": "ringcentral.com",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Microsoft 365",
+        "Google Workspace",
+        "Salesforce",
+        "Dropbox",
+        "Google Drive",
+        "Box"
+      ],
+      "provenance": "https://www.ringcentral.com/fax.html and https://www.ringcentral.com/office/plansandpricing.html (official pages, accessed 2026-06-14). Fax is bundled into RingEX unified-communications plans; no standalone fax-only pricing page exists. Plan prices are JavaScript-rendered and not returned in page HTML. HIPAA compliance confirmed via https://www.ringcentral.com/legal/privacy-notice/hipaa.html.",
+      "plans": [
+        {
+          "name": "RingEX (fax included)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Online fax (up to 20 MB attachments, up to 50 recipients per send) is included in all RingEX tiers (Core, Advanced, Ultra). Per-user monthly prices are JavaScript-rendered and could not be retrieved from the official page. Annual billing saves up to 33%. HIPAA/HITRUST/GDPR/PCI certified. Contact sales for fax-volume add-ons.",
+          "source": {
+            "url": "https://www.ringcentral.com/fax.html",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.ringcentral.com/office/plansandpricing.html",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "myfax",
+      "name": "MyFax",
+      "domain": "myfax.com",
+      "hipaa": false,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "https://www.myfax.com/pricing (official pricing page, accessed 2026-06-14).",
+      "plans": [
+        {
+          "name": "Home Office User",
+          "monthlyUsd": 8.25,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "100 pages send + 100 pages receive per month. $12/month billed monthly; $8.25/month when billed annually. Promotional first month at $5. Domestic US overage $0.10/page.",
+          "source": {
+            "url": "https://www.myfax.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/content-management-software/a/myfax/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Small Business User",
+          "monthlyUsd": 20.83,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "300 pages send + 300 pages receive per month. $25/month billed monthly; $20.83/month when billed annually. Domestic US overage $0.10/page.",
+          "source": {
+            "url": "https://www.myfax.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/content-management-software/a/myfax/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Power User",
+          "monthlyUsd": 37.5,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "600 pages send + 600 pages receive per month. $45/month billed monthly; $37.50/month when billed annually. Domestic US overage $0.10/page.",
+          "source": {
+            "url": "https://www.myfax.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/content-management-software/a/myfax/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "srfax",
+      "name": "SRFax",
+      "domain": "srfax.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "https://www.srfax.com/fax-plans/healthcare-solutions/ (official healthcare plans page, accessed 2026-06-14; standard non-healthcare plan page returned 404). All plans shown are HIPAA-compliant healthcare plans. Annual pricing is 15% discount off monthly rate.",
+      "plans": [
+        {
+          "name": "Healthcare Lite",
+          "monthlyUsd": 12.6,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 15,
+          "billingModel": "flat",
+          "notes": "200 pages/month. $12.60/month billed monthly; $10.70/month when billed annually ($128.40/year). Overage $0.05/page. HIPAA + Canadian PHIPA compliant. Includes PGP encryption, multiple user accounts, unlimited storage.",
+          "source": {
+            "url": "https://www.srfax.com/fax-plans/healthcare-solutions/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Healthcare Basic",
+          "monthlyUsd": 16.05,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 15,
+          "billingModel": "flat",
+          "notes": "500 pages/month. $16.05/month billed monthly; $13.65/month when billed annually ($163.80/year). Overage $0.05/page.",
+          "source": {
+            "url": "https://www.srfax.com/fax-plans/healthcare-solutions/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Healthcare Basic Plus",
+          "monthlyUsd": 22.95,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 15,
+          "billingModel": "flat",
+          "notes": "800 pages/month. $22.95/month billed monthly; $19.50/month when billed annually ($234.00/year). Overage $0.05/page.",
+          "source": {
+            "url": "https://www.srfax.com/fax-plans/healthcare-solutions/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Healthcare Standard",
+          "monthlyUsd": 41.35,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 15,
+          "billingModel": "flat",
+          "notes": "1,500 pages/month. $41.35/month billed monthly; $35.15/month when billed annually ($421.80/year). Overage $0.05/page.",
+          "source": {
+            "url": "https://www.srfax.com/fax-plans/healthcare-solutions/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Healthcare Standard Plus",
+          "monthlyUsd": 68.95,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 15,
+          "billingModel": "flat",
+          "notes": "2,500 pages/month. $68.95/month billed monthly; $58.60/month when billed annually ($703.20/year). Overage $0.05/page.",
+          "source": {
+            "url": "https://www.srfax.com/fax-plans/healthcare-solutions/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Healthcare Professional",
+          "monthlyUsd": 137.9,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 15,
+          "billingModel": "flat",
+          "notes": "5,000 pages/month. $137.90/month billed monthly; $117.20/month when billed annually ($1,406.40/year). Overage $0.05/page.",
+          "source": {
+            "url": "https://www.srfax.com/fax-plans/healthcare-solutions/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Healthcare Professional Plus",
+          "monthlyUsd": 275.75,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 15,
+          "billingModel": "flat",
+          "notes": "10,000 pages/month. $275.75/month billed monthly; $234.35/month when billed annually ($2,812.20/year). Overage $0.045/page.",
+          "source": {
+            "url": "https://www.srfax.com/fax-plans/healthcare-solutions/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Healthcare Professional Premium",
+          "monthlyUsd": 551.55,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 15,
+          "billingModel": "flat",
+          "notes": "20,000 pages/month. $551.55/month billed monthly; $468.80/month when billed annually ($5,625.60/year). Overage $0.04/page.",
+          "source": {
+            "url": "https://www.srfax.com/fax-plans/healthcare-solutions/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "faxzero",
+      "name": "FaxZero",
+      "domain": "faxzero.com",
+      "hipaa": false,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "https://faxzero.com (official homepage, accessed 2026-06-14). Pricing is pay-per-use; no subscription plans. Free tier and per-fax rate confirmed from page content.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Up to 5 free faxes per day. Maximum 3 pages + cover per fax. FaxZero branding on cover page. No credit card required. International faxing available.",
+          "source": {
+            "url": "https://faxzero.com",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Almost Free (Pay-Per-Fax)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "No subscription — pay $3.29 per fax via PayPal. Up to 25 pages + optional cover per fax. Priority delivery over free tier. No FaxZero branding. Cover page optional. No monthly commitment.",
+          "source": {
+            "url": "https://faxzero.com",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/content-management-software/a/faxzero/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "ifaxapp",
+      "name": "iFax",
+      "domain": "ifaxapp.com",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Zapier",
+        "Google Drive",
+        "Dropbox"
+      ],
+      "provenance": "https://www.ifaxapp.com/pricing/ (official pricing page, accessed 2026-06-14). 20% annual discount mentioned on page; Pro plan price not disclosed in HTML.",
+      "plans": [
+        {
+          "name": "Basic",
+          "monthlyUsd": 12.49,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "200 pages/month. Send faxes only (no receiving). Not HIPAA compliant. iOS, Android, Windows, Mac apps included. Annual billing saves 20% (approx. $9.99/month).",
+          "source": {
+            "url": "https://www.ifaxapp.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/content-management-software/a/ifax/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Plus",
+          "monthlyUsd": 24.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "500 pages/month. Send and receive faxes. 1 fax number included. HIPAA compliant. iOS, Android, Windows, Mac apps. Annual billing saves 20% (approx. $19.99/month).",
+          "source": {
+            "url": "https://www.ifaxapp.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/content-management-software/a/ifax/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Most Popular tier. Price not disclosed in page HTML (appears to require signup flow or dynamic rendering). 1,000+ pages. HIPAA compliant. Developer API, email-to-fax, unlimited fax numbers, team account, Zapier integration, 24/7 live support.",
+          "source": {
+            "url": "https://www.ifaxapp.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Volume pricing with commitment-based discounts. Custom page limits, custom fax numbers. Contact sales.",
+          "source": {
+            "url": "https://www.ifaxapp.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,776 @@
+{
+  "vertical": "survey-tools",
+  "generatedAt": "2026-06-13",
+  "methodologyNotes": "Published self-serve pricing was collected from each provider's own pricing page on the accessed date; per-seat tiers (SurveyMonkey Team, Google Workspace) record the per-user monthly price with a note and billingModel per_seat, while single-account tiers are billingModel flat. Most providers quote the annual-billing monthly rate, recorded with annualDiscountPct null unless the page itself states a discount. Quote-only Enterprise tiers are recorded with monthlyUsd null, and minutes/calls/overage fields are null for every plan since they do not apply to survey/form software. SurveyMonkey and Google Workspace prices were corroborated against 2026 third-party pricing sources because the fetch service geo-resolved those pages to EUR; SurveySparrow figures use the consistently published entry tiers, with higher tiers marked quote-only.",
+  "vendors": [
+    {
+      "slug": "surveymonkey",
+      "name": "SurveyMonkey",
+      "domain": "surveymonkey.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Salesforce",
+        "HubSpot",
+        "Microsoft Teams",
+        "Slack",
+        "Mailchimp",
+        "Zapier"
+      ],
+      "provenance": "https://www.surveymonkey.com/pricing/individual/ (official pricing page geo-resolved to EUR on fetch; USD figures corroborated by costbench.com and usercall.co 2026 SurveyMonkey pricing guides, accessed 2026-06-13). Paid plans charge $0.15 per response over the included limit.",
+      "plans": [
+        {
+          "name": "Basic",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free, single user. Unlimited surveys, 10 questions per survey, 25 responses per survey, basic question types.",
+          "source": {
+            "url": "https://www.surveymonkey.com/pricing/individual/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Standard Monthly",
+          "monthlyUsd": 99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Single user, billed monthly with no annual commitment. Unlimited questions, 1,000 responses per month, custom design, skip logic, 200+ integrations.",
+          "source": {
+            "url": "https://www.surveymonkey.com/pricing/individual/",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://costbench.com/software/survey-software/surveymonkey/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Advantage Annual",
+          "monthlyUsd": 39,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Single user, $39/month billed annually. Unlimited questions, 15,000 responses per year, advanced logic, payment acceptance, statistical analysis, AI-powered insights.",
+          "source": {
+            "url": "https://www.surveymonkey.com/pricing/individual/",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://www.usercall.co/post/surveymonkey-pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Premier Annual",
+          "monthlyUsd": 139,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Single user, $139/month billed annually. Unlimited responses, A/B testing, multilingual surveys, image click maps, crosstabs, phone support.",
+          "source": {
+            "url": "https://www.surveymonkey.com/pricing/individual/",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://www.usercall.co/post/surveymonkey-pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Team Advantage",
+          "monthlyUsd": 30,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$30/user/month billed annually, minimum 3 users. Shared asset library, user roles and permissions, collaborative tools.",
+          "source": {
+            "url": "https://www.surveymonkey.com/pricing/team/",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://www.usercall.co/post/surveymonkey-pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Team Premier",
+          "monthlyUsd": 92,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$92/user/month billed annually, minimum 3 users. Everything in Team Advantage plus enhanced analysis capabilities and unlimited responses.",
+          "source": {
+            "url": "https://www.surveymonkey.com/pricing/team/",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://www.usercall.co/post/surveymonkey-pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Quote-only, 5+ users. Advanced governance, SSO, custom data centers, premium onboarding, dedicated customer success.",
+          "source": {
+            "url": "https://www.surveymonkey.com/pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "typeform",
+      "name": "Typeform",
+      "domain": "typeform.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Slack",
+        "HubSpot",
+        "Salesforce",
+        "Mailchimp",
+        "Google Sheets",
+        "Zapier"
+      ],
+      "provenance": "https://www.typeform.com/pricing/ (official pricing page, accessed 2026-06-13; monthly prices shown alongside annual-billing rates, page states 30% annual savings). HIPAA available on Enterprise.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "1 user, 100 responses per month. Unlimited forms and questions, basic customization.",
+          "source": {
+            "url": "https://www.typeform.com/pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Basic",
+          "monthlyUsd": 29,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 30,
+          "billingModel": "flat",
+          "notes": "1 user, 100 responses per month. $29/month monthly or $25/month billed annually. Unlimited forms, conditional logic, webhooks and integrations.",
+          "source": {
+            "url": "https://www.typeform.com/pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Plus",
+          "monthlyUsd": 59,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 30,
+          "billingModel": "flat",
+          "notes": "3 users, 1,000 responses per month. $59/month monthly or $50/month billed annually. Remove Typeform branding, custom subdomain, premium themes.",
+          "source": {
+            "url": "https://www.typeform.com/pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 30,
+          "billingModel": "flat",
+          "notes": "5 users, 10,000 responses per month. $99/month monthly or $83/month billed annually. Drop-off rates, conversion tracking, priority support and live chat.",
+          "source": {
+            "url": "https://www.typeform.com/pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Growth Flow",
+          "monthlyUsd": 349,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 30,
+          "billingModel": "flat",
+          "notes": "5 users, 10,000 responses per month plus 1,500 monthly enrichment. $349/month monthly or $291/month billed annually. Contacts and Automations add-on included, Salesforce integration, email/SMS follow-ups.",
+          "source": {
+            "url": "https://www.typeform.com/pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Quote-only. Unlimited responses and users, VIP account management, SSO, HIPAA/GDPR, custom domains.",
+          "source": {
+            "url": "https://www.typeform.com/pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "jotform",
+      "name": "Jotform",
+      "domain": "jotform.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Salesforce",
+        "Google Sheets",
+        "PayPal",
+        "Stripe",
+        "Slack",
+        "Zapier"
+      ],
+      "provenance": "https://www.jotform.com/pricing/ (official pricing page, accessed 2026-06-13; monthly prices shown alongside annual-billing effective rates). HIPAA features available on Gold and Enterprise. Education/nonprofit get 50% off paid tiers.",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free, single user. 5 active forms, 100 monthly submissions, Jotform branding included.",
+          "source": {
+            "url": "https://www.jotform.com/pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Bronze",
+          "monthlyUsd": 39,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 13,
+          "billingModel": "flat",
+          "notes": "Single user, $39/month monthly or $34/month effective billed annually ($408/year). 25 active forms, 1,000 monthly submissions, removable branding.",
+          "source": {
+            "url": "https://www.jotform.com/pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Silver",
+          "monthlyUsd": 49,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "Single user, $49/month monthly or $39/month effective billed annually ($468/year). 50 active forms, 2,500 monthly submissions.",
+          "source": {
+            "url": "https://www.jotform.com/pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Gold",
+          "monthlyUsd": 129,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 23,
+          "billingModel": "flat",
+          "notes": "Single user, $129/month monthly or $99/month effective billed annually ($1,188/year). 100 active forms, 10,000 monthly submissions, HIPAA-friendly capability.",
+          "source": {
+            "url": "https://www.jotform.com/pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Quote-only multi-user. Unlimited limits, SSO, HIPAA compliance tooling, data residency options, dedicated support.",
+          "source": {
+            "url": "https://www.jotform.com/pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "qualtrics",
+      "name": "Qualtrics",
+      "domain": "qualtrics.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Salesforce",
+        "Slack",
+        "Microsoft Dynamics",
+        "Tableau",
+        "Zendesk",
+        "Adobe"
+      ],
+      "provenance": "https://www.qualtrics.com/buy-online/ (official self-serve purchase page, accessed 2026-06-13). Only the free account and Strategic Research tier are self-serve; all other products are quote-only.",
+      "plans": [
+        {
+          "name": "Qualtrics Surveys (Free)",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free single-user account. 3 active surveys, 30 questions per survey, 500 total responses, 50+ templates, 8 question types, basic logic.",
+          "source": {
+            "url": "https://www.qualtrics.com/buy-online/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Strategic Research",
+          "monthlyUsd": 420,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Self-serve online tier, $420/month billed annually ($5,040/year). Unlimited users, surveys and questions; 1,000 responses shared across all users; 23 question types, 20+ guided solutions, AI-powered analysis, dashboards, crosstabs.",
+          "source": {
+            "url": "https://www.qualtrics.com/buy-online/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Enterprise (custom)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Quote-only. Module-based licensing for 5,000+ responses, larger deployments, and full XM platform; pricing varies by users, usage, and support.",
+          "source": {
+            "url": "https://www.qualtrics.com/buy-online/",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "google-forms-workspace",
+      "name": "Google Forms (Workspace)",
+      "domain": "workspace.google.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Google Sheets",
+        "Google Drive",
+        "Apps Script",
+        "Looker Studio"
+      ],
+      "provenance": "https://workspace.google.com/pricing (official pricing page geo-resolved to EUR on fetch; USD per-user figures corroborated by name.com 2026 Google Workspace pricing guide, accessed 2026-06-13). Google Forms is included in every Workspace plan. BAA available under Workspace business/enterprise terms.",
+      "plans": [
+        {
+          "name": "Business Starter",
+          "monthlyUsd": 8.4,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "per_seat",
+          "notes": "$8.40/user/month flexible (monthly) billing, or $7.00/user/month on annual commitment. Includes Google Forms, Gmail business email, 30GB pooled storage, Meet.",
+          "source": {
+            "url": "https://workspace.google.com/pricing",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://www.name.com/blog/google-workspace-pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Business Standard",
+          "monthlyUsd": 16.8,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "per_seat",
+          "notes": "$16.80/user/month flexible (monthly) billing, or $14.00/user/month on annual commitment. Includes Google Forms, 2TB pooled storage, recorded meetings.",
+          "source": {
+            "url": "https://workspace.google.com/pricing",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://www.name.com/blog/google-workspace-pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Business Plus",
+          "monthlyUsd": 26.4,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "per_seat",
+          "notes": "$26.40/user/month flexible (monthly) billing, or $22.00/user/month on annual commitment. Includes Google Forms, 5TB pooled storage, advanced security and eDiscovery (Vault).",
+          "source": {
+            "url": "https://workspace.google.com/pricing",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://www.name.com/blog/google-workspace-pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Quote-only (contact sales). Includes Google Forms, advanced security/compliance controls, enhanced support, S/MIME encryption.",
+          "source": {
+            "url": "https://workspace.google.com/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "surveysparrow",
+      "name": "SurveySparrow",
+      "domain": "surveysparrow.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Salesforce",
+        "HubSpot",
+        "Slack",
+        "Google Sheets",
+        "Zapier",
+        "Intercom"
+      ],
+      "provenance": "https://surveysparrow.com/pricing/ (official pricing page; verified live on 2026-06-13). Only the Free tier renders a confirmable price ($0); all paid tier prices load dynamically and do not render a numeric value on the live page, so Basic, Starter, Business and Enterprise are recorded with monthlyUsd null. Billing is quarterly/annual; the page advertises up to 40% annual savings but no per-plan numeric prices are shown.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free, 1 user, 75 responses per quarter. For trying basic survey features.",
+          "source": {
+            "url": "https://surveysparrow.com/pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Basic",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Price not displayed on the live pricing page (plans load dynamically; no numeric price renders, sign-up required). 1 user, 2,500 responses per year. For students, freelancers, and personal projects.",
+          "source": {
+            "url": "https://surveysparrow.com/pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Starter",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Price not displayed on the live pricing page (plans load dynamically; no numeric price renders, sign-up required). 1 user, 15,000 responses per year. For solo creators and early-stage founders.",
+          "source": {
+            "url": "https://surveysparrow.com/pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Quote-only on the live page (price not published, requires sign-up/sales). 3 users, 36,000 responses per year, custom branding, automation. Additional users $49/user/month.",
+          "source": {
+            "url": "https://surveysparrow.com/pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Quote-only. Custom limits, advanced insights, for large enterprises with complex needs.",
+          "source": {
+            "url": "https://surveysparrow.com/pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "fillout",
+      "name": "Fillout",
+      "domain": "fillout.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Airtable",
+        "Google Sheets",
+        "Salesforce",
+        "HubSpot",
+        "Slack",
+        "Stripe",
+        "Zapier"
+      ],
+      "provenance": "https://www.fillout.com/pricing (official pricing page, accessed 2026-06-13; monthly prices shown alongside annual-billing totals). HIPAA available on higher tiers/Enterprise.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free forever, unlimited forms and seats, 1,000 responses per month. Multi-page forms, payment collection, conditional logic, embedding.",
+          "source": {
+            "url": "https://www.fillout.com/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Starter",
+          "monthlyUsd": 15,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$15/month ($180/year billed annually), 2,000 responses per month. Login forms, custom endings, CAPTCHA, premium field types.",
+          "source": {
+            "url": "https://www.fillout.com/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 40,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$40/month ($480/year billed annually), 5,000 responses per month. Custom emails, remove branding, custom CSS, custom fonts.",
+          "source": {
+            "url": "https://www.fillout.com/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 75,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$75/month ($900/year billed annually), unlimited responses. Form analytics, custom domain, custom code, priority support.",
+          "source": {
+            "url": "https://www.fillout.com/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Quote-only. SSO, 1,000,000+ database records, audit logs, dedicated support, custom SLAs.",
+          "source": {
+            "url": "https://www.fillout.com/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "formstack",
+      "name": "Formstack Forms",
+      "domain": "formstack.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Salesforce",
+        "Google Sheets",
+        "Mailchimp",
+        "PayPal",
+        "Stripe",
+        "Slack",
+        "Zapier"
+      ],
+      "provenance": "https://www.formstack.com/pricing (official pricing page, accessed 2026-06-13; monthly prices shown alongside annual-billing rates). HIPAA available as an add-on on standard plans; included on Enterprise. Vendor rebranded to Intellistack in 2025.",
+      "plans": [
+        {
+          "name": "Forms",
+          "monthlyUsd": 99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$99/month monthly or $83/month billed annually. 1 builder user, 25 forms, 1,000 submissions per form, 2GB storage. HIPAA available as add-on.",
+          "source": {
+            "url": "https://www.formstack.com/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Suite",
+          "monthlyUsd": 299,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$299/month monthly or $250/month billed annually. 3 builder users, 100 forms, 5,000 submissions per form, 10GB storage, unlimited document senders and eSignatures.",
+          "source": {
+            "url": "https://www.formstack.com/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Salesforce Solutions",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Quote-only. Salesforce-native forms and document generation, Experience Cloud integration, Salesforce Shield compatible, PCI/HIPAA-compliant options.",
+          "source": {
+            "url": "https://www.formstack.com/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Quote-only. Dedicated Customer Success Manager, SSO, custom SLAs, unlimited users/submissions, API access, high-volume processing.",
+          "source": {
+            "url": "https://www.formstack.com/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1298 @@
+{
+  "vertical": "ai-voice-agents",
+  "generatedAt": "2026-06-10T00:00:00.000Z",
+  "methodologyNotes": "Pricing figures were collected from each vendor's public pricing page on the accessedAt date recorded per source. Quote-only or demo-gated vendors carry null price fields with a stated reason; no figure is ever invented. Plans are normalized to the dataset shape regardless of the vendor's native billing model (flat, per-minute, per-call, or hybrid). For per-minute developer platforms, monthlyUsd is the recurring platform fee (0 when pure pay-as-you-go) and overagePerMin is the marginal per-minute rate; minutesIncluded/callsIncluded are null because nothing is bundled. For per-call plans, callsIncluded carries the included quota and overagePerCall the marginal per-call rate; minutesIncluded is null. The cost-at-200-calls normalizer converts every billing model to an effective monthly cost at a chosen call volume and average call length so flat, per-minute and per-call plans can be compared honestly. Annual discounts are recorded as a percentage off the monthly rate where the vendor publishes annual pricing. HIPAA/BAA and integration fields reflect what the vendor states publicly; 'null/unknown' means not published, not absence. AIRA and Upfirst publish byte-identical pricing tables and appear to share a pricing engine; both are recorded with their own sources and a provenance note. This dataset is a static snapshot intended to be refreshed from our scheduled public-page monitoring pipeline.",
+  "vendors": [
+    {
+      "slug": "goodcall",
+      "name": "Goodcall",
+      "domain": "goodcall.com",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": 79,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 15,
+          "billingModel": "flat",
+          "notes": "Unlimited minutes; capped at 100 unique customers/mo, $0.50 per additional unique customer.",
+          "source": {
+            "url": "https://www.goodcall.com/pricing",
+            "accessedAt": "2026-06-10"
+          }
+        },
+        {
+          "name": "Growth",
+          "monthlyUsd": 129,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 15,
+          "billingModel": "flat",
+          "notes": "Unlimited minutes; 250 unique customers/mo, $0.50 per additional.",
+          "source": {
+            "url": "https://www.goodcall.com/pricing",
+            "accessedAt": "2026-06-10"
+          }
+        },
+        {
+          "name": "Scale",
+          "monthlyUsd": 249,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 15,
+          "billingModel": "flat",
+          "notes": "Unlimited minutes; 500 unique customers/mo, $0.50 per additional.",
+          "source": {
+            "url": "https://www.goodcall.com/pricing",
+            "accessedAt": "2026-06-10"
+          }
+        }
+      ],
+      "hipaa": null,
+      "baa": null,
+      "integrations": [
+        "Zapier",
+        "Google Voice"
+      ],
+      "bilingual": null,
+      "demoPhone": null,
+      "provenance": "Plans and annual discount confirmed from goodcall.com/pricing and corroborated via 2026 third-party pricing roundup. HIPAA/BAA and Spanish support not published."
+    },
+    {
+      "slug": "rosie",
+      "name": "Rosie",
+      "domain": "heyrosie.com",
+      "plans": [
+        {
+          "name": "Professional",
+          "monthlyUsd": 49,
+          "minutesIncluded": 250,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "Annual = 2 months free (~17%). Overage rate not published.",
+          "source": {
+            "url": "https://heyrosie.com/pricing",
+            "accessedAt": "2026-06-10"
+          }
+        },
+        {
+          "name": "Scale",
+          "monthlyUsd": 149,
+          "minutesIncluded": 1000,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Overage rate not published.",
+          "source": {
+            "url": "https://heyrosie.com/pricing",
+            "accessedAt": "2026-06-10"
+          }
+        },
+        {
+          "name": "Growth",
+          "monthlyUsd": 299,
+          "minutesIncluded": 2000,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Overage rate not published.",
+          "source": {
+            "url": "https://heyrosie.com/pricing",
+            "accessedAt": "2026-06-10"
+          }
+        }
+      ],
+      "hipaa": null,
+      "baa": null,
+      "integrations": [
+        "Zapier",
+        "Google Calendar"
+      ],
+      "bilingual": true,
+      "demoPhone": null,
+      "provenance": "Tiers and included minutes from heyrosie.com/pricing. English & Spanish on every call stated. Overage rates not published; HIPAA/BAA not published."
+    },
+    {
+      "slug": "smith-ai",
+      "name": "Smith.ai",
+      "domain": "smith.ai",
+      "plans": [
+        {
+          "name": "Starter (self-service)",
+          "monthlyUsd": 95,
+          "minutesIncluded": null,
+          "callsIncluded": 30,
+          "overagePerMin": null,
+          "overagePerCall": 2.4,
+          "annualDiscountPct": null,
+          "billingModel": "per_call",
+          "notes": "~2 calls/day. Per-call overage $2.40. Live agent handoff $3/call add-on.",
+          "source": {
+            "url": "https://smith.ai/pricing/ai-receptionist",
+            "accessedAt": "2026-06-10"
+          }
+        },
+        {
+          "name": "Basic (self-service)",
+          "monthlyUsd": 270,
+          "minutesIncluded": null,
+          "callsIncluded": 90,
+          "overagePerMin": null,
+          "overagePerCall": 2.4,
+          "annualDiscountPct": null,
+          "billingModel": "per_call",
+          "notes": "~5 calls/day. Per-call overage $2.40.",
+          "source": {
+            "url": "https://smith.ai/pricing/ai-receptionist",
+            "accessedAt": "2026-06-10"
+          }
+        },
+        {
+          "name": "Pro (self-service)",
+          "monthlyUsd": 800,
+          "minutesIncluded": null,
+          "callsIncluded": 300,
+          "overagePerMin": null,
+          "overagePerCall": 2.4,
+          "annualDiscountPct": null,
+          "billingModel": "per_call",
+          "notes": "~15 calls/day. Per-call overage $2.40.",
+          "source": {
+            "url": "https://smith.ai/pricing/ai-receptionist",
+            "accessedAt": "2026-06-10"
+          }
+        }
+      ],
+      "hipaa": null,
+      "baa": null,
+      "integrations": [
+        "Clio",
+        "Calendly"
+      ],
+      "bilingual": null,
+      "demoPhone": null,
+      "provenance": "Self-service AI plans from smith.ai/pricing/ai-receptionist; call counts are vendor-stated ~per-day figures normalized to monthly (30/90/300). Clio integration confirmed. HIPAA/BAA and Spanish support not published. Higher annual 'done-for-you' plans exist (quote-style) and are omitted to avoid mixing billing models."
+    },
+    {
+      "slug": "dialzara",
+      "name": "Dialzara",
+      "domain": "dialzara.com",
+      "plans": [
+        {
+          "name": "Business Lite",
+          "monthlyUsd": 29,
+          "minutesIncluded": 60,
+          "callsIncluded": null,
+          "overagePerMin": 0.48,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "source": {
+            "url": "https://dialzara.com/pricing",
+            "accessedAt": "2026-06-10"
+          }
+        },
+        {
+          "name": "Business Pro",
+          "monthlyUsd": 99,
+          "minutesIncluded": 220,
+          "callsIncluded": null,
+          "overagePerMin": 0.45,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "source": {
+            "url": "https://dialzara.com/pricing",
+            "accessedAt": "2026-06-10"
+          }
+        },
+        {
+          "name": "Business Plus",
+          "monthlyUsd": 199,
+          "minutesIncluded": 500,
+          "callsIncluded": null,
+          "overagePerMin": 0.4,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "source": {
+            "url": "https://dialzara.com/pricing",
+            "accessedAt": "2026-06-10"
+          }
+        },
+        {
+          "name": "Business Elite",
+          "monthlyUsd": 349,
+          "minutesIncluded": 1000,
+          "callsIncluded": null,
+          "overagePerMin": 0.35,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "source": {
+            "url": "https://dialzara.com/pricing",
+            "accessedAt": "2026-06-10"
+          }
+        }
+      ],
+      "hipaa": null,
+      "baa": null,
+      "integrations": [
+        "Zapier",
+        "CRM",
+        "Calendar"
+      ],
+      "bilingual": true,
+      "demoPhone": "+18665459272",
+      "provenance": "Four inbound tiers with included minutes and tiered per-minute overage from dialzara.com/pricing. English + Spanish stated. HIPAA/BAA not published."
+    },
+    {
+      "slug": "synthflow",
+      "name": "Synthflow",
+      "domain": "synthflow.ai",
+      "plans": [
+        {
+          "name": "Pay As You Go",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": 0.09,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_minute",
+          "notes": "Voice Engine $0.09/min; LLM ($0.02-$0.05/min) and telephony billed separately on top. White-label/reseller $2,000/mo add-on. Extra concurrency $20/unit/mo.",
+          "source": {
+            "url": "https://synthflow.ai/pricing",
+            "accessedAt": "2026-06-10"
+          }
+        }
+      ],
+      "hipaa": null,
+      "baa": null,
+      "integrations": [
+        "Cal.com",
+        "GoHighLevel",
+        "HubSpot",
+        "Salesforce",
+        "Zapier"
+      ],
+      "bilingual": null,
+      "demoPhone": "+17402848845",
+      "provenance": "Per-minute developer platform; Voice Engine base $0.09/min from synthflow.ai/pricing (LLM + telephony additive). overagePerMin captures the base voice rate only. SOC2/GDPR/ISO27001 stated; HIPAA called out for Enterprise only (BAA not published). Enterprise is custom-quote and omitted."
+    },
+    {
+      "slug": "slang",
+      "name": "Slang.ai",
+      "domain": "slang.ai",
+      "plans": [
+        {
+          "name": "Core",
+          "monthlyUsd": 399,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Per location. Call/minute quota not published. Spanish $99/mo add-on.",
+          "source": {
+            "url": "https://www.slang.ai/pricing",
+            "accessedAt": "2026-06-10"
+          }
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": 599,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Per location. Spanish included. Quota not published.",
+          "source": {
+            "url": "https://www.slang.ai/pricing",
+            "accessedAt": "2026-06-10"
+          }
+        }
+      ],
+      "hipaa": null,
+      "baa": null,
+      "integrations": [
+        "OpenTable",
+        "SevenRooms",
+        "Yelp",
+        "Tripleseat"
+      ],
+      "bilingual": true,
+      "demoPhone": null,
+      "provenance": "Restaurant vertical; flat per-location pricing from slang.ai/pricing. Included call/minute quotas not published. Spanish included on Premium, $99/mo add-on on Core. SOC II stated; HIPAA/BAA not published. Enterprise custom omitted."
+    },
+    {
+      "slug": "phonely",
+      "name": "Phonely",
+      "domain": "phonely.ai",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": 100,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "100 free minutes/mo, no card required.",
+          "source": {
+            "url": "https://www.phonely.ai/pricing",
+            "accessedAt": "2026-06-10"
+          }
+        },
+        {
+          "name": "Starter",
+          "monthlyUsd": 50,
+          "minutesIncluded": 250,
+          "callsIncluded": null,
+          "overagePerMin": 0.3,
+          "overagePerCall": null,
+          "annualDiscountPct": 34,
+          "billingModel": "flat",
+          "notes": "Annual ~$33/mo (34% off). Overage $0.25-$0.35/min.",
+          "source": {
+            "url": "https://www.phonely.ai/pricing",
+            "accessedAt": "2026-06-10"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 150,
+          "minutesIncluded": 750,
+          "callsIncluded": null,
+          "overagePerMin": 0.3,
+          "overagePerCall": null,
+          "annualDiscountPct": 33,
+          "billingModel": "flat",
+          "notes": "Annual ~$100/mo (33% off). Overage $0.30/min.",
+          "source": {
+            "url": "https://www.phonely.ai/pricing",
+            "accessedAt": "2026-06-10"
+          }
+        }
+      ],
+      "hipaa": true,
+      "baa": true,
+      "integrations": [
+        "Prebuilt integrations",
+        "Custom integrations (Enterprise)"
+      ],
+      "bilingual": null,
+      "demoPhone": null,
+      "provenance": "Free/Starter/Pro tiers with included minutes and per-minute overage from phonely.ai/pricing. HIPAA with BAA signature available on Enterprise. Spanish support not published. Enterprise ($0.05/min custom) omitted."
+    },
+    {
+      "slug": "thoughtly",
+      "name": "Thoughtly",
+      "domain": "thoughtly.com",
+      "plans": [
+        {
+          "name": "Flex",
+          "monthlyUsd": 500,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Unlimited minutes within plan allowances; usage above allowances billed in arrears at rates not published.",
+          "source": {
+            "url": "https://thoughtly.com/pricing",
+            "accessedAt": "2026-06-10"
+          }
+        }
+      ],
+      "hipaa": null,
+      "baa": null,
+      "integrations": [
+        "200+ integrations",
+        "REST API",
+        "Two-way CRM sync"
+      ],
+      "bilingual": true,
+      "demoPhone": null,
+      "provenance": "Flex flat plan $500/mo from thoughtly.com/pricing; Scale/Enterprise are custom-quote and omitted. 34+ languages stated (bilingual true). Overage rates not published. HIPAA on Enterprise only; BAA not published."
+    },
+    {
+      "slug": "upfirst",
+      "name": "Upfirst",
+      "domain": "upfirst.ai",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": 24.95,
+          "minutesIncluded": null,
+          "callsIncluded": 30,
+          "overagePerMin": null,
+          "overagePerCall": 1.5,
+          "annualDiscountPct": 20,
+          "billingModel": "per_call",
+          "source": {
+            "url": "https://upfirst.ai/pricing",
+            "accessedAt": "2026-06-10"
+          }
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": 59.95,
+          "minutesIncluded": null,
+          "callsIncluded": 90,
+          "overagePerMin": null,
+          "overagePerCall": 1,
+          "annualDiscountPct": 20,
+          "billingModel": "per_call",
+          "source": {
+            "url": "https://upfirst.ai/pricing",
+            "accessedAt": "2026-06-10"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 159.95,
+          "minutesIncluded": null,
+          "callsIncluded": 300,
+          "overagePerMin": null,
+          "overagePerCall": 0.75,
+          "annualDiscountPct": 20,
+          "billingModel": "per_call",
+          "source": {
+            "url": "https://upfirst.ai/pricing",
+            "accessedAt": "2026-06-10"
+          }
+        },
+        {
+          "name": "Scale",
+          "monthlyUsd": 299,
+          "minutesIncluded": null,
+          "callsIncluded": 600,
+          "overagePerMin": null,
+          "overagePerCall": 0.7,
+          "annualDiscountPct": 20,
+          "billingModel": "per_call",
+          "source": {
+            "url": "https://upfirst.ai/pricing",
+            "accessedAt": "2026-06-10"
+          }
+        }
+      ],
+      "hipaa": null,
+      "baa": null,
+      "integrations": [
+        "Google Calendar",
+        "Outlook",
+        "Clio",
+        "Acuity",
+        "HubSpot",
+        "Salesforce",
+        "Pipedrive",
+        "GoHighLevel"
+      ],
+      "bilingual": true,
+      "demoPhone": "+18335644778",
+      "provenance": "Per-call tiers with included call quotas and tiered per-call overage from upfirst.ai/pricing; annual ~20% off. 35+ languages and Clio/Google Calendar booking stated. HIPAA/BAA not published."
+    },
+    {
+      "slug": "my-ai-front-desk",
+      "name": "My AI Front Desk",
+      "domain": "myaifrontdesk.com",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": 20,
+          "callsIncluded": null,
+          "overagePerMin": 0.25,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "20 voice min/mo; overage 25 credits/min @ $0.01/credit = $0.25/min.",
+          "source": {
+            "url": "https://www.myaifrontdesk.com/pricing",
+            "accessedAt": "2026-06-10"
+          }
+        },
+        {
+          "name": "Business-in-a-Box",
+          "monthlyUsd": 99,
+          "minutesIncluded": 200,
+          "callsIncluded": null,
+          "overagePerMin": 0.25,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "200 voice min/mo; annual $79/mo (20% off). Overage $0.25/min.",
+          "source": {
+            "url": "https://www.myaifrontdesk.com/pricing",
+            "accessedAt": "2026-06-10"
+          }
+        }
+      ],
+      "hipaa": null,
+      "baa": null,
+      "integrations": [
+        "Zapier",
+        "API (Enterprise)"
+      ],
+      "bilingual": true,
+      "demoPhone": "+18646190619",
+      "provenance": "Credit-based plans; voice minute allowances and overage ($0.25/min at standard rate, 1 credit = $0.01) from myaifrontdesk.com/pricing. 20+ languages stated. Enterprise custom omitted. HIPAA/BAA not published. White-label reseller program exists separately."
+    },
+    {
+      "slug": "trillet",
+      "name": "Trillet",
+      "domain": "trillet.ai",
+      "plans": [
+        {
+          "name": "Studio",
+          "monthlyUsd": 99,
+          "minutesIncluded": 100,
+          "callsIncluded": null,
+          "overagePerMin": 0.12,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "White-label branding; 3 phone numbers, 3 sub-accounts included.",
+          "source": {
+            "url": "https://www.trillet.ai/pricing",
+            "accessedAt": "2026-06-10"
+          }
+        },
+        {
+          "name": "Agency",
+          "monthlyUsd": 299,
+          "minutesIncluded": 300,
+          "callsIncluded": null,
+          "overagePerMin": 0.12,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Custom domain + branded emails; 10 numbers, unlimited sub-accounts.",
+          "source": {
+            "url": "https://www.trillet.ai/pricing",
+            "accessedAt": "2026-06-10"
+          }
+        }
+      ],
+      "hipaa": true,
+      "baa": null,
+      "integrations": [
+        "Google Calendar",
+        "Cal.com",
+        "GoHighLevel",
+        "HubSpot",
+        "Meta lead forms",
+        "Stripe",
+        "Webhooks"
+      ],
+      "bilingual": null,
+      "demoPhone": null,
+      "provenance": "Studio/Agency white-label tiers with included minutes and $0.12/min overage from trillet.ai/pricing. HIPAA listed as available (BAA details not published). Bilingual not published. Enterprise custom omitted. Note: prior seed listed $49/150min; current page shows $99/100min — page value used."
+    },
+    {
+      "slug": "nextphone",
+      "name": "NextPhone",
+      "domain": "getnextphone.com",
+      "plans": [
+        {
+          "name": "Pro",
+          "monthlyUsd": 199,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "Unlimited inbound calls, no per-minute fees. Annual up to ~17% off.",
+          "source": {
+            "url": "https://www.getnextphone.com/pricing",
+            "accessedAt": "2026-06-10"
+          }
+        },
+        {
+          "name": "Growth",
+          "monthlyUsd": 299,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "Unlimited inbound calls.",
+          "source": {
+            "url": "https://www.getnextphone.com/pricing",
+            "accessedAt": "2026-06-10"
+          }
+        }
+      ],
+      "hipaa": null,
+      "baa": null,
+      "integrations": [
+        "100+ integrations"
+      ],
+      "bilingual": null,
+      "demoPhone": null,
+      "provenance": "Flat unlimited-inbound tiers from getnextphone.com/pricing. Unlimited usage means the normalized cost is volume-independent. HIPAA/BAA and Spanish not published. Custom tier omitted."
+    },
+    {
+      "slug": "serviceagent",
+      "name": "ServiceAgent",
+      "domain": "serviceagent.ai",
+      "plans": [
+        {
+          "name": "Core",
+          "monthlyUsd": 39,
+          "minutesIncluded": 133,
+          "callsIncluded": null,
+          "overagePerMin": 0.15,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "2,000 credits/mo; voice = 15 credits/min @ $0.01 = $0.15/min, so ~133 voice min if all credits go to voice. Credits also fund SMS/ads. Annual 20% off.",
+          "source": {
+            "url": "https://serviceagent.ai/pricing",
+            "accessedAt": "2026-06-10"
+          }
+        },
+        {
+          "name": "Growth",
+          "monthlyUsd": 95,
+          "minutesIncluded": 400,
+          "callsIncluded": null,
+          "overagePerMin": 0.15,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "6,000 credits/mo (~400 voice min). Annual 20% off.",
+          "source": {
+            "url": "https://serviceagent.ai/pricing",
+            "accessedAt": "2026-06-10"
+          }
+        },
+        {
+          "name": "Franchise",
+          "monthlyUsd": 279,
+          "minutesIncluded": 1333,
+          "callsIncluded": null,
+          "overagePerMin": 0.15,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "20,000 credits/mo (~1,333 voice min). Annual 20% off.",
+          "source": {
+            "url": "https://serviceagent.ai/pricing",
+            "accessedAt": "2026-06-10"
+          }
+        }
+      ],
+      "hipaa": null,
+      "baa": null,
+      "integrations": [],
+      "bilingual": null,
+      "demoPhone": null,
+      "provenance": "Home-services credit-based plans from serviceagent.ai/pricing. minutesIncluded is derived as credits / 15 (15 credits = 1 voice min), an upper bound since credits are shared with SMS/ad-creative/review features; flagged. ServiceTitan/Jobber/Housecall integrations, bilingual, HIPAA/BAA not published."
+    },
+    {
+      "slug": "loman",
+      "name": "Loman",
+      "domain": "loman.ai",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": 199,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 149,
+          "notes": "No per-minute fees, no overage charges (vendor-stated). $149 one-time setup.",
+          "source": {
+            "url": "https://loman.ai/pricing",
+            "accessedAt": "2026-06-10"
+          }
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": 399,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 149,
+          "notes": "No per-minute fees, no overage. $149 one-time setup.",
+          "source": {
+            "url": "https://loman.ai/pricing",
+            "accessedAt": "2026-06-10"
+          }
+        }
+      ],
+      "hipaa": null,
+      "baa": null,
+      "integrations": [
+        "Toast",
+        "SpotOn",
+        "Clover",
+        "Square",
+        "Olo",
+        "OpenTable"
+      ],
+      "bilingual": null,
+      "demoPhone": null,
+      "provenance": "Restaurant flat plans with no usage overage from loman.ai/pricing; $149 setup fee. POS + OpenTable integrations confirmed. Bilingual and HIPAA/BAA not published. Enterprise quote-only omitted."
+    },
+    {
+      "slug": "vapi",
+      "name": "Vapi",
+      "domain": "vapi.ai",
+      "plans": [
+        {
+          "name": "Build (Pay As You Go)",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": 0.05,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_minute",
+          "notes": "$0.05/min Vapi platform fee; LLM/STT/TTS passed through at cost (or BYO key). 10 concurrency lines included, +$10/line/mo. HIPAA add-on $2,000/mo.",
+          "source": {
+            "url": "https://vapi.ai/pricing",
+            "accessedAt": "2026-06-10"
+          }
+        }
+      ],
+      "hipaa": true,
+      "baa": true,
+      "integrations": [
+        "BYO LLM/STT/TTS",
+        "Twilio",
+        "Telnyx",
+        "Custom SIP"
+      ],
+      "bilingual": null,
+      "demoPhone": null,
+      "provenance": "Developer voice-agent platform; $0.05/min base platform fee from vapi.ai/pricing (model providers passed through). overagePerMin reflects the platform fee only — true end cost depends on chosen models. HIPAA/BAA available as $2,000/mo add-on. Scale tier is custom-volume and omitted."
+    },
+    {
+      "slug": "bland",
+      "name": "Bland",
+      "domain": "bland.ai",
+      "plans": [
+        {
+          "name": "Start (Free)",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": 0.14,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_minute",
+          "notes": "All-in $0.14/min talk time (LLM+STT+TTS+telephony). 10 concurrent calls.",
+          "source": {
+            "url": "https://www.bland.ai/pricing",
+            "accessedAt": "2026-06-10"
+          }
+        },
+        {
+          "name": "Build",
+          "monthlyUsd": 299,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": 0.12,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_minute",
+          "notes": "$299/mo platform fee + $0.12/min all-in. 50 concurrent calls.",
+          "source": {
+            "url": "https://www.bland.ai/pricing",
+            "accessedAt": "2026-06-10"
+          }
+        },
+        {
+          "name": "Scale",
+          "monthlyUsd": 499,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": 0.11,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_minute",
+          "notes": "$499/mo platform fee + $0.11/min all-in. 100 concurrent calls.",
+          "source": {
+            "url": "https://www.bland.ai/pricing",
+            "accessedAt": "2026-06-10"
+          }
+        }
+      ],
+      "hipaa": true,
+      "baa": true,
+      "integrations": [
+        "PSTN",
+        "SIP",
+        "BYO telephony"
+      ],
+      "bilingual": null,
+      "demoPhone": null,
+      "provenance": "Enterprise voice-AI platform; all-in per-minute talk rates ($0.14/$0.12/$0.11) with tier platform fees from bland.ai/pricing. HIPAA-eligible with signed BAA on Enterprise; SOC 2 stated. Enterprise custom omitted."
+    },
+    {
+      "slug": "retell",
+      "name": "Retell AI",
+      "domain": "retellai.com",
+      "plans": [
+        {
+          "name": "Pay As You Go",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": 0.07,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_minute",
+          "notes": "Retell voice infra $0.055/min; total $0.07-$0.31/min depending on LLM. Telephony $0.015/min (US). overagePerMin = published floor.",
+          "source": {
+            "url": "https://www.retellai.com/pricing",
+            "accessedAt": "2026-06-10"
+          }
+        }
+      ],
+      "hipaa": true,
+      "baa": true,
+      "integrations": [
+        "BYO LLM",
+        "Twilio",
+        "Telnyx",
+        "Custom SIP",
+        "Knowledge Base"
+      ],
+      "bilingual": null,
+      "demoPhone": null,
+      "provenance": "Developer voice platform; published all-in range $0.07-$0.31/min (infra $0.055 + LLM + telephony $0.015) from retellai.com/pricing. overagePerMin stores the floor; range preserved in notes. HIPAA/BAA available. Enterprise custom omitted."
+    },
+    {
+      "slug": "aira",
+      "name": "AIRA",
+      "domain": "getaira.io",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": 24.95,
+          "minutesIncluded": null,
+          "callsIncluded": 30,
+          "overagePerMin": null,
+          "overagePerCall": 1.5,
+          "annualDiscountPct": 20,
+          "billingModel": "per_call",
+          "source": {
+            "url": "https://www.getaira.io/pricing",
+            "accessedAt": "2026-06-10"
+          }
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": 59.95,
+          "minutesIncluded": null,
+          "callsIncluded": 90,
+          "overagePerMin": null,
+          "overagePerCall": 1,
+          "annualDiscountPct": 20,
+          "billingModel": "per_call",
+          "source": {
+            "url": "https://www.getaira.io/pricing",
+            "accessedAt": "2026-06-10"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 159.95,
+          "minutesIncluded": null,
+          "callsIncluded": 300,
+          "overagePerMin": null,
+          "overagePerCall": 0.75,
+          "annualDiscountPct": 20,
+          "billingModel": "per_call",
+          "source": {
+            "url": "https://www.getaira.io/pricing",
+            "accessedAt": "2026-06-10"
+          }
+        },
+        {
+          "name": "Scale",
+          "monthlyUsd": 299,
+          "minutesIncluded": null,
+          "callsIncluded": 600,
+          "overagePerMin": null,
+          "overagePerCall": 0.7,
+          "annualDiscountPct": 20,
+          "billingModel": "per_call",
+          "source": {
+            "url": "https://www.getaira.io/pricing",
+            "accessedAt": "2026-06-10"
+          }
+        }
+      ],
+      "hipaa": null,
+      "baa": null,
+      "integrations": [
+        "Google Calendar",
+        "Salesforce",
+        "HubSpot",
+        "QuickBooks",
+        "Slack",
+        "GoHighLevel",
+        "Zapier"
+      ],
+      "bilingual": true,
+      "demoPhone": null,
+      "provenance": "Per-call tiers from getaira.io/pricing; 74 languages, EN/ES stated. NOTE: AIRA's pricing table is byte-identical to Upfirst's (same prices, call quotas, and per-call overage) — the two appear to share a pricing engine or white-label lineage. Recorded independently with its own source. HIPAA/BAA not published."
+    },
+    {
+      "slug": "simple-phones",
+      "name": "Simple Phones",
+      "domain": "simplephones.ai",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": 97,
+          "minutesIncluded": null,
+          "callsIncluded": 100,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_call",
+          "notes": "$97/mo for 100 calls. Higher tiers exist (up to ~$249/mo per seed) but per-call quotas for them are not published on the page.",
+          "source": {
+            "url": "https://www.simplephones.ai/pricing",
+            "accessedAt": "2026-06-10"
+          }
+        }
+      ],
+      "hipaa": null,
+      "baa": null,
+      "integrations": [
+        "Zapier",
+        "CRM"
+      ],
+      "bilingual": null,
+      "demoPhone": null,
+      "provenance": "Only the entry tier ($97/100 calls) is explicitly published on simplephones.ai/pricing; higher tiers/overage not published, so only Starter recorded. HIPAA/BAA and Spanish not published."
+    },
+    {
+      "slug": "ruby",
+      "name": "Ruby",
+      "domain": "ruby.com",
+      "plans": [
+        {
+          "name": "50 minutes",
+          "monthlyUsd": 235,
+          "minutesIncluded": 235,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_minute",
+          "notes": "Live human receptionists. $235 for 50 receptionist minutes; overage above plan billed at higher per-minute rate (not published). minutesIncluded set to 50.",
+          "source": {
+            "url": "https://www.ruby.com/plans-and-pricing/",
+            "accessedAt": "2026-06-10"
+          }
+        },
+        {
+          "name": "200 minutes",
+          "monthlyUsd": 375,
+          "minutesIncluded": 200,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_minute",
+          "notes": "$375 for 200 receptionist minutes.",
+          "source": {
+            "url": "https://www.ruby.com/plans-and-pricing/",
+            "accessedAt": "2026-06-10"
+          }
+        },
+        {
+          "name": "350 minutes",
+          "monthlyUsd": 575,
+          "minutesIncluded": 350,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_minute",
+          "notes": "$575 for 350 receptionist minutes.",
+          "source": {
+            "url": "https://www.ruby.com/plans-and-pricing/",
+            "accessedAt": "2026-06-10"
+          }
+        },
+        {
+          "name": "500 minutes",
+          "monthlyUsd": 720,
+          "minutesIncluded": 500,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_minute",
+          "notes": "$720 for 500 receptionist minutes.",
+          "source": {
+            "url": "https://www.ruby.com/plans-and-pricing/",
+            "accessedAt": "2026-06-10"
+          }
+        }
+      ],
+      "hipaa": null,
+      "baa": null,
+      "integrations": [
+        "Clio",
+        "Rocket Matter",
+        "Zapier"
+      ],
+      "bilingual": true,
+      "demoPhone": null,
+      "provenance": "Incumbent live-human receptionist benchmark. Bucketed minute plans ($235/50, $375/200, $575/350, $720/500) from ruby.com/plans-and-pricing corroborated via 2026 third-party listings (TrustRadius/Capterra). First plan's $235 maps to 50 min. Overage above plan is higher than in-plan rate but not published. HIPAA/BAA not published."
+    },
+    {
+      "slug": "patlive",
+      "name": "PATLive",
+      "domain": "patlive.com",
+      "plans": [
+        {
+          "name": "Basic",
+          "monthlyUsd": 75,
+          "minutesIncluded": 0,
+          "callsIncluded": null,
+          "overagePerMin": 2.6,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_minute",
+          "notes": "Pay-as-you-go base; all minutes billed at $2.60/min.",
+          "source": {
+            "url": "https://www.patlive.com/pricing",
+            "accessedAt": "2026-06-10"
+          }
+        },
+        {
+          "name": "Starter",
+          "monthlyUsd": 250,
+          "minutesIncluded": 75,
+          "callsIncluded": null,
+          "overagePerMin": 2.35,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_minute",
+          "source": {
+            "url": "https://www.patlive.com/pricing",
+            "accessedAt": "2026-06-10"
+          }
+        },
+        {
+          "name": "Standard",
+          "monthlyUsd": 460,
+          "minutesIncluded": 200,
+          "callsIncluded": null,
+          "overagePerMin": 2.2,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_minute",
+          "source": {
+            "url": "https://www.patlive.com/pricing",
+            "accessedAt": "2026-06-10"
+          }
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": 720,
+          "minutesIncluded": 350,
+          "callsIncluded": null,
+          "overagePerMin": 2.1,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_minute",
+          "source": {
+            "url": "https://www.patlive.com/pricing",
+            "accessedAt": "2026-06-10"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 1170,
+          "minutesIncluded": 600,
+          "callsIncluded": null,
+          "overagePerMin": 2,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_minute",
+          "source": {
+            "url": "https://www.patlive.com/pricing",
+            "accessedAt": "2026-06-10"
+          }
+        }
+      ],
+      "hipaa": null,
+      "baa": null,
+      "integrations": [],
+      "bilingual": true,
+      "demoPhone": null,
+      "provenance": "Incumbent live-answering. Five tiers with included minutes and tiered per-minute overage from patlive.com/pricing. Bilingual is a $20/mo add-on (bilingual=true). HIPAA not published."
+    },
+    {
+      "slug": "receptionhq",
+      "name": "ReceptionHQ",
+      "domain": "receptionhq.com",
+      "plans": [
+        {
+          "name": "MessageExpress",
+          "monthlyUsd": 25,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": 1.99,
+          "annualDiscountPct": null,
+          "billingModel": "per_call",
+          "notes": "From $25/mo; per-call overage $1.99. Included call count not published.",
+          "source": {
+            "url": "https://www.receptionhq.com/pricing/",
+            "accessedAt": "2026-06-10"
+          }
+        },
+        {
+          "name": "ReceptionistPlus 15",
+          "monthlyUsd": 39,
+          "minutesIncluded": null,
+          "callsIncluded": 15,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_call",
+          "notes": "$39/mo, 15 included calls; overage not published.",
+          "source": {
+            "url": "https://www.receptionhq.com/pricing/",
+            "accessedAt": "2026-06-10"
+          }
+        }
+      ],
+      "hipaa": null,
+      "baa": null,
+      "integrations": [],
+      "bilingual": true,
+      "demoPhone": null,
+      "provenance": "Incumbent live answering. Entry message/hybrid plans from receptionhq.com/pricing; most quotas published as 'from' prices only. Spanish available. HIPAA/BAA not published. Per-minute MyAssistant/MyDiary tiers ($49+) omitted as their minute quotas are not published."
+    },
+    {
+      "slug": "answerconnect",
+      "name": "AnswerConnect",
+      "domain": "answerconnect.com",
+      "plans": [],
+      "hipaa": null,
+      "baa": null,
+      "integrations": [
+        "Zapier",
+        "HubSpot",
+        "Salesforce"
+      ],
+      "bilingual": true,
+      "demoPhone": null,
+      "provenance": "Quote-only at time of capture: answerconnect.com/pricing returned HTTP 404 on 2026-06-10 and the vendor routes pricing through a sales conversation. No published per-plan figures captured; plans intentionally empty rather than guessed. Third-party sources cite ~$325/mo entry but that figure is unverified against a live vendor page, so it is not recorded. Bilingual EN/ES stated on the site."
+    },
+    {
+      "slug": "abby-connect",
+      "name": "Abby Connect",
+      "domain": "abby.com",
+      "plans": [
+        {
+          "name": "AI Starter",
+          "monthlyUsd": 99,
+          "minutesIncluded": 50,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "AI receptionist plan; 50 min/mo. Overage not published.",
+          "source": {
+            "url": "https://www.abby.com/pricing/",
+            "accessedAt": "2026-06-10"
+          }
+        },
+        {
+          "name": "AI Essential",
+          "monthlyUsd": 165,
+          "minutesIncluded": 100,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "source": {
+            "url": "https://www.abby.com/pricing/",
+            "accessedAt": "2026-06-10"
+          }
+        },
+        {
+          "name": "AI Professional",
+          "monthlyUsd": 299,
+          "minutesIncluded": 200,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "source": {
+            "url": "https://www.abby.com/pricing/",
+            "accessedAt": "2026-06-10"
+          }
+        },
+        {
+          "name": "AI Growth",
+          "monthlyUsd": 690,
+          "minutesIncluded": 500,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "source": {
+            "url": "https://www.abby.com/pricing/",
+            "accessedAt": "2026-06-10"
+          }
+        }
+      ],
+      "hipaa": null,
+      "baa": null,
+      "integrations": [
+        "Zapier",
+        "Clio"
+      ],
+      "bilingual": true,
+      "demoPhone": null,
+      "provenance": "AI receptionist tiers (distinct from Abby's human plans) with included minutes from abby.com/pricing. Trained for English & Spanish. Human-backup on all AI tiers. Overage rates and HIPAA/BAA not published. Enterprise (1000+ min) custom omitted."
+    }
+  ]
+}

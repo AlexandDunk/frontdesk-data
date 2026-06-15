@@ -1,0 +1,437 @@
+{
+  "vertical": "appointment-scheduling",
+  "generatedAt": "2026-06-13",
+  "methodologyNotes": "Published self-serve pricing was confirmed against each provider's own live page on the accessed date; per-seat/per-user tiers record the per-user monthly price (monthly-billing rate) with a note, while flat per-account tiers are marked billingModel flat. Providers whose prices could not be confirmed on a live provider-owned page were dropped during the 2026-06-13 adversarial verification pass: Acuity Scheduling (every official acuityscheduling.com pricing URL returned HTTP 404), YouCanBook.me (live pricing page is JS-rendered and exposed plan structure/limits but no dollar figures), and Square Appointments (official squareup.com appointments pricing page is JS-rendered and exposed no figures). Doodle pricing was corrected from the official Doodle help center, which now lists Pro as a single-user plan at $15/mo ($132/yr) and Team at $19.95/mo monthly (min 2 users) / $8.95/mo annual. Quote-only Enterprise/custom tiers are recorded with monthlyUsd null, and minutesIncluded/callsIncluded/overage fields are null for every plan since they do not apply to scheduling software.",
+  "vendors": [
+    {
+      "slug": "calendly",
+      "name": "Calendly",
+      "domain": "calendly.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Google Calendar",
+        "Microsoft Outlook",
+        "Office 365",
+        "Zoom",
+        "Google Meet",
+        "Microsoft Teams",
+        "Stripe",
+        "PayPal",
+        "HubSpot",
+        "Salesforce",
+        "Mailchimp",
+        "Marketo",
+        "Pardot",
+        "Zapier",
+        "Microsoft Dynamics 365"
+      ],
+      "provenance": "https://calendly.com/pricing (official pricing page, accessed 2026-06-13; per-seat prices shown are annual-billing rates, monthly billing ~20% higher)",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Always free for a single user. 1 event type, 1 calendar connection, video conferencing, customizable booking page, mobile apps and browser extensions.",
+          "source": {
+            "url": "https://calendly.com/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Standard",
+          "monthlyUsd": 10,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 16,
+          "billingModel": "per_seat",
+          "notes": "$10/seat/month on annual billing (16% savings vs monthly, which is ~$12/seat). Unlimited event types, multiple calendar connections, HubSpot/Mailchimp/Stripe/PayPal integrations, Zapier and webhooks, automated reminders and outreach, 24/7 chat support.",
+          "source": {
+            "url": "https://calendly.com/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Teams",
+          "monthlyUsd": 16,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "per_seat",
+          "notes": "$16/seat/month on annual billing (20% savings vs monthly, ~$20/seat). All Standard features plus Salesforce integration, round-robin meetings, lead qualification/routing, Marketo/Pardot connections, advanced admin features, SSO add-on.",
+          "source": {
+            "url": "https://calendly.com/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Quote-only / contact sales; starts at $15,000/year. All Teams features plus Salesforce routing lookup, Microsoft Dynamics, dedicated account support, SSO/SAML, domain control, audit logs, data deletion API, security reviews.",
+          "source": {
+            "url": "https://calendly.com/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "savvycal",
+      "name": "SavvyCal",
+      "domain": "savvycal.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Google Calendar",
+        "Microsoft Outlook",
+        "iCloud",
+        "Zoom",
+        "Google Meet",
+        "Microsoft Teams",
+        "Stripe",
+        "Zapier"
+      ],
+      "provenance": "https://savvycal.com/pricing (official pricing page, accessed 2026-06-13; per-user prices, 30-day money-back guarantee/free trial available)",
+      "plans": [
+        {
+          "name": "Basic",
+          "monthlyUsd": 10,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$10/user/month (annual billing saves ~2 months). Unlimited calendars, unlimited scheduling links and meeting polls, team scheduling.",
+          "source": {
+            "url": "https://savvycal.com/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": 17,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$17/user/month (annual billing saves ~2 months). Everything in Basic plus custom domains, delegate to an assistant, paid bookings.",
+          "source": {
+            "url": "https://savvycal.com/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "doodle",
+      "name": "Doodle",
+      "domain": "doodle.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Google Calendar",
+        "Microsoft Outlook",
+        "Office 365",
+        "iCloud",
+        "Zoom",
+        "Google Meet",
+        "Microsoft Teams",
+        "Zapier"
+      ],
+      "provenance": "https://help.doodle.com/en/articles/9457366-how-much-does-doodle-cost (official Doodle help center, accessed 2026-06-13; the public premium page is JS-rendered with no static figures, so prices were confirmed against Doodle's own help center)",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Forever-free plan with limited features (group polls, 1:1 booking) and ads.",
+          "source": {
+            "url": "https://help.doodle.com/en/articles/9457366-how-much-does-doodle-cost",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 15,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 27,
+          "billingModel": "flat",
+          "notes": "Single-user plan: $15/month on monthly billing; $132/year (~$11/month) on annual billing (~27% off). Ad-free, high customization, priority support, company branding, multiple booking pages, Zoom/Teams/Webex/Outlook integrations.",
+          "source": {
+            "url": "https://help.doodle.com/en/articles/9457366-how-much-does-doodle-cost",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Team",
+          "monthlyUsd": 19.95,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 55,
+          "billingModel": "per_seat",
+          "notes": "$19.95/user/month on monthly billing (minimum 2 users, 2-100 range); $8.95/user/month on annual billing (~55% off, billed upfront for the full year). Adds admin console, centralized billing, team management on top of Pro.",
+          "source": {
+            "url": "https://help.doodle.com/en/articles/9457366-how-much-does-doodle-cost",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "cal-com",
+      "name": "Cal.com",
+      "domain": "cal.com",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Google Calendar",
+        "Microsoft Outlook",
+        "Apple Calendar",
+        "Zoho Calendar",
+        "Zoom",
+        "Google Meet",
+        "Microsoft Teams",
+        "Cal Video",
+        "Stripe",
+        "PayPal",
+        "Salesforce",
+        "HubSpot",
+        "Zapier",
+        "Make"
+      ],
+      "provenance": "https://cal.com/pricing (official pricing page, accessed 2026-06-13; per-user prices shown are annual-billing rates with 25% yearly savings)",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free forever for 1 user. Unlimited event types and calendars, email & SMS notifications, 100+ app integrations, mobile app and browser extension, Stripe & PayPal payments, two-way Salesforce/HubSpot sync, Calendly import.",
+          "source": {
+            "url": "https://cal.com/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Teams",
+          "monthlyUsd": 12,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 25,
+          "billingModel": "per_seat",
+          "notes": "$12/user/month on annual billing (25% yearly savings). Adds round-robin scheduling, managed & collective event types, recurring events, custom notifications, branding removal, routing forms, booking analytics, custom APIs.",
+          "source": {
+            "url": "https://cal.com/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Organizations",
+          "monthlyUsd": 28,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 25,
+          "billingModel": "per_seat",
+          "notes": "$28/user/month on annual billing (25% yearly savings). Adds unlimited sub-teams, routing by custom variables, company subdomain, SAML SSO and SCIM, SOC 2/HIPAA/ISO 27001 compliance, instant meetings, domain-wide delegation, role-based permissions.",
+          "source": {
+            "url": "https://cal.com/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Quote-only / contact sales. Adds dedicated onboarding/engineering support, SLA & uptime guarantees, HRIS/directory integrations, priority Slack support, dedicated database.",
+          "source": {
+            "url": "https://cal.com/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "setmore",
+      "name": "Setmore",
+      "domain": "setmore.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Google Calendar",
+        "Microsoft Outlook",
+        "Office 365",
+        "Zoom",
+        "Google Meet",
+        "Teleport",
+        "Stripe",
+        "Square",
+        "PayPal",
+        "Mailchimp",
+        "Zapier",
+        "Google Analytics"
+      ],
+      "provenance": "https://www.setmore.com/pricing (official pricing page, accessed 2026-06-13; per-user prices)",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Up to 4 users, 200 appointments/month. Branded booking page and mobile app, email confirmations and 1 reminder, online & in-person payments, iOS/Android apps, Google reviews, Mailchimp/Zapier integrations. No SMS reminders, no 2-way calendar sync.",
+          "source": {
+            "url": "https://www.setmore.com/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 12,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 58,
+          "billingModel": "per_seat",
+          "notes": "$12/user/month on monthly billing; $5/user/month on annual billing. Unlimited users and appointments, SMS reminders, 2-way calendar sync, recurring appointments, branding removal, HIPAA compliance with a signed BAA, API access, priority support.",
+          "source": {
+            "url": "https://www.setmore.com/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Quote-only / contact sales for a custom all-in-one booking system.",
+          "source": {
+            "url": "https://www.setmore.com/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "tidycal",
+      "name": "TidyCal",
+      "domain": "tidycal.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Google Calendar",
+        "Office 365",
+        "Apple Calendar",
+        "Zoom",
+        "Google Meet",
+        "Microsoft Teams",
+        "Stripe",
+        "PayPal",
+        "Zapier"
+      ],
+      "provenance": "https://tidycal.com/pricing (official pricing page, accessed 2026-06-13; flat pricing, includes one-time lifetime options)",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free forever. Unlimited bookings and booking types, paid/recurring/package bookings, booking page, 1 calendar connection. TidyCal branding shown.",
+          "source": {
+            "url": "https://tidycal.com/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Individual Lifetime",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 29,
+          "notes": "$29 one-time (not recurring; monthlyUsd null). Everything in Free plus auto-created meeting links, group bookings, guest invites, AI booking assistant, custom emails, analytics, 10 calendar connections.",
+          "source": {
+            "url": "https://tidycal.com/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 12,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 31,
+          "billingModel": "flat",
+          "notes": "$12/month or $99/year (annual saves ~$45, ~31%). No TidyCal branding, custom domain, priority support, 25 calendar connections, all Individual Lifetime features.",
+          "source": {
+            "url": "https://tidycal.com/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    }
+  ]
+}

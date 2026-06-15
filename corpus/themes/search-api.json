@@ -1,0 +1,595 @@
+{
+  "vertical": "search-api",
+  "generatedAt": "2026-06-14",
+  "methodologyNotes": "Published self-serve USD pricing collected from each vendor's official pricing page on 2026-06-14. Algolia Grow and Grow Plus have $0 base fee; only usage above the free tier incurs charges, so monthlyUsd=0 and overage rates are in notes. Swiftype was acquired by Elastic and redirects to elastic.co pricing; Standard/Pro plan prices were fetched directly from swiftype.com/pricing which still publishes those tiers. MongoDB Atlas Search is billed as an add-on to Atlas clusters (dedicated search nodes), priced hourly; monthlyUsd reflects the minimum S20 node cost at $0.12/hr × 720h. Meilisearch Cloud is usage- or resource-based with no named flat tiers; the XS resource instance ($23/mo) and usage-based example ($30/mo) are the published entry points. Elastic Cloud minimum prices are 'as low as' figures for a baseline cloud production configuration. Typesense Cloud uses RAM-based cluster pricing without publishing a public price list; the calculator requires signup — monthlyUsd=null as no self-serve price list is published. All telephony fields (minutesIncluded, callsIncluded, overagePerMin, overagePerCall) are null — this is a non-telephony vertical.",
+  "vendors": [
+    {
+      "slug": "algolia",
+      "name": "Algolia",
+      "domain": "algolia.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Shopify",
+        "Magento",
+        "Salesforce Commerce Cloud",
+        "BigCommerce",
+        "Zendesk",
+        "Netlify",
+        "Vercel",
+        "Segment"
+      ],
+      "provenance": "Official pricing page https://www.algolia.com/pricing/ fetched 2026-06-14. Grow and Grow Plus confirmed as $0 base with pay-as-you-go overages. Elevate requires contacting sales — no public price listed. HIPAA not mentioned on pricing or trust page (trust.algolia.com returned sparse content).",
+      "plans": [
+        {
+          "name": "Build",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free development/testing plan. Includes 1M records, 10K search requests/mo, 10K Recommend requests/mo, 10K crawls/mo, 1 Generative Experience Guide. Not intended for production use.",
+          "source": {
+            "url": "https://www.algolia.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Grow",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Pay-as-you-go production keyword search. Free tier: 10K search requests/mo + 100K records included. Overage: $0.50 per additional 1K search requests; $0.40 per additional 1K records. Includes query suggestions, 10 rules per index, manual synonyms, 30-day analytics, US/UK/EU hosting. monthlyUsd=0 reflects $0 base fee; total bill is pure usage above free tier.",
+          "source": {
+            "url": "https://www.algolia.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Grow Plus",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Pay-as-you-go production plan with AI features. Free tier: 10K search requests/mo + 100K records included. Overage: $1.75 per additional 1K search requests; $0.40 per additional 1K records. Adds AI synonyms, AI ranking, advanced personalization, query categorization, collections, 10K rules per index, 90-day analytics. monthlyUsd=0 reflects $0 base fee; total bill is pure usage.",
+          "source": {
+            "url": "https://www.algolia.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Elevate",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Annual contract, contact sales. Volume-based discounts. Includes NeuralSearch, AI collections, real-time personalization, 99.99% SLA, SSO, enhanced SLA, professional services, up to 10 apps and 1K indices.",
+          "source": {
+            "url": "https://www.algolia.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "typesense-cloud",
+      "name": "Typesense Cloud",
+      "domain": "cloud.typesense.org",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Firebase",
+        "Gatsby",
+        "Next.js",
+        "React",
+        "Vue"
+      ],
+      "provenance": "Official pricing page https://cloud.typesense.org/pricing/calculator fetched 2026-06-14; returned no public price list — only a configuration UI requiring signup. Main site cloud.typesense.org confirmed hourly pricing model with no published per-tier rates. Typesense.io pricing page timed out. No self-serve public price sheet found; all plans marked null.",
+      "plans": [
+        {
+          "name": "Cloud (Free Credits Trial)",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Free credits provided on signup, no credit card required. Hourly-billed dedicated clusters with no per-record or per-search charges. RAM options from 0.5 GB to 1024 GB; vCPU from 2 (burst) to 960. Add-ons: High Availability, Search Delivery Network (3 or 5 regions), GPU acceleration. Specific USD/hour rates not published publicly — require calculator after signup.",
+          "source": {
+            "url": "https://cloud.typesense.org/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Business Support",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Prioritized support tier. Pricing not publicly listed; contact sales. Also available free as migration incentive for Algolia customers spending $2K+/mo.",
+          "source": {
+            "url": "https://cloud.typesense.org/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "meilisearch-cloud",
+      "name": "Meilisearch Cloud",
+      "domain": "meilisearch.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "JavaScript",
+        "Python",
+        "Ruby",
+        "PHP",
+        "Go",
+        "Rust",
+        "Swift",
+        "Dart",
+        "Strapi",
+        "Firebase"
+      ],
+      "provenance": "Official pricing page https://www.meilisearch.com/pricing fetched 2026-06-14. Published starting price $20/mo; XS resource-based instance published as $18/mo instance + $5/mo disk = $23/mo total; usage-based example: 100K docs + 50K searches = $30/mo. Interactive cost estimator on page but no fixed tier table with named plans beyond 'Cloud' and 'Enterprise'. SOC 2 Type II and GDPR from security page fetched 2026-06-14. No HIPAA/BAA mentioned.",
+      "plans": [
+        {
+          "name": "Cloud",
+          "monthlyUsd": 23,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Fully managed cloud. Starts at $20/mo per vendor; lowest published resource-based config (XS: 0.5 vCPU, 1 GB RAM, 32 GiB disk) = $23/mo ($18 instance + $5 disk). Usage-based option: 100K docs + 50K searches = ~$30/mo. 14-day free trial, no credit card required. Includes automatic scaling, email support.",
+          "source": {
+            "url": "https://www.meilisearch.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Contact sales. Dedicated infrastructure, 99.999% uptime SLA, dedicated Slack support, SSO SAML, SOC 2, analytics, merchandizing, personalization, volume discounts, sharding and replication.",
+          "source": {
+            "url": "https://www.meilisearch.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "elastic-cloud",
+      "name": "Elastic Cloud",
+      "domain": "elastic.co",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Kibana",
+        "Logstash",
+        "Beats",
+        "AWS",
+        "Azure",
+        "GCP",
+        "Kafka",
+        "Prometheus",
+        "OpenTelemetry"
+      ],
+      "provenance": "Official pricing page https://www.elastic.co/pricing/cloud-hosted fetched 2026-06-14. Minimum monthly prices confirmed as 'as low as' for a cloud production config (120 GB storage / 2 zones). HIPAA not mentioned on pricing page. Subscriptions page at elastic.co/subscriptions confirmed Gold is discontinued for new customers. Serverless pricing from https://www.elastic.co/pricing/serverless-search fetched 2026-06-14.",
+      "plans": [
+        {
+          "name": "Standard",
+          "monthlyUsd": 99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "As low as $99/mo (usage-based; minimum for baseline production config: 120 GB storage / 2 zones). Includes Elasticsearch platform, vector/semantic search, 400+ integrations, dashboards, alerting, host malware prevention. Web-only support, 3-business-day response.",
+          "source": {
+            "url": "https://www.elastic.co/pricing/cloud-hosted",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Gold",
+          "monthlyUsd": 114,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "As low as $114/mo. Adds reporting, third-party alerting, Watcher, multi-stack monitoring, enterprise search features, advanced host management. Business hours phone/web support, 4-hour to 2-day response.",
+          "source": {
+            "url": "https://www.elastic.co/pricing/cloud-hosted",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Platinum",
+          "monthlyUsd": 131,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "As low as $131/mo. Adds advanced security, ML anomaly detection, cross-cluster replication, semantic search with ELSER/e5, behavioral ransomware protection, 99.95% uptime SLA. 24/7 support, 1-hour critical response.",
+          "source": {
+            "url": "https://www.elastic.co/pricing/cloud-hosted",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": 184,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "As low as $184/mo. Adds searchable snapshots, GPU inference, Elastic AI Assistant, Agent Builder, semantic reranking, personalization, attack discovery automation. 24/7 support, 30-minute critical response, 99.95% SLA.",
+          "source": {
+            "url": "https://www.elastic.co/pricing/cloud-hosted",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Serverless (Search)",
+          "monthlyUsd": 24,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Usage-based serverless. Published sample: dev environment with 2 GB data = $24-$27/mo; production 20 GB = $190-$210/mo. Unit rates: Ingest VCU as low as $0.14/hr, Search VCU as low as $0.09/hr, storage $0.047/GB/mo, egress $0.05/GB. 50 GB storage free for vector. monthlyUsd reflects published minimum dev-environment estimate.",
+          "source": {
+            "url": "https://www.elastic.co/pricing/serverless-search",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "swiftype",
+      "name": "Swiftype (Elastic Enterprise Search)",
+      "domain": "swiftype.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Salesforce",
+        "SharePoint",
+        "Google Drive",
+        "Confluence",
+        "Dropbox",
+        "Box",
+        "OneDrive",
+        "Zendesk"
+      ],
+      "provenance": "Official pricing page https://swiftype.com/pricing fetched 2026-06-14 — Standard $79/mo and Pro $199/mo confirmed with overage rates. Note: Swiftype was acquired by Elastic; swiftype.com/app-search/pricing redirects to elastic.co/pricing but swiftype.com/pricing still shows standalone web crawler plans. GetApp (getapp.com) and Elastic's own pages now reference 'Elastic Enterprise Search' as the product name with $299/mo starting price noted on third-party review sites — this may reflect a different product tier than the swiftype.com page.",
+      "plans": [
+        {
+          "name": "Standard",
+          "monthlyUsd": 79,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Crawled weekly. Core search features, analytics, multilingual support, unlimited users. Includes 1 engine, 1 domain, 5K documents, 50K queries/mo. Overage: $25 per 5K additional docs; $25 per 50K additional queries; $50 per additional engine.",
+          "source": {
+            "url": "https://swiftype.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 199,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Crawled twice daily. Adds cross-domain search, PDF/document indexing, advanced crawler settings. 5K documents, 100K queries/mo. Overage: $25 per 5K additional docs; $25 per 50K additional queries; $100 per additional engine; $30 per additional domain.",
+          "source": {
+            "url": "https://swiftype.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Contact sales. Enterprise SLA and security, dedicated hardware, account manager, expert implementation team, volume pricing for all metrics, anytime manual recrawl.",
+          "source": {
+            "url": "https://swiftype.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "pinecone",
+      "name": "Pinecone",
+      "domain": "pinecone.io",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "LangChain",
+        "LlamaIndex",
+        "OpenAI",
+        "AWS",
+        "Azure",
+        "GCP",
+        "Cohere",
+        "Hugging Face"
+      ],
+      "provenance": "Official pricing page https://www.pinecone.io/pricing/ fetched 2026-06-14. HIPAA and BAA confirmed on security page https://www.pinecone.io/security/ fetched 2026-06-14: 'HIPAA compliant (with BAA available upon request).' SOC 2 Type II, ISO 27001, GDPR also confirmed.",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free forever. Up to 2 GB storage, 2M write units/mo, 1M read units/mo, 5 indexes (Dense, Sparse, Full-Text). Community support only.",
+          "source": {
+            "url": "https://www.pinecone.io/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Builder",
+          "monthlyUsd": 20,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Flat $20/mo. Up to 10 GB storage, 5M write units/mo, 2M read units/mo. Multiple projects/users, monitoring dashboards. Email support.",
+          "source": {
+            "url": "https://www.pinecone.io/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Standard",
+          "monthlyUsd": 50,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "$50/mo minimum applied toward usage. Unlimited storage/write/read units above minimum. Dedicated Read Nodes, backup/restore, RBAC, SAML SSO. Usage rates: storage $0.33/GB/mo; write units $4-$4.50/M; read units $16-$18/M. Import $0.25/GB, backups $0.10/GB/mo.",
+          "source": {
+            "url": "https://www.pinecone.io/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": 500,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "$500/mo minimum applied toward usage. Adds 99.95% uptime SLA, private networking, audit logs, Pro 24/7 support (2-hour critical response). Usage rates: write units $6-$6.75/M; read units $24-$27/M.",
+          "source": {
+            "url": "https://www.pinecone.io/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "BYOC",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Bring Your Own Cloud — deploys Pinecone into customer's cloud account. Contact sales for pricing.",
+          "source": {
+            "url": "https://www.pinecone.io/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "weaviate",
+      "name": "Weaviate",
+      "domain": "weaviate.io",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "OpenAI",
+        "Cohere",
+        "Hugging Face",
+        "AWS",
+        "Azure",
+        "GCP",
+        "LangChain",
+        "LlamaIndex"
+      ],
+      "provenance": "Official pricing page https://www.weaviate.io/pricing fetched 2026-06-14. HIPAA confirmed on security page https://www.weaviate.io/security fetched 2026-06-14: 'compliant with SOC 2, HIPAA, data privacy, and explainability.' BAA not explicitly stated (trust portal referenced but not accessed).",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Always free, no credit card. 1 cluster per user, 100K objects, 1 GB memory, 10 GB disk, 1 collection with up to 3 tenants. 2K embedding requests/day, 1K Query Agent requests/mo. Community Slack support.",
+          "source": {
+            "url": "https://www.weaviate.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Flex",
+          "monthlyUsd": 45,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Starts at $45/mo (pay-as-you-go, no commitment). Shared cloud cluster, full core database, replication, baseline RBAC, 99.5% SLA. Usage rates: vector dimensions $0.00465/1M; storage $0.1505/GiB/mo; backup $0.0264/GiB/mo. Email support, next-business-day Severity 1 response.",
+          "source": {
+            "url": "https://www.weaviate.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Plus",
+          "monthlyUsd": 280,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Starts at $280/mo; prepaid annual contract. Shared cloud cluster, SSO/SAML, 30-day backup retention, 99.9% SLA. Email support, 8-hour Severity 1 response. monthlyUsd is the annualized monthly rate.",
+          "source": {
+            "url": "https://www.weaviate.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": 400,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Starts at $400/mo; prepaid annual contract. Shared or dedicated deployment, up to 99.95% uptime, global coverage across ~40 AWS/GCP/Azure regions. Dedicated Technical Account Team, as low as 1-hour Severity 1 response. monthlyUsd is the annualized monthly rate.",
+          "source": {
+            "url": "https://www.weaviate.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "mongodb-atlas-search",
+      "name": "MongoDB Atlas Search",
+      "domain": "mongodb.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "AWS",
+        "Azure",
+        "GCP",
+        "Kafka",
+        "Spark",
+        "dbt",
+        "Terraform",
+        "Kubernetes"
+      ],
+      "provenance": "Official MongoDB pricing page https://www.mongodb.com/pricing fetched 2026-06-14. Atlas Search is an add-on to Atlas clusters; search nodes (S20–S80) are billed hourly separately from the DB cluster. S20 at $0.12-0.15/hr × 720h/mo = $86-$108/mo. Atlas DB cluster required separately (M0 free, M10 ~$57/mo, etc.). HIPAA not mentioned on pricing page.",
+      "plans": [
+        {
+          "name": "Shared (M0 + Search on shared tier)",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free M0 cluster (512 MB storage, shared). Atlas Search (full-text) is available on M0 at no additional charge for basic use. 32 MB sort memory, up to 100 ops/sec.",
+          "source": {
+            "url": "https://www.mongodb.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Dedicated Search Node S20",
+          "monthlyUsd": 86,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Dedicated Atlas Search node tier S20: 2 vCPUs, 4 GB RAM, 100-106 GB storage. Billed at $0.12-0.15/hr (region-dependent); monthlyUsd = $0.12 × 720h = ~$86/mo (minimum, US East). Requires a separate Atlas DB cluster (M10+ at ~$57/mo) in addition to this search node cost.",
+          "source": {
+            "url": "https://www.mongodb.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Dedicated Search Node S30",
+          "monthlyUsd": 173,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "S30: 4 vCPUs, 8 GB RAM, 213 GB storage. $0.24-0.27/hr; monthlyUsd = $0.24 × 720h = ~$173/mo (minimum, US East).",
+          "source": {
+            "url": "https://www.mongodb.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    }
+  ]
+}

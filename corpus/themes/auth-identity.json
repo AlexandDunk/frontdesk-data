@@ -1,0 +1,722 @@
+{
+  "vertical": "auth-identity",
+  "generatedAt": "2026-06-14",
+  "methodologyNotes": "Published self-serve USD pricing was collected directly from each vendor's official pricing page, accessed 2026-06-14. Auth0 annual billing is 11× monthly (≈8.33% discount; 1 month free). Clerk Pro annual rate is $20/mo vs $25/mo monthly (20% discount). Descope requires annual billing for Pro/Growth; no month-to-month rate published. WorkOS AuthKit is usage-based (per-MAU above 1M free); SSO/Directory Sync priced per connection per month; no flat monthly floor published for AuthKit alone. Stytch Pay As You Go has no base fee; charges are per-MAU above 10,000 free; monthlyUsd=0 reflects base cost of the smallest committed tier with usage metered above the free threshold. Amazon Cognito is pure pay-as-you-go per MAU; monthlyUsd=null for all plans as there is no flat floor (tier selection is per-account configuration, not a plan upgrade). Firebase Auth Blaze plan: no flat fee — charges only apply beyond the 50K MAU free threshold via Google Cloud Identity Platform metered rates; monthlyUsd=null. Supabase is included because Auth is a first-class feature with explicit MAU limits per plan. Okta Customer Identity Enterprise Base Platform lists a published $3,000/mo base; Workforce Identity per-seat prices are annual-only. All telephony fields (minutesIncluded, callsIncluded, overagePerMin, overagePerCall) are null — this is a non-telephony vertical.",
+  "vendors": [
+    {
+      "slug": "auth0",
+      "name": "Auth0",
+      "domain": "auth0.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Okta",
+        "Google Workspace",
+        "Microsoft Azure AD",
+        "Salesforce",
+        "GitHub",
+        "Slack",
+        "Twilio",
+        "SendGrid"
+      ],
+      "provenance": "https://auth0.com/pricing accessed 2026-06-14. HIPAA/BAA listed as Enterprise add-on ('Contact us'). Annual billing = 11× monthly (≈8.33% discount). B2C and B2B plans each start at 500 MAUs.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Up to 25,000 MAUs. 1 custom domain, passwordless auth, unlimited social connections, 5 organizations, basic attack protection, 1 enterprise connection, self-service SSO, SCIM, community support.",
+          "source": {
+            "url": "https://auth0.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "B2C Essentials",
+          "monthlyUsd": 35,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 8,
+          "billingModel": "flat",
+          "notes": "Starts at $35/mo for 500 MAUs (month-to-month). Annual: $385/yr ($32.08/mo equivalent). Adds pro MFA, RBAC, 10 organizations, audit log streaming, separate environments, standard support. Scales with MAU volume.",
+          "source": {
+            "url": "https://auth0.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "B2C Professional",
+          "monthlyUsd": 240,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 8,
+          "billingModel": "flat",
+          "notes": "Starts at $240/mo for 500 MAUs (month-to-month). Annual: $2,640/yr ($220/mo equivalent). Adds enhanced attack protection, custom database connections, enterprise MFA, cross-app SSO.",
+          "source": {
+            "url": "https://auth0.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "B2B Essentials",
+          "monthlyUsd": 150,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 8,
+          "billingModel": "flat",
+          "notes": "Starts at $150/mo for 500 MAUs (month-to-month). Annual: $1,650/yr ($137.50/mo equivalent). Includes unlimited organizations, 3 enterprise SSO connections, pro MFA, standard support. Additional SSO connections: $100/mo each.",
+          "source": {
+            "url": "https://auth0.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "B2B Professional",
+          "monthlyUsd": 800,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 8,
+          "billingModel": "flat",
+          "notes": "Starts at $800/mo for 500 MAUs (month-to-month). Annual: $8,800/yr ($733.33/mo equivalent). Adds enhanced attack protection, enterprise MFA included, security center, custom token exchange. 5 SSO connections included.",
+          "source": {
+            "url": "https://auth0.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Contact sales. 99.99% SLA, custom user tiers, enterprise rate limits, advanced support, HIPAA/BAA add-on available.",
+          "source": {
+            "url": "https://auth0.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "clerk",
+      "name": "Clerk",
+      "domain": "clerk.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Next.js",
+        "Remix",
+        "Expo",
+        "React Native",
+        "Supabase",
+        "Firebase",
+        "PlanetScale",
+        "Stripe"
+      ],
+      "provenance": "https://clerk.com/pricing accessed 2026-06-14. HIPAA BAA explicitly listed as available on Enterprise plan. Pro annual rate $20/mo vs $25/mo monthly = 20% discount.",
+      "plans": [
+        {
+          "name": "Hobby",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free forever. Up to 50,000 MRUs (monthly recurring users) per app. No credit card required.",
+          "source": {
+            "url": "https://clerk.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 25,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "Month-to-month: $25/mo. Annual: $20/mo. 50,000 MRUs included per app; additional MRUs at $0.02/MRU/mo. Adds MFA, custom branding removal, enterprise connections.",
+          "source": {
+            "url": "https://clerk.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 300,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "Month-to-month: $300/mo. Annual: $250/mo. 50,000 MRUs included per app; additional MRUs at volume pricing ($0.012–$0.02/MRU/mo). 10 dashboard seats included; additional seats $20/mo each.",
+          "source": {
+            "url": "https://clerk.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Annual billing only. Custom MAU limits, 99.99% uptime SLA, dedicated support, HIPAA compliance with BAA.",
+          "source": {
+            "url": "https://clerk.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "workos",
+      "name": "WorkOS",
+      "domain": "workos.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Okta",
+        "Microsoft Azure AD",
+        "Google Workspace",
+        "OneLogin",
+        "Ping Identity",
+        "JumpCloud",
+        "Rippling",
+        "Bamboo HR"
+      ],
+      "provenance": "https://workos.com/pricing accessed 2026-06-14. HIPAA/BAA not mentioned on pricing page. AuthKit (user management) is free up to 1M MAUs; $2,500/mo per additional 1M MAUs. SSO and Directory Sync priced per connection/month with volume tiers. No hipaa/baa confirmed from available pages.",
+      "plans": [
+        {
+          "name": "AuthKit — Free Tier",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "First 1M MAUs free. Includes email/password, social login, passkeys, MFA, magic auth, enterprise SSO. Usage-based above 1M MAUs: $2,500/mo per additional 1M MAUs.",
+          "source": {
+            "url": "https://workos.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "SSO / Directory Sync — Pay as You Go",
+          "monthlyUsd": 125,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Per-connection pricing: 1–15 connections at $125/connection/mo; 16–30 at $100/connection/mo (20% off); 31–50 at $80/connection/mo; 51–100 at $65/connection/mo; 101–200 at $50/connection/mo; 201+ contact sales. monthlyUsd reflects cost of a single connection at the lowest tier. Audit log streaming: $125/mo per SIEM connection; Event retention: $99/mo per 1M events.",
+          "source": {
+            "url": "https://workos.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Annual Credits",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom annual pricing with pre-pay discounts. Includes 99.99% uptime SLA, guided migration, guaranteed support SLA. Contact sales.",
+          "source": {
+            "url": "https://workos.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "stytch",
+      "name": "Stytch",
+      "domain": "stytch.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Slack",
+        "Salesforce",
+        "HubSpot",
+        "Twilio",
+        "SendGrid",
+        "Stripe"
+      ],
+      "provenance": "https://stytch.com/pricing accessed 2026-06-14. HIPAA/BAA explicitly listed as available on Enterprise plan. Pay As You Go plan has no base fee; 10,000 MAUs free, then usage-metered. monthlyUsd=0 reflects the base cost; overages are per-MAU.",
+      "plans": [
+        {
+          "name": "Pay As You Go",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "No base fee. 10,000 MAUs free, 5 SSO/SCIM connections, 1,000 M2M tokens, 10,000 fraud fingerprints included. Additional SSO/SCIM connections: $125/connection/mo. Brand customization: $99/mo. No feature gating — all authentication methods available. HIPAA/BAA only on Enterprise.",
+          "source": {
+            "url": "https://stytch.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Contact sales. Unlimited organizations and connections, discounted rates, dedicated Slack support, migration assistance, 99.99% uptime SLA, HIPAA/BAA available, advanced fraud protection.",
+          "source": {
+            "url": "https://stytch.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "firebase-auth",
+      "name": "Firebase Authentication",
+      "domain": "firebase.google.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Google Cloud",
+        "Google Identity",
+        "Apple",
+        "Facebook",
+        "GitHub",
+        "Twitter",
+        "Microsoft"
+      ],
+      "provenance": "https://firebase.google.com/pricing accessed 2026-06-14. Firebase Auth is part of Firebase platform. Spark plan is fully free up to 50K MAUs. Blaze (pay-as-you-go) charges only above 50K MAUs at Google Cloud Identity Platform metered rates. HIPAA eligibility not listed on Firebase pricing page; Firebase BAA is available through Google Cloud but not confirmed on this page. No flat monthly tier exists for auth specifically.",
+      "plans": [
+        {
+          "name": "Spark (No-Cost)",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free forever. Up to 50,000 MAUs for standard auth; up to 50 MAUs for SAML/OIDC. No phone authentication available on Spark plan. Cannot exceed limits — upgrade to Blaze required.",
+          "source": {
+            "url": "https://firebase.google.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Blaze (Pay-as-You-Go)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "No flat monthly fee for auth. First 50K MAUs free (matching Spark). Overage MAUs billed at Google Cloud Identity Platform rates. SAML/OIDC: 50 MAUs free then metered via Google Cloud. Phone auth billed per SMS sent at Google Cloud rates. No published flat rate — all usage is metered.",
+          "source": {
+            "url": "https://firebase.google.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "okta",
+      "name": "Okta",
+      "domain": "okta.com",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Microsoft Azure AD",
+        "Google Workspace",
+        "Salesforce",
+        "ServiceNow",
+        "Workday",
+        "Slack",
+        "AWS",
+        "GitHub"
+      ],
+      "provenance": "https://www.okta.com/pricing/ accessed 2026-06-14. Workforce Identity per-seat prices are annual-only. Customer Identity (CIAM) Enterprise Base Platform lists $3,000/mo as a published starting price (billed annually). HIPAA listed on Okta Trust Center (https://security.okta.com/). B2C and B2B CIAM suites are quote-only beyond the base platform fee. Free developer plan available for CIAM (up to 10 MAU, non-production only).",
+      "plans": [
+        {
+          "name": "Workforce Identity — Starter",
+          "monthlyUsd": 6,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Billed annually at $6/user/mo. Minimum $1,500/yr contract. Includes SSO, MFA, Universal Directory, 5 Workflows. Month-to-month not publicly available.",
+          "source": {
+            "url": "https://www.okta.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Workforce Identity — Core Essentials",
+          "monthlyUsd": 14,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Billed annually at $14/user/mo. Adds Adaptive MFA, Privileged Access, Lifecycle Management, 5 Workflows.",
+          "source": {
+            "url": "https://www.okta.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Workforce Identity — Essentials",
+          "monthlyUsd": 17,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Billed annually at $17/user/mo. Most popular tier. Everything in Core Essentials plus 50 Workflows.",
+          "source": {
+            "url": "https://www.okta.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Workforce Identity — Professional",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Contact sales. Adds Device Access, ISPM, Threat Protection, unlimited Workflows.",
+          "source": {
+            "url": "https://www.okta.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Workforce Identity — Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Contact sales. Adds API Access Management, Access Gateway, all Professional features.",
+          "source": {
+            "url": "https://www.okta.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Customer Identity — Developer (Free)",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free developer plan. Up to 10 MAUs, non-production use only. No SLA.",
+          "source": {
+            "url": "https://www.okta.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Customer Identity — Enterprise Base Platform",
+          "monthlyUsd": 3000,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Billed annually at $3,000/mo. Foundation for all non-employee (CIAM) identities. B2C Suite and B2B Suite add-ons are quote-only on top of this base. MAU-based usage pricing applies for add-ons.",
+          "source": {
+            "url": "https://www.okta.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "amazon-cognito",
+      "name": "Amazon Cognito",
+      "domain": "aws.amazon.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "AWS Lambda",
+        "API Gateway",
+        "ALB",
+        "IAM",
+        "S3",
+        "DynamoDB",
+        "Amplify",
+        "AppSync"
+      ],
+      "provenance": "https://aws.amazon.com/cognito/pricing/ accessed 2026-06-14. Amazon Cognito is listed as HIPAA-eligible on https://aws.amazon.com/compliance/hipaa-eligible-services-reference/ (accessed 2026-06-14); BAA available via AWS Artifact. Three tiers (Lite/Essentials/Plus) are account-level configurations, not plan upgrades in the traditional sense — no flat monthly fee; all billing is per-MAU. monthlyUsd=null for all tiers as there is no flat monthly commitment.",
+      "plans": [
+        {
+          "name": "Lite",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "10,000 MAUs free/mo. Above free tier: $0.0055/MAU for first 90,000 MAUs, then $0.0046/MAU. SAML/OIDC federation: 50 MAUs free, then $0.015/MAU. No flat monthly fee.",
+          "source": {
+            "url": "https://aws.amazon.com/cognito/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://aws.amazon.com/compliance/hipaa-eligible-services-reference/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Essentials",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "10,000 MAUs free/mo. Above free tier: $0.015/MAU. SAML/OIDC: 50 MAUs free, then $0.015/MAU. Multi-Region replication add-on: $0.0045/MAU. No flat monthly fee.",
+          "source": {
+            "url": "https://aws.amazon.com/cognito/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Plus",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "No free tier. $0.020/MAU from first MAU. SAML/OIDC: 50 MAUs free, then $0.015/MAU. M2M authorization: $0.00225–$0.002925 per token request. No flat monthly fee.",
+          "source": {
+            "url": "https://aws.amazon.com/cognito/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "supabase",
+      "name": "Supabase",
+      "domain": "supabase.com",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Next.js",
+        "React",
+        "Flutter",
+        "Svelte",
+        "Stripe",
+        "Twilio",
+        "SendGrid",
+        "GitHub"
+      ],
+      "provenance": "https://supabase.com/pricing accessed 2026-06-14. HIPAA available as a paid add-on on Team and Enterprise plans (not on Free or Pro). Auth MAU limits are per-plan: Free=50K, Pro=100K included, Team=100K included. Overage on Pro/Team: $0.00325/MAU.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "50,000 MAUs for auth. Unlimited total users. 2 active projects; project pauses after 1 week of inactivity. Community support. No HIPAA.",
+          "source": {
+            "url": "https://supabase.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 25,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "100,000 MAUs included; additional MAUs at $0.00325/MAU. Includes $10/mo compute credit. Daily backups (7 days). Email support. No HIPAA on Pro plan.",
+          "source": {
+            "url": "https://supabase.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Team",
+          "monthlyUsd": 599,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "100,000 MAUs included; additional MAUs at $0.00325/MAU. Priority email support with SLAs. Daily backups (14 days). HIPAA available as paid add-on. SOC2 and ISO 27001 compliance.",
+          "source": {
+            "url": "https://supabase.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Contact sales. Custom MAU limits, 24×7×365 premium enterprise support, dedicated support manager, uptime SLAs, custom security features, BYO Cloud. HIPAA available as add-on.",
+          "source": {
+            "url": "https://supabase.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "descope",
+      "name": "Descope",
+      "domain": "descope.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Okta",
+        "Azure AD",
+        "Google Workspace",
+        "Salesforce",
+        "HubSpot",
+        "Twilio",
+        "SendGrid",
+        "Stripe"
+      ],
+      "provenance": "https://www.descope.com/pricing accessed 2026-06-14. HIPAA BAA explicitly listed as available on Pro, Growth, and Enterprise plans. Pro and Growth require annual billing; no published month-to-month rate. monthlyUsd reflects the published annual-equivalent monthly rate.",
+      "plans": [
+        {
+          "name": "Free Forever",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Up to 7,500 MAUs. No overages — upgrade required to exceed limits. Includes core authentication methods.",
+          "source": {
+            "url": "https://www.descope.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 249,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Starts at $249/mo billed annually. 10,000 MAUs included. HIPAA BAA available. Month-to-month rate not published.",
+          "source": {
+            "url": "https://www.descope.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Growth",
+          "monthlyUsd": 799,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Starts at $799/mo billed annually. 25,000 MAUs included. HIPAA BAA available. FedRAMP High deployments available at extra cost. Month-to-month rate not published.",
+          "source": {
+            "url": "https://www.descope.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Contact sales. Custom MAU limits, tiered discounts, premium support add-on, dedicated CS engineer, HIPAA BAA. Everything in Growth.",
+          "source": {
+            "url": "https://www.descope.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    }
+  ]
+}

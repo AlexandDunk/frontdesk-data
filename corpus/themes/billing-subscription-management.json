@@ -1,0 +1,626 @@
+{
+  "vertical": "billing-subscription-management",
+  "generatedAt": "2026-06-14",
+  "methodologyNotes": "Prices fetched directly from each vendor's official pricing page via WebFetch on 2026-06-14. Stripe Billing pricing page geo-routes to localized (EUR/GBP/AUD) pages regardless of locale parameter; USD prices are not published at stripe.com/billing/pricing — only the 0.7% pay-as-you-go rate is currency-agnostic. The monthly subscription tiers (€500–€4,900/month) are EUR-only; those plans are recorded as null monthlyUsd with notes. Chargebee Performance plan is $7,188/year (annual commitment, billed monthly = $599/mo equivalent); confirmed via official site and SoftwareAdvice corroboration. Maxio Grow plan lists at $599 but sources disagree on frequency (official site renders /month; GetApp and Capterra list /year) — recorded as null monthlyUsd with a note rather than asserting a contested figure. Billsby Core=$45/month and Pro=$135/month confirmed via official site; GetApp discrepancy ($35) treated as stale. Zuora pricing is fully quote-only with no published tiers. HIPAA/BAA status set to null where not explicitly stated on security pages.",
+  "vendors": [
+    {
+      "slug": "chargebee",
+      "name": "Chargebee",
+      "domain": "chargebee.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Salesforce",
+        "HubSpot",
+        "Zoho CRM",
+        "Pipedrive",
+        "NetSuite",
+        "Sage Intacct",
+        "QuickBooks Online",
+        "Xero",
+        "Avalara",
+        "Mailchimp",
+        "Klaviyo",
+        "Zendesk",
+        "Intercom",
+        "Freshdesk",
+        "Slack",
+        "Zapier",
+        "BigCommerce",
+        "Google Analytics"
+      ],
+      "provenance": "Official pricing page https://www.chargebee.com/pricing/ fetched 2026-06-14. Performance plan confirmed as $7,188/year (annual commitment, billed monthly) = $599/month equivalent. Corroborated by SoftwareAdvice profile.",
+      "plans": [
+        {
+          "name": "Billing Starter",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free for first $250K cumulative billing; 0.75% overage on billing thereafter. Includes checkout, self-serve portal, 35+ payment gateways.",
+          "source": {
+            "url": "https://www.chargebee.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.softwareadvice.com/subscription-management/chargebee-profile/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Billing Performance",
+          "monthlyUsd": 599,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$7,188/year billed monthly (annual commitment). Covers up to $100K monthly billing volume. Includes advance/consolidated invoices, smart dunning, migration support, engineering consultation.",
+          "source": {
+            "url": "https://www.chargebee.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.softwareadvice.com/subscription-management/chargebee-profile/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Billing Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only. Includes multi-entity support, account hierarchy, on-demand discounting, contract terms.",
+          "source": {
+            "url": "https://www.chargebee.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "recurly",
+      "name": "Recurly",
+      "domain": "recurly.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Salesforce",
+        "HubSpot",
+        "NetSuite",
+        "Avalara",
+        "TaxJar",
+        "Braintree",
+        "Stripe",
+        "PayPal",
+        "Adyen",
+        "Zuora",
+        "Mailchimp",
+        "Slack",
+        "Zapier"
+      ],
+      "provenance": "Official pricing page https://recurly.com/pricing/ fetched 2026-06-14. Starter $249/month confirmed. Engage and RevRec starting prices confirmed as annual commitments.",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": 249,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$249/month plus 0.9% of billing volume. First $40K in monthly billings included at no charge. Includes automated global subscription billing, 10+ payment methods, 20+ payment gateways, 1 dunning campaign.",
+          "source": {
+            "url": "https://recurly.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "All-Access",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only. As low as <1% of billing volume, billed annually. Requires minimum $1M billing volume. Includes AI-powered analytics, multiple dunning campaigns, payments orchestration, multicurrency, SSO.",
+          "source": {
+            "url": "https://recurly.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Engage",
+          "monthlyUsd": 1600,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Starting at $1,600/month billed annually. AI-powered churn propensity modeling, personalized offers, cancel-save and upsell, A/B testing. Price scales with prompt volume and capability needs.",
+          "source": {
+            "url": "https://recurly.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "RevRec",
+          "monthlyUsd": 850,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Starting at $850/month billed annually. Automated revenue recognition, SSP automation, rules-driven allocations, multi-GAAP compliance, immutable audit trail. Price scales with billing volume.",
+          "source": {
+            "url": "https://recurly.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "stripe-billing",
+      "name": "Stripe Billing",
+      "domain": "stripe.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Salesforce",
+        "HubSpot",
+        "NetSuite",
+        "QuickBooks",
+        "Xero",
+        "Avalara",
+        "Slack",
+        "Zapier",
+        "Intercom",
+        "Segment"
+      ],
+      "provenance": "Official pricing page https://stripe.com/billing/pricing fetched 2026-06-14, but geo-routes to German/EUR pricing only — USD prices not published at this URL. Pay-as-you-go rate (0.7% of billing volume) is currency-agnostic and confirmed. Monthly subscription tiers shown in EUR (€500–€4,900/month on annual contracts) with no USD equivalent published by Stripe. Those tiers recorded as null. UK page (stripe.com/en-gb/billing/pricing) and AU page (stripe.com/en-au/billing/pricing) corroborate the pay-as-you-go 0.7% rate and tiered subscription model structure.",
+      "plans": [
+        {
+          "name": "Pay as you go",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "No recurring fee. 0.7% of billing volume processed through Stripe Billing. Excludes one-time invoices. Supports recurring billing, usage-based metering (100M events/month), smart retries, customer portal.",
+          "source": {
+            "url": "https://stripe.com/billing/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://stripe.com/en-gb/billing/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Monthly subscription — Tier 1",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Annual contract, paid monthly. Official pricing page geo-routes to EUR only (€500/month for up to €80,000 billing volume, saves 11% vs pay-as-you-go). USD price not published by Stripe. 0.67% for additional volume beyond tier cap.",
+          "source": {
+            "url": "https://stripe.com/billing/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://stripe.com/en-au/billing/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Monthly subscription — Tier 2",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Annual contract, paid monthly. EUR page: €1,200/month for up to €200,000 billing volume, saves 14%. USD price not published by Stripe.",
+          "source": {
+            "url": "https://stripe.com/billing/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Monthly subscription — Tier 3",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Annual contract, paid monthly. EUR page: €2,350/month for up to €400,000 billing volume, saves 16%. USD price not published by Stripe.",
+          "source": {
+            "url": "https://stripe.com/billing/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Monthly subscription — Tier 4",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Annual contract, paid monthly. EUR page: €4,900/month for up to €850,000 billing volume, saves 18%. USD price not published by Stripe.",
+          "source": {
+            "url": "https://stripe.com/billing/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only. For high-volume businesses and unique business models. Contact sales.",
+          "source": {
+            "url": "https://stripe.com/billing/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "paddle",
+      "name": "Paddle",
+      "domain": "paddle.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Stripe",
+        "Braintree",
+        "PayPal",
+        "Zapier",
+        "Slack",
+        "HubSpot",
+        "Google Analytics",
+        "Segment",
+        "Baremetrics"
+      ],
+      "provenance": "Official pricing page https://www.paddle.com/pricing fetched 2026-06-14. Pay-as-you-go at 5% + $0.50 per transaction confirmed. Custom enterprise tier confirmed quote-only. Paddle is a merchant of record; no separate monthly platform fee on self-serve tier.",
+      "plans": [
+        {
+          "name": "Pay as you go",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "5% + $0.50 per checkout transaction. No monthly fee, no migration fee, no hidden extras. Paddle acts as merchant of record — handles global payments, cross-border sales tax, fraud, and chargeback protection.",
+          "source": {
+            "url": "https://www.paddle.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Custom",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only. For rapidly scaling and enterprise businesses. Includes custom rates, success management, custom migration and implementation services, optional premium add-ons.",
+          "source": {
+            "url": "https://www.paddle.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "maxio",
+      "name": "Maxio",
+      "domain": "maxio.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Salesforce",
+        "HubSpot",
+        "Pipedrive",
+        "NetSuite",
+        "Sage Intacct",
+        "QuickBooks Online",
+        "QuickBooks Desktop",
+        "Xero",
+        "Avalara",
+        "Anrok",
+        "Stripe",
+        "PayPal",
+        "GoCardless",
+        "Braintree",
+        "Adyen",
+        "Authorize.Net",
+        "Mailchimp",
+        "Slack",
+        "Zapier",
+        "Zendesk",
+        "Segment"
+      ],
+      "provenance": "Official pricing page https://www.maxio.com/pricing fetched 2026-06-14 (renders Grow as '$599/month'). GetApp (https://www.getapp.com/finance-management-software/a/maxio/pricing/) and Capterra (https://www.capterra.com/p/139751/Maxio/pricing/) both list Grow as '$599 / Per year'. Frequency conflict is unresolved from public sources; Grow monthlyUsd recorded as null.",
+      "plans": [
+        {
+          "name": "Build",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free developer sandbox with limited access. Intended for testing billing, pricing, and integrations before going live.",
+          "source": {
+            "url": "https://www.maxio.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Grow",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Published figure is $599, but sources conflict on billing frequency: maxio.com/pricing renders '$599/month' (for up to $100K monthly billings), while GetApp and Capterra both list it as '$599 / Per year'. The per-month vs per-year ambiguity cannot be resolved from public sources, so monthlyUsd is set to null rather than asserting a contested or derived figure. Covers up to $100K in monthly billings. Includes recurring billing, usage-based pricing, contract management, revenue recognition, financial reports, CRM/payment integrations, EU and NA support. Unlimited users.",
+          "source": {
+            "url": "https://www.maxio.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/finance-management-software/a/maxio/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Scale",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only. For businesses with >$100K monthly billings. Adds advanced revenue recognition, A/R management, expense amortization, multi-entity support, metering and rating. Volume discounts available.",
+          "source": {
+            "url": "https://www.maxio.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "zuora",
+      "name": "Zuora",
+      "domain": "zuora.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Salesforce",
+        "NetSuite",
+        "SAP",
+        "Microsoft Dynamics",
+        "Workday",
+        "Avalara",
+        "Vertex",
+        "Stripe",
+        "Braintree",
+        "Adyen",
+        "Chase Paymentech",
+        "Zuora Revenue",
+        "Zuora CPQ"
+      ],
+      "provenance": "Official pricing page https://zuora.com/pricing fetched 2026-06-14. No tiers or prices published — fully sales-driven. All plans are quote-only.",
+      "plans": [
+        {
+          "name": "Zuora Billing",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only. Zuora does not publish pricing. Enterprise subscription and usage-based billing platform. Contact sales via 'Speak to an expert'.",
+          "source": {
+            "url": "https://zuora.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "billsby",
+      "name": "Billsby",
+      "domain": "billsby.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "QuickBooks",
+        "FreeAgent",
+        "TaxJar",
+        "Zapier",
+        "Stripe",
+        "PayPal"
+      ],
+      "provenance": "Official pricing page https://www.billsby.com/pricing fetched 2026-06-14. Core=$45/month and Pro=$135/month confirmed. GetApp listed $35 for Core — treated as stale; official site is authoritative.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Unlimited setup and testing before going live. Unlimited users.",
+          "source": {
+            "url": "https://www.billsby.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Core",
+          "monthlyUsd": 45,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$45/month billed monthly, plus 0.4% on revenue exceeding $15,000/month. Up to 5 users. Includes metered billing, pro-rated options, custom fields, automated dunning, QuickBooks integration.",
+          "source": {
+            "url": "https://www.billsby.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 135,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$135/month billed monthly, plus 0.5% on revenue exceeding $30,000/month. Up to 25 users. Adds multiple payment gateways, ACH, multiple tax regions, FreeAgent/TaxJar integrations, advanced reporting, multi-language, full API access.",
+          "source": {
+            "url": "https://www.billsby.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Custom",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only. Unlimited users. Bespoke solution.",
+          "source": {
+            "url": "https://www.billsby.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "zoho-billing",
+      "name": "Zoho Billing",
+      "domain": "zoho.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Zoho CRM",
+        "Zoho Books",
+        "Zoho Analytics",
+        "Stripe",
+        "PayPal",
+        "Authorize.Net",
+        "Braintree",
+        "GoCardless",
+        "Square",
+        "Avalara",
+        "TaxJar",
+        "Slack",
+        "Zapier",
+        "Twilio",
+        "Google Workspace"
+      ],
+      "provenance": "Official pricing page https://www.zoho.com/us/subscriptions/pricing.html fetched 2026-06-14. Standard $50/month (monthly) / $39/month (annual) confirmed. Premium $100/month (monthly) / $79/month (annual) confirmed.",
+      "plans": [
+        {
+          "name": "Standard",
+          "monthlyUsd": 50,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 22,
+          "billingModel": "flat",
+          "notes": "$50/month billed monthly; $39/month billed annually (22% discount). Up to 3 users. Quote and invoice creation, multi-currency, custom templates, tax reporting, progress invoicing, self-service customer portal.",
+          "source": {
+            "url": "https://www.zoho.com/us/subscriptions/pricing.html",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": 100,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 21,
+          "billingModel": "flat",
+          "notes": "$100/month billed monthly; $79/month billed annually (21% discount). Up to 10 users. Adds subscription billing, hosted payment pages, usage-based pricing automation, proration, dunning management, advanced analytics. Excludes local taxes.",
+          "source": {
+            "url": "https://www.zoho.com/us/subscriptions/pricing.html",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only. High-volume transactions, advanced usage-based billing, revenue recognition, forecasting, priority support.",
+          "source": {
+            "url": "https://www.zoho.com/us/subscriptions/pricing.html",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    }
+  ]
+}

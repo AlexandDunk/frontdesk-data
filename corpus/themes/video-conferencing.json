@@ -1,0 +1,631 @@
+{
+  "vertical": "video-conferencing",
+  "generatedAt": "2026-06-14",
+  "methodologyNotes": "Published self-serve USD pricing for leading video-conferencing platforms was collected from each vendor's official pricing page (or a reputable 2026 aggregator page when the official page returned 403/JS-only) on 2026-06-14 and normalized to USD. Where a vendor prices per seat, monthlyUsd records the per-seat list price at the annual-billing rate (consistent with how pricing is most commonly advertised); the month-to-month rate is noted in plan notes when both were observed. Quote-only / contact-sales tiers carry monthlyUsd = null rather than an estimate. Whereby's Pro tier is flat-rate (single host) while its Business tier is priced per host (3-host minimum); GoTo Meeting is priced per organizer. These are non-telephony video-conferencing products, so minutesIncluded, callsIncluded, overagePerMin, and overagePerCall are null on every plan. hipaa/baa/bilingual are null unless a vendor explicitly states compliance on the pricing page. Zoom's official pricing page rendered JS-only (no prices extracted); USD figures from GetApp (last updated March 2026) and corroborated by softwareadvice.com. Google Workspace official page geo-resolved to EUR; USD rates confirmed via workspace.google.com with gl=US query parameter and corroborated by GetApp (March 2026). GoTo Meeting and Webex official pages returned HTTP 403; figures from GetApp (last updated June 2026) corroborated by softwareadvice.com and costbench.com (Webex Suite Business confirmed at $22.50/user/mo annual, $27 month-to-month, 17% annual discount). Microsoft Teams prices fetched directly from microsoft.com/en-us/microsoft-teams/compare-microsoft-teams-options and corroborated by GetApp.",
+  "vendors": [
+    {
+      "slug": "zoom",
+      "name": "Zoom",
+      "domain": "zoom.us",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Slack",
+        "Salesforce",
+        "Google Workspace",
+        "Microsoft Teams",
+        "HubSpot",
+        "Dropbox",
+        "Zapier",
+        "ServiceNow"
+      ],
+      "provenance": "Official zoom.us/pricing page rendered JS-only with no extractable prices. USD plan prices sourced from GetApp (last updated March 2026) and corroborated by softwareadvice.com Zoom profile. Monthly billing rates ($16.99/$21.99) from TechRepublic Sep 2025; annual rates ($13.33/$18.33) consistent with those sources. GetApp March 2026 lists $14.99/19.99 as the displayed per-user monthly rate; used as the annual-equivalent rate.",
+      "plans": [
+        {
+          "name": "Basic",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Free forever. Up to 100 participants, 40-minute limit on group meetings, unlimited 1:1 meetings (up to 30 hours), whiteboard, private and group chat.",
+          "source": {
+            "url": "https://www.getapp.com/communication-management-software/a/zoom/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.softwareadvice.com/video-conferencing/zoom-profile/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 13.33,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 22,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "$13.33/user/mo billed annually; month-to-month rate $16.99/user/mo per TechRepublic Sep 2025 review. GetApp March 2026 lists $14.99/user/mo (likely annualized display). Includes 1 GB cloud recording/license, 30-hour group meetings, up to 100 participants (expandable to 1,000 with add-on), social media streaming.",
+          "source": {
+            "url": "https://www.getapp.com/communication-management-software/a/zoom/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.softwareadvice.com/video-conferencing/zoom-profile/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 18.33,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "$18.33/user/mo billed annually; month-to-month rate $21.99/user/mo per TechRepublic Sep 2025 review. GetApp March 2026 lists $19.99/user/mo. Includes up to 300 participants (expandable to 1,000 with add-on), company branding, managed domains, single sign-on.",
+          "source": {
+            "url": "https://www.getapp.com/communication-management-software/a/zoom/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.softwareadvice.com/video-conferencing/zoom-profile/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Contact sales / custom pricing. Unlimited cloud storage, up to 500 participants (expandable to 1,000 with add-on), dedicated customer success manager, executive business reviews.",
+          "source": {
+            "url": "https://www.getapp.com/communication-management-software/a/zoom/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "google-meet",
+      "name": "Google Meet",
+      "domain": "workspace.google.com",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Google Drive",
+        "Gmail",
+        "Google Calendar",
+        "Salesforce",
+        "Slack",
+        "Zoom",
+        "DocuSign",
+        "Asana"
+      ],
+      "provenance": "Official workspace.google.com/pricing page geo-resolved to EUR. USD rates obtained via workspace.google.com/pricing?hl=en&gl=US confirming Starter $7, Standard $14, Plus $22 per user/month. Corroborated by GetApp (last updated March 2026) listing identical USD per-user monthly rates. 16% annual discount confirmed on the official page. Enterprise requires sales contact.",
+      "plans": [
+        {
+          "name": "Business Starter",
+          "monthlyUsd": 7,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 16,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "$7.00/user/mo on an annual commitment (flexible month-to-month rate is higher, ~$8.40/user/mo). monthlyUsd records the annual-billing rate, consistent with this catalog's convention. Includes Google Meet video calling up to 100 participants, 30 GB pooled storage per user, Gmail, Calendar, Docs, Sheets, Slides.",
+          "source": {
+            "url": "https://workspace.google.com/pricing?hl=en&gl=US",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/communication-management-software/a/google-workspace/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Business Standard",
+          "monthlyUsd": 14,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 16,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "$14.00/user/mo on an annual commitment (flexible month-to-month rate is higher, ~$16.80/user/mo). monthlyUsd records the annual-billing rate. Google Meet up to 150 participants, meeting recording to Drive, noise cancellation, 2 TB pooled storage per user.",
+          "source": {
+            "url": "https://workspace.google.com/pricing?hl=en&gl=US",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/communication-management-software/a/google-workspace/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Business Plus",
+          "monthlyUsd": 22,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 16,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "$22.00/user/mo on an annual commitment (flexible month-to-month rate is higher, ~$26.40/user/mo). monthlyUsd records the annual-billing rate. Google Meet up to 500 participants, attendance tracking, eDiscovery/audit, 5 TB pooled storage per user, enhanced security controls.",
+          "source": {
+            "url": "https://workspace.google.com/pricing?hl=en&gl=US",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/communication-management-software/a/google-workspace/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Contact sales. Google Meet up to 1,000 participants (livestream up to 100,000), advanced security and compliance, data loss prevention, Vault, enhanced support. No user limit.",
+          "source": {
+            "url": "https://workspace.google.com/pricing?hl=en&gl=US",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "webex",
+      "name": "Webex",
+      "domain": "webex.com",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Microsoft Teams",
+        "Slack",
+        "Salesforce",
+        "ServiceNow",
+        "Google Workspace",
+        "Microsoft 365",
+        "Zapier",
+        "Zendesk"
+      ],
+      "provenance": "Official webex.com/pricing page returned HTTP 403. USD plan prices sourced from GetApp (last updated June 2026) and corroborated by softwareadvice.com Webex profile. Annual billing rate for Meet ($12/user/mo) from TechRepublic Sep 2025 review; monthly billing rate ($14.50) consistent across GetApp and softwareadvice.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Free forever. HD meetings up to 100 participants, 40-minute meeting limit, screen sharing, unlimited whiteboards, local recording.",
+          "source": {
+            "url": "https://www.getapp.com/communication-management-software/a/webex/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.softwareadvice.com/video-conferencing/webex-profile/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Meet",
+          "monthlyUsd": 12,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "$12.00/user/mo billed annually per TechRepublic Sep 2025 review; month-to-month rate $14.50/user/mo per GetApp June 2026. Up to 200 participants, breakout rooms, cloud recording, screen sharing, noise removal, closed captions.",
+          "source": {
+            "url": "https://www.getapp.com/communication-management-software/a/webex/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.softwareadvice.com/video-conferencing/webex-profile/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Suite Business",
+          "monthlyUsd": 22.5,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "$22.50/user/mo billed annually (17% off the month-to-month rate of $27.00/user/mo), confirmed via costbench.com Webex profile (June 2026). Includes cloud phone number per license, phone menus/extensions, HD meetings up to 200 participants, cloud recording, AI Assistant.",
+          "source": {
+            "url": "https://www.getapp.com/communication-management-software/a/webex/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.softwareadvice.com/video-conferencing/webex-profile/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Contact sales. Up to 1,000 meeting attendees, FedRAMP security, simultaneous interpretation, call barging, cloud recording, all premium features.",
+          "source": {
+            "url": "https://www.getapp.com/communication-management-software/a/webex/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "microsoft-teams",
+      "name": "Microsoft Teams",
+      "domain": "microsoft.com",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Microsoft 365",
+        "SharePoint",
+        "OneDrive",
+        "Outlook",
+        "Salesforce",
+        "ServiceNow",
+        "Zoom",
+        "Slack",
+        "Adobe Creative Cloud"
+      ],
+      "provenance": "Prices read directly from microsoft.com/en-us/microsoft-teams/compare-microsoft-teams-options on 2026-06-14. All prices are per user per month billed annually. Corroborated by GetApp Microsoft Teams pricing page.",
+      "plans": [
+        {
+          "name": "Teams Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Free for individuals. Unlimited group meetings up to 30 hours, up to 100 participants, 5 GB OneDrive storage, unlimited chat.",
+          "source": {
+            "url": "https://www.microsoft.com/en-us/microsoft-teams/compare-microsoft-teams-options",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/communication-management-software/a/microsoft-teams/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Teams Essentials",
+          "monthlyUsd": 4,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "$4.00/user/mo paid yearly. Unlimited group meetings up to 30 hours, up to 300 participants, meeting recordings with transcripts, 1 TB OneDrive storage per user.",
+          "source": {
+            "url": "https://www.microsoft.com/en-us/microsoft-teams/compare-microsoft-teams-options",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/communication-management-software/a/microsoft-teams/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Microsoft 365 Business Basic",
+          "monthlyUsd": 6,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "$6.00/user/mo paid yearly. Includes Teams plus web and mobile versions of Office apps, 1 TB OneDrive storage, Exchange email, SharePoint, Microsoft Loop.",
+          "source": {
+            "url": "https://www.microsoft.com/en-us/microsoft-teams/compare-microsoft-teams-options",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/communication-management-software/a/microsoft-teams/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Microsoft 365 Business Standard",
+          "monthlyUsd": 12.5,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "$12.50/user/mo paid yearly. Includes Teams plus full desktop Office apps (Word, Excel, PowerPoint, Outlook), webinar hosting, attendee registration, 1 TB OneDrive storage per user.",
+          "source": {
+            "url": "https://www.microsoft.com/en-us/microsoft-teams/compare-microsoft-teams-options",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/communication-management-software/a/microsoft-teams/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "whereby",
+      "name": "Whereby",
+      "domain": "whereby.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Miro",
+        "YouTube",
+        "Trello",
+        "Google Docs",
+        "Whereby Embedded API"
+      ],
+      "provenance": "Verified 2026-06-14 against the official whereby.com/information/meetings/select-plan page, which now renders current USD plan prices, and corroborated by costbench.com Whereby profile. Whereby's Pro tier is a flat-rate single-host plan; the Business tier is priced per host (3-host minimum). Prior figures ($6.99 Pro, $29.97 Business, 45-min/100-participant Free) were stale/unconfirmable and have been corrected to the published 2026 rates.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Free forever. 1 host, 1 room URL, 30-minute meeting limit, up to 4 attendees per meeting (per official select-plan page, June 2026).",
+          "source": {
+            "url": "https://whereby.com/information/meetings/select-plan",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://costbench.com/software/video-conferencing/whereby/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 10.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "$10.99/mo flat rate (1 host, not per user). 3 room URLs, up to 100 attendees per meeting, unlimited meeting duration, custom branding, unlimited recording. Confirmed on official select-plan page, June 2026.",
+          "source": {
+            "url": "https://whereby.com/information/meetings/select-plan",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://costbench.com/software/video-conferencing/whereby/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 13.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "$13.99/mo per host, 3-host minimum (so an effective floor of ~$41.97/mo). Unlimited room URLs, up to 200 attendees per meeting, shared/Flex rooms, custom subdomain. monthlyUsd records the per-host list price; billingModel is per_seat (per host). Confirmed on official select-plan page, June 2026.",
+          "source": {
+            "url": "https://whereby.com/information/meetings/select-plan",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://costbench.com/software/video-conferencing/whereby/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "goto-meeting",
+      "name": "GoTo Meeting",
+      "domain": "goto.com",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Microsoft 365",
+        "Google Workspace",
+        "Salesforce",
+        "Slack",
+        "HubSpot",
+        "Zapier",
+        "Microsoft Teams"
+      ],
+      "provenance": "Official goto.com/meeting/pricing returned HTTP 403. USD plan prices sourced from GetApp (last updated June 2026) showing monthly billing rates ($14/$19 per organizer) and FAQ annual rates ($12/$16 per organizer/month billed annually). Corroborated by softwareadvice.com GoTo Meeting profile. Enterprise is contact-sales only.",
+      "plans": [
+        {
+          "name": "Professional",
+          "monthlyUsd": 12,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 14,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "$12.00/organizer/mo billed annually; month-to-month rate $14.00/organizer/mo. Up to 150 participants, breakout rooms, dial-in conference line, HD video, screen sharing, unlimited meetings, web audio. Priced per organizer, not per attendee.",
+          "source": {
+            "url": "https://www.getapp.com/communication-management-software/a/gotomeeting/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.softwareadvice.com/video-conferencing/goto-meeting-profile/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 16,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 16,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "$16.00/organizer/mo billed annually; month-to-month rate $19.00/organizer/mo. Up to 250 participants, drawing tools, slide-to-PDF, smart meeting assistant, unlimited cloud recording, all Professional features. Priced per organizer.",
+          "source": {
+            "url": "https://www.getapp.com/communication-management-software/a/gotomeeting/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.softwareadvice.com/video-conferencing/goto-meeting-profile/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Contact sales. Volume discounts, dedicated customer success manager, onboarding and training, in-room link support, custom contract.",
+          "source": {
+            "url": "https://www.getapp.com/communication-management-software/a/gotomeeting/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "ringcentral",
+      "name": "RingCentral",
+      "domain": "ringcentral.com",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Microsoft 365",
+        "Google Workspace",
+        "Salesforce",
+        "ServiceNow",
+        "Slack",
+        "HubSpot",
+        "Zendesk",
+        "Zapier"
+      ],
+      "provenance": "USD plan prices sourced from GetApp RingEX pricing page (last updated June 2026). Official ringcentral.com/office/plansandpricing.html required user interaction (seat count selector) to render plan prices; base prices not extractable. GetApp shows monthly billing rates for Core/Advanced/Ultra. Annual discount (up to 33%) mentioned on official page; specific annual per-tier rates not available in extracted content so annualDiscountPct recorded as null for individual plans.",
+      "plans": [
+        {
+          "name": "Core",
+          "monthlyUsd": 30,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "$30.00/user/mo (monthly billing per GetApp June 2026). RingCentral site states 'save up to 33% by paying annually'; exact annual rate not confirmed per tier. Includes HD video meetings, unlimited domestic calling, SMS/MMS, IVR, Google and Microsoft app integrations, single sign-on, analytics.",
+          "source": {
+            "url": "https://www.getapp.com/communication-management-software/a/ringcentral-mvp/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.ringcentral.com/office/plansandpricing.html",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Advanced",
+          "monthlyUsd": 35,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "$35.00/user/mo (monthly billing per GetApp June 2026). Adds automatic call recording, advanced call monitoring, multi-site management, 300+ app integrations, internet fax, business analytics.",
+          "source": {
+            "url": "https://www.getapp.com/communication-management-software/a/ringcentral-mvp/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.ringcentral.com/office/plansandpricing.html",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Ultra",
+          "monthlyUsd": 45,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "$45.00/user/mo (monthly billing per GetApp June 2026). Adds unlimited video/messaging/file sharing, customizable business insights, expanded storage for recordings and files, enhanced analytics suite.",
+          "source": {
+            "url": "https://www.getapp.com/communication-management-software/a/ringcentral-mvp/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.ringcentral.com/office/plansandpricing.html",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    }
+  ]
+}

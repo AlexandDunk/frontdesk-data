@@ -1,0 +1,522 @@
+{
+  "vertical": "invoicing-software",
+  "generatedAt": "2026-06-14",
+  "methodologyNotes": "Pricing fetched directly from each vendor's official pricing page via WebFetch on 2026-06-14. FreshBooks official page showed a 90% promotional discount active at time of fetch; the regular (pre-promo) monthly prices ($23/$43/$70) are used as the canonical figures, with the promotional prices noted. Wave annual pricing discrepancy: official page showed $190/yr while SoftwareAdvice showed $170/yr — official page used as primary. Harvest pricing shows month-to-month as the primary price with annual rates noted. QuickBooks Online pricing sourced from SoftwareAdvice (official quickbooks.intuit.com/pricing repeatedly timed out); marked as fallback. Bonsai prices are per user per month. Zoho Invoice is free with no paid tiers as of this date. Invoice Ninja annual discount calculated from published figures ($14/mo x12=$168 vs $140/yr = ~16.7% discount). All telephony fields set to null (non-telephony vertical).",
+  "vendors": [
+    {
+      "slug": "freshbooks",
+      "name": "FreshBooks",
+      "domain": "freshbooks.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Stripe",
+        "PayPal",
+        "Gusto",
+        "Zapier",
+        "Google Workspace",
+        "Shopify",
+        "HubSpot",
+        "Mailchimp"
+      ],
+      "provenance": "Official pricing page https://www.freshbooks.com/pricing fetched 2026-06-14. A 90% promotional discount (for 3 months) was active at time of fetch; the 'was' prices shown on the page ($23/$43/$70) are used as the regular monthly rates. Corroborated via SoftwareAdvice profile (showed $21/$38/$65, slightly different — possibly an earlier price point). Official page figures used as primary.",
+      "plans": [
+        {
+          "name": "Lite",
+          "monthlyUsd": 23,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Up to 5 billable clients. Promotional price active at time of fetch was $2.30/mo for first 3 months (90% off). Regular monthly rate $23/mo used here. Annual pricing not published on page.",
+          "source": {
+            "url": "https://www.freshbooks.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.softwareadvice.com/accounting/freshbooks-profile/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Plus",
+          "monthlyUsd": 43,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Up to 50 billable clients. Most popular tier. Promotional price at time of fetch was $4.30/mo for first 3 months. Regular monthly rate $43/mo used here.",
+          "source": {
+            "url": "https://www.freshbooks.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.softwareadvice.com/accounting/freshbooks-profile/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": 70,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Unlimited billable clients. Promotional price at time of fetch was $7.00/mo for first 3 months. Regular monthly rate $70/mo used here.",
+          "source": {
+            "url": "https://www.freshbooks.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.softwareadvice.com/accounting/freshbooks-profile/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Select",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Enterprise tier. 'Talk to a Consultant' — no public self-serve price.",
+          "source": {
+            "url": "https://www.freshbooks.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "wave",
+      "name": "Wave",
+      "domain": "waveapps.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Plaid"
+      ],
+      "provenance": "Official pricing page https://www.waveapps.com/pricing fetched 2026-06-14. Direct fetch of https://www.wave.com/en/pricing/ returned 404; waveapps.com was the correct domain. SoftwareAdvice corroboration confirmed $0 Starter and $19/mo Pro but showed annual at $170/yr vs official page $190/yr — official figures used. Wave Advisors is a managed bookkeeping add-on service, not a self-serve software tier.",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free forever. Unlimited estimates, invoices, bills, and bookkeeping records. Online payments available at standard transaction fees (2.9% + $0.60 per card).",
+          "source": {
+            "url": "https://www.waveapps.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.softwareadvice.com/accounting/wave-profile/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 19,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Month-to-month $19/mo. Annual plan $190/yr (~$15.83/mo). Annual discount not explicitly stated as a percentage on the page. Includes discounted payment processing (2.9% + $0 for first 10 transactions/month), auto bank import via Plaid, automated late payment reminders.",
+          "source": {
+            "url": "https://www.waveapps.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.softwareadvice.com/accounting/wave-profile/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Wave Advisors",
+          "monthlyUsd": 199,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Managed bookkeeping service add-on starting at $199/mo. Includes a dedicated bookkeeper, monthly financial statements, and expert support. Not a software-only tier — bundles human services.",
+          "source": {
+            "url": "https://www.waveapps.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "zoho-invoice",
+      "name": "Zoho Invoice",
+      "domain": "zoho.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Zoho CRM",
+        "Zoho Books",
+        "Zoho Billing",
+        "Zoho Expense",
+        "Zoho Inventory",
+        "Zoho Analytics",
+        "WhatsApp"
+      ],
+      "provenance": "Official pricing page https://www.zoho.com/invoice/pricing.html fetched 2026-06-14 (two separate fetches confirmed). Zoho Invoice is positioned as entirely free with no paid tiers; growing businesses are directed to Zoho Billing. Usage limits apply on the free plan.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free forever. Up to 2 users, 3 projects, 500 invoices/year. 'Powered by Zoho Invoice' branding required. No paid tiers — Zoho Billing is the upgrade path for larger businesses.",
+          "source": {
+            "url": "https://www.zoho.com/invoice/pricing.html",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "invoice-ninja",
+      "name": "Invoice Ninja",
+      "domain": "invoiceninja.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Stripe",
+        "PayPal",
+        "Braintree",
+        "Authorize.net",
+        "GoCardless",
+        "Square",
+        "Mollie",
+        "Zapier",
+        "Make",
+        "n8n",
+        "Integrately",
+        "Yodlee"
+      ],
+      "provenance": "Official pricing page https://invoiceninja.com/pricing/ fetched 2026-06-14 (two separate fetches). Annual discount calculated: Pro $14/mo x 12 = $168/yr vs $140/yr billed = 16.7% (~17%). Enterprise base $18/mo x 12 = $216/yr vs $180/yr = same ~17% discount. Enterprise pricing tiers by user count (1-2 through 51-100 users); $18/mo is the 1-2 user base rate.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Self-hosted open-source option. Cloud free tier also available with basic invoicing.",
+          "source": {
+            "url": "https://invoiceninja.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Ninja Pro",
+          "monthlyUsd": 14,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "Month-to-month $14/mo. Annual plan $140/yr (~$11.67/mo, promoted as '10 months + 2 months free'). Single user. annualDiscountPct ~16.7%, rounded to 17.",
+          "source": {
+            "url": "https://invoiceninja.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": 18,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "per_seat",
+          "notes": "Base price $18/mo (month-to-month) for 1-2 users. Annual $180/yr for 1-2 users. Price scales with user count tiers (1-2, 3-5, 6-10, 11-20, 21-50, 51-100 users). Includes bank sync (Yodlee, GoCardless), multiple companies, custom URL.",
+          "source": {
+            "url": "https://invoiceninja.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Premium Business+",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Starting from $280 — pricing varies; treated as quote-only given the custom nature above the user-count tiers.",
+          "source": {
+            "url": "https://invoiceninja.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "harvest",
+      "name": "Harvest",
+      "domain": "getharvest.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Asana",
+        "Slack",
+        "Stripe",
+        "QuickBooks Online",
+        "Xero",
+        "Jira",
+        "Trello",
+        "Basecamp",
+        "Google Calendar",
+        "Zapier",
+        "Make",
+        "Deel",
+        "GitHub",
+        "PayPal"
+      ],
+      "provenance": "Official pricing page https://www.getharvest.com/pricing fetched 2026-06-14 (two separate fetches confirmed month-to-month vs annual rates). Harvest is primarily a time-tracking and invoicing tool. The Teams and Enterprise plan names were confirmed across both fetches.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "1 seat, 2 projects only. Includes time tracking, invoicing, expense tracking, Mac and iOS apps. Permanently limited (not a trial).",
+          "source": {
+            "url": "https://www.getharvest.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Teams",
+          "monthlyUsd": 11,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 18,
+          "billingModel": "per_seat",
+          "notes": "Month-to-month $11/seat/mo. Annual rate $9/seat/mo ($108/seat/yr). Annual discount ~18%. Unlimited projects and clients. 50+ core integrations.",
+          "source": {
+            "url": "https://www.getharvest.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": 17.5,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "per_seat",
+          "notes": "Month-to-month $17.50/seat/mo. Annual rate $14/seat/mo ($168/seat/yr). Annual discount ~20%. Includes advanced features beyond Teams tier.",
+          "source": {
+            "url": "https://www.getharvest.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "bonsai",
+      "name": "Bonsai",
+      "domain": "hellobonsai.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "QuickBooks Online",
+        "Xero",
+        "Zapier",
+        "Calendly",
+        "Google",
+        "Slack",
+        "Gmail"
+      ],
+      "provenance": "Official pricing page https://www.hellobonsai.com/pricing fetched 2026-06-14 (two separate fetches confirmed monthly vs annual pricing). All prices are per user per month. Elite plan requires a minimum of 3 users.",
+      "plans": [
+        {
+          "name": "Basic",
+          "monthlyUsd": 15,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 40,
+          "billingModel": "per_seat",
+          "notes": "Month-to-month $15/user/mo. Annual rate $9/user/mo. 40% annual discount.",
+          "source": {
+            "url": "https://www.hellobonsai.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Essentials",
+          "monthlyUsd": 25,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 24,
+          "billingModel": "per_seat",
+          "notes": "Month-to-month $25/user/mo. Annual rate $19/user/mo. ~24% annual discount.",
+          "source": {
+            "url": "https://www.hellobonsai.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": 39,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 26,
+          "billingModel": "per_seat",
+          "notes": "Month-to-month $39/user/mo. Annual rate $29/user/mo. ~26% annual discount.",
+          "source": {
+            "url": "https://www.hellobonsai.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Elite",
+          "monthlyUsd": 59,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "per_seat",
+          "notes": "Month-to-month $59/user/mo. Annual rate $49/user/mo. ~17% annual discount. Minimum 3 users. Includes dedicated onboarding for teams of 10+.",
+          "source": {
+            "url": "https://www.hellobonsai.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "quickbooks-online",
+      "name": "QuickBooks Online",
+      "domain": "quickbooks.intuit.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "PayPal",
+        "Shopify",
+        "Square",
+        "Stripe",
+        "HubSpot",
+        "Mailchimp",
+        "Gusto",
+        "Salesforce",
+        "TSheets",
+        "Amazon"
+      ],
+      "provenance": "Official quickbooks.intuit.com/pricing timed out on multiple fetch attempts (2026-06-14). Prices sourced from SoftwareAdvice (https://www.softwareadvice.com/accounting/quickbooks-online-profile/) as fallback — marked accordingly. SoftwareAdvice showed Simple Start $38/mo, Essentials $75/mo, Plus $115/mo, Advanced $275/mo. Note: SoftwareAdvice also referenced a promotional Simple Start at $17.50/mo for 3 months, regularly $35/mo — suggesting their $38 figure may itself be slightly stale. These figures are used as the best available approximation; a fresh direct fetch from quickbooks.intuit.com is recommended for the highest precision.",
+      "plans": [
+        {
+          "name": "Simple Start",
+          "monthlyUsd": 38,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "1 user. Basic income/expense tracking, invoicing, receipt capture. Source is SoftwareAdvice fallback (official page timed out). Promotional rates exist ($17.50/mo for 3 months per SoftwareAdvice, suggesting regular may be ~$35/mo — discrepancy noted; $38 used as listed on fallback source).",
+          "source": {
+            "url": "https://www.softwareadvice.com/accounting/quickbooks-online-profile/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Essentials",
+          "monthlyUsd": 75,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Up to 3 users. Adds bill management, time tracking. Source is SoftwareAdvice fallback (official page timed out).",
+          "source": {
+            "url": "https://www.softwareadvice.com/accounting/quickbooks-online-profile/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Plus",
+          "monthlyUsd": 115,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Up to 5 users. Adds inventory tracking, project profitability. Source is SoftwareAdvice fallback (official page timed out).",
+          "source": {
+            "url": "https://www.softwareadvice.com/accounting/quickbooks-online-profile/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Advanced",
+          "monthlyUsd": 275,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Up to 25 users. Adds custom reporting, dedicated account manager, batch invoicing. Source is SoftwareAdvice fallback (official page timed out).",
+          "source": {
+            "url": "https://www.softwareadvice.com/accounting/quickbooks-online-profile/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    }
+  ]
+}

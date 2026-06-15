@@ -1,0 +1,702 @@
+{
+  "vertical": "headless-cms",
+  "generatedAt": "2026-06-14",
+  "methodologyNotes": "Pricing fetched from official vendor pricing pages via WebFetch on 2026-06-14 and independently re-verified on 2026-06-14. Contentful prices are EUR on their pricing page (Lite €300/mo); GetApp lists the USD self-serve price as $300/month for Lite, which is the figure used. Sanity Free $0 / Growth $15-per-seat / Enterprise custom confirmed from sanity.io/pricing. Storyblok Growth $99/mo and Growth Plus $349/mo confirmed (annual $90.75 / $319.91 via the 'one month free' model, ~8.3% discount). Strapi Cloud: the official page is JS-rendered and returns no figures, but the current self-serve tiers (Free $0, Essential $18, Pro $90, Scale $450, 20% annual discount) are confirmed via Strapi's own blog and costbench.com — corrected from a prior version that listed an invented 'Team' plan with null prices. Hygraph Hobby $0 / Growth $199 / Enterprise custom confirmed. Prismic prices are per-repository, billed annually (Free $0, Starter $10, Small $25, Medium $150, Platinum $675), confirmed from prismic.io/pricing. Directus Core $0 / Team $499 annual ($599 monthly, ~17% discount) / Open Innovation Grant $99 / Enterprise custom confirmed from directus.com/pricing. Builder.io Free $0 confirmed; Pro and Team per-user prices are rendered as images on the official page and no single credible current self-serve figure could be confirmed, so they remain null with a provenance note. All telephony fields (minutesIncluded, callsIncluded, overagePerMin, overagePerCall) are null for all plans as this is a non-telephony vertical.",
+  "vendors": [
+    {
+      "slug": "contentful",
+      "name": "Contentful",
+      "domain": "contentful.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Netlify",
+        "Vercel",
+        "Gatsby",
+        "Next.js",
+        "Shopify",
+        "Salesforce",
+        "HubSpot",
+        "Algolia"
+      ],
+      "provenance": "Official pricing page https://www.contentful.com/pricing/ fetched 2026-06-14 but displays EUR prices only (Lite shown as €300/month, no USD displayed, no currency switcher found). GetApp listing at https://www.getapp.com/content-management-software/a/contentful/pricing/ confirms USD equivalent of $300/month flat for Lite plan. Enterprise is custom/contact-sales only. No USD annual discount rates published.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "10 users, 100K API calls/month, 50 GB CDN bandwidth/month, 2 locales, 2 roles, 1 Starter Space. Free forever.",
+          "source": {
+            "url": "https://www.contentful.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/content-management-software/a/contentful/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Lite",
+          "monthlyUsd": 300,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "20 users, 1M API calls/month, 100 GB CDN bandwidth/month, 3 locales, 3 roles, comments and task management, 1 Starter Space. Official page shows €300/month; USD equivalent $300 confirmed via GetApp. No annual discount rate published.",
+          "source": {
+            "url": "https://www.getapp.com/content-management-software/a/contentful/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.contentful.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing, contact sales. Unlimited API calls, custom CDN bandwidth, unlimited users/roles/locales, dedicated support, 99.99% uptime SLA, unlimited Spaces.",
+          "source": {
+            "url": "https://www.contentful.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "sanity",
+      "name": "Sanity",
+      "domain": "sanity.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Next.js",
+        "Gatsby",
+        "Nuxt",
+        "Vercel",
+        "Netlify",
+        "Shopify",
+        "Algolia",
+        "Slack"
+      ],
+      "provenance": "Official pricing page https://www.sanity.io/pricing fetched twice on 2026-06-14 and confirmed consistent data. Free plan is $0 with 20 seats. Growth is $15/seat/month, monthly-only (FAQ confirms no annual option for self-serve). Enterprise is custom. Dedicated support add-on confirmed at $799/month.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Up to 20 user seats, 2 datasets (public only), 10K documents, 1M API CDN requests/month, 100 GB assets/bandwidth. Content Agent and Agent Actions included.",
+          "source": {
+            "url": "https://www.sanity.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Growth",
+          "monthlyUsd": 15,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$15 per seat/month, monthly billing only (no annual self-serve option). Up to 50 seats. 2 datasets, 25K documents, 1M API CDN requests/month. Includes Comments, Tasks, Scheduled drafts, private datasets, AI Assist. Pay-as-you-go overages available.",
+          "source": {
+            "url": "https://www.sanity.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing, contact sales. SSO, custom roles, Media Library, dedicated support with uptime SLA, audit trails. Annual payment via invoice.",
+          "source": {
+            "url": "https://www.sanity.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "storyblok",
+      "name": "Storyblok",
+      "domain": "storyblok.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Next.js",
+        "Nuxt",
+        "Gatsby",
+        "Astro",
+        "Netlify",
+        "Vercel",
+        "Shopify",
+        "Commercetools"
+      ],
+      "provenance": "Official pricing page https://www.storyblok.com/pricing fetched twice on 2026-06-14. Annual billing discount confirmed as 'one month free' model (pay 11 months, receive 12), computed as ~8.3% discount. Growth plan: $99/month monthly, $90.75/month annual. Growth Plus: $349/month monthly, $319.91/month annual. Premium and Elite are enterprise/custom. GetApp corroborates Growth at $99/month and Growth Plus at $349/month.",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free forever. 1 user seat included (up to 2 seats max, additional at $15/month each). 100 GB traffic/month, 100K API requests/month, 2 locales, 25K AI credits. 45-day free trial of Growth Plus available.",
+          "source": {
+            "url": "https://www.storyblok.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Growth",
+          "monthlyUsd": 99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 8,
+          "billingModel": "flat",
+          "notes": "$99/month billed monthly; $90.75/month billed annually (one month free = ~8.3% discount). 5 user seats included, up to 10 seats ($15/month per additional). 400 GB traffic/month, 1M API requests/month, 2 locales, 100K AI credits/month.",
+          "source": {
+            "url": "https://www.storyblok.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/content-management-software/a/storyblok/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Growth Plus",
+          "monthlyUsd": 349,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 8,
+          "billingModel": "flat",
+          "notes": "$349/month billed monthly; $319.91/month billed annually (one month free = ~8.3% discount). 15 user seats included, up to 20 seats ($15/month per additional). 1 TB traffic/month, 4M API requests/month, 10 locales, 200K AI credits/month.",
+          "source": {
+            "url": "https://www.storyblok.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/content-management-software/a/storyblok/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Enterprise plan, contact sales. Custom spaces, users, and consumption. GraphQL, custom roles/workflows, SSO, SCIM, 99.9% uptime SLA.",
+          "source": {
+            "url": "https://www.storyblok.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Elite",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Enterprise plan, contact sales. Fully customizable. 99.99% uptime SLA, dedicated infrastructure.",
+          "source": {
+            "url": "https://www.storyblok.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "strapi-cloud",
+      "name": "Strapi Cloud",
+      "domain": "strapi.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "AWS",
+        "Cloudinary",
+        "SendGrid",
+        "Stripe",
+        "Auth0",
+        "Sentry",
+        "GitHub",
+        "GitLab"
+      ],
+      "provenance": "Strapi Cloud self-serve pricing verified 2026-06-14. The official pricing page (https://strapi.io/pricing) is JavaScript-rendered and returns no figures to WebFetch, but the current self-serve tiers and prices are confirmed by Strapi's own blog (https://strapi.io/blog/introducing-yearly-plans-and-new-limits-for-strapi-cloud, which states a 20% yearly-billing discount and Essential at $18/mo monthly / $15/mo annual) and corroborated by costbench.com: Free $0, Essential $18/mo, Pro $90/mo, Scale $450/mo. Annual billing gives a 20% discount. Enterprise (self-hosted edition) is custom/contact-sales. NOTE: a prior version of this entry listed an invented 'Team' plan with all-null prices; corrected to the actual published tiers.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free Strapi Cloud tier. ~2,500 API requests/month, 10 GB storage, limited database entries. Best for personal projects and testing. (The Strapi CMS itself is also free and open-source when self-hosted.)",
+          "source": {
+            "url": "https://strapi.io/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://costbench.com/software/headless-cms/strapi/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Essential",
+          "monthlyUsd": 18,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "$18/month billed monthly; $15/month with yearly billing (20% discount, per Strapi blog). ~50,000 API requests/month, 50 GB storage, unlimited database entries. Best for small teams and projects.",
+          "source": {
+            "url": "https://strapi.io/blog/introducing-yearly-plans-and-new-limits-for-strapi-cloud",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://costbench.com/software/headless-cms/strapi/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 90,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "$90/month billed monthly; ~20% discount with yearly billing. ~1M API requests/month, 250 GB storage, unlimited database entries. Best for growing teams.",
+          "source": {
+            "url": "https://strapi.io/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://costbench.com/software/headless-cms/strapi/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Scale",
+          "monthlyUsd": 450,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "$450/month billed monthly; ~20% discount with yearly billing. ~10M API requests/month, 1,000 GB storage, unlimited database entries. Best for high-scale applications.",
+          "source": {
+            "url": "https://strapi.io/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://costbench.com/software/headless-cms/strapi/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Enterprise (self-hosted edition). Custom pricing, contact sales. SSO/SAML, RBAC, audit logs, content history, review workflows, and priority support.",
+          "source": {
+            "url": "https://strapi.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "hygraph",
+      "name": "Hygraph",
+      "domain": "hygraph.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Next.js",
+        "Gatsby",
+        "Nuxt",
+        "Vercel",
+        "Netlify",
+        "Shopify",
+        "Contentstack",
+        "GraphQL"
+      ],
+      "provenance": "Official pricing page https://hygraph.com/pricing fetched on 2026-06-14. Hobby (free) plan at $0, Growth at $199/month, Enterprise is custom. Overage pricing confirmed: $0.20 per 1M API operations, $0.20 per GB asset traffic. Annual billing available but exact discount rate not published on page.",
+      "plans": [
+        {
+          "name": "Hobby",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free forever, no credit card required. 3 seats, 2 locales, 2 standard roles, 10 components, 1,000 entries, 500K API calls/month, 100 GB asset traffic, 50 MB per asset upload. Live preview and commenting included.",
+          "source": {
+            "url": "https://hygraph.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Growth",
+          "monthlyUsd": 199,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$199/month. 10 seats, 3 locales, 4 standard roles, 10K entries, 1M API calls/month, 500 GB asset traffic, 200 MB per asset upload, 1 remote source connection, 14-day version retention. Overages: $0.20/1M API ops, $0.20/GB asset traffic. Annual billing available but discount rate not stated.",
+          "source": {
+            "url": "https://hygraph.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing, contact sales. Up to 200 seats, 500 models, 150 components, 80 locales, 10 remote sources, 1M+ entries, 50M+ API calls/month. SSO, SCIM, multitenancy, audit logs, custom workflows, 24/7 monitoring, custom SLAs. 30-day free trial available.",
+          "source": {
+            "url": "https://hygraph.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "prismic",
+      "name": "Prismic",
+      "domain": "prismic.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Next.js",
+        "Nuxt",
+        "SvelteKit",
+        "Gatsby",
+        "Vercel",
+        "Netlify",
+        "Shopify",
+        "GitHub"
+      ],
+      "provenance": "Official pricing page https://prismic.io/pricing fetched twice on 2026-06-14. All prices are per-repository billed annually; a monthly billing toggle exists on the page but monthly rates did not render in fetched content. Prices: Free $0, Starter $10, Small $25, Medium $150, Platinum $675 (all annual rates). Enterprise is custom.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Per repository. 1 user, 2 locales, 4M API calls/month, 100 GB CDN bandwidth. Unlimited documents, types, and assets.",
+          "source": {
+            "url": "https://prismic.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Starter",
+          "monthlyUsd": 10,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Per repository, billed annually ($120/year). 3 users, 3 locales. Monthly billing toggle exists on page but monthly rate not captured. Annual price listed.",
+          "source": {
+            "url": "https://prismic.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Small",
+          "monthlyUsd": 25,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Per repository, billed annually ($300/year). 7 users, 4 locales. Monthly billing option exists but monthly rate not captured in fetched content.",
+          "source": {
+            "url": "https://prismic.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Medium",
+          "monthlyUsd": 150,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Per repository, billed annually ($1,800/year). 25 users, 5M API calls/month, 500 GB CDN, 5 locales, user roles.",
+          "source": {
+            "url": "https://prismic.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Platinum",
+          "monthlyUsd": 675,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Per repository, billed annually ($8,100/year). Unlimited users, 10M API calls/month, 1 TB CDN bandwidth, 8 locales, development environment access.",
+          "source": {
+            "url": "https://prismic.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing, contact sales. Custom quotas, 2 development environments, backups, custom roles, dedicated CSM, SSO, security reviews, priority support.",
+          "source": {
+            "url": "https://prismic.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "directus",
+      "name": "Directus",
+      "domain": "directus.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "PostgreSQL",
+        "MySQL",
+        "SQLite",
+        "Microsoft SQL Server",
+        "Oracle",
+        "AWS S3",
+        "Cloudflare",
+        "Auth0"
+      ],
+      "provenance": "Official pricing page https://directus.com/pricing fetched twice on 2026-06-14 (after 301 redirect from directus.io/pricing). Core (free) plan at $0 with 3 seats confirmed. Team plan at $499/month billed annually or $599/month billed monthly confirmed. Enterprise is custom. Open Innovation Grant at $99/month cloud-hosted for qualifying orgs (<$5M revenue, <50 employees).",
+      "plans": [
+        {
+          "name": "Core",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free, self-hosted or cloud-hosted (cloud add-on at $99/month). 3 user seats (hard limit), 25 collections, 5 flows, AI Assistant, Advanced RBAC, community support.",
+          "source": {
+            "url": "https://directus.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Team",
+          "monthlyUsd": 499,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "$499/month billed annually ($5,988/year); $599/month billed monthly. Annual discount ~17%. 10 SSO seats (additional at $50/seat/month), 50 collections (expandable to 100), 20 flows. Granular RBAC, Basic Support, SSO (SAML/OIDC).",
+          "source": {
+            "url": "https://directus.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Open Innovation Grant",
+          "monthlyUsd": 99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Cloud-hosted only. For organizations under $5M annual revenue and fewer than 50 employees. Full feature access with no caps. $99/month for cloud hosting.",
+          "source": {
+            "url": "https://directus.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing, contact sales. 50+ SSO seats, 200+ collections, unlimited flows. Custom Access Policies, Custom LLM, Offline Mode, AI Translations, Telemetry Opt-out, Premium Support.",
+          "source": {
+            "url": "https://directus.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "builder-io",
+      "name": "Builder.io",
+      "domain": "builder.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "React",
+        "Next.js",
+        "Vue",
+        "Angular",
+        "Nuxt",
+        "Shopify",
+        "BigCommerce",
+        "Figma"
+      ],
+      "provenance": "Official pricing page https://www.builder.io/m/pricing fetched on 2026-06-14. Free plan at $0 confirmed with up to 5 users. Pro and Team plan USD prices are rendered as images on the official page and could not be extracted by WebFetch. AlternativeTo lists plans at '$19-$36 per month' but this appears outdated and per-user structure couldn't be confirmed. Enterprise is custom. Pro and Team set to null pending official price confirmation.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Up to 5 users. Connect with GitHub, GitLab, Bitbucket. Admin-only role. 25 daily / 75 monthly Agent Credits. Visual page builder included.",
+          "source": {
+            "url": "https://www.builder.io/m/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Price not extractable — rendered as image on official page. Per user/month pricing structure. Up to 5 users. Pay-as-you-go for additional usage, Agent Credit rollovers, 30-day activity history, Built-in MCP Servers, Standard support, 500 monthly Agent Credits.",
+          "source": {
+            "url": "https://www.builder.io/m/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Team",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Price not extractable — rendered as image on official page. Per user/month pricing structure. Up to 20 users. AI training opt-out, Builder Agent in Slack and JIRA, multiple roles, commenting and peer reviews, custom MCP servers, priority support, unlimited Agent Credits.",
+          "source": {
+            "url": "https://www.builder.io/m/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing, contact sales. Enterprise git provider connections, Design System Intelligence, training opt-out by default, Privacy mode, RBAC, SSO, Uptime and Premium Support SLAs.",
+          "source": {
+            "url": "https://www.builder.io/m/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    }
+  ]
+}

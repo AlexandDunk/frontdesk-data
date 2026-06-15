@@ -1,0 +1,656 @@
+{
+  "vertical": "employee-scheduling",
+  "generatedAt": "2026-06-14",
+  "methodologyNotes": "Pricing fetched directly from each vendor's official pricing page via WebFetch on 2026-06-14. 7shifts' official pricing page (7shifts.com/pricing) rendered JS-only with no extractable content; prices for 7shifts were taken from two independent aggregators: GetApp and SoftwareAdvice (both corroborating $39.99/$69.99/$149.99/mo flat and a free Comp tier). Homebase annual-discount rate: official site shows $30→$24 monthly (20% off), corroborated by GetApp stating '20% discount'. Sling annual-discount rate: official site states 15% savings. All monthlyUsd values reflect the lowest recurring per-billing-cycle amount (annualized monthly rate where annual billing is the basis). Per-seat products use billingModel=per_seat; per-location flat products use billingModel=flat; quote-only tiers use billingModel=custom with monthlyUsd=null. minutesIncluded, callsIncluded, overagePerMin, overagePerCall are null throughout (non-telephony vertical). hipaa/baa set to null unless explicitly stated on the vendor site. bilingual set to null throughout.",
+  "vendors": [
+    {
+      "slug": "when-i-work",
+      "name": "When I Work",
+      "domain": "wheniwork.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Rippling",
+        "Gusto",
+        "ADP Run",
+        "ADP Workforce Now",
+        "Square Payroll",
+        "Paychex",
+        "QuickBooks Online",
+        "OnPay",
+        "Zapier",
+        "GoCo",
+        "Clair"
+      ],
+      "provenance": "Official pricing page: https://wheniwork.com/pricing fetched 2026-06-14. Three-tier structure (Essentials/Pro/Premium at $2.50/$5.00/$8.00 per user/month) confirmed. Aggregators (GetApp, SoftwareAdvice) show an older two-tier structure; official page is authoritative.",
+      "plans": [
+        {
+          "name": "Essentials",
+          "monthlyUsd": 2.5,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Per user per month. Includes auto-scheduling, templates, multi-week/location scheduling, forecasting, in-app messaging, shift swapping. Annual billing available per official page but discount percentage not published.",
+          "source": {
+            "url": "https://wheniwork.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/operations-management-software/a/when-i-work/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 5,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Per user per month. Adds advanced scheduling rules, permissions, labor sharing, custom forecasting, callout reporting, custom reports, timezone toggling.",
+          "source": {
+            "url": "https://wheniwork.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.softwareadvice.com/scheduling/when-i-work-profile/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": 8,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Per user per month. Adds API access, webhooks, SAML/SSO on top of Pro.",
+          "source": {
+            "url": "https://wheniwork.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "deputy",
+      "name": "Deputy",
+      "domain": "deputy.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Xero",
+        "QuickBooks",
+        "ADP",
+        "Paychex",
+        "Gusto",
+        "Paycor",
+        "Square",
+        "Lightspeed",
+        "Shopify",
+        "Zapier"
+      ],
+      "provenance": "Official pricing page: https://www.deputy.com/pricing fetched 2026-06-14. Corroborated by GetApp aggregator page.",
+      "plans": [
+        {
+          "name": "Lite",
+          "monthlyUsd": 5,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Per user per month, excl. taxes. Minimum spend $30 USD/month. Scheduling and time tracking basics.",
+          "source": {
+            "url": "https://www.deputy.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/operations-management-software/a/deputy/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Core",
+          "monthlyUsd": 6.5,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Per user per month, excl. taxes. Most popular plan. Advanced operations and productivity tools.",
+          "source": {
+            "url": "https://www.deputy.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/operations-management-software/a/deputy/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 9,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Per user per month, excl. taxes. Includes Analytics+ and Messaging+ add-ons, priority support, advanced automation and insights.",
+          "source": {
+            "url": "https://www.deputy.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/operations-management-software/a/deputy/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote only. Contact sales for custom enterprise pricing.",
+          "source": {
+            "url": "https://www.deputy.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "homebase",
+      "name": "Homebase",
+      "domain": "joinhomebase.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "QuickBooks",
+        "Gusto",
+        "ADP",
+        "Paychex",
+        "Square",
+        "Clover",
+        "Toast",
+        "Lightspeed",
+        "Shopify",
+        "Zapier"
+      ],
+      "provenance": "Official pricing page: https://joinhomebase.com/pricing/ fetched 2026-06-14. Per-location flat pricing. Annual discount: official site shows $30→$24/mo (20% off), corroborated by GetApp stating '20% discount'. Corroborated by GetApp aggregator.",
+      "plans": [
+        {
+          "name": "Basic",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free forever. Limited to 1 location and up to 10 employees. Core scheduling and time tracking.",
+          "source": {
+            "url": "https://joinhomebase.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/human-resources-software/a/homebase/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Essentials",
+          "monthlyUsd": 24,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "Per location per month when billed annually ($24/mo); $30/mo billed monthly. Unlimited employees. Scheduling, time tracking, team messaging.",
+          "source": {
+            "url": "https://joinhomebase.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/human-resources-software/a/homebase/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Plus",
+          "monthlyUsd": 56,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "Per location per month when billed annually ($56/mo); $70/mo billed monthly. Unlimited employees. Adds hiring, PTO policies, departments.",
+          "source": {
+            "url": "https://joinhomebase.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/human-resources-software/a/homebase/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "All-in-One",
+          "monthlyUsd": 96,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "Per location per month when billed annually ($96/mo); $120/mo billed monthly. Unlimited employees. Full suite including onboarding, performance, and advanced reporting.",
+          "source": {
+            "url": "https://joinhomebase.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/human-resources-software/a/homebase/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "sling",
+      "name": "Sling",
+      "domain": "getsling.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Square",
+        "Gusto",
+        "QuickBooks",
+        "ADP",
+        "Paychex",
+        "Google Calendar",
+        "iCal"
+      ],
+      "provenance": "Official pricing page: https://getsling.com/pricing/ fetched 2026-06-14. Annual discount confirmed at 15% on official page (Premium $2.00→$1.70, Business $4.00→$3.40). Corroborated by GetApp aggregator.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free for up to 30 users. Core scheduling, shift organization, time-off requests, announcements, private messaging.",
+          "source": {
+            "url": "https://getsling.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/operations-management-software/a/sling/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": 1.7,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 15,
+          "billingModel": "per_seat",
+          "notes": "Per user per month billed annually ($1.70/user); $2.00/user/month billed monthly. Adds time tracking, labor cost management, overtime tracking.",
+          "source": {
+            "url": "https://getsling.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/operations-management-software/a/sling/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 3.4,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 15,
+          "billingModel": "per_seat",
+          "notes": "Per user per month billed annually ($3.40/user); $4.00/user/month billed monthly. Adds kiosk time clock, payroll reports, no-shows and sick call-out tracking, PTO management.",
+          "source": {
+            "url": "https://getsling.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/operations-management-software/a/sling/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "connecteam",
+      "name": "Connecteam",
+      "domain": "connecteam.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "QuickBooks",
+        "Gusto",
+        "Paychex",
+        "ADP",
+        "Google Calendar",
+        "Zapier",
+        "Xero"
+      ],
+      "provenance": "Official pricing page: https://connecteam.com/pricing/ fetched 2026-06-14. Operations Hub plans shown (scheduling-relevant hub). Base prices cover first 30 users; additional users billed per-seat. Small Business plan free for up to 10 users. Annual pricing saves ~18%. Monthly prices listed here are the month-to-month rates. Corroborated by GetApp aggregator.",
+      "plans": [
+        {
+          "name": "Small Business",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free for life for up to 10 employees. All hubs and features included.",
+          "source": {
+            "url": "https://connecteam.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/operations-management-software/a/connecteam/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Operations Hub Basic",
+          "monthlyUsd": 35,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 18,
+          "billingModel": "flat",
+          "notes": "Per month (annual billing) for first 30 users; $0.80/user/month for each additional user. Month-to-month rate is $29/month. Annual saves ~18%. Includes scheduling, time tracking with GPS, payroll integration.",
+          "source": {
+            "url": "https://connecteam.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/operations-management-software/a/connecteam/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Operations Hub Advanced",
+          "monthlyUsd": 59,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 18,
+          "billingModel": "flat",
+          "notes": "Per month (annual billing) for first 30 users; $2.50/user/month for each additional user. Month-to-month rate is $49/month. Adds smart groups, geofencing, recurring shifts, timesheet locking.",
+          "source": {
+            "url": "https://connecteam.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/operations-management-software/a/connecteam/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Operations Hub Expert",
+          "monthlyUsd": 119,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 18,
+          "billingModel": "flat",
+          "notes": "Per month (annual billing) for first 30 users; $4.20/user/month for each additional user. Month-to-month rate is $99/month. Adds multi-branch management, live GPS breadcrumbs, process automation.",
+          "source": {
+            "url": "https://connecteam.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/operations-management-software/a/connecteam/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Operations Hub Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote only. Includes two-factor authentication, biometric lock, API access, personal account manager, private branded app.",
+          "source": {
+            "url": "https://connecteam.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "7shifts",
+      "name": "7shifts",
+      "domain": "7shifts.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Toast",
+        "Square",
+        "Clover",
+        "Lightspeed",
+        "TouchBistro",
+        "GoTab",
+        "Aloha POS",
+        "Revel",
+        "Cake POS",
+        "Gusto",
+        "ADP",
+        "Paychex",
+        "QuickBooks"
+      ],
+      "provenance": "Official pricing page (https://www.7shifts.com/pricing) rendered JS-only with no extractable content on 2026-06-14. Prices sourced from two independent aggregators: GetApp (https://www.getapp.com/operations-management-software/a/7shifts/pricing/) and SoftwareAdvice (https://www.softwareadvice.com/scheduling/7shifts-profile/), both independently confirming Comp (free), Essentials $39.99/mo, Pro $69.99/mo, Premium $149.99/mo flat per-location pricing.",
+      "plans": [
+        {
+          "name": "Comp",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free plan. Includes schedule templates, PTO/break/overtime tracking. Targeted at single-location restaurants.",
+          "source": {
+            "url": "https://www.getapp.com/operations-management-software/a/7shifts/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.softwareadvice.com/scheduling/7shifts-profile/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Essentials",
+          "monthlyUsd": 39.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Flat per location per month. Unlimited scheduling, labor budgeting, sales forecasting, reporting. Official site JS-blocked; price from two aggregators.",
+          "source": {
+            "url": "https://www.getapp.com/operations-management-software/a/7shifts/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.softwareadvice.com/scheduling/7shifts-profile/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 69.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Flat per location per month. Advanced budgeting, labor alerts, manager logbook, payroll integration, compliance tools. Official site JS-blocked; price from two aggregators.",
+          "source": {
+            "url": "https://www.getapp.com/operations-management-software/a/7shifts/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.softwareadvice.com/scheduling/7shifts-profile/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": 149.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Flat per location per month. Task management, advanced reporting, full payroll integration. Official site JS-blocked; price from two aggregators.",
+          "source": {
+            "url": "https://www.getapp.com/operations-management-software/a/7shifts/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.softwareadvice.com/scheduling/7shifts-profile/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "schedulefly",
+      "name": "Schedulefly",
+      "domain": "schedulefly.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "Official pricing page: https://schedulefly.com/pricing fetched 2026-06-14. Flat-rate pricing by staff size band. No annual discount published. Corroborated by SoftwareAdvice aggregator.",
+      "plans": [
+        {
+          "name": "Up to 19 staff",
+          "monthlyUsd": 30,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Flat monthly rate for teams of up to 19 staff. All features included. No contracts, no setup fees.",
+          "source": {
+            "url": "https://schedulefly.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.softwareadvice.com/scheduling/schedulefly-profile/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "20–39 staff",
+          "monthlyUsd": 40,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Flat monthly rate for teams of 20–39 staff. All features included.",
+          "source": {
+            "url": "https://schedulefly.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.softwareadvice.com/scheduling/schedulefly-profile/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "40–59 staff",
+          "monthlyUsd": 50,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Flat monthly rate for teams of 40–59 staff. All features included.",
+          "source": {
+            "url": "https://schedulefly.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.softwareadvice.com/scheduling/schedulefly-profile/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "60–79 staff",
+          "monthlyUsd": 60,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Flat monthly rate for teams of 60–79 staff. All features included.",
+          "source": {
+            "url": "https://schedulefly.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.softwareadvice.com/scheduling/schedulefly-profile/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    }
+  ]
+}

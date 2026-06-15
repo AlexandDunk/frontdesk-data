@@ -1,0 +1,531 @@
+{
+  "vertical": "uptime-monitoring",
+  "generatedAt": "2026-06-14",
+  "methodologyNotes": "Published self-serve USD pricing was collected directly from each vendor's official pricing page on 2026-06-14 via WebFetch. Pingdom (pingdom.com) returned HTTP 403 on all direct URL attempts (pricing, signup, solution pages); pricing was sourced from two independent aggregator/review pages (softwareadvice.com, getapp.com) which agree on a $15/month entry point for Synthetic Monitoring — this is noted in provenance and the data is marked as aggregator-sourced. StatusCake displays prices in EUR only; the pricing page confirms invoicing is also accepted in USD but no USD figures are published; EUR monthly figures are recorded and monthlyUsd is set to the EUR amount as a proxy only where a USD equivalent is not directly stated — this is noted in provenance. Better Stack uses a per-seat model for Responder seats with no flat organizational plan; monthlyUsd reflects cost for one Responder seat. Checkly shows the same dollar figures on both monthly and annual toggles; the page states 'annual billing applies the annual discount' but does not publish a separate monthly rate, so the displayed price is treated as the annual billing rate. Site24x7 annual pricing is the primary figure; monthlyUsd reflects the annualized monthly rate with month-to-month rate in notes. All telephony fields (minutesIncluded, callsIncluded, overagePerMin, overagePerCall) are null throughout — this is a non-telephony vertical.",
+  "vendors": [
+    {
+      "slug": "uptimerobot",
+      "name": "UptimeRobot",
+      "domain": "uptimerobot.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Slack",
+        "Google Chat",
+        "Discord",
+        "Microsoft Teams",
+        "Telegram",
+        "Mattermost",
+        "PagerDuty",
+        "Zapier",
+        "Pushover",
+        "Pushbullet",
+        "Splunk",
+        "Webhook"
+      ],
+      "provenance": "https://uptimerobot.com/pricing/ fetched directly 2026-06-14. SOC 2, GDPR, and PCI compliance stated; no HIPAA/BAA mention on page.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "50 monitors, 5-minute check interval, 1 status page, 5 integrations.",
+          "source": {
+            "url": "https://uptimerobot.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Solo",
+          "monthlyUsd": 9,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "Annualized monthly rate $9/mo (billed ~$108/yr). Month-to-month rate is $10/mo. Up to 50 monitors, 60-second check interval, 3 status pages, 9 integrations, no team seats.",
+          "source": {
+            "url": "https://uptimerobot.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Team",
+          "monthlyUsd": 33,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 13,
+          "billingModel": "flat",
+          "notes": "Annualized monthly rate $33/mo (billed ~$396/yr). Month-to-month rate is $38/mo. 100 monitors, 60-second interval, 100 status pages, 3 login seats, all 12 integrations.",
+          "source": {
+            "url": "https://uptimerobot.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://alternativeto.net/software/uptimerobot/about/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": 69,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 16,
+          "billingModel": "flat",
+          "notes": "Annualized monthly rate $69/mo (billed ~$828/yr). Month-to-month rate is $82/mo. 200–1,000+ monitors, 30-second interval, unlimited status pages, 5 login seats, all integrations.",
+          "source": {
+            "url": "https://uptimerobot.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "pingdom",
+      "name": "Pingdom",
+      "domain": "pingdom.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "PagerDuty",
+        "Slack",
+        "Microsoft Teams",
+        "Webhook",
+        "Zapier"
+      ],
+      "provenance": "pingdom.com/pricing/ returned HTTP 403 on 2026-06-14; all direct Pingdom URLs blocked. Pricing sourced from aggregator softwareadvice.com and getapp.com (both accessed 2026-06-14), which list Synthetic Monitoring starting at $15/month. Slashdot lists $164.45/year (~$13.70/mo) as the entry annual price. Prices shown here are aggregator-reported and may not reflect all current tiers; treat as approximate. No HIPAA/BAA mentioned in any available source.",
+      "plans": [
+        {
+          "name": "Synthetic Monitoring",
+          "monthlyUsd": 15,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Entry-level plan per aggregator sources. Includes uptime monitoring, email and SMS alerting, maintenance windows, page speed monitoring, public status pages, transaction monitoring, unlimited users. Exact current tier structure could not be verified from official page (403 blocked).",
+          "source": {
+            "url": "https://www.softwareadvice.com/it-infrastructure/pingdom-profile/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/it-management-software/a/pingdom/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Real User Monitoring",
+          "monthlyUsd": 15,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Separate product SKU per aggregator sources. Includes 13-month data retention, performance filtering, shareable reports, unlimited sites, unlimited users. Exact current pricing unverified from official page.",
+          "source": {
+            "url": "https://www.softwareadvice.com/it-infrastructure/pingdom-profile/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/it-management-software/a/pingdom/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "better-stack",
+      "name": "Better Stack",
+      "domain": "betterstack.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Slack",
+        "Microsoft Teams",
+        "Zapier",
+        "GitHub",
+        "Datadog",
+        "Grafana",
+        "Notion",
+        "Linear",
+        "Sentry",
+        "Terraform",
+        "PagerDuty"
+      ],
+      "provenance": "https://betterstack.com/pricing and https://betterstack.com/uptime/pricing fetched directly 2026-06-14. SOC 2 Type II and GDPR compliance stated; no HIPAA/BAA mention. Pricing is per-seat (Responder) plus optional add-ons. Free tier included for personal projects.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Personal projects. 10 uptime monitors, 10 heartbeats, 1 status page, 100K exceptions/month, 5K session replays. Slack and email alerts included.",
+          "source": {
+            "url": "https://betterstack.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Responder",
+          "monthlyUsd": 29,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 15,
+          "billingModel": "per_seat",
+          "notes": "Annualized monthly rate $29/seat/mo. Month-to-month rate is $34/seat/mo. Includes uptime monitoring + full telemetry access, unlimited SMS/phone alerts, on-call scheduling, iOS/Android apps, REST API, Terraform provider. Additional monitors: +50 monitors $21/mo (annual) or $25/mo (monthly).",
+          "source": {
+            "url": "https://betterstack.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://betterstack.com/uptime/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "checkly",
+      "name": "Checkly",
+      "domain": "checklyhq.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Slack",
+        "PagerDuty",
+        "OpsGenie",
+        "Incident.io",
+        "Rootly",
+        "Prometheus",
+        "Terraform",
+        "Pulumi",
+        "Webhook"
+      ],
+      "provenance": "https://www.checklyhq.com/pricing/ fetched directly 2026-06-14. SOC 2 Type II compliance stated; no HIPAA/BAA mentioned. Pricing page shows same dollar figures on both monthly/annual toggles; page states 'annual billing applies the annual discount' without publishing separate monthly rates, so displayed prices are treated as annual billing rates. Hobby plan is free. Enterprise is custom/quote-only.",
+      "plans": [
+        {
+          "name": "Hobby",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "1 user. 10 uptime monitors, 1,000 browser/Playwright checks/month, 10,000 API checks/month, 6 global locations, 7-day data retention, basic email/Slack alerting.",
+          "source": {
+            "url": "https://www.checklyhq.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Starter",
+          "monthlyUsd": 24,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Annual billing rate (monthly rate not published separately). 3 users, 50 uptime monitors, 3,000 browser checks/month, 25,000 API checks/month, SMS alerts, 1 agentic check, visual regression testing.",
+          "source": {
+            "url": "https://www.checklyhq.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Team",
+          "monthlyUsd": 64,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Annual billing rate (monthly rate not published separately). 10 users, 75 uptime monitors, 12,000 browser checks/month, 100,000 API checks/month, phone alerts, maintenance windows, 30-day data retention, custom CSS for status pages.",
+          "source": {
+            "url": "https://www.checklyhq.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing. 24/7 phone support, SAML/SSO, 180-day data retention, 99.9% SLA guarantee, custom monitor/check limits.",
+          "source": {
+            "url": "https://www.checklyhq.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "statuscake",
+      "name": "StatusCake",
+      "domain": "statuscake.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "https://www.statuscake.com/pricing/ fetched directly 2026-06-14. Prices displayed in EUR only. FAQ on page states invoicing accepted in USD, GBP, EUR, AUD, NZD, SGD, CAD — but no USD figures published. monthlyUsd set to null for all paid plans; EUR prices noted in plan notes. No HIPAA/BAA mention. Integrations page mentions '15+ third-party integrations' but names not listed on pricing page.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "10 uptime monitors, 1 page speed monitor, 1 domain monitor, 1 SSL monitor, 0 server monitors.",
+          "source": {
+            "url": "https://www.statuscake.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Superior",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Published price EUR 19.99/mo (month-to-month) or EUR 16.66/mo (annual). USD equivalent not published. 100 uptime monitors, 15 page speed monitors, 50 domain monitors, 50 SSL monitors, 3 server monitors.",
+          "source": {
+            "url": "https://www.statuscake.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Published price EUR 69.99/mo (month-to-month) or EUR 58.33/mo (annual). USD equivalent not published. 300 uptime monitors, 30 page speed monitors, 120 domain monitors, 100 SSL monitors, 10 server monitors, white-label reporting.",
+          "source": {
+            "url": "https://www.statuscake.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing. Limitless monitors, dedicated locations, SLAs.",
+          "source": {
+            "url": "https://www.statuscake.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "site24x7",
+      "name": "Site24x7",
+      "domain": "site24x7.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Slack",
+        "PagerDuty",
+        "ServiceNow",
+        "Jira",
+        "Microsoft Teams",
+        "Webhook",
+        "Zapier"
+      ],
+      "provenance": "https://www.site24x7.com/site24x7-pricing.html fetched directly 2026-06-14 (initial URL redirected to this). Annual prices are the primary published SKUs; 10% discount applied for annual billing. No HIPAA/BAA mention. '300+ plugin integrations' referenced; specific names not exhaustively listed.",
+      "plans": [
+        {
+          "name": "Web Uptime",
+          "monthlyUsd": 9,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "Annualized monthly rate $9/mo. Month-to-month rate is $10/mo. 25 websites, transaction monitors, 1-min polling, 32 locations, RUM page views, 3 status pages, email support.",
+          "source": {
+            "url": "https://www.site24x7.com/site24x7-pricing.html",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Web Perf",
+          "monthlyUsd": 36,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "Annualized monthly rate $36/mo. Month-to-month rate is $39/mo. 40 websites, 8 transaction monitors, 100K RUM page views, 10 status pages, 8 monitoring locations, custom dashboards, forecasts.",
+          "source": {
+            "url": "https://www.site24x7.com/site24x7-pricing.html",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise Plus Web",
+          "monthlyUsd": 899,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "Annualized monthly rate $899/mo. Month-to-month rate is $999/mo. 2,500 websites, 100 transaction monitors, 5M RUM page views, 16 locations, 30-sec polling, anomaly detection.",
+          "source": {
+            "url": "https://www.site24x7.com/site24x7-pricing.html",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Infrastructure Lite",
+          "monthlyUsd": 9,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "Annualized monthly rate $9/mo. Month-to-month rate is $10/mo. 2 servers, 5 websites, 25 child resources, multiple users, guidance reports.",
+          "source": {
+            "url": "https://www.site24x7.com/site24x7-pricing.html",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Infrastructure Professional",
+          "monthlyUsd": 42,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 14,
+          "billingModel": "flat",
+          "notes": "Annualized monthly rate $42/mo. Month-to-month rate is $49/mo. 5 servers, 1 application, 20 websites, 4GB log ingestion, 10 network components, custom metrics.",
+          "source": {
+            "url": "https://www.site24x7.com/site24x7-pricing.html",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Infrastructure Enterprise",
+          "monthlyUsd": 625,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Annual plan starting at $625/mo. All Professional features plus anomaly detection, event correlation, infrastructure events, firmware vulnerability management.",
+          "source": {
+            "url": "https://www.site24x7.com/site24x7-pricing.html",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "uptimia",
+      "name": "Uptimia",
+      "domain": "uptimia.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "https://uptimia.com/pricing fetched directly 2026-06-14. No HIPAA/BAA mention. '2-month discount' for annual billing (equivalent to ~17% off). Specific integration names not listed on pricing page. Monitoring from 171 worldwide locations.",
+      "plans": [
+        {
+          "name": "Basic",
+          "monthlyUsd": 9,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "Month-to-month rate is $9/mo; annual billing gives 2-month discount (~$7.50/mo effective). 1 user, 10 uptime checks, 1 advanced check, 1 SSL certificate monitor, 10 domain expiry monitors, 50 free SMS alerts/month, 1 status page.",
+          "source": {
+            "url": "https://uptimia.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Professional",
+          "monthlyUsd": 39,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "Month-to-month rate is $39/mo; annual billing gives 2-month discount (~$32.50/mo effective). 10 users, 100 uptime checks, 10 advanced checks, 100 SSL monitors, 100 domain expiry monitors, 100 free SMS alerts/month, 10 status pages, branded reports.",
+          "source": {
+            "url": "https://uptimia.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": 199,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "Month-to-month rate is $199/mo; annual billing gives 2-month discount (~$165.83/mo effective). 100 users, 1,000 uptime checks, 100 advanced checks, 1,000 SSL monitors, 1,000 domain expiry monitors, 500 free SMS alerts/month, unlimited status pages.",
+          "source": {
+            "url": "https://uptimia.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    }
+  ]
+}

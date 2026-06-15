@@ -1,0 +1,454 @@
+{
+  "vertical": "ai-voice-tts",
+  "generatedAt": "2026-06-14",
+  "methodologyNotes": "Pricing fetched directly from each vendor's official pricing or product page via WebFetch on 2026-06-14. ElevenLabs: elevenlabs.io/pricing — page rendered with full plan data. Murf.ai: murf.ai/pricing returned JS-only blank page; pricing sourced from murf.ai/text-to-speech product page which displays annual rates. WellSaid Labs: wellsaidlabs.com/pricing redirects to wellsaid.io/pricing — full data retrieved. Resemble AI: resemble.ai/pricing returned full pay-as-you-go rate card. Speechify: speechify.com/pricing rendered plan names and monthly price; annual rate only partially visible ('SAVE 60%'); sourceforge.net corroboration confirmed $139/year. Amazon Polly: aws.amazon.com/polly/pricing — full per-character rate card retrieved. Play.ht: play.ht domain refused all connections (ECONNREFUSED); multiple aggregator and review URLs also failed or returned 403/404; only a starting price of $29/mo was found in a secondary review article (elegantthemes.com) — insufficient to include with verified tier structure, excluded from dataset. monthlyUsd for usage-metered plans with no flat subscription is set to null (Resemble Flex, Amazon Polly). annualDiscountPct computed where both monthly and annual rates are confirmed.",
+  "vendors": [
+    {
+      "slug": "elevenlabs",
+      "name": "ElevenLabs",
+      "domain": "elevenlabs.io",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Zapier",
+        "Stripe",
+        "Cal.com",
+        "Twilio",
+        "Zendesk",
+        "HubSpot"
+      ],
+      "provenance": "Official pricing page: https://elevenlabs.io/pricing fetched 2026-06-14. Enterprise compliance page: https://elevenlabs.io/enterprise fetched 2026-06-14 (HIPAA-eligible configurations, BAA available, integrations list).",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "10,000 credits/month. Text-to-speech, speech-to-text, sound effects, voice design included.",
+          "source": {
+            "url": "https://elevenlabs.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Starter",
+          "monthlyUsd": 6,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "30,000 credits/month. Adds commercial license and voice cloning.",
+          "source": {
+            "url": "https://elevenlabs.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Creator",
+          "monthlyUsd": 22,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "121,000 credits/month. Professional voice cloning. Promotional first-month price of $11 (50% off) was shown on page at time of access.",
+          "source": {
+            "url": "https://elevenlabs.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "600,000 credits/month. 44.1kHz PCM and 192kbps audio output via API.",
+          "source": {
+            "url": "https://elevenlabs.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Scale",
+          "monthlyUsd": 299,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "1,800,000 credits/month. Includes 3 workspace seats.",
+          "source": {
+            "url": "https://elevenlabs.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 990,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "6,000,000 credits/month. 10 workspace seats. Low-latency TTS as low as $0.05/min.",
+          "source": {
+            "url": "https://elevenlabs.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom credits and seats. Includes BAA for HIPAA, HIPAA-eligible configuration, custom SLAs.",
+          "source": {
+            "url": "https://elevenlabs.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "murf-ai",
+      "name": "Murf AI",
+      "domain": "murf.ai",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Canva",
+        "Google Slides",
+        "PowerPoint",
+        "Adobe Captivate"
+      ],
+      "provenance": "murf.ai/pricing rendered JS-only blank page (fallback used). Pricing sourced from murf.ai/text-to-speech product page, fetched 2026-06-14, which displays annual billing rates for Creator and Business plans. Month-to-month rates not published on either page. Corroborating starting price of $19/month confirmed via elegantthemes.com best-ai-voice-generators article (fetched 2026-06-14).",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "2 projects, 10 minutes of voice generation. 200+ voices.",
+          "source": {
+            "url": "https://murf.ai/text-to-speech",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Creator",
+          "monthlyUsd": 19,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Price is $19/month billed annually; month-to-month rate not published on official page. API pricing $0.01/min for Murf Falcon model.",
+          "source": {
+            "url": "https://murf.ai/text-to-speech",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.elegantthemes.com/blog/business/best-ai-voice-generators",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 66,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Price is $66/month billed annually; month-to-month rate not published on official page.",
+          "source": {
+            "url": "https://murf.ai/text-to-speech",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing for high-volume and specialized business requirements. Contact sales.",
+          "source": {
+            "url": "https://murf.ai/text-to-speech",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "wellsaid-labs",
+      "name": "WellSaid Labs",
+      "domain": "wellsaid.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Adobe Express",
+        "Adobe Premiere Pro"
+      ],
+      "provenance": "wellsaidlabs.com/pricing redirected (301) to wellsaid.io/pricing, fetched 2026-06-14. All plan tiers and prices read directly from official page. HIPAA not mentioned on pricing page.",
+      "plans": [
+        {
+          "name": "Trial",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "7-day free access to all features. No credit card required. No downloads included.",
+          "source": {
+            "url": "https://www.wellsaid.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Creative",
+          "monthlyUsd": 55,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 9,
+          "billingModel": "per_seat",
+          "notes": "$55/month billed monthly; $50/month billed annually (~9% discount). Per user seat. 720 downloads/year (~72 hours audio). Includes commercial usage rights.",
+          "source": {
+            "url": "https://www.wellsaid.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 160,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$160/month per user billed annually. Up to 5 user seats. 1,300 downloads/year (~144 hours). Includes Adobe Express & Premiere Pro integrations. Month-to-month rate not published.",
+          "source": {
+            "url": "https://www.wellsaid.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing billed annually. Unlimited seats. 4,300 downloads/year (~480 hours). Advanced security: SOC2, SSO. Dedicated customer success manager.",
+          "source": {
+            "url": "https://www.wellsaid.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "resemble-ai",
+      "name": "Resemble AI",
+      "domain": "resemble.ai",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "resemble.ai/pricing fetched 2026-06-14. Full pay-as-you-go rate card retrieved. Enterprise plan confirmed quote-only. SOC 2 mentioned for Enterprise. HIPAA not mentioned.",
+      "plans": [
+        {
+          "name": "Flex",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Pay-as-you-go with no base subscription fee. TTS rate: $0.0005/second. Voice agents: $0.001/second. AI voice changer: $0.0005/second. Team seats add-on: $20/month per user. Rapid voice clone add-on: $2/month per voice. Pro voice clone add-on: $5/month per voice. Users spending over $500/month recommended to contact sales.",
+          "source": {
+            "url": "https://www.resemble.ai/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing. Volume discounts up to 80%. Enterprise SLAs, SOC 2 compliance. Contact sales.",
+          "source": {
+            "url": "https://www.resemble.ai/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "speechify",
+      "name": "Speechify",
+      "domain": "speechify.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "speechify.com/pricing fetched 2026-06-14. Monthly price of $29 for Premium confirmed from official page. Annual pricing shows 'SAVE 60%' but exact dollar amount not rendered; sourceforge.net product listing corroborated $139/year ($11.58/month equivalent).",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Listen at up to 1.5x speed. 10 robotic voices. Text-to-speech only.",
+          "source": {
+            "url": "https://speechify.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": 29,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 60,
+          "billingModel": "flat",
+          "notes": "$29/month billed monthly. Annual billing saves approximately 60%; corroborating source indicates ~$139/year (~$11.58/month). 1000+ natural voices, 60+ languages, voice typing, AI summaries, AI podcasts, voice AI assistant.",
+          "source": {
+            "url": "https://speechify.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://sourceforge.net/software/product/Speechify/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "amazon-polly",
+      "name": "Amazon Polly",
+      "domain": "aws.amazon.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "AWS SDK",
+        "Amazon Alexa"
+      ],
+      "provenance": "aws.amazon.com/polly/pricing fetched 2026-06-14. Per-character rates confirmed directly from AWS pricing page. HIPAA certification and BAA availability confirmed via docs.aws.amazon.com/polly/latest/dg/what-is.html (fetched 2026-06-14): 'Amazon Polly is certified for use with regulated workloads for HIPAA and PCI DSS.'",
+      "plans": [
+        {
+          "name": "Standard Voices",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Pay-per-use: $4.00 per 1 million characters. Free tier: 5 million characters/month (no expiry). No flat monthly subscription.",
+          "source": {
+            "url": "https://aws.amazon.com/polly/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://docs.aws.amazon.com/polly/latest/dg/what-is.html",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Neural Voices",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Pay-per-use: $16.00 per 1 million characters. Free tier: 1 million characters/month for first 12 months.",
+          "source": {
+            "url": "https://aws.amazon.com/polly/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Long-Form Voices",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Pay-per-use: $100.00 per 1 million characters. Free tier: 500,000 characters/month for first 12 months.",
+          "source": {
+            "url": "https://aws.amazon.com/polly/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Generative Voices",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Pay-per-use: $30.00 per 1 million characters. Free tier: 100,000 characters/month for first 12 months.",
+          "source": {
+            "url": "https://aws.amazon.com/polly/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    }
+  ]
+}

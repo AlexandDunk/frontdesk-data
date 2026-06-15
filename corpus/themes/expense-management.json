@@ -1,0 +1,484 @@
+{
+  "vertical": "expense-management",
+  "generatedAt": "2026-06-14",
+  "methodologyNotes": "Pricing fetched from each vendor's official pricing page where accessible. Expensify's official pricing page (expensify.com/pricing) rendered as an accounting-integration settings screen (JS-rendered, no pricing visible); USD prices confirmed via softwareadvice.com and getapp.com. Zoho Expense's official page geo-locates to Germany and returns EUR prices; USD prices sourced from techrepublic.com review and getapp.com listing. SAP Concur's pricing page (concur.com/en-us/pricing) returned HTTP 403; Base/Plus prices sourced from softwareadvice.com listing. Rippling Spend has no public self-serve pricing; all tiers are quote-only. All other vendor official pages (ramp.com, brex.com, navan.com) were fetched directly and returned usable pricing data. annualDiscountPct recorded where both monthly and annual rates were explicitly published.",
+  "vendors": [
+    {
+      "slug": "expensify",
+      "name": "Expensify",
+      "domain": "expensify.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "QuickBooks Online",
+        "QuickBooks Desktop",
+        "Xero",
+        "NetSuite",
+        "Sage Intacct",
+        "FinancialForce",
+        "Workday",
+        "Certinia"
+      ],
+      "provenance": "Official pricing page (expensify.com/pricing) rendered as JS-only integration settings screen with no pricing content. USD plan prices sourced from softwareadvice.com and corroborated by getapp.com listing (both accessed 2026-06-14).",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free version available with basic expense tracking functionality. No corporate card management or advanced approvals.",
+          "source": {
+            "url": "https://www.softwareadvice.com/accounting/expensify-profile/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/finance-management-software/a/expensify/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Collect",
+          "monthlyUsd": 5,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$5 per user per month. Includes receipt scanning, reimbursements, corporate card management, expense and travel approvals, travel booking, QuickBooks/Xero integrations, and AI support.",
+          "source": {
+            "url": "https://www.softwareadvice.com/accounting/expensify-profile/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/finance-management-software/a/expensify/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Control",
+          "monthlyUsd": 9,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$9 per user per month (may vary; listed as starting at $9). Includes all Collect features plus multiple approval flows, custom expense rules, ERP integrations (NetSuite, Sage Intacct), HR integrations (Workday/Certinia), SAML/SSO, custom reporting, and budgeting.",
+          "source": {
+            "url": "https://www.softwareadvice.com/accounting/expensify-profile/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/finance-management-software/a/expensify/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "ramp",
+      "name": "Ramp",
+      "domain": "ramp.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "QuickBooks Online",
+        "Xero",
+        "NetSuite",
+        "Sage Intacct",
+        "Workday",
+        "Oracle Fusion Cloud",
+        "Slack"
+      ],
+      "provenance": "Fetched directly from ramp.com/pricing (2026-06-14). Page returned full pricing content. Corroborated by softwareadvice.com listing.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$0 per user per month. Includes unlimited corporate cards, expense management via SMS/Slack, basic AP automation, and foundational accounting integrations (QuickBooks Online, Xero).",
+          "source": {
+            "url": "https://ramp.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.softwareadvice.com/accounting/ramp-profile/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Plus",
+          "monthlyUsd": 15,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "per_seat",
+          "notes": "$15 per user per month billed monthly; 20% discount with annual billing (~$12/user/month). Includes AI-driven expense reviews, auto-coded line items, advanced ERP integrations (NetSuite, Sage Intacct), real-time budget tracking, custom user roles. 30-day free trial available. Platform fee may also apply based on team size.",
+          "source": {
+            "url": "https://ramp.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.softwareadvice.com/accounting/ramp-profile/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing, annual billing only. Includes dedicated account and customer success manager, priority support, custom development, ERP extensions, advanced org configuration, Workday/Oracle Fusion Cloud integrations.",
+          "source": {
+            "url": "https://ramp.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "brex",
+      "name": "Brex",
+      "domain": "brex.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "QuickBooks",
+        "Xero",
+        "NetSuite",
+        "Sage Intacct",
+        "Workday"
+      ],
+      "provenance": "Fetched directly from brex.com/pricing (2026-06-14). Page returned full pricing content. Corroborated by softwareadvice.com and getapp.com listings.",
+      "plans": [
+        {
+          "name": "Essentials",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free. Includes unlimited global corporate cards accepted in 210+ countries, AI-powered custom rules, accounting integrations, local currency wires, travel booking, and bill pay. Up to 2 entities.",
+          "source": {
+            "url": "https://www.brex.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.softwareadvice.com/accounting/brex-profile/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": 12,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$12 per user per month. Includes multiple customizable expense policies, dynamic expense review chains, AI-powered compliance audit detection, live budgets with real-time reporting, budget delegation, policy compliance reporting. No annual discount information published.",
+          "source": {
+            "url": "https://www.brex.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.softwareadvice.com/accounting/brex-profile/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing. Includes unlimited US or global entities, local card issuance, global reimbursements in local currency, automated VAT tracking, non-US entity setup with KYC/KYB support, designated senior consultant.",
+          "source": {
+            "url": "https://www.brex.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "zoho-expense",
+      "name": "Zoho Expense",
+      "domain": "zoho.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "QuickBooks",
+        "Xero",
+        "Sage Intacct",
+        "Zoho Books",
+        "Zoho CRM",
+        "Zoho People"
+      ],
+      "provenance": "Official pricing page (zoho.com/expense/pricing.html) geo-locates to Germany and displays EUR prices only; no USD option visible. USD prices sourced from techrepublic.com review and corroborated by getapp.com listing and softwareadvice.com (all accessed 2026-06-14). TechRepublic provided both monthly and annual billing rates in USD.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free for up to 3 users. Includes basic expense reports, receipt storage, and basic audit trail.",
+          "source": {
+            "url": "https://www.techrepublic.com/article/zoho-expense-review/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.softwareadvice.com/accounting/zoho-expense-profile/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Standard",
+          "monthlyUsd": 3,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 40,
+          "billingModel": "per_seat",
+          "notes": "$3 per active user per month billed annually (confirmed against official page and G2/CostBench listings). Billed-monthly rate is higher (~$4/user/mo per official page; the prior '$5 monthly' figure was unconfirmed and removed). Includes 20 receipt autoscans/user, access delegation, basic audit trail, cash advances, corporate card reconciliation, multilevel approval.",
+          "source": {
+            "url": "https://www.zoho.com/us/expense/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.softwareadvice.com/accounting/zoho-expense-profile/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": 5,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 38,
+          "billingModel": "per_seat",
+          "notes": "$5 per active user per month billed annually; $8 per active user per month billed monthly. Minimum 3 users. Includes advanced approval, advanced customization, per diem automation, purchase request, travel requests, unlimited receipt autoscans, online travel booking tool, live budget tracking.",
+          "source": {
+            "url": "https://www.techrepublic.com/article/zoho-expense-review/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.softwareadvice.com/accounting/zoho-expense-profile/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "UNVERIFIED PRICE REMOVED (2026-06-14 adversarial review): The previously listed $8/$12-per-user 200-user-minimum 'Enterprise' tier could not be confirmed against Zoho's official pricing page (zoho.com/us/expense/pricing/), which publishes only Free, Standard, Premium, and a quote-only Custom tier — no priced Enterprise plan exists. Treated as quote-only. The real top tier is the separately listed 'Custom' plan.",
+          "source": {
+            "url": "https://www.zoho.com/us/expense/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Custom",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Pricing available upon request. Minimum 100 users. Includes Zoho Spend all-in-one platform with travel, expense, corporate cards, procurement, AP automation, and payroll.",
+          "source": {
+            "url": "https://www.zoho.com/us/expense/pricing.html",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "sap-concur",
+      "name": "SAP Concur",
+      "domain": "concur.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "SAP ERP",
+        "QuickBooks",
+        "Oracle",
+        "Workday",
+        "Microsoft Dynamics",
+        "Salesforce"
+      ],
+      "provenance": "Official pricing page (concur.com/en-us/pricing) returned HTTP 403. Pricing data sourced from softwareadvice.com listing, corroborated by getapp.com listing (both accessed 2026-06-14). Base and Plus plans are described as usage-based starting prices.",
+      "plans": [
+        {
+          "name": "Base",
+          "monthlyUsd": 7,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Starting at $7/month (usage-based). Unlimited users. Includes Concur Expense core module. Actual cost scales with usage/transaction volume.",
+          "source": {
+            "url": "https://www.softwareadvice.com/accounting/sap-concur-profile/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Plus",
+          "monthlyUsd": 11,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Starting at $11/month (usage-based). Unlimited users. Adds ExpenseIt receipt scanning, User Support Desk, and Reporting on top of Base features.",
+          "source": {
+            "url": "https://www.softwareadvice.com/accounting/sap-concur-profile/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only. Includes Concur Expense, Concur Travel, ExpenseIt, User Support Desk, Reporting, Intelligence analytics, and additional enterprise features.",
+          "source": {
+            "url": "https://www.softwareadvice.com/accounting/sap-concur-profile/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "rippling-spend",
+      "name": "Rippling Spend",
+      "domain": "rippling.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "QuickBooks",
+        "Xero",
+        "NetSuite",
+        "Sage Intacct",
+        "Workday",
+        "BambooHR"
+      ],
+      "provenance": "Official pricing page (rippling.com/pricing) fetched directly but returned no expense-module pricing — page only shows a 'Request a free quote' CTA. Expense management product page also confirmed quote-only approach with no published pricing.",
+      "plans": [
+        {
+          "name": "Rippling Spend",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "No public pricing. All tiers are quote-only. Rippling Spend includes corporate cards, expense management, and bill pay as modular add-ons to the Rippling platform.",
+          "source": {
+            "url": "https://www.rippling.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "navan",
+      "name": "Navan",
+      "domain": "navan.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "QuickBooks",
+        "NetSuite",
+        "Xero",
+        "Workday",
+        "SAP",
+        "BambooHR",
+        "Rippling",
+        "Slack"
+      ],
+      "provenance": "Fetched directly from navan.com/pricing (2026-06-14). Page returned full pricing content for Business and Enterprise tiers with expense module pricing.",
+      "plans": [
+        {
+          "name": "Business",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Free for companies up to 300 employees. Expense module: first 5 monthly expensing users included free, then $15 per user per month. Includes global travel inventory, unlimited policy and approval workflows, 24/7 travel support, rewards program, 30+ HRIS integrations.",
+          "source": {
+            "url": "https://www.navan.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing. Includes all Business features plus dedicated Account Executive, dedicated Customer Success Manager, custom implementation, corporate negotiated rates, and comprehensive back-office capabilities.",
+          "source": {
+            "url": "https://www.navan.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    }
+  ]
+}

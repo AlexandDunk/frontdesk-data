@@ -1,0 +1,842 @@
+{
+  "vertical": "no-code-app-builders",
+  "generatedAt": "2026-06-14",
+  "methodologyNotes": "Published self-serve USD pricing collected from each vendor's official pricing page and, where the official page rendered JS-only/empty or returned 403/404 to automated fetch, from reputable aggregator sources (GetApp, Slashdot, AlternativeTo) cited in each vendor's provenance. accessedAt is 2026-06-14 on all sources. minutesIncluded, callsIncluded, overagePerMin, and overagePerCall are null on every plan because this is a non-telephony vertical. monthlyUsd reflects the effective per-unit (per seat or flat plan) monthly cost; for annual-billing-only prices the annualized monthly rate is recorded and annualDiscountPct is set where both billing cycles are published. Quote-only and enterprise tiers carry monthlyUsd: null. Vendors with no self-serve public price are still included with null plans and an explaining provenance.",
+  "vendors": [
+    {
+      "slug": "bubble",
+      "name": "Bubble",
+      "domain": "bubble.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Stripe",
+        "Zapier",
+        "SendGrid",
+        "Twilio",
+        "Google Maps",
+        "Segment",
+        "Airtable"
+      ],
+      "provenance": "Bubble's official pricing page (bubble.io/pricing) returned only a page title and logo to automated fetch — the page is fully client-side rendered and content was not accessible. Tier names and USD prices sourced from GetApp listing (getapp.com/website-ecommerce-software/a/bubble/pricing/) which listed Free $0, Starter $32, Growth $134, Team $399, Custom (enterprise). Annual billing rates not published on this aggregator; no annualDiscountPct recorded.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Includes bubble.io subdomain, Bubble branding, and 50k workload units/month. No custom domain.",
+          "source": {
+            "url": "https://bubble.io/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/website-ecommerce-software/a/bubble/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Starter",
+          "monthlyUsd": 32,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Custom domain, no Bubble branding, scheduled workflows, dev version. Price from GetApp aggregator; official page JS-only. Monthly billing rate; annual rate not confirmed from this source.",
+          "source": {
+            "url": "https://www.getapp.com/website-ecommerce-software/a/bubble/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://slashdot.org/software/p/Bubble/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Growth",
+          "monthlyUsd": 134,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Adds more server capacity, additional app editors, premium version control. Price from GetApp aggregator; official page JS-only. Monthly billing rate.",
+          "source": {
+            "url": "https://www.getapp.com/website-ecommerce-software/a/bubble/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://slashdot.org/software/p/Bubble/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Team",
+          "monthlyUsd": 399,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Sub-apps, custom branches, priority support. Price from GetApp aggregator; official page JS-only. Monthly billing rate.",
+          "source": {
+            "url": "https://www.getapp.com/website-ecommerce-software/a/bubble/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://slashdot.org/software/p/Bubble/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing — contact sales. Includes choice of hosting location, priority support, custom SLA.",
+          "source": {
+            "url": "https://bubble.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "glide",
+      "name": "Glide",
+      "domain": "glideapps.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Google Sheets",
+        "Airtable",
+        "Excel",
+        "HubSpot",
+        "Stripe",
+        "QuickBooks",
+        "Salesforce",
+        "PostgreSQL"
+      ],
+      "provenance": "Glide official pricing page (glideapps.com/pricing) fetched successfully. Business plan confirmed at $239/month (monthly billing) or $199/month (annual billing, saving ~17%). Maker plan appears in the comparison table but its dollar price did not render in the fetched content (JS-rendered field) — recorded as null to avoid guessing. Enterprise is custom pricing. Free plan confirmed at $0.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "1 editor, unlimited personal users, limited updates per month.",
+          "source": {
+            "url": "https://www.glideapps.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Maker",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Plan exists (2 editors, 3 published apps) but price did not render in automated fetch of the pricing page; recorded null rather than guess. Visit glideapps.com/pricing for current price.",
+          "source": {
+            "url": "https://www.glideapps.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 199,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "$199/month billed annually (saves ~17% vs $239/month billed monthly). Includes 30 users; additional users $5/month (annual) or $6/month (monthly). Additional updates at $0.02 each.",
+          "source": {
+            "url": "https://www.glideapps.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/website-ecommerce-software/a/glide/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing — contact sales. 100+ data sources, Salesforce/QuickBooks integrations, dedicated support.",
+          "source": {
+            "url": "https://www.glideapps.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "adalo",
+      "name": "Adalo",
+      "domain": "adalo.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Xano",
+        "Zapier",
+        "Stripe",
+        "Google Maps",
+        "Airtable"
+      ],
+      "provenance": "Adalo official pricing page (adalo.com/pricing) fetched successfully. Prices confirmed: monthly billing toggle shows $45/$65/$200 for Starter/Professional/Team; annual billing toggle shows $36/$52/$160 (saves 20%). Free plan confirmed at $0. HIPAA/BAA not mentioned.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "500 records per app, unlimited screens, 1 app editor. No custom domain or publishing.",
+          "source": {
+            "url": "https://www.adalo.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/website-ecommerce-software/a/adalo/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Starter",
+          "monthlyUsd": 36,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "$36/month billed annually; $45/month billed monthly (20% annual discount). 1 published app, custom domain, app store publishing.",
+          "source": {
+            "url": "https://www.adalo.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/website-ecommerce-software/a/adalo/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Professional",
+          "monthlyUsd": 52,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "$52/month billed annually; $65/month billed monthly (20% annual discount). 2 published apps, 5 editors, custom integrations, push notifications, geolocation.",
+          "source": {
+            "url": "https://www.adalo.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/website-ecommerce-software/a/adalo/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Team",
+          "monthlyUsd": 160,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "$160/month billed annually; $200/month billed monthly (20% annual discount). 5 published apps, 10 editors, priority support, API access, Xano integration.",
+          "source": {
+            "url": "https://www.adalo.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/website-ecommerce-software/a/adalo/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "softr",
+      "name": "Softr",
+      "domain": "softr.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Airtable",
+        "Google Sheets",
+        "Notion",
+        "SmartSuite",
+        "Xano",
+        "Coda",
+        "monday.com",
+        "Supabase",
+        "ClickUp",
+        "HubSpot",
+        "BigQuery",
+        "PostgreSQL",
+        "SQL Server",
+        "MariaDB",
+        "MySQL"
+      ],
+      "provenance": "Softr official pricing page (softr.io/pricing) fetched successfully. Plans confirmed: Free $0, Basic $49/mo, Professional $139/mo, Business $269/mo, Enterprise custom. Annual billing offers 'Save 2 months' (~16.7% discount) but exact discounted annual prices not shown on the page — only monthly rates are displayed before toggle. HIPAA/BAA not mentioned.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "10 app users, 5,000 Softr Database records, 500 workflow actions/month, 5 AI credits.",
+          "source": {
+            "url": "https://www.softr.io/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/content-management-software/a/softr/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Basic",
+          "monthlyUsd": 49,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "$49/month billed monthly. Annual billing saves ~2 months (~17%). 20 app users, 50,000 database records, 2,500 workflow actions/month, 10 AI credits.",
+          "source": {
+            "url": "https://www.softr.io/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/content-management-software/a/softr/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Professional",
+          "monthlyUsd": 139,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "$139/month billed monthly. Annual billing saves ~2 months (~17%). 100 app users (+$10 per 10 additional up to 250), 500,000 records, 10,000 workflow actions/month, 50 AI credits.",
+          "source": {
+            "url": "https://www.softr.io/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/content-management-software/a/softr/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 269,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "$269/month billed monthly. Annual billing saves ~2 months (~17%). 500 app users, 1M database records, 25,000 workflow actions/month, 100 AI credits.",
+          "source": {
+            "url": "https://www.softr.io/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/content-management-software/a/softr/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing — contact sales. Includes SSO (SAML/OpenID), SOC2 reporting, IP blocking, audit logging, dedicated success manager.",
+          "source": {
+            "url": "https://www.softr.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "flutterflow",
+      "name": "FlutterFlow",
+      "domain": "flutterflow.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Firebase",
+        "Supabase",
+        "Stripe",
+        "GitHub",
+        "Google Maps",
+        "REST APIs"
+      ],
+      "provenance": "FlutterFlow official pricing page (flutterflow.io/pricing) fetched successfully. Monthly billing prices confirmed: Free $0, Basic $39/month, Growth $80/month (1st seat), Business $150/month (1st seat). Annual billing saves ~25%. Growth and Business are per-seat; the 2nd seat on Growth costs $55/month, seats 2-5 on Business cost $85/month each. HIPAA/BAA not mentioned.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "1 user, up to 2 projects. No code/APK download, no custom domain deployment.",
+          "source": {
+            "url": "https://flutterflow.io/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/website-ecommerce-software/a/flutterflow/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Basic",
+          "monthlyUsd": 39,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 25,
+          "billingModel": "flat",
+          "notes": "$39/month billed monthly; ~$29/month billed annually (~25% discount). 1 user, includes code and APK downloads.",
+          "source": {
+            "url": "https://flutterflow.io/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/website-ecommerce-software/a/flutterflow/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Growth",
+          "monthlyUsd": 80,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 25,
+          "billingModel": "per_seat",
+          "notes": "$80/month for 1st seat billed monthly; 2nd seat $55/month. Annual billing saves ~25%. GitHub integration, real-time collaboration, up to 2 users.",
+          "source": {
+            "url": "https://flutterflow.io/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/website-ecommerce-software/a/flutterflow/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 150,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 25,
+          "billingModel": "per_seat",
+          "notes": "$150/month for 1st seat billed monthly; seats 2-5 each $85/month. Annual billing saves ~25%. Advanced collaboration, automated testing, up to 5 users.",
+          "source": {
+            "url": "https://flutterflow.io/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/website-ecommerce-software/a/flutterflow/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "weweb",
+      "name": "WeWeb",
+      "domain": "weweb.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Supabase",
+        "Xano",
+        "Airtable",
+        "PostgreSQL",
+        "REST APIs",
+        "GraphQL",
+        "Auth0",
+        "Stripe"
+      ],
+      "provenance": "WeWeb official pricing page (weweb.io/pricing) redirects to pricing.weweb.io, which returned only the page title 'WeWeb Pricing | April 2026 Update' with no rendered content (JS-only SPA). AlternativeTo aggregator reports subscription range '$12–$480/month + free version'; Slashdot aggregator reports starting at '$16/month' with a free version. No individual plan names or tier breakdowns could be confirmed from automated fetches. All plan prices recorded as null to avoid fabrication; ranges from aggregators noted in each plan's notes.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free tier confirmed to exist by multiple aggregators. Feature limits not confirmed from automated fetch.",
+          "source": {
+            "url": "https://pricing.weweb.io/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://slashdot.org/software/p/WeWeb/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Paid plans",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Official pricing page is JS-only and did not render plan details. Aggregators report paid plans range approximately $12–$480/month; starting price ~$16/month. Individual plan names and exact tier prices could not be confirmed — visit pricing.weweb.io for current prices.",
+          "source": {
+            "url": "https://pricing.weweb.io/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://alternativeto.net/software/weweb/about/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "appsmith",
+      "name": "Appsmith",
+      "domain": "appsmith.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "PostgreSQL",
+        "MySQL",
+        "MongoDB",
+        "REST APIs",
+        "GraphQL",
+        "Snowflake",
+        "Redshift",
+        "S3",
+        "Google Sheets",
+        "Stripe"
+      ],
+      "provenance": "Appsmith official pricing page (appsmith.com/pricing) fetched successfully and confirmed all three tiers. Business plan confirmed at $15/user/month (monthly billing). Enterprise at $2,500/month for 100 users (typically billed annually per contract). Free plan confirmed at $0 for up to 5 cloud users. No HIPAA/BAA mention. No annual discount published for Business tier.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Up to 5 users (cloud), 5 workspaces, 3 Git repos. Open-source Community Edition also free (self-host).",
+          "source": {
+            "url": "https://www.appsmith.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://slashdot.org/software/p/Appsmith/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 15,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$15/user/month billed monthly (end of month). Up to 99 users. Premium integrations, custom branding, SSO, audit logs. No published annual discount.",
+          "source": {
+            "url": "https://www.appsmith.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://slashdot.org/software/p/Appsmith/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": 2500,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$2,500/month for 100 users (minimum), typically billed annually by contract. SOC 2 Type 2, custom integrations, dedicated support. Price stated on public pricing page.",
+          "source": {
+            "url": "https://www.appsmith.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://slashdot.org/software/p/Appsmith/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "retool",
+      "name": "Retool",
+      "domain": "retool.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "PostgreSQL",
+        "MySQL",
+        "MongoDB",
+        "REST APIs",
+        "GraphQL",
+        "Snowflake",
+        "BigQuery",
+        "Segment",
+        "Google Analytics",
+        "Salesforce"
+      ],
+      "provenance": "Retool official pricing page (retool.com/pricing) fetched and returned EUR prices (geolocated to Europe). USD prices confirmed from GetApp aggregator listing (getapp.com/website-ecommerce-software/a/retool/pricing/) which shows Free $0, Team $10/user/month, Business $50/user/month. The page notes 20% savings for annual billing. Enterprise is custom. HIPAA/BAA not mentioned on public pricing page.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Up to 5 users. 500 workflow runs/month, 5GB storage, 20 agent hours/month. Unlimited web and mobile apps.",
+          "source": {
+            "url": "https://retool.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/website-ecommerce-software/a/retool/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Team",
+          "monthlyUsd": 10,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "per_seat",
+          "notes": "$10/user/month (USD from GetApp; official page shows €9 geolocated). Annual billing saves 20%. 5,000 workflow runs/month. Builders (active editors) and internal users priced separately.",
+          "source": {
+            "url": "https://www.getapp.com/website-ecommerce-software/a/retool/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://retool.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 50,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "per_seat",
+          "notes": "$50/user/month (USD from GetApp; official page shows €46 geolocated). Annual billing saves 20%. Audit logging, rich permission controls, staging environments.",
+          "source": {
+            "url": "https://www.getapp.com/website-ecommerce-software/a/retool/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://retool.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing — contact sales. Flexible pricing that scales with usage. Self-hosted deployment option available.",
+          "source": {
+            "url": "https://retool.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "noloco",
+      "name": "Noloco",
+      "domain": "noloco.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Airtable",
+        "SmartSuite",
+        "Google Sheets",
+        "Xano",
+        "PostgreSQL",
+        "Supabase",
+        "MySQL",
+        "HubSpot",
+        "Stripe",
+        "Zapier",
+        "Make",
+        "n8n"
+      ],
+      "provenance": "Noloco official pricing page (noloco.io/pricing) fetched successfully. All plan prices confirmed directly. Pro: $149/month (monthly) or $99/month (annual), Business: $319/month (monthly) or $213/month (annual). Annual discount is 33%. Enterprise is custom. HIPAA/BAA not mentioned. GetApp lists a 'Starter' tier at $49 not visible on the official page — official source takes precedence.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "3 team seats, 7 client seats, 2,000 rows, unlimited apps, 100 workflow runs/month.",
+          "source": {
+            "url": "https://noloco.io/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/website-ecommerce-software/a/noloco/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 33,
+          "billingModel": "flat",
+          "notes": "$99/month billed annually; $149/month billed monthly (33% annual discount). 10 team seats (+$6 each), 50 client seats (+$1 each), 50,000 rows, 25,000 synced rows.",
+          "source": {
+            "url": "https://noloco.io/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/website-ecommerce-software/a/noloco/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 213,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 33,
+          "billingModel": "flat",
+          "notes": "$213/month billed annually; $319/month billed monthly (33% annual discount). 30 team seats (+$10 each), 100 client seats (+$1 each), 200,000 rows.",
+          "source": {
+            "url": "https://noloco.io/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/website-ecommerce-software/a/noloco/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing — contact sales. Custom seat configuration, volume-based data limits, enterprise SLA.",
+          "source": {
+            "url": "https://noloco.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    }
+  ]
+}

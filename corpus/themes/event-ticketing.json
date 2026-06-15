@@ -1,0 +1,646 @@
+{
+  "vertical": "event-ticketing",
+  "generatedAt": "2026-06-14",
+  "methodologyNotes": "Published self-serve USD pricing was verified against each provider's official pricing page on the accessedAt date. Providers were selected from the seed list (Eventbrite, Ticket Tailor, TryBooking, TicketSpice, Tix) plus high-volume alternatives (Universe, Eventzilla, RegFox, Accelevents). TryBooking was excluded: its website geolocates to AU/NZ/UK with no published USD pricing page. All per-ticket fee platforms are modeled as billingModel 'custom' (usage-metered with no flat monthly commitment), with the published per-ticket rate in notes. Plans that require contacting sales have monthlyUsd null. minutesIncluded, callsIncluded, overagePerMin, and overagePerCall are null on every plan (non-telephony). Ticket Tailor's official pricing page returned HTTP 403; pricing was sourced from SoftwareAdvice (softwareadvice.com) and Capterra (capterra.com) reputable comparison pages, corroborated by current web search of the live site, and is noted as such. Note: an earlier draft listed $0.65/ticket pay-as-you-sell and $0.26 lowest prepaid for Ticket Tailor; on re-verification 2026-06-14 multiple current sources show $0.75/ticket pay-as-you-sell and $0.28 lowest prepaid (the live site has since moved to $0.85), so those figures were corrected. Tix pricing page returned HTTP 403; pricing was sourced from SoftwareAdvice and GetApp comparison pages and confirmed by web search ($0.25/ticket box office, $1.50/ticket online).",
+  "vendors": [
+    {
+      "slug": "eventbrite",
+      "name": "Eventbrite",
+      "domain": "eventbrite.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Mailchimp",
+        "Zoom",
+        "Stripe",
+        "PayPal",
+        "Salesforce",
+        "HubSpot",
+        "Facebook",
+        "Google Analytics",
+        "Zapier",
+        "Slack"
+      ],
+      "provenance": "https://www.eventbrite.com/organizer/pricing/ (official pricing page, accessed 2026-06-14)",
+      "plans": [
+        {
+          "name": "Free Events",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "No fees for events with free tickets. Unlimited free events. All core platform features included.",
+          "source": {
+            "url": "https://www.eventbrite.com/organizer/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Paid Events (Standard)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "No monthly fee. Per-ticket charges: 3.7% + $1.79 service fee per ticket, plus 2.9% payment processing fee per order. Organizer can choose to pass fees to attendees or absorb them. No flat-rate plan available for paid events.",
+          "source": {
+            "url": "https://www.eventbrite.com/organizer/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pro (Email Marketing Add-on)",
+          "monthlyUsd": 15,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Starting at $15/month for email marketing add-on. Allows sending up to 10,000 emails daily to attendees. Ticketing fees still apply separately.",
+          "source": {
+            "url": "https://www.eventbrite.com/organizer/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise / Sales Partnership",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom solutions for complex or high-volume events. Contact sales required. No published price.",
+          "source": {
+            "url": "https://www.eventbrite.com/organizer/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "ticket-tailor",
+      "name": "Ticket Tailor",
+      "domain": "tickettailor.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Stripe",
+        "PayPal",
+        "Zapier",
+        "Mailchimp",
+        "Google Analytics",
+        "Facebook Pixel"
+      ],
+      "provenance": "tickettailor.com pricing page returned HTTP 403. Pricing sourced from softwareadvice.com/event-booking/ticket-tailor-profile/ and capterra.com/p/112510/Ticket-Tailor/pricing/ (reputable comparison pages, accessed 2026-06-14). Both agree on $0.75/ticket pay-as-you-sell and prepaid credits as low as $0.28/ticket; live-site web search showed the pay-as-you-sell rate moving to $0.85. An earlier draft's $0.65/$0.26 figures were not corroborated and were corrected.",
+      "plans": [
+        {
+          "name": "Free Events",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "No fees for free events. First 5 tickets sold on any account are also free. Unlimited events and ticket types.",
+          "source": {
+            "url": "https://www.softwareadvice.com/event-booking/ticket-tailor-profile/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.capterra.com/p/112510/Ticket-Tailor/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pay As You Sell",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "$0.75 per ticket sold (pay-as-you-sell), per SoftwareAdvice and Capterra; the live site has since moved to ~$0.85/ticket per current web search. No monthly fee. No fee for free tickets. Charity/nonprofit discount available. Includes mobile tickets, event scheduling, ticket grouping, unlimited events/ticket types, waitlists. Prior draft's $0.65 figure was uncorroborated and corrected.",
+          "source": {
+            "url": "https://www.softwareadvice.com/event-booking/ticket-tailor-profile/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.capterra.com/p/112510/Ticket-Tailor/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pay Upfront (Credits)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Prepay for ticket credits; per-ticket rate reduces to as low as $0.28/ticket at higher volume (SoftwareAdvice and Capterra both report $0.28 as the lowest prepaid rate). No monthly subscription. All same features as Pay As You Sell. Prior draft's $0.26 figure was uncorroborated and corrected to $0.28.",
+          "source": {
+            "url": "https://www.softwareadvice.com/event-booking/ticket-tailor-profile/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.capterra.com/p/112510/Ticket-Tailor/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "ticketspice",
+      "name": "TicketSpice",
+      "domain": "ticketspice.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Stripe",
+        "Zapier",
+        "Mailchimp",
+        "ActiveCampaign",
+        "Salesforce",
+        "Facebook Pixel",
+        "Google Analytics"
+      ],
+      "provenance": "https://www.ticketspice.com/pricing (official pricing page, accessed 2026-06-14)",
+      "plans": [
+        {
+          "name": "Standard",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "$0.99 per ticket sold (reduced to $0.49 per ticket for tickets priced under $5). No monthly fee, no setup fee, no contracts. Credit card processing 2.9% + $0.30 per transaction (separate). All features included: ticketing page builder, reserved seating, ticket scanning, box office app, branding, CRM, analytics, API access.",
+          "source": {
+            "url": "https://www.ticketspice.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://slashdot.org/software/p/TicketSpice/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Email Marketing Automation Add-on",
+          "monthlyUsd": 9,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$9/month + $0.02 per recipient. Optional add-on.",
+          "source": {
+            "url": "https://www.ticketspice.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Text Message Platform Add-on",
+          "monthlyUsd": 19,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$19/month + $0.02 per recipient. Optional add-on.",
+          "source": {
+            "url": "https://www.ticketspice.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "tix",
+      "name": "Tix",
+      "domain": "tix.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Stripe",
+        "PayPal",
+        "Mailchimp"
+      ],
+      "provenance": "tix.com pricing page returned HTTP 403. Pricing sourced from softwareadvice.com and getapp.com comparison pages (accessed 2026-06-14). Both agree on Box Office $0.25/ticket and Online $1.50/ticket per-ticket pricing model.",
+      "plans": [
+        {
+          "name": "Box Office",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "$0.25 per ticket sold (box office / in-person sales channel). No monthly subscription. CRM, multiple seating configurations, integrations included.",
+          "source": {
+            "url": "https://www.softwareadvice.com/event-management/tix-profile/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/content-management-software/a/tix/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Online",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "$1.50 per ticket sold (online sales channel). No monthly subscription. Same core features as Box Office plan.",
+          "source": {
+            "url": "https://www.softwareadvice.com/event-management/tix-profile/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/content-management-software/a/tix/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "universe",
+      "name": "Universe",
+      "domain": "universe.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Stripe",
+        "PayPal",
+        "Facebook",
+        "Google Analytics",
+        "Mailchimp",
+        "Zapier"
+      ],
+      "provenance": "https://www.universe.com/pricing (official pricing page, accessed 2026-06-14)",
+      "plans": [
+        {
+          "name": "Free Events",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Zero service fees for events with free tickets. No setup costs or termination fees.",
+          "source": {
+            "url": "https://www.universe.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Starter",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "No monthly fee. 2% + $0.59 per ticket sold (excludes VAT and payment processing). Targeted at independent organizers. Core dashboard, payouts, custom checkout questions, email support, real-time analytics, unlimited ticket types.",
+          "source": {
+            "url": "https://www.universe.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Standard",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "No monthly fee. Same 2% + $0.59 per ticket rate as Starter. Adds cardholder presales, priority email support, payment plans, tiered ticketing. Targeted at growing brands.",
+          "source": {
+            "url": "https://www.universe.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing / a la carte plan. Contact sales required. Adds dynamic pricing, custom badges, event marketing, RFID access control. Targeted at established organizers.",
+          "source": {
+            "url": "https://www.universe.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "eventzilla",
+      "name": "Eventzilla",
+      "domain": "eventzilla.net",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Stripe",
+        "PayPal",
+        "Zoom",
+        "Mailchimp",
+        "Salesforce",
+        "Zapier",
+        "Google Analytics"
+      ],
+      "provenance": "https://www.eventzilla.net/pricing (official pricing page, accessed 2026-06-14)",
+      "plans": [
+        {
+          "name": "Basic",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "$1.50 per registration. Unlimited free registrations at no cost. 1 paid ticket type. 100 email invitations. Business hours support. Standard registration form. Unlimited events.",
+          "source": {
+            "url": "https://www.eventzilla.net/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/content-management-software/a/eventzilla/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "1.9% + $1.50 per registration. Unlimited paid ticket types, customizable forms, seating plans, discount codes, agenda builder, speaker management. 500 email invitations per event. Automated event reminders.",
+          "source": {
+            "url": "https://www.eventzilla.net/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/content-management-software/a/eventzilla/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Plus",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "2.9% + $1.50 per registration. Most Popular tier. White-labeled registration experience, advanced website designer, sponsor management, virtual event hosting, email campaigns. 1,000 email invitations per event.",
+          "source": {
+            "url": "https://www.eventzilla.net/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/content-management-software/a/eventzilla/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Unlimited",
+          "monthlyUsd": 499.92,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$5,999/year billed annually ($499.92/month equivalent). Flat fee covers unlimited registrations across all events. 2 full users included, dedicated account manager, higher email credits, onboarding assistance.",
+          "source": {
+            "url": "https://www.eventzilla.net/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/content-management-software/a/eventzilla/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Custom",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only for high-volume events and agencies. Contact sales required.",
+          "source": {
+            "url": "https://www.eventzilla.net/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "regfox",
+      "name": "RegFox",
+      "domain": "regfox.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Stripe",
+        "PayPal",
+        "Mailchimp",
+        "Salesforce",
+        "Zapier",
+        "Google Analytics",
+        "Zoom"
+      ],
+      "provenance": "https://www.regfox.com/pricing (official pricing page, accessed 2026-06-14)",
+      "plans": [
+        {
+          "name": "Standard",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$0/month base. Per-registrant fee: $0.99 + 1% per paid registration (capped at $4.99/registration). $0.99 per free-event registrant. Credit card processing 2.9% + $0.30 per transaction separate. No setup fees, no contracts.",
+          "source": {
+            "url": "https://www.regfox.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.softwareadvice.com/event-management/regfox-profile/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$0/month base. Per-registrant fee: $1.99 + 1% per paid registration (capped at $5.99/registration). $1.99 per free-event registrant. Adds advanced features over Standard. Credit card processing 2.9% + $0.30 per transaction separate.",
+          "source": {
+            "url": "https://www.regfox.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.softwareadvice.com/event-management/regfox-profile/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Professional",
+          "monthlyUsd": 499,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$499/month billed annually. Per-registrant fee: $1.99 + 1% (capped at $5.99). $0.99 per free-event registrant. Includes full feature set with priority support. Credit card processing 2.9% + $0.30 per transaction separate.",
+          "source": {
+            "url": "https://www.regfox.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.softwareadvice.com/event-management/regfox-profile/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "accelevents",
+      "name": "Accelevents",
+      "domain": "accelevents.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Salesforce",
+        "HubSpot",
+        "Marketo",
+        "Stripe",
+        "Zoom",
+        "Microsoft Teams",
+        "Slack",
+        "Zapier",
+        "Google Analytics"
+      ],
+      "provenance": "https://www.accelevents.com/pricing/ (official pricing page, accessed 2026-06-14)",
+      "plans": [
+        {
+          "name": "Professional",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Starting from $7,500 per event (annual billing implied). 1 event. Unlimited registrations, custom fields, self check-in, badge printing, integrations. No transaction fees.",
+          "source": {
+            "url": "https://www.accelevents.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/content-management-software/a/accelevents/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Starting from $13,500 (annual). Unlimited events. Adds event listing page, cross-event reporting, custom reporting. All Professional features.",
+          "source": {
+            "url": "https://www.accelevents.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/content-management-software/a/accelevents/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing, contact sales. Unlimited events, approval workflows, call for speakers, API/webhooks, multi-department operations.",
+          "source": {
+            "url": "https://www.accelevents.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "White Label",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing, contact sales. Full brand removal, custom URL, custom email domain, branded mobile app, SSO. All Enterprise features.",
+          "source": {
+            "url": "https://www.accelevents.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    }
+  ]
+}

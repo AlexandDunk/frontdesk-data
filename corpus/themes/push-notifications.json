@@ -1,0 +1,748 @@
+{
+  "vertical": "push-notifications",
+  "generatedAt": "2026-06-14",
+  "methodologyNotes": "Published self-serve USD pricing was collected from each vendor's official pricing page on 2026-06-14 via direct WebFetch of the canonical pricing URL. OneSignal Growth is usage-based (base $19/mo + per-MAU/subscriber fees); monthlyUsd reflects the published base platform fee only. Pushwoosh is entirely per-MAU with no flat floor; monthlyUsd=0 for the free tier (≤1,000 MAU). Pusher Beams prices are fixed monthly tiers fetched directly from pusher.com/beams/pricing. Airship returned only JS-heavy/image content with no USD figures on the public page — all plans set to null; provenance notes this. Braze pricing page lists four editions but no USD figures — all null. Batch pricing page showed no figures and directed to sales@batch.com — all null. Firebase Cloud Messaging is confirmed free on both Spark and Blaze plans with no message-volume charge. PushEngage prices are monthly billing rates; annual rates are 50% lower (annualDiscountPct=50). Gravitec annual billing gives ~17% discount on the Fix plan. WonderPush prices are in EUR (€1/1,000 subscribers); USD equivalent noted in plan notes — no flat USD figure published. SendPulse web push pricing is in EUR; 20% annual discount confirmed. All telephony fields (minutesIncluded, callsIncluded, overagePerMin, overagePerCall) are null — this is a non-telephony vertical.",
+  "vendors": [
+    {
+      "slug": "onesignal",
+      "name": "OneSignal",
+      "domain": "onesignal.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Segment",
+        "Mixpanel",
+        "Amplitude",
+        "Braze",
+        "Shopify",
+        "WordPress",
+        "HubSpot",
+        "Zapier"
+      ],
+      "provenance": "https://onesignal.com/pricing fetched 2026-06-14. Free and Growth plan details confirmed directly. Professional and Enterprise plans are annual contracts with custom/volume-based pricing — no USD figures published. No annual discount percentage shown for Growth.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Unlimited mobile push sends; web push to up to 10,000 subscribers per send; 10,000 email sends/month; 1 active in-app message; 1 active Journey; 6 audience segments. No credit card required.",
+          "source": {
+            "url": "https://onesignal.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Growth",
+          "monthlyUsd": 19,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Base platform fee $19/mo plus usage: $0.012/monthly-active-user (mobile push), $0.004/web-push-subscriber, $1.50/1,000 email sends after 20,000 free/mo. 3 active Journeys, 10 audience segments. monthlyUsd reflects the $19 base fee only; total scales with usage.",
+          "source": {
+            "url": "https://onesignal.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Professional",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Annual contract, volume-based discounting. 20 active Journeys, 20 audience segments, CSV exports, advanced analytics, 1-year reporting history. Contact sales for quote.",
+          "source": {
+            "url": "https://onesignal.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Annual contract, tailored pricing. Unlimited Journeys, frequency capping, dedicated success manager, SLA, 2-year reporting history. Contact sales.",
+          "source": {
+            "url": "https://onesignal.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "pusher-beams",
+      "name": "Pusher Beams",
+      "domain": "pusher.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "iOS APNs",
+        "Android FCM",
+        "Web Push"
+      ],
+      "provenance": "https://pusher.com/beams/pricing fetched 2026-06-14. Fixed monthly tiers with named subscriber caps confirmed. No annual discount published on the pricing page. Enterprise requires contacting sales.",
+      "plans": [
+        {
+          "name": "Sandbox",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Up to 1,000 subscribers. Standard support (best-effort). No credit card required.",
+          "source": {
+            "url": "https://pusher.com/beams/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Startup",
+          "monthlyUsd": 29,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Up to 10,000 subscribers. Standard support. 24/7 platform monitoring.",
+          "source": {
+            "url": "https://pusher.com/beams/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Up to 50,000 subscribers. Standard support. 24/7 platform monitoring.",
+          "source": {
+            "url": "https://pusher.com/beams/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 199,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Up to 115,000 subscribers. Premium support (24-hour target response).",
+          "source": {
+            "url": "https://pusher.com/beams/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": 399,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Up to 250,000 subscribers. Premium support (24-hour target response).",
+          "source": {
+            "url": "https://pusher.com/beams/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Contact sales for custom subscriber volumes above 250,000. Priority support available from $3,000/mo.",
+          "source": {
+            "url": "https://pusher.com/beams/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "airship",
+      "name": "Airship",
+      "domain": "airship.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Salesforce",
+        "Adobe Experience Cloud",
+        "mParticle",
+        "Segment",
+        "Braze"
+      ],
+      "provenance": "https://airship.com/pricing/ fetched 2026-06-14. The page returned JS-rendered content with no USD price figures — only a 'Get a quote' form and 'Book a meeting' CTAs. Airship Essentials is a self-service tier but pricing requires registration. No published self-serve USD pricing found on any public-facing page. All plans set to null.",
+      "plans": [
+        {
+          "name": "Essentials",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Self-service tier described as 'best for growth-focused teams'. No published USD price — requires sign-up to see pricing. Mobile push, web push, in-app messaging included.",
+          "source": {
+            "url": "https://airship.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Contact sales / get a quote. Full Airship Experience Platform (AXP) with advanced automation, experimentation, and dedicated support.",
+          "source": {
+            "url": "https://airship.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "braze",
+      "name": "Braze",
+      "domain": "braze.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Segment",
+        "mParticle",
+        "Amplitude",
+        "Snowflake",
+        "Salesforce",
+        "Google Ads",
+        "Facebook Ads",
+        "Shopify",
+        "Contentful"
+      ],
+      "provenance": "https://www.braze.com/pricing fetched 2026-06-14. Page lists four editions (Braze Go, Braze Select, Braze Pro, Braze Enterprise) but shows no USD figures for any tier. Pricing scales with MAU via an 'Action Credits' model. Users are directed to 'Get pricing' or 'Start a free trial'. All plans set to null.",
+      "plans": [
+        {
+          "name": "Braze Go",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "For early-stage growth teams. Cross-channel messaging activation. No published USD price — contact Braze for quote.",
+          "source": {
+            "url": "https://www.braze.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Braze Select",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "For companies expanding engagement. Includes everything in Go plus enhanced security and orchestration. No published USD price.",
+          "source": {
+            "url": "https://www.braze.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Braze Pro",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Adds predictive AI and personalized recommendations. No published USD price.",
+          "source": {
+            "url": "https://www.braze.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Braze Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "For enterprises at massive scale. Enterprise-grade orchestration, advanced experimentation, custom contract. Contact sales.",
+          "source": {
+            "url": "https://www.braze.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "batch",
+      "name": "Batch",
+      "domain": "batch.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Salesforce",
+        "Adobe",
+        "Segment",
+        "AppsFlyer",
+        "Adjust"
+      ],
+      "provenance": "https://batch.com/pricing and https://batch.com/en/pricing fetched 2026-06-14. Both returned the product/feature page with no pricing tiers or USD figures. Page directs to sales@batch.com and a 'Contact Us' form for pricing. All plans null.",
+      "plans": [
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "No public pricing published. Contact sales@batch.com for a quote. Customer Engagement Platform covering mobile push, web push, in-app messaging, email, and SMS.",
+          "source": {
+            "url": "https://batch.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "firebase-cloud-messaging",
+      "name": "Firebase Cloud Messaging",
+      "domain": "firebase.google.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Google Analytics",
+        "Google Ads",
+        "BigQuery",
+        "Android",
+        "iOS",
+        "Flutter",
+        "Web"
+      ],
+      "provenance": "https://firebase.google.com/pricing fetched 2026-06-14. FCM confirmed free on both Spark (free) and Blaze (pay-as-you-go) plans with no per-message charge and no stated volume cap for notifications. The Blaze plan billing is for other Firebase services (Firestore, Functions, etc.), not FCM messages.",
+      "plans": [
+        {
+          "name": "Spark (Free)",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Firebase Cloud Messaging is free with no message-volume charges. Supports Android, iOS, web, Flutter, C++, Unity. No credit card required on Spark plan.",
+          "source": {
+            "url": "https://firebase.google.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://firebase.google.com/docs/cloud-messaging",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Blaze (Pay-as-you-go)",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "FCM remains free on Blaze. Billing applies to other Firebase services (Firestore reads/writes, Cloud Functions, Hosting bandwidth, etc.) but not to push notification sends. Requires a Google Cloud billing account.",
+          "source": {
+            "url": "https://firebase.google.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "pushwoosh",
+      "name": "Pushwoosh",
+      "domain": "pushwoosh.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Segment",
+        "Amplitude",
+        "AppsFlyer",
+        "Adjust",
+        "Branch",
+        "Mixpanel",
+        "Salesforce",
+        "HubSpot",
+        "Zapier"
+      ],
+      "provenance": "https://www.pushwoosh.com/pricing/ fetched twice on 2026-06-14 with consistent results. Per-MAU model confirmed at $13/1,000 MAU (omnichannel) and $5/1,000 monthly email recipients (email-only). Free tier up to 1,000 MAU. Enterprise custom threshold at $3,000/mo. No annual discount published.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Up to 1,000 MAU. Includes all features: unlimited push notifications, unlimited in-app impressions, 20,000 monthly email sends, 5 daily AI requests. Full API access.",
+          "source": {
+            "url": "https://www.pushwoosh.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Omnichannel",
+          "monthlyUsd": 13,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$13 per 1,000 MAU/month. Covers all channels: mobile push, in-app messaging, web push, email, SMS, WhatsApp, Kakao Talk, Telegram, LINE. Unlimited campaigns, A/B testing, advanced analytics. monthlyUsd reflects the per-1,000-MAU rate (minimum billable unit). Custom enterprise pricing available when monthly spend exceeds $3,000.",
+          "source": {
+            "url": "https://www.pushwoosh.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Email Only",
+          "monthlyUsd": 5,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$5 per 1,000 monthly unique email recipients. Includes 20 email sends per recipient/month; additional sends at $1.50/1,000. Email channel only.",
+          "source": {
+            "url": "https://www.pushwoosh.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Available when estimated monthly cost exceeds $3,000. Includes dedicated support, SLA guarantees, and volume discounts. Contact sales.",
+          "source": {
+            "url": "https://www.pushwoosh.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "pushengage",
+      "name": "PushEngage",
+      "domain": "pushengage.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "WordPress",
+        "WooCommerce",
+        "Shopify",
+        "Magento",
+        "BigCommerce",
+        "Zapier",
+        "Google Analytics"
+      ],
+      "provenance": "https://pushengage.com/pricing/ fetched 2026-06-14. All four plan tiers and their monthly/annual prices confirmed directly. Annual discount confirmed at ~50% across paid plans. 14-day money-back guarantee noted.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "1 website or app, up to 200 subscribers, up to 30 mobile and browser push campaigns/month.",
+          "source": {
+            "url": "https://pushengage.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 14,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 43,
+          "billingModel": "flat",
+          "notes": "Up to 50,000 subscribers, unlimited campaigns, 40x monthly sending volume. Annual rate: ~$8/mo (billed $96/yr); month-to-month rate: $14/mo. monthlyUsd reflects the month-to-month rate. annualDiscountPct ~43% ($8 vs $14).",
+          "source": {
+            "url": "https://pushengage.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": 29,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 48,
+          "billingModel": "flat",
+          "notes": "Up to 100,000 subscribers, unlimited campaigns, 50x monthly sending volume, 2 sub-accounts. Annual rate: ~$15/mo; month-to-month: $29/mo. monthlyUsd reflects the month-to-month rate. annualDiscountPct ~48%.",
+          "source": {
+            "url": "https://pushengage.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Growth",
+          "monthlyUsd": 60,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 60,
+          "billingModel": "flat",
+          "notes": "Up to 250,000 subscribers, unlimited campaigns, 75x monthly sending volume, 4 sub-accounts, WooCommerce integration, advanced automation. Annual rate: ~$24/mo; month-to-month: $60/mo. annualDiscountPct ~60%.",
+          "source": {
+            "url": "https://pushengage.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Unlimited scalability, custom integrations, unlimited sub-accounts, hands-on support. Contact sales for quote.",
+          "source": {
+            "url": "https://pushengage.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "gravitec",
+      "name": "Gravitec",
+      "domain": "gravitec.net",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "WordPress",
+        "Drupal",
+        "Joomla",
+        "OpenCart",
+        "PrestaShop",
+        "Zapier"
+      ],
+      "provenance": "https://gravitec.net/pricing/ fetched 2026-06-14. Three plan tiers confirmed with USD prices. Annual billing gives ~17% discount on Fix plan. Business plan is custom/quote-based. AI add-on pricing noted separately.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Up to 10,000 subscribers, unlimited websites, 1 user, unlimited notifications, 5 automations/day. Includes 'Powered by Gravitec.net' branding. No Safari browser support.",
+          "source": {
+            "url": "https://gravitec.net/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Fix",
+          "monthlyUsd": 20,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "Up to 20,000 subscribers. Unlimited websites, users, notifications, automations, and integrations. Safari browser supported. Annual billing saves ~17% (~$40.80/yr savings).",
+          "source": {
+            "url": "https://gravitec.net/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Unlimited subscribers, high load capacity, business/technical support via Telegram/WhatsApp, RESTful API. Custom pricing — contact sales.",
+          "source": {
+            "url": "https://gravitec.net/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "wonderpush",
+      "name": "WonderPush",
+      "domain": "wonderpush.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "WordPress",
+        "Shopify",
+        "PrestaShop",
+        "Zapier",
+        "Google Tag Manager"
+      ],
+      "provenance": "https://www.wonderpush.com/pricing/ fetched 2026-06-14 (followed 301 redirect from /pricing). Pricing is published in EUR on a strictly per-1,000-subscriber tiered model (€1 per 1,000 subscribers/month): 1–1,000 = €1/mo, 1,001–2,000 = €2/mo, and so on. No flat USD figure is published, so monthlyUsd is null for the paid tier; EUR rate documented in notes. 14-day free trial, no credit card required.",
+      "plans": [
+        {
+          "name": "Free Trial",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "14-day free trial, no credit card required. First popup campaign free. Unlimited push notifications, projects, and staff members during the trial.",
+          "source": {
+            "url": "https://www.wonderpush.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pay-as-you-grow",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "EUR-only published pricing: €1 per 1,000 subscribers per month (tiered — €1/mo up to 1,000, €2/mo up to 2,000, etc.). Includes unlimited push notifications, unlimited projects, and unlimited staff members. monthlyUsd is null because no flat USD figure is published; the lowest paid tier is €1/mo (~$1.10 at mid-2026 rates).",
+          "source": {
+            "url": "https://www.wonderpush.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "sendpulse",
+      "name": "SendPulse",
+      "domain": "sendpulse.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "WordPress",
+        "Shopify",
+        "WooCommerce",
+        "Zapier",
+        "Google Analytics"
+      ],
+      "provenance": "https://sendpulse.com/pricing/webpush fetched 2026-06-14. Web push pricing published in EUR. Free Basic plan supports up to 10,000 subscribers. Pro plan is €22/mo billed monthly or €17.60/mo billed annually (€211.20/yr) — a confirmed 20% annual discount. No flat USD figure published, so the Pro plan's monthlyUsd is null with the EUR rate documented in notes.",
+      "plans": [
+        {
+          "name": "Basic (Free)",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free web push for up to 10,000 subscribers with unlimited notifications. Includes basic segmentation and scheduling.",
+          "source": {
+            "url": "https://sendpulse.com/pricing/webpush",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "EUR-only published pricing: €22/mo billed monthly, or €17.60/mo billed annually (€211.20/yr) — 20% annual discount. Adds branding removal, API access, advanced segmentation, A/B testing, and priority support. monthlyUsd is null because no flat USD figure is published (€22/mo ≈ $24 at mid-2026 rates).",
+          "source": {
+            "url": "https://sendpulse.com/pricing/webpush",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    }
+  ]
+}

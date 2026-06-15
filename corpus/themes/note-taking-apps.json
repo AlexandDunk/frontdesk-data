@@ -1,0 +1,283 @@
+{
+  "vertical": "note-taking-apps",
+  "generatedAt": "2026-06-13",
+  "methodologyNotes": "Published self-serve pricing for note-taking and knowledge apps was collected directly from each provider's public pricing page on the accessedAt date and recorded in USD. Each plan was independently re-verified on 2026-06-13 by fetching the provider's live pricing page; only providers whose prices/discounts/limits could be confirmed on a real provider-controlled page are retained. Where a provider prices per seat/user/editor, monthlyUsd records that per-unit list price with billingModel per_seat and the annual-vs-monthly rates noted in the plan notes; flat-priced or per-account/per-site tiers record the flat monthly fee with billingModel flat. Quote-only / contact-sales / Enterprise tiers carry a null price rather than an estimate. These are not telephony products, so minutesIncluded, callsIncluded, overagePerMin and overagePerCall are null on every plan, and HIPAA/BAA/bilingual are null unless a provider states otherwise. Providers whose pricing pages render figures only client-side (no price visible in the served page) and could not be corroborated on a real provider page were dropped rather than retained on an unverifiable guess: Evernote, Coda, Capacities and Roam Research were dropped on this pass for that reason (Roam additionally showed conflicting third-party annual rates).",
+  "vendors": [
+    {
+      "slug": "notion",
+      "name": "Notion",
+      "domain": "notion.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Slack",
+        "Google Drive",
+        "GitHub",
+        "Jira",
+        "SAML SSO",
+        "API"
+      ],
+      "provenance": "Prices read from notion.com/pricing on 2026-06-13. Live page rendered per-member figures (Free 0, Plus 9.50, Business 19.50, Enterprise custom) and a stated annual saving of up to 20%; the page localizes the currency symbol but the numeric per-member values are currency-neutral and match.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free for individuals. Trial AI capabilities, basic forms, basic sites, Notion Calendar and Notion Mail, databases with subtasks and dependencies. Limits: up to 5MB file uploads, 7-day page history, max 10 external guests, limited blocks for workspaces with 2+ members.",
+          "source": {
+            "url": "https://www.notion.com/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Plus",
+          "monthlyUsd": 9.5,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "per_seat",
+          "notes": "9.50 per member/mo at the annual-billing rate (page states up to 20% off vs monthly). Everything in Free plus custom forms, custom sites, unlimited charts, unlimited collaborative blocks, unlimited file uploads, basic connections, 30-day page history.",
+          "source": {
+            "url": "https://www.notion.com/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 19.5,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "per_seat",
+          "notes": "19.50 per member/mo at the annual-billing rate (labeled Recommended; page states up to 20% off vs monthly). Adds Notion Agent, AI Meeting Notes, Enterprise Search, SAML SSO, granular database permissions, private teamspaces, premium connections, 90-day page history.",
+          "source": {
+            "url": "https://www.notion.com/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Custom / quote-only (contact sales). Adds zero data retention with LLM providers, SCIM provisioning, advanced security controls, audit logs, dedicated customer success manager, DLP/SIEM connections, domain management.",
+          "source": {
+            "url": "https://www.notion.com/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "obsidian",
+      "name": "Obsidian",
+      "domain": "obsidian.md",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Community plugins",
+        "End-to-end encrypted Sync"
+      ],
+      "provenance": "Prices read from obsidian.md/pricing on 2026-06-13. Live page rendered Sync $5/mo monthly and $4/mo annual, Publish $10/site/mo monthly and $8/site/mo annual, and a Commercial license at $50 USD per user per year; all figures confirmed verbatim on the served page.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "The Obsidian app itself is free for personal use with no sign-up and no limitations. Sync and Publish are paid add-ons (separate plans below).",
+          "source": {
+            "url": "https://obsidian.md/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Sync",
+          "monthlyUsd": 5,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "per_seat",
+          "notes": "$5 USD per user/mo billed monthly; $4 USD per user/mo billed annually. Cross-device syncing, end-to-end encryption, version history, shared-vault collaboration, priority support.",
+          "source": {
+            "url": "https://obsidian.md/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Publish",
+          "monthlyUsd": 10,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "$10 USD per site/mo billed monthly; $8 USD per site/mo billed annually (priced per published site, not per user). Web publishing with no technical knowledge required, customizable themes, graph and full-text search, priority support.",
+          "source": {
+            "url": "https://obsidian.md/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Commercial license",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Required for using Obsidian for work at companies of 2+ people. Priced at $50 USD per user per year (annual-only, no monthly option), so monthlyUsd is null; development support, featured organization status, bulk purchase available.",
+          "source": {
+            "url": "https://obsidian.md/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "craft",
+      "name": "Craft",
+      "domain": "craft.do",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Custom domains",
+        "Web sharing",
+        "Apple ecosystem"
+      ],
+      "provenance": "USD list prices and limits read from the Craft Help Center 'Subscription Plans and Pricing' article on 2026-06-13, which served the figures as plain USD: Free, Plus $10/mo ($96/yr), Family $18/mo ($180/yr), Team $60/mo ($600/yr), with matching block/storage/AI-credit limits. The marketing pricing page (craft.do/pricing) localizes to non-USD currency, so the help-center article is the primary USD source.",
+      "plans": [
+        {
+          "name": "Starter (Free)",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free for 1 account. Up to 1,500 content blocks, 1GB storage, 25MB file uploads, 7-day version history, 15 AI credits per month.",
+          "source": {
+            "url": "https://support.craft.do/hc/en-us/articles/12463480608540-Craft-Subscription-Plans-and-Pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Plus",
+          "monthlyUsd": 10,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "per_seat",
+          "notes": "$10/mo per account on monthly billing; $96/year (~$8/mo) billed annually. Unlimited documents, up to 5 spaces, 1TB per space, 5GB file uploads, 30-day version history, 50 AI credits/mo, custom domains.",
+          "source": {
+            "url": "https://support.craft.do/hc/en-us/articles/12463480608540-Craft-Subscription-Plans-and-Pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Family",
+          "monthlyUsd": 18,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "$18/mo total on monthly billing; $180/year (~$15/mo) billed annually. Bundled plan for up to 5 members, all Plus benefits per member, up to 5 shared family spaces, each member gets 5 personal spaces with 1TB.",
+          "source": {
+            "url": "https://support.craft.do/hc/en-us/articles/12463480608540-Craft-Subscription-Plans-and-Pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Team",
+          "monthlyUsd": 60,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "$60/mo total on monthly billing; $600/year (~$50/mo) billed annually. Bundled plan for up to 10 members, all Plus benefits per member, up to 25 shared team spaces, each member gets 5 personal spaces with 1TB.",
+          "source": {
+            "url": "https://support.craft.do/hc/en-us/articles/12463480608540-Craft-Subscription-Plans-and-Pricing",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "bear",
+      "name": "Bear",
+      "domain": "bear.app",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "iCloud sync",
+        "Apple ecosystem",
+        "Markdown export (PDF, HTML, DOCX, JPG)"
+      ],
+      "provenance": "Prices read from the bear.app FAQ 'Features and price of Bear Pro' on 2026-06-13, which served $2.99/mo and $29.99/year with a 14-day free trial verbatim.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free tier offers Markdown editing, full tag system and the core writing experience on a single device. Cloud sync, encryption and premium features require Bear Pro.",
+          "source": {
+            "url": "https://bear.app/faq/features-and-price-of-bear-pro/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 2.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 16,
+          "billingModel": "flat",
+          "notes": "$2.99/mo or $29.99/year (~$2.50/mo) for new customers, single subscription covers all Apple devices on the same Apple ID. Unlocks iCloud sync, note encryption and app lock, advanced export (PDF/HTML/DOCX/JPG), 20+ themes, app-icon choices, OCR search. 14-day free trial.",
+          "source": {
+            "url": "https://bear.app/faq/features-and-price-of-bear-pro/",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    }
+  ]
+}

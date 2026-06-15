@@ -1,0 +1,724 @@
+{
+  "vertical": "email-verification",
+  "generatedAt": "2026-06-14",
+  "methodologyNotes": "Pricing fetched from official vendor pages using WebFetch on 2026-06-14. ZeroBounce's pricing page renders via JavaScript and returned no dollar figures in static HTML across multiple URL variants; pricing sourced from two independent 2026 comparison articles (mailtrap.io blog and saleshandy.com blog), corroborated where possible. NeverBounce returned HTTP 403 on all direct page attempts; rate corroborated by two independent comparison pages (saleshandy.com and clearout.io comparison table). Kickbox.com blocked all WebFetch attempts (connection refused or fetch-blocked); per-1K rate sourced from two independent comparison pages (clearout.io and saleshandy.com). Hunter.io, Bouncer (usebouncer.com), EmailListVerify, Mailfloss, and MailerCheck pricing fetched directly from official pages with full plan data. Emailable pricing page uses a client-side calculator; per-credit rates and PAYG package price sourced from saleshandy.com comparison. billingModel is 'custom' for pure usage-metered PAYG products with no flat recurring tier; 'flat' for fixed monthly subscriptions. minutesIncluded, callsIncluded, overagePerMin, overagePerCall are null on all plans (non-telephony vertical). monthlyUsd for annually-billed plans is the annualized monthly equivalent; month-to-month rate noted where published.",
+  "vendors": [
+    {
+      "slug": "zerobounce",
+      "name": "ZeroBounce",
+      "domain": "zerobounce.net",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Mailchimp",
+        "HubSpot",
+        "Salesforce",
+        "ActiveCampaign",
+        "Klaviyo",
+        "Zapier",
+        "API"
+      ],
+      "provenance": "Official pricing page https://www.zerobounce.net/email-validation-pricing/ fetched 2026-06-14 — JavaScript-rendered table returned no dollar figures. Subscription price sourced from mailtrap.io/blog/email-verification-tools/ (fetched 2026-06-14, states 'starting at $15/month'). PAYG and 2000-email subscription tier corroborated by saleshandy.com/blog/email-verification-tools/ (fetched 2026-06-14, states '2,000 emails at $18/month or $20 PAYG'). HIPAA compliance confirmed via https://www.zerobounce.net/security/ (fetched 2026-06-14). 60+ integrations stated on homepage.",
+      "plans": [
+        {
+          "name": "Pay-As-You-Go — 2,000 credits",
+          "monthlyUsd": 20,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "One-time credit purchase; credits never expire. 2,000 verifications for ~$20 (approx $0.010/email). Pricing loads dynamically; figure from saleshandy.com comparison article 2026-06-14. Larger volumes available at lower per-email rates.",
+          "source": {
+            "url": "https://www.saleshandy.com/blog/email-verification-tools/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://mailtrap.io/blog/email-verification-tools/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "ZeroBounce ONE — Subscription (entry)",
+          "monthlyUsd": 18,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Monthly subscription plan 'ZeroBounce ONE'; entry tier includes 2,000 verifications/month at ~$18/month per saleshandy.com comparison. Official page promotion active as of 2026-06-14: buy 1 month get 1 free for new subscribers. Additional tiers exist at higher volumes but specific prices not confirmed from static HTML.",
+          "source": {
+            "url": "https://www.saleshandy.com/blog/email-verification-tools/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://mailtrap.io/blog/email-verification-tools/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "neverbounce",
+      "name": "NeverBounce",
+      "domain": "neverbounce.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Mailchimp",
+        "HubSpot",
+        "Salesforce",
+        "Zapier",
+        "ActiveCampaign",
+        "Marketo",
+        "API"
+      ],
+      "provenance": "Official pricing page https://neverbounce.com/pricing returned HTTP 403 on 2026-06-14. Per-1,000 rate ($8) sourced from clearout.io comparison table https://clearout.io/compare/neverbounce-alternative/ (fetched 2026-06-14). Rate corroborated by saleshandy.com comparison article (fetched 2026-06-14, states '10,000 emails at $50 PAYG' = $0.005/email; mailtrap.io states '$0.008 per email'). No subscription/named plan published on accessible pages. Free trial: 1,000 free verifications noted on sign-up. Minimum purchase: 1,000 credits per clearout.io comparison.",
+      "plans": [
+        {
+          "name": "Pay-As-You-Go",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Pure pay-as-you-go credit model. Rate cited as $8/1,000 verifications ($0.008/email) by clearout.io comparison table and mailtrap.io blog (both 2026-06-14). Saleshandy states 10,000 emails for $50 ($0.005/email), suggesting volume tiering exists. monthlyUsd is null as there is no flat monthly commitment — cost depends entirely on usage volume. Minimum purchase: 1,000 credits. 1,000 free trial verifications available. No subscription plan found on accessible pages.",
+          "source": {
+            "url": "https://clearout.io/compare/neverbounce-alternative/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.saleshandy.com/blog/email-verification-tools/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "hunter",
+      "name": "Hunter",
+      "domain": "hunter.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "HubSpot",
+        "Pipedrive",
+        "Google Sheets",
+        "Zapier",
+        "API",
+        "Browser Extension"
+      ],
+      "provenance": "Official pricing page https://hunter.io/pricing fetched 2026-06-14 — complete plan data returned including monthly and annual rates. Email verification is bundled with search/finder credits (0.5 verification credit per email on Free/paid plans). Enterprise plan explicitly listed as custom pricing.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "50 credits/month (600/year). Email verification uses 0.5 credits per address. No credit card required.",
+          "source": {
+            "url": "https://hunter.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Starter",
+          "monthlyUsd": 34,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 31,
+          "billingModel": "flat",
+          "notes": "Billed annually at $34/mo ($408/yr). Month-to-month rate: $49/mo. 2,000 credits/month (24,000/year). Email verification at 0.5 credits each = up to 4,000 verifications/month on annual plan.",
+          "source": {
+            "url": "https://hunter.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Growth",
+          "monthlyUsd": 104,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 30,
+          "billingModel": "flat",
+          "notes": "Billed annually at $104/mo ($1,248/yr). Month-to-month rate: $149/mo. 10,000 credits/month; up to 5 connected email accounts; increased saved leads.",
+          "source": {
+            "url": "https://hunter.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Scale",
+          "monthlyUsd": 209,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 30,
+          "billingModel": "flat",
+          "notes": "Billed annually at $209/mo ($2,508/yr). Month-to-month rate: $299/mo. 25,000 credits/month; up to 20 connected email accounts; advanced Discover filters.",
+          "source": {
+            "url": "https://hunter.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing; contact sales. Custom credit volume.",
+          "source": {
+            "url": "https://hunter.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "kickbox",
+      "name": "Kickbox",
+      "domain": "kickbox.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Mailchimp",
+        "HubSpot",
+        "Salesforce",
+        "Marketo",
+        "Klaviyo",
+        "API"
+      ],
+      "provenance": "All direct fetch attempts to kickbox.com failed (connection refused or fetch-blocked) on 2026-06-14. Per-1,000 rate ($10) sourced from clearout.io comparison table https://clearout.io/compare/kickbox-alternative/ (fetched 2026-06-14). Rate corroborated by saleshandy.com blog (fetched 2026-06-14, states '100 free trial credits; starting at $5 for 500 credits'). Minimum purchase 500 credits per saleshandy.com. No subscription plan found on accessible sources.",
+      "plans": [
+        {
+          "name": "Pay-As-You-Go",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Pure pay-as-you-go credit model. Rate: $10/1,000 verifications ($0.010/email) per clearout.io comparison. Saleshandy states entry pricing at $5 for 500 credits ($0.010/email), consistent with $10/1K. 100 free trial credits. monthlyUsd is null — no flat monthly commitment; cost depends on usage volume. Official pricing page not accessible for direct verification.",
+          "source": {
+            "url": "https://clearout.io/compare/kickbox-alternative/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.saleshandy.com/blog/email-verification-tools/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "bouncer",
+      "name": "Bouncer",
+      "domain": "usebouncer.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Mailchimp",
+        "HubSpot",
+        "ActiveCampaign",
+        "Klaviyo",
+        "Zapier",
+        "Make",
+        "API"
+      ],
+      "provenance": "Official pricing page https://usebouncer.com/pricing/ fetched 2026-06-14 — complete PAYG credit table and Deliverability Kit subscription tiers returned. Bouncer Shield pricing shown as 'custom' with no dollar amounts in static HTML. Various currencies accepted per the page.",
+      "plans": [
+        {
+          "name": "Email Verification — 1,000 credits",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "One-time PAYG credit purchase; credits never expire. 1,000 verifications for $8 ($0.008/email). monthlyUsd is null — no flat monthly commitment. Minimum 1,000 credits.",
+          "source": {
+            "url": "https://usebouncer.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Email Verification — 5,000 credits",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "PAYG: 5,000 verifications for $35 ($0.007/email).",
+          "source": {
+            "url": "https://usebouncer.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Email Verification — 10,000 credits",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "PAYG: 10,000 verifications for $60 ($0.006/email).",
+          "source": {
+            "url": "https://usebouncer.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Email Verification — 50,000 credits",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "PAYG: 50,000 verifications for $250 ($0.005/email).",
+          "source": {
+            "url": "https://usebouncer.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Deliverability Kit — Starter",
+          "monthlyUsd": 25,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Monthly subscription for deliverability monitoring (not email list verification). 250 test emails/month; 10 IPs/domains monitored. Includes inbox placement, blocklist checks, SPF/DKIM/DMARC tests.",
+          "source": {
+            "url": "https://usebouncer.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Deliverability Kit — Standard",
+          "monthlyUsd": 125,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Monthly subscription. 1,000 test emails/month; 25 IPs/domains monitored.",
+          "source": {
+            "url": "https://usebouncer.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Deliverability Kit — Pro",
+          "monthlyUsd": 250,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Monthly subscription. 2,500 test emails/month; 50 IPs/domains monitored.",
+          "source": {
+            "url": "https://usebouncer.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Deliverability Kit — Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing; contact sales. Unlimited test emails and domains.",
+          "source": {
+            "url": "https://usebouncer.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "emailable",
+      "name": "Emailable",
+      "domain": "emailable.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Mailchimp",
+        "HubSpot",
+        "Klaviyo",
+        "ActiveCampaign",
+        "Zapier",
+        "API"
+      ],
+      "provenance": "Official pricing page https://emailable.com/pricing/ fetched twice 2026-06-14 — client-side calculator renders prices dynamically; no dollar figures returned in static HTML. PAYG rate ($38/5,000 credits) sourced from saleshandy.com comparison article (fetched 2026-06-14). 15% subscription discount, 250 free signup credits, and credit package tiers (5K–1M) confirmed on official page. Unknown-result credits are refunded per official page.",
+      "plans": [
+        {
+          "name": "Pay-As-You-Go — 5,000 credits",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "One-time purchase; credits never expire. 5,000 verifications for approximately $38 per saleshandy.com comparison ($0.0076/email). monthlyUsd null as pricing is usage-metered with no flat commitment. 250 free credits on signup. Unknown results refunded.",
+          "source": {
+            "url": "https://www.saleshandy.com/blog/email-verification-tools/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://emailable.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Monthly Subscription (15% savings)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Subscribe to save 15% versus PAYG; credits auto-reload monthly and roll over. Exact monthly USD prices not retrievable from static HTML; determined by selected credit volume (5K–1M). Cancel anytime.",
+          "source": {
+            "url": "https://emailable.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "emaillistverify",
+      "name": "EmailListVerify",
+      "domain": "emaillistverify.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Mailchimp",
+        "Aweber",
+        "MailerLite",
+        "Gist",
+        "Sendloop",
+        "SparkPost",
+        "Mailgun"
+      ],
+      "provenance": "Official pricing page https://www.emaillistverify.com/pricing fetched 2026-06-14 — complete pricing tables for both PAYG and monthly subscription returned. GDPR compliance mentioned; no HIPAA/BAA stated.",
+      "plans": [
+        {
+          "name": "Pay-As-You-Go — 1,000 credits",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "One-time purchase $5; credits do not expire. $0.005/email.",
+          "source": {
+            "url": "https://www.emaillistverify.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pay-As-You-Go — 5,000 credits",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "One-time purchase $17 ($0.0034/email).",
+          "source": {
+            "url": "https://www.emaillistverify.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pay-As-You-Go — 10,000 credits",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "One-time purchase $27 ($0.0027/email).",
+          "source": {
+            "url": "https://www.emaillistverify.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pay-As-You-Go — 25,000 credits",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "One-time purchase $54 ($0.00216/email).",
+          "source": {
+            "url": "https://www.emaillistverify.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pay-As-You-Go — 50,000 credits",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "One-time purchase $98 ($0.00196/email).",
+          "source": {
+            "url": "https://www.emaillistverify.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pay-As-You-Go — 100,000 credits",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "One-time purchase $186 ($0.00186/email).",
+          "source": {
+            "url": "https://www.emaillistverify.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Monthly Subscription — 5,000 credits/mo",
+          "monthlyUsd": 16,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$16/month for 5,000 verifications. ~10% cheaper than equivalent PAYG ($17).",
+          "source": {
+            "url": "https://www.emaillistverify.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Monthly Subscription — 10,000 credits/mo",
+          "monthlyUsd": 25,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$25/month for 10,000 verifications.",
+          "source": {
+            "url": "https://www.emaillistverify.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Monthly Subscription — 25,000 credits/mo",
+          "monthlyUsd": 49,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$49/month for 25,000 verifications.",
+          "source": {
+            "url": "https://www.emaillistverify.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Monthly Subscription — 50,000 credits/mo",
+          "monthlyUsd": 89,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$89/month for 50,000 verifications.",
+          "source": {
+            "url": "https://www.emaillistverify.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Monthly Subscription — 100,000 credits/mo",
+          "monthlyUsd": 168,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$168/month for 100,000 verifications.",
+          "source": {
+            "url": "https://www.emaillistverify.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Monthly Subscription — 250,000 credits/mo",
+          "monthlyUsd": 346,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$346/month for 250,000 verifications ($0.00138/email). Free trial: 100 verifications on registration.",
+          "source": {
+            "url": "https://www.emaillistverify.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "mailfloss",
+      "name": "Mailfloss",
+      "domain": "mailfloss.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Mailchimp",
+        "HubSpot",
+        "Klaviyo",
+        "ActiveCampaign",
+        "ConvertKit",
+        "MailerLite",
+        "Drip",
+        "Zapier"
+      ],
+      "provenance": "Official pricing page https://www.mailfloss.com/pricing fetched 2026-06-14 — complete plan data returned including three named tiers with monthly prices, credits, and overage rates. 40+ integrations stated on page. No HIPAA/BAA mentioned.",
+      "plans": [
+        {
+          "name": "Lite",
+          "monthlyUsd": 29,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "$29/month (or 10% off prepaid annual). 10,000 verifications/month. Overage: $0.005/email. Automatic daily list cleanup, real-time API, webhooks. 7-day free trial (credit card required).",
+          "source": {
+            "url": "https://www.mailfloss.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 59,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 15,
+          "billingModel": "flat",
+          "notes": "$59/month (or 15% off prepaid annual). 25,000 verifications/month. Overage: $0.003/email. 10 ESP connections.",
+          "source": {
+            "url": "https://www.mailfloss.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 209,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "$209/month (or 20% off prepaid annual). 125,000 verifications/month. Overage: $0.001/email. Unlimited ESP integrations, SSO.",
+          "source": {
+            "url": "https://www.mailfloss.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "mailercheck",
+      "name": "MailerCheck",
+      "domain": "mailercheck.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "API"
+      ],
+      "provenance": "Official pricing page https://mailercheck.com/pricing fetched 2026-06-14 — confirmed $0.01/credit flat rate with 1,000-credit minimum ($10 minimum spend). No bulk tiers or subscription plans published. 10 free trial credits on signup. No HIPAA/BAA mentions. Page explicitly states 'We do not offer discounts at this time.' Product is from the Mailerlite group.",
+      "plans": [
+        {
+          "name": "Pay-As-You-Go",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Flat $0.01/credit at all volumes (no tiered bulk discount). Minimum purchase 1,000 credits = $10. Credits never expire. 10 free trial credits on signup, no credit card required. Inbox Reports and Inbox Placement tests each cost 200 credits. No subscription option available.",
+          "source": {
+            "url": "https://mailercheck.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    }
+  ]
+}

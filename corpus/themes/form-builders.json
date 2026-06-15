@@ -1,0 +1,818 @@
+{
+  "vertical": "form-builders",
+  "generatedAt": "2026-06-14",
+  "methodologyNotes": "Published self-serve USD pricing collected from each vendor's official pricing page where accessible, accessed 2026-06-14; adversarially re-verified 2026-06-15. monthlyUsd records the month-to-month (monthly-billing) rate; annual-billing monthly rates are noted in plan notes. annualDiscountPct is set when both monthly and annual rates are explicitly published, otherwise null. minutesIncluded, callsIncluded, overagePerMin, overagePerCall are null on every plan (non-telephony). monthlyUsd = null for quote-only / contact-sales tiers. VERIFICATION CORRECTIONS (2026-06-15): Typeform Basic/Plus/Business/Growth Flow monthlyUsd were stale 2023-era prices ($29/$59/$99/$349) and were corrected to current official month-to-month rates ($39/$79/$129/$379, annual $28/$56/$91/$266) from typeform.com/pricing. Tally Business was recorded null but a confirmable USD self-serve price of $89/mo exists (joinsecret.com + multiple listings; €65/mo on official EUR-only page) and was added. Tally Pro $29/mo, Jotform ($39/$49/$129), Formstack ($99/$299), Fillout ($15/$40/$75), Wufoo annual rates, Cognito Forms ($19/$39/$129), and Google Workspace ($7/$14/$22/user monthly billing) were independently confirmed and left unchanged. Google Workspace USD rates obtained from workspace.google.com with hl=en_US&region=US query params. Wufoo official page advertises annual-billing monthly rates directly (25% annual discount).",
+  "vendors": [
+    {
+      "slug": "typeform",
+      "name": "Typeform",
+      "domain": "typeform.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Zapier",
+        "Airtable",
+        "Google Sheets",
+        "HubSpot",
+        "Pipedrive",
+        "Mailchimp",
+        "Slack",
+        "Calendly",
+        "Salesforce",
+        "Google Analytics",
+        "Meta Pixel"
+      ],
+      "provenance": "https://www.typeform.com/pricing/ (official pricing page, accessed 2026-06-14; re-verified 2026-06-15 — initial capture used stale 2023-era prices, corrected to current month-to-month and annual rates from the live page)",
+      "plans": [
+        {
+          "name": "Basic",
+          "monthlyUsd": 39,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 28,
+          "billingModel": "flat",
+          "notes": "1 seat, 100 responses/month, 1 GB file upload storage. Month-to-month: $39/mo. Annual billing rate: $28/mo ($336/yr). Prior recorded $29/$25 values were stale 2023-era pricing; corrected against official typeform.com/pricing 2026-06-15.",
+          "source": {
+            "url": "https://www.typeform.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/content-management-software/a/typeform/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Plus",
+          "monthlyUsd": 79,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 29,
+          "billingModel": "flat",
+          "notes": "3 seats, 1,000 responses/month, 4 GB file upload storage, custom subdomain. Month-to-month: $79/mo. Annual billing rate: $56/mo ($672/yr). Prior recorded $59/$50 values were stale; corrected against official typeform.com/pricing 2026-06-15.",
+          "source": {
+            "url": "https://www.typeform.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/content-management-software/a/typeform/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 129,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 29,
+          "billingModel": "flat",
+          "notes": "5 seats, 10,000 responses/month, 4 GB file upload storage. Month-to-month: $129/mo. Annual billing rate: $91/mo ($1,092/yr). Prior recorded $99/$83 values were stale; corrected against official typeform.com/pricing 2026-06-15.",
+          "source": {
+            "url": "https://www.typeform.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/content-management-software/a/typeform/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Growth Flow",
+          "monthlyUsd": 379,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 30,
+          "billingModel": "flat",
+          "notes": "5 seats, 10,000 responses/month, video questions (50,000 views/mo). Month-to-month: $379/mo. Annual billing rate: $266/mo ($3,192/yr). Prior recorded $349/$291 values were stale; corrected against official typeform.com/pricing 2026-06-15.",
+          "source": {
+            "url": "https://www.typeform.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Talent",
+          "monthlyUsd": 169,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 30,
+          "billingModel": "flat",
+          "notes": "HR/recruiting-focused plan. 3,000 responses/month, video questions. Annual billing rate: $119/mo ($1,428/yr). Month-to-month: $169/mo.",
+          "source": {
+            "url": "https://www.typeform.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only. HIPAA compliance + BAA, SSO, custom domain, dedicated CSM, bespoke response limits.",
+          "source": {
+            "url": "https://www.typeform.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "jotform",
+      "name": "Jotform",
+      "domain": "jotform.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Zapier",
+        "Google Sheets",
+        "Salesforce",
+        "HubSpot",
+        "Mailchimp",
+        "Stripe",
+        "PayPal",
+        "Dropbox",
+        "Slack",
+        "Airtable"
+      ],
+      "provenance": "https://www.jotform.com/pricing/ (official pricing page, accessed 2026-06-14; monthly-billing prices listed; annual-billing monthly rates extracted from same page)",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free forever. 5 active forms, 100 monthly submissions, 100 MB storage.",
+          "source": {
+            "url": "https://www.jotform.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/content-management-software/a/jotform/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Bronze",
+          "monthlyUsd": 39,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 13,
+          "billingModel": "flat",
+          "notes": "25 forms, 1,000 submissions/month, 1 GB storage, removes Jotform branding. Annual billing rate: $34/mo ($408/yr). Month-to-month: $39/mo.",
+          "source": {
+            "url": "https://www.jotform.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/content-management-software/a/jotform/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Silver",
+          "monthlyUsd": 49,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "50 forms, 2,500 submissions/month, 10 GB storage. Annual billing rate: $39/mo ($468/yr). Month-to-month: $49/mo.",
+          "source": {
+            "url": "https://www.jotform.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/content-management-software/a/jotform/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Gold",
+          "monthlyUsd": 129,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 23,
+          "billingModel": "flat",
+          "notes": "100 forms, 10,000 submissions/month, 100 GB storage, HIPAA-friendly (BAA available). Annual billing rate: $99/mo ($1,188/yr). Month-to-month: $129/mo.",
+          "source": {
+            "url": "https://www.jotform.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/content-management-software/a/jotform/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only. Multi-user access, unlimited forms and submissions, advanced governance/security, HIPAA + BAA. Dedicated support.",
+          "source": {
+            "url": "https://www.jotform.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "formstack",
+      "name": "Formstack",
+      "domain": "formstack.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Salesforce",
+        "HubSpot",
+        "Airtable",
+        "Stripe",
+        "PayPal",
+        "Amazon S3",
+        "Microsoft Dynamics",
+        "Zapier"
+      ],
+      "provenance": "https://www.formstack.com/pricing (official pricing page, accessed 2026-06-14; monthly and annual-billing rates both published on same page)",
+      "plans": [
+        {
+          "name": "Forms",
+          "monthlyUsd": 99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 16,
+          "billingModel": "flat",
+          "notes": "1 builder user, 25 forms, 1,000 submissions per form, 2 GB storage, 300+ integrations. Annual billing rate: $83/mo. Month-to-month: $99/mo. HIPAA available as add-on.",
+          "source": {
+            "url": "https://www.formstack.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/content-management-software/a/formstack/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Suite",
+          "monthlyUsd": 299,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 16,
+          "billingModel": "flat",
+          "notes": "3 builder users, 100 forms, 5,000 submissions per form, 10 GB storage, unlimited eSignatures and document senders. Annual billing rate: $250/mo. Month-to-month: $299/mo. HIPAA available as add-on.",
+          "source": {
+            "url": "https://www.formstack.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/content-management-software/a/formstack/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Salesforce Solutions",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only. Native Salesforce integration, PCI/HIPAA-compliant, Salesforce Shield compatible.",
+          "source": {
+            "url": "https://www.formstack.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only. Unlimited users and submissions, advanced security, dedicated support.",
+          "source": {
+            "url": "https://www.formstack.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "google-forms",
+      "name": "Google Forms",
+      "domain": "workspace.google.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Google Sheets",
+        "Google Drive",
+        "Google Analytics",
+        "Looker Studio",
+        "Gmail",
+        "Google Calendar"
+      ],
+      "provenance": "https://workspace.google.com/pricing?hl=en_US&region=US (official Google Workspace pricing page with US locale params, accessed 2026-06-14; USD prices confirmed; note: the environment's default fetch returns EUR — USD pricing obtained via hl=en_US&region=US query params). Corroborated by kinsta.com blog citing $6/user/mo starting price for Google Workspace.",
+      "plans": [
+        {
+          "name": "Personal (Free)",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Google Forms fully free for personal Google accounts. Unlimited forms and responses, Google Sheets integration, 15 GB Google Drive storage shared.",
+          "source": {
+            "url": "https://workspace.google.com/products/forms/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://kinsta.com/blog/google-forms-alternative/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Workspace Starter",
+          "monthlyUsd": 7,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Per user/month (monthly billing: $7/user/mo). Includes custom business email, 30 GB storage/user, Forms included. Annual billing saves ~16% (approx $5.88/user/mo). Up to 300 users.",
+          "source": {
+            "url": "https://workspace.google.com/pricing?hl=en_US&region=US",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://kinsta.com/blog/google-forms-alternative/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Workspace Standard",
+          "monthlyUsd": 14,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Per user/month (monthly billing: $14/user/mo). 2 TB storage/user, expanded Gemini AI, meetings up to 150 participants. Annual billing saves ~16% (approx $11.76/user/mo).",
+          "source": {
+            "url": "https://workspace.google.com/pricing?hl=en_US&region=US",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Workspace Plus",
+          "monthlyUsd": 22,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Per user/month (monthly billing: $22/user/mo). 5 TB storage/user, eDiscovery, attendance tracking, meetings up to 500 participants. Annual billing saves ~16% (approx $18.48/user/mo).",
+          "source": {
+            "url": "https://workspace.google.com/pricing?hl=en_US&region=US",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Workspace Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only. Unlimited storage, enhanced security and compliance, advanced eDiscovery, HIPAA BAA available.",
+          "source": {
+            "url": "https://workspace.google.com/pricing?hl=en_US&region=US",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "wufoo",
+      "name": "Wufoo",
+      "domain": "wufoo.com",
+      "hipaa": false,
+      "baa": false,
+      "bilingual": null,
+      "integrations": [
+        "Zapier",
+        "Mailchimp",
+        "Salesforce",
+        "Stripe",
+        "PayPal",
+        "Square",
+        "Authorize.Net",
+        "Asana",
+        "WordPress",
+        "DocuSign"
+      ],
+      "provenance": "https://www.wufoo.com/pricing/ (official pricing page, accessed 2026-06-14; prices shown are annual-billing monthly rates; 25% annual discount stated on page)",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "5 forms, 100 entries/month, 10 fields max per form, 1 user.",
+          "source": {
+            "url": "https://www.wufoo.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/content-management-software/a/wufoo/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Starter",
+          "monthlyUsd": 16.25,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 25,
+          "billingModel": "flat",
+          "notes": "Annual billing rate: $16.25/mo ($195/yr). Month-to-month rate: $19/mo (per getapp.com). 10 forms, 1,000 entries/month, unlimited fields. Overage: $0.05/entry.",
+          "source": {
+            "url": "https://www.wufoo.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/content-management-software/a/wufoo/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Professional",
+          "monthlyUsd": 33.25,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 25,
+          "billingModel": "flat",
+          "notes": "Annual billing rate: $33.25/mo ($399/yr). Month-to-month rate: $39/mo (per getapp.com). Unlimited forms, 5,000 entries/month. Overage: $0.05/entry.",
+          "source": {
+            "url": "https://www.wufoo.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/content-management-software/a/wufoo/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Advanced",
+          "monthlyUsd": 83.25,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 25,
+          "billingModel": "flat",
+          "notes": "Annual billing rate: $83.25/mo ($999/yr). Month-to-month rate: $99/mo (per getapp.com). Unlimited forms, 25,000 entries/month. Overage: $0.05/entry.",
+          "source": {
+            "url": "https://www.wufoo.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/content-management-software/a/wufoo/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Ultimate",
+          "monthlyUsd": 210.25,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 25,
+          "billingModel": "flat",
+          "notes": "Annual billing rate: $210.25/mo ($2,523/yr). Month-to-month rate: $249/mo (per getapp.com). Unlimited forms, 200,000 entries/month, up to 60 user accounts. Overage: $0.05/entry.",
+          "source": {
+            "url": "https://www.wufoo.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/content-management-software/a/wufoo/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "fillout",
+      "name": "Fillout",
+      "domain": "fillout.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Airtable",
+        "Google Sheets",
+        "Notion",
+        "HubSpot",
+        "Mailchimp",
+        "Zapier",
+        "Webhooks"
+      ],
+      "provenance": "https://www.fillout.com/pricing (official pricing page, accessed 2026-06-14; monthly-billing prices listed; annual rates calculated from stated totals)",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Unlimited forms, unlimited seats, 1,000 responses/month, 20 MB max file upload.",
+          "source": {
+            "url": "https://www.fillout.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Starter",
+          "monthlyUsd": 15,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Unlimited forms, unlimited seats, 2,000 responses/month, 20 MB max file upload. Annual: $180/yr ($15/mo).",
+          "source": {
+            "url": "https://www.fillout.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 40,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Unlimited forms, unlimited seats, 5,000 responses/month, 20 MB max file upload. Annual: $480/yr ($40/mo).",
+          "source": {
+            "url": "https://www.fillout.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 75,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Unlimited forms, unlimited seats, unlimited responses, 1 GB+ file uploads, custom domain, form analytics, priority support. Annual: $900/yr ($75/mo).",
+          "source": {
+            "url": "https://www.fillout.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only. SSO, audit logs, dedicated support.",
+          "source": {
+            "url": "https://www.fillout.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "tally",
+      "name": "Tally",
+      "domain": "tally.so",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Google Sheets",
+        "Notion",
+        "Airtable",
+        "Zapier",
+        "Make",
+        "Google Analytics",
+        "Meta Pixel",
+        "Webhooks"
+      ],
+      "provenance": "https://tally.so/pricing (official pricing page, accessed 2026-06-14; page displays EUR only — EUR €20/mo for Pro, €65/mo for Business; USD rates not published on official page). USD pricing obtained from third-party listings: slashdot.org and alternativeto.net both cite $29/mo for Pro. Business USD price could not be verified from any accessible USD-denominated source and is recorded as null.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Unlimited forms, unlimited submissions (fair use), 10 MB per file upload limit.",
+          "source": {
+            "url": "https://tally.so/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 29,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "USD price $29/mo per slashdot.org and alternativeto.net listings; official page shows EUR €20/mo only. Removes Tally branding, custom domain, unlimited team members, unlimited file uploads, extended analytics, 30-day version history. Annual billing available (2 months free).",
+          "source": {
+            "url": "https://slashdot.org/software/p/Tally/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://alternativeto.net/software/tally-forms/about/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 89,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "USD price $89/mo ($890/yr, 2 months free) confirmed across joinsecret.com and multiple comparison listings; official tally.so/pricing displays EUR €65/mo only. Includes all Pro features plus data retention controls, email verification, 90-day version history. Prior null was over-conservative — confirmable USD self-serve price exists; corrected 2026-06-15.",
+          "source": {
+            "url": "https://www.joinsecret.com/tally/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://tally.so/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "cognito-forms",
+      "name": "Cognito Forms",
+      "domain": "cognitoforms.com",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Zapier",
+        "Stripe",
+        "Square",
+        "PayPal"
+      ],
+      "provenance": "https://www.cognitoforms.com/pricing (official pricing page, accessed 2026-06-14; flat monthly rates published; up to 20% discount for 1- or 2-year prepayment mentioned but specific annual rates not published)",
+      "plans": [
+        {
+          "name": "Individual",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free. 1 user, unlimited forms, 100 entries/month, 100 MB storage.",
+          "source": {
+            "url": "https://www.cognitoforms.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/content-management-software/a/cognito-forms/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 19,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "2 users, unlimited forms, 2,000 entries/month, 1 GB storage. Annual prepayment saves up to 20% (specific annual rate not published on pricing page).",
+          "source": {
+            "url": "https://www.cognitoforms.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/content-management-software/a/cognito-forms/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Team",
+          "monthlyUsd": 39,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "5 users + 5 guests, unlimited forms, 10,000 entries/month, 10 GB storage, Square and PayPal payments. Annual prepayment saves up to 20%.",
+          "source": {
+            "url": "https://www.cognitoforms.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/content-management-software/a/cognito-forms/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": 129,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "20 users + 20 guests, unlimited forms, unlimited entries, 100 GB storage. HIPAA/GDPR/CCPA compliance advertised. Annual prepayment saves up to 20%.",
+          "source": {
+            "url": "https://www.cognitoforms.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/content-management-software/a/cognito-forms/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    }
+  ]
+}

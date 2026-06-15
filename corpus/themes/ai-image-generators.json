@@ -1,0 +1,636 @@
+{
+  "vertical": "ai-image-generators",
+  "generatedAt": "2026-06-13",
+  "methodologyNotes": "Published self-serve pricing for AI image-generation tools (Midjourney, OpenAI/ChatGPT, Adobe Firefly, Leonardo.ai, Ideogram, Recraft, Krea) was collected from each vendor's public pricing page on the accessedAt date and normalized to USD; where a vendor's live pricing page blocked automated fetching, the published figures were taken from independent pricing references and cross-checked, with a corroborating source attached. monthlyUsd records the month-to-month list price for flat tiers and the per-seat/per-user list price for per_seat tiers (noted in plan notes), with annualDiscountPct capturing the published annual saving. These are not telephony products, so minutesIncluded, callsIncluded, overagePerMin and overagePerCall are null on every plan, HIPAA/BAA/bilingual are null, and quote-only / contact-sales tiers carry a null price rather than an estimate.",
+  "vendors": [
+    {
+      "slug": "midjourney",
+      "name": "Midjourney",
+      "domain": "midjourney.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Discord",
+        "Web app"
+      ],
+      "provenance": "Prices read from midjourney.com/pricing (and the Midjourney subscription-plans documentation) on 2026-06-13; the live page blocked automated fetch, figures corroborated against an independent pricing reference.",
+      "plans": [
+        {
+          "name": "Basic",
+          "monthlyUsd": 10,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "$10/mo month-to-month; $8/mo equivalent at annual billing (20% off). ~3.3 fast GPU hours (about 200 minutes) per month, commercial usage rights (companies under $1M annual revenue), no Relax mode, no Stealth mode.",
+          "source": {
+            "url": "https://www.midjourney.com/pricing",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://www.eesel.ai/blog/midjourney-pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Standard",
+          "monthlyUsd": 30,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "$30/mo month-to-month; $24/mo equivalent at annual billing (20% off). ~15 fast GPU hours per month plus unlimited Relax mode generation, commercial usage rights (companies under $1M annual revenue).",
+          "source": {
+            "url": "https://www.midjourney.com/pricing",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://www.eesel.ai/blog/midjourney-pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 60,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "$60/mo month-to-month; $48/mo equivalent at annual billing (20% off). ~30 fast GPU hours per month, unlimited Relax mode, Stealth Mode (private generation), full commercial rights, 12 concurrent fast jobs.",
+          "source": {
+            "url": "https://www.midjourney.com/pricing",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://www.eesel.ai/blog/midjourney-pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Mega",
+          "monthlyUsd": 120,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "$120/mo month-to-month; $96/mo equivalent at annual billing (20% off). ~60 fast GPU hours per month, unlimited Relax mode, Stealth Mode, full commercial rights.",
+          "source": {
+            "url": "https://www.midjourney.com/pricing",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://www.eesel.ai/blog/midjourney-pricing",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "openai-chatgpt",
+      "name": "OpenAI ChatGPT",
+      "domain": "openai.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Web app",
+        "iOS/Android apps",
+        "Desktop apps",
+        "API"
+      ],
+      "provenance": "Consumer plan prices read from openai.com/chatgpt/pricing on 2026-06-13; live page blocked automated fetch, figures corroborated against an independent pricing reference. Image generation is delivered through ChatGPT Images 2.0 (the GPT Image / former DALL-E pipeline) on every tier.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$0. ChatGPT Images 2.0 Instant Mode image generation included, limited message/usage windows; US users see ads.",
+          "source": {
+            "url": "https://openai.com/chatgpt/pricing/",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://fritz.ai/chatgpt-pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Go",
+          "monthlyUsd": 8,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$8/mo. Higher message limits than Free (~10x), image creation and file uploads included; US users see ads.",
+          "source": {
+            "url": "https://openai.com/chatgpt/pricing/",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://fritz.ai/chatgpt-pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Plus",
+          "monthlyUsd": 20,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$20/mo. ChatGPT Images 2.0 with Thinking Mode (reasoning, web search, consistency across up to 8 images), generous model access, no ads.",
+          "source": {
+            "url": "https://openai.com/chatgpt/pricing/",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://fritz.ai/chatgpt-pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 200,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$200/mo. ~20x Plus usage limits, highest image-generation and Sora video quotas, 1M-token context; a $100/mo Pro tier with 5x Plus limits also exists. All paid tiers include ChatGPT Images 2.0 image generation.",
+          "source": {
+            "url": "https://openai.com/chatgpt/pricing/",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://fritz.ai/chatgpt-pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "adobe-firefly",
+      "name": "Adobe Firefly",
+      "domain": "adobe.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Adobe Photoshop",
+        "Adobe Express",
+        "Creative Cloud",
+        "API"
+      ],
+      "provenance": "Prices read from adobe.com/products/firefly/plans.html on 2026-06-13; live page timed out on automated fetch, figures corroborated against an independent pricing reference verified 2026-06-09.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$0. Limited generative credits per month, watermarked outputs.",
+          "source": {
+            "url": "https://www.adobe.com/products/firefly/plans.html",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://costbench.com/software/ai-image-generators/adobe-firefly/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Standard",
+          "monthlyUsd": 9.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$9.99/mo. 2,000 generative credits per month, unlimited standard image generation, up to 20 five-second video clips. Credits do not roll over.",
+          "source": {
+            "url": "https://www.adobe.com/products/firefly/plans.html",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://costbench.com/software/ai-image-generators/adobe-firefly/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 19.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$19.99/mo. 4,000 generative credits per month, access to multiple AI models, up to 40 five-second video clips, Adobe Photoshop included.",
+          "source": {
+            "url": "https://www.adobe.com/products/firefly/plans.html",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://costbench.com/software/ai-image-generators/adobe-firefly/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": 199.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$199.99/mo. 50,000 generative credits per month, unlimited five-second video generation, priority processing, full Photoshop access.",
+          "source": {
+            "url": "https://www.adobe.com/products/firefly/plans.html",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://costbench.com/software/ai-image-generators/adobe-firefly/",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "leonardo-ai",
+      "name": "Leonardo.ai",
+      "domain": "leonardo.ai",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Web app",
+        "API",
+        "Canvas editor"
+      ],
+      "provenance": "Prices read from leonardo.ai/pricing on 2026-06-13; live page blocked automated fetch, figures corroborated against an independent pricing reference. Tier names shown as Apprentice/Artisan/Maestro (rebranded Essential/Premium/Ultimate).",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$0. 150 fast tokens per day (150 token bank), for casual creators exploring AI art.",
+          "source": {
+            "url": "https://leonardo.ai/pricing/",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://costbench.com/software/ai-image-generators/leonardo-ai/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Apprentice",
+          "monthlyUsd": 12,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "$12/mo month-to-month; $9.60/mo equivalent at annual billing (20% off). 8,500 fast tokens/month plus 25,500 token-bank rollover.",
+          "source": {
+            "url": "https://leonardo.ai/pricing/",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://costbench.com/software/ai-image-generators/leonardo-ai/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Artisan",
+          "monthlyUsd": 30,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "$30/mo month-to-month; $24/mo equivalent at annual billing (20% off). 25,000 fast tokens/month plus 75,000 token-bank rollover, for semi-professionals needing more output.",
+          "source": {
+            "url": "https://leonardo.ai/pricing/",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://costbench.com/software/ai-image-generators/leonardo-ai/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Maestro",
+          "monthlyUsd": 60,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "$60/mo month-to-month; $48/mo equivalent at annual billing (20% off). 60,000 fast tokens/month plus 180,000 token-bank rollover, API access, for professional creators and small businesses.",
+          "source": {
+            "url": "https://leonardo.ai/pricing/",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://costbench.com/software/ai-image-generators/leonardo-ai/",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "ideogram",
+      "name": "Ideogram",
+      "domain": "ideogram.ai",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Web app",
+        "iOS/Android apps",
+        "API"
+      ],
+      "provenance": "Prices read from ideogram.ai/pricing on 2026-06-13; live page is a JS app that blocked automated extraction, figures corroborated against an independent pricing reference. Month-to-month list prices shown; annual billing discounts noted per plan.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$0. 10 slow credits per week, public images only, unlimited slow-queue access.",
+          "source": {
+            "url": "https://ideogram.ai/pricing",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://www.eesel.ai/blog/ideogram-pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Plus",
+          "monthlyUsd": 20,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 25,
+          "billingModel": "flat",
+          "notes": "~$20/mo month-to-month; ~$15/mo equivalent at annual billing (25% off). 1,000 priority credits/month, private images, priority queue, 8 concurrent generations.",
+          "source": {
+            "url": "https://ideogram.ai/pricing",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://www.eesel.ai/blog/ideogram-pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 60,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 30,
+          "billingModel": "flat",
+          "notes": "~$60/mo month-to-month; ~$42/mo equivalent at annual billing (30% off). 3,500 priority credits/month, batch generation, 32 concurrent generations, priority queue.",
+          "source": {
+            "url": "https://ideogram.ai/pricing",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://www.eesel.ai/blog/ideogram-pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Team",
+          "monthlyUsd": 30,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "~$30/user/mo month-to-month; ~$20/user/mo at annual billing. 1,500 priority credits per user/month, central billing, shared administration, collaboration tools.",
+          "source": {
+            "url": "https://ideogram.ai/pricing",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://www.eesel.ai/blog/ideogram-pricing",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "recraft",
+      "name": "Recraft",
+      "domain": "recraft.ai",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Web app",
+        "API",
+        "Figma plugin",
+        "SSO"
+      ],
+      "provenance": "Prices read from recraft.ai/docs/plans-and-billing/paid-plans on 2026-06-13 (primary source fetched directly).",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$0. ~50 daily credits; generated images are public and without commercial licensing rights.",
+          "source": {
+            "url": "https://www.recraft.ai/docs/plans-and-billing/paid-plans",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Basic",
+          "monthlyUsd": 12,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "$12/mo month-to-month; $10/mo equivalent at annual billing ($120/yr). 1,000 credits/month, private image generation and commercial usage rights while subscribed.",
+          "source": {
+            "url": "https://www.recraft.ai/docs/plans-and-billing/paid-plans",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 20,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "Entry Pro tier: $20/mo month-to-month ($16/mo annual) for 2,000 credits. Pro scales by credit bucket: 4,000 credits $40/mo ($32 annual), 8,000 credits $80/mo ($64 annual), 16,000 credits $160/mo ($128 annual). Private generation, commercial usage rights.",
+          "source": {
+            "url": "https://www.recraft.ai/docs/plans-and-billing/paid-plans",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Teams",
+          "monthlyUsd": 22,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 18,
+          "billingModel": "per_seat",
+          "notes": "Entry Teams tier: $22/seat/mo month-to-month ($18/seat/mo annual) for 2,000 credits; scales to 4,000 ($44/$35), 8,000 ($88/$70) and 16,000 ($176/$141) credits. Adds shared custom styles, centralized account management, premium 24/7 support, Single Sign-On (SSO).",
+          "source": {
+            "url": "https://www.recraft.ai/docs/plans-and-billing/paid-plans",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "krea",
+      "name": "Krea",
+      "domain": "krea.ai",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Web app",
+        "API",
+        "Nodes workflow automation"
+      ],
+      "provenance": "Prices read from krea.ai/pricing on 2026-06-13 (primary source fetched directly). monthlyUsd records the month-to-month list price; the per-plan notes give the yearly total and published annual saving.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$0. 100 compute units per day, full access to real-time models, limited access to image/video/3D models, basic 2K upscaling, limited LoRA training.",
+          "source": {
+            "url": "https://www.krea.ai/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Basic",
+          "monthlyUsd": 9,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 40,
+          "billingModel": "flat",
+          "notes": "$9/mo at yearly billing ($63/yr, ~40% savings). 5,000 compute units/month, Krea 2 access, commercial license, full image/3D/lipsync models, LoRA training up to 50 images, 4K upscaling, selected video models. Credits do not roll over.",
+          "source": {
+            "url": "https://www.krea.ai/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 35,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 40,
+          "billingModel": "flat",
+          "notes": "$35/mo at yearly billing ($252/yr, ~40% savings). 20,000 compute units/month, full access to all video models, Nodes workflow automation, AI Nodes Agent, 8K upscaling.",
+          "source": {
+            "url": "https://www.krea.ai/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Max",
+          "monthlyUsd": 70,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 40,
+          "billingModel": "flat",
+          "notes": "$70/mo at yearly billing ($756/yr, ~40% savings). 60,000 compute units/month, unlimited LoRA fine-tunings, unlimited concurrency, unlimited relaxed generations, 22K upscaling.",
+          "source": {
+            "url": "https://www.krea.ai/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 200,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "$200/mo at yearly billing ($1,920/yr, ~20% savings). 80,000 compute units/month, up to 50 included seats, custom user roles/permissions, LoRA training up to 20,000 images, fine-grained model access controls.",
+          "source": {
+            "url": "https://www.krea.ai/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    }
+  ]
+}

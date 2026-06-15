@@ -1,0 +1,482 @@
+{
+  "vertical": "cdn-services",
+  "generatedAt": "2026-06-13",
+  "methodologyNotes": "Published self-serve pricing was collected from each provider's own pricing page on the accessed date (2026-06-13); CDN is billed either as a flat monthly plan or as usage-based bandwidth, so monthlyUsd holds the flat plan price where one exists and otherwise the published monthly minimum (or null when there is none), with the per-GB/per-TB rates and any volume tiers recorded in notes. Quote-only/Enterprise tiers are recorded with monthlyUsd null; HIPAA/BAA and minutes/calls/overage fields do not apply to CDN bandwidth and are null for every tier. Every figure is sourced to the fetched pricing page.",
+  "vendors": [
+    {
+      "slug": "cloudflare",
+      "name": "Cloudflare",
+      "domain": "cloudflare.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "https://www.cloudflare.com/plans/ (official plans page, accessed 2026-06-13; flat per-domain monthly plans with CDN included, prices shown for both annual and monthly billing)",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free forever: unmetered CDN, unmetered DDoS protection, fast DNS, Universal SSL, free managed WAF ruleset, single sign-on and role-based account control.",
+          "source": {
+            "url": "https://www.cloudflare.com/plans/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 25,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "All Free features plus lossless image optimization and AMP; $25/mo billed monthly or $20/mo billed annually (~20% off).",
+          "source": {
+            "url": "https://www.cloudflare.com/plans/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 250,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "All Pro features plus PCI DSS 4.0 compliance and a 100% uptime SLA with 1x service credits; $250/mo billed monthly or $200/mo billed annually (~20% off).",
+          "source": {
+            "url": "https://www.cloudflare.com/plans/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Enterprise (Contract)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Custom annual contract: all Business features plus 10x-25x uptime service credits and network prioritization. Quote-only.",
+          "source": {
+            "url": "https://www.cloudflare.com/plans/",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "bunny-net",
+      "name": "Bunny.net",
+      "domain": "bunny.net",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "https://bunny.net/pricing/ (official pricing page, accessed 2026-06-13; usage-based bandwidth-only pricing, no per-request fees, $1 monthly minimum)",
+      "plans": [
+        {
+          "name": "Standard Network (pay-as-you-go)",
+          "monthlyUsd": 1,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "119-PoP network, region-based per-GB bandwidth: Europe & North America $0.01/GB, Asia & Oceania $0.03/GB, South America $0.045/GB, Middle East & Africa $0.06/GB. No request fees. monthlyUsd reflects the $1 monthly minimum; 14-day free trial, no card required.",
+          "source": {
+            "url": "https://bunny.net/pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Volume Network (pay-as-you-go)",
+          "monthlyUsd": 1,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "10-PoP global volume network with tiered per-GB rates: first 500 TB $0.005/GB, 500 TB-1 PB $0.004/GB, 1 PB-2 PB $0.002/GB, 2 PB+ contact sales. No request fees. monthlyUsd reflects the $1 monthly minimum.",
+          "source": {
+            "url": "https://bunny.net/pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "fastly",
+      "name": "Fastly",
+      "domain": "fastly.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "https://www.fastly.com/pricing/ (official pricing page, accessed 2026-06-13; flat Network Services packages plus separate usage-based Full Site Delivery CDN pricing)",
+      "plans": [
+        {
+          "name": "Full Site Delivery (usage-based CDN)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Pure usage-based CDN with no fixed monthly fee: first 100 GB/region/mo free, then $0.08-$0.28/GB (varies by region) for 100 GB-10 TB and $0.08-$0.24/GB for the next 10 TB. Requests: first 1M/mo free, then $0.01 per 10,000 (1M-100M) and $0.0095 per 10,000 beyond 100M. monthlyUsd null (no fixed plan fee).",
+          "source": {
+            "url": "https://www.fastly.com/pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Network Services - Basic",
+          "monthlyUsd": 1500,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Flat package including 100M requests/month, 20 TLS domains and 30M Image Optimizer requests.",
+          "source": {
+            "url": "https://www.fastly.com/pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Network Services - Starter",
+          "monthlyUsd": 6000,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Flat package including 500M requests/month, 40 TLS domains and 150M Image Optimizer requests.",
+          "source": {
+            "url": "https://www.fastly.com/pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Network Services - Advantage & Ultimate",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Higher-volume network services packages; custom pricing, contact sales. Quote-only.",
+          "source": {
+            "url": "https://www.fastly.com/pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "amazon-cloudfront",
+      "name": "Amazon CloudFront",
+      "domain": "aws.amazon.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "https://aws.amazon.com/cloudfront/pricing/ and https://aws.amazon.com/cloudfront/pricing/pay-as-you-go/ (official pricing pages, accessed 2026-06-13; flat monthly plans plus an always-free tier and pay-as-you-go per-GB/per-request rates)",
+      "plans": [
+        {
+          "name": "Free (Always Free + flat plan)",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Always-free tier: 1 TB of data transfer out to the internet per month and 10,000,000 HTTP/HTTPS requests per month, free.",
+          "source": {
+            "url": "https://aws.amazon.com/cloudfront/pricing/pay-as-you-go/",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://aws.amazon.com/cloudfront/pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Pro (flat plan)",
+          "monthlyUsd": 15,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Flat-rate plan per distribution bundling the CloudFront CDN with multiple AWS services and feature allowances, with no overage charges.",
+          "source": {
+            "url": "https://aws.amazon.com/cloudfront/pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Business (flat plan)",
+          "monthlyUsd": 200,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Flat-rate plan per distribution with higher bundled usage allowances and no overage charges.",
+          "source": {
+            "url": "https://aws.amazon.com/cloudfront/pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Premium (flat plan)",
+          "monthlyUsd": 1000,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Top flat-rate plan per distribution with the largest bundled allowances and no overage charges.",
+          "source": {
+            "url": "https://aws.amazon.com/cloudfront/pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Pay-as-you-go (on-demand)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "On-demand usage with no fixed fee: after the 1 TB always-free allowance, data transfer out is $0.085/GB for the next 9 TB in both US/Mexico/Canada and Europe/Israel/Turkiye. Requests (after first 10M free): US/Mexico/Canada $0.0075 per 10k HTTP and $0.0100 per 10k HTTPS; Europe/Israel/Turkiye $0.0090 per 10k HTTP and $0.0120 per 10k HTTPS. monthlyUsd null (no fixed plan fee).",
+          "source": {
+            "url": "https://aws.amazon.com/cloudfront/pricing/pay-as-you-go/",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "keycdn",
+      "name": "KeyCDN",
+      "domain": "keycdn.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "https://www.keycdn.com/pricing (official pricing page, accessed 2026-06-13; usage-based per-GB bandwidth with regional tiers, $4 monthly minimum, no request charges)",
+      "plans": [
+        {
+          "name": "Pay-as-you-go (bandwidth)",
+          "monthlyUsd": 4,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Tiered per-GB bandwidth. North America & Europe: $0.04/GB first 10 TB, $0.03 next 40 TB, $0.02 next 50 TB, $0.01 over 100 TB. Asia & Oceania: $0.08/$0.06/$0.04/$0.02. Africa & Latin America: $0.10/$0.08/$0.06/$0.04. No request charges; free TLS certs; first 3 zones free then $1/zone/mo. monthlyUsd reflects the $4 monthly minimum usage (minimum payment $49).",
+          "source": {
+            "url": "https://www.keycdn.com/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Storage (Push Zones)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Optional origin storage add-on: $0.12/GB first 500 GB/mo, $0.08/GB next 500 GB, $0.04/GB above 1 TB. Log forwarding $1/day; image processing $0.40 per 1,000 operations. monthlyUsd null (usage add-on, no fixed fee).",
+          "source": {
+            "url": "https://www.keycdn.com/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "cdn77",
+      "name": "CDN77",
+      "domain": "cdn77.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "https://www.cdn77.com/pricing (official pricing page, accessed 2026-06-13; one published fixed plan plus a quote-only enterprise tier and an object-storage add-on)",
+      "plans": [
+        {
+          "name": "Growth",
+          "monthlyUsd": 990,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Fixed plan including up to 250 TB monthly traffic (effectively ~$3.96/TB), with $3.96/TB overage; global coverage, all features and 24/7 support.",
+          "source": {
+            "url": "https://www.cdn77.com/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Custom traffic volume and features, dedicated account specialist and direct L2/L3 engineer access. Tailored (quote-only) price.",
+          "source": {
+            "url": "https://www.cdn77.com/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Object Storage (add-on)",
+          "monthlyUsd": 100,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Optional add-on: $100/mo for 5 TB HDD storage ($0.02/GB); API requests $0.03 per 10k (first 1M free); egress $0.09/GB (first 50 GB free).",
+          "source": {
+            "url": "https://www.cdn77.com/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "cdnsun",
+      "name": "CDNsun",
+      "domain": "cdnsun.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "https://www.cdnsun.com/pricing (official pricing page, accessed 2026-06-13; pay-as-you-go per-GB bandwidth with no per-request charges, $0 minimum on the Business plan)",
+      "plans": [
+        {
+          "name": "Business (pay-as-you-go)",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Per-GB bandwidth: Europe & North America $0.030/GB; APAC, South America & Africa $0.060/GB. Unlimited requests, CDN storage (5 GB free), SSL, API, HTTP/2, streaming, raw logs, DDoS protection and 100% SLA included at no extra charge. $0 minimum monthly spend; prepaid credit valid one year; 15-day free trial.",
+          "source": {
+            "url": "https://www.cdnsun.com/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Custom",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Custom plan with a $200 minimum monthly spend; bespoke rates negotiated with sales. monthlyUsd null (quote-only rate; $200 is a spend floor not a plan fee).",
+          "source": {
+            "url": "https://www.cdnsun.com/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "blazingcdn",
+      "name": "BlazingCDN",
+      "domain": "blazingcdn.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "https://blazingcdn.com/en-us/pricing (official pricing page, accessed 2026-06-13; usage-based per-TB volume tiers with a $25 monthly minimum and a quote-only enterprise tier)",
+      "plans": [
+        {
+          "name": "FLEX CDN (static, pay-as-you-go)",
+          "monthlyUsd": 25,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Progressive per-TB volume tiers for static content: 0-5 TB $5.00/TB, 5-25 TB $4.50/TB, 25-100 TB $4.00/TB, 100-500 TB $3.50/TB, 500-1000 TB $3.00/TB, 1000-1500 TB $2.50/TB. 14-day free trial (1 GB free, then $5/TB). monthlyUsd reflects the $25 monthly minimum.",
+          "source": {
+            "url": "https://blazingcdn.com/en-us/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Video CDN (VoD, pay-as-you-go)",
+          "monthlyUsd": 25,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Same per-TB traffic tiers as FLEX (extending to 2000+ TB at $2.00/TB) plus permanent cache: 500 GB free then $0.02/GB. Cloud storage $0.025/GB; raw logs $50 one-time. monthlyUsd reflects the $25 monthly minimum.",
+          "source": {
+            "url": "https://blazingcdn.com/en-us/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Enterprise X",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "For 1000+ TB/month with up to ~60% discount via custom quote. Quote-only.",
+          "source": {
+            "url": "https://blazingcdn.com/en-us/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    }
+  ]
+}

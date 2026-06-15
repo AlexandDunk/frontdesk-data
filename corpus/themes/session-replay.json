@@ -1,0 +1,561 @@
+{
+  "vertical": "session-replay",
+  "generatedAt": "2026-06-14",
+  "methodologyNotes": "Prices sourced by fetching each vendor's official pricing page on 2026-06-14. FullStory (fullstory.com/pricing) shows only a Free tier with public pricing; all paid tiers (Business, Advanced, Enterprise) require a demo request — recorded as null. Hotjar (hotjar.com/pricing) permanently redirected (HTTP 308) to contentsquare.com/pricing — Hotjar was acquired by Contentsquare in 2023 and fully merged; Contentsquare's pricing page renders no self-serve USD amounts. Microsoft Clarity (clarity.microsoft.com) is free forever with no paid tier. Smartlook has been acquired by Cisco and is being decommissioned September 30, 2027; no new subscriptions are available. LogRocket (logrocket.com/pricing) publishes self-serve prices for Free and Core tiers; Professional requires annual commitment but a starting price is shown. Mouseflow (mouseflow.com/pricing) publishes all tier prices as month-to-month rates with up to 35% off annually, but exact annual per-plan amounts were not displayed. Crazy Egg (crazyegg.com/pricing) publishes annual-only prices with no month-to-month option. Corroboration via aggregator pages attempted; G2 (g2.com) returned 403, Capterra (capterra.com) returned 404, TrustRadius returned 403. GetApp and SoftwareAdvice corroboration obtained for Crazy Egg but showed older plan names differing from official page — official page figures used as primary. All telephony fields (minutesIncluded, callsIncluded, overagePerMin, overagePerCall) are null throughout — this is a non-telephony vertical.",
+  "vendors": [
+    {
+      "slug": "fullstory",
+      "name": "FullStory",
+      "domain": "fullstory.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Adobe Analytics",
+        "Google Tag Manager",
+        "Segment"
+      ],
+      "provenance": "Prices fetched directly from https://www.fullstory.com/pricing/ on 2026-06-14. Free tier (30,000 sessions/month, 12 months retention, up to 10 users) is the only publicly priced plan. Business, Advanced, and Enterprise tiers all require 'Request pricing & demo' — no USD amounts published. No HIPAA or BAA language appeared on the pricing page. Integrations page at directory.fullstory.com references Adobe Analytics, Google Tag Manager, and Segment as named partners.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Permanent free tier. 30,000 sessions/month, 12 months data retention, up to 10 users. Includes session replay, basic analytics, and debugging tools. No credit card required.",
+          "source": {
+            "url": "https://www.fullstory.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only. Positioned as 'Popular'. Requires demo request. Includes session replay, advanced analytics, and integrations.",
+          "source": {
+            "url": "https://www.fullstory.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Advanced",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only. For organizations focused on trend discovery and funnel improvement. Requires demo request.",
+          "source": {
+            "url": "https://www.fullstory.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only. For data science teams building predictive models. Includes SAML SSO, AES-256 encryption, GDPR/CCPA compliance options. Requires demo request.",
+          "source": {
+            "url": "https://www.fullstory.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "contentsquare",
+      "name": "Contentsquare (formerly Hotjar)",
+      "domain": "contentsquare.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "hotjar.com/pricing returns HTTP 308 permanent redirect to contentsquare.com/pricing (verified 2026-06-14). Contentsquare acquired Hotjar (announced 2021) and merged Hotjar Ltd into the Contentsquare Group as of 2025-07-01. Contentsquare's pricing page (fetched 2026-06-14) is a JS-rendered SPA that exposes no self-serve USD amounts in fetched HTML — only 'Start for free' and 'Book a demo' CTAs. Third-party aggregators (usercall.co, quackback.io, saaspricepulse.com) report the former-Hotjar Experience Analytics line now offers a self-serve Growth tier starting ~$49/mo (heatmaps + session recordings) scaling with session volume, and a Free tier of ~200K sessions/10K replays. These figures could NOT be confirmed on the official pricing page (no amounts render) and the Contentsquare help-center pricing article returned HTTP 403, so paid monthlyUsd is conservatively recorded as null pending an official confirmable figure. Platform advertises 120+ integrations but none are enumerated on the pricing page. No HIPAA or BAA language found on any fetched page.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free entry tier available via 'Start for free'. Session replay, heatmaps included. Exact session/pageview limits not disclosed on pricing page without sign-up.",
+          "source": {
+            "url": "https://contentsquare.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Paid Plans",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Recorded quote-only because no USD amounts render on the official pricing page (JS-rendered SPA) and the Contentsquare help-center pricing article returned HTTP 403. Third-party aggregators report a self-serve Experience Analytics 'Growth' tier starting ~$49/mo (heatmaps + session recordings), but this could not be confirmed against an official source, so monthlyUsd is left null. Products include Experience Analytics, Product Analytics, and Voice of Customer; session replay is part of Experience Analytics.",
+          "source": {
+            "url": "https://contentsquare.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "logrocket",
+      "name": "LogRocket",
+      "domain": "logrocket.com",
+      "hipaa": null,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "React",
+        "Redux",
+        "Angular",
+        "Vue",
+        "Segment",
+        "Sentry",
+        "Intercom",
+        "Amplitude"
+      ],
+      "provenance": "Prices fetched directly from https://logrocket.com/pricing/ on 2026-06-14. Free plan ($0) and Core plan ($69/mo) are publicly priced. Professional plan lists a starting price of $295/mo with annual commitment. Enterprise is quote-only. BAA (Business Associate Agreement) confirmed as available for Enterprise tier ('Custom legal/security/BAA'). No HIPAA certification language appeared on the pricing page. GetApp listing (fetched 2026-06-14) corroborates $99 starting price for usage-based model, consistent with Core tier at higher session volumes.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free forever. 1,000 sessions/month, 1 month data retention, 3 seats.",
+          "source": {
+            "url": "https://logrocket.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Core",
+          "monthlyUsd": 69,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Starting at $69/mo for 10,000 sessions/month, monthly commitment. 5-10 seats. Scales to $139/mo for 25,000 sessions/month. Includes 14-day trial. Price shown is for entry-level session volume on monthly billing.",
+          "source": {
+            "url": "https://logrocket.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/business-intelligence-analytics-software/a/logrocket/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Professional",
+          "monthlyUsd": 295,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Starting at $295/mo with annual commitment. Custom session volume, custom data retention, custom seats. Free trial available. Startup Plan available for companies with fewer than 20 employees. Annual-only billing.",
+          "source": {
+            "url": "https://logrocket.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only. Annual commitment. 1M+ sessions/month, unlimited seats, self-hosted deployment option, custom legal/security/BAA. Free pilot available.",
+          "source": {
+            "url": "https://logrocket.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "microsoft-clarity",
+      "name": "Microsoft Clarity",
+      "domain": "clarity.microsoft.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Google Analytics",
+        "WordPress",
+        "Shopify",
+        "Android",
+        "iOS",
+        "Flutter",
+        "React Native",
+        "Google Tag Manager"
+      ],
+      "provenance": "Fetched https://clarity.microsoft.com/ on 2026-06-14. Product is described as 'free forever' with 'no traffic restrictions'. No paid tiers exist. No HIPAA or BAA language found. Integrations include Google Analytics, WordPress, Shopify, and mobile SDKs (Android, iOS, Flutter, React Native). MCP Server integration for AI tools also mentioned. No corroboration needed as the single-plan free-forever model is unambiguous.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free forever, no traffic restrictions, no session limits. Includes session recordings, heatmaps, co-browse, and insights dashboard. GDPR and CCPA capable. Backed by Microsoft Azure infrastructure.",
+          "source": {
+            "url": "https://clarity.microsoft.com/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "smartlook",
+      "name": "Smartlook",
+      "domain": "smartlook.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "Fetched https://www.smartlook.com/pricing/ on 2026-06-14. Page announces Smartlook has joined Cisco (acquisition completed 2023) and is being wound down. Per the official EOL timeline: End of Sale 2026-05-31 (no new paid plans for purchase after this date); End of contract renewals 2026-08-31; Last day of support 2027-08-31; platform decommissioned and customer data deleted 2027-09-30. A free plan remains available through the decommission date. No pricing data, HIPAA/BAA information, or integration lists are published on the current page. Vendor included for completeness as a historically significant session-replay tool now in end-of-life.",
+      "plans": [
+        {
+          "name": "Free (legacy)",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Product is being wound down (acquired by Cisco). Free plan available until the 2027-09-30 decommission date. End of Sale 2026-05-31: no new paid subscriptions can be purchased after this date (renewals close 2026-08-31, support ends 2027-08-31). Not recommended for new deployments.",
+          "source": {
+            "url": "https://www.smartlook.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "mouseflow",
+      "name": "Mouseflow",
+      "domain": "mouseflow.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Adobe Analytics",
+        "Google Analytics",
+        "Google Tag Manager",
+        "Google Ads",
+        "Shopify",
+        "Salesforce",
+        "AB Tasty",
+        "Slack",
+        "Microsoft Teams"
+      ],
+      "provenance": "Prices fetched directly from https://mouseflow.com/pricing/ on 2026-06-14. All plan prices shown are month-to-month rates. Annual billing saves up to 35% but exact per-plan annual prices were not displayed in the fetched content (toggle exists but amounts not in HTML). Integrations listed on https://mouseflow.com/integrations/ (42 total). No HIPAA or BAA language found. AlternativeTo listing (fetched 2026-06-14) corroborates price range of $31–$399/mo, consistent with displayed tiers.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "500 sessions/month, 1 website, 1 conversion funnel, 1 month data retention. Unlimited users. No credit card required.",
+          "source": {
+            "url": "https://mouseflow.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Essential",
+          "monthlyUsd": 25,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 35,
+          "billingModel": "flat",
+          "notes": "5,000 sessions/month, 1 website, 1 conversion funnel, 3 months data retention. Unlimited users. $25/mo is the month-to-month rate; annual billing saves up to 35% (exact annual price not published on-page). 14-day free trial.",
+          "source": {
+            "url": "https://mouseflow.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://alternativeto.net/software/mouseflow/about/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Advanced",
+          "monthlyUsd": 109,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 35,
+          "billingModel": "flat",
+          "notes": "25,000 sessions/month, 2 websites, 5 conversion funnels, 6 months data retention. Unlimited users. Most Popular. $109/mo is month-to-month rate; annual billing saves up to 35%. 14-day free trial. Includes plug & play integrations.",
+          "source": {
+            "url": "https://mouseflow.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://alternativeto.net/software/mouseflow/about/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": 319,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 35,
+          "billingModel": "flat",
+          "notes": "100,000 sessions/month, 5 websites, 10 conversion funnels, 12 months data retention. Unlimited users. $319/mo is month-to-month rate; annual billing saves up to 35%. 14-day free trial. Includes Open REST API.",
+          "source": {
+            "url": "https://mouseflow.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://alternativeto.net/software/mouseflow/about/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only. Custom sessions, websites, funnels, and data retention. Dedicated customer success manager and SLA included.",
+          "source": {
+            "url": "https://mouseflow.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "crazy-egg",
+      "name": "Crazy Egg",
+      "domain": "crazyegg.com",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Google Tag Manager",
+        "WordPress",
+        "Shopify",
+        "Wix",
+        "Squarespace",
+        "Magento",
+        "Drupal",
+        "Joomla",
+        "Segment"
+      ],
+      "provenance": "Prices fetched directly from https://www.crazyegg.com/pricing/ on 2026-06-14. All paid plans are billed annually only — no month-to-month option is available ('All plans are billed annually. No overages, ever.'). HIPAA noted: 'Customers can sign our Data Processing Agreement (DPA) to support GDPR, CCPA, or HIPAA obligations' — HIPAA=true because DPA explicitly covers HIPAA; BAA not separately mentioned so recorded as null. Free plan available (no credit card). SoftwareAdvice listing (fetched 2026-06-14) shows older plan names (Basic $24, Standard $49) inconsistent with current official page — official page used as sole source. No annual discount percentage disclosed since month-to-month is not offered.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free forever, no credit card required. Includes web analytics, instant heatmaps, conversion analytics, and surveys. Session recording limits not specified on pricing page.",
+          "source": {
+            "url": "https://www.crazyegg.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Starter",
+          "monthlyUsd": 29,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Billed annually only; no month-to-month option. $29/mo = annualized monthly rate. 5,000 tracked pageviews/month, 5 heatmap reports, 50 recordings/month. Unlimited team members and website domains.",
+          "source": {
+            "url": "https://www.crazyegg.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Plus",
+          "monthlyUsd": 99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Billed annually only. $99/mo = annualized monthly rate. 150,000 tracked pageviews/month, 75 heatmap reports, 1,000 recordings/month. Unlimited team members and domains.",
+          "source": {
+            "url": "https://www.crazyegg.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.softwareadvice.com/analytics/crazy-egg-profile/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 249,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Billed annually only. $249/mo = annualized monthly rate. 500,000 tracked pageviews/month, 100 heatmap reports, 5,000 recordings/month. Unlimited team members and domains.",
+          "source": {
+            "url": "https://www.crazyegg.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": 599,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Billed annually only. $599/mo = annualized monthly rate. 1,000,000 tracked pageviews/month, 200 heatmap reports, 10,000 recordings/month. Unlimited team members and domains. Higher tiers available as add-ons via contact sales.",
+          "source": {
+            "url": "https://www.crazyegg.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "heap",
+      "name": "Heap",
+      "domain": "heap.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Salesforce",
+        "Segment",
+        "Amplitude",
+        "Slack",
+        "Intercom"
+      ],
+      "provenance": "Prices fetched directly from https://www.heap.io/pricing/ on 2026-06-14. Free tier (up to 10,000 monthly sessions, 6 months history) is publicly defined. Growth, Pro, and Premier tiers all require sign-up or contact to receive pricing estimates — no USD amounts published. Session Replay is an add-on for Pro and Premier, not standard. No HIPAA or BAA language found. SOC-2 compliance confirmed. GDPR and CCPA confirmed.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Up to 10,000 monthly sessions, 6 months data history. Core product analytics included. Session Replay not available on free tier.",
+          "source": {
+            "url": "https://www.heap.io/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Growth",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only. Usage-based pricing. Must sign up and install snippet to get an estimate. 12 months data history. Targeted at scaling startups.",
+          "source": {
+            "url": "https://www.heap.io/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only. Custom session pricing. 1 year data retention standard. Session Replay available as add-on. SOC-2, GDPR, CCPA compliant.",
+          "source": {
+            "url": "https://www.heap.io/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Premier",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only. Custom session pricing. Session Replay available as add-on. Designed for large organizations with multiple analytics teams.",
+          "source": {
+            "url": "https://www.heap.io/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    }
+  ]
+}

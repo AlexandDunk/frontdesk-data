@@ -1,0 +1,562 @@
+{
+  "vertical": "live-chat-software",
+  "generatedAt": "2026-06-14",
+  "methodologyNotes": "Prices fetched directly from each vendor's official pricing page using WebFetch on 2026-06-14. monthlyUsd reflects the effective monthly cost at the smallest billable unit (one seat / one workspace) under the default published billing cycle. Where both annual and monthly billing are published, monthlyUsd uses the annual-billing monthly rate (lower/displayed-first rate) and the month-to-month rate is noted in plan notes; annualDiscountPct is calculated from those two rates. Plans marked 'Contact sales' or with no self-serve checkout carry monthlyUsd=null. Zendesk's pricing page consistently geo-redirected to a German EUR page (zendesk.de) and no USD figures could be confirmed from the official source; Zendesk is therefore excluded rather than publishing unverified converted amounts. GetApp listing pages were used as corroboration sources where available. minutesIncluded, callsIncluded, overagePerMin, and overagePerCall are null on every plan because this is a non-telephony vertical.",
+  "vendors": [
+    {
+      "slug": "intercom",
+      "name": "Intercom",
+      "domain": "intercom.com",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Salesforce"
+      ],
+      "provenance": "Official pricing page https://www.intercom.com/pricing fetched 2026-06-14. Page displays annual-billing rates ($29/$85/$132 per seat/mo). Monthly-billing toggle exists but monthly-billing dollar amounts were not rendered in the fetched content; GetApp listing (corroboration) shows $39/$99/$139 per seat/mo which are consistent with typical ~25-35% annual discount and are treated as the month-to-month rates. HIPAA support confirmed on Expert plan only.",
+      "plans": [
+        {
+          "name": "Essential",
+          "monthlyUsd": 29,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Annual billing rate. Month-to-month rate approximately $39/seat/mo per GetApp listing. No HIPAA support on this tier.",
+          "source": {
+            "url": "https://www.intercom.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/customer-management-software/a/intercom/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Advanced",
+          "monthlyUsd": 85,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Annual billing rate. Month-to-month rate approximately $99/seat/mo per GetApp listing. Includes 20 free Lite seats.",
+          "source": {
+            "url": "https://www.intercom.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/customer-management-software/a/intercom/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Expert",
+          "monthlyUsd": 132,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Annual billing rate. Month-to-month rate approximately $139/seat/mo per GetApp listing. Includes HIPAA support and 50 free Lite seats.",
+          "source": {
+            "url": "https://www.intercom.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/customer-management-software/a/intercom/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "tidio",
+      "name": "Tidio",
+      "domain": "tidio.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Messenger",
+        "Instagram",
+        "WhatsApp",
+        "Shopify",
+        "Zendesk",
+        "Salesforce"
+      ],
+      "provenance": "Official pricing page https://www.tidio.com/pricing/ fetched 2026-06-14. Page shows annual billing toggle as 'Annually (2 months free)' implying ~16.67% annual discount. Displayed monthly figures ($0/$24.17/$49.17) are the annual-plan monthly rates. Plus plan starts at $749/mo with custom seats. Premium requires contacting sales. No HIPAA or BAA mentions found.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Includes 50 billable conversations/mo and up to 10 seats. Free forever.",
+          "source": {
+            "url": "https://www.tidio.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Starter",
+          "monthlyUsd": 24.17,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Annual billing rate ($24.17/mo). 100 billable conversations/mo, 10 seats included. Annual discount is approximately 16.67% (2 months free). Month-to-month rate not published on pricing page.",
+          "source": {
+            "url": "https://www.tidio.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Growth",
+          "monthlyUsd": 49.17,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Annual billing starting rate ($49.17/mo). Up to 2,000 billable conversations/mo, 10 seats. Price scales with conversation volume. Annual discount approximately 16.67% (2 months free).",
+          "source": {
+            "url": "https://www.tidio.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Plus",
+          "monthlyUsd": 749,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Starts at $749/mo. Custom number of billable conversations and seats. Pricing scales with usage.",
+          "source": {
+            "url": "https://www.tidio.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Contact sales for pricing. Custom billable conversations and seats.",
+          "source": {
+            "url": "https://www.tidio.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "crisp",
+      "name": "Crisp",
+      "domain": "crisp.chat",
+      "hipaa": false,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Slack",
+        "HubSpot",
+        "Shopify",
+        "WooCommerce",
+        "Salesforce",
+        "Zapier",
+        "Make",
+        "WhatsApp",
+        "Instagram",
+        "Telegram",
+        "Facebook Messenger",
+        "Stripe",
+        "Pipedrive",
+        "Zoho"
+      ],
+      "provenance": "Official pricing page https://crisp.chat/en/pricing/ fetched 2026-06-14. Flat per-workspace pricing. Annual billing available via in-app toggle but discount rate not published on pricing page. No HIPAA or BAA mentions; security features listed are TLS encryption, EU hosting, and DPA. Corroborated by GetApp listing.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free forever. 2 seats included.",
+          "source": {
+            "url": "https://crisp.chat/en/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/customer-management-software/a/crisp/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Mini",
+          "monthlyUsd": 45,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$45/workspace/mo (month-to-month). 4 seats included. Annual billing available at a discount in-app but percentage not published. Additional agents $10/mo each.",
+          "source": {
+            "url": "https://crisp.chat/en/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/customer-management-software/a/crisp/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Essentials",
+          "monthlyUsd": 95,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$95/workspace/mo (month-to-month). 10 seats included. Adds chatbot, analytics, knowledge base, WhatsApp, Instagram channels.",
+          "source": {
+            "url": "https://crisp.chat/en/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/customer-management-software/a/crisp/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Plus",
+          "monthlyUsd": 295,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$295/workspace/mo (month-to-month). 20+ seats. Includes unlimited AI automations, white-labelling, Salesforce CRM integration, AI spam filter.",
+          "source": {
+            "url": "https://crisp.chat/en/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/customer-management-software/a/crisp/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing. Includes dedicated onboarding and personalized SLAs.",
+          "source": {
+            "url": "https://crisp.chat/en/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "olark",
+      "name": "Olark",
+      "domain": "olark.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "Official pricing page https://www.olark.com/pricing fetched 2026-06-14. Standard plan confirmed at $29/seat/mo. Pro plan has no published price (quote-only). Annual/multi-year subscriptions mentioned as cheaper than month-to-month but exact discount not stated. No HIPAA, BAA, or named integrations listed on pricing page (integrations referenced via separate PowerUps page).",
+      "plans": [
+        {
+          "name": "Standard",
+          "monthlyUsd": 29,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$29/seat/mo on month-to-month. Annual and 2-year subscriptions available at a discount (exact % not published). Includes basic integrations. Free tier available: 1 agent, max 20 chats/mo.",
+          "source": {
+            "url": "https://www.olark.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "No published price; custom contract terms. Includes AI-powered automation and all PowerUps.",
+          "source": {
+            "url": "https://www.olark.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "livechat",
+      "name": "LiveChat",
+      "domain": "livechat.com",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Shopify",
+        "Squarespace",
+        "Mailchimp",
+        "WhatsApp",
+        "Facebook Messenger",
+        "Instagram",
+        "Apple Messages for Business",
+        "SMS",
+        "Email"
+      ],
+      "provenance": "Official pricing page https://www.livechat.com/pricing/ fetched 2026-06-14. Per-seat pricing with both annual and monthly rates confirmed. HIPAA compliance confirmed for Enterprise plan only; no BAA explicitly mentioned. 200+ integrations available in marketplace; named integrations from pricing page listed. Corroborated by GetApp listing (https://www.getapp.com/customer-management-software/a/livechat/pricing/) confirming month-to-month rates.",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": 19,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 24,
+          "billingModel": "per_seat",
+          "notes": "$19/seat/mo billed annually; $25/seat/mo billed monthly. Annual discount ~24%.",
+          "source": {
+            "url": "https://www.livechat.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/customer-management-software/a/livechat/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Team",
+          "monthlyUsd": 49,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "per_seat",
+          "notes": "$49/seat/mo billed annually; $59/seat/mo billed monthly. Annual discount ~17%.",
+          "source": {
+            "url": "https://www.livechat.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/customer-management-software/a/livechat/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 79,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 11,
+          "billingModel": "per_seat",
+          "notes": "$79/seat/mo billed annually; $89/seat/mo billed monthly. Annual discount ~11%.",
+          "source": {
+            "url": "https://www.livechat.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/customer-management-software/a/livechat/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing; contact sales. HIPAA compliance available on this tier only.",
+          "source": {
+            "url": "https://www.livechat.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "gist",
+      "name": "Gist",
+      "domain": "getgist.com",
+      "hipaa": false,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Salesforce",
+        "HubSpot",
+        "Zapier",
+        "Facebook",
+        "Instagram",
+        "Zoom"
+      ],
+      "provenance": "Official pricing page https://getgist.com/pricing/ fetched 2026-06-14. Support plan pricing confirmed: Free $0, Professional $29/mo (5 seats, flat), Premium $99/mo (unlimited seats, flat). Annual billing confirmed at 15% discount. No HIPAA or BAA mentions; GDPR compliance and SSL/TLS mentioned. Corroborated by second fetch of same page confirming 15% annual discount.",
+      "plans": [
+        {
+          "name": "Support Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free forever. 2 support seats, live chat, team inbox, unlimited conversation history.",
+          "source": {
+            "url": "https://getgist.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Support Professional",
+          "monthlyUsd": 29,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 15,
+          "billingModel": "flat",
+          "notes": "$29/mo billed monthly; ~$24.65/mo billed annually (15% discount). Includes 5 support seats. Adds email forwarding, social integrations, in-app messages, knowledge base.",
+          "source": {
+            "url": "https://getgist.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Support Premium",
+          "monthlyUsd": 99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 15,
+          "billingModel": "flat",
+          "notes": "$99/mo billed monthly; ~$84.15/mo billed annually (15% discount). Unlimited support seats. Marked 'ENDING SOON' on pricing page at time of access (regular price was $499/mo). Includes custom chatbots, voice/video calls, surveys, Salesforce/HubSpot integration.",
+          "source": {
+            "url": "https://getgist.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "freshchat",
+      "name": "Freshchat",
+      "domain": "freshworks.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "Official Freshworks live chat pricing page https://www.freshworks.com/live-chat-software/pricing/ fetched 2026-06-14. Prices shown are annual-billing rates per agent/month. Monthly billing toggle exists but monthly rates not displayed on fetched content. No HIPAA or BAA mentions found. Named integrations not listed on pricing page ('pre-built connectors' referenced without specifics). GetApp listing returned Indian Rupee pricing (geo-located), so not usable as USD corroboration.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Up to 10 agents. Includes website live chat, email, unified agent workspace.",
+          "source": {
+            "url": "https://www.freshworks.com/live-chat-software/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Growth",
+          "monthlyUsd": 19,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$19/agent/mo billed annually. Adds WhatsApp, Facebook Messenger, real-time dashboards. Monthly billing rate not published on fetched page.",
+          "source": {
+            "url": "https://www.freshworks.com/live-chat-software/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 49,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$49/agent/mo billed annually. Most popular tier. Adds custom dashboards, routing, multiple SLA policies.",
+          "source": {
+            "url": "https://www.freshworks.com/live-chat-software/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": 79,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$79/agent/mo billed annually. Includes skills-based assignments and additional security features. No HIPAA explicitly stated.",
+          "source": {
+            "url": "https://www.freshworks.com/live-chat-software/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    }
+  ]
+}

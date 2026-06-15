@@ -1,0 +1,478 @@
+{
+  "vertical": "object-storage",
+  "generatedAt": "2026-06-14",
+  "methodologyNotes": "Pricing fetched from each vendor's official pricing page using WebFetch. AWS S3 per-GB storage rates were confirmed directly from the AWS pricing CSV (pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonS3/current/us-east-1/index.csv, effective 2026-06-01); egress rate corroborated via cloudzero.com/blog/cloud-storage-pricing. Cloudflare R2 rates from developers.cloudflare.com/r2/pricing. Backblaze B2 and DigitalOcean Spaces from their respective official pricing pages. Wasabi pricing from wasabi.com/pricing (note: price increases to $7.99/TB on 2026-07-01). Storj from storj.io/pricing (note: minimum monthly fee increases to $50 on 2026-07-01). Akamai Cloud (formerly Linode) from akamai.com/cloud/pricing. Vultr from vultr.com/products/object-storage. Google Cloud Storage page was too large to extract pricing numbers; GCS was excluded rather than guessing. All prices are US-region, pay-as-you-go unless noted. monthlyUsd is null for purely usage-metered services (no flat tier). billingModel=custom for usage-metered services. billingModel=flat for fixed monthly plans.",
+  "vendors": [
+    {
+      "slug": "amazon-s3",
+      "name": "Amazon S3",
+      "domain": "aws.amazon.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "AWS Lambda",
+        "AWS CloudFront",
+        "AWS IAM",
+        "AWS Glacier",
+        "AWS Athena",
+        "Terraform",
+        "Kubernetes"
+      ],
+      "provenance": "Official AWS S3 pricing page (aws.amazon.com/s3/pricing) rendered JS-only tables not extractable; per-GB storage rates confirmed from AWS official pricing CSV at pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonS3/current/us-east-1/index.csv (effective 2026-06-01). Egress rate corroborated via cloudzero.com/blog/cloud-storage-pricing. Request prices extracted from aws.amazon.com/s3/pricing page text.",
+      "plans": [
+        {
+          "name": "S3 Standard (pay-as-you-go)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Storage: $0.023/GB-month (first 50 TB/month), $0.022/GB-month (next 450 TB), $0.021/GB-month (over 500 TB). Data transfer out to internet: $0.09/GB (first 10 TB/month), $0.085/GB (next 40 TB), $0.07/GB (next 100 TB), $0.05/GB (over 150 TB). PUT/COPY/POST requests: $0.005 per 1,000. GET requests: $0.0004 per 1,000. First 100 GB egress/month free. No minimum fee.",
+          "source": {
+            "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonS3/current/us-east-1/index.csv",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.cloudzero.com/blog/cloud-storage-pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "S3 Standard-IA (pay-as-you-go)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Storage: $0.0125/GB-month. Retrieval fee: $0.01/GB. PUT requests: $0.01 per 1,000. GET requests: $0.001 per 1,000. 30-day minimum storage duration; 128 KB minimum billable object size.",
+          "source": {
+            "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonS3/current/us-east-1/index.csv",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://aws.amazon.com/s3/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "S3 Glacier Deep Archive (pay-as-you-go)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Storage: $0.00099/GB-month. Retrieval: standard 12-hour restore, fee applies. 180-day minimum storage duration. Ideal for compliance/long-term archiving.",
+          "source": {
+            "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonS3/current/us-east-1/index.csv",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://aws.amazon.com/s3/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "cloudflare-r2",
+      "name": "Cloudflare R2",
+      "domain": "cloudflare.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Cloudflare Workers",
+        "Cloudflare CDN",
+        "Cloudflare Stream",
+        "Wrangler CLI",
+        "S3-compatible SDKs"
+      ],
+      "provenance": "Official Cloudflare R2 pricing page at developers.cloudflare.com/r2/pricing fetched directly. Free tier and paid tier rates confirmed.",
+      "plans": [
+        {
+          "name": "R2 Free Tier",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Includes 10 GB-month storage, 1 million Class A operations/month, 10 million Class B operations/month. Zero egress fees always. Standard storage class only.",
+          "source": {
+            "url": "https://developers.cloudflare.com/r2/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "R2 Standard (pay-as-you-go)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Storage: $0.015/GB-month. Class A operations (PUT, DELETE, etc.): $4.50 per million. Class B operations (GET, HEAD): $0.36 per million. Egress to internet: free always. Above the free tier allowances.",
+          "source": {
+            "url": "https://developers.cloudflare.com/r2/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "R2 Infrequent Access (pay-as-you-go)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Storage: $0.01/GB-month. Class A operations: $9.00 per million. Class B operations: $0.90 per million. Data retrieval: $0.01/GB. Egress to internet: free. 30-day minimum storage duration.",
+          "source": {
+            "url": "https://developers.cloudflare.com/r2/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "backblaze-b2",
+      "name": "Backblaze B2",
+      "domain": "backblaze.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Cloudflare",
+        "Fastly",
+        "bunny.net",
+        "Rclone",
+        "Cyberduck",
+        "S3-compatible SDKs",
+        "Veeam"
+      ],
+      "provenance": "Official Backblaze B2 pricing page at backblaze.com/cloud-storage/pricing fetched directly. Pay-as-you-go rates confirmed.",
+      "plans": [
+        {
+          "name": "B2 Cloud Storage (pay-as-you-go)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Storage: $0.00695/GB-month ($6.95/TB). First 10 GB storage always free. Egress: free up to 3x average monthly storage; $0.01/GB beyond that. Free egress via partner network (Cloudflare, Fastly, bunny.net). API calls (Class A, B, C): free. Class D transactions: $0.004 per 10,000 calls (first 2,500/day free). US West region.",
+          "source": {
+            "url": "https://www.backblaze.com/cloud-storage/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.backblaze.com/b2/cloud-storage-pricing.html",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "B2 Reserve",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Annual commitment pricing. Example: $19,500/year for 250TB ($78/TB/year or $6.50/TB/month). Contact sales for custom quotes. Includes B2 Overdrive (unlimited egress) and premium support.",
+          "source": {
+            "url": "https://www.backblaze.com/b2/cloud-storage-pricing.html",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "wasabi",
+      "name": "Wasabi",
+      "domain": "wasabi.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Veeam",
+        "Veritas",
+        "Rclone",
+        "Cyberduck",
+        "S3-compatible SDKs",
+        "Commvault",
+        "Synology"
+      ],
+      "provenance": "Official Wasabi pricing page at wasabi.com/pricing fetched directly. Current pay-as-you-go rate and upcoming price change on 2026-07-01 confirmed. Reserved capacity pricing tiers require custom quote (sales contact).",
+      "plans": [
+        {
+          "name": "Wasabi Hot Cloud Storage (pay-as-you-go)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Storage: $0.00699/GB-month ($6.99/TB) as of June 2026. Price increases to $0.00799/GB-month ($7.99/TB) effective 2026-07-01. No egress fees. No API request fees. No minimum storage requirement. Basic support included. Free trial available (duration/limits not published).",
+          "source": {
+            "url": "https://wasabi.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Wasabi Reserved Capacity Storage",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Annual/multi-year commitment pricing for large volumes (25TB, 100TB, 250TB, 500TB, 1PB, 1.5PB, 5PB, 10PB units). Exact rates require contact with sales. Includes premium support and discounts off pay-as-you-go rate. 1-, 3-, or 5-year terms available.",
+          "source": {
+            "url": "https://wasabi.com/pricing/rcs",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "digitalocean-spaces",
+      "name": "DigitalOcean Spaces",
+      "domain": "digitalocean.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "DigitalOcean CDN",
+        "S3-compatible SDKs",
+        "Rclone",
+        "Cyberduck",
+        "Terraform",
+        "Kubernetes"
+      ],
+      "provenance": "Official DigitalOcean Spaces pricing fetched from docs.digitalocean.com/products/spaces/details/pricing. All base plan, overage, CDN, and transfer details confirmed directly.",
+      "plans": [
+        {
+          "name": "Spaces Subscription",
+          "monthlyUsd": 5,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Includes 250 GiB storage and 1,024 GiB outbound data transfer per month. CDN included at no additional cost. Overage: $0.02/GiB additional storage; $0.01/GiB additional outbound transfer. S3-compatible API.",
+          "source": {
+            "url": "https://docs.digitalocean.com/products/spaces/details/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.digitalocean.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "storj",
+      "name": "Storj",
+      "domain": "storj.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "S3-compatible SDKs",
+        "Rclone",
+        "Filezilla",
+        "Object Mount",
+        "Uplink CLI"
+      ],
+      "provenance": "Official Storj pricing page at storj.io/pricing fetched directly. Standard and Advanced plan rates, free trial, and minimum monthly fee changes confirmed.",
+      "plans": [
+        {
+          "name": "Storj Free Trial",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "25 GB storage for 30 days. No credit card required. Includes 2 Object Mount licenses. After trial, account converts to paid Standard plan.",
+          "source": {
+            "url": "https://storj.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Storj Standard",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Storage: $7/TB-month ($0.007/GB-month). Egress/download: $7/TB ($0.007/GB). No segment fees. 50 KB minimum object size. 30-day minimum retention (early deletion fees apply). Minimum monthly fee of $50 effective 2026-07-01 (STORJ token payers exempt). Distributed globally across tens of thousands of nodes.",
+          "source": {
+            "url": "https://storj.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Storj Advanced",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Storage: $10/TB-month ($0.01/GB-month) for Object Mount license. Egress: $7/TB ($0.007/GB). Data stored in US SOC2 Type 2 compliant data centers. Includes 2 Object Mount licenses. Same $50/month minimum applies from 2026-07-01.",
+          "source": {
+            "url": "https://storj.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "akamai-cloud",
+      "name": "Akamai Cloud Object Storage",
+      "domain": "akamai.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "S3-compatible SDKs",
+        "Rclone",
+        "Kubernetes",
+        "Terraform",
+        "Linode CLI"
+      ],
+      "provenance": "Official Akamai Cloud pricing page at akamai.com/cloud/pricing fetched directly (linode.com/pricing redirects there). Storage, egress, and minimum fee confirmed.",
+      "plans": [
+        {
+          "name": "Akamai Object Storage (pay-as-you-go)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Storage: $0.02/GB-month. Outbound transfer: $0.005/GB (first 1 TB/month free). No API request fees mentioned. $5 minimum monthly fee for accounts storing less than 250 GB. Pricing may vary by region. S3-compatible API.",
+          "source": {
+            "url": "https://www.akamai.com/cloud/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "vultr-object-storage",
+      "name": "Vultr Object Storage",
+      "domain": "vultr.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "S3-compatible SDKs",
+        "Rclone",
+        "Cyberduck",
+        "Terraform",
+        "Kubernetes"
+      ],
+      "provenance": "Official Vultr Object Storage product page at vultr.com/products/object-storage fetched directly. All five storage tiers confirmed with monthly rates, included capacity, and overage pricing.",
+      "plans": [
+        {
+          "name": "Vultr Archival Object Storage",
+          "monthlyUsd": 6,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Includes 1 TB storage + 1 TB bandwidth/month. $6/TB additional storage. $10/TB additional transfer beyond included. No API request fees. Built for long-term, infrequently accessed data.",
+          "source": {
+            "url": "https://www.vultr.com/products/object-storage/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Vultr Standard Object Storage",
+          "monthlyUsd": 18,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Includes 1 TB storage + 1 TB bandwidth/month. $18/TB additional storage. $10/TB additional transfer beyond included. No API request fees. Suited for low-cost general data storage.",
+          "source": {
+            "url": "https://www.vultr.com/products/object-storage/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Vultr Premium Object Storage",
+          "monthlyUsd": 36,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Includes 1 TB storage + 1 TB bandwidth/month. $36/TB additional storage. $10/TB additional transfer beyond included. Suited for application data with wide range of use cases.",
+          "source": {
+            "url": "https://www.vultr.com/products/object-storage/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Vultr Performance Object Storage",
+          "monthlyUsd": 50,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Includes 1 TB storage + 1 TB bandwidth/month. $50/TB additional storage. $10/TB additional transfer beyond included. Ideal for workloads requiring higher performance than typical internet-based storage.",
+          "source": {
+            "url": "https://www.vultr.com/products/object-storage/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Vultr Accelerated Object Storage",
+          "monthlyUsd": 100,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Includes 1 TB storage + 1 TB bandwidth/month. $100/TB additional storage. $10/TB additional transfer beyond included. Designed for most demanding use cases requiring rapid, low-latency storage.",
+          "source": {
+            "url": "https://www.vultr.com/products/object-storage/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    }
+  ]
+}

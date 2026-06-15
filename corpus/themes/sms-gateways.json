@@ -1,0 +1,332 @@
+{
+  "vertical": "sms-gateways",
+  "generatedAt": "2026-06-13",
+  "methodologyNotes": "Published self-serve pricing was collected from each provider's own US SMS/messaging pricing page on the accessed date. These are usage-based (pay-as-you-go) APIs with no fixed monthly platform fee, so monthlyUsd is recorded null for every PAYG tier and the real published per-message USD rate is captured in the plan notes; minutes/calls/overage fields stay null as they do not apply to messaging. Where a provider's official page geolocated outside the USA, returned a 403, or rendered its rate table via JavaScript (Vonage, ClickSend), the per-message figure is corroborated against a dedicated 2026 pricing source and noted; every figure is sourced and none invented. Providers whose per-message rate could not be confirmed on any live page (the official table did not render and corroborating sources disagreed) were dropped rather than retained on a guess.",
+  "vendors": [
+    {
+      "slug": "twilio",
+      "name": "Twilio",
+      "domain": "twilio.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Segment",
+        "Salesforce",
+        "HubSpot",
+        "Zendesk",
+        "Zapier"
+      ],
+      "provenance": "https://www.twilio.com/en-us/sms/pricing/us (official US SMS pricing page, accessed 2026-06-13)",
+      "plans": [
+        {
+          "name": "Pay-as-you-go",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Usage-based, no monthly platform fee. US outbound SMS $0.0083/message, inbound SMS $0.0083/message; outbound MMS $0.022, inbound MMS $0.0165. Carrier fees ($0.0025-$0.01) apply on top per message. Long-code number $1.15/mo, toll-free $2.15/mo. Free trial available (no card required).",
+          "source": {
+            "url": "https://www.twilio.com/en-us/sms/pricing/us",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Enterprise / committed volume",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Quote-only. Commit to annual message volumes for discounts beyond standard volume tiers; pricing not published.",
+          "source": {
+            "url": "https://www.twilio.com/en-us/sms/pricing/us",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "plivo",
+      "name": "Plivo",
+      "domain": "plivo.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Zapier",
+        "Salesforce",
+        "HubSpot",
+        "Zendesk"
+      ],
+      "provenance": "https://www.plivo.com/sms/pricing/us/ (official US SMS pricing page, accessed 2026-06-13)",
+      "plans": [
+        {
+          "name": "Pay-as-you-go",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Usage-based, no monthly platform fee. US long-code and short-code SMS $0.0077/message (outbound and inbound); toll-free SMS $0.0079/message. Carrier surcharges apply on top. Long-code number $0.50/mo, toll-free $1.00/mo; short code $500/mo (billed quarterly) + $1,500 one-time setup.",
+          "source": {
+            "url": "https://www.plivo.com/sms/pricing/us/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Volume discount",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Quote-only. Page advertises 'volume discounts as you scale' but no specific tier rates are published in the self-serve table.",
+          "source": {
+            "url": "https://www.plivo.com/sms/pricing/us/",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "telnyx",
+      "name": "Telnyx",
+      "domain": "telnyx.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Zapier",
+        "Make",
+        "Salesforce"
+      ],
+      "provenance": "https://telnyx.com/pricing/messaging (official messaging pricing page, accessed 2026-06-13)",
+      "plans": [
+        {
+          "name": "Pay-as-you-go",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Usage-based, no monthly platform fee. US local/10DLC SMS $0.004/message part (outbound and inbound); toll-free $0.0055; short code $0.007. Carrier fees apply on top. MMS local outbound $0.015, inbound $0.005. Automatic 10DLC volume discounts trigger at 100M+ messages/mo, descending to $0.0005 per SMS part; short-code discounts trigger at 500K+/mo.",
+          "source": {
+            "url": "https://telnyx.com/pricing/messaging",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Volume-based contract",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Quote-only. Commitment-based contracts available for larger customers; custom pricing not published.",
+          "source": {
+            "url": "https://telnyx.com/pricing/messaging",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "sinch",
+      "name": "Sinch",
+      "domain": "sinch.com",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Salesforce",
+        "Zendesk",
+        "Adobe",
+        "HubSpot"
+      ],
+      "provenance": "https://sinch.com/pricing/sms/ (official SMS pricing page, accessed 2026-06-13)",
+      "plans": [
+        {
+          "name": "Pay-as-you-go",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Usage-based, no monthly platform fee. US 10DLC SMS $0.0078/message (outbound and inbound); toll-free $0.0078; short code $0.009 outbound / $0.0075 inbound. Carrier fees apply on top.",
+          "source": {
+            "url": "https://sinch.com/pricing/sms/",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "vonage",
+      "name": "Vonage",
+      "domain": "vonage.com",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Salesforce",
+        "Zendesk",
+        "ServiceNow",
+        "Zapier"
+      ],
+      "provenance": "https://www.vonage.com/communications-apis/sms/pricing/ (official page returned 403/geolocated to UK on fetch; US per-message rate corroborated via apidog.com 2026 pricing review citing Vonage dashboard)",
+      "plans": [
+        {
+          "name": "Pay-as-you-go",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Usage-based, no monthly platform fee. US local/10DLC outbound SMS $0.00809/message, inbound $0.00649/message. Toll-free outbound requires sales contact; toll-free inbound often free.",
+          "source": {
+            "url": "https://www.vonage.com/communications-apis/sms/pricing/",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://apidog.com/blog/vonage-sms-api-cost/",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "gatewayapi",
+      "name": "GatewayAPI",
+      "domain": "gatewayapi.com",
+      "hipaa": false,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Zapier",
+        "WooCommerce",
+        "WordPress"
+      ],
+      "provenance": "https://gatewayapi.com/pricing/ (official pricing page, accessed 2026-06-13)",
+      "plans": [
+        {
+          "name": "Pay-as-you-go",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Usage-based, no subscriptions; free account to create and maintain. US SMS $0.007/message. Prices vary by country (e.g. Denmark EUR 0.033, Germany EUR 0.06). High-volume customers can negotiate discounted rates.",
+          "source": {
+            "url": "https://gatewayapi.com/pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "clicksend",
+      "name": "ClickSend",
+      "domain": "clicksend.com",
+      "hipaa": false,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Zapier",
+        "Salesforce",
+        "HubSpot",
+        "Microsoft Dynamics"
+      ],
+      "provenance": "https://www.clicksend.com/us/pricing/ (official page; US per-SMS rate renders via JavaScript calculator so base rate corroborated via textbolt.com and apidog.com 2026 reviews)",
+      "plans": [
+        {
+          "name": "Boost (pay-as-you-go)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Usage-based, no monthly subscription. Minimum $20 top-up, standard rate; US domestic SMS base approx $0.0276/message plus carrier fees. Inbound SMS free.",
+          "source": {
+            "url": "https://www.clicksend.com/us/pricing/",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://textbolt.com/blog/clicksend-pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Growth",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Volume tier, minimum $500 top-up; saves 7% off the standard per-message rate. Inbound SMS free.",
+          "source": {
+            "url": "https://www.clicksend.com/us/pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Scale",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Volume tier, minimum $3,000 top-up; saves 14% off the standard per-message rate.",
+          "source": {
+            "url": "https://www.clicksend.com/us/pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Volume tier, minimum $10,000 top-up; saves 21% off standard, reaching approx $0.0094/message US. Higher volumes can request a custom quote.",
+          "source": {
+            "url": "https://www.clicksend.com/us/pricing/",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://textbolt.com/blog/clicksend-pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    }
+  ]
+}

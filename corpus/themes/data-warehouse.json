@@ -1,0 +1,644 @@
+{
+  "vertical": "data-warehouse",
+  "generatedAt": "2026-06-14",
+  "methodologyNotes": "Pricing sourced from official vendor pages and reputable 2026 pricing-comparison articles where official pages returned truncated/JS-only content or timed out. All figures are USD, US-East / AWS US region defaults unless noted. Usage-metered services have monthlyUsd=null with unit rates in notes. 'Contact sales' tiers have monthlyUsd=null. BigQuery official page truncated on every fetch; figures corroborated via airbyte.com (Sep 2025 article) and cdcalculators.com (2026). Databricks official page shows no prices; figures from cloudzero.com (last updated May 26 2026) and cloudzero.com via WebSearch. Azure Synapse official pricing page timed out on every fetch; figures from cloudwebschool.com (last verified Mar 19 2026) and costbench.com (2026). Snowflake official PDF binary-only; figures from select.dev (Jan 2025 article verified against cloudzero.com Apr 2026 article). All accessedAt dates set to 2026-06-14 per dataset spec.",
+  "vendors": [
+    {
+      "slug": "snowflake",
+      "name": "Snowflake",
+      "domain": "snowflake.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "dbt",
+        "Fivetran",
+        "Tableau",
+        "Power BI",
+        "Looker",
+        "Spark",
+        "Kafka",
+        "AWS S3",
+        "Azure Blob Storage",
+        "Google Cloud Storage"
+      ],
+      "provenance": "Official pricing page snowflake.com/en/data-cloud/pricing-options/ shows consumption model but no USD figures (region dropdown required, PDF binary-only). Credit costs sourced from select.dev 2025 billing guide (corroborated by cloudzero.com Apr 2026 article stating $2/credit Standard on AWS US East on-demand). HIPAA: Business Critical and VPS editions only, BAA required per docs.snowflake.com/en/user-guide/intro-editions.",
+      "plans": [
+        {
+          "name": "Standard (On-Demand, AWS US East)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Consumption-based: ~$2.00/credit on-demand (AWS US East). Storage $40/TB-month on-demand. No flat monthly fee; pay only for compute consumed. 60-second minimum per virtual warehouse start.",
+          "source": {
+            "url": "https://www.snowflake.com/en/data-cloud/pricing-options/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.cloudzero.com/blog/snowflake-pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise (On-Demand, AWS US East)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Consumption-based: ~$3.00/credit on-demand (AWS US East). Adds multi-cluster warehouses, materialized views, column-level security. Storage $40/TB-month on-demand.",
+          "source": {
+            "url": "https://www.snowflake.com/en/data-cloud/pricing-options/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.select.dev/posts/snowflake-pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Business Critical (On-Demand, AWS US East)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Consumption-based: ~$4.00/credit on-demand (AWS US East). HIPAA-eligible edition; BAA required. Adds HIPAA/PCI DSS support, Tri-Secret Secure, AWS PrivateLink. Storage $40/TB-month on-demand.",
+          "source": {
+            "url": "https://www.snowflake.com/en/data-cloud/pricing-options/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.select.dev/posts/snowflake-pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Virtual Private Snowflake (VPS)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only. Fully isolated single-tenant environment. ~$6.00/credit on-demand (AWS US East) per third-party sources; negotiated directly with Snowflake. Highest compliance tier.",
+          "source": {
+            "url": "https://www.snowflake.com/en/data-cloud/pricing-options/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.select.dev/posts/snowflake-pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "google-bigquery",
+      "name": "Google BigQuery",
+      "domain": "cloud.google.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Looker",
+        "Dataflow",
+        "Pub/Sub",
+        "Cloud Storage",
+        "Tableau",
+        "dbt",
+        "Fivetran",
+        "Informatica",
+        "Apache Spark",
+        "TensorFlow"
+      ],
+      "provenance": "Official pricing page cloud.google.com/bigquery/pricing returned truncated content on every fetch. Figures sourced from airbyte.com BigQuery pricing guide (published Sep 4 2025, last verified date not stated) and corroborated via cdcalculators.com (2026 BigQuery pricing calculator). HIPAA/BAA confirmed via official cloud.google.com/security/compliance/hipaa page.",
+      "plans": [
+        {
+          "name": "On-Demand Queries",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "$6.25/TB of data scanned. First 1 TB per month free. No minimum commitment. Active storage: $0.02/GB-month (logical) or $0.04/GB-month (physical). Long-term storage (90+ days inactive): $0.01/GB-month (logical) or $0.02/GB-month (physical). First 10 GB storage free monthly.",
+          "source": {
+            "url": "https://cloud.google.com/bigquery/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://airbyte.com/data-engineering-resources/bigquery-pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Standard Edition (Slots)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "$0.04/slot-hour, no commitment required. Minimum 100 slots. Storage billed separately at on-demand rates. Does not include advanced workload management or BigQuery ML.",
+          "source": {
+            "url": "https://cloud.google.com/bigquery/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://airbyte.com/data-engineering-resources/bigquery-pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise Edition (Slots)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "custom",
+          "notes": "$0.06/slot-hour pay-as-you-go; $0.048/slot-hour with 1-year commitment (20% discount). Includes advanced workload management, materialized views, BigQuery ML. 99.99% SLA. Storage billed separately.",
+          "source": {
+            "url": "https://cloud.google.com/bigquery/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://airbyte.com/data-engineering-resources/bigquery-pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise Plus Edition (Slots)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 40,
+          "billingModel": "custom",
+          "notes": "$0.10/slot-hour pay-as-you-go; $0.06/slot-hour with 3-year commitment (40% discount). Adds compliance controls (Assured Workloads), managed disaster recovery. Storage billed separately.",
+          "source": {
+            "url": "https://cloud.google.com/bigquery/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://airbyte.com/data-engineering-resources/bigquery-pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "databricks",
+      "name": "Databricks",
+      "domain": "databricks.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Apache Spark",
+        "Delta Lake",
+        "MLflow",
+        "dbt",
+        "Fivetran",
+        "Tableau",
+        "Power BI",
+        "AWS S3",
+        "Azure Data Lake",
+        "Google Cloud Storage",
+        "Kafka",
+        "Redshift"
+      ],
+      "provenance": "Official pricing page databricks.com/product/pricing shows no USD figures (JS-rendered calculator only). DBU costs sourced from cloudzero.com Databricks pricing blog (last updated May 26 2026, corroborated by cloudzero.com WebSearch result from same article). HIPAA/BAA confirmed via docs.databricks.com/aws/en/security/privacy/hipaa and databricks.com/legal/baa — compliance security profile required, full enforcement from Sep 1 2026.",
+      "plans": [
+        {
+          "name": "SQL Classic (AWS, Premium tier)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "~$0.22/DBU on AWS US regions. Runs in customer cloud account. Lacks Predictive I/O. Standard tier reached end-of-life on AWS/GCP Oct 2025; Premium tier is now the baseline. Cloud instance costs billed separately by AWS.",
+          "source": {
+            "url": "https://www.databricks.com/product/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.cloudzero.com/blog/databricks-pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "SQL Pro (AWS, Premium tier)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "~$0.55/DBU on AWS US regions. Includes Predictive I/O and Intelligent Workload Management. Runs in customer cloud account. Cloud instance costs billed separately by AWS.",
+          "source": {
+            "url": "https://www.databricks.com/product/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.cloudzero.com/blog/databricks-pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "SQL Serverless (AWS, Premium tier)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "~$0.70/DBU in AWS US regions; ~$0.91/DBU in EU regions. Fully managed by Databricks; infrastructure cost bundled into DBU rate (no separate EC2 charges). Scale-to-zero capable. Databricks' recommended tier as of 2026.",
+          "source": {
+            "url": "https://www.databricks.com/product/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.cloudzero.com/blog/databricks-pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "amazon-redshift",
+      "name": "Amazon Redshift",
+      "domain": "aws.amazon.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "S3",
+        "Glue",
+        "SageMaker",
+        "QuickSight",
+        "Tableau",
+        "Power BI",
+        "dbt",
+        "Fivetran",
+        "Informatica",
+        "Apache Spark",
+        "Kafka"
+      ],
+      "provenance": "Official pricing page aws.amazon.com/redshift/pricing/ fetched successfully. HIPAA eligibility confirmed via aws.amazon.com/compliance/hipaa-eligible-services-reference/ (Redshift explicitly listed). BAA covered under standard AWS BAA for eligible services.",
+      "plans": [
+        {
+          "name": "Serverless (On-Demand)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "$0.375/RPU-hour (per-second billing, 60-second minimum). Base capacity 4-1024 RPUs; 16 GB memory per RPU. Minimum effective rate $1.50/hr at 4 RPUs. Serverless Reservations available: up to 45% savings (3-year) or 24% (1-year). Storage: $0.024/GB-month (US East N. Virginia).",
+          "source": {
+            "url": "https://aws.amazon.com/redshift/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://aws.amazon.com/compliance/hipaa-eligible-services-reference/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Provisioned — RA3 (ra3.4xlarge)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "$3.26/hr per ra3.4xlarge node (on-demand). Provisioned clusters start at $0.543/hr for smallest node type. Managed Storage billed separately at $0.024/GB-month (US East). Spectrum: $5.00/TB scanned. Concurrency Scaling: free up to 1 hr/day per cluster.",
+          "source": {
+            "url": "https://aws.amazon.com/redshift/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://aws.amazon.com/compliance/hipaa-eligible-services-reference/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "firebolt",
+      "name": "Firebolt",
+      "domain": "firebolt.io",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "S3",
+        "Kafka",
+        "dbt",
+        "Airbyte",
+        "Fivetran",
+        "Tableau",
+        "Power BI",
+        "Apache Spark",
+        "Airflow"
+      ],
+      "provenance": "Official pricing page firebolt.io/pricing fetched successfully (two fetches; consistent data). HIPAA listed as a compliance feature on Enterprise tier. BAA details not stated on pricing page; Dedicated tier directed to contact sales for compliance specifics.",
+      "plans": [
+        {
+          "name": "Firebolt Core",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free self-hosted deployment. Community/developer use. No SLA or support included.",
+          "source": {
+            "url": "https://www.firebolt.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Standard (Cloud)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "$0.35/FBU-hour (per-second billing). Storage: $23/TiB-month. Business-hours support. No HIPAA compliance on this tier. FBU consumption = (Node FBUs) × (Runtime in seconds) ÷ 3600.",
+          "source": {
+            "url": "https://www.firebolt.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise (Cloud)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "$0.35/FBU-hour (same rate as Standard). Storage: $23/TiB-month. Adds AWS PrivateLink, fast-start, multi-cluster auto-scaling, HIPAA compliance, 24/7 premium support.",
+          "source": {
+            "url": "https://www.firebolt.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Dedicated",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only. Fully isolated single-tenant infrastructure. FBU-based pricing negotiated directly with Firebolt.",
+          "source": {
+            "url": "https://www.firebolt.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "azure-synapse-analytics",
+      "name": "Azure Synapse Analytics",
+      "domain": "azure.microsoft.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Azure Data Factory",
+        "Power BI",
+        "Azure Machine Learning",
+        "Azure Data Lake Storage",
+        "Azure Purview",
+        "Tableau",
+        "Spark",
+        "Kafka",
+        "Cosmos DB"
+      ],
+      "provenance": "Official pricing page azure.microsoft.com/en-us/pricing/details/synapse-analytics/ timed out on every fetch attempt. Figures sourced from cloudwebschool.com Synapse pricing guide (last verified Mar 19 2026) and corroborated by costbench.com (2026). HIPAA/BAA confirmed via learn.microsoft.com/en-us/azure/compliance/offerings/offering-hipaa-us — Azure Synapse covered under Microsoft BAA included in Product Terms by default.",
+      "plans": [
+        {
+          "name": "Dedicated SQL Pool (DWU100c)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "$1.51/hr for DWU100c in US East (billed per hour whether or not queries are running). ~$1,087/month at 24/7 usage. Storage: ~$23.20/TB-month. Reserved capacity available for cost savings.",
+          "source": {
+            "url": "https://azure.microsoft.com/en-us/pricing/details/synapse-analytics/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://cloudwebschool.com/docs/azure/data-and-analytics/synapse-pricing-explained/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Serverless SQL Pool",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "$5.00/TB of data scanned (US East). 10 MB minimum per query. Pay only for queries run; no charge for DDL. Suitable for ad-hoc exploration over data lake files.",
+          "source": {
+            "url": "https://azure.microsoft.com/en-us/pricing/details/synapse-analytics/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://cloudwebschool.com/docs/azure/data-and-analytics/synapse-pricing-explained/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "motherduck",
+      "name": "MotherDuck",
+      "domain": "motherduck.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "DuckDB",
+        "dbt",
+        "Airbyte",
+        "S3",
+        "Google Cloud Storage",
+        "Azure Blob Storage",
+        "Apache Parquet",
+        "Iceberg",
+        "Tableau",
+        "Metabase"
+      ],
+      "provenance": "Official pricing page motherduck.com/pricing/ fetched successfully (two independent fetches with consistent data). HIPAA BAA 'available on request' for Business plan confirmed directly from the pricing page.",
+      "plans": [
+        {
+          "name": "Lite",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free tier. Includes 10 GB storage and 10 hours of Pulse compute monthly at no cost. For solo practitioners and hobbyists. No HIPAA BAA on Lite.",
+          "source": {
+            "url": "https://motherduck.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 250,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$250/month per organization platform fee plus usage. Compute billed per second: Pulse $0.60/hr, Standard $2.40/hr, Jumbo $4.80/hr, Mega $12.00/hr, Giga $36.00/hr. Storage $0.04/GB-month. HIPAA BAA available on request. SOC 2 Type II certified.",
+          "source": {
+            "url": "https://motherduck.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only. Custom pricing for large-scale deployments. HIPAA BAA included.",
+          "source": {
+            "url": "https://motherduck.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "starburst",
+      "name": "Starburst",
+      "domain": "starburst.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Trino",
+        "dbt",
+        "S3",
+        "Azure Data Lake",
+        "BigQuery",
+        "Snowflake",
+        "Redshift",
+        "Kafka",
+        "Tableau",
+        "Power BI",
+        "Looker",
+        "Hive"
+      ],
+      "provenance": "Official pricing page starburst.io/pricing/ fetched successfully. HIPAA/BAA not mentioned on pricing page; no independent confirmation found in fetch results, so left as null.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$0/month. 30-day trial includes $500 in Starburst Galaxy compute credits with Enterprise-tier features. After trial, free tier available with limited credits.",
+          "source": {
+            "url": "https://www.starburst.io/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Starting at $0.50/credit. Credits are universal compute units; consumption consistent across tiers. Annual contract eligible for discounted pricing.",
+          "source": {
+            "url": "https://www.starburst.io/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Starting at $0.75/credit (most common tier per pricing page). Includes advanced security, governance, and support. Annual contract eligible for discounted pricing.",
+          "source": {
+            "url": "https://www.starburst.io/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Mission-Critical",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Starting at $1.00/credit. Highest tier with premium SLA, dedicated support, and enterprise compliance features. Annual contract eligible for discounted pricing.",
+          "source": {
+            "url": "https://www.starburst.io/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    }
+  ]
+}

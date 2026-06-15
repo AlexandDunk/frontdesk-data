@@ -1,0 +1,883 @@
+{
+  "vertical": "web-scraping-api",
+  "generatedAt": "2026-06-14",
+  "methodologyNotes": "Published self-serve USD pricing collected from each vendor's official pricing page (accessed 2026-06-14). ScraperAPI's pricing page is JavaScript-rendered and returned only navigation HTML on direct fetch; the four public tiers — Hobby $49, Startup $149, Business $299, Scaling $475, plus a 10% annual discount — are confirmed by independent corroboration (proxyway.com review and use-apify.com review, accessed 2026-06-14). Plan names and prices are confirmed; exact credit allocations differ between secondary sources, so credit figures in notes are recorded conservatively/qualified rather than asserted as exact. Bright Data's main /pricing page lists only 'See Pricing' buttons per product; Web Scraper API tier details fetched from brightdata.com/pricing/web-scraper which published Free/Pay-as-you-go/Scale/Enterprise tiers. Oxylabs /pricing returns only starting prices; full Web Scraper API plan table fetched from oxylabs.io/products/scraper-api/web/pricing. Zyte uses a commitment-based usage-metered model with no flat named tiers; monthlyUsd reflects the minimum monthly commitment and per-1K-request unit rates are in notes. SerpApi pricing fetched directly from serpapi.com/pricing. All telephony fields (minutesIncluded, callsIncluded, overagePerMin, overagePerCall) are null — this is a non-telephony vertical.",
+  "vendors": [
+    {
+      "slug": "scraperapi",
+      "name": "ScraperAPI",
+      "domain": "scraperapi.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Python",
+        "Node.js",
+        "PHP",
+        "Ruby",
+        "Java",
+        "cURL",
+        "LangChain"
+      ],
+      "provenance": "Official pricing page https://www.scraperapi.com/pricing/ fetched 2026-06-14 — page is JavaScript-rendered, returned navigation HTML only on direct fetch. Plan names and prices confirmed via independent corroboration: Hobby $49, Startup $149, Business $299, Scaling $475, with a 10% annual discount (proxyway.com/reviews/scraperapi and use-apify.com/blog/scraperapi-review, accessed 2026-06-14). Entry plan includes 100k credits at 20 concurrency. Exact credit allocations for higher tiers differ between secondary sources and are recorded qualified, not asserted as exact.",
+      "plans": [
+        {
+          "name": "Hobby",
+          "monthlyUsd": 49,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "100,000 API credits/month, 20 concurrent threads, US/EU geolocation only, 2-week data retention. 10% discount on yearly contracts confirmed by proxyway.com review.",
+          "source": {
+            "url": "https://www.scraperapi.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://proxyway.com/reviews/scraperapi",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Startup",
+          "monthlyUsd": 149,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "Second of four public tiers, named Startup; price $149/month confirmed by independent reviews (proxyway.com, use-apify.com). Includes ~1,000,000 API credits/month (figure varies between secondary sources; recorded qualified). US/EU geotargeting.",
+          "source": {
+            "url": "https://www.scraperapi.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://use-apify.com/blog/scraperapi-review",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 299,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "Third of four public tiers, named Business, at $299/month; price confirmed by independent reviews (proxyway.com, use-apify.com). Unlocks global geotargeting (US/EU restriction lifted) and includes ~3,000,000 API credits/month (figure varies between secondary sources; recorded qualified).",
+          "source": {
+            "url": "https://www.scraperapi.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://use-apify.com/blog/scraperapi-review",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Scaling",
+          "monthlyUsd": 475,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "Highest public self-serve tier, named Scaling, at $475/month with 5,000,000+ API credits and 200+ concurrent threads. Price and name confirmed via independent reviews. Custom enterprise pricing available beyond this tier via sales.",
+          "source": {
+            "url": "https://www.scraperapi.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://proxyway.com/reviews/scraperapi",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "bright-data",
+      "name": "Bright Data",
+      "domain": "brightdata.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Python",
+        "Node.js",
+        "Java",
+        "C#",
+        "PHP",
+        "Puppeteer",
+        "Playwright",
+        "Selenium",
+        "Zapier"
+      ],
+      "provenance": "Web Scraper API pricing fetched from brightdata.com/pricing/web-scraper on 2026-06-14. Confirmed Free (5K records/mo), Pay-as-you-go ($1.50/1K records), Scale ($499/mo for 384K records), Enterprise (custom). No annual discount published on this page. Main pricing page brightdata.com/pricing showed only 'See Pricing' buttons per product.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "5,000 records/month. No credit card required. Includes JavaScript rendering, CAPTCHA-solving, geotargeting, data validation.",
+          "source": {
+            "url": "https://brightdata.com/pricing/web-scraper",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pay as You Go",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "$1.50 per 1,000 records. No monthly minimum. Pay only for successful deliveries. Monthly spend limits available. Unlimited concurrency.",
+          "source": {
+            "url": "https://brightdata.com/pricing/web-scraper",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Scale",
+          "monthlyUsd": 499,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "384,000 records/month included. Additional records at $1.30/1K. Unlimited concurrency. Cancel anytime.",
+          "source": {
+            "url": "https://brightdata.com/pricing/web-scraper",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Contact sales. Volume discounts, dedicated account manager, premium SLA, priority support, SSO.",
+          "source": {
+            "url": "https://brightdata.com/pricing/web-scraper",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "apify",
+      "name": "Apify",
+      "domain": "apify.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Zapier",
+        "Make",
+        "Slack",
+        "GitHub",
+        "Google Sheets",
+        "Airtable",
+        "Keboola",
+        "LangChain",
+        "OpenAI"
+      ],
+      "provenance": "Official pricing page https://apify.com/pricing fetched 2026-06-14. Confirmed Free ($0, $5 prepaid usage), Starter ($29), Scale ($199), Business ($999), Enterprise (custom). 10% annual discount confirmed. Compute unit pricing: $0.20/CU (Free/Starter), $0.16/CU (Scale), $0.13/CU (Business). Verified on second fetch.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$5 prepaid platform usage included/month. Compute: $0.20/CU. Community support. Unused credits expire at cycle end.",
+          "source": {
+            "url": "https://apify.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Starter",
+          "monthlyUsd": 29,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "$29 prepaid platform usage included/month. Compute: $0.20/CU. Pay-as-you-go overages. Chat support. Bronze Store discount. Annual billing: 10% off (approx $26.10/mo).",
+          "source": {
+            "url": "https://apify.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Scale",
+          "monthlyUsd": 199,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "$199 prepaid platform usage included/month. Compute: $0.16/CU. Pay-as-you-go overages. Priority chat support. Silver Store discount. Annual billing: 10% off (approx $179.10/mo).",
+          "source": {
+            "url": "https://apify.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 999,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "$999 prepaid platform usage included/month. Compute: $0.13/CU. Pay-as-you-go overages. Dedicated account manager. Gold Store discount. Annual billing: 10% off (approx $899.10/mo).",
+          "source": {
+            "url": "https://apify.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom scraping solutions, scalable pricing, SLAs with guaranteed data, dedicated expert team. Contact sales.",
+          "source": {
+            "url": "https://apify.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "zyte",
+      "name": "Zyte",
+      "domain": "zyte.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Python",
+        "scrapy",
+        "Playwright",
+        "Splash",
+        "AWS S3",
+        "Google Cloud Storage"
+      ],
+      "provenance": "Official pricing page https://www.zyte.com/pricing/ fetched 2026-06-14. Confirmed commitment tiers: Pay-as-you-go, $100/mo, $200/mo, $500/mo, Enterprise. No flat named plans — all tiers are usage-metered with minimum monthly commitments. HTTP rates: $0.06–$1.27/1K requests depending on tier and site complexity. Browser rates: $0.48–$16.08/1K requests. No annual discount published.",
+      "plans": [
+        {
+          "name": "Pay as You Go",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "No minimum commitment. HTTP API: $0.13–$1.27 per 1,000 requests (varies by site complexity tier). Browser rendered: $1.01–$16.08 per 1,000 requests. $5 free credit trial, no subscription required.",
+          "source": {
+            "url": "https://www.zyte.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "$100/month Commitment",
+          "monthlyUsd": 100,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$100/month minimum commitment. HTTP API: $0.10–$0.95 per 1,000 requests. Browser rendered: $0.75–$12.00 per 1,000 requests. Rate varies by website complexity (Simple through Advanced).",
+          "source": {
+            "url": "https://www.zyte.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "$200/month Commitment",
+          "monthlyUsd": 200,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$200/month minimum commitment. HTTP API: $0.08–$0.76 per 1,000 requests. Browser rendered: $0.60–$9.60 per 1,000 requests.",
+          "source": {
+            "url": "https://www.zyte.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "$500/month Commitment",
+          "monthlyUsd": 500,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$500/month minimum commitment. HTTP API: $0.06–$0.61 per 1,000 requests. Browser rendered: $0.48–$7.68 per 1,000 requests.",
+          "source": {
+            "url": "https://www.zyte.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing. Further volume discounts. Contact sales.",
+          "source": {
+            "url": "https://www.zyte.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "scrapingbee",
+      "name": "ScrapingBee",
+      "domain": "scrapingbee.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Python",
+        "Node.js",
+        "PHP",
+        "Ruby",
+        "Java",
+        "Go",
+        "cURL"
+      ],
+      "provenance": "Official pricing page https://www.scrapingbee.com/pricing/ fetched 2026-06-14. Confirmed four public tiers: Freelance $49 (250K credits, 10 concurrent), Startup $99 (1M credits, 50 concurrent), Business $249 (3M credits, 100 concurrent), Business+ $599 (8M credits, 200 concurrent). Custom tier available. No annual discount published on public pricing page. proxyway.com/reviews/scrapingbee corroborates four tiers with $49 entry and $599 top self-serve tier.",
+      "plans": [
+        {
+          "name": "Freelance",
+          "monthlyUsd": 49,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "250,000 API credits/month. 10 concurrent requests. Includes JavaScript rendering, rotating proxies, geotargeting, screenshots, extraction rules. Prices exclude VAT.",
+          "source": {
+            "url": "https://www.scrapingbee.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://proxyway.com/reviews/scrapingbee",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Startup",
+          "monthlyUsd": 99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "1,000,000 API credits/month. 50 concurrent requests. Prices exclude VAT.",
+          "source": {
+            "url": "https://www.scrapingbee.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://proxyway.com/reviews/scrapingbee",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 249,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "3,000,000 API credits/month. 100 concurrent requests. Priority email support. Prices exclude VAT.",
+          "source": {
+            "url": "https://www.scrapingbee.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://proxyway.com/reviews/scrapingbee",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Business+",
+          "monthlyUsd": 599,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "8,000,000 API credits/month. 200 concurrent requests. Priority email support. Prices exclude VAT. Additional hidden tiers up to $2,400/mo visible after login per proxyway.com review.",
+          "source": {
+            "url": "https://www.scrapingbee.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://proxyway.com/reviews/scrapingbee",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Custom",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom credits and concurrency. Talk to product expert.",
+          "source": {
+            "url": "https://www.scrapingbee.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "oxylabs",
+      "name": "Oxylabs",
+      "domain": "oxylabs.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Python",
+        "Node.js",
+        "Java",
+        "C#",
+        "PHP",
+        "Go",
+        "cURL"
+      ],
+      "provenance": "Web Scraper API pricing fetched from oxylabs.io/products/scraper-api/web/pricing on 2026-06-14. Confirmed four tiers: Free trial (2K results), Micro $49 (98K results), Starter $99 (220K results), Advanced $249 (622.5K results). All paid plans include 24/7 support and dedicated account manager. Per-result pricing varies by target (Amazon: $0.50/1K; Google: $1.00/1K; other sites: $0.95–$1.15/1K). No annual discount published.",
+      "plans": [
+        {
+          "name": "Free Trial",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Up to 2,000 results. No credit card required. 10 requests/second rate limit.",
+          "source": {
+            "url": "https://oxylabs.io/products/scraper-api/web/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Micro",
+          "monthlyUsd": 49,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Up to 98,000 results/month. 50 requests/second. Top-up available up to $249. Per-result: Amazon $0.50/1K, Google $1.00/1K, other sites $0.95–$1.15/1K.",
+          "source": {
+            "url": "https://oxylabs.io/products/scraper-api/web/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Starter",
+          "monthlyUsd": 99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Up to 220,000 results/month. 50 requests/second. Top-up available up to $499. 24/7 support and dedicated account manager.",
+          "source": {
+            "url": "https://oxylabs.io/products/scraper-api/web/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Advanced",
+          "monthlyUsd": 249,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Up to 622,500 results/month. 50 requests/second. Top-up available up to $499. 24/7 support and dedicated account manager.",
+          "source": {
+            "url": "https://oxylabs.io/products/scraper-api/web/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "scrapfly",
+      "name": "Scrapfly",
+      "domain": "scrapfly.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Python",
+        "Node.js",
+        "Go",
+        "Java",
+        "PHP",
+        "cURL",
+        "Scrapy"
+      ],
+      "provenance": "Official pricing page https://scrapfly.io/pricing fetched 2026-06-14. Confirmed six tiers: Free ($0, 1K credits), Discovery ($30, 200K credits), Pro ($100, 1M credits), Startup ($250, 2.5M credits), Enterprise ($500, 5.5M credits), Custom ($1,200–$30,000+). Annual discount: 2 months free = 16% off on all paid plans.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "1,000 API credits/month. No credit card required.",
+          "source": {
+            "url": "https://scrapfly.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Discovery",
+          "monthlyUsd": 30,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 16,
+          "billingModel": "flat",
+          "notes": "200,000 API credits/month. Annual billing: 2 months free (16% off, ~$25.20/mo). Discovery plan caps at quota; no pay-as-you-go overages.",
+          "source": {
+            "url": "https://scrapfly.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 100,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 16,
+          "billingModel": "flat",
+          "notes": "1,000,000 API credits/month. Annual billing: 2 months free (16% off, ~$84/mo). Pay-as-you-go overages available once credits exhausted.",
+          "source": {
+            "url": "https://scrapfly.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Startup",
+          "monthlyUsd": 250,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 16,
+          "billingModel": "flat",
+          "notes": "2,500,000 API credits/month. Annual billing: 2 months free (16% off, ~$210/mo). Pay-as-you-go overages available.",
+          "source": {
+            "url": "https://scrapfly.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": 500,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 16,
+          "billingModel": "flat",
+          "notes": "5,500,000 API credits/month. Annual billing: 2 months free (16% off, ~$420/mo). Pay-as-you-go overages available.",
+          "source": {
+            "url": "https://scrapfly.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Custom",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "From $1,200/month up to $30,000+. Negotiated credit volume and discount. Contact sales.",
+          "source": {
+            "url": "https://scrapfly.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "scrapingant",
+      "name": "ScrapingAnt",
+      "domain": "scrapingant.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Python",
+        "Node.js",
+        "PHP",
+        "Java",
+        "cURL",
+        "MCP Server",
+        "LangChain"
+      ],
+      "provenance": "Pricing confirmed from official homepage scrapingant.com and product page fetched 2026-06-14. Five tiers: Enthusiast $19, Startup $49, Business $249, Business Pro $599, Custom $699+. All plans include 10,000 free credits/month at no charge; only successful scrapes consume credits. No annual discount found on public pages.",
+      "plans": [
+        {
+          "name": "Enthusiast",
+          "monthlyUsd": 19,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "100,000 API credits/month. Email support, docs-only integration help. 10,000 free credits included on all plans.",
+          "source": {
+            "url": "https://scrapingant.com",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Startup",
+          "monthlyUsd": 49,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "500,000 API credits/month. Priority email support, custom code snippets. 10,000 free credits included.",
+          "source": {
+            "url": "https://scrapingant.com",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 249,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "3,000,000 API credits/month. Custom proxy pools, anti-bot customization, debug sessions, dedicated account manager. 10,000 free credits included.",
+          "source": {
+            "url": "https://scrapingant.com",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Business Pro",
+          "monthlyUsd": 599,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "8,000,000 API credits/month. Priority debug sessions, dedicated account manager. 10,000 free credits included.",
+          "source": {
+            "url": "https://scrapingant.com",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Custom",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Starting from $699/month. 10M+ credits. Full enterprise onboarding and support suite. Contact sales.",
+          "source": {
+            "url": "https://scrapingant.com",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "serpapi",
+      "name": "SerpApi",
+      "domain": "serpapi.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Python",
+        "Ruby",
+        "Node.js",
+        "Java",
+        "Go",
+        "PHP",
+        "Rust",
+        "C#"
+      ],
+      "provenance": "Official pricing page https://serpapi.com/pricing fetched 2026-06-14. Confirmed six tiers: Free ($0, 250 searches/mo), Starter ($25, 1K searches), Developer ($75, 5K searches), Production ($150, 15K searches), Big Data ($275, 30K searches), Enterprise (custom). Month-to-month only; no annual discount published. Note: SerpApi is a SERP/search-results scraping API rather than a general-purpose web scraping API, but is widely cross-shopped in this category.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "250 searches/month. 50 throughput/hour. Includes U.S. Legal Shield, ZeroTrace Mode, Priority support.",
+          "source": {
+            "url": "https://serpapi.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Starter",
+          "monthlyUsd": 25,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "1,000 searches/month. 200 throughput/hour. Includes U.S. Legal Shield. Month-to-month, cancel anytime.",
+          "source": {
+            "url": "https://serpapi.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Developer",
+          "monthlyUsd": 75,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "5,000 searches/month. 1,000 throughput/hour. Includes U.S. Legal Shield.",
+          "source": {
+            "url": "https://serpapi.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Production",
+          "monthlyUsd": 150,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "15,000 searches/month. 3,000 throughput/hour. Most popular plan. Includes U.S. Legal Shield.",
+          "source": {
+            "url": "https://serpapi.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Big Data",
+          "monthlyUsd": 275,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "30,000 searches/month. 6,000 throughput/hour. Includes U.S. Legal Shield.",
+          "source": {
+            "url": "https://serpapi.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom searches/month and throughput. Includes U.S. Legal Shield, ZeroTrace Mode, Priority support. Contact sales@serpapi.com.",
+          "source": {
+            "url": "https://serpapi.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,420 @@
+{
+  "vertical": "grocery-delivery",
+  "generatedAt": "2026-06-14",
+  "methodologyNotes": "Published self-serve USD pricing was collected for each vendor on the accessed date. Where official vendor plan pages returned HTTP 406/503/timeout/CAPTCHA or rendered JS-only, pricing was independently re-verified on 2026-06-14 against official vendor help/support pages (instacart.com/instacart-plus, help.shipt.com pricing pages, kroger.com/pr/boost/faq, help.doordash.com) and reputable price-tracking comparison sources (dealnews.com). VERIFIER CORRECTIONS (2026-06-14): (1) Amazon Prime monthly corrected from a stale $12.99 (the 2018 rate) to the current $14.99/month confirmed by dealnews.com and multiple 2026 sources; annual $139/year unchanged. (2) Shipt monthly plan ($10.99/month) added — it is published self-serve on help.shipt.com and was previously omitted. (3) Target Circle 360 monthly plan ($10.99/month) added — published self-serve on help.shipt.com (Shipt powers Target Circle 360). (4) Kroger Boost corrected to its actual two-tier structure with monthly options: Boost Essential ($69/year or $8.99/month) and Boost ($99/year or $12.99/month), confirmed via thekrazycouponlady.com and grocerydive.com following the April 10 2025 price change. For all plans: minutesIncluded, callsIncluded, overagePerMin, overagePerCall are null (non-telephony vertical). hipaa/baa are null (consumer grocery delivery, no PHI). For plans billed annually, monthlyUsd is the annualized monthly equivalent (annual total divided by 12); the month-to-month rate and annual total are noted. annualDiscountPct is calculated where both monthly and annual rates are published.",
+  "vendors": [
+    {
+      "slug": "instacart-plus",
+      "name": "Instacart+",
+      "domain": "instacart.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Peacock (included with annual membership)",
+        "NYT Cooking (included with annual membership)"
+      ],
+      "provenance": "Re-verified 2026-06-14 directly from instacart.com/instacart-plus, which renders the FAQ text 'For a flat standard fee of $99/year or $9.99/month, members enjoy exclusive benefits.' Corroborated by multiple 2026 comparison sources confirming $9.99/month and $99/year unchanged.",
+      "plans": [
+        {
+          "name": "Instacart+ Monthly",
+          "monthlyUsd": 9.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$9.99 billed each month. Free delivery on eligible orders over $10; reduced service fees; 5% credit back on eligible pickup orders. Family account sharing included. 14-day free trial for new members.",
+          "source": {
+            "url": "https://www.instacart.com/instacart-plus",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Instacart+ Annual",
+          "monthlyUsd": 8.25,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "$99/year billed upfront (~$8.25/month). Same benefits as monthly plan plus Peacock and NYT Cooking. Saves ~$20.88 vs 12 months at $9.99. annualDiscountPct = (9.99-8.25)/9.99 rounded to nearest integer.",
+          "source": {
+            "url": "https://www.instacart.com/instacart-plus",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "walmart-plus",
+      "name": "Walmart+",
+      "domain": "walmart.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Paramount+ Essential (included with membership)"
+      ],
+      "provenance": "Official walmart.com/plus returned a CAPTCHA screen. Pricing re-verified 2026-06-14 against reputable 2026 comparison coverage (dealnews.com, cnbc.com/select, clark.com), all confirming $12.95/month or $98/year standard, $6.47/month or $49/year for Walmart+ Assist (income-qualified), and the $19.95/month InHome tier.",
+      "plans": [
+        {
+          "name": "Walmart+ Monthly",
+          "monthlyUsd": 12.95,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$12.95/month billed monthly. Includes free same-day delivery, Paramount+ Essential streaming, fuel discounts, Scan & Go, free shipping on Walmart.com. 30-day free trial available.",
+          "source": {
+            "url": "https://www.walmart.com/plus",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Walmart+ Annual",
+          "monthlyUsd": 8.17,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 37,
+          "billingModel": "flat",
+          "notes": "$98/year billed upfront (~$8.17/month). Same benefits as monthly. annualDiscountPct = (12.95-8.17)/12.95 rounded to nearest integer.",
+          "source": {
+            "url": "https://www.walmart.com/plus",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Walmart+ Assist Monthly",
+          "monthlyUsd": 6.47,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$6.47/month. Discounted tier for eligible college students and government-assistance recipients (SNAP, WIC, Medicaid) — approximately 50% off standard pricing. Same benefits as standard Walmart+.",
+          "source": {
+            "url": "https://www.walmart.com/plus",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Walmart+ Assist Annual",
+          "monthlyUsd": 4.08,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 37,
+          "billingModel": "flat",
+          "notes": "$49/year billed upfront (~$4.08/month) for income-qualified members. annualDiscountPct = (6.47-4.08)/6.47 rounded.",
+          "source": {
+            "url": "https://www.walmart.com/plus",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Walmart InHome Monthly",
+          "monthlyUsd": 19.95,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$19.95/month. Includes all standard Walmart+ benefits plus in-home grocery delivery — Walmart associates place groceries inside your door, garage, or refrigerator (where smart lock/compatible hardware available).",
+          "source": {
+            "url": "https://www.walmart.com/plus",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "amazon-prime",
+      "name": "Amazon Prime",
+      "domain": "amazon.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Prime Video",
+        "Amazon Music",
+        "Prime Reading",
+        "Amazon Photos",
+        "Amazon Fresh"
+      ],
+      "provenance": "Official amazon.com/prime returned HTTP 503. Pricing re-verified 2026-06-14 against dealnews.com (How Much Is Amazon Prime, June 2026), which states the standard membership is $14.99/month or $139/year, with the $139 annual rate held since 2022. Amazon Fresh same-day grocery delivery is included with Prime in eligible zip codes. VERIFIER NOTE: the previously listed $12.99 monthly figure was the 2018 price and was stale; corrected to the current $14.99/month.",
+      "plans": [
+        {
+          "name": "Prime Monthly",
+          "monthlyUsd": 14.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$14.99/month. Includes Amazon Fresh grocery delivery (in eligible zip codes), Prime Video, Amazon Music, Prime Reading, free fast shipping, and more. 30-day free trial for new members.",
+          "source": {
+            "url": "https://www.dealnews.com/features/amazon-prime/cost/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Prime Annual",
+          "monthlyUsd": 11.58,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 23,
+          "billingModel": "flat",
+          "notes": "$139/year billed upfront (~$11.58/month). Annual price held at $139 since the February 2022 increase from $119. annualDiscountPct = (14.99-11.58)/14.99 rounded.",
+          "source": {
+            "url": "https://www.dealnews.com/features/amazon-prime/cost/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "shipt",
+      "name": "Shipt",
+      "domain": "shipt.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Target (Shipt is owned by Target Corporation)"
+      ],
+      "provenance": "Re-verified 2026-06-14 directly from help.shipt.com/pricing/how-much-is-a-shipt-membership, which publishes two self-serve plans: Monthly $10.99/month and Yearly $99/year, plus a $4.99/month student membership. VERIFIER NOTE: the previously asserted 'no monthly plan exists' was incorrect — Shipt does publish a confirmable $10.99/month self-serve plan, which has been added.",
+      "plans": [
+        {
+          "name": "Shipt Monthly Membership",
+          "monthlyUsd": 10.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$10.99/month. Unlimited deliveries; free delivery on orders over $35 from Target and many other retailers (orders under $35 incur a $7 fee). 14-day free trial available.",
+          "source": {
+            "url": "https://help.shipt.com/pricing/how-much-is-a-shipt-membership",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Shipt Annual Membership",
+          "monthlyUsd": 8.25,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 25,
+          "billingModel": "flat",
+          "notes": "$99/year billed upfront (~$8.25/month). Same benefits as monthly. annualDiscountPct = (10.99-8.25)/10.99 rounded.",
+          "source": {
+            "url": "https://help.shipt.com/pricing/how-much-is-a-shipt-membership",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "dashpass",
+      "name": "DashPass (DoorDash)",
+      "domain": "doordash.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Caviar"
+      ],
+      "provenance": "Official help.doordash.com/consumers/s/article/What-is-DashPass returns full content with pricing: $9.99/month or $96/year ($8/month). Re-verified 2026-06-14 against dealnews.com (How Much Is DashPass, June 2026), confirming the same standard tiers.",
+      "plans": [
+        {
+          "name": "DashPass Monthly",
+          "monthlyUsd": 9.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$9.99/month. $0 delivery fees and reduced service fees on eligible DoorDash and Caviar orders over $12. Cancel anytime.",
+          "source": {
+            "url": "https://help.doordash.com/consumers/s/article/What-is-DashPass",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.dealnews.com/features/doordash/cost/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "DashPass Annual",
+          "monthlyUsd": 8,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "$96/year billed upfront ($8/month). Same benefits as monthly plan. Saves $23.88 vs 12 months at $9.99. annualDiscountPct = (9.99-8.00)/9.99 rounded.",
+          "source": {
+            "url": "https://help.doordash.com/consumers/s/article/What-is-DashPass",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.dealnews.com/features/doordash/cost/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "target-circle-360",
+      "name": "Target Circle 360",
+      "domain": "target.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Shipt (powers same-day delivery)"
+      ],
+      "provenance": "Official target.com Circle 360 page is JS-rendered. Pricing re-verified 2026-06-14 from help.shipt.com/how-much-is-a-target-circle-360-membership- (Shipt powers Target Circle 360 delivery), which publishes: Annual $99/year, Monthly $10.99/month, Student $4.99 (annual-verified), and a $49/year Target Circle Card holder rate. VERIFIER NOTE: the previously asserted 'no monthly plan published' was incorrect — a confirmable $10.99/month self-serve plan exists and has been added.",
+      "plans": [
+        {
+          "name": "Target Circle 360 Monthly",
+          "monthlyUsd": 10.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$10.99/month. Unlimited free same-day delivery (powered by Shipt) on orders over $35, free standard shipping with no minimum, and exclusive Target Circle deals.",
+          "source": {
+            "url": "https://help.shipt.com/how-much-is-a-target-circle-360-membership-",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Target Circle 360 Annual",
+          "monthlyUsd": 8.25,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 25,
+          "billingModel": "flat",
+          "notes": "$99/year billed upfront (~$8.25/month). Same benefits as monthly. annualDiscountPct = (10.99-8.25)/10.99 rounded.",
+          "source": {
+            "url": "https://help.shipt.com/how-much-is-a-target-circle-360-membership-",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Target Circle 360 Annual — Student/Circle Card Rate",
+          "monthlyUsd": 4.08,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 51,
+          "billingModel": "flat",
+          "notes": "$49/year (~$4.08/month) for verified students and Target Circle Card holders. Same benefits as standard annual plan. annualDiscountPct = (8.25-4.08)/8.25 rounded vs standard annual monthly equivalent.",
+          "source": {
+            "url": "https://help.shipt.com/how-much-is-a-target-circle-360-membership-",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "kroger-boost",
+      "name": "Kroger Boost",
+      "domain": "kroger.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Disney+ (with Ads, streaming option)",
+        "Hulu (with Ads, streaming option)",
+        "ESPN+ (streaming option)"
+      ],
+      "provenance": "Pricing re-verified 2026-06-14. Kroger publishes two Boost tiers. VERIFIER NOTE: the previous single-tier $99/year-only entry was materially incomplete. Per thekrazycouponlady.com and grocerydive.com (reflecting the April 10 2025 price change): Boost Essential is $69/year or $8.99/month (next-day delivery, 2x fuel points); Boost is $99/year or $12.99/month (same-day delivery, 2x fuel points, plus an annual streaming subscription option of Disney+ with Ads / Hulu with Ads / ESPN+). Monthly options for both tiers were previously omitted and have been added.",
+      "plans": [
+        {
+          "name": "Kroger Boost Essential Monthly",
+          "monthlyUsd": 8.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$8.99/month. Free next-day delivery on orders of $35 or more and 2x fuel points on qualifying grocery purchases. Requires a free Kroger Plus card.",
+          "source": {
+            "url": "https://thekrazycouponlady.com/tips/store-hacks/kroger-boost-membership",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Kroger Boost Essential Annual",
+          "monthlyUsd": 5.75,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 36,
+          "billingModel": "flat",
+          "notes": "$69/year billed upfront (~$5.75/month). Free next-day delivery on $35+ orders and 2x fuel points. Price rose from $59 to $69 on April 10 2025. annualDiscountPct = (8.99-5.75)/8.99 rounded.",
+          "source": {
+            "url": "https://thekrazycouponlady.com/tips/store-hacks/kroger-boost-membership",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Kroger Boost Monthly",
+          "monthlyUsd": 12.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$12.99/month. Free same-day delivery (in as little as two hours) on $35+ orders, 2x fuel points, and an annual streaming subscription option (Disney+ with Ads, Hulu with Ads, or ESPN+). Requires a free Kroger Plus card.",
+          "source": {
+            "url": "https://thekrazycouponlady.com/tips/store-hacks/kroger-boost-membership",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Kroger Boost Annual",
+          "monthlyUsd": 8.25,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 36,
+          "billingModel": "flat",
+          "notes": "$99/year billed upfront (~$8.25/month). Free same-day delivery, 2x fuel points, and a streaming subscription option. annualDiscountPct = (12.99-8.25)/12.99 rounded.",
+          "source": {
+            "url": "https://thekrazycouponlady.com/tips/store-hacks/kroger-boost-membership",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    }
+  ]
+}

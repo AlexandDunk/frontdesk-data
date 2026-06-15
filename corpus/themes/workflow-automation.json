@@ -1,0 +1,673 @@
+{
+  "vertical": "workflow-automation",
+  "generatedAt": "2026-06-14",
+  "methodologyNotes": "Published self-serve USD pricing for workflow-automation platforms was collected from each vendor's official pricing page (or closest public source) on the accessedAt date and normalised to USD. Zapier and Make prices were sourced from their blog/pricing pages and corroborated by third-party aggregators; both vendors only show annual-billing rates publicly, so monthlyUsd records the annualised monthly figure and GetApp month-to-month rates appear in notes. n8n Cloud publishes pricing exclusively in EUR with no public USD equivalent; monthlyUsd is therefore null and EUR figures appear in notes. Pipedream was acquired by Workday in November 2025; their pricing page is fully JS-rendered and returns no readable content, so all plans carry null prices and the provenance explains the situation. Workato and Tray.ai are enterprise-only with no public self-serve pricing. IFTTT and Activepieces publish clear self-serve USD tiers. Microsoft Power Automate is per-user/per-bot billed annually. Quote-only/enterprise/contact-sales tiers carry monthlyUsd = null throughout. All telephony fields (minutesIncluded, callsIncluded, overagePerMin, overagePerCall) are null on every plan as this is a non-telephony vertical. HIPAA/BAA/bilingual fields are null unless the vendor explicitly states support. accessedAt = 2026-06-14 on every source.",
+  "vendors": [
+    {
+      "slug": "zapier",
+      "name": "Zapier",
+      "domain": "zapier.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Gmail",
+        "Slack",
+        "Google Sheets",
+        "Salesforce",
+        "HubSpot",
+        "Trello",
+        "Airtable",
+        "Notion",
+        "Microsoft Teams",
+        "Dropbox"
+      ],
+      "provenance": "Plan names and annual billing prices sourced from zapier.com/blog/zapier-pricing/ on 2026-06-14 (official Zapier blog post detailing current pricing). Month-to-month Professional ($29.99) and Team ($103.50) rates corroborated by getapp.com/content-management-software/a/zapier/pricing/ on 2026-06-14. The main zapier.com/pricing page is fully JS-rendered and returns no readable pricing content.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "100 tasks/month; unlimited Zaps; two-step Zaps; access to Tables, Forms, AI tools (Copilot).",
+          "source": {
+            "url": "https://zapier.com/blog/zapier-pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/content-management-software/a/zapier/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 19.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$19.99/mo billed annually (annual commitment required; 14-day free trial). Month-to-month rate published as $29.99/mo by GetApp. 750 tasks/month; unlimited Zaps; multi-step workflows; premium apps; Filters, Paths, Formatter; extra tasks billed per task above quota.",
+          "source": {
+            "url": "https://zapier.com/blog/zapier-pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/content-management-software/a/zapier/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Team",
+          "monthlyUsd": 69,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$69/mo billed annually (annual commitment required; 14-day free trial). Month-to-month rate published as $103.50/mo by GetApp. Includes everything in Pro plus shared folders, shared app connections, user roles and permissions, SAML SSO.",
+          "source": {
+            "url": "https://zapier.com/blog/zapier-pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/content-management-software/a/zapier/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom quote. Adds enterprise-grade security, governance tools, usage analytics, SAML SSO, and a dedicated technical account manager.",
+          "source": {
+            "url": "https://zapier.com/blog/zapier-pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "make",
+      "name": "Make",
+      "domain": "make.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Gmail",
+        "Google Sheets",
+        "Slack",
+        "Salesforce",
+        "HubSpot",
+        "Shopify",
+        "Airtable",
+        "Notion",
+        "Trello",
+        "Discord",
+        "Facebook",
+        "Twitter"
+      ],
+      "provenance": "Prices sourced directly from make.com/en/pricing on 2026-06-14. Monthly billing prices ($9/$16/$29) confirmed on the same visit. Annual billing saves '15% or more' per the official page; exact annual per-month figures not shown explicitly. Billing unit is 'operations' (each module action = 1 operation).",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "1,000 operations/month; access to 3,000+ standard apps; no time limit. Operations expire monthly.",
+          "source": {
+            "url": "https://www.make.com/en/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Core",
+          "monthlyUsd": 9,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 15,
+          "billingModel": "flat",
+          "notes": "$9/mo when billed monthly for 10,000 operations/month base quota. Annual billing saves 15% or more (exact annual price not shown on page). Credit slider allows higher operation tiers at proportionally higher prices. Additional 10,000-operation bundles purchasable. Auto-purchasing of credits available.",
+          "source": {
+            "url": "https://www.make.com/en/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 16,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 15,
+          "billingModel": "flat",
+          "notes": "$16/mo when billed monthly for 10,000 operations/month base quota. Annual billing saves 15% or more. Recommended tier per the page. Adds priority support and advanced scheduling.",
+          "source": {
+            "url": "https://www.make.com/en/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Teams",
+          "monthlyUsd": 29,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 15,
+          "billingModel": "flat",
+          "notes": "$29/mo when billed monthly for 10,000 operations/month base quota. Annual billing saves 15% or more. Adds team workspaces, role-based permissions, shared connections.",
+          "source": {
+            "url": "https://www.make.com/en/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom quote via sales. Adds SSO, dedicated support, custom data residency, advanced security.",
+          "source": {
+            "url": "https://www.make.com/en/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "n8n-cloud",
+      "name": "n8n Cloud",
+      "domain": "n8n.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Slack",
+        "GitHub",
+        "Google Sheets",
+        "Airtable",
+        "HubSpot",
+        "Salesforce",
+        "Notion",
+        "Stripe",
+        "PostgreSQL",
+        "MySQL"
+      ],
+      "provenance": "Prices read from n8n.io/pricing/ on 2026-06-14. n8n Cloud publishes pricing exclusively in EUR; no USD prices are shown anywhere on the pricing page. Annual-billing EUR figures: Starter €20/mo, Pro €50/mo, Business €667/mo. The page notes 'Save 17%' for annual vs monthly but monthly EUR rates are not displayed. Because USD prices are not published, monthlyUsd is null for all plans; EUR figures are recorded in plan notes. The Community (self-hosted, open-source) edition is free.",
+      "plans": [
+        {
+          "name": "Community (Self-hosted)",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free self-hosted open-source edition available on GitHub (192K+ stars). No cloud hosting included; user manages own infrastructure.",
+          "source": {
+            "url": "https://n8n.io/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Starter",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "EUR-only pricing: €20/mo billed annually (monthly rate not published; annual saves 17%). 2,500 workflow executions/month; 1 shared project; 5 concurrent executions; unlimited users; 50 AI credits. USD price not published by vendor.",
+          "source": {
+            "url": "https://n8n.io/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "EUR-only pricing: €50/mo billed annually (monthly rate not published; annual saves 17%). 10,000 workflow executions/month; 3 shared projects; 20 concurrent executions; 7-day insights; 150 AI credits. USD price not published by vendor.",
+          "source": {
+            "url": "https://n8n.io/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "EUR-only pricing: €667/mo billed annually (monthly rate not published; annual saves 17%). 40,000 workflow executions/month; 6 shared projects; SSO/SAML/LDAP; 30-day insights; Git version control. 50% startup discount available for teams under 20 employees. USD price not published by vendor.",
+          "source": {
+            "url": "https://n8n.io/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom quote. Unlimited projects; 200+ concurrent executions; 365-day insights; 1,000 AI credits (cloud only); dedicated support with SLA; hosted or self-hosted deployment.",
+          "source": {
+            "url": "https://n8n.io/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "pipedream",
+      "name": "Pipedream",
+      "domain": "pipedream.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Slack",
+        "GitHub",
+        "Google Sheets",
+        "Airtable",
+        "HubSpot",
+        "Salesforce",
+        "Notion",
+        "Stripe",
+        "OpenAI",
+        "Twitter"
+      ],
+      "provenance": "Pipedream was acquired by Workday in November 2025 (announced on pipedream.com/blog on 2025-11-18). As of 2026-06-14 the pipedream.com/pricing page is fully JS-rendered and returns only the text 'Pipedream' with no pricing content accessible via HTTP fetch. The billing model uses compute credits (1 credit per 30 seconds at 256 MB memory). Paid plans in the range of $29–$150/mo were referenced on alternativeto.net but without plan-level detail. Because no authoritative USD pricing is accessible, all plans carry monthlyUsd = null.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free tier exists with limited daily credits, limited active workflows, and limited connected accounts. Community support via forum and Slack.",
+          "source": {
+            "url": "https://pipedream.com/docs/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Paid plans",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "One or more paid tiers exist above Free. Billing is credit-based (compute time at memory tiers). USD prices not retrievable as of 2026-06-14 due to JS-only pricing page and Workday acquisition in progress. AlternativeTo references plans from $29 to $150/mo but without plan-level granularity.",
+          "source": {
+            "url": "https://pipedream.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "workato",
+      "name": "Workato",
+      "domain": "workato.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Salesforce",
+        "ServiceNow",
+        "SAP",
+        "Workday",
+        "Slack",
+        "Microsoft Teams",
+        "NetSuite",
+        "HubSpot"
+      ],
+      "provenance": "Pricing page workato.com/pricing accessed 2026-06-14. Page is titled 'Pricing built for flexibility' but contains no published plan prices or tier names; directs users to 'Schedule a demo' or contact sales. Confirmed quote-only model.",
+      "plans": [
+        {
+          "name": "Workspace (quote-only)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Pricing is entirely quote-based. No self-serve tiers or published USD prices. Enterprise automation platform targeting mid-market and enterprise buyers. Contact sales for pricing.",
+          "source": {
+            "url": "https://workato.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "tray-ai",
+      "name": "Tray.ai",
+      "domain": "tray.ai",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Salesforce",
+        "HubSpot",
+        "Marketo",
+        "Slack",
+        "ServiceNow",
+        "Workday",
+        "NetSuite"
+      ],
+      "provenance": "Pricing page tray.ai/pricing (redirected from tray.io/pricing) accessed 2026-06-14. Page explicitly states 'Our pricing is based on your usage and the features you need. Contact our sales team for a customized quote.' Three plan tiers (Pro, Team, Enterprise) listed by name only. HIPAA support noted for the Enterprise tier on the feature list. No public USD prices.",
+      "plans": [
+        {
+          "name": "Pro",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only. For specific use cases. 3 workspaces; 7-day insights/logs; free trial available.",
+          "source": {
+            "url": "https://tray.ai/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Team",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only. Popular tier. For multiple use cases within a department. 20 workspaces; 30-day insights; expandable log retention.",
+          "source": {
+            "url": "https://tray.ai/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only. For multiple departments and partner integrations. Unlimited workspaces; 180-day insights; advanced on-premise deployment; SSO; HIPAA compliance; regional hosting.",
+          "source": {
+            "url": "https://tray.ai/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "ifttt",
+      "name": "IFTTT",
+      "domain": "ifttt.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Google Assistant",
+        "Amazon Alexa",
+        "Philips Hue",
+        "Twitter",
+        "Instagram",
+        "Slack",
+        "Dropbox",
+        "Google Drive",
+        "Gmail",
+        "Spotify"
+      ],
+      "provenance": "Prices sourced directly from ifttt.com/plans on 2026-06-14. Both monthly and annual billing rates confirmed. Page advertises 'SAVE 40%' with annual billing toggle; however the computed per-month rate for annual ($35.88/12 = $2.99 and $107.88/12 = $8.99) equals the stated monthly rate, indicating the displayed monthly prices are already the annual-billing rate. Annual billing is lump-sum prepayment at the same effective monthly rate.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "2 Applets; standard Applet speeds; unlimited Applet runs; free mobile app; simple no-code integrations; 30-day onboarding support.",
+          "source": {
+            "url": "https://ifttt.com/plans",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 2.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 0,
+          "billingModel": "flat",
+          "notes": "$2.99/mo billed monthly or $35.88 billed annually (same effective monthly rate). 20 Applets; fastest Applet speeds; multi-action Applets; Webhooks; Twitter Applets; increased rate limits; exclusive triggers and actions; customer support.",
+          "source": {
+            "url": "https://ifttt.com/plans",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pro+",
+          "monthlyUsd": 8.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 0,
+          "billingModel": "flat",
+          "notes": "$8.99/mo billed monthly or $107.88 billed annually (same effective monthly rate). Unlimited Applets; everything in Pro plus AI services; connect multiple accounts; Queries and filter code; prioritized customer support.",
+          "source": {
+            "url": "https://ifttt.com/plans",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "activepieces",
+      "name": "Activepieces",
+      "domain": "activepieces.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Slack",
+        "Gmail",
+        "Google Sheets",
+        "HubSpot",
+        "Notion",
+        "Airtable",
+        "OpenAI",
+        "Stripe",
+        "MySQL",
+        "PostgreSQL"
+      ],
+      "provenance": "Prices sourced from activepieces.com/pricing on 2026-06-14. Standard plan is usage-based: 10 active flows free, then $5/active flow/month. Ultimate plan is custom/enterprise with annual contract. Open-source Community Edition (MIT licensed) available for self-hosting.",
+      "plans": [
+        {
+          "name": "Community (Self-hosted)",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "MIT-licensed open-source edition, self-hosted. Core features only; requires own infrastructure.",
+          "source": {
+            "url": "https://www.activepieces.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Standard",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Usage-based cloud plan: first 10 active flows are free. Each additional active flow costs $5/month. Unlimited runs on all flows. Includes AI agents, unlimited MCP servers, unlimited tables, community support. Effective cost = $5 × (active flows above 10).",
+          "source": {
+            "url": "https://www.activepieces.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Ultimate",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Annual contract; custom pricing via sales. Adds team/personal projects, piece access controls, global connections, custom RBAC, SSO, audit logs, and compliance controls.",
+          "source": {
+            "url": "https://www.activepieces.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "microsoft-power-automate",
+      "name": "Microsoft Power Automate",
+      "domain": "powerautomate.microsoft.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Microsoft 365",
+        "SharePoint",
+        "Dynamics 365",
+        "Dataverse",
+        "Teams",
+        "OneDrive",
+        "Azure",
+        "Salesforce",
+        "ServiceNow",
+        "SAP"
+      ],
+      "provenance": "Prices read from microsoft.com/en-us/power-platform/products/power-automate/pricing (redirected from powerautomate.microsoft.com/en-us/pricing/) on 2026-06-14. All prices are annual-billing rates. No free plan beyond 30-day trial. Per-user and per-bot billing models confirmed on the official page.",
+      "plans": [
+        {
+          "name": "Free Trial",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "30-day trial only. Cloud flows with standard connectors; process and task mining (50 MB); 250 MB Dataverse database. Not a perpetual free plan.",
+          "source": {
+            "url": "https://www.microsoft.com/en-us/power-platform/products/power-automate/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Power Automate Premium",
+          "monthlyUsd": 15,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$15/user/month billed annually. Cloud flows (DPA); attended desktop flows (RPA); process/task mining (50 MB); 50 MB Dataverse database; 200 MB file capacity. Month-to-month rate not published.",
+          "source": {
+            "url": "https://www.microsoft.com/en-us/power-platform/products/power-automate/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Power Automate Process",
+          "monthlyUsd": 150,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$150/bot/month billed annually (per-bot, not per-user). Cloud flows; unattended desktop RPA flows; standard/premium/custom connectors; 50 MB Dataverse database; 200 MB file capacity.",
+          "source": {
+            "url": "https://www.microsoft.com/en-us/power-platform/products/power-automate/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Power Automate Hosted Process",
+          "monthlyUsd": 215,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$215/bot/month billed annually. Includes everything in Process plus a Microsoft-hosted virtual machine (no need to provision own VM for unattended RPA). Same Dataverse entitlements.",
+          "source": {
+            "url": "https://www.microsoft.com/en-us/power-platform/products/power-automate/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    }
+  ]
+}

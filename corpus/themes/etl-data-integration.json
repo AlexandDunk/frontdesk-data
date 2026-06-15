@@ -1,0 +1,696 @@
+{
+  "vertical": "etl-data-integration",
+  "generatedAt": "2026-06-14",
+  "methodologyNotes": "Prices fetched directly from each vendor's official /pricing page via WebFetch on 2026-06-14. Fivetran uses consumption-based MAR (Monthly Active Rows) pricing with no fixed monthly floor on Standard/Enterprise/Business Critical tiers — those plans have monthlyUsd=null as the cost varies entirely by data volume. Stitch Advanced and Premium are billed annually only; monthlyUsd reflects the annualized monthly rate. Airbyte Cloud has two product lines (Agents and Data Replication); both are represented. Hevo Starter price listed is the monthly (non-annual) rate; annual rate is 20% lower. Matillion publishes no USD figures — all plans are consumption-credit-based with custom quotes. Rivery Base plan is pay-as-you-go at $0.90/BDU credit with no stated monthly minimum, so monthlyUsd=null. Where a vendor's official page returned 403/404, the corroboration source is a third-party aggregator that retrieved pricing from the vendor's public page. HIPAA/BAA noted only when explicitly stated by the vendor.",
+  "vendors": [
+    {
+      "slug": "fivetran",
+      "name": "Fivetran",
+      "domain": "fivetran.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Salesforce",
+        "Google Analytics",
+        "HubSpot",
+        "Shopify",
+        "Stripe",
+        "Amazon Redshift",
+        "Snowflake",
+        "BigQuery",
+        "PostgreSQL",
+        "MySQL",
+        "Facebook Ads",
+        "Google Ads",
+        "Zendesk",
+        "Jira",
+        "GitHub"
+      ],
+      "provenance": "Official pricing page https://www.fivetran.com/pricing fetched 2026-06-14. Fivetran uses a consumption-based MAR (Monthly Active Rows) model. Free plan includes 500K MAR/month at $0. Standard, Enterprise, and Business Critical plans bill per MAR consumed — no fixed monthly floor is published on the pricing page, so those plans carry monthlyUsd=null. Up to 22% annual discount available on Standard. PCI DSS Level 1 noted for Business Critical; HIPAA not explicitly mentioned on the pricing page.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "500K MAR/month, 3.5K MAR activations, 5K model runs/month. Access to core platform functionality. 700+ connectors available.",
+          "source": {
+            "url": "https://www.fivetran.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Standard",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 22,
+          "billingModel": "custom",
+          "notes": "Consumption-based per MAR. Includes 700+ connectors, unlimited users, 15-minute syncs, dbt Core integration, RBAC, SSH tunnels. $5 base charge per connection applies. Cost scales with monthly active rows synced. Up to 22% annual discount available.",
+          "source": {
+            "url": "https://www.fivetran.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Consumption-based per MAR. Adds 1-minute syncs, Audience Hub, custom roles, VPN tunnels, cloud provider choice. Annual contract required for VPN access.",
+          "source": {
+            "url": "https://www.fivetran.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Business Critical",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Consumption-based per MAR. Adds customer-managed encryption keys, PCI DSS Level 1, private networking. All Enterprise features included.",
+          "source": {
+            "url": "https://www.fivetran.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "airbyte",
+      "name": "Airbyte",
+      "domain": "airbyte.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Salesforce",
+        "HubSpot",
+        "BigQuery",
+        "Snowflake",
+        "Redshift",
+        "PostgreSQL",
+        "MySQL",
+        "MongoDB",
+        "Google Analytics",
+        "Facebook Ads",
+        "Stripe",
+        "Zendesk",
+        "Slack",
+        "GitHub",
+        "Amplitude"
+      ],
+      "provenance": "Official pricing page https://airbyte.com/pricing fetched 2026-06-14. Airbyte has two product lines: Airbyte Agents (AI/MCP-oriented) and Data Replication (traditional ETL). Airbyte Core is open-source/self-hosted (always free). HIPAA/BAA not mentioned on pricing page. 600+ replication connectors advertised.",
+      "plans": [
+        {
+          "name": "Core (Open Source)",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Self-managed open-source deployment. Always free. Full control over infrastructure.",
+          "source": {
+            "url": "https://airbyte.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Agents Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Airbyte Agents product line. 1,000 AOs/month. Single user. API and MCP access. Daily Context Store refreshes. Community and AI support.",
+          "source": {
+            "url": "https://airbyte.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Agents Individual",
+          "monthlyUsd": 29,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Airbyte Agents product line. 5,000 AOs/month included; overage at $0.004/AO. Single user. Hourly Context Store refresh. Standard and AI support.",
+          "source": {
+            "url": "https://airbyte.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Agents Team",
+          "monthlyUsd": 299,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Airbyte Agents product line. 10,000 AOs/month included; overage at $0.005/AO. Multiple users/workspaces. Parallel execution. Standard and AI support.",
+          "source": {
+            "url": "https://airbyte.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Data Replication Standard",
+          "monthlyUsd": 10,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Traditional ETL/ELT product line. Starting at $10/month; volume-based pricing scales with data synced. Fully managed cloud hosting. 600+ connectors. Quick deployment.",
+          "source": {
+            "url": "https://airbyte.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Data Replication Plus",
+          "monthlyUsd": 500,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Annual plan billed at $500/month equivalent. 50 credits included. 15-minute syncs. Custom mappings. Aimed at teams needing predictable annual billing.",
+          "source": {
+            "url": "https://airbyte.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Data Replication Pro",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Multiple workspaces, SSO, RBAC, premium support. Capacity-based (Data Workers). Contact sales for pricing.",
+          "source": {
+            "url": "https://airbyte.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "stitch-data",
+      "name": "Stitch",
+      "domain": "stitchdata.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Salesforce",
+        "HubSpot",
+        "Google Analytics",
+        "Facebook Ads",
+        "MySQL",
+        "PostgreSQL",
+        "MongoDB",
+        "Amazon S3",
+        "Redshift",
+        "Snowflake",
+        "BigQuery",
+        "Zendesk",
+        "Stripe",
+        "Shopify"
+      ],
+      "provenance": "Official pricing page https://www.stitchdata.com/pricing/ fetched 2026-06-14. Standard plan available monthly or annually; Advanced and Premium billed annually only. HIPAA and BAA signing explicitly listed as a feature on Advanced and Premium plans. US pricing only per the page note.",
+      "plans": [
+        {
+          "name": "Standard",
+          "monthlyUsd": 100,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Starts at $100/month for 5M rows/month. Scales up to 300M rows/month. 1 destination, 10 standard sources, 5 users, 7-day historical sync. Available monthly or annually. Rows-based usage pricing.",
+          "source": {
+            "url": "https://www.stitchdata.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Advanced",
+          "monthlyUsd": 1500,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Billed annually only ($18,000/year). 100M rows/month. 3 destinations, unlimited enterprise sources, unlimited users, 60-day extraction log retention. HIPAA compliance with BAA signing included.",
+          "source": {
+            "url": "https://www.stitchdata.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": 3000,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Billed annually only ($36,000/year). 1B rows/month. 5 destinations, unlimited enterprise sources, unlimited users. HIPAA compliance with BAA signing included.",
+          "source": {
+            "url": "https://www.stitchdata.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/data-management-software/a/stitch/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "hevo-data",
+      "name": "Hevo Data",
+      "domain": "hevodata.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Amazon RDS",
+        "PostgreSQL",
+        "MySQL",
+        "MongoDB",
+        "Salesforce",
+        "HubSpot",
+        "Google Analytics",
+        "Facebook Ads",
+        "Stripe",
+        "Shopify",
+        "Amplitude",
+        "Mixpanel",
+        "Zendesk",
+        "Kafka",
+        "Google Sheets"
+      ],
+      "provenance": "Official pricing page https://hevodata.com/pricing/ fetched 2026-06-14. Free plan is 0$/month up to 1M events. Starter monthly price is $299/month (month-to-month); annual rate is $239/month (20% discount). Professional monthly price is $849/month (month-to-month); annual rate is $679/month. Business Critical is custom/contact sales. HIPAA not explicitly mentioned on the pricing page (GetApp aggregator lists HIPAA for Business tier, but official page does not confirm on pricing page — set to null).",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Up to 1M events/month. 1-hour sync scheduling. Up to 5 users. 50+ free connectors.",
+          "source": {
+            "url": "https://hevodata.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Starter",
+          "monthlyUsd": 299,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "Month-to-month price $299/month; annual price $239/month (20% discount). Starts at 5M events/month; tiers for 20M and 50M available. Up to 10 users. 150+ connectors. dbt integration. SSH/SSL. 24x7 live chat support.",
+          "source": {
+            "url": "https://hevodata.com/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/data-management-software/a/hevo/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Professional",
+          "monthlyUsd": 849,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "Month-to-month price $849/month; annual price $679/month (20% discount). 20M, 50M, or 100M events/month tiers available. Unlimited users. Hevo APIs. Reverse SSH. Add-ons available.",
+          "source": {
+            "url": "https://hevodata.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Business Critical",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing. Includes streaming pipelines, RBAC, SSO, multiple workspaces, VPC peering, advanced security. Contact sales.",
+          "source": {
+            "url": "https://hevodata.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "matillion",
+      "name": "Matillion",
+      "domain": "matillion.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Snowflake",
+        "BigQuery",
+        "Redshift",
+        "Databricks",
+        "Salesforce",
+        "HubSpot",
+        "SAP",
+        "Oracle",
+        "MySQL",
+        "PostgreSQL",
+        "Amazon S3",
+        "Google Cloud Storage",
+        "Azure Blob Storage"
+      ],
+      "provenance": "Official pricing page https://www.matillion.com/pricing fetched 2026-06-14. No USD prices are published. All three plans (Developer, Teams, Scale) use a consumption-credit model with annual subscriptions but display no dollar figures. Pricing requires contacting sales or starting a trial. monthlyUsd=null on all plans.",
+      "plans": [
+        {
+          "name": "Developer",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "1 developer user, unlimited admin users. Consumption-based credit model. Unlimited projects, pre-built connectors, low-code canvas, SQL/Python support, built-in Git. Free trial available. No public USD price.",
+          "source": {
+            "url": "https://www.matillion.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Teams",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "5 developer users, unlimited admin users. Annual subscription with included credits. Audit log, standard customer support, SLA. Most Popular designation. No public USD price.",
+          "source": {
+            "url": "https://www.matillion.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Scale",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "5 developer users, unlimited admin users. Annual subscription. Custom SSO, hybrid cloud deployment, data lineage, streaming CDC, 180+ day log retention, bring-your-own Git, Premium Support. No public USD price.",
+          "source": {
+            "url": "https://www.matillion.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "portable",
+      "name": "Portable",
+      "domain": "portable.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "NetSuite",
+        "Salesforce",
+        "HubSpot",
+        "Google Ads",
+        "Facebook Ads",
+        "TikTok Ads",
+        "Shopify",
+        "Stripe",
+        "Zendesk",
+        "Jira",
+        "PostgreSQL",
+        "MySQL",
+        "Amazon S3",
+        "Snowflake",
+        "GitHub"
+      ],
+      "provenance": "Official pricing page https://portable.io/pricing fetched 2026-06-14. Prices confirmed on two fetches. HIPAA not mentioned. 1500+ connectors advertised. Enterprise plan requires contact sales.",
+      "plans": [
+        {
+          "name": "Standard",
+          "monthlyUsd": 1800,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "6 enabled data flows. 1-hour sync frequency. 14-day free trial. 9-5 priority support. Standard sources only. Unlimited data volumes. Incremental syncing. First 3 months integration services included.",
+          "source": {
+            "url": "https://portable.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 2800,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "15 enabled data flows. 15-minute sync frequency. 14-day free trial. 24x7 premium support with dedicated Slack channel. Standard and Pro sources. All destinations. Developer API and Webhooks. Integration services included.",
+          "source": {
+            "url": "https://portable.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Advanced",
+          "monthlyUsd": 4200,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "25 enabled data flows. 15-minute sync frequency. 24x7 premium support with dedicated Slack channel. Standard, Pro, and Advanced sources. All destinations. Developer API and Webhooks. Integration services included.",
+          "source": {
+            "url": "https://portable.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing. SSO/SAML, enterprise sources (NetSuite, Dynamics 365, Dynamics F&O), custom SLAs. Contact sales.",
+          "source": {
+            "url": "https://portable.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "integrate-io",
+      "name": "Integrate.io",
+      "domain": "integrate.io",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Salesforce",
+        "HubSpot",
+        "Shopify",
+        "Amazon Redshift",
+        "Snowflake",
+        "BigQuery",
+        "PostgreSQL",
+        "MySQL",
+        "Google Analytics",
+        "Facebook Ads",
+        "Stripe",
+        "Zendesk",
+        "Amazon S3"
+      ],
+      "provenance": "Official pricing page https://www.integrate.io/pricing/ fetched 2026-06-14. Core plan at $1,999/month is publicly listed. Enterprise/custom tier includes HIPAA and Healthcare Readiness but has no public price. HIPAA explicitly mentioned for the enterprise tier on the pricing page. BAA not specifically mentioned.",
+      "plans": [
+        {
+          "name": "Core",
+          "monthlyUsd": 1999,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Fixed monthly flat fee. Unlimited connectors, unlimited data volumes, unlimited pipelines. 30-day onboarding included. No row-based or usage overage charges. Free trial available.",
+          "source": {
+            "url": "https://www.integrate.io/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing. Adds GPU for AI/ML workloads, enterprise security and compliance, HIPAA and Healthcare Readiness, access and identity control, tailored support. Contact sales.",
+          "source": {
+            "url": "https://www.integrate.io/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "rivery",
+      "name": "Rivery",
+      "domain": "rivery.io",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Salesforce",
+        "HubSpot",
+        "Google Analytics",
+        "Facebook Ads",
+        "Snowflake",
+        "BigQuery",
+        "Redshift",
+        "PostgreSQL",
+        "MySQL",
+        "Amazon S3",
+        "Stripe",
+        "Zendesk"
+      ],
+      "provenance": "Official pricing page https://rivery.io/pricing/ fetched 2026-06-14. Base plan is pay-as-you-go at $0.90/BDU credit with no stated monthly minimum — monthlyUsd=null as effective cost depends entirely on usage. Professional, Pro Plus, and Enterprise require contact sales. SOC 2 Type II and HIPAA compliance listed on the pricing page as available starting at the Professional tier (not the Base tier). 14-day free trial includes 1,000 credits (worth ~$1,200 at list rate).",
+      "plans": [
+        {
+          "name": "Base",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Pay-as-you-go at $0.90/BDU credit. No stated monthly minimum. 2 users, 1 environment. Free trial: 14 days or 1,000 free credits (worth ~$1,200), whichever expires first.",
+          "source": {
+            "url": "https://rivery.io/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Professional",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "BDU credit-based usage pricing. Unlimited users, 2 environments. Contact sales for pricing. Free trial available.",
+          "source": {
+            "url": "https://rivery.io/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pro Plus",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "BDU credit-based usage pricing. Unlimited users, 3 environments. Contact sales for pricing.",
+          "source": {
+            "url": "https://rivery.io/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "BDU credit-based usage pricing. Unlimited users, unlimited environments. Contact sales for pricing.",
+          "source": {
+            "url": "https://rivery.io/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    }
+  ]
+}

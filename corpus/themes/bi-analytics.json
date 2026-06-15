@@ -1,0 +1,646 @@
+{
+  "vertical": "bi-analytics",
+  "generatedAt": "2026-06-14",
+  "methodologyNotes": "Pricing fetched from official vendor pages where accessible (Microsoft Power BI, Metabase, ThoughtSpot, Looker/Google Cloud, Mode, GoodData). Tableau's official pricing page (tableau.com/pricing) returned HTTP 403 on all attempts; prices sourced from GetApp aggregator (corroborated by two independent GetApp fetches). Qlik's official pricing page returned no machine-readable pricing data; Business tier price sourced from GetApp aggregator. Sigma Computing has no published self-serve pricing on its official website; starting price reference sourced from SoftwareAdvice aggregator. All monetaryUsd figures represent the effective per-seat monthly cost at the smallest self-serve unit, billed annually where that is the only published rate. null = quote-only or not self-serve. accessedAt = 2026-06-14 on all sources.",
+  "vendors": [
+    {
+      "slug": "tableau",
+      "name": "Tableau",
+      "domain": "tableau.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Salesforce",
+        "Snowflake",
+        "Google BigQuery",
+        "Amazon Redshift",
+        "Microsoft Azure",
+        "SAP",
+        "Slack",
+        "Tableau Prep"
+      ],
+      "provenance": "Official tableau.com/pricing page returned HTTP 403 on all fetch attempts (2026-06-14). Prices sourced from GetApp aggregator at getapp.com/business-intelligence-analytics-software/a/tableau/pricing/ — Viewer $15, Explorer $42, Creator $75 per user per month — corroborated by a second independent GetApp fetch returning identical figures. Annual vs. monthly billing distinction not disclosed on the aggregator page; Tableau historically bills annually but GetApp lists these as monthly rates without qualification.",
+      "plans": [
+        {
+          "name": "Tableau Viewer",
+          "monthlyUsd": 15,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Read-only access: interact with dashboards, download data, receive alerts. Price from GetApp aggregator; official page inaccessible (403).",
+          "source": {
+            "url": "https://www.getapp.com/business-intelligence-analytics-software/a/tableau/pricing/",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/business-intelligence-analytics-software/a/thoughtspot/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Tableau Explorer",
+          "monthlyUsd": 42,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Author from curated data; edit existing workbooks; manage permissions. Price from GetApp aggregator.",
+          "source": {
+            "url": "https://www.getapp.com/business-intelligence-analytics-software/a/tableau/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Tableau Creator",
+          "monthlyUsd": 75,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Full access including Tableau Desktop and Prep Builder; create new data sources and workbooks. Price from GetApp aggregator.",
+          "source": {
+            "url": "https://www.getapp.com/business-intelligence-analytics-software/a/tableau/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "looker",
+      "name": "Looker",
+      "domain": "cloud.google.com/looker",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Google BigQuery",
+        "Snowflake",
+        "Amazon Redshift",
+        "PostgreSQL",
+        "MySQL",
+        "Databricks",
+        "Looker Studio",
+        "Google Sheets"
+      ],
+      "provenance": "Fetched official Google Cloud Looker pricing page at cloud.google.com/looker/pricing (2026-06-14). Page confirms all three editions (Standard, Enterprise, Embed) are quote-only annual subscriptions with no self-serve public USD prices. Starting price reference on GetApp aggregator listed as $2,000/month but this is an editorial estimate, not a published vendor price — not recorded here to avoid fabrication.",
+      "plans": [
+        {
+          "name": "Standard",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "For small organizations (<50 users). Includes 1 production instance, 10 Standard Users, 2 Developer Users, up to 1,000 query API calls/month. Annual commitment only (1, 2, or 3-year terms). Contact sales for quote.",
+          "source": {
+            "url": "https://cloud.google.com/looker/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Enhanced security for internal BI. Includes 1 production instance, 10 Standard Users, 2 Developer Users, up to 100,000 query API calls/month. Contact sales for quote.",
+          "source": {
+            "url": "https://cloud.google.com/looker/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Embed",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "For external/customer-facing embedded analytics and custom applications. Up to 500,000 query API calls/month. Contact sales for quote.",
+          "source": {
+            "url": "https://cloud.google.com/looker/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "power-bi",
+      "name": "Microsoft Power BI",
+      "domain": "powerbi.microsoft.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Microsoft Excel",
+        "Azure Synapse",
+        "Azure Data Lake",
+        "SQL Server",
+        "Salesforce",
+        "Google Analytics",
+        "SharePoint",
+        "Teams",
+        "Dynamics 365",
+        "SAP"
+      ],
+      "provenance": "Fetched official Microsoft pricing page at microsoft.com/en-us/power-platform/products/power-bi/pricing (2026-06-14). Page explicitly lists Free (no charge), Power BI Pro $14.00/user/month paid yearly, Power BI Premium Per User $24.00/user/month paid yearly. These are annual-commitment rates; month-to-month pricing not published on the page.",
+      "plans": [
+        {
+          "name": "Power BI Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Included in Microsoft Fabric free account. Create and view personal reports; cannot share or publish to others without Pro/Premium.",
+          "source": {
+            "url": "https://www.microsoft.com/en-us/power-platform/products/power-bi/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Power BI Pro",
+          "monthlyUsd": 14,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Paid yearly (annual commitment). Publish, share, and collaborate on reports. Included in Microsoft 365 E5 / Office 365 E5.",
+          "source": {
+            "url": "https://www.microsoft.com/en-us/power-platform/products/power-bi/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://learn.microsoft.com/en-us/power-bi/fundamentals/service-features-license-type",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Power BI Premium Per User",
+          "monthlyUsd": 24,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Paid yearly. All Pro features plus larger model sizes (up to 100 GB), 48 refreshes/day, advanced AI, dataflows. All users in a PPU workspace must also have PPU license.",
+          "source": {
+            "url": "https://www.microsoft.com/en-us/power-platform/products/power-bi/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://learn.microsoft.com/en-us/power-bi/fundamentals/service-features-license-type",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Power BI Premium (Capacity)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Fabric F-SKU or Power BI P-SKU capacity licenses. Pricing varies by capacity size; contact Microsoft for quote. Enables free users to consume Pro/PPU-created content.",
+          "source": {
+            "url": "https://www.microsoft.com/en-us/power-platform/products/power-bi/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "metabase",
+      "name": "Metabase",
+      "domain": "metabase.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "PostgreSQL",
+        "MySQL",
+        "Snowflake",
+        "BigQuery",
+        "Redshift",
+        "MongoDB",
+        "SQLite",
+        "SQL Server",
+        "Presto",
+        "Druid"
+      ],
+      "provenance": "Fetched official Metabase pricing page at metabase.com/pricing on 2026-06-14. Page clearly lists Open Source (free), Starter ($100/month base + $6/user/month beyond 5 included; annual: $1,080/year + $65/year per user), Pro ($575/month base + $12/user/month beyond 10 included; annual: $6,210/year + $130/year per user), Enterprise (custom, starts at $20,000/year). Second fetch of the same official page on same date confirmed all figures identically.",
+      "plans": [
+        {
+          "name": "Open Source",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Self-hosted under AGPL license. Unlimited questions, dashboards, and data source connections. No cloud hosting, backups, or SSO.",
+          "source": {
+            "url": "https://www.metabase.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Starter",
+          "monthlyUsd": 100,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "Cloud-hosted. Base $100/month includes 5 users; additional users $6/user/month. Annual rate: $1,080/year base + $65/user/year (approx 10% discount vs monthly). Automatic backups, upgrades, regional hosting.",
+          "source": {
+            "url": "https://www.metabase.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.metabase.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 575,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "Cloud or self-hosted. Base $575/month includes 10 users; additional users $12/user/month. Annual rate: $6,210/year base + $130/user/year (approx 10% discount). Adds row/column permissions, SSO, AI controls, multi-tenant embedding, white-label.",
+          "source": {
+            "url": "https://www.metabase.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.metabase.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Starts at $20,000/year per official page. Cloud or self-hosted. Dedicated success engineer, air-gap deployment, custom AI arrangements, procurement support. Contact sales for exact quote.",
+          "source": {
+            "url": "https://www.metabase.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "mode",
+      "name": "Mode Analytics",
+      "domain": "mode.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Snowflake",
+        "BigQuery",
+        "Redshift",
+        "PostgreSQL",
+        "MySQL",
+        "Presto",
+        "Spark",
+        "Databricks",
+        "Slack"
+      ],
+      "provenance": "Fetched mode.com/pricing and mode.com/compare-plans on 2026-06-14. Studio (free) tier confirmed with up to 3 users. Pro and Enterprise tiers explicitly require contacting sales; no self-serve USD prices are published. Pro requires minimum 3 users, Enterprise minimum 50 users.",
+      "plans": [
+        {
+          "name": "Studio",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free tier. SQL, Python, and R notebooks. 10 MB/query limit. Private database connections. Up to 3 users.",
+          "source": {
+            "url": "https://mode.com/compare-plans",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Minimum 3 users. 250 GB/month data, 5 GB/query, schedules, permissioning, email/Slack sharing, API access, standard support. Contact sales for pricing.",
+          "source": {
+            "url": "https://mode.com/compare-plans",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Minimum 50 users. Custom data compute, tens-of-millions-of-rows visualizations, advanced SSO and identity management, admin-level API access, premium support. Contact sales for pricing.",
+          "source": {
+            "url": "https://mode.com/compare-plans",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "sigma-computing",
+      "name": "Sigma Computing",
+      "domain": "sigmacomputing.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Snowflake",
+        "BigQuery",
+        "Amazon Redshift",
+        "Databricks",
+        "PostgreSQL",
+        "MySQL"
+      ],
+      "provenance": "Fetched sigmacomputing.com/pricing and sigmacomputing.com/free-trial on 2026-06-14. Both pages contain no published plan names or self-serve USD prices — only free trial and demo call-to-actions. SoftwareAdvice aggregator (softwareadvice.com/bi/sigma-computing-profile/) lists a starting price of $300/month but provides no tier names or per-seat breakdown, and states 'no plan information available.' All Sigma pricing is effectively quote-based; the $300/month reference is noted in provenance only and not used as a verified plan price.",
+      "plans": [
+        {
+          "name": "Essentials",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Entry-level tier. No self-serve public pricing; contact sales. Free trial available with no credit card required.",
+          "source": {
+            "url": "https://www.sigmacomputing.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Plus",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Mid-tier. No self-serve public pricing; contact sales.",
+          "source": {
+            "url": "https://www.sigmacomputing.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Full enterprise capabilities. No self-serve public pricing; contact sales.",
+          "source": {
+            "url": "https://www.sigmacomputing.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "thoughtspot",
+      "name": "ThoughtSpot",
+      "domain": "thoughtspot.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Snowflake",
+        "BigQuery",
+        "Amazon Redshift",
+        "Databricks",
+        "Azure Synapse",
+        "PostgreSQL",
+        "Teradata",
+        "SAP HANA"
+      ],
+      "provenance": "Fetched thoughtspot.com/pricing on 2026-06-14 twice; both fetches returned consistent data. Essentials $25/user/month and Pro $50/user/month confirmed as annual-commitment rates. Pro also offers usage-based pricing at $0.10/query. Enterprise is quote-only. Developer embedded tier is free for 1 year (up to 10 users). GetApp aggregator for ThoughtSpot showed 'No pricing info', so it could not corroborate; official page used as primary and second fetch as corroboration.",
+      "plans": [
+        {
+          "name": "Essentials",
+          "monthlyUsd": 25,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Billed annually. 5–50 users. Up to 25M rows of data. Dynamic dashboards and actionable insights with AI-powered natural language search.",
+          "source": {
+            "url": "https://www.thoughtspot.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.thoughtspot.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 50,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Billed annually; also available usage-based at $0.10/query. 25–1,000 users. Up to 250M rows. Includes Spotter AI Agent (25 queries/month per user).",
+          "source": {
+            "url": "https://www.thoughtspot.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://www.thoughtspot.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Unlimited users and data. Full AI agent suite (Spotter), Analyst Studio. Contact sales for pricing.",
+          "source": {
+            "url": "https://www.thoughtspot.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Developer (Embedded)",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free for first year only (up to 10 users, up to 25M rows). API and SDK access for embedded analytics. Converts to paid after 1 year.",
+          "source": {
+            "url": "https://www.thoughtspot.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "qlik-sense",
+      "name": "Qlik Sense (Qlik Cloud Analytics)",
+      "domain": "qlik.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Snowflake",
+        "Amazon Redshift",
+        "BigQuery",
+        "SAP",
+        "Salesforce",
+        "Microsoft SQL Server",
+        "Oracle",
+        "PostgreSQL",
+        "Databricks"
+      ],
+      "provenance": "Qlik's official pricing pages (qlik.com/us/pricing, /us/pricing/analytics, /us/pricing/qlik-cloud-analytics) all returned 404 or rendered no machine-readable pricing data on 2026-06-14. Business tier price of $30/user/month sourced from GetApp aggregator (getapp.com/business-intelligence-analytics-software/a/qlik-sense/pricing/) — two independent fetches of the same page returned identical $30 figure. Enterprise SaaS confirmed quote-only on GetApp.",
+      "plans": [
+        {
+          "name": "Qlik Sense Business",
+          "monthlyUsd": 30,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Per-user monthly subscription. Associative Engine, Augmented Analytics, Group Collaboration, Modern Analytics. Price sourced from GetApp aggregator; official pricing page inaccessible.",
+          "source": {
+            "url": "https://www.getapp.com/business-intelligence-analytics-software/a/qlik-sense/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Qlik Sense Enterprise SaaS",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Enterprise governance, increased capacity, multiple user types. Custom pricing; contact Qlik sales.",
+          "source": {
+            "url": "https://www.getapp.com/business-intelligence-analytics-software/a/qlik-sense/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "gooddata",
+      "name": "GoodData",
+      "domain": "gooddata.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Snowflake",
+        "BigQuery",
+        "Amazon Redshift",
+        "PostgreSQL",
+        "Databricks",
+        "Microsoft SQL Server"
+      ],
+      "provenance": "Fetched gooddata.ai/pricing/ on 2026-06-14 (gooddata.com/pricing/ redirects there). Page confirms two tiers — Professional and Enterprise — with no publicly listed USD prices. Professional is per-workspace pricing; Enterprise is fully custom. No free tier. All pricing requires contacting sales.",
+      "plans": [
+        {
+          "name": "Professional",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Per-workspace pricing model for small and medium companies. Unlimited users and data. Annual billing. Contact sales for quote.",
+          "source": {
+            "url": "https://www.gooddata.ai/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "For large companies. Includes SLA support, dedicated customer success manager, dedicated clusters, HIPAA, FedRAMP (on demand). Contact sales for quote.",
+          "source": {
+            "url": "https://www.gooddata.ai/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    }
+  ]
+}

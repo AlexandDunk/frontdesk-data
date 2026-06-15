@@ -1,0 +1,472 @@
+{
+  "vertical": "ci-cd",
+  "generatedAt": "2026-06-14",
+  "methodologyNotes": "Published self-serve USD pricing was collected directly from each vendor's official pricing page on 2026-06-14 via live WebFetch. Every USD figure appears on the fetched page. Quote-only and contact-sales tiers are recorded with monthlyUsd = null — no figures were guessed. Telephony fields (minutesIncluded, callsIncluded, overagePerMin, overagePerCall) are null on every plan because this is a non-telephony vertical. For GitHub Actions, compute per-minute rates were cross-checked against the official billing documentation. Travis CI pricing was confirmed from the /pricing/ path after /plans/ returned 404. Semaphore redirected from semaphoreci.com to semaphore.io; pricing fetched from the canonical domain. Harness CI has no publicly listed prices and is included with null plans. Drone.io returned 404 and was excluded. corroboration URLs are second independent sources confirming figures where available.",
+  "vendors": [
+    {
+      "slug": "circleci",
+      "name": "CircleCI",
+      "domain": "circleci.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "GitHub",
+        "GitLab",
+        "Bitbucket",
+        "AWS",
+        "Azure",
+        "Google Cloud",
+        "Docker",
+        "Kubernetes",
+        "Datadog",
+        "Slack",
+        "Cypress",
+        "Codecov",
+        "SonarQube",
+        "Terraform",
+        "Helm"
+      ],
+      "provenance": "https://circleci.com/pricing/ accessed 2026-06-14; confirmed via second fetch same date",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "30,000 credits/month (≈ 6,000 minutes on small Docker resource class), up to 5 active users, 30x concurrency. No credit card required. Credits expire monthly with no rollover.",
+          "source": {
+            "url": "https://circleci.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Performance",
+          "monthlyUsd": 15,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Starting at $15/month base. Includes 30,000 free credits/month; additional credits at $15 per 25,000 credits. 5 active users included; extra users at $15/user/month. 80x concurrency. Paid credits roll over 12 months. Optional 8x5 support add-on available.",
+          "source": {
+            "url": "https://circleci.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Scale",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing, billed annually. Customizable resource classes including GPU. All resource classes, enterprise controls, optional 24/7 support add-on. Contact sales / book a demo.",
+          "source": {
+            "url": "https://circleci.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "github-actions",
+      "name": "GitHub Actions",
+      "domain": "github.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "GitHub",
+        "AWS",
+        "Azure",
+        "Google Cloud",
+        "Docker",
+        "Kubernetes",
+        "npm",
+        "PyPI",
+        "Terraform",
+        "Slack",
+        "Codecov",
+        "SonarQube"
+      ],
+      "provenance": "https://github.com/pricing and https://docs.github.com/en/billing/managing-billing-for-your-products/managing-billing-for-github-actions/about-billing-for-github-actions accessed 2026-06-14. GitHub Actions is bundled with GitHub plans; prices below reflect the GitHub plan cost. Overage per-minute rates from official billing docs.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "2,000 Linux CI minutes/month included (free for public repositories without limit). Overage at $0.006/min (Linux 2-core x64), $0.010/min (Windows), $0.062/min (macOS 3-4 core). 500 MB Packages storage included.",
+          "source": {
+            "url": "https://github.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://docs.github.com/en/billing/managing-billing-for-your-products/managing-billing-for-github-actions/about-billing-for-github-actions",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Team",
+          "monthlyUsd": 4,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$4/user/month (promotional first-12-month rate shown at time of fetch). 3,000 CI minutes/month included. 2 GB Packages storage. Same overage rates as Free plan apply beyond included minutes.",
+          "source": {
+            "url": "https://github.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://docs.github.com/en/billing/managing-billing-for-your-products/managing-billing-for-github-actions/about-billing-for-github-actions",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise Cloud",
+          "monthlyUsd": 21,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Starting at $21/user/month (promotional first-12-month rate shown). 50,000 CI minutes/month included. 50 GB Packages storage. Advanced security, compliance, and audit features. Same overage rates apply beyond included minutes.",
+          "source": {
+            "url": "https://github.com/pricing",
+            "accessedAt": "2026-06-14"
+          },
+          "corroboration": {
+            "url": "https://docs.github.com/en/billing/managing-billing-for-your-products/managing-billing-for-github-actions/about-billing-for-github-actions",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "gitlab",
+      "name": "GitLab",
+      "domain": "gitlab.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "GitHub",
+        "Jira",
+        "Slack",
+        "Jenkins",
+        "Kubernetes",
+        "Terraform",
+        "AWS",
+        "Azure",
+        "Google Cloud",
+        "Docker",
+        "Prometheus",
+        "Grafana"
+      ],
+      "provenance": "https://about.gitlab.com/pricing/ accessed 2026-06-14; confirmed via second fetch same date. Ultimate plan is contact-sales only (no public price). Premium confirmed at $29/user/month billed annually.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "400 CI/CD compute minutes/month, 10 GiB storage, up to 5 licensed users. Source code management and CI/CD included. No credit card required.",
+          "source": {
+            "url": "https://about.gitlab.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": 29,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$29/user/month billed annually. No month-to-month option published. 10,000 compute minutes/month, 500 GiB storage, unlimited users. Includes $12 GitLab Credits/user/month. Advanced CI/CD, SLA management, priority support. Compute overage at $10/1,000 minutes.",
+          "source": {
+            "url": "https://about.gitlab.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Ultimate",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Contact sales for custom pricing. 50,000 compute minutes/month, 500 GiB storage, unlimited guest users. Includes $24 GitLab Credits/user/month. Application security testing, supply chain security, vulnerability management, compliance and governance.",
+          "source": {
+            "url": "https://about.gitlab.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "buildkite",
+      "name": "Buildkite",
+      "domain": "buildkite.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "GitHub",
+        "GitLab",
+        "Bitbucket",
+        "Slack",
+        "PagerDuty",
+        "AWS",
+        "Google Cloud",
+        "Azure",
+        "Docker",
+        "Kubernetes"
+      ],
+      "provenance": "https://buildkite.com/pricing accessed 2026-06-14; confirmed via second fetch same date. No annual discount published. No HIPAA/BAA information on pricing page.",
+      "plans": [
+        {
+          "name": "Personal",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free forever, no credit card, no expiry. Max 3 concurrent jobs, 1 user, 90-day log retention. Community support only. Hosted agents available at pay-as-you-go rates (Linux Small $0.013/min, Linux Medium $0.026/min, Mac M4 Medium $0.18/min).",
+          "source": {
+            "url": "https://buildkite.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 30,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$30 USD per active user/month. Unlimited users and test executions. All agent sizes including Mac M4. 250 managed tests included; $0.10/additional test/month. 20 GB package registry storage; $1.25/GB/month overage. Priority email support, SSO. Hosted agents at same pay-as-you-go rates.",
+          "source": {
+            "url": "https://buildkite.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing, minimum 30 users. Everything in Pro plus volume discounts, SCIM/SAML/ADFS, audit logs, build exports, advanced governance, premium support SLA.",
+          "source": {
+            "url": "https://buildkite.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "semaphore",
+      "name": "Semaphore",
+      "domain": "semaphore.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "GitHub",
+        "Docker",
+        "Kubernetes",
+        "AWS",
+        "Google Cloud",
+        "Azure"
+      ],
+      "provenance": "https://semaphore.io/pricing accessed 2026-06-14 (semaphoreci.com redirects 301 to semaphore.io). Confirmed via second fetch same date. Purely usage-based compute pricing with $15 free credit/month. No HIPAA/BAA on pricing page. SOC 2 and ISO 27001 certifications listed.",
+      "plans": [
+        {
+          "name": "Pay-as-you-go",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "$15 free monthly credits (≈ 2,000 Ubuntu x64 2-vCPU minutes). Pay only for what you use beyond free credits. Compute rates: Ubuntu ARM 2vCPU $0.003/min, Ubuntu x64 2vCPU $0.0075/min, Ubuntu x64 4vCPU $0.015/min, macOS 4vCPU $0.09/min, self-hosted $0.0025/min. 20 concurrent jobs, 20 GB/month artifact egress, 100 GB artifact storage, 9.6 GB cache/project included. Annual discounts available on request.",
+          "source": {
+            "url": "https://semaphore.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "travis-ci",
+      "name": "Travis CI",
+      "domain": "travis-ci.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "GitHub",
+        "GitLab",
+        "Bitbucket",
+        "AWS",
+        "Azure",
+        "Google Cloud",
+        "Heroku",
+        "npm",
+        "PyPI",
+        "Slack",
+        "Codecov",
+        "HashiCorp Vault"
+      ],
+      "provenance": "https://www.travis-ci.com/pricing/ accessed 2026-06-14. /plans/ path returns 404; /pricing/ is canonical. No free self-serve plan found — open source projects referenced separately. No HIPAA/BAA mentioned.",
+      "plans": [
+        {
+          "name": "Usage Based",
+          "monthlyUsd": 15,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 8,
+          "billingModel": "flat",
+          "notes": "$15/month (monthly billing) or $13.75/month billed annually (8% discount, $165/year). Includes 35,000 Linux build credits/month (420,000/year on annual plan). 80 concurrent jobs.",
+          "source": {
+            "url": "https://www.travis-ci.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Unlimited",
+          "monthlyUsd": 78,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 8,
+          "billingModel": "flat",
+          "notes": "Starting at $78+/month (monthly) or $72+/month billed annually (8% discount). Unlimited build credits, collaborators, and repositories. 1 to 300 concurrent jobs. Volume discounts for 20+ users.",
+          "source": {
+            "url": "https://www.travis-ci.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Server",
+          "monthlyUsd": 34,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$34/month for on-premise or private cloud deployment. Same price on monthly and annual billing.",
+          "source": {
+            "url": "https://www.travis-ci.com/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "harness-ci",
+      "name": "Harness CI",
+      "domain": "harness.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "GitHub",
+        "GitLab",
+        "Bitbucket",
+        "Docker",
+        "Kubernetes",
+        "AWS",
+        "Azure",
+        "Google Cloud",
+        "Terraform",
+        "Jira"
+      ],
+      "provenance": "https://www.harness.io/pricing accessed 2026-06-14. No specific USD amounts are publicly listed for any paid tier. Free plan has open-source tooling access only. Essentials and Enterprise require contact-sales. /pricing/continuous-integration path returns 404.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "For individual developers and small teams. Access to Harness Open Source and Litmus Chaos open-source tools. Specific feature limits not published on pricing page.",
+          "source": {
+            "url": "https://www.harness.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Essentials",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "For growing organizations. Includes CI, CD, Infrastructure as Code Management, and Security Testing Orchestration modules. No public price — contact sales required.",
+          "source": {
+            "url": "https://www.harness.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "For large-scale organizations. Modular plan — pick any modules. No public price — contact sales required.",
+          "source": {
+            "url": "https://www.harness.io/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        }
+      ]
+    }
+  ]
+}

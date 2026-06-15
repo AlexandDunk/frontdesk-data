@@ -1,0 +1,612 @@
+{
+  "vertical": "accounting-software",
+  "generatedAt": "2026-06-13",
+  "methodologyNotes": "Published self-serve pricing was collected directly from each provider's pricing page on the accessed date of 2026-06-13, except where the vendor page blocked automated access (Intuit/QuickBooks and Xero both returned HTTP 503/timeout to automated fetch), in which case figures were taken from clearly-cited corroborating sources that quote the published list rates. Prices are recorded as the regular published monthly USD rate (not introductory/promotional discounts); per-seat or per-additional-user pricing is noted in billingModel and notes. Quote-only / 'Let's Talk' / 'contact sales' tiers carry a null monthlyUsd, and call-center metrics (minutes, calls, overage) are null because they do not apply to accounting software.",
+  "vendors": [
+    {
+      "slug": "quickbooks-online",
+      "name": "QuickBooks Online",
+      "domain": "quickbooks.intuit.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "QuickBooks Payments",
+        "QuickBooks Payroll",
+        "Bill.com",
+        "Shopify",
+        "PayPal",
+        "Square",
+        "Gmail"
+      ],
+      "provenance": "QuickBooks Online published list pricing (quickbooks.intuit.com/pricing). Official page blocked automated fetch (timeout); regular monthly list rates verified via NerdWallet QuickBooks pricing guide (updated 2026-03-06), which documents Intuit's published rates effective July 2025.",
+      "plans": [
+        {
+          "name": "Solopreneur Lite",
+          "monthlyUsd": 20,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Single-user product for one-person/sole-proprietor businesses; income and expense tracking, basic invoicing, estimated taxes. Free $0 entry tier also offered.",
+          "source": {
+            "url": "https://quickbooks.intuit.com/pricing/",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://www.nerdwallet.com/business/software/learn/quickbooks-pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Simple Start",
+          "monthlyUsd": 38,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "1 user. Income/expense tracking, invoicing and payments, general reports, receipt capture, mileage and cash flow tracking.",
+          "source": {
+            "url": "https://quickbooks.intuit.com/pricing/",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://www.nerdwallet.com/business/software/learn/quickbooks-pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Essentials",
+          "monthlyUsd": 75,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Up to 3 users. Adds bill management, time tracking, and multi-currency support.",
+          "source": {
+            "url": "https://quickbooks.intuit.com/pricing/",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://www.nerdwallet.com/business/software/learn/quickbooks-pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Plus",
+          "monthlyUsd": 115,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Up to 5 users. Adds inventory tracking, project profitability, and class/location tracking.",
+          "source": {
+            "url": "https://quickbooks.intuit.com/pricing/",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://www.nerdwallet.com/business/software/learn/quickbooks-pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Advanced",
+          "monthlyUsd": 275,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Up to 25 users. Adds batch invoicing, custom user roles, workflow automation, dedicated account team, and enhanced reporting/analytics.",
+          "source": {
+            "url": "https://quickbooks.intuit.com/pricing/",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://www.nerdwallet.com/business/software/learn/quickbooks-pricing",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "xero",
+      "name": "Xero",
+      "domain": "xero.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Stripe",
+        "Gusto",
+        "HubSpot",
+        "Shopify",
+        "PayPal",
+        "Square",
+        "Bill.com"
+      ],
+      "provenance": "Xero US published pricing (xero.com/us/pricing-plans). Official page repeatedly returned HTTP 503 to automated fetch; regular monthly list rates verified via costbench Xero pricing page and corroborated across multiple 2026 pricing aggregators reporting the identical $25/$55/$90 US tiers, with the Early plan's 20-invoice/5-bill caps confirmed. Annual billing ($300/$660/$1,080) is exactly 12x the monthly rate, so no annual discount is recorded (the earlier '~10%' figure was unverifiable and removed). All Xero plans include unlimited users (flat per-organization pricing).",
+      "plans": [
+        {
+          "name": "Early",
+          "monthlyUsd": 25,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Unlimited users. Hard caps of 20 invoices/quotes and 5 bills per month; bank reconciliation, short-term cash flow snapshot. Annual billing ($300/yr) is exactly 12x the monthly rate — no annual discount.",
+          "source": {
+            "url": "https://www.xero.com/us/pricing-plans/",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://costbench.com/software/accounting/xero/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Growing",
+          "monthlyUsd": 55,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Unlimited users and unlimited invoices, quotes, bills, and bank transactions; bulk reconciliation. Annual billing ($660/yr) is exactly 12x the monthly rate — no annual discount.",
+          "source": {
+            "url": "https://www.xero.com/us/pricing-plans/",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://costbench.com/software/accounting/xero/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Established",
+          "monthlyUsd": 90,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Unlimited users; adds multi-currency, project tracking, expense claims, and advanced analytics/cash flow forecasting. Annual billing ($1,080/yr) is exactly 12x the monthly rate — no annual discount.",
+          "source": {
+            "url": "https://www.xero.com/us/pricing-plans/",
+            "accessedAt": "2026-06-13"
+          },
+          "corroboration": {
+            "url": "https://costbench.com/software/accounting/xero/",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "freshbooks",
+      "name": "FreshBooks",
+      "domain": "freshbooks.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Stripe",
+        "PayPal",
+        "Gusto",
+        "Shopify",
+        "Squarespace",
+        "Gmail",
+        "Zapier"
+      ],
+      "provenance": "FreshBooks published pricing collected directly from freshbooks.com/pricing on 2026-06-13. Listed regular monthly rates recorded (page also showed a 90%-off introductory promo, excluded here). Team Members add $11/mo per additional user across plans.",
+      "plans": [
+        {
+          "name": "Lite",
+          "monthlyUsd": 23,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Up to 5 billable clients. Unlimited invoices, expense tracking, online payments, basic reports. Additional team members $11/mo each.",
+          "source": {
+            "url": "https://www.freshbooks.com/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Plus",
+          "monthlyUsd": 43,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Up to 50 billable clients (Most Popular). Adds double-entry accounting reports, recurring billing, client retainers. Additional team members $11/mo each.",
+          "source": {
+            "url": "https://www.freshbooks.com/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": 70,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Unlimited billable clients. Adds project profitability, customizable email templates, and advanced reporting. Additional team members $11/mo each.",
+          "source": {
+            "url": "https://www.freshbooks.com/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Select",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Custom 'Let's Talk' pricing. Unlimited clients, lower credit-card transaction fees, 2 included team-member accounts, dedicated phone support and account manager.",
+          "source": {
+            "url": "https://www.freshbooks.com/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "wave",
+      "name": "Wave",
+      "domain": "waveapps.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Wave Payments",
+        "Wave Payroll",
+        "Stripe",
+        "PayPal",
+        "Zapier",
+        "Google Sheets"
+      ],
+      "provenance": "Wave published pricing collected directly from waveapps.com/pricing on 2026-06-13. Regular monthly rate recorded (page also showed a $9.50 first-3-months promo on Pro, excluded here). Payment processing is 2.9% + $0.60 per card transaction.",
+      "plans": [
+        {
+          "name": "Starter (Free)",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free forever. Unlimited estimates, invoices, bills, and bookkeeping records; mobile invoicing; cash flow dashboard. Card payments 2.9% + $0.60 per transaction.",
+          "source": {
+            "url": "https://www.waveapps.com/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 19,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Adds auto-import and auto-categorization of bank transactions, unlimited receipt capture, automated late-payment reminders, and discounted card processing (first 10 transactions/month at 2.9% + $0).",
+          "source": {
+            "url": "https://www.waveapps.com/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Wave Advisors",
+          "monthlyUsd": 199,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Starting at $199/mo. Includes Pro features plus a dedicated bookkeeper, monthly financial statements, and expert support.",
+          "source": {
+            "url": "https://www.waveapps.com/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "zoho-books",
+      "name": "Zoho Books",
+      "domain": "zoho.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Zoho CRM",
+        "Stripe",
+        "PayPal",
+        "Razorpay",
+        "Square",
+        "Slack",
+        "Zapier"
+      ],
+      "provenance": "Zoho Books published pricing collected directly from zoho.com/us/books/pricing on 2026-06-13. Monthly-billing rates recorded; annual billing is lower (noted per plan). Additional users $3/mo each (monthly) or $2.50/mo (annual).",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "1 user + 1 accountant. Free while annual revenue stays under the $50K threshold. Invoicing, expense tracking, basic reports.",
+          "source": {
+            "url": "https://www.zoho.com/us/books/pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Standard",
+          "monthlyUsd": 20,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 25,
+          "billingModel": "flat",
+          "notes": "3 users. $20/mo monthly billing, $15/mo billed annually (save $60/yr). Bank reconciliation, recurring transactions, reporting tags.",
+          "source": {
+            "url": "https://www.zoho.com/us/books/pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Professional",
+          "monthlyUsd": 50,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "5 users. $50/mo monthly billing, $40/mo billed annually (save $120/yr). Adds bills, sales/purchase orders, project tracking, multi-currency.",
+          "source": {
+            "url": "https://www.zoho.com/us/books/pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": 70,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 14,
+          "billingModel": "flat",
+          "notes": "10 users. $70/mo monthly billing, $60/mo billed annually. Adds custom domain, vendor portal, budgeting, custom workflow rules.",
+          "source": {
+            "url": "https://www.zoho.com/us/books/pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Elite",
+          "monthlyUsd": 150,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "10 users. $150/mo monthly billing, $120/mo billed annually. Adds advanced inventory, warehouse management, advanced multi-currency.",
+          "source": {
+            "url": "https://www.zoho.com/us/books/pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Ultimate",
+          "monthlyUsd": 275,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 13,
+          "billingModel": "flat",
+          "notes": "15 users. $275/mo monthly billing, $240/mo billed annually. Adds advanced analytics (Zoho Analytics) and 25 custom modules.",
+          "source": {
+            "url": "https://www.zoho.com/us/books/pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "patriot-software",
+      "name": "Patriot Software Accounting",
+      "domain": "patriotsoftware.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Patriot Payroll",
+        "Stripe",
+        "Plaid",
+        "bank import"
+      ],
+      "provenance": "Patriot Software accounting published pricing collected directly from patriotsoftware.com/accounting/pricing on 2026-06-13. Regular monthly rates recorded (page also showed a 50%-off-for-6-months promo, excluded here).",
+      "plans": [
+        {
+          "name": "Accounting Basic",
+          "monthlyUsd": 20,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Unlimited customers/invoices and vendors/payments, automatic bank imports, income/expense tracking, accept card payments, financial reporting, account reconciliation.",
+          "source": {
+            "url": "https://www.patriotsoftware.com/accounting/pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Accounting Premium",
+          "monthlyUsd": 30,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Everything in Basic plus estimates, user-based permissions, recurring invoices, payment reminders, receipt/document management, and subaccounts.",
+          "source": {
+            "url": "https://www.patriotsoftware.com/accounting/pricing/",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "bench",
+      "name": "Bench",
+      "domain": "bench.co",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "bank/credit-card feeds",
+        "Stripe",
+        "Square",
+        "Shopify",
+        "PayPal"
+      ],
+      "provenance": "Bench published pricing collected directly from bench.co/pricing on 2026-06-13. Monthly rates recorded as the 'starting at' month-to-month figures; annual prepay (~20% lower) noted in provenance only where the page stated an explicit annual total.",
+      "plans": [
+        {
+          "name": "Bookkeeping Grow",
+          "monthlyUsd": 199,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "Starting at $199/mo (or $1,910 billed annually). For businesses under $250K annual revenue. Dedicated bookkeeping team, monthly books, P&L/balance sheet, 1099 reporting, scheduled touchpoints.",
+          "source": {
+            "url": "https://www.bench.co/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Bookkeeping Core",
+          "monthlyUsd": 399,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "Starting at $399/mo (or $3,830 billed annually). Dedicated experts, monthly books, P&L/balance sheet, 1099 reporting, unlimited communication.",
+          "source": {
+            "url": "https://www.bench.co/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Bookkeeping Core + Tax",
+          "monthlyUsd": 599,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "Starting at $599/mo (or $5,750 billed annually). All Core features plus licensed tax professionals and annual business + individual income tax filing.",
+          "source": {
+            "url": "https://www.bench.co/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "bookkeeper360",
+      "name": "Bookkeeper360",
+      "domain": "bookkeeper360.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "QuickBooks Online",
+        "Xero",
+        "Gusto",
+        "Bill.com",
+        "Stripe",
+        "Shopify"
+      ],
+      "provenance": "Bookkeeper360 published pricing collected directly from bookkeeper360.com/pricing on 2026-06-13. Monthly bookkeeping-service rates recorded; tax and CFO add-on services noted in notes but only the recurring bookkeeping plans are listed as core tiers.",
+      "plans": [
+        {
+          "name": "Monthly Bookkeeping",
+          "monthlyUsd": 399,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$399/mo. Monthly financial close for steady-growth businesses; dedicated bookkeeping. Optional add-ons: business tax $1,000/yr, fractional CFO $2,000/mo, onboarding $1,000.",
+          "source": {
+            "url": "https://www.bookkeeper360.com/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Weekly Bookkeeping",
+          "monthlyUsd": 599,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$599/mo (Most Popular). Weekly financial visibility for fast-moving businesses; dedicated bookkeeping with more frequent reconciliation and reporting.",
+          "source": {
+            "url": "https://www.bookkeeper360.com/pricing",
+            "accessedAt": "2026-06-13"
+          }
+        }
+      ]
+    }
+  ]
+}
