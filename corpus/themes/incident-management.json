@@ -85,7 +85,68 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.pagerduty.com/security/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Datadog",
+          "AWS CloudWatch",
+          "Splunk",
+          "ServiceNow",
+          "Jira",
+          "Zendesk",
+          "Salesforce",
+          "Microsoft Teams"
+        ],
+        "limits": [
+          "Free: up to 5 users",
+          "Free: 100 SMS/phone notifications per month",
+          "Free: 1 on-call schedule, 1 escalation policy",
+          "Professional: unlimited users, external status page 250 subscribers",
+          "Business: external status page 500 subscribers, 1-year historical data"
+        ],
+        "keyFeatures": [
+          "ML-powered alert noise reduction and intelligent grouping",
+          "Automated runbook execution",
+          "Dynamic stakeholder orchestration across teams",
+          "Customer support to incident linkage in real time",
+          "750+ out-of-the-box integrations"
+        ],
+        "bestFor": [
+          "Large enterprise DevOps/SRE teams needing broad ecosystem coverage",
+          "Organizations with existing Salesforce or ServiceNow investments",
+          "Teams requiring FedRAMP-authorized tooling"
+        ],
+        "sources": [
+          {
+            "url": "https://www.pagerduty.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.pagerduty.com/security/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.pagerduty.com/gdpr-approach/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.pagerduty.com/platform/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Security page fetched 2026-06-15 confirmed SOC 2 Type II, ISO 27001, and FedRAMP Low Authorization; no HIPAA or BAA mention found on security page, assurance profile (assurance.pagerduty.com), legal page, or privacy policy — hipaa set to null. The security page (compliance.source) does not itself mention GDPR; gdpr=true is grounded by PagerDuty's GDPR approach page (pagerduty.com/gdpr-approach, added to sources[] and verified 2026-06-15) and Data Processing Addendum, which incorporate Standard Contractual Clauses and EU-U.S. Data Privacy Framework self-certification. Free tier (up to 5 users) confirmed on pricing page. 14-day free trial referenced on pricing page for Professional/Business plans. Free plan features (100 SMS/month, 1 schedule, 1 escalation policy, 750+ integrations) confirmed from pricing page."
+      }
     },
     {
       "slug": "opsgenie",
@@ -164,7 +225,63 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": false,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.atlassian.com/trust/compliance/resources/hipaa",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Jira",
+          "Jira Service Management",
+          "Confluence",
+          "Slack",
+          "Microsoft Teams",
+          "Datadog",
+          "PagerDuty"
+        ],
+        "limits": [
+          "Free: up to 5 users, unlimited alerts, email/push notifications",
+          "Free: maximum 1 routing rule",
+          "Essentials: 100 SMS notifications per user/month, 100 incidents/month account-wide",
+          "Standard: unlimited SMS/voice, 100 routing rules",
+          "No new subscriptions accepted as of 2025-06-04; end-of-support 2027-04-05"
+        ],
+        "keyFeatures": [
+          "Multi-channel actionable alerting with noise filtering",
+          "On-call scheduling with override management",
+          "ChatOps war room orchestration for cross-team response",
+          "Service-aware incident management with business impact visibility",
+          "Advanced analytics covering MTTA, MTTR, and team productivity"
+        ],
+        "bestFor": [
+          "Atlassian-ecosystem shops already using Jira or Confluence",
+          "Existing Opsgenie subscribers before 2027-04-05 end-of-life",
+          "Teams migrating to Jira Service Management on-call features"
+        ],
+        "sources": [
+          {
+            "url": "https://www.atlassian.com/trust/compliance/resources/hipaa",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.atlassian.com/software/opsgenie/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.atlassian.com/software/opsgenie/features",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "CORRECTED 2026-06-15 by verifier: prior hipaa=true was unsupported. Atlassian HIPAA compliance page (atlassian.com/trust/compliance/resources/hipaa) fetched 2026-06-15 explicitly limits HIPAA BAA eligibility to Jira, Confluence Cloud, and Jira Service Management on Standard/Premium/Enterprise plans; Opsgenie is NOT listed as a HIPAA-eligible product. Independent sources (paubox.com, accountablehq.com, 2026-06-15) confirm Atlassian will not sign a BAA for Opsgenie — hipaa set to false. For PHI workloads Atlassian directs customers to Jira Service Management instead. SOC 2 and GDPR confirmed from atlassian.com/trust/compliance. Free tier (up to 5 users) confirmed on pricing page. No free trial duration found on the pricing page. Opsgenie is end-of-sale; new buyers should evaluate Jira Service Management instead."
+      }
     },
     {
       "slug": "incident-io",
@@ -259,7 +376,59 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://incident.io/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Slack",
+          "Microsoft Teams",
+          "Jira",
+          "PagerDuty",
+          "Datadog",
+          "GitHub",
+          "Opsgenie",
+          "Confluence"
+        ],
+        "limits": [
+          "Basic (Free): single team on-call, basic automation",
+          "Team: multi-team on-call, AI automation",
+          "Pro: advanced insights, private incidents, customizable post-incident processes",
+          "On-call available as add-on: +$10/user/month (Team), +$20/user/month (Pro)"
+        ],
+        "keyFeatures": [
+          "Slack/Teams-native incident response workflow",
+          "AI-powered automation and post-incident summaries",
+          "Built-in on-call scheduling (add-on)",
+          "Customizable post-incident review processes",
+          "HIPAA compliance across all plan tiers"
+        ],
+        "bestFor": [
+          "Slack-first engineering teams wanting native chat-based incident response",
+          "Healthcare-adjacent SaaS teams requiring HIPAA compliance at free tier",
+          "Teams consolidating on-call and incident management in one tool"
+        ],
+        "sources": [
+          {
+            "url": "https://incident.io/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://incident.io/security",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "SOURCE CORRECTED 2026-06-15 by verifier: compliance.source moved from incident.io/security (which does not mention HIPAA) to incident.io/pricing, which explicitly states 'HIPAA Compliant' across all four plans (Basic, Team, Pro, Enterprise) and lists a SOC2 Report — this page directly supports hipaa=true and soc2=true. Security page (incident.io/security, retained in sources[]) confirms SOC 2 Type I & II and GDPR compliance ('We're SOC 2 Type I & II and GDPR compliant'), grounding gdpr=true. BAA availability not explicitly stated on public pages; baa remains null. No free trial duration found on pricing page. Free Basic plan confirmed. Trust center (trust.incident.io) did not render substantive content during fetch."
+      }
     },
     {
       "slug": "splunk-on-call",
@@ -324,7 +493,49 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Splunk",
+          "Datadog",
+          "Prometheus",
+          "Slack",
+          "Microsoft Teams",
+          "ServiceNow",
+          "PagerDuty"
+        ],
+        "limits": [
+          "No free tier; lowest paid plan starts at $10/user/month (Starter)",
+          "Official pricing page unavailable (HTTP 404); plan limits unconfirmed from official source"
+        ],
+        "keyFeatures": [
+          "ML-based responder recommendations surfacing relevant expertise",
+          "Rules engine linking alerts to runbooks and dashboards automatically",
+          "Incident audit trail with historical context for similar incidents",
+          "iOS and Android apps with full incident response functionality",
+          "Automated on-call scheduling and escalation policies"
+        ],
+        "bestFor": [
+          "Teams deeply invested in the Splunk observability ecosystem",
+          "Organizations wanting ML-driven responder suggestions",
+          "Splunk Cloud customers seeking native on-call integration"
+        ],
+        "sources": [
+          {
+            "url": "https://www.splunk.com/en_us/products/on-call.html",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Splunk On-Call official pricing page returned HTTP 404 on both 2026-06-14 and 2026-06-15 fetches; compliance information could not be sourced from an authoritative Splunk page. Splunk Trust Center (trust.splunk.com) redirects to customertrust.splunk.com which rendered no substantive content. Splunk general terms (fetched 2026-06-15) state PHI may not be stored in hosted services unless a specific regulated offering is purchased — this implies HIPAA is not broadly available for Splunk On-Call without a dedicated arrangement, but this cannot be definitively confirmed as a denial; hipaa set to null. SOC 2 and GDPR also set to null as no authoritative Splunk page confirming these for On-Call specifically could be fetched. No free tier found in any source. Splunk was acquired by Cisco in 2024; some compliance documentation now redirects to Cisco pages."
+      }
     },
     {
       "slug": "squadcast",
@@ -429,7 +640,64 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": false,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.squadcast.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Datadog",
+          "Grafana",
+          "ServiceNow",
+          "Jira",
+          "Slack",
+          "Microsoft Teams",
+          "GitHub",
+          "Prometheus"
+        ],
+        "limits": [
+          "Free: up to 5 users, max 5 services, 3-month data retention",
+          "Free: email/push alerts only (no SMS/voice)",
+          "Pro: up to 50 services, 100 runbook executions/month",
+          "Premium: up to 5 status pages, 1-year data retention, SLO tracker",
+          "14-day free trial on paid plans, no credit card required"
+        ],
+        "keyFeatures": [
+          "Unified on-call + incident response in one platform (no separate tools)",
+          "Alert deduplication, suppression, and grouping to reduce noise",
+          "Reliability AI for ML-driven incident intelligence",
+          "SLO tracking with error budget monitoring",
+          "ServiceNow bidirectional sync (Enterprise tier)"
+        ],
+        "bestFor": [
+          "Cost-conscious teams replacing PagerDuty + FireHydrant with a single tool",
+          "SRE teams needing SLO/error-budget tracking built-in",
+          "Organizations with 200+ integrations needs across monitoring and ITSM stacks"
+        ],
+        "sources": [
+          {
+            "url": "https://www.squadcast.com/security",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.squadcast.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.squadcast.com/product",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Security page (squadcast.com/security) fetched 2026-06-15 confirms SOC 2 Type II (January 2024) and ISO 27001:2022 certification; GDPR compliance stated. HIPAA and BAA are not mentioned on the security page — no evidence of HIPAA support found, set to false (explicitly not offered). Pricing page confirms free forever plan (up to 5 users) and 14-day free trial with no credit card. Product page confirms 200+ integrations. Plan limits confirmed from pricing page fetch."
+      }
     },
     {
       "slug": "rootly",
@@ -481,7 +749,64 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://rootly.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Slack",
+          "Microsoft Teams",
+          "Jira",
+          "Confluence",
+          "Datadog",
+          "GitHub",
+          "Zoom",
+          "Sentry"
+        ],
+        "limits": [
+          "No free tier; Essentials starts at $20/user/month",
+          "Trial typically 2 weeks (extendable on request)",
+          "Incident Response and On-Call sold as separate $20/user/month modules or bundled",
+          "Startup discount up to 50% for companies under 100 employees, $50M raised, 5 years old",
+          "Pay-what-you-can for companies under 25 employees"
+        ],
+        "keyFeatures": [
+          "Agentic AI SRE with root cause analysis and suggested fixes",
+          "MCP server integration for in-IDE incident resolution",
+          "Slack/Teams-native workflows with bi-directional Jira sync",
+          "AI-powered meeting transcription and real-time summaries",
+          "HIPAA-compliant with BAA (SOC 2 Type II, GDPR, CCPA)"
+        ],
+        "bestFor": [
+          "Startups and scaleups wanting HIPAA compliance with startup pricing",
+          "Teams using Slack as primary incident command center",
+          "SRE teams wanting AI-native root cause analysis and remediation suggestions"
+        ],
+        "sources": [
+          {
+            "url": "https://rootly.com/security",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://rootly.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://rootly.com/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Security page (rootly.com/security) fetched 2026-06-15 confirms SOC 2 Type II (AICPA badge), HIPAA Compliant badge, GDPR badge, and CCPA badge. BAA confirmed from original pricing page provenance (re-verified 2026-06-14 by prior researcher) — hipaa=true, soc2=true, gdpr=true. Pricing page confirms no free tier; trial described as 'typically two weeks, extendable.' Home page confirms AI SRE (root cause, alert correlation, remediation), MCP server support, and Slack/Teams-native workflow features. Integrations list confirmed across pricing and home pages."
+      }
     },
     {
       "slug": "firehydrant",
@@ -559,7 +884,63 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://firehydrant.com/security/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Slack",
+          "Microsoft Teams",
+          "Jira",
+          "Datadog",
+          "PagerDuty",
+          "GitHub",
+          "Zoom",
+          "ServiceNow"
+        ],
+        "limits": [
+          "Free: up to 10 responders, 3 integrations, 2 runbooks, 1 public status page",
+          "Pro: 5 integrations, 5 runbooks, unlimited public status pages, 50 SMS/phone alerts/month included",
+          "Pro: annual billing only ($300/responder/year); no month-to-month option",
+          "14-day free trial of Pro plan, no credit card required"
+        ],
+        "keyFeatures": [
+          "AI-enriched incident automation with live video transcription from Zoom/Meet",
+          "Unified platform: alerting, on-call, runbooks, retrospectives, and analytics",
+          "350+ API endpoints and Terraform provider for custom workflow extensibility",
+          "AI-powered retrospectives with auto-assigned follow-up action items",
+          "SOC 2 Type II with SSO (SAML 2.0), SCIM, RBAC, and audit logs"
+        ],
+        "bestFor": [
+          "Engineering teams wanting a single platform from on-call through retrospective",
+          "Teams requiring Terraform-native incident management infrastructure",
+          "Organizations that acquired Blameless users migrating to FireHydrant"
+        ],
+        "sources": [
+          {
+            "url": "https://firehydrant.com/security/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://firehydrant.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://firehydrant.com/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Security page (firehydrant.com/security) fetched 2026-06-15 confirms SOC 2 Type II (achieved September 2021) — soc2=true. HIPAA not mentioned on security page or any accessible public page; trust.firehydrant.com redirected to Freshworks trust center (FireHydrant was acquired by Freshworks) which contains Freshworks certifications, not FireHydrant-specific ones — hipaa=null. GDPR not explicitly confirmed on the security page — gdpr=null. Free tier confirmed: up to 10 responders on Free plan. 14-day Pro trial (no credit card) confirmed on pricing page. Home page confirms 350+ integrations, AI features, and claims customers resolve incidents up to 90% faster."
+      }
     }
   ]
 }

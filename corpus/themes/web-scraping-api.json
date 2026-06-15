@@ -97,7 +97,56 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Python",
+          "Node.js",
+          "PHP",
+          "Ruby",
+          "Java",
+          "cURL",
+          "LangChain"
+        ],
+        "limits": [
+          "Entry plan: 100,000 credits/month, 20 concurrent threads",
+          "US/EU geolocation only on Hobby/Startup plans",
+          "Global geotargeting unlocked on Business ($299) and above",
+          "Scaling plan: 5,000,000+ credits, 200+ concurrent threads"
+        ],
+        "keyFeatures": [
+          "Automatic proxy rotation and CAPTCHA solving",
+          "JavaScript rendering via headless browser",
+          "Async scraper service for millions of requests",
+          "DataPipeline no-code data collection automation",
+          "Structured JSON extraction from in-demand domains"
+        ],
+        "bestFor": [
+          "E-commerce price monitoring at scale",
+          "SEO/SERP data collection",
+          "AI/ML training data pipelines",
+          "Teams needing simple credit-based pricing"
+        ],
+        "sources": [
+          {
+            "url": "https://www.scraperapi.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.scraperapi.com/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched scraperapi.com homepage and pricing page on 2026-06-15. The security/privacy pages returned navigation HTML only (JS-rendered), yielding no compliance data. No HIPAA, SOC2, or GDPR claims were found on any reachable ScraperAPI page; all three set to null. No free $0 forever plan exists — entry plan is Hobby at $49/month. No trial period advertised on public pages. Key features and integrations drawn from homepage content."
+      }
     },
     {
       "slug": "bright-data",
@@ -179,7 +228,68 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://brightdata.com/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Python",
+          "Node.js",
+          "Java",
+          "C#",
+          "PHP",
+          "Puppeteer",
+          "Playwright",
+          "Selenium",
+          "Zapier",
+          "OpenAI",
+          "LangChain",
+          "MCP Server"
+        ],
+        "limits": [
+          "Free: 5,000 records/month, no credit card required",
+          "Pay-as-you-go: $1.50/1K records, no minimum",
+          "Scale: 384,000 records/month included, $1.30/1K overage",
+          "Unlimited concurrency on all paid plans"
+        ],
+        "keyFeatures": [
+          "400M+ proxy IPs from 195 countries (residential, datacenter, ISP)",
+          "Pre-built scrapers for 100+ domains (LinkedIn, Amazon, Instagram, Zillow, TikTok, YouTube)",
+          "AI Scraper Studio for no-code pipeline building",
+          "CAPTCHA-solving and JavaScript rendering built-in",
+          "Petabyte-scale Web Archive with 5B+ refreshed records"
+        ],
+        "bestFor": [
+          "Enterprise-scale data collection across 195+ countries",
+          "Teams needing pre-built domain scrapers (LinkedIn, Amazon, social)",
+          "AI/ML training data acquisition",
+          "E-commerce and brand protection monitoring"
+        ],
+        "sources": [
+          {
+            "url": "https://brightdata.com/pricing/web-scraper",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://brightdata.com/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://brightdata.com/legal",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched brightdata.com homepage, /pricing/web-scraper, /legal, /use-cases, and /compliance (404) on 2026-06-15. The homepage references GDPR, CCPA, and SEC compliance adherence plus a Privacy Center; gdpr=true based on this explicit claim. No SOC2 or HIPAA/BAA claims found on any reachable page; set to null. The /trust and /security paths returned 404. The Free plan (5,000 records/month, no credit card) is confirmed from the pricing page and qualifies as a forever-free tier."
+      }
     },
     {
       "slug": "apify",
@@ -276,7 +386,65 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://docs.apify.com/platform/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Zapier",
+          "Make",
+          "Slack",
+          "GitHub",
+          "Google Sheets",
+          "Airtable",
+          "Keboola",
+          "LangChain",
+          "OpenAI"
+        ],
+        "limits": [
+          "Free: $5 prepaid platform usage/month, $0.20/CU, community support only",
+          "Starter: $29 prepaid usage/month, pay-as-you-go overages",
+          "Scale: $199/month, $0.16/CU compute",
+          "Business: $999/month, $0.13/CU compute, dedicated account manager"
+        ],
+        "keyFeatures": [
+          "Actor marketplace with 3,000+ ready-made scrapers",
+          "Compute Unit billing model — pay per CPU/memory/time used",
+          "Scrapy Cloud-compatible cloud spider hosting",
+          "Dataset storage and key-value store built-in",
+          "Scheduled and event-triggered scraping runs"
+        ],
+        "bestFor": [
+          "Developers wanting a marketplace of pre-built scrapers",
+          "Teams with complex automation pipelines (Zapier, Make, n8n)",
+          "AI/ML data collection via LangChain and OpenAI integrations",
+          "Projects needing flexible compute-unit pricing"
+        ],
+        "sources": [
+          {
+            "url": "https://docs.apify.com/platform/security",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://docs.apify.com/legal/privacy-policy",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://apify.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched docs.apify.com/platform/security (confirmed SOC 2 Type II compliance following independent audit), docs.apify.com/legal/privacy-policy (confirmed GDPR compliance explicitly stated), and apify.com/pricing on 2026-06-15. The apify.com domain itself redirects to an internal cluster address; most content was accessed via docs.apify.com. HIPAA and BAA are not mentioned in any reachable page; set to null. The free $0 plan ($5 prepaid usage/month included) is confirmed from the pricing file and qualifies as a forever-free tier. Trust Center at trust.apify.com returned only a page title with no content."
+      }
     },
     {
       "slug": "zyte",
@@ -370,7 +538,64 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.zyte.com/trust-center/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Python",
+          "Scrapy",
+          "Scrapy Cloud",
+          "Playwright",
+          "Splash",
+          "AWS S3",
+          "Google Cloud Storage",
+          "Claude Code (MCP plugin)"
+        ],
+        "limits": [
+          "Pay-as-you-go: no minimum, HTTP from $0.13/1K requests",
+          "$100/mo commitment unlocks lower rates (HTTP from $0.10/1K)",
+          "$500/mo commitment: HTTP from $0.06/1K, browser from $0.48/1K",
+          "$5 free credit available on signup (not a recurring free tier)"
+        ],
+        "keyFeatures": [
+          "AI-powered automatic data extraction across structured data types",
+          "Patented ban-handling and unblocking at scale",
+          "ISO 27001-certified infrastructure",
+          "Scrapy Cloud for spider hosting and monitoring",
+          "Commitment-based pricing with per-request metering (pay only for successful results)"
+        ],
+        "bestFor": [
+          "Python/Scrapy developers needing cloud spider hosting",
+          "Enterprise web data extraction with legal compliance focus",
+          "AI model training datasets requiring verified, structured outputs",
+          "Teams wanting usage-metered pricing without flat credit buckets"
+        ],
+        "sources": [
+          {
+            "url": "https://www.zyte.com/trust-center/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.zyte.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.zyte.com/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched zyte.com homepage, /pricing/, /trust-center/, and /zyte-api/ on 2026-06-15. The trust-center page confirmed ISO 27001 certification and GDPR/CCPA compliance with a Data Processing Agreement; gdpr=true. SOC 2 and HIPAA/BAA were not mentioned on any reachable page; set to null. The /security/ path returned 404. No forever-free $0 plan exists — the $5 free credit on the Pay-as-you-go tier is a one-time trial credit, not a recurring free plan; freeTier=false."
+      }
     },
     {
       "slug": "scrapingbee",
@@ -481,7 +706,66 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.scrapingbee.com/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Python",
+          "Node.js",
+          "PHP",
+          "Ruby",
+          "Java",
+          "Go",
+          "cURL",
+          "Make",
+          "n8n",
+          "Zapier",
+          "MCP Server",
+          "Claude",
+          "Cursor",
+          "Gemini"
+        ],
+        "limits": [
+          "Freelance: 250,000 credits/month, 10 concurrent requests",
+          "Startup: 1,000,000 credits/month, 50 concurrent",
+          "Business: 3,000,000 credits/month, 100 concurrent",
+          "Business+: 8,000,000 credits/month, 200 concurrent; hidden higher tiers up to ~$2,400/mo available post-login"
+        ],
+        "keyFeatures": [
+          "SOC 2 Type II and GDPR compliant",
+          "AI data extraction: describe fields in natural language to get structured JSON",
+          "Markdown scraper for LLM-ready page output",
+          "Stealth proxies and premium residential proxy rotation",
+          "Dedicated scraper APIs for Amazon, Walmart, Google Search, YouTube"
+        ],
+        "bestFor": [
+          "Teams with SOC 2 compliance requirements",
+          "AI/LLM workflows needing structured JSON or markdown output",
+          "E-commerce price intelligence and review tracking",
+          "Cybersecurity threat intelligence and credential monitoring"
+        ],
+        "sources": [
+          {
+            "url": "https://www.scrapingbee.com/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.scrapingbee.com/documentation/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched scrapingbee.com homepage and /documentation/ on 2026-06-15. The homepage explicitly lists SOC 2 Type II and GDPR compliance with 24/7 support, infrastructure security, and access controls; soc2=true, gdpr=true. The /security/ and /privacy/ paths returned 404. No HIPAA or BAA claims were found; hipaa=null. No free $0 forever plan exists in the catalog; entry plan is Freelance at $49/month; freeTier=false. Integrations with Make, n8n, Zapier, and MCP Server for AI agents confirmed on homepage."
+      }
     },
     {
       "slug": "oxylabs",
@@ -561,7 +845,74 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://oxylabs.io/legal/oxylabs-data-processing-agreement",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Python",
+          "Go",
+          "Cursor",
+          "ChatGPT",
+          "LangGraph",
+          "CrewAI",
+          "AutoGen",
+          "Flowise",
+          "LlamaIndex",
+          "LangChain",
+          "Zapier",
+          "n8n",
+          "Make",
+          "OpenAI"
+        ],
+        "limits": [
+          "Free Trial: up to 2,000 results total, 10 req/sec, no credit card",
+          "Micro: 98,000 results/month, 50 req/sec, top-up up to $249",
+          "Starter: 220,000 results/month, top-up up to $499",
+          "Advanced: 622,500 results/month, top-up up to $499"
+        ],
+        "keyFeatures": [
+          "175M+ residential IPs and 2M+ datacenter IPs across 188+ countries",
+          "ISO/IEC 27001:2022 certified for proxy and scraper API products",
+          "AI Studio with natural language tools (AI-Scraper, AI-Crawler, Browser Agent, AI-Search)",
+          "38+ pre-configured website targets (Amazon, Google, ChatGPT) with parsed JSON output",
+          "OxyCopilot AI assistant for scraper development"
+        ],
+        "bestFor": [
+          "Enterprise teams needing ISO 27001-certified infrastructure",
+          "E-commerce and SERP data at scale with dedicated account manager",
+          "AI agent development using LangChain, CrewAI, or AutoGen",
+          "Teams needing 24/7 support from $49/month entry point"
+        ],
+        "sources": [
+          {
+            "url": "https://oxylabs.io/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://oxylabs.io/legal/oxylabs-data-processing-agreement",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://oxylabs.io/products/scraper-api/web/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://oxylabs.io/products/scraper-api/web",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched oxylabs.io homepage, /products/scraper-api/web/pricing, /products/scraper-api/web, and /legal/oxylabs-data-processing-agreement on 2026-06-15. The homepage confirms ISO/IEC 27001:2022 certification and lists 30+ integrations but does NOT itself reference GDPR; the GDPR claim (gdpr=true) is supported by the Data Processing Agreement, which is built on EU Regulation 2016/679 (GDPR) and is therefore set as the compliance source. SOC2 and HIPAA/BAA not found on any reachable page; set to null. The /security, /company/security, /trust-and-security, and /resources/compliance paths all returned 404. The Free Trial (2,000 results total, not recurring) is a one-time trial, not a forever-free plan; freeTier=false."
+      }
     },
     {
       "slug": "scrapfly",
@@ -671,7 +1022,71 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://scrapfly.io/compliance",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Python",
+          "TypeScript",
+          "Go",
+          "Rust",
+          "Scrapy",
+          "Zapier",
+          "Make",
+          "n8n",
+          "LangChain",
+          "LlamaIndex",
+          "CrewAI",
+          "Claude (MCP)",
+          "Browser Use",
+          "Stagehand"
+        ],
+        "limits": [
+          "Free: 1,000 API credits on signup, no credit card, no time limit",
+          "Discovery: 200,000 credits/month, no pay-as-you-go overages",
+          "Pro: 1,000,000 credits/month, overages available",
+          "BAA for HIPAA available to Custom-plan customers only",
+          "Annual billing: 16% off (2 months free) on all paid plans"
+        ],
+        "keyFeatures": [
+          "HIPAA-compliant with BAA available (Custom plan)",
+          "SOC 2 Type I & II, SOC 3, and ISO 27001 certified",
+          "Anti-bot bypass with 94–98% success rates across Cloudflare, Akamai, DataDome, Imperva, Kasada",
+          "Pay-only-for-success model (failed requests not billed)",
+          "AI Browser Agent with stealth Chromium for autonomous agent loops"
+        ],
+        "bestFor": [
+          "Compliance-sensitive teams needing HIPAA/SOC2/ISO27001",
+          "High-difficulty anti-bot targets (Cloudflare, Akamai, Kasada)",
+          "AI agent pipelines using Browser Use, Stagehand, or MCP clients",
+          "Teams wanting a forever-free entry plan with no credit card"
+        ],
+        "sources": [
+          {
+            "url": "https://scrapfly.io/compliance",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://scrapfly.io/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://scrapfly.io/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched scrapfly.io/compliance on 2026-06-15, which explicitly confirms: SOC 2 Type II (audited, full report via trust portal), ISO 27001 (certified), HIPAA (attested, BAA available to Custom-plan customers through dashboard), GDPR (Standard DPA applies to all accounts; SCCs and UK addendum available for Custom plans). All four compliance values confirmed directly from vendor's own compliance page. The Free plan (1,000 credits, no credit card, no time limit) is a genuine forever-free $0 tier confirmed from both the pricing file and homepage."
+      }
     },
     {
       "slug": "scrapingant",
@@ -766,7 +1181,56 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Python",
+          "Node.js",
+          "JavaScript",
+          "PHP",
+          "Java",
+          "cURL",
+          "MCP Server",
+          "LangChain",
+          "Claude Code",
+          "Cursor",
+          "Windsurf"
+        ],
+        "limits": [
+          "All plans include 10,000 free credits/month (no charge, only successful scrapes billed)",
+          "Enthusiast: 100,000 credits/month at $19",
+          "Startup: 500,000 credits/month at $49",
+          "Business: 3,000,000 credits/month with custom proxy pools and debug sessions"
+        ],
+        "keyFeatures": [
+          "AI data extraction: natural language prompts to structured JSON",
+          "LLM-ready Markdown output per page",
+          "3M+ rotating residential and datacenter proxies across 100+ countries",
+          "Unlimited parallel concurrency with auto-scaling",
+          "MCP Server for Claude Code, Cursor, and Windsurf AI agents"
+        ],
+        "bestFor": [
+          "Budget-conscious teams needing proxy-backed scraping from $19/month",
+          "AI agent developers using Claude Code or Cursor via MCP",
+          "SERP scraping across Google, Bing, and Yandex",
+          "B2B lead generation from directories and classified listings"
+        ],
+        "sources": [
+          {
+            "url": "https://scrapingant.com/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched scrapingant.com homepage on 2026-06-15. No compliance certifications (HIPAA, SOC2, GDPR, ISO27001) were mentioned on any reachable page. The /privacy-policy, /terms-of-service, /features, and /web-scraping-api paths all returned 404. Blog did not contain compliance-related posts. All compliance values set to null. No free $0 forever plan in the catalog; the lowest paid plan is Enthusiast at $19/month; however all plans include 10,000 free credits/month included. freeTier=false (no standalone $0 plan)."
+      }
     },
     {
       "slug": "serpapi",
@@ -877,7 +1341,68 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://serpapi.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Python",
+          "Ruby",
+          "Node.js",
+          "Java",
+          "Go",
+          "PHP",
+          "Rust",
+          "C#",
+          "Swift",
+          "MCP",
+          "CLI"
+        ],
+        "limits": [
+          "Free: 250 searches/month, 50 throughput/hour",
+          "Starter: 1,000 searches/month, 200 throughput/hour, $25/month",
+          "Developer: 5,000 searches/month, 1,000 throughput/hour, $75/month",
+          "Production: 15,000 searches/month, 3,000 throughput/hour, $150/month",
+          "U.S. Legal Shield ($2M coverage) excluded from Free, Starter, Developer plans"
+        ],
+        "keyFeatures": [
+          "SOC 2 Type II and ISO 27001 certified",
+          "U.S. Legal Shield: up to $2M liability coverage for lawful SERP scraping",
+          "Real-time structured SERP JSON across 20+ search engines (Google, Bing, Baidu, DuckDuckGo, Amazon, YouTube, Yelp)",
+          "ZeroTrace Mode for privacy-sensitive searches",
+          "99.95% SLA guarantee with credits up to 100% of monthly plan for downtime"
+        ],
+        "bestFor": [
+          "SEO teams needing structured SERP data across multiple search engines",
+          "AI/voice assistant products requiring real-time search results",
+          "Legal-risk-averse teams wanting a U.S. Legal Shield indemnification",
+          "Price monitoring across Amazon, eBay, Walmart, and Home Depot"
+        ],
+        "sources": [
+          {
+            "url": "https://serpapi.com/security",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://serpapi.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://serpapi.com/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched serpapi.com/security on 2026-06-15, which explicitly lists SOC 2 Type II, SOC 3, and ISO 27001 as acquired certifications; soc2=true. GDPR is listed as 'In Progress' on the security page — not yet attested; gdpr=null (cannot confirm as complete). HIPAA and BAA not mentioned anywhere; hipaa=null. The Free plan (250 searches/month, forever) is confirmed from the pricing file; freeTier=true. Legal section confirms U.S. Legal Shield coverage for lawful scraping and 99.95% SLA."
+      }
     }
   ]
 }

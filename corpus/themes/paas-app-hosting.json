@@ -24,6 +24,57 @@
         "Twilio"
       ],
       "provenance": "https://www.heroku.com/pricing accessed 2026-06-14. HIPAA/BAA confirmed on Shield-tier dynos and Shield Postgres. Fir (Kubernetes) dyno prices from same page.",
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.heroku.com/compliance",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "GitHub",
+          "Postgres",
+          "Redis",
+          "Kafka",
+          "Datadog",
+          "New Relic",
+          "Papertrail",
+          "Cloudflare",
+          "SendGrid"
+        ],
+        "limits": [
+          "Eco: 0.5 GB RAM, sleeps after inactivity, personal accounts only",
+          "Shield tier requires Private Space (significant add-on cost)",
+          "HIPAA/PCI scope limited to Shield dynos and Shield Postgres"
+        ],
+        "keyFeatures": [
+          "Shield tier with HIPAA/PCI BAA for healthcare apps",
+          "Fir (Kubernetes) platform alongside legacy Cedar dynos",
+          "Private Spaces with network isolation",
+          "SOC 2 Type II, ISO 27001/27017/27018, PCI DSS Level 1"
+        ],
+        "bestFor": [
+          "Healthcare and regulated-industry apps needing BAA",
+          "Teams migrating from legacy Cedar to Kubernetes-backed Fir",
+          "Enterprise Salesforce ecosystem deployments"
+        ],
+        "sources": [
+          {
+            "url": "https://www.heroku.com/compliance",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.heroku.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        ],
+        "provenance": "Fetched https://www.heroku.com/compliance on 2026-06-15: confirms HIPAA with BAA (ticket required), SOC 2 Type II, SOC 1 Type II, SOC 3, PCI DSS Level 1, ISO 27001/27017/27018. GDPR confirmed via devcenter.heroku.com/articles/gdpr link referenced on the compliance page; DPA available through Salesforce. freeTier=false: lowest recurring plan is $5 Eco. freeTrialDays=null: no public free trial found."
+      },
       "plans": [
         {
           "name": "Eco",
@@ -182,6 +233,58 @@
         "OpenTelemetry"
       ],
       "provenance": "render.com/pricing returned JS-only content with no extractable prices. Current plan prices obtained from render.com/changelog (April 23, 2026 entry: Hobby free, Pro $25/month flat, Scale $499/month flat replacing per-seat model). HIPAA/BAA confirmed in same changelog entry for Scale and Enterprise tiers.",
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://render.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "GitHub",
+          "GitLab",
+          "Bitbucket",
+          "Docker",
+          "Okta (SSO/SAML)",
+          "Datadog",
+          "Honeycomb",
+          "OpenTelemetry",
+          "AWS PrivateLink"
+        ],
+        "limits": [
+          "Hobby: free Postgres expires 30 days after creation (1 GB limit)",
+          "Hobby: web services spin down after inactivity (750 hrs/month free instance hours)",
+          "Pro: $25/month flat, unlimited seats, no HIPAA",
+          "Scale: HIPAA-enabled workspaces at $499/month flat"
+        ],
+        "keyFeatures": [
+          "SOC 2 Type II + ISO 27001 certified",
+          "HIPAA-enabled workspaces on Scale tier (BAA available)",
+          "Unlimited team members on flat-fee Pro and Scale plans",
+          "Private networking, autoscaling, zero-downtime deploys, preview environments"
+        ],
+        "bestFor": [
+          "Startups wanting unlimited-seat flat pricing",
+          "Healthcare apps requiring HIPAA BAA at Scale tier",
+          "Teams seeking SOC 2 + ISO 27001 out of the box without enterprise contracts"
+        ],
+        "sources": [
+          {
+            "url": "https://render.com/security",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://render.com/changelog",
+            "accessedAt": "2026-06-14"
+          }
+        ],
+        "provenance": "Fetched https://render.com/security on 2026-06-15: confirms SOC 2 Type II, ISO 27001, GDPR DPA, HIPAA (with BAA on Scale/Enterprise). freeTier=true per Hobby plan ($0) in the plans list. freeTrialDays=null: no time-limited trial found, Hobby is a permanent free tier."
+      },
       "plans": [
         {
           "name": "Hobby",
@@ -266,6 +369,60 @@
         "MongoDB"
       ],
       "provenance": "https://railway.com/pricing accessed 2026-06-14; plan resource limits confirmed from https://docs.railway.com/reference/pricing/plans accessed 2026-06-14.",
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://trust.railway.com",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "GitHub",
+          "GitLab",
+          "Docker",
+          "Postgres",
+          "Redis",
+          "MySQL",
+          "MongoDB"
+        ],
+        "limits": [
+          "Hobby: $5/month includes $5 resource credit, max 6 replicas, 48 GB RAM, 48 vCPU",
+          "Pro: $20/seat, $20 resource credit per seat, max 1 TB RAM, 1,000 vCPU",
+          "Egress: $0.05/GB on all plans",
+          "Enterprise: 2.4 TB RAM, 2,400 vCPU, 5 TB volume storage"
+        ],
+        "keyFeatures": [
+          "SOC 2 Type II + HIPAA BAA (confirmed via trust.railway.com)",
+          "GDPR DPA available at railway.com/legal/dpa",
+          "Usage-based billing with generous per-plan resource caps",
+          "Volume storage up to 1 TB on Pro, 5 TB on Enterprise"
+        ],
+        "bestFor": [
+          "Developer teams wanting usage-metered PaaS with high resource ceilings",
+          "HIPAA-regulated workloads on a modern deploy platform",
+          "Startups scaling from side project to production without renegotiating plans"
+        ],
+        "sources": [
+          {
+            "url": "https://trust.railway.com",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://railway.com/legal/dpa",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://railway.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        ],
+        "provenance": "Fetched https://trust.railway.com on 2026-06-15: confirms SOC 2 Type II, HIPAA with BAA, GDPR compliance, EU-US and Swiss-US DPF. DPA confirmed at railway.com/legal/dpa. Note: vendor-level hipaa/baa fields in this file show null (pre-enrichment data); trust center confirms both are true. freeTier=false: no $0 recurring plan; Hobby is $5/month. freeTrialDays=null: the one-time $5 trial credit is excluded per methodology notes."
+      },
       "plans": [
         {
           "name": "Hobby",
@@ -337,6 +494,61 @@
         "Tigris S3"
       ],
       "provenance": "https://fly.io/docs/about/pricing/ accessed 2026-06-14. HIPAA add-on price $99/month confirmed from https://fly.io/pricing accessed 2026-06-14. Fly.io discontinued flat plans for new customers; all new accounts are pure pay-as-you-go. Legacy free allowances (3 shared-cpu-1x VMs, 3 GB volumes) still honored for pre-sunset Hobby/Launch/Scale plan holders only.",
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://fly.io/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Docker",
+          "GitHub Actions",
+          "Postgres (Supabase)",
+          "Redis (Upstash)",
+          "Tigris S3",
+          "LiteFS (SQLite)",
+          "WireGuard VPN"
+        ],
+        "limits": [
+          "No free tier for new accounts; legacy free allowances (3 shared-cpu-1x VMs, 3 GB volumes) grandfathered only",
+          "Smallest billed unit: shared-cpu-1x 256 MB ~$2.02/month",
+          "HIPAA add-on: $99/month on top of compute costs",
+          "Volume storage: $0.15/GB/month; egress $0.02/GB (North America/Europe)"
+        ],
+        "keyFeatures": [
+          "HIPAA-compliant workloads via $99/month BAA add-on",
+          "SOC 2 Type II attested; hardware runs in ISO 27001 datacenters",
+          "Firecracker microVM isolation (memory-safe hypervisor)",
+          "WireGuard-encrypted private networking between apps; volume encryption at rest (AES-XTS)",
+          "Machine reservations at 40% discount for predictable workloads"
+        ],
+        "bestFor": [
+          "Latency-sensitive apps needing global edge deployment across 30+ regions",
+          "Healthcare apps on a pay-as-you-go infra needing HIPAA BAA",
+          "Teams wanting VM-level isolation without Kubernetes overhead"
+        ],
+        "sources": [
+          {
+            "url": "https://fly.io/security",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://fly.io/docs/about/healthcare/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://fly.io/docs/about/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        ],
+        "provenance": "Fetched https://fly.io/security on 2026-06-15: confirms SOC 2 Type II, BAA available ('we do BAAs'), ISO 27001 datacenters. Fetched https://fly.io/docs/about/healthcare/ on 2026-06-15: confirms HIPAA workload support and BAA signing. GDPR=null: privacy policy references EU-US Data Privacy Framework and SCCs but does not explicitly name GDPR or offer a named DPA; cannot confirm from fetched pages. freeTier=false: no free tier for new accounts; legacy allowances are grandfathered only."
+      },
       "plans": [
         {
           "name": "Pay-as-You-Go (Shared CPU)",
@@ -433,6 +645,59 @@
         "Container Registry"
       ],
       "provenance": "https://www.digitalocean.com/pricing/app-platform accessed 2026-06-14. No HIPAA/BAA mention found on pricing page or trust page (404). Container instance prices confirmed from same source.",
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.digitalocean.com/trust/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "GitHub",
+          "GitLab",
+          "Docker",
+          "DigitalOcean Container Registry",
+          "GitHub Actions",
+          "Buildpacks (Go, Python, Node.js, Ruby, PHP)"
+        ],
+        "limits": [
+          "Free tier: static sites only (3 apps, 1 GiB transfer/app/month)",
+          "Basic containers start at $5/month (512 MiB RAM, 50 GiB transfer)",
+          "Bandwidth overage: $0.02/GiB",
+          "Dedicated egress IP add-on: $25/month per app"
+        ],
+        "keyFeatures": [
+          "SOC 2 + SOC 3 certified; HIPAA workload eligibility (platform-level, BAA process not confirmed for App Platform specifically)",
+          "GDPR DPA available at /legal/data-processing-agreement with SCCs",
+          "Request-based autoscaling (GA as of May 2026)",
+          "Free static site hosting on global CDN with automatic HTTPS and DDoS mitigation"
+        ],
+        "bestFor": [
+          "Static site and frontend deployments on a free tier",
+          "Developer teams wanting a simpler managed PaaS within the DigitalOcean ecosystem",
+          "Projects that also use DigitalOcean Droplets, Managed DBs, or Spaces"
+        ],
+        "sources": [
+          {
+            "url": "https://www.digitalocean.com/trust/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.digitalocean.com/legal/gdpr-faq",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.digitalocean.com/pricing/app-platform",
+            "accessedAt": "2026-06-14"
+          }
+        ],
+        "provenance": "Fetched https://www.digitalocean.com/trust/ on 2026-06-15: confirms SOC 2, SOC 3, and 'eligibility to process HIPAA workloads' but does not confirm an App Platform-specific BAA or HIPAA offering — hipaa=null as a result. Fetched https://www.digitalocean.com/legal/gdpr-faq on 2026-06-15: confirms GDPR DPA with SCCs, gdpr=true. freeTier=true: Static Sites (Free) plan exists at $0. freeTrialDays=null: no time-limited trial found."
+      },
       "plans": [
         {
           "name": "Static Sites (Free)",
@@ -547,6 +812,59 @@
         "Neon"
       ],
       "provenance": "https://vercel.com/pricing accessed 2026-06-14. HIPAA BAA available on Pro ($350/month add-on) and Enterprise (custom). Pro plan $20/user/month confirmed from same page.",
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://vercel.com/docs/security/compliance",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "GitHub",
+          "GitLab",
+          "Bitbucket",
+          "AWS (infrastructure)",
+          "Datadog",
+          "Sentry",
+          "Supabase",
+          "PlanetScale",
+          "Neon",
+          "MongoDB"
+        ],
+        "limits": [
+          "Hobby (free): 1M edge requests/month, 100 GB transfer/month, 1M function invocations, 3 custom firewall rules — personal projects only",
+          "Pro: $20/user/month + usage; HIPAA BAA requires $350/month add-on",
+          "Enterprise HIPAA includes Secure Compute (isolated VPC) at additional cost"
+        ],
+        "keyFeatures": [
+          "SOC 2 Type II, ISO 27001:2022, GDPR DPA, PCI DSS SAQ-D/SAQ-A, TISAX AL2",
+          "HIPAA BAA available on Pro ($350/month add-on) and Enterprise; acts as business associate",
+          "Vercel Firewall + Web Application Firewall + BotID on all plans",
+          "Edge Network with 20 AWS regions + Anycast; automatic failover across regions",
+          "DDoS mitigation and Deployment Protection built-in"
+        ],
+        "bestFor": [
+          "Frontend and full-stack Next.js / React deployments at global edge",
+          "Teams needing enterprise compliance (SOC 2, ISO 27001, HIPAA, TISAX) on a single platform",
+          "Product teams wanting instant preview deployments per PR"
+        ],
+        "sources": [
+          {
+            "url": "https://vercel.com/docs/security/compliance",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://vercel.com/pricing",
+            "accessedAt": "2026-06-14"
+          }
+        ],
+        "provenance": "Fetched https://vercel.com/docs/security/compliance on 2026-06-15: confirms SOC 2 Type II, ISO 27001:2022, GDPR DPA (vercel.com/legal/dpa), PCI DSS SAQ-D/SAQ-A, HIPAA with BAA ('Signing Business Associate Agreements (BAAs) with enterprise customers'), TISAX AL2. freeTier=true: Hobby plan at $0 exists in plans list. freeTrialDays=null: no time-limited trial found."
+      },
       "plans": [
         {
           "name": "Hobby",
@@ -624,6 +942,61 @@
         "Docker"
       ],
       "provenance": "https://sevalla.com/application-hosting/pricing/ accessed 2026-06-14. Sevalla is the successor to Kinsta Application Hosting (kinsta.com/application-hosting now redirects to sevalla.com). Pricing confirmed from official Sevalla pricing page.",
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://sevalla.com/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "GitHub",
+          "GitLab",
+          "Bitbucket",
+          "Docker",
+          "Dockerfile builds",
+          "Prebuilt container images",
+          "Git-based auto-deploy"
+        ],
+        "limits": [
+          "Hobby H1: 0.3 CPU, 0.3 GB RAM at $5/month",
+          "Build pods: $0.02/minute",
+          "External bandwidth: $0.10/GB",
+          "Static site hosting listed as free (separate product from application hosting)"
+        ],
+        "keyFeatures": [
+          "SOC 2 Type II + ISO 27001 + GDPR + CCPA certified",
+          "25 global data centers + 260+ edge PoP servers for static delivery",
+          "Live preview environments per pull request",
+          "Vertical and horizontal auto-scaling without downtime",
+          "Private service-to-service connections by default"
+        ],
+        "bestFor": [
+          "Teams migrating from Kinsta Application Hosting (direct successor)",
+          "Polyglot teams deploying across Node.js, Go, Python, PHP, Rust, Java without framework lock-in",
+          "Apps needing SOC 2 + ISO 27001 compliance without enterprise pricing"
+        ],
+        "sources": [
+          {
+            "url": "https://sevalla.com/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://sevalla.com/application-hosting/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://sevalla.com/application-hosting/pricing/",
+            "accessedAt": "2026-06-14"
+          }
+        ],
+        "provenance": "Fetched https://sevalla.com/ and https://sevalla.com/application-hosting/ on 2026-06-15: homepage lists SOC II Type 2, ISO 27001, GDPR, CCPA certifications. HIPAA=null: no mention of HIPAA or BAA found on any fetched Sevalla page; direct fetch of sevalla.com/security/ returned an error. trust.kinsta.com (referenced as trust center) did not return extractable compliance data. freeTier=false: application hosting plans start at $5/month (Hobby H1); static site hosting is a separate product. freeTrialDays=null: no trial found."
+      },
       "plans": [
         {
           "name": "Hobby H1",

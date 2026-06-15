@@ -74,7 +74,58 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": false,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://docs.stripe.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Shopify",
+          "WooCommerce",
+          "Salesforce",
+          "QuickBooks",
+          "Xero",
+          "NetSuite",
+          "Adobe Commerce"
+        ],
+        "limits": [
+          "No monthly fee on standard plan",
+          "Per-transaction fees apply to every charge",
+          "+1% surcharge for international cards",
+          "+1% surcharge for currency conversion"
+        ],
+        "keyFeatures": [
+          "100+ payment methods globally",
+          "Stripe Radar AI fraud prevention",
+          "Stripe Connect for marketplace/platform payouts",
+          "Stripe Terminal for in-person payments",
+          "Subscription and usage-based billing via Stripe Billing"
+        ],
+        "bestFor": [
+          "SaaS and subscription businesses",
+          "Global e-commerce and marketplaces",
+          "Developer-first teams building custom payment flows"
+        ],
+        "sources": [
+          {
+            "url": "https://docs.stripe.com/security",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://stripe.com/features",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Security page at docs.stripe.com/security confirmed SOC 1 & SOC 2 Type II annual audits, SOC 3, PCI Service Provider Level 1, and GDPR compliance with a published DPA at stripe.com/legal/dpa. HIPAA is not offered; Stripe's own field hipaa=false is consistent with no BAA or HIPAA-enabled service found on any fetched page. freeTier=false because all plans are pay-as-you-go with no $0 forever tier; no published free trial period. Features and integrations confirmed via stripe.com/features fetch."
+      }
     },
     {
       "slug": "paypal",
@@ -138,7 +189,58 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": false,
+          "soc2": null,
+          "gdpr": null,
+          "source": {
+            "url": "https://www.paypal.com/us/enterprise/pci-compliance?utm_campaign=Braintree_Migration&utm_medium=Website&utm_source=Braintree",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Shopify",
+          "WooCommerce",
+          "BigCommerce",
+          "Magento",
+          "QuickBooks",
+          "Wix",
+          "every major eCommerce platform (self-described)"
+        ],
+        "limits": [
+          "No monthly fee on standard plans",
+          "Per-transaction fees apply to every charge",
+          "+1.50% surcharge for international transactions",
+          "Chargeback fee applies per disputed transaction"
+        ],
+        "keyFeatures": [
+          "Access to 400M+ active PayPal buyer accounts",
+          "200+ markets and 130+ currencies supported",
+          "AI-powered fraud protection and dispute automation",
+          "Buy Now Pay Later (Pay Later) embedded checkout option",
+          "Venmo checkout for US consumers"
+        ],
+        "bestFor": [
+          "Consumer-facing e-commerce leveraging PayPal buyer trust",
+          "Businesses wanting an all-in-one checkout with broad buyer network",
+          "Merchants selling in multiple international markets"
+        ],
+        "sources": [
+          {
+            "url": "https://www.paypal.com/us/business/paypal-business-fees",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.paypal.com/us/enterprise/accept-payments",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Multiple PayPal pages were fetched (security, legalhub, business fees, enterprise accept-payments). HIPAA=false is consistent with the existing field and no BAA reference found on any page. SOC 2 and GDPR could not be confirmed or denied from any successfully fetched PayPal page — content was either truncated or the pages returned 404/not found; set to null. freeTier=false: all plans are pay-as-you-go with no $0 forever subscription. Key features confirmed from paypal.com/us/enterprise/accept-payments."
+      }
     },
     {
       "slug": "square",
@@ -202,7 +304,61 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://squareup.com/us/en/legal/general/hipaa",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": 30,
+        "keyIntegrations": [
+          "QuickBooks",
+          "Xero",
+          "WooCommerce",
+          "BigCommerce",
+          "Wix",
+          "Mailchimp",
+          "Jane App"
+        ],
+        "limits": [
+          "Free plan: no monthly fee, per-transaction rates apply",
+          "Plus/Premium: 30-day free trial, subscription fee varies by product vertical",
+          "HIPAA BAA applies only to Square Appointments, Invoices, and explicitly HIPAA-enabled features — not all Square services"
+        ],
+        "keyFeatures": [
+          "Free POS software with no monthly fee (Square Free)",
+          "HIPAA BAA available for Appointments and Invoices (healthcare)",
+          "Integrated hardware ecosystem (terminals, handhelds, registers, kiosks)",
+          "Built-in loyalty, gift cards, payroll, and marketing tools",
+          "Omnichannel: in-person, online, and invoicing from one platform"
+        ],
+        "bestFor": [
+          "Small and mid-size retail, food & beverage, and service businesses",
+          "Healthcare providers using Square Appointments needing HIPAA compliance",
+          "Businesses wanting a free all-in-one POS + software bundle"
+        ],
+        "sources": [
+          {
+            "url": "https://squareup.com/us/en/legal/general/hipaa",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://squareup.com/us/en/legal/general/privacy",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://squareup.com/us/en/payments/our-fees",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "HIPAA BAA confirmed directly from squareup.com/us/en/legal/general/hipaa: Square offers a BAA for Appointments, Invoices, and other explicitly HIPAA-enabled features; Square Buyer Services are excluded. Note: the existing file has hipaa=false/baa=false — the HIPAA BAA was confirmed from Square's own published legal page, so enrichment.compliance.hipaa=true reflects the actual product capability. GDPR confirmed from the Square privacy page which explicitly references EU GDPR and UK GDPR compliance. SOC 2 was not found on any fetched page, set to null. freeTier=true because Square Free is a genuine $0 forever plan. freeTrialDays=30 applies to Plus/Premium subscriptions only."
+      }
     },
     {
       "slug": "braintree",
@@ -267,7 +423,60 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": false,
+          "soc2": null,
+          "gdpr": null,
+          "source": {
+            "url": "https://www.paypal.com/us/braintree",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "PayPal",
+          "Venmo",
+          "Apple Pay",
+          "Google Pay",
+          "Magento",
+          "WooCommerce",
+          "Recurly",
+          "Chargebee"
+        ],
+        "limits": [
+          "No monthly or setup fees on standard plan",
+          "Chargeback fee: $15 per dispute",
+          "ACH capped at $5.00 per transaction",
+          "+1% for non-USD currency or non-US-issued cards",
+          "Free sandbox for testing before applying for a live account"
+        ],
+        "keyFeatures": [
+          "Payment orchestration with multi-acquirer routing",
+          "PayPal, Venmo, and card in a single SDK integration",
+          "Global payouts to 200+ markets in 50+ currencies",
+          "Fraud management tools",
+          "Mobile SDKs for iOS and Android"
+        ],
+        "bestFor": [
+          "Enterprise merchants wanting PayPal/Venmo alongside cards in one integration",
+          "Businesses needing multi-acquirer payment orchestration",
+          "Developers building mobile-first payment experiences"
+        ],
+        "sources": [
+          {
+            "url": "https://www.paypal.com/us/braintree",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.paypal.com/us/enterprise/paypal-braintree-fees",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Braintree redirects to PayPal. The fetched paypal.com/us/braintree page confirmed PCI DSS Level 1 compliance and a free sandbox environment but did not mention HIPAA, SOC 2, or GDPR. The existing hipaa=false/baa=false is consistent with no BAA found. SOC 2 and GDPR set to null as neither was confirmable from any successfully fetched page. freeTier=false: sandbox is test-only; no $0 production plan exists. Key features confirmed from the Braintree/PayPal product page."
+      }
     },
     {
       "slug": "adyen",
@@ -315,7 +524,65 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://help.adyen.com/en_US/knowledge/security/security-principles/what-are-the-adyen-security-certifications",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Salesforce Commerce Cloud",
+          "SAP",
+          "Shopify Plus",
+          "Magento / Adobe Commerce",
+          "BigCommerce",
+          "Meta",
+          "Uber (enterprise reference customer)"
+        ],
+        "limits": [
+          "Minimum monthly invoice applies (amount not published)",
+          "Rates listed as indicative; actual rates negotiated",
+          "No published free trial or sandbox details on marketing pages"
+        ],
+        "keyFeatures": [
+          "Interchange++ transparent pricing model",
+          "Unified commerce: online, in-store, and mobile in one platform",
+          "Local payment methods across 200+ countries via single integration",
+          "Built-in risk management and authentication",
+          "Issuing: ability to issue branded payment cards"
+        ],
+        "bestFor": [
+          "Large enterprise and global retailers needing unified commerce",
+          "Businesses requiring local payment methods across many markets",
+          "Platforms and marketplaces needing advanced payment orchestration"
+        ],
+        "sources": [
+          {
+            "url": "https://www.adyen.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.adyen.com/payment-methods",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://help.adyen.com/en_US/knowledge/security/security-principles/what-are-the-adyen-security-certifications",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.adyen.com/en_GB/knowledge-hub/gdpr-customer-data",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Verifier correction (2026-06-15): SOC 2 and GDPR were originally left null but are in fact published by Adyen. Adyen's official security-certifications page (help.adyen.com) states Adyen 'is audited annually by an external auditor to achieve a SOC 2 Type 2 certification' alongside PCI DSS v4.0 Level 1, SOC 1/ISAE 3402, and ISO 27001; soc2 set to true. Adyen's GDPR knowledge-hub page and GDPR-aligned DPA confirm GDPR support ('it's strongly aligned with payment processing so it proves you're compliant with GDPR') plus a Data Protection API for subject erasure; gdpr set to true. HIPAA is not mentioned on any Adyen page and Adyen offers no BAA, so hipaa remains null (neither a published BAA nor an explicit exclusion was found). freeTier=false: no $0 plan; Adyen requires a commercial account with a minimum monthly invoice."
+      }
     },
     {
       "slug": "helcim",
@@ -363,7 +630,62 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": {
+            "url": "https://www.helcim.com/security/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "QuickBooks Online",
+          "Xero",
+          "Wave App",
+          "Jane App",
+          "Zoho CRM",
+          "Zapier",
+          "WooCommerce (via API)"
+        ],
+        "limits": [
+          "No monthly account fee at any volume tier",
+          "Rates automatically decrease as monthly volume grows ($0–$5M+ tiers published)",
+          "ACH capped at $6.00 per transaction",
+          "No minimum processing requirement or contract"
+        ],
+        "keyFeatures": [
+          "Interchange-plus pricing with automatic volume-based rate reductions",
+          "Free virtual terminal, invoicing, recurring payments, and card vault included",
+          "PCI DSS Level 1 compliant service provider",
+          "Smart Terminal hardware with Tap to Pay on iPhone",
+          "Integrated customer manager and inventory management"
+        ],
+        "bestFor": [
+          "Small and mid-size businesses wanting transparent interchange-plus pricing",
+          "Healthcare, professional services, and wholesale merchants processing $10K+/month",
+          "Merchants who want free built-in business tools without a monthly SaaS fee"
+        ],
+        "sources": [
+          {
+            "url": "https://www.helcim.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.helcim.com/security/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://helcim.com/blog/helcim-features-overview/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Helcim's security page confirmed PCI DSS Level 1 compliance and NIST security practices. HIPAA, SOC 2, and GDPR were not mentioned on any fetched page — the trust.helcim.com Trust Center page returned empty content. Helcim advertises healthcare as a served industry but no HIPAA BAA was found; set to null. freeTier=false: there is no $0 plan in the file; the account is free to open but all features require actual transactions. No free trial period found."
+      }
     },
     {
       "slug": "stax",
@@ -438,7 +760,50 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "QuickBooks",
+          "Xero",
+          "WooCommerce",
+          "Shopify",
+          "Authorize.net",
+          "Salesforce",
+          "Zapier"
+        ],
+        "limits": [
+          "Minimum $99/month subscription regardless of processing volume",
+          "Designed for businesses processing at least $5K–$10K/month to break even vs. flat-rate processors",
+          "No percentage markup over interchange on any plan"
+        ],
+        "keyFeatures": [
+          "0% interchange markup — flat per-transaction cents only above direct interchange cost",
+          "Subscription model saves high-volume merchants vs. percentage-based processors",
+          "All-in-one: invoicing, recurring billing, virtual terminal, and reporting included",
+          "PCI DSS compliant platform",
+          "Dedicated account manager on higher tiers"
+        ],
+        "bestFor": [
+          "Established SMBs processing $120K+/year wanting to eliminate percentage markups",
+          "Businesses with predictable high transaction volumes benefiting from flat-fee subscriptions",
+          "Merchants who want an all-in-one payments platform with CRM and invoicing tools"
+        ],
+        "sources": [
+          {
+            "url": "https://staxpayments.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Stax's website returned HTTP 403 Forbidden on all directly fetched pages during enrichment (pricing, security, blog, features). No compliance certifications (HIPAA, SOC 2, GDPR) could be confirmed or denied from any successfully fetched Stax page; all three set to null. freeTier=false: plans start at $99/month with no $0 tier. Existing hipaa=false/baa=false carried from original file but compliance enrichment fields are null because the vendor's own pages were inaccessible. Key features and integrations drawn from existing file data and the original corroboration source."
+      }
     },
     {
       "slug": "authorize-net",
@@ -505,7 +870,58 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": {
+            "url": "https://www.authorize.net/en-us/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "QuickBooks",
+          "WooCommerce",
+          "BigCommerce",
+          "Magento",
+          "Shopify",
+          "Helcim",
+          "Salesforce"
+        ],
+        "limits": [
+          "$25/month gateway fee on all plans",
+          "$0.10 per transaction on Gateway Only plan plus $0.10 daily batch fee",
+          "eCheck/ACH at 0.75% per transaction on Gateway + eCheck plan",
+          "No setup or early-termination fees"
+        ],
+        "keyFeatures": [
+          "Established payment gateway with 25+ years in market (Visa subsidiary)",
+          "Advanced Fraud Detection Suite (AFDS) with customizable rules",
+          "Account Updater to automatically refresh stored card data",
+          "Recurring billing and subscription payment management",
+          "Supports Tap to Pay on mobile and eCheck/ACH payments"
+        ],
+        "bestFor": [
+          "Established SMBs wanting a gateway-only solution with their own merchant account",
+          "Merchants needing proven fraud detection tools and recurring billing",
+          "Businesses already integrated with accounting software like QuickBooks seeking a stable gateway"
+        ],
+        "sources": [
+          {
+            "url": "https://www.authorize.net/en-us/sign-up/pricing.html",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.authorize.net/en-us/resources.html",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Authorize.net's homepage and resources pages were successfully fetched but contained no mention of HIPAA, SOC 2, or GDPR compliance. The dedicated security page URLs returned 404. No compliance certifications beyond PCI DSS (inferred from industry standard for gateways) were confirmable from any fetched page; HIPAA, SOC 2, and GDPR all set to null. freeTier=false: all plans carry a $25/month gateway fee. Key features confirmed from homepage fetch and pricing page. Authorize.net is a Visa subsidiary and one of the longest-running US payment gateways."
+      }
     }
   ]
 }

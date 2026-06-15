@@ -85,7 +85,60 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://trust.retool.com/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "PostgreSQL",
+          "MySQL",
+          "MongoDB",
+          "Snowflake",
+          "Google Sheets",
+          "REST APIs",
+          "GraphQL",
+          "AWS S3"
+        ],
+        "limits": [
+          "Free: up to 5 users",
+          "Free: 500 workflow runs/month",
+          "Free: 250 AI credits/month",
+          "Free: 5 GB data storage",
+          "Free: up to 20 hours/month of Agents"
+        ],
+        "keyFeatures": [
+          "Visual drag-and-drop UI builder with 100+ pre-built components",
+          "Enterprise governance layer with inherited permissions and audit logs",
+          "Workflow automation with JavaScript/Python code steps",
+          "AI-powered app generation and code assistance",
+          "Self-hosted (on-prem, VPC) and cloud deployment options"
+        ],
+        "bestFor": [
+          "Engineering teams building internal ops tools at scale",
+          "Data-heavy enterprises needing write-back operational apps",
+          "Organizations requiring audit trails and fine-grained access control"
+        ],
+        "sources": [
+          {
+            "url": "https://trust.retool.com/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://retool.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched trust.retool.com on 2026-06-15: SOC 2 Type II and ISO/IEC 27001:2022 both confirmed with reports available; GDPR confirmed with Data Processing Agreement listed in the Legal section; CCPA listed. HIPAA not mentioned anywhere accessible — set to null. Retool /security returned 404; docs.retool.com redirected to a page with only links to trust center. Free tier confirmed via retool.com/pricing (geo-redirected to EUR but plan structure clear). No dedicated free-trial period found for paid plans beyond the permanent free tier."
+      }
     },
     {
       "slug": "appsmith",
@@ -146,7 +199,64 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://www.appsmith.com/blog/appsmith-has-been-certified-soc-2-type-ii",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": 15,
+        "keyIntegrations": [
+          "PostgreSQL",
+          "MySQL",
+          "MongoDB",
+          "REST APIs",
+          "GraphQL",
+          "Salesforce",
+          "Google Sheets",
+          "GitHub / GitLab (Git sync)"
+        ],
+        "limits": [
+          "Free: up to 5 users (cloud)",
+          "Free: 5 workspaces",
+          "Free: 3 Git repos",
+          "Business: up to 99 users",
+          "Enterprise: starts at 100 users ($2,500/mo flat)"
+        ],
+        "keyFeatures": [
+          "Open-source Apache 2.0 with self-hosted and air-gapped deployment",
+          "Git-native version control across dev/staging/prod branches",
+          "Code-first low-code: prompts generate code, not black-box abstractions",
+          "SAML/OIDC SSO, SCIM provisioning, and custom RBAC on Enterprise",
+          "Embeddable apps for legacy modernization"
+        ],
+        "bestFor": [
+          "Developer teams wanting open-source low-code with full code access",
+          "Enterprises needing air-gapped or self-hosted internal tool deployment",
+          "Teams building admin panels, CRUD UIs, and approval workflows"
+        ],
+        "sources": [
+          {
+            "url": "https://www.appsmith.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://docs.appsmith.com/product/security",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.appsmith.com/blog/appsmith-has-been-certified-soc-2-type-ii",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched appsmith.com/pricing confirming free tier (up to 5 users) and 15-day Business trial. Fetched docs.appsmith.com/product/security: it references SOC 1/SOC 2 for the AWS data-center hosting of Appsmith Cloud. Verifier (2026-06-15) found an authoritative vendor-issued attestation: appsmith.com/blog/appsmith-has-been-certified-soc-2-type-ii states 'Appsmith has been certified SOC 2 Type II' (independent auditor Certpro reviewed Appsmith's own internal security controls). soc2 therefore corrected from null to true with that blog post as the supporting source — this is an Appsmith-issued attestation, not merely the data-center's. appsmith.com/security and trust.appsmith.com both returned 404. HIPAA: not claimed by Appsmith on any accessible page (SOC 2 does not imply HIPAA) — null. GDPR/DPA: not found on any accessible page — null. Appsmith homepage confirmed core differentiating features."
+      }
     },
     {
       "slug": "budibase",
@@ -242,7 +352,69 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": {
+            "url": "https://budibase.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "PostgreSQL",
+          "MySQL",
+          "MongoDB",
+          "REST API",
+          "GraphQL",
+          "Airtable",
+          "Google Sheets",
+          "OpenAI",
+          "Anthropic",
+          "Slack",
+          "Microsoft Teams",
+          "HubSpot",
+          "Snowflake"
+        ],
+        "limits": [
+          "Open Source (self-hosted): unlimited users, apps, automations — no cloud storage",
+          "Pro: 1 creator, 1 workspace, 5,000 actions/month, 2,000 AI credits",
+          "Premium: 1 creator, 10 workspaces, 20,000 actions/month, 10,000 AI credits",
+          "Business: 3 creators, unlimited workspaces, 250,000 actions/month",
+          "Cloud plans: 14-day free trial"
+        ],
+        "keyFeatures": [
+          "Open-source fair-code with self-hosted option (unlimited users, no seat fees)",
+          "ISO 27001 certified with SOC 1/2 data-center compliance for cloud infrastructure",
+          "AI-powered agents that handle employee requests across Slack, Teams, and other channels",
+          "Low-code workflow automation with approval routing, conditions, and loops",
+          "Multi-channel integration supporting 100+ business tools and databases"
+        ],
+        "bestFor": [
+          "SMEs and enterprises building employee-facing request and approval workflows",
+          "Teams wanting open-source self-hosting with zero seat licensing costs",
+          "IT operations automating ticket routing, access requests, and onboarding"
+        ],
+        "sources": [
+          {
+            "url": "https://budibase.com/security",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://budibase.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://budibase.com/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched budibase.com/security: page states Budibase is ISO 27001 certified, and that data centers (EU/Ireland) are certified by SOC 1/2. The SOC 1/2 certification belongs to the hosting provider, NOT a Budibase-issued attestation — there is no Budibase SOC 2 report. Verifier (2026-06-15) confirmed via budibase.com/blog/updates/iso27001 that Budibase's own audited certification is ISO 27001:2022 (auditor NQA); no separate Budibase SOC 2 attestation exists. soc2 therefore set to null (was incorrectly true; the data-center SOC 2 is not a vendor attestation). HIPAA: not mentioned on any accessible page — null. GDPR: EU hosting mentioned but no DPA document or explicit GDPR-compliance statement found on accessible pages (budibase.com/gdpr returned 404) — null. freeTier: true via open-source self-hosted plan (perpetual, unlimited). Cloud plans have 14-day free trial confirmed from budibase.com/pricing. Features confirmed from budibase.com homepage."
+      }
     },
     {
       "slug": "tooljet",
@@ -329,7 +501,66 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.tooljet.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "PostgreSQL",
+          "MongoDB",
+          "Salesforce",
+          "OpenAI",
+          "Google Sheets",
+          "Airtable",
+          "AWS S3",
+          "Stripe",
+          "Slack",
+          "Twilio"
+        ],
+        "limits": [
+          "Free: 2 builders, 50 end users, 2 apps, 5 database tables",
+          "Free: 100 AI credits/month, no add-on credits",
+          "Pro: 100 end users, 5 apps, 2,000 AI credits/builder/month",
+          "Team: unlimited end users and apps",
+          "14-day free trial for Pro and Enterprise editions"
+        ],
+        "keyFeatures": [
+          "Natural-language-to-application generation via AI (plain English to dashboards)",
+          "Built-in PostgreSQL database with visual table builder — no separate DB setup",
+          "Visual workflow builder with triggers, conditions, loops, and code integration",
+          "SOC 2 Type II, ISO 27001, and GDPR certified",
+          "Flexible deployment: ToolJet Cloud, on-prem, AWS, Azure, GCP"
+        ],
+        "bestFor": [
+          "Engineering teams with internal tool backlogs needing rapid delivery",
+          "Enterprises requiring flexible deployment including self-hosted and multi-cloud",
+          "Teams building AI-assisted back-office dashboards and business process apps"
+        ],
+        "sources": [
+          {
+            "url": "https://www.tooljet.com/security",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://tooljet.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.tooljet.com/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched tooljet.com/security: page explicitly states 'SOC 2 Type II audits' and 'ISO 27001 standard' and 'ToolJet fully complies with the General Data Protection Regulation (GDPR)' — all set to true. HIPAA: not mentioned on security page, terms, or privacy pages — null. DPA: no explicit DPA document found, but GDPR compliance stated as policy on security page. freeTier: true (permanent free plan confirmed from pricing page). 14-day free trial confirmed for paid/enterprise tiers. Features and integrations from tooljet.com homepage."
+      }
     },
     {
       "slug": "ui-bakery",
@@ -410,7 +641,66 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://uibakery.io/privacy-policy",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "PostgreSQL",
+          "MySQL",
+          "MongoDB",
+          "GraphQL",
+          "OpenAPI / REST",
+          "Snowflake",
+          "Oracle",
+          "OpenAI",
+          "Firebase",
+          "Supabase"
+        ],
+        "limits": [
+          "Free: unlimited apps, public/private apps, hosted PostgreSQL (5 GB)",
+          "Free: trial AI credits only, 1,000 automation executions/month",
+          "Builder: up to 50 viewer seats, $25 AI credits/developer",
+          "Team: 5,000 automation executions/month, $40 AI credits/developer",
+          "Enterprise: custom seats, dedicated VM, custom SSO"
+        ],
+        "keyFeatures": [
+          "AI development agent that builds functional apps from conversational prompts in ~2 minutes",
+          "React code export eliminating vendor lock-in — export clean code to any IDE",
+          "SOC 2 Type 1 certified with GDPR compliance and MFA built-in",
+          "One-click deployment with auto-scaling, SSL, CDN, and one-click rollback",
+          "45+ database and API connectors with native SQL query support"
+        ],
+        "bestFor": [
+          "Teams building internal admin panels and operational dashboards quickly",
+          "Organizations wanting vendor lock-in escape via exportable React code",
+          "Small to mid-size engineering teams replacing fragmented spreadsheet-based workflows"
+        ],
+        "sources": [
+          {
+            "url": "https://uibakery.io/privacy-policy",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://uibakery.io/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://uibakery.io/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched uibakery.io/privacy-policy: a SOC 2 badge appears in the footer; Section 10 is a dedicated GDPR Notice for EEA residents, and the Terms of Service references subprocessor DPAs — setting gdpr to true. Verifier (2026-06-15) confirmed via uibakery.io/blog/ui-bakery-is-now-soc-2-type-1-compliant that UI Bakery's actual attestation is SOC 2 Type I (Type II audit underway, not yet complete) — so soc2 remains true (Type I is a valid SOC 2 attestation), but the keyFeature wording was corrected from 'Type 2' to 'Type 1' to avoid overstating the certification. HIPAA: not mentioned on any accessible page (security page returned 404) — null. uibakery.io/security returned 404. No explicit free-trial period found; free tier is permanent (confirmed from uibakery.io/pricing). Features and integrations from uibakery.io homepage."
+      }
     },
     {
       "slug": "superblocks",
@@ -469,7 +759,66 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://www.superblocks.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Snowflake",
+          "Databricks",
+          "PostgreSQL",
+          "AWS S3 / DynamoDB",
+          "Google BigQuery",
+          "Microsoft Azure",
+          "Salesforce",
+          "Slack",
+          "HashiCorp Vault",
+          "AWS Secrets Manager"
+        ],
+        "limits": [
+          "Teams: up to 15 builders",
+          "Teams: 1 hosted app included ($100/additional app/month)",
+          "Teams: 100 AI credits/builder/month",
+          "No free forever plan — 14-day trial only",
+          "Enterprise: unlimited hosted apps and end users"
+        ],
+        "keyFeatures": [
+          "Centralized IT governance layer with inherited permissions, secrets abstraction, and audit trails across all apps",
+          "Policy enforcement engine for design systems, code security, and audit logging",
+          "Real-time monitoring dashboard to suspend threats and review vulnerabilities instantly",
+          "HIPAA Compliant and SOC 2 Type II certified",
+          "Hybrid and VPC deployment options for strict data residency requirements"
+        ],
+        "bestFor": [
+          "IT and platform engineering teams needing governed, auditable AI app development",
+          "Regulated industries (healthcare, finance) requiring HIPAA compliance and SOC 2",
+          "Enterprises replacing legacy systems while enforcing centralized security policy"
+        ],
+        "sources": [
+          {
+            "url": "https://www.superblocks.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://trust.superblocks.com/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.superblocks.com/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched superblocks.com/pricing twice (2026-06-14 original run and 2026-06-15 enrichment): page explicitly shows 'HIPAA Compliant' and 'SOC 2 Type II Certified' badges in the Security & Compliance section — both set to true. Verifier (2026-06-15) independently confirmed via the Superblocks Trust Center (trust.superblocks.com, reached via 301 from superblocks.com/trust-security): HIPAA logo + downloadable HIPAA Report and SOC 2 Type 2 report are both listed, and Superblocks supports HIPAA customers under an executed BAA. GDPR: not listed on the Trust Center or pricing page (superblocks.com/security, /trust, /compliance all returned 404) — null. No free forever plan (confirmed: 14-day trial is the only free entry point). Features from superblocks.com homepage."
+      }
     },
     {
       "slug": "nocodb",
@@ -578,7 +927,63 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "PostgreSQL",
+          "MySQL",
+          "SQL Server",
+          "Airtable (import)",
+          "Google Sheets",
+          "Slack",
+          "HubSpot",
+          "Zapier",
+          "Jira",
+          "OpenAI"
+        ],
+        "limits": [
+          "Free (cloud): 3 editors, 10 commenters, 1,000 records, 1 GB storage, 100 automation runs/month",
+          "Free (self-hosted Community): unlimited records, storage, and seats",
+          "Plus: 50,000 records, 20 GB storage",
+          "Business: 300,000 records, 100 GB storage, 10 external DB connections",
+          "Scale: 1,000,000 records, 150 GB storage, 3-seat minimum"
+        ],
+        "keyFeatures": [
+          "Airtable-compatible spreadsheet UI over your own database — import Airtable bases directly",
+          "Multiple view types: Grid, Kanban, Gallery, Form, and Calendar for the same data",
+          "Self-hosted Community edition with unlimited records and no seat licensing",
+          "Row-level security on Scale and above",
+          "Open-source with 63,000+ GitHub stars — strong community and longevity signal"
+        ],
+        "bestFor": [
+          "Teams migrating from Airtable who want data ownership and no record limits",
+          "Non-technical users needing spreadsheet-style UX over a SQL database",
+          "Organizations wanting open-source no-code database with self-hosted option"
+        ],
+        "sources": [
+          {
+            "url": "https://nocodb.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://nocodb.com/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://nocodb.com/terms-of-service",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched nocodb.com/pricing confirming free cloud plan (3 editors, 1,000 records) and free self-hosted Community edition (unlimited). No free trial period found. Fetched nocodb.com homepage for features and integrations. Fetched nocodb.com/terms-of-service and nocodb.com/privacy-policy (404): no compliance certifications found. Attempted docs.nocodb.com/data-security (redirected to 404). nocodb.com/gdpr and /security both 404. No HIPAA, SOC 2, or GDPR certification found on any accessible page — all compliance set to null."
+      }
     }
   ]
 }

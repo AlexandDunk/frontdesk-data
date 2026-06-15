@@ -85,7 +85,68 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.chargebee.com/docs/billing/2.0/data-privacy-security/hipaa-guidelines",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Salesforce",
+          "HubSpot",
+          "NetSuite",
+          "Xero",
+          "QuickBooks Online",
+          "Avalara",
+          "Zendesk",
+          "Slack",
+          "Zapier",
+          "Stripe"
+        ],
+        "limits": [
+          "Starter: free up to $250K cumulative billing, then 0.75% of billing volume",
+          "Performance: up to $100K monthly billing volume ($599/mo, annual commitment)",
+          "Enterprise: volume negotiated, no published cap"
+        ],
+        "keyFeatures": [
+          "35+ payment gateway support on free tier",
+          "Smart dunning and automated retries",
+          "Self-serve customer billing portal",
+          "Usage-based and hybrid pricing models",
+          "GAAP-compliant revenue recognition reporting"
+        ],
+        "bestFor": [
+          "SaaS companies scaling from $0 to $100K MRR",
+          "Businesses needing multi-gateway payment routing",
+          "Teams wanting subscription + revenue recognition in one platform"
+        ],
+        "sources": [
+          {
+            "url": "https://www.chargebee.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.chargebee.com/features/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.chargebee.com/docs/billing/2.0/data-privacy-security/hipaa-guidelines",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.chargebee.com/docs/billing/2.0/kb/billing/soc-1-soc-2-type-ii-reports",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched chargebee.com/pricing/ and chargebee.com/features/ on 2026-06-15 (PCI DSS Level 1 confirmed). Verifier note (2026-06-15): the original enrichment set all compliance fields to null citing 404s on chargebee.com/security/ and similar marketing URLs, but Chargebee's authoritative docs do confirm compliance. SOC 1 & SOC 2 Type II confirmed at chargebee.com/docs/billing/2.0/kb/billing/soc-1-soc-2-type-ii-reports (soc2=true). GDPR confirmed via the Data Processing Addendum incorporating June-2021 EU SCCs, plus ISO/IEC 27001 certification (gdpr=true). HIPAA: the chargebee.com/docs/billing/2.0/data-privacy-security/hipaa-guidelines page states 'Chargebee supports HIPAA compliance within its billing and subscription management platform' and that 'Where appropriate, Chargebee may enter into a Business Associate Agreement (BAA) with the customer' — a real BAA is offered (customer must notify before sharing ePHI; BAA covers core billing only, not Receivables/RevRec/Retention/Reveal). hipaa=true on the basis of an actually-offered BAA. freeTier=true based on Billing Starter plan at $0 for first $250K cumulative billing. freeTrialDays=null as the free tier is billing-volume-gated rather than time-boxed."
+      }
     },
     {
       "slug": "recurly",
@@ -171,7 +232,64 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://recurly.com/legal/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Salesforce",
+          "HubSpot",
+          "NetSuite",
+          "QuickBooks Online",
+          "Avalara",
+          "Vertex",
+          "Braintree",
+          "Adyen",
+          "PayPal",
+          "Zapier"
+        ],
+        "limits": [
+          "Starter: first $40K monthly billing volume included; 0.9% on volume above that",
+          "All-Access: requires minimum $1M annual billing volume",
+          "No published free or trial tier"
+        ],
+        "keyFeatures": [
+          "AI-powered churn propensity modeling and cancel-save flows (Engage add-on)",
+          "Automated ASC 606/IFRS 15 revenue recognition (RevRec add-on)",
+          "20+ payment gateways with payments orchestration",
+          "Multi-GAAP immutable audit trail",
+          "Tax calculation in 47+ countries"
+        ],
+        "bestFor": [
+          "Mid-market and enterprise SaaS with $1M+ billing volume",
+          "Companies needing AI-driven retention on top of billing",
+          "Businesses requiring automated multi-GAAP revenue recognition"
+        ],
+        "sources": [
+          {
+            "url": "https://recurly.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://recurly.com/security/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://recurly.com/legal/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched recurly.com/pricing/, recurly.com/security/, and recurly.com/legal/ on 2026-06-15. PCI-DSS Level 1 confirmed on security page. GDPR: a Data Processing Agreement PDF (Recurly-EU-Personal-Data-Processing-Agreement.pdf) is linked from the legal page, confirming GDPR readiness — gdpr=true. SOC 2 and HIPAA are not mentioned on any Recurly page reached; attempts at recurly.com/company/security/, recurly.com/trust/, recurly.com/legal/security-and-compliance, and recurly.com/gdpr/ all returned 404 — soc2=null, hipaa=null. No free or trial plan exists in the published plan set — freeTier=false, freeTrialDays=null."
+      }
     },
     {
       "slug": "stripe-billing",
@@ -292,7 +410,64 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://docs.stripe.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Salesforce",
+          "HubSpot",
+          "NetSuite",
+          "QuickBooks",
+          "Xero",
+          "Avalara",
+          "Intercom",
+          "Segment",
+          "Slack",
+          "Zapier"
+        ],
+        "limits": [
+          "Pay as you go: 0.7% of subscription billing volume (one-time invoices excluded)",
+          "Usage metering: up to 100M events/month on pay-as-you-go",
+          "No $0 forever plan — 0.7% fee applies from first transaction"
+        ],
+        "keyFeatures": [
+          "Usage-based metering at 100M events/month scale",
+          "Smart retries and automated dunning",
+          "Customer self-service billing portal",
+          "Native payment processing (no third-party gateway required)",
+          "SOC 2 Type II and SOC 3 annual audits"
+        ],
+        "bestFor": [
+          "Developer-first companies already on Stripe Payments",
+          "Usage-based or consumption-pricing SaaS products",
+          "Global businesses needing built-in multi-currency and tax handling"
+        ],
+        "sources": [
+          {
+            "url": "https://docs.stripe.com/security",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://stripe.com/legal/dpa",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://stripe.com/billing/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched docs.stripe.com/security (redirected from stripe.com/docs/security) on 2026-06-15. SOC 1, SOC 2 Type II, and SOC 3 confirmed — soc2=true. The security page itself does not use the word 'GDPR'; the GDPR claim is grounded by stripe.com/legal/dpa, fetched 2026-06-15, which explicitly defines and binds to 'General Data Protection Regulation (EU) 2016/679' and UK GDPR — gdpr=true (DPA added to sources). HIPAA is not mentioned on the security page; Stripe does not advertise a BAA for its billing product — hipaa=null. Pay-as-you-go plan has $0 platform fee but bills 0.7% on all subscription volume from first transaction, making it a usage-priced entry point rather than a free tier — freeTier=false."
+      }
     },
     {
       "slug": "paddle",
@@ -344,7 +519,62 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.paddle.com/legal/soc-2-compliance",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "RevenueCat",
+          "ProfitWell Metrics",
+          "HubSpot",
+          "Segment",
+          "Google Analytics",
+          "Zapier",
+          "Slack",
+          "Baremetrics"
+        ],
+        "limits": [
+          "Pay as you go: 5% + $0.50 per transaction, no volume cap published",
+          "No monthly platform fee on self-serve tier",
+          "Custom tier: negotiated rates for high-volume sellers"
+        ],
+        "keyFeatures": [
+          "Merchant of Record model — Paddle handles all sales tax and VAT across 100+ jurisdictions",
+          "Built-in fraud protection and chargeback management",
+          "ProfitWell Metrics analytics (real-time MRR, churn, LTV)",
+          "Localized checkout in 20+ currencies",
+          "Automated dunning and churn prevention"
+        ],
+        "bestFor": [
+          "Software and SaaS companies wanting to outsource global tax compliance entirely",
+          "Digital product sellers targeting international markets without a finance team",
+          "Indie developers and small teams needing zero-setup global payments"
+        ],
+        "sources": [
+          {
+            "url": "https://www.paddle.com/legal/soc-2-compliance",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.paddle.com/gdpr",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.paddle.com/features",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched paddle.com/legal/soc-2-compliance on 2026-06-15: SOC 2 Type 2 confirmed (2023 audit, covering July 2022–December 2022; prior Type 1 in 2021). Fetched paddle.com/gdpr: GDPR compliance explicitly confirmed ('fully compliant with EU law'). HIPAA is not mentioned on any Paddle page reached — hipaa=null. The 5%+$0.50 per-transaction model means no $0 cost entry; freeTier=false. paddle.com/security and paddle.com/legal/security returned 404; compliance confirmed via gdpr and soc-2-compliance pages instead."
+      }
     },
     {
       "slug": "maxio",
@@ -427,7 +657,61 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.maxio.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Salesforce",
+          "HubSpot",
+          "NetSuite",
+          "Sage Intacct",
+          "Xero",
+          "QuickBooks Online",
+          "Avalara",
+          "Anrok",
+          "Stripe",
+          "GoCardless"
+        ],
+        "limits": [
+          "Build plan: sandbox/dev only, not for live revenue",
+          "Grow: up to $100K monthly billing volume",
+          "Scale: requires >$100K monthly billings, quote-only",
+          "Unlimited users on all tiers"
+        ],
+        "keyFeatures": [
+          "SOC 2 Type 2 and ISO 27001:2022 certified",
+          "Built-in revenue recognition (ASC 606) and A/R management",
+          "Usage-based and contract billing in one platform",
+          "20+ payment gateway integrations",
+          "EU and North America data center support"
+        ],
+        "bestFor": [
+          "B2B SaaS companies with complex subscription and usage billing",
+          "Finance teams needing integrated revenue recognition without a separate tool",
+          "Companies transitioning from Chargify or SaaSOptics (Maxio legacy products)"
+        ],
+        "sources": [
+          {
+            "url": "https://www.maxio.com/security",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.maxio.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched maxio.com/security on 2026-06-15. SOC 1 Type 2, SOC 2 Type 2, ISO 27001:2022, PCI DSS 4.01, and GDPR all explicitly confirmed. Data Privacy Framework (EU-US DPF) also listed. HIPAA is not mentioned on the security page — hipaa=null. Build plan is a developer sandbox only and not a production-capable free tier — freeTier=false. No time-limited trial is advertised — freeTrialDays=null."
+      }
     },
     {
       "slug": "zuora",
@@ -468,7 +752,59 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://www.zuora.com/security/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Salesforce",
+          "NetSuite",
+          "SAP",
+          "Microsoft Dynamics",
+          "Workday",
+          "Snowflake",
+          "Microsoft Azure",
+          "Avalara",
+          "Vertex",
+          "Adyen"
+        ],
+        "limits": [
+          "No published pricing tiers or volume limits — fully custom/quote-only",
+          "Designed for enterprise scale; not positioned for SMB"
+        ],
+        "keyFeatures": [
+          "Order-to-cash automation for any recurring revenue model",
+          "Zuora Revenue: ASC 606/IFRS 15 revenue recognition automation",
+          "Zephr: AI-powered paywall and digital subscription optimization",
+          "40+ payment gateway orchestration",
+          "PCI DSS Level 1, SOC 1/2/3, and HIPAA compliance"
+        ],
+        "bestFor": [
+          "Large enterprises running complex subscription or usage-based billing at scale",
+          "Media and telecom companies managing digital subscriptions",
+          "Businesses requiring integrated billing, revenue recognition, and CPQ"
+        ],
+        "sources": [
+          {
+            "url": "https://www.zuora.com/security/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.zuora.com/products/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched zuora.com/security/ on 2026-06-15. Page explicitly states: 'PCI DSS, HHS HIPAA, SOC 1, 2, and 3 and more' — hipaa=true, soc2=true confirmed. GDPR is not mentioned on the security page text retrieved; ISO 27018/27701 are listed in the company security whitepaper (reached via zuora.com/company/security/) but GDPR is not explicitly stated on the main security page — gdpr=null rather than inferred. Multiple Zuora URLs (trust.zuora.com, zuora.com/trust, zuora.com/company/trust-security/, zuora.com/privacy-policy/) returned 404. BAA not mentioned — not asserting baa=true beyond what hipaa=true implies. No free or trial plan published — freeTier=false, freeTrialDays=null."
+      }
     },
     {
       "slug": "billsby",
@@ -547,7 +883,61 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.billsby.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "QuickBooks",
+          "FreeAgent",
+          "TaxJar",
+          "Zapier",
+          "Stripe",
+          "PayPal",
+          "Spreedly"
+        ],
+        "limits": [
+          "Free: unlimited setup and testing, not for live revenue",
+          "Core: up to 5 users, 0.4% overage above $15K/month revenue",
+          "Pro: up to 25 users, 0.5% overage above $30K/month revenue"
+        ],
+        "keyFeatures": [
+          "Two-line embed code checkout (fastest integration claim)",
+          "Metered and pro-rated billing on Core and above",
+          "GDPR and UK GDPR compliant, CCPA compliant",
+          "ACH payments on Pro tier",
+          "Multi-language invoice support on Pro tier"
+        ],
+        "bestFor": [
+          "Small businesses and startups wanting low-cost subscription billing",
+          "Developers needing quick embed-code checkout integration",
+          "UK and EU businesses needing GDPR-ready subscription management"
+        ],
+        "sources": [
+          {
+            "url": "https://www.billsby.com/security",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.billsby.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.billsby.com/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched billsby.com/security on 2026-06-15. GDPR (EU and UK) explicitly confirmed; CCPA also stated; PCI DSS compliance confirmed via Spreedly vault integration. HIPAA and SOC 2 are not mentioned on any Billsby page reached — hipaa=null, soc2=null. The 'Free' plan in the pricing table is for setup and testing only, not live production billing; however since it is listed as a permanent $0 plan with unlimited users it qualifies as a freeTier=true entry. freeTrialDays=null as the free plan is feature-gated (pre-go-live only) rather than time-limited."
+      }
     },
     {
       "slug": "zoho-billing",
@@ -620,7 +1010,61 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.zoho.com/compliance.html",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Zoho CRM",
+          "Zoho Books",
+          "Stripe",
+          "PayPal",
+          "GoCardless",
+          "Avalara",
+          "TaxJar",
+          "Slack",
+          "Zapier",
+          "Google Workspace"
+        ],
+        "limits": [
+          "Standard: up to 3 users",
+          "Premium: up to 10 users",
+          "Enterprise: negotiated; no published seat or volume cap",
+          "14-day free trial, no credit card required"
+        ],
+        "keyFeatures": [
+          "SOC 2 + HIPAA Type 2 certified (Zoho-wide, incl. Billing)",
+          "ISO/IEC 27001, 27017, 27018, 27701 certified",
+          "50+ customizable reports with role-specific dashboards",
+          "Custom workflow automation with webhooks and triggers",
+          "Deep native Zoho ecosystem integration (CRM, Books, Analytics)"
+        ],
+        "bestFor": [
+          "SMBs already in the Zoho ecosystem seeking unified billing and accounting",
+          "Healthcare-adjacent businesses needing HIPAA-covered subscription billing",
+          "Cost-conscious teams wanting rich features at sub-$100/month price points"
+        ],
+        "sources": [
+          {
+            "url": "https://www.zoho.com/compliance.html",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.zoho.com/us/subscriptions/pricing.html",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched zoho.com/compliance.html on 2026-06-15. SOC 2 Type 2 confirmed; SOC 2 + HIPAA Type 2 audit explicitly listed — hipaa=true, soc2=true. GDPR compliance confirmed ('privacy features that comply to GDPR'). ISO/IEC 27001, 27017, 27018, 27701, SOC 1, ISO 9001, PCI DSS, and TX-RAMP also listed. No $0 forever plan in the published pricing table — freeTier=false. 14-day free trial confirmed from zoho.com/subscriptions features page — freeTrialDays=14."
+      }
     }
   ]
 }

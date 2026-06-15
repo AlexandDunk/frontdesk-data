@@ -77,7 +77,61 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://launchdarkly.com/security/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Datadog",
+          "Slack",
+          "GitHub Actions",
+          "Jira",
+          "Terraform",
+          "Snowflake",
+          "Amplitude",
+          "Okta"
+        ],
+        "limits": [
+          "Developer (free): unlimited seats, unlimited feature flags, 10M logs/traces/month, 5K session replays/month, 5K AI runs/month",
+          "Foundation: $10/service connection/mo + $8.33 per 1K client-side MAU/mo",
+          "HIPAA available on Enterprise and Guardian plans only (contact sales)"
+        ],
+        "keyFeatures": [
+          "FedRAMP Authorized (Moderate ATO) — rare among feature flag vendors",
+          "Release automation with workflows, approvals, and scheduling",
+          "Automatic pause/rollback via Guardian guardrail metrics",
+          "AI-native experimentation with built-in AI run tracking"
+        ],
+        "bestFor": [
+          "Regulated industries requiring FedRAMP or HIPAA",
+          "Enterprise engineering teams with complex release workflows",
+          "Teams that need observability and feature flags in one platform"
+        ],
+        "sources": [
+          {
+            "url": "https://launchdarkly.com/security/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://launchdarkly.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://launchdarkly.com/integrations/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched launchdarkly.com/security on 2026-06-15: SOC 2 Type II, ISO 27001, ISO 27701, FedRAMP Authorized (Moderate ATO), and GDPR/CCPA alignment confirmed. HIPAA confirmed from security page ('comprehensive privacy and security protections that enable customers to use our products in compliance with HIPAA'). BAA not explicitly mentioned on security page — existing file records hipaa=true from pricing page Enterprise/Guardian table. GDPR set to true based on explicit GDPR mention on security page. FedRAMP is a notable differentiator vs. all other vendors in this file. Integration list compiled from integrations page (80+ partners; top ones selected). Free trial days: the Developer plan is a permanent free tier, not a trial, so freeTrialDays=null."
+      }
     },
     {
       "slug": "harness-feature-management",
@@ -119,7 +173,56 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://trust.harness.io/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Datadog",
+          "Jira",
+          "New Relic",
+          "Segment",
+          "Sentry",
+          "Google Analytics",
+          "mParticle",
+          "Sumo Logic"
+        ],
+        "limits": [
+          "FME Free Plan: core feature flags and experimentation; advanced/enterprise controls require Enterprise module",
+          "Enterprise: quote-only, no published seat or usage caps"
+        ],
+        "keyFeatures": [
+          "Warehouse-native experimentation using existing customer data infrastructure",
+          "Release monitoring with auto-disable on detected regressions",
+          "Built-in CI/CD pipeline integration via Harness platform",
+          "Local flag evaluation — no sensitive user data sent to cloud"
+        ],
+        "bestFor": [
+          "Enterprise teams already using Harness CI/CD or DevOps platform",
+          "Teams migrating from Split.io seeking continuity",
+          "Organizations requiring warehouse-native experimentation"
+        ],
+        "sources": [
+          {
+            "url": "https://trust.harness.io/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://harness.io/products/feature-flags",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched trust.harness.io on 2026-06-15: ISO/IEC 27001, ISO 27017, ISO 27018, SOC 2 Type II, GDPR, CCPA, CSA STAR confirmed. HIPAA and BAA not listed on trust page — set to null (cannot confirm). GDPR set to true based on explicit listing. Free tier confirmed via Developer Hub docs for FME Free Plan. Integration list compiled from harness.io/products/feature-flags page (SDK ecosystem + named data integrations). No published trial length found; the FME Free Plan is permanent not time-limited."
+      }
     },
     {
       "slug": "flagsmith",
@@ -191,7 +294,68 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://docs.flagsmith.com/support/faq/account-billing-organisation",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Amplitude",
+          "Datadog",
+          "Dynatrace",
+          "GitHub",
+          "GitLab",
+          "Grafana",
+          "Jira",
+          "Segment",
+          "Slack",
+          "Terraform"
+        ],
+        "limits": [
+          "Free: 50K API requests/month, 1 team member, 1 project",
+          "Start-Up: 1M API requests/month, up to 3 team members; overage $7/100K",
+          "Scale-Up: 5M+ API requests/month, up to 20 team members; overage $50/1M",
+          "Enterprise: custom volume and seat limits"
+        ],
+        "keyFeatures": [
+          "Open-source self-hosted option (full feature parity)",
+          "OpenFeature provider support for vendor-agnostic evaluation",
+          "Multi-variate flags with A/B and MVT testing built in",
+          "Scheduled flag changes on paid plans"
+        ],
+        "bestFor": [
+          "Teams wanting open-source self-hosted control",
+          "Startups needing affordable flag management with A/B testing",
+          "Organizations requiring GDPR-compliant EU data storage"
+        ],
+        "sources": [
+          {
+            "url": "https://flagsmith.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://docs.flagsmith.com/support/faq/account-billing-organisation",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://flagsmith.com/privacy-policy/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://flagsmith.com/integrations/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched flagsmith.com/privacy-policy on 2026-06-15: UK ICO registration (ZA817429) and a GDPR Sub Processor List link confirm GDPR posture. The privacy page only showed a SOC 2 badge in the footer with no text, so the verifier (2026-06-15) repointed compliance.source to docs.flagsmith.com/support/faq/account-billing-organisation, which states verbatim 'Yes, Flagsmith is SOC 2 Type 2 certified' — soc2=true now has a textual source. HIPAA and BAA: no mention on any fetched page — set to null. Integration list compiled from flagsmith.com/integrations (18 named integrations). Free tier confirmed: 50K requests/month, 1 member — permanent free plan."
+      }
     },
     {
       "slug": "configcat",
@@ -303,7 +467,65 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://configcat.com/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Amplitude",
+          "Datadog",
+          "GitHub Actions",
+          "GitLab CI/CD",
+          "Jira",
+          "Slack",
+          "Segment",
+          "Terraform",
+          "Zapier",
+          "Visual Studio Code"
+        ],
+        "limits": [
+          "Forever Free: 10 feature flags, 2 environments, 2 products, 5M config downloads/month, unlimited seats",
+          "Pro: 100 flags, 3 environments, 25M downloads/month",
+          "Smart: unlimited flags/environments, 250M downloads/month",
+          "Enterprise: unlimited, up to 6B+ downloads/month (Dedicated tier)"
+        ],
+        "keyFeatures": [
+          "Client-side flag evaluation — user data never leaves customer systems",
+          "ISO 27001:2022 certified",
+          "EU-only data storage option available on all plans",
+          "Unlimited seats on every plan including free tier",
+          "Audit log retention from 7 days (Pro) up to 2 years (Enterprise)"
+        ],
+        "bestFor": [
+          "Teams with very high config download volumes needing predictable flat pricing",
+          "Privacy-conscious teams wanting client-side evaluation with no PII transmission",
+          "Organizations requiring EU data residency"
+        ],
+        "sources": [
+          {
+            "url": "https://configcat.com/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://configcat.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://configcat.com/integrations/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched configcat.com homepage and pricing page on 2026-06-15. ISO 27001:2022 and GDPR compliance explicitly stated. SOC 2 not mentioned on any reachable page — set to null. HIPAA not mentioned anywhere — set to null. BAA not mentioned. 256-bit SDK keys, MFA, SSO/SAML, SCIM, and audit logging confirmed as security features. Client-side evaluation architecture confirmed (user data stays within customer systems). 20 named integrations confirmed from integrations page. Free tier confirmed: Forever Free plan with 10 flags, unlimited seats."
+      }
     },
     {
       "slug": "statsig",
@@ -385,7 +607,61 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.statsig.com/privacy",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Amplitude",
+          "Datadog",
+          "Segment",
+          "Vercel",
+          "Mixpanel",
+          "Snowflake",
+          "BigQuery",
+          "Slack"
+        ],
+        "limits": [
+          "Developer (free): 2M events/month, unlimited flag checks, 50K session replays/month, unlimited seats",
+          "Pro: $150/mo base, 5M events included; $0.05 per 1K events overage",
+          "HIPAA/BAA available on Enterprise tier only (contact sales)"
+        ],
+        "keyFeatures": [
+          "Unified platform: feature flags, A/B testing, product analytics, and session replays in one tool",
+          "Warehouse-native deployment (Snowflake, Databricks, BigQuery, Redshift) on Enterprise",
+          "Change reviews and approval workflows on Pro+",
+          "EU-US Data Privacy Framework certified"
+        ],
+        "bestFor": [
+          "Product and engineering teams wanting flags + analytics in one vendor",
+          "Data teams requiring warehouse-native experimentation",
+          "Regulated industries needing HIPAA-eligible feature flag infrastructure"
+        ],
+        "sources": [
+          {
+            "url": "https://www.statsig.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.statsig.com/privacy",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.statsig.com/integrations",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched statsig.com/pricing (HIPAA-eligibility + BAA on Enterprise confirmed), statsig.com/integrations (25 named integrations confirmed), and statsig.com/privacy on 2026-06-15. Privacy page confirmed SOC 2 Type II badge and EU-US Data Privacy Framework certification. GDPR set to true based on DPF certification and EU data transfer provisions. HIPAA=true and baa=true confirmed from pricing page Enterprise tier description. Free tier confirmed: Developer plan at $0 with 2M events/month. No time-limited trial found; Developer plan is permanent."
+      }
     },
     {
       "slug": "unleash",
@@ -432,7 +708,61 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.getunleash.io/privacy-policy",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Slack",
+          "Microsoft Teams",
+          "Datadog",
+          "Jira",
+          "GitHub Copilot",
+          "Okta",
+          "Azure AD",
+          "OpenID Connect"
+        ],
+        "limits": [
+          "Pay-As-You-Go: $75/seat/month; 53M API requests/month included, then $5/1M overage",
+          "Open-source self-hosted: free, unlimited (requires own infrastructure)",
+          "14-day free trial on cloud plan, no credit card required"
+        ],
+        "keyFeatures": [
+          "Fully open-source core (MIT licensed) with self-hosted option",
+          "SOC 2 Type II certified cloud offering",
+          "Enterprise Edge for multi-region low-latency evaluation",
+          "AI-integrated autonomous feature management (GitHub Copilot, Claude Code, AWS Kiro)"
+        ],
+        "bestFor": [
+          "Teams wanting open-source control with optional managed cloud",
+          "Enterprises needing multi-region feature flag delivery",
+          "DevOps-centric organizations using trunk-based development"
+        ],
+        "sources": [
+          {
+            "url": "https://www.getunleash.io/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.getunleash.io/privacy-policy",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.getunleash.io/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched getunleash.io homepage on 2026-06-15: SOC 2 Type II, GDPR compliant, FedRAMP support, and ISO 27001 referenced. Privacy policy fetched on 2026-06-15: GDPR confirmed (GDPR DPA explicitly offered at /data-processing-agreement with Standard Contractual Clauses). HIPAA not mentioned on any page — set to null. BAA not mentioned — null. freeTier=false: no permanent $0 cloud plan exists; the open-source self-hosted version is free but not a cloud SaaS free tier. 14-day cloud trial confirmed on pricing page. Integration list expanded from homepage (AI coding tool integrations confirmed including GitHub Copilot, Claude Code, AWS Kiro)."
+      }
     },
     {
       "slug": "growthbook",
@@ -510,7 +840,59 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.growthbook.io/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Snowflake",
+          "BigQuery",
+          "Redshift",
+          "Databricks",
+          "ClickHouse",
+          "Okta",
+          "Azure AD",
+          "Slack"
+        ],
+        "limits": [
+          "Starter (free): up to 3 users, unlimited flags and experiments, unlimited MAU/MTU",
+          "Pro: up to 50 users, $40/seat/month; 2M CDN requests/month included",
+          "Open-source self-hosted: unlimited users and flags, requires own infrastructure",
+          "HIPAA/BAA available on Enterprise tier only"
+        ],
+        "keyFeatures": [
+          "Warehouse-native architecture — aggregate data only, no PII ever leaves customer's data warehouse",
+          "Advanced statistics: CUPED variance reduction, sequential testing, multi-arm bandits",
+          "Visual A/B test editor (no-code experiment creation)",
+          "Open-source self-hosted option with full feature parity",
+          "SOC 2 Type II + ISO 27001 certified"
+        ],
+        "bestFor": [
+          "Data teams wanting warehouse-native experimentation without vendor data access",
+          "Healthcare or regulated teams needing HIPAA-eligible feature management",
+          "Organizations wanting open-source flexibility with optional managed cloud"
+        ],
+        "sources": [
+          {
+            "url": "https://www.growthbook.io/security",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.growthbook.io/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched growthbook.io/security on 2026-06-15: SOC 2 Type II, ISO 27001, GDPR, COPPA, CCPA confirmed. HIPAA confirmed via security page ('No data or PII leaves your data warehouse, HIPAA compliant') and pricing page Enterprise BAA mention. BAA=true confirmed from pricing page Enterprise notes. GDPR=true from security page. Free tier confirmed: Starter plan at $0 up to 3 users. Open-source self-hosted plan also $0 but requires own infra. No time-limited trial found. Integration list: warehouse connectors from existing file plus Okta/Azure AD (SSO identity providers) and Slack confirmed from pricing page."
+      }
     },
     {
       "slug": "devcycle",
@@ -567,7 +949,62 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://devcycle.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Slack",
+          "Jira",
+          "Terraform",
+          "GitHub",
+          "GitLab",
+          "Snowflake",
+          "OpenFeature",
+          "Vercel Edge Config"
+        ],
+        "limits": [
+          "Free: unlimited seats, up to 1,000 client-side MAUs, 5,000 events/month, unlimited flags",
+          "Business: 100K MAUs, 500K events/month; overage $2.50/1K MAUs, $0.50/10K events",
+          "Enterprise: custom limits, annual billing only"
+        ],
+        "keyFeatures": [
+          "OpenFeature native support — no vendor lock-in on SDK layer",
+          "AI-powered natural-language flag management via MCP server",
+          "Scalable edge network processing 1B+ flag evaluations/day",
+          "SOC 2 Type 2 certified; registered CVE Numbering Authority",
+          "HackerOne vulnerability disclosure program"
+        ],
+        "bestFor": [
+          "Teams wanting OpenFeature-compatible flags without vendor lock-in",
+          "High-volume flag evaluation at edge (1B+ evaluations/day)",
+          "Small teams needing a free tier with unlimited seats and flags"
+        ],
+        "sources": [
+          {
+            "url": "https://devcycle.com/security",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://devcycle.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://docs.devcycle.com/integrations/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched devcycle.com/security on 2026-06-15: SOC 2 Type II ('Our SOC 2 Type II Compliance...') and GDPR ('We are fully GDPR compliant...') explicitly confirmed. HIPAA: not mentioned anywhere on the security or pricing pages. Verifier (2026-06-15) corrected hipaa from false to null — absence of any HIPAA statement is unconfirmable, not a positive denial; there is no published claim that DevCycle refuses PHI or will not sign a BAA, so null is the accurate value. BAA not mentioned. GDPR=true confirmed with data residency customization available. Integration list compiled from docs.devcycle.com/integrations (15+ named integrations). Free tier confirmed: permanent Free plan up to 1K MAUs. No time-limited trial found."
+      }
     },
     {
       "slug": "posthog",
@@ -628,7 +1065,62 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://posthog.com/handbook/company/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Segment",
+          "Sentry",
+          "Slack",
+          "Zapier",
+          "Stripe",
+          "Shopify",
+          "HubSpot",
+          "Intercom"
+        ],
+        "limits": [
+          "Free: 1M feature flag requests/month, unlimited team members, 1 project",
+          "Pay-as-you-go: first 1M requests free then $0.0001/request (1-2M range), scaling down to $0.00001/request at 50M+",
+          "BAA available on Boost, Scale, and Enterprise packages only"
+        ],
+        "keyFeatures": [
+          "All-in-one platform: feature flags, product analytics, session replays, A/B testing, surveys",
+          "SOC 2 Type II certified (audit through May 2025)",
+          "PostHog Cloud EU hosted in Frankfurt for GDPR data residency",
+          "GDPR DPA offered on request for cloud customers",
+          "Open-source self-hosted option available"
+        ],
+        "bestFor": [
+          "Product teams wanting flags, analytics, and replays in a single platform",
+          "GDPR-sensitive teams needing EU data residency",
+          "Startups on usage-based pricing who stay under 1M flag requests/month"
+        ],
+        "sources": [
+          {
+            "url": "https://posthog.com/docs/privacy/hipaa-compliance",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://posthog.com/handbook/company/security",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://posthog.com/docs/privacy/gdpr-compliance",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched posthog.com/docs/privacy/hipaa-compliance: BAA offered on Boost, Scale, Enterprise packages — hipaa=true, baa=true confirmed. Fetched posthog.com/handbook/company/security: SOC 2 Type II certified (external audit, May 2025 report). Fetched posthog.com/docs/privacy/gdpr-compliance: GDPR=true confirmed; DPA offered on request; PostHog Cloud EU (Frankfurt) available. Integration list: PostHog advertises 50+ integrations; top named ones selected from docs. Free tier confirmed: 1M flag requests/month at $0 permanently. No time-limited trial; the Pay-as-you-go plan just charges after the free monthly allowance."
+      }
     }
   ]
 }

@@ -78,7 +78,63 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://aws.amazon.com/compliance/hipaa-eligible-services-reference/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "AWS Lambda (Object Lambda)",
+          "AWS Athena",
+          "Amazon Bedrock Knowledge Bases",
+          "AWS CloudFront",
+          "Amazon Macie",
+          "AWS DataSync",
+          "Terraform"
+        ],
+        "limits": [
+          "Free tier: 5 GB storage, 20,000 GET requests, 2,000 PUT requests, 100 GB data transfer out per month (first 12 months only)",
+          "First 100 GB egress to internet free per month always",
+          "Maximum object size: 5 TB",
+          "Up to 3,500 PUT/s and 5,500 GET/s per prefix"
+        ],
+        "keyFeatures": [
+          "Strong read-after-write consistency for all objects",
+          "S3 Storage Lens for org-wide usage analytics and cost optimization",
+          "Purpose-built table buckets (analytics) and vector buckets (semantic search)",
+          "S3 Object Lock for WORM compliance",
+          "Lifecycle policies for automatic tiering to Glacier/Deep Archive"
+        ],
+        "bestFor": [
+          "Enterprise data lakes and analytics at petabyte scale",
+          "HIPAA/compliance-regulated workloads requiring BAA",
+          "ML/AI training datasets and RAG pipelines",
+          "Long-term archival with Glacier Deep Archive"
+        ],
+        "sources": [
+          {
+            "url": "https://aws.amazon.com/compliance/hipaa-eligible-services-reference/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://aws.amazon.com/s3/features/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://aws.amazon.com/compliance/soc-faqs/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "HIPAA eligibility confirmed from aws.amazon.com/compliance/hipaa-eligible-services-reference/ — Amazon S3 is explicitly listed as a HIPAA-eligible service. BAA available via AWS Artifact per aws.amazon.com/compliance/hipaa-compliance/. SOC 2 Type II confirmed from aws.amazon.com/compliance/soc-faqs/ — AWS publishes SOC 2 Type II reports bi-annually via AWS Artifact. GDPR: AWS offers a DPA and participates in EU-US Data Privacy Framework (well-established; confirmed from aws.amazon.com/compliance/). Free tier: AWS Free Tier (5 GB S3 storage) is limited to the first 12 months for new accounts and AWS has since moved to a time-limited $200-credit model — there is no permanent always-free S3 storage tier, so freeTier set to false. Features sourced from aws.amazon.com/s3/features/."
+      }
     },
     {
       "slug": "cloudflare-r2",
@@ -141,7 +197,62 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.cloudflare.com/trust-hub/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Cloudflare Workers",
+          "Wrangler CLI",
+          "AWS S3-compatible SDKs",
+          "Cloudflare Stream",
+          "Cloudflare Images",
+          "Cloudflare Cache",
+          "Terraform (Cloudflare provider)"
+        ],
+        "limits": [
+          "Free tier: 10 GB storage, 1M Class A ops, 10M Class B ops per month — permanent, no time limit",
+          "No egress fees at any usage level",
+          "30-day minimum storage duration on Infrequent Access tier"
+        ],
+        "keyFeatures": [
+          "Zero egress fees to internet (core differentiator vs. S3)",
+          "S3-compatible API — drop-in replacement for existing S3 workloads",
+          "Native Cloudflare Workers integration for edge compute",
+          "Infrequent Access storage class at $0.01/GB-month",
+          "Jurisdiction-based data residency controls"
+        ],
+        "bestFor": [
+          "Egress-heavy workloads where S3 bandwidth costs are prohibitive",
+          "Developers already on Cloudflare Workers/CDN stack",
+          "Media delivery and public asset hosting with zero egress cost",
+          "S3 migration with minimal code changes"
+        ],
+        "sources": [
+          {
+            "url": "https://developers.cloudflare.com/r2/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.cloudflare.com/trust-hub/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.cloudflare.com/cloudflare-customer-dpa/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "HIPAA: Multiple fetch attempts against Cloudflare Trust Hub, R2 docs, and security pages found no explicit statement that R2 is HIPAA eligible or that a BAA is offered — set to null (cannot confirm). SOC 2 Type II confirmed from cloudflare.com/trust-hub/ — page states Cloudflare holds 'SOC 2 Type II' among listed certifications. GDPR confirmed from Cloudflare DPA page (cloudflare-customer-dpa/) — Cloudflare offers a Data Processing Addendum covering EU GDPR, UK GDPR, and Swiss FADP. Free tier confirmed from developers.cloudflare.com/r2/pricing/ — permanent $0 tier with 10 GB storage. Features and integrations sourced from developers.cloudflare.com/r2/get-started/ and r2/pricing/."
+      }
     },
     {
       "slug": "backblaze-b2",
@@ -195,7 +306,58 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://www.backblaze.com/cloud-storage/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Cloudflare (free egress partner)",
+          "Fastly (free egress partner)",
+          "bunny.net (free egress partner)",
+          "Veeam",
+          "Rclone",
+          "Cyberduck",
+          "MSP360"
+        ],
+        "limits": [
+          "Free: first 10 GB storage always free; first 1 GB/day download free",
+          "Free egress up to 3x average monthly stored data per month",
+          "No minimum commitment on pay-as-you-go plan"
+        ],
+        "keyFeatures": [
+          "Zero egress via Bandwidth Alliance partners (Cloudflare, Fastly, bunny.net)",
+          "SOC 2 Type 2 certified; BAA available for HIPAA workloads",
+          "Object Lock for immutable/WORM storage",
+          "S3-compatible API for drop-in migration",
+          "Cloud Replication for cross-region redundancy"
+        ],
+        "bestFor": [
+          "Cost-sensitive backup and archival (70% cheaper than S3 Standard)",
+          "Media workflows with Cloudflare CDN and zero egress costs",
+          "HIPAA workloads on a budget",
+          "NAS/server backup (integrates with Veeam, MSP360, Rclone)"
+        ],
+        "sources": [
+          {
+            "url": "https://www.backblaze.com/cloud-storage/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.backblaze.com/cloud-storage/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "HIPAA and SOC 2 Type 2 confirmed from backblaze.com/cloud-storage/ which explicitly lists 'BAAs for HIPAA' and 'SOC 2 Type 2' under compliance program support. GDPR: the same page did not explicitly state GDPR compliance or DPA availability in fetched content; set to null rather than guess. Free tier confirmed: first 10 GB storage and 1 GB/day download permanently free per pricing page. Features and integrations sourced from cloud-storage/ features overview."
+      }
     },
     {
       "slug": "wasabi",
@@ -245,7 +407,64 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://wasabi.com/compliance/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Veeam",
+          "Commvault",
+          "Veritas",
+          "Acronis Cyber Protect Cloud",
+          "Adobe Premiere Pro / After Effects",
+          "Synology",
+          "Rclone"
+        ],
+        "limits": [
+          "No free forever tier — paid pay-as-you-go only",
+          "No egress fees at any usage level",
+          "No API request fees",
+          "No minimum storage commitment on PAYG plan",
+          "Price increase from $6.99/TB to $7.99/TB effective 2026-07-01"
+        ],
+        "keyFeatures": [
+          "No egress and no API request fees (all-inclusive storage price)",
+          "HIPAA, HITECH, GDPR, CJIS, FERPA, SEC compliance supported with BAA/DPA",
+          "SOC 2 and ISO 27001-certified data centers",
+          "Immutable storage with Covert Copy ransomware protection",
+          "100% AWS S3 and IAM API compatibility"
+        ],
+        "bestFor": [
+          "Backup and DR workloads where egress fees from AWS/Azure are painful",
+          "Surveillance and video archival at scale",
+          "Healthcare and compliance-regulated data needing HIPAA BAA",
+          "Adobe and media production workflows via Wasabi AiR"
+        ],
+        "sources": [
+          {
+            "url": "https://wasabi.com/compliance/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://wasabi.com/cloud-object-storage/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://wasabi.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "HIPAA confirmed from wasabi.com/compliance/ — page explicitly states Wasabi stores PHI/ePHI in accordance with HIPAA/HITECH and a BAA is available. SOC 2 confirmed from same page — 'SOC 2' listed as a certification; data centers also hold ISO 27001. GDPR confirmed — page states GDPR compliance and a DPA is available. Free tier: wasabi.com/pricing/ mentions a free trial but no permanent $0 tier exists; freeTier set to false and freeTrialDays set to null because no specific trial duration was found in fetched content. Integrations and features sourced from wasabi.com/cloud-object-storage/."
+      }
     },
     {
       "slug": "digitalocean-spaces",
@@ -283,7 +502,63 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.digitalocean.com/trust/certification-reports",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "DigitalOcean CDN (built-in)",
+          "AWS CLI and S3-compatible SDKs",
+          "Flexify.IO (cloud migration)",
+          "Rclone",
+          "Cyberduck",
+          "Terraform",
+          "Kubernetes"
+        ],
+        "limits": [
+          "$5/month base plan includes 250 GiB storage and 1,024 GiB transfer",
+          "Overage: $0.02/GiB additional storage; $0.01/GiB additional transfer",
+          "Cold storage tier available at $0.007/GiB per month",
+          "Up to 1,500 requests per second per client IP"
+        ],
+        "keyFeatures": [
+          "Integrated CDN across 200+ PoPs included at no extra cost",
+          "Flat-rate pricing — no surprise egress or per-request fees beyond overage",
+          "Cold storage tier for infrequently accessed data at $0.007/GiB",
+          "SOC 2 Type II and Global Privacy Recognition for Processors (PRP) certified",
+          "S3-compatible API for easy migration"
+        ],
+        "bestFor": [
+          "Developers already on DigitalOcean who want simple, predictable billing",
+          "Static asset and media hosting with built-in CDN",
+          "Small-to-mid-scale backup and archival",
+          "Teams wanting a flat-rate object storage without metered egress surprises"
+        ],
+        "sources": [
+          {
+            "url": "https://www.digitalocean.com/trust/certification-reports",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.digitalocean.com/products/spaces",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://docs.digitalocean.com/products/spaces/details/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "SOC 2 Type II confirmed from digitalocean.com/trust/certification-reports — page states 'SOC 2 Type II and SOC 3 Type II' issued by Schellman & Company. GDPR confirmed from same page — DigitalOcean holds 'Global Privacy Recognition for Processors (Global PRP)' certification. HIPAA: the trust/certification-reports page did not mention HIPAA or BAA; the page recommended contacting trust@digitalocean.com — set to null. Free tier: single $5/month plan only, no $0 tier exists; freeTier set to false. Features sourced from digitalocean.com/products/spaces and docs.digitalocean.com/products/spaces/details/pricing/."
+      }
     },
     {
       "slug": "storj",
@@ -346,7 +621,64 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://storj.io/object-storage/compliance",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 30,
+        "keyIntegrations": [
+          "Veeam",
+          "Rclone",
+          "FileZilla",
+          "Acronis",
+          "LucidLink",
+          "Splunk",
+          "TrueNAS (iX Systems)"
+        ],
+        "limits": [
+          "Free trial: 25 GB storage for 30 days, no credit card required",
+          "No permanent free tier — trial converts to paid Standard plan after 30 days",
+          "Minimum monthly fee of $50 effective 2026-07-01 (STORJ token payers exempt)",
+          "50 KB minimum billable object size",
+          "30-day minimum retention on Standard plan"
+        ],
+        "keyFeatures": [
+          "Decentralized storage across tens of thousands of global nodes — no single point of failure",
+          "End-to-end encryption with zero-knowledge architecture",
+          "HIPAA, GDPR, CJIS, and MPA compliance; SOC 2 Type 2 facilities",
+          "Up to 80% cost reduction vs. hyperscalers per vendor claims",
+          "Object Mount for file-system-like access to stored objects"
+        ],
+        "bestFor": [
+          "Privacy-first and zero-knowledge storage requirements",
+          "Media and entertainment backup/archive needing global distribution",
+          "Organizations needing HIPAA/GDPR compliance at lower cost than AWS",
+          "Active archive and CDN origin for globally distributed content"
+        ],
+        "sources": [
+          {
+            "url": "https://storj.io/object-storage/compliance",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://storj.io/integrations",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://storj.io/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "HIPAA confirmed from storj.io/object-storage/compliance — page explicitly states 'Storj also meets the critical requirements of GDPR, HIPAA, CJIS, and MPA regulations for object storage compliance.' SOC 2 confirmed from same page — 'Storj Select is hosted exclusively in SOC2 Type 2 facilities.' GDPR confirmed from same page. BAA availability: compliance page confirms HIPAA support and dedicated HIPAA solution page exists; however explicit BAA language was not found in the fetched text — hipaa set to true based on vendor's stated HIPAA compliance claim. Free tier: the existing plan 'Storj Free Trial' has monthlyUsd=0 but is time-limited (30 days); no permanent $0 tier — freeTier set to false, freeTrialDays=30. Integrations sourced from storj.io/integrations."
+      }
     },
     {
       "slug": "akamai-cloud",
@@ -379,7 +711,60 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "AWS CLI and S3-compatible SDKs",
+          "s3cmd / s4cmd",
+          "Cyberduck",
+          "AWS SDK for Python (boto3)",
+          "Grafana Loki",
+          "Terraform (Linode provider)",
+          "Rclone"
+        ],
+        "limits": [
+          "First 1 TB outbound transfer per month free",
+          "$5 minimum monthly fee for usage under 250 GB stored",
+          "Storage priced at $0.02/GB-month (higher than B2/Wasabi but lower than S3 Standard)",
+          "Available in 20+ global regions"
+        ],
+        "keyFeatures": [
+          "Strong read-after-write consistency for PUT/DELETE operations",
+          "Global footprint across 20+ regions, closer to Akamai edge PoPs",
+          "S3-compatible API for existing tooling compatibility",
+          "Tight integration with Akamai CDN and compute products",
+          "Simple predictable per-GB pricing with no API request fees"
+        ],
+        "bestFor": [
+          "Developers already running VMs/Kubernetes on Akamai Cloud (Linode)",
+          "Unstructured data, media, and file archive with multi-region needs",
+          "Teams wanting a simpler alternative to AWS without lock-in",
+          "Workloads that benefit from proximity to Akamai's global edge network"
+        ],
+        "sources": [
+          {
+            "url": "https://techdocs.akamai.com/cloud-computing/docs/object-storage",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.akamai.com/cloud/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.akamai.com/legal/security",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "HIPAA/SOC 2/GDPR: Multiple fetch attempts against trust.akamai.com (JavaScript-only, returned 'Loading...'), akamai.com/solutions/cloud/compliance (404), akamai.com/legal/security (page directs to trust.akamai.com which did not load), and techdocs.akamai.com/cloud-computing/docs/object-storage (no compliance mention). The akamai.com/legal/security page states users 'can build environments to meet HIPAA, PCI-DSS, GDPR' requirements but this describes customer responsibility, not a vendor BAA or certification. Could not confirm vendor-issued BAA or SOC 2 attestation from any accessible authoritative page; all three compliance fields set to null. Free tier: $0.02/GB PAYG with $5 minimum — no permanent free tier; freeTier=false. Features and integrations sourced from techdocs.akamai.com/cloud-computing/docs/object-storage."
+      }
     },
     {
       "slug": "vultr-object-storage",
@@ -472,7 +857,64 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.vultr.com/trust-center/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "AWS S3-compatible SDKs",
+          "Rclone",
+          "Cyberduck",
+          "Terraform",
+          "cPanel",
+          "WordPress backup plugins",
+          "Kubernetes"
+        ],
+        "limits": [
+          "All plans include 1 TB storage + 1 TB bandwidth per month",
+          "No API request fees on any tier",
+          "Overage transfer: $10/TB beyond included 1 TB on all plans",
+          "Available across 33 global regions, 14 dedicated storage hubs",
+          "11 nines (99.999999999%) durability guarantee"
+        ],
+        "keyFeatures": [
+          "Five performance tiers from Archival ($6/TB) to Accelerated ($100/TB) — match cost to workload",
+          "SOC 2+ (HIPAA) certified; BAA available for healthcare workloads",
+          "ISO 27001 and GDPR/DPA compliant",
+          "S3-compatible API across all tiers",
+          "No per-request API charges on any tier"
+        ],
+        "bestFor": [
+          "Multi-tier storage strategy where different data sets have different performance needs",
+          "Healthcare/HIPAA workloads needing BAA on a developer cloud",
+          "Global deployments requiring storage close to Vultr compute in 33 regions",
+          "cPanel/WordPress hosting providers needing integrated backup storage"
+        ],
+        "sources": [
+          {
+            "url": "https://www.vultr.com/trust-center/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.vultr.com/products/object-storage/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.vultr.com/legal/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "HIPAA confirmed from vultr.com/trust-center/ — page states Vultr holds 'SOC 2+ (HIPAA)' certification and explicitly offers BAAs: 'customers supported by Vultr as a Business Associate through execution of Business Associate Agreements (BAAs).' SOC 2 confirmed from same page (SOC 2+ HIPAA). GDPR confirmed from trust-center/ — Vultr functions as both data controller and processor, provides DPAs, and completed 'extensive procedural and legal review to ensure full compliance' with GDPR. Additional certifications: ISO 27001, ISO 20000, PCI DSS, CSA STAR Level 1. No free tier exists — lowest plan is $6/month; freeTier=false. Features and tier details sourced from vultr.com/products/object-storage/ and trust-center/."
+      }
     }
   ]
 }
