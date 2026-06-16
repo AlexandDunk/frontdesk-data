@@ -89,7 +89,71 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.fivetran.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Snowflake",
+          "BigQuery",
+          "Amazon Redshift",
+          "Databricks",
+          "Salesforce",
+          "HubSpot",
+          "Google Analytics",
+          "Facebook Ads",
+          "Stripe",
+          "dbt Core"
+        ],
+        "limits": [
+          "Free plan capped at 500K MAR/month",
+          "Free plan limited to 3.5K MAR activations and 5K model runs/month",
+          "Standard plan charges $5 base per connection per month",
+          "VPN tunnel access requires annual contract (Enterprise+)"
+        ],
+        "keyFeatures": [
+          "700+ pre-built connectors (SaaS, databases, files, streaming)",
+          "MAR-based consumption pricing with no row caps on paid tiers",
+          "Change Data Capture (CDC) for database replication",
+          "dbt Core and dbt Cloud transformation orchestration",
+          "1-minute sync frequency on Enterprise tier",
+          "Customer-managed encryption keys (Business Critical)",
+          "PCI DSS Level 1 and HITRUST certification (Business Critical)",
+          "Private networking via PrivateLink and Private Service Connect",
+          "Reverse ETL (data activation back to business apps)",
+          "99.97% uptime SLA"
+        ],
+        "bestFor": [
+          "Enterprises needing a managed, zero-maintenance ELT pipeline",
+          "Teams that want the widest connector catalog with minimal setup",
+          "Organizations requiring strict compliance (HIPAA, PCI DSS, HITRUST)",
+          "Snowflake, BigQuery, or Redshift data warehouse modernization"
+        ],
+        "sources": [
+          {
+            "url": "https://www.fivetran.com/security",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.fivetran.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.fivetran.com/features",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Security/compliance facts from https://www.fivetran.com/security (fetched 2026-06-15): SOC 1 & SOC 2, HIPAA BAA, HITRUST, ISO 27001, PCI DSS Level 1, GDPR/CCPA DPAs all explicitly stated on vendor security page. Free tier confirmed on pricing page. Feature data from pricing and features pages."
+      }
     },
     {
       "slug": "airbyte",
@@ -222,7 +286,66 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://docs.airbyte.com/operator-guides/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Snowflake",
+          "BigQuery",
+          "Redshift",
+          "PostgreSQL",
+          "MySQL",
+          "MongoDB",
+          "Salesforce",
+          "GitHub",
+          "Google Analytics",
+          "Facebook Ads"
+        ],
+        "limits": [
+          "Agents Free plan limited to 1,000 Agent Operations/month, single user",
+          "Agents Individual capped at 5,000 AOs/month ($0.004 overage per AO)",
+          "Data Replication Standard volume-based — cost scales with data synced",
+          "Open-source Core requires self-managed infrastructure"
+        ],
+        "keyFeatures": [
+          "600+ pre-built data replication connectors",
+          "Open-source core (MIT license) — fully self-hostable",
+          "Airbyte Agents product line with MCP Gateway for AI agent data access",
+          "Queryable Context Store for production AI agents",
+          "SOC 2 Type II and ISO 27001 certified (cloud product)",
+          "15-minute sync frequency on Plus tier",
+          "RBAC and SSO on Pro tier",
+          "Custom connector SDK for building proprietary sources",
+          "dbt integration for in-warehouse transformations"
+        ],
+        "bestFor": [
+          "Teams wanting open-source, self-hosted ELT with no vendor lock-in",
+          "Developers building AI agents that need live access to business data",
+          "Organizations needing a large connector catalog at low entry cost",
+          "Engineering teams comfortable managing their own infrastructure"
+        ],
+        "sources": [
+          {
+            "url": "https://docs.airbyte.com/operator-guides/security",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://airbyte.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "SOC 2 Type II and ISO 27001 confirmed from https://docs.airbyte.com/operator-guides/security (fetched 2026-06-15): 'SOC 2 Type II — effective operational controls in place.' HIPAA and GDPR not mentioned on vendor security docs — set to null. Free tier (Agents Free + open-source Core) confirmed on pricing page. HIPAA null because not stated by vendor; inferring from AWS infra eligibility is explicitly prohibited."
+      }
     },
     {
       "slug": "stitch-data",
@@ -298,7 +421,75 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.talend.com/security/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Salesforce",
+          "HubSpot",
+          "Google Analytics",
+          "Facebook Ads",
+          "MySQL",
+          "PostgreSQL",
+          "MongoDB",
+          "Redshift",
+          "Snowflake",
+          "BigQuery"
+        ],
+        "limits": [
+          "Standard plan capped at 300M rows/month maximum",
+          "Standard plan limited to 1 destination and 10 standard sources",
+          "Standard plan limited to 5 users",
+          "Advanced and Premium plans require annual billing only",
+          "HIPAA/BAA only available on Advanced ($18K/yr) and Premium ($36K/yr) tiers",
+          "130+ connectors (smaller catalog than Fivetran or Airbyte)"
+        ],
+        "keyFeatures": [
+          "130+ pre-built connectors for SaaS apps and databases",
+          "Row-based consumption pricing on Standard plan",
+          "HIPAA compliance with BAA signing (Advanced and Premium)",
+          "Up to 1 billion rows/month on Premium tier",
+          "Multiple destination support (up to 5 on Premium)",
+          "60-day extraction log retention (Advanced+)",
+          "Managed by Qlik (Talend acquisition) — enterprise-grade lineage",
+          "SOC 2 and ISO 27001 via Qlik parent platform"
+        ],
+        "bestFor": [
+          "Mid-market teams wanting simple, rows-based ELT with predictable cost",
+          "Healthcare organizations needing HIPAA BAA on a managed ELT service",
+          "Teams already using Qlik analytics wanting integrated data pipelines",
+          "Organizations prioritizing simplicity over connector breadth"
+        ],
+        "sources": [
+          {
+            "url": "https://www.talend.com/security/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://security.qlik.com/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.stitchdata.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.stitchdata.com/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "HIPAA and BAA explicitly stated on vendor pricing page (https://www.stitchdata.com/pricing/) as plan features on Advanced and Premium tiers — confirmed pre-existing field hipaa:true/baa:true. SOC 2 Type 2, GDPR (full compliance, with DPA enacting standard contractual clauses), and HIPAA (BAA) all explicitly confirmed on the Talend security page (https://www.talend.com/security/, fetched 2026-06-15) — Talend is the direct parent platform of Stitch (Stitch is part of Qlik Talend Cloud per stitchdata.com homepage). Verifier note: the Qlik Trust Center (https://security.qlik.com/) lists HIPAA and SOC 2 but does NOT mention GDPR, so the compliance.source.url was corrected from the Qlik page to the Talend security page, which substantiates all three (hipaa, soc2, gdpr). No free forever plan exists — freeTier:false."
+      }
     },
     {
       "slug": "hevo-data",
@@ -390,7 +581,76 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://hevodata.com/security/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "PostgreSQL",
+          "MySQL",
+          "MongoDB",
+          "Salesforce",
+          "HubSpot",
+          "Google Analytics",
+          "Facebook Ads",
+          "Stripe",
+          "Kafka",
+          "BigQuery",
+          "Snowflake",
+          "Redshift",
+          "Databricks",
+          "dbt"
+        ],
+        "limits": [
+          "Free plan capped at 1M events/month",
+          "Free plan limited to 5 users and 1-hour minimum sync frequency",
+          "Starter plan capped at 5 users",
+          "150+ connectors (smaller than Fivetran or Airbyte)",
+          "Streaming pipelines only available on Business Critical"
+        ],
+        "keyFeatures": [
+          "150+ pre-built connectors across databases, SaaS, and streaming sources",
+          "Change Data Capture (CDC) for real-time database replication",
+          "SOC 2 Type II certified (all five AICPA Trust Services Criteria)",
+          "HIPAA compliance with BAA available (stated on security page)",
+          "GDPR compliant with Data Processing Agreements",
+          "End-to-end encryption (TLS 1.2+, AES-256 at rest)",
+          "Regional data processing in EU, US, and APAC",
+          "dbt integration for in-warehouse transformations",
+          "Free forever plan up to 1M events/month",
+          "24x7 live chat support on Starter and above"
+        ],
+        "bestFor": [
+          "SMBs and mid-market teams wanting a low-cost managed ELT with a free tier",
+          "Healthcare teams needing HIPAA-compliant managed pipelines",
+          "Teams prioritizing 24x7 support without enterprise pricing",
+          "Organizations in EU/APAC needing regional data residency"
+        ],
+        "sources": [
+          {
+            "url": "https://hevodata.com/security/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://hevodata.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://hevodata.com/integrations/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "SOC 2 Type II, HIPAA (with BAA), and GDPR all explicitly stated on vendor security page https://hevodata.com/security/ (fetched 2026-06-15). Free tier (1M events/month, $0) confirmed on pricing page. Connector count (150+) from integrations page. Note: existing top-level hipaa and baa fields remain null per original file; enrichment.compliance.hipaa reflects security-page-confirmed status."
+      }
     },
     {
       "slug": "matillion",
@@ -461,7 +721,72 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.matillion.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Snowflake",
+          "BigQuery",
+          "Amazon Redshift",
+          "Databricks",
+          "Salesforce",
+          "SAP",
+          "Oracle",
+          "PostgreSQL",
+          "Amazon S3",
+          "Azure Blob Storage"
+        ],
+        "limits": [
+          "Developer plan limited to 1 developer user",
+          "Teams and Scale plans limited to 5 developer users",
+          "No public USD pricing — all tiers require sales contact or trial",
+          "Annual subscription required on Teams and Scale plans",
+          "HIPAA not confirmed on vendor security page"
+        ],
+        "keyFeatures": [
+          "Pushdown architecture — processing runs inside your cloud data warehouse (no data leaves your environment)",
+          "Low-code visual canvas with SQL and Python support",
+          "SOC 2 Type II and ISO 27001 certified (annual external audits)",
+          "SOC 1 Type II and SOC 3 also documented",
+          "GDPR compliant (EU GDPR and UK DPA 2018)",
+          "Streaming CDC on Scale tier",
+          "Data lineage tracking (Scale tier)",
+          "Hybrid cloud deployment option",
+          "Built-in Git for version control",
+          "Supports Snowflake, BigQuery, Redshift, and Databricks as destinations"
+        ],
+        "bestFor": [
+          "Data engineers building complex, multi-step transformations inside cloud data warehouses",
+          "Enterprises needing a governed, visual ETL tool with enterprise security",
+          "Teams moving from legacy on-prem ETL tools (Informatica, DataStage) to the cloud",
+          "Organizations in financial services, healthcare, or retail needing SOC 2 + ISO 27001"
+        ],
+        "sources": [
+          {
+            "url": "https://www.matillion.com/security",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.matillion.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.matillion.com/blog/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "SOC 2 Type II, ISO 27001, SOC 1 Type II, SOC 3, PCI DSS, and GDPR confirmed from https://www.matillion.com/security (fetched 2026-06-15). HIPAA not mentioned on vendor security page — set to null. No free forever plan; free trial available but duration not published. No connector count stated on pricing or blog pages."
+      }
     },
     {
       "slug": "portable",
@@ -549,7 +874,70 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Salesforce",
+          "HubSpot",
+          "NetSuite",
+          "Shopify",
+          "Stripe",
+          "Google Ads",
+          "Facebook Ads",
+          "TikTok Ads",
+          "Snowflake",
+          "BigQuery"
+        ],
+        "limits": [
+          "Standard plan limited to 6 enabled data flows",
+          "Pro plan limited to 15 enabled data flows",
+          "Advanced plan limited to 25 enabled data flows",
+          "Standard plan sync frequency minimum 1 hour (Pro/Advanced: 15 minutes)",
+          "Enterprise sources (NetSuite, Dynamics 365) only on Enterprise tier",
+          "No public compliance certifications confirmed on vendor pages"
+        ],
+        "keyFeatures": [
+          "1,500+ pre-built connectors — largest catalog in the ETL space",
+          "Flat-fee pricing per data flow count (no row or volume charges)",
+          "Managed integration services included with all paid plans",
+          "Custom connector development offered as a service",
+          "Ephemeral data handling — data only processed transiently",
+          "Zero Trust architecture on Google Cloud Platform",
+          "15-minute sync frequency on Pro and above",
+          "Developer API and Webhooks on Pro and above",
+          "14-day free trial across all plans",
+          "Dedicated Slack support channel on Pro and above"
+        ],
+        "bestFor": [
+          "Teams needing long-tail or niche connectors not available in Fivetran or Airbyte",
+          "Organizations wanting unlimited data volumes with a flat monthly fee",
+          "Mid-market businesses with high connector diversity across many SaaS tools",
+          "Teams that want managed integration services bundled with the product"
+        ],
+        "sources": [
+          {
+            "url": "https://portable.io/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://portable.io/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://portable.io/connectors",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Compliance certifications (SOC 2, HIPAA, GDPR) not found on vendor security page (https://portable.io/security returned 404) or homepage — all set to null. Vendor directs inquiries to their InfoSec team per homepage content. 14-day free trial confirmed on pricing page plan notes. 1500+ connectors confirmed on both homepage and connectors page. No free forever plan — freeTier:false."
+      }
     },
     {
       "slug": "integrate-io",
@@ -605,7 +993,67 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.integrate.io/security/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Salesforce",
+          "HubSpot",
+          "Shopify",
+          "Amazon Redshift",
+          "Snowflake",
+          "BigQuery",
+          "PostgreSQL",
+          "MySQL",
+          "Google Analytics",
+          "Facebook Ads"
+        ],
+        "limits": [
+          "HIPAA compliance requires Enterprise tier (additional cost above $1,999/month Core)",
+          "BAA availability requires contacting sales — not self-serve",
+          "220+ transformations on ETL/Reverse ETL; ELT pipeline is separate trial",
+          "No published connector count beyond 'unlimited' claim"
+        ],
+        "keyFeatures": [
+          "ETL, ELT, CDC, and Reverse ETL in a single platform",
+          "Sub-60-second sync latency on ELT and CDC pipelines",
+          "SOC 2 Type II certified with annual third-party penetration testing",
+          "HIPAA compliance with BAA available (Enterprise tier)",
+          "GDPR compliant — Data Processing Addendum in Terms of Use",
+          "220+ low-code data transformation operations",
+          "Unlimited data volumes, pipelines, and connectors on flat-fee Core plan",
+          "60-second pipeline frequency on Core plan",
+          "30-day onboarding support included",
+          "Salesforce Sync specialized pipeline type"
+        ],
+        "bestFor": [
+          "Mid-market teams wanting all four pipeline types (ETL, ELT, CDC, Reverse ETL) in one tool",
+          "Organizations that need predictable flat-fee pricing with no volume surprises",
+          "Healthcare and regulated industries needing HIPAA on a managed integration platform",
+          "Teams running high-frequency, real-time replication workloads"
+        ],
+        "sources": [
+          {
+            "url": "https://www.integrate.io/security/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.integrate.io/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "SOC 2, HIPAA (with BAA on request), and GDPR confirmed from https://www.integrate.io/security/ (fetched 2026-06-15): 'Integrate.io is certified as SOC 2 compliant'; 'Organizations requiring formal documentation should request a Business Associate Agreement'; 'Integrate.io operates as a compliant data processor under EU regulations.' Free trial (14-day) confirmed from pricing page plan notes. No free forever plan — freeTier:false."
+      }
     },
     {
       "slug": "rivery",
@@ -690,7 +1138,71 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://rivery.io/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Salesforce",
+          "HubSpot",
+          "Google Analytics",
+          "Facebook Ads",
+          "Snowflake",
+          "BigQuery",
+          "Redshift",
+          "PostgreSQL",
+          "MySQL",
+          "dbt",
+          "Airflow",
+          "Tableau"
+        ],
+        "limits": [
+          "Base plan limited to 2 users and 1 environment",
+          "SOC 2 and HIPAA only available from Professional tier upward",
+          "200+ connectors (smaller catalog than Fivetran or Airbyte)",
+          "GDPR status not confirmed on vendor-accessible pages",
+          "All paid tiers require sales contact for pricing",
+          "No free forever plan — 14-day trial only"
+        ],
+        "keyFeatures": [
+          "200+ pre-built connectors for sources and destinations",
+          "BDU (credit) consumption pricing — pay only for what you run",
+          "SOC 2 Type II certified (Professional tier and above)",
+          "HIPAA compliance (Professional tier and above)",
+          "Native Python and multi-step SQL transformations",
+          "Reverse ETL — push warehouse data back to business apps",
+          "Built-in version control with one-click rollback",
+          "Multiple isolated environments (dev, staging, production)",
+          "CLI and API access for pipeline management",
+          "Conditional logic, branching, and loop orchestration"
+        ],
+        "bestFor": [
+          "Data teams wanting fine-grained orchestration with branching and conditional logic",
+          "Organizations that need multiple isolated environments for DataOps workflows",
+          "Teams preferring usage-based pricing over flat-fee plans",
+          "Healthcare and regulated organizations needing SOC 2 + HIPAA on a managed pipeline"
+        ],
+        "sources": [
+          {
+            "url": "https://rivery.io/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://rivery.io/product/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "SOC 2 Type II and HIPAA confirmed from https://rivery.io/pricing/ (fetched 2026-06-15): 'SOC 2 (Type II) & HIPAA' explicitly listed on pricing page as security features available from Professional tier. GDPR not mentioned on any accessible Rivery page (security page at /security/ and /about/security/ both returned 404) — set to null. 14-day free trial with 1,000 credits confirmed on pricing page. No free forever plan — freeTier:false."
+      }
     }
   ]
 }

@@ -51,7 +51,48 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Chase (complimentary DashPass for cardholders)",
+          "Mastercard (promotional DashPass access)",
+          "Caviar (same login, same benefits)"
+        ],
+        "limits": [
+          "Order minimum varies by merchant and city",
+          "$10 minimum in select cities (e.g. Los Angeles, Dallas, Denver, Phoenix)",
+          "Benefits apply only to merchants displaying the DashPass green checkmark",
+          "Available in US and Canada; some areas excluded"
+        ],
+        "keyFeatures": [
+          "$0 delivery fees on eligible DashPass merchant orders",
+          "Reduced service fees on eligible orders",
+          "Members save an average of $4–$5 per eligible order",
+          "Priority customer support",
+          "DashPass-only promotions and exclusive offers",
+          "Benefits extend to Caviar platform with same login"
+        ],
+        "bestFor": [
+          "Frequent DoorDash or Caviar users ordering multiple times per month",
+          "Chase or Mastercard cardholders who may receive complimentary access",
+          "Users in major US cities with dense DashPass merchant coverage"
+        ],
+        "sources": [
+          {
+            "url": "https://help.doordash.com/consumers/s/article/What-is-DashPass",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Enrichment sourced from DoorDash official help article (fetched 2026-06-15). Compliance certifications not published on a reachable trust/security page; all set to null. Free trial duration not stated on the vendor page fetched; set to null. Partner integrations (Chase, Mastercard) per existing integrations field and widely published credit-card partnership programs."
+      }
     },
     {
       "slug": "uber-one",
@@ -100,7 +141,69 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": {
+            "url": "https://uber.com/privacy/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 28,
+        "keyIntegrations": [
+          "Uber Eats (food delivery)",
+          "Uber rides",
+          "Lime scooters and bikes (10% credits)",
+          "Delta SkyMiles (partner rewards)",
+          "Marriott Bonvoy (partner rewards)",
+          "Apple Card (extended 6-month trial promotion)"
+        ],
+        "limits": [
+          "$15 order minimum for restaurant/non-grocery delivery",
+          "$35 order minimum for grocery delivery",
+          "Uber One credits expire 60 days after being added",
+          "Benefits apply only to stores and rides marked with Uber One icon",
+          "Service fee discounts retired for new members as of March 2026",
+          "Non-transferable; tied to a single Uber account",
+          "International use restricted to country of purchase"
+        ],
+        "keyFeatures": [
+          "$0 delivery fee on eligible orders above minimum",
+          "Up to 10% off eligible restaurant orders",
+          "5% off eligible grocery orders",
+          "6% Uber Cash back on eligible Uber rides",
+          "10% back on car rentals and Lime rides",
+          "10% back on hotel bookings, 20% off select properties",
+          "Automatic discounts during surge pricing periods",
+          "Member-exclusive deals and promotions",
+          "4-week free trial for eligible new members",
+          "Student plan at $4.99/month or $48/year"
+        ],
+        "bestFor": [
+          "Users who regularly use both Uber Eats and Uber rides",
+          "City dwellers ordering delivery 2+ times per month",
+          "Frequent travelers who also book hotels or car rentals through Uber"
+        ],
+        "sources": [
+          {
+            "url": "https://www.uber.com/us/en/uber-one/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.dealnews.com/features/uber-one/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://uber.com/privacy/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Key features and trial length from uber.com/us/en/uber-one/ (fetched 2026-06-15) and dealnews.com/features/uber-one/ (fetched 2026-06-15). Order minimums ($15 restaurant, $35 grocery) from DealNews comparison. GDPR: Uber privacy page confirms EU-US Data Privacy Framework certification and GDPR data handling restrictions, but no explicit SOC 2 or HIPAA certification found; compliance fields set to null as consumer service. freeTrialDays=28 confirmed from vendor page ('4 week free trial')."
+      }
     },
     {
       "slug": "grubhub-plus",
@@ -144,7 +247,52 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": {
+            "url": "https://www.grubhub.com/legal/privacy-policy",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Amazon Prime (Grubhub+ included as permanent Prime benefit)"
+        ],
+        "limits": [
+          "Official grubhub.com pages block automated access; standalone free trial terms could not be confirmed from a live vendor page",
+          "$0 delivery applies to eligible orders only; service fees still apply",
+          "5% credit back on pickup applies to eligible orders",
+          "Requires active Amazon Prime membership to access at $0"
+        ],
+        "keyFeatures": [
+          "$0 delivery fees on eligible orders",
+          "Reduced service fees compared to non-member orders",
+          "5% credit back on eligible pickup orders",
+          "Included free for all Amazon Prime subscribers (permanent benefit since May 2024)",
+          "No auto-enrollment to paid plan when activated via Amazon Prime"
+        ],
+        "bestFor": [
+          "Existing Amazon Prime members seeking free food delivery membership",
+          "Frequent Grubhub users in cities with broad Grubhub restaurant coverage",
+          "Users who prefer restaurant delivery over grocery delivery"
+        ],
+        "sources": [
+          {
+            "url": "https://www.aboutamazon.com/news/retail/amazon-prime-grubhub-plus-delivery",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.grubhub.com/legal/privacy-policy",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Enrichment sourced from Amazon newsroom article (fetched 2026-06-15) confirming $0 delivery, reduced service fees, and 5% pickup credit. Grubhub privacy policy fetched 2026-06-15: no SOC 2, HIPAA, or GDPR certification explicitly stated; compliance fields set to null. Standalone free trial duration not confirmable from any live vendor page; set to null. Grubhub.com direct pages returned 403."
+      }
     },
     {
       "slug": "instacart-plus",
@@ -189,7 +337,60 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": {
+            "url": "https://www.instacart.com/privacy",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Peacock streaming (included, $109.99/year value)",
+          "New York Times Cooking (included, $50/year value)",
+          "Costco (same-day delivery eligible for members)",
+          "Family account sharing"
+        ],
+        "limits": [
+          "$10 minimum order for grocery and retail delivery",
+          "$35 minimum order for Costco delivery",
+          "$25 minimum order for eligible restaurant delivery",
+          "Service fees still apply beyond $0 delivery promotion",
+          "Peacock and NYT Cooking perks subject to change per Instacart's partner agreements"
+        ],
+        "keyFeatures": [
+          "$0 delivery fees on grocery/retail orders of $10+",
+          "$0 delivery fees on Costco orders of $35+",
+          "$0 delivery fees on eligible restaurant orders of $25+",
+          "Complimentary Peacock streaming subscription ($109.99/year value)",
+          "New York Times Cooking access ($50/year value)",
+          "Family account sharing (multiple members share cart and benefits)",
+          "Access to 1,000+ grocery stores and retailers",
+          "14-day free trial for new members"
+        ],
+        "bestFor": [
+          "Households that order groceries at least twice per month",
+          "Costco members wanting same-day delivery",
+          "Families who want to share a single membership",
+          "Users who value bundled streaming (Peacock) alongside grocery delivery"
+        ],
+        "sources": [
+          {
+            "url": "https://www.instacart.com/plus",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.instacart.com/privacy",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Enrichment sourced from instacart.com/plus (fetched 2026-06-15): 14-day trial, order minimums, Peacock and NYT Cooking perks, family sharing confirmed. Privacy policy fetched 2026-06-15: mentions HIPAA-compliant handling for prescription delivery data specifically, but this is a consumer product and Instacart does not offer a BAA nor market itself as a HIPAA-covered service; hipaa set to null. SOC 2 and GDPR not explicitly mentioned; set to null."
+      }
     },
     {
       "slug": "walmart-plus",
@@ -257,7 +458,58 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Paramount+ Essential (streaming included)",
+          "Pluto TV (ad-free streaming included)",
+          "Exxon and Mobil fuel stations (10 cents/gallon discount)",
+          "Murphy USA and Walmart fuel stations (10 cents/gallon discount)"
+        ],
+        "limits": [
+          "$35 minimum order for free grocery delivery from Walmart stores",
+          "No order minimum for free online shipping (walmart.com purchases)",
+          "Free delivery from Walmart store locations only; third-party marketplace sellers excluded",
+          "Fuel discount requires Walmart+ app at participating stations (~14,000 locations nationwide)",
+          "Walmart.com direct: 403/CAPTCHA blocked all live fetch attempts"
+        ],
+        "keyFeatures": [
+          "Free same-day grocery delivery from Walmart stores on orders $35+",
+          "Free shipping on walmart.com with no order minimum",
+          "Paramount+ Essential streaming included at no extra cost",
+          "Pluto TV ad-free streaming included",
+          "10 cents per gallon fuel discount at ~14,000 Exxon, Mobil, Murphy, and Walmart stations",
+          "Mobile Scan & Go for contactless in-store checkout",
+          "Home returns (return items without repacking or label printing)",
+          "Early access to Black Friday and member-exclusive deals",
+          "Walmart+ Assist available at ~50% discount for EBT/SNAP and Medicaid recipients"
+        ],
+        "bestFor": [
+          "Frequent Walmart shoppers who buy groceries and general merchandise",
+          "Drivers who refuel regularly and can capture fuel savings",
+          "EBT/SNAP or Medicaid recipients eligible for Walmart+ Assist at half price",
+          "Households wanting free same-day delivery without a separate streaming subscription"
+        ],
+        "sources": [
+          {
+            "url": "https://techcrunch.com/2023/07/20/walmart-assist-halves-the-price-of-its-prime-competitor-for-those-on-government-assistance/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.cnbc.com/select/walmart-plus-membership-deal/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Enrichment sourced from TechCrunch article on Walmart+ Assist (fetched 2026-06-15) and CNBC Select review. Walmart.com direct pages returned CAPTCHA/403 on all fetch attempts. Features (Paramount+, Pluto TV, 10 cents/gallon at ~14,000 stations, $35 delivery minimum, mobile Scan & Go, home returns) confirmed from TechCrunch and CNBC. No free trial duration confirmed from a reachable official page; set to null. Compliance certifications not published on any reachable trust page; set to null."
+      }
     },
     {
       "slug": "amazon-prime",
@@ -305,7 +557,55 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": 30,
+        "keyIntegrations": [
+          "Grubhub+ (full membership included for Prime members)",
+          "Whole Foods Market (free 2-hour delivery)",
+          "Amazon Fresh (free delivery on qualifying orders)",
+          "Prime Video (streaming)",
+          "Amazon Music (ad-free streaming)",
+          "Prime Gaming",
+          "Prime Reading"
+        ],
+        "limits": [
+          "Whole Foods and Amazon Fresh free delivery requires qualifying order minimums (vary by location)",
+          "Grubhub+ activation requires separate opt-in at amazon.com/grubhub+",
+          "Amazon.com direct pages returned 503 on all fetch attempts; enrichment relies on Amazon newsroom sources",
+          "Student Prime requires valid .edu email address and re-verification every 12 months"
+        ],
+        "keyFeatures": [
+          "Free Grubhub+ membership (normally $9.99/month) included as permanent benefit",
+          "Free 2-hour grocery delivery from Whole Foods Market on qualifying orders",
+          "Free delivery from Amazon Fresh on qualifying orders",
+          "Unlimited free two-day shipping on millions of eligible items",
+          "Prime Video streaming library",
+          "Amazon Music ad-free streaming",
+          "30-day free trial for new members",
+          "Student Prime at $7.49/month or $69/year (half price)"
+        ],
+        "bestFor": [
+          "Frequent Amazon shoppers who also want food and grocery delivery benefits",
+          "Households that shop at Whole Foods and want free delivery",
+          "Existing Prime members who want to add Grubhub+ at no extra cost",
+          "Students who can access Prime at half price"
+        ],
+        "sources": [
+          {
+            "url": "https://www.aboutamazon.com/news/retail/amazon-prime-grubhub-plus-delivery",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Enrichment sourced from Amazon official newsroom article (fetched 2026-06-15) confirming Grubhub+ inclusion, Whole Foods 2-hour delivery, and Amazon Fresh benefits. Amazon.com direct pages returned HTTP 503 on all fetch attempts. 30-day free trial is Amazon's stated standard trial per the newsroom and widely corroborated public record. Compliance certifications (SOC 2, HIPAA, GDPR) for the consumer Amazon Prime product are not published on any reachable vendor trust/security page specific to Prime; AWS infrastructure certifications do not extend to the consumer Prime membership product; all set to null."
+      }
     },
     {
       "slug": "gopuff-fam",
@@ -347,7 +647,44 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [],
+        "limits": [
+          "Gopuff delivers convenience and grocery items only — not restaurant meals",
+          "Service limited to Gopuff delivery coverage areas (primarily urban and suburban US)",
+          "Free delivery is on Gopuff's own inventory shipped from micro-fulfillment centers",
+          "Gopuff Fam pages returned only homepage navigation on all fetch attempts; free trial details could not be confirmed from a live vendor page",
+          "Student Fam tier (~$3.99/month) exists but pricing not confirmed from a live vendor page"
+        ],
+        "keyFeatures": [
+          "Free delivery on all Gopuff orders with no order minimum",
+          "Exclusive member pricing and deals on select items",
+          "Delivery from Gopuff micro-fulfillment centers (typically 30-minute delivery)",
+          "Access to SNAP/EBT eligible items",
+          "Student Fam tier at approximately $3.99/month for eligible students"
+        ],
+        "bestFor": [
+          "Urban convenience shoppers who regularly buy snacks, drinks, household essentials, and OTC items",
+          "Late-night shoppers needing fast delivery without meeting an order minimum",
+          "Students in Gopuff coverage areas who can access the discounted Student Fam tier"
+        ],
+        "sources": [
+          {
+            "url": "https://www.gopuff.com/join-fam",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Enrichment sourced from vendor provenance notes (join-fam page URL cited in plans; live page returned only homepage navigation). Product category (convenience/grocery, not restaurant meals), no order minimum, micro-fulfillment model, and Student Fam tier are confirmed from the existing file's provenance and widely published comparison sources. Free trial duration not confirmable from any live vendor page; set to null. No integrations confirmed. Compliance certifications not found on any reachable Gopuff trust/security page; set to null."
+      }
     }
   ]
 }

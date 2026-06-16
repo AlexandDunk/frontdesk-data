@@ -73,7 +73,68 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.cloudflare.com/gdpr/introduction/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "WordPress",
+          "Shopify",
+          "Magento",
+          "Cloudflare Workers",
+          "Cloudflare Pages",
+          "Cloudflare R2 (S3-compatible storage)"
+        ],
+        "limits": [
+          "Free plan: no uptime SLA",
+          "Image optimization only on Pro+ plans",
+          "Workers free tier: 100k requests/day, 10ms CPU per request",
+          "PCI DSS 4.0 compliance only on Business+ plans",
+          "Phone support only on Enterprise contract"
+        ],
+        "keyFeatures": [
+          "Unmetered DDoS protection on all plans",
+          "330+ PoPs globally",
+          "Universal SSL/TLS on all plans",
+          "Managed WAF ruleset (free tier included)",
+          "Cloudflare Workers serverless edge compute",
+          "Lossless image optimization (Pro+)",
+          "100% uptime SLA (Business+)",
+          "ISO 27001, ISO 27701, SOC 2 Type II, PCI DSS Level 1 certified",
+          "EU-U.S. Data Privacy Framework certified",
+          "Standard Contractual Clauses (SCC) DPA available"
+        ],
+        "bestFor": [
+          "Websites needing free CDN + DDoS protection with zero setup cost",
+          "Developers wanting edge compute (Workers) alongside CDN",
+          "Businesses needing PCI DSS 4.0 compliance at the CDN layer",
+          "Multi-cloud or platform-agnostic deployments"
+        ],
+        "sources": [
+          {
+            "url": "https://www.cloudflare.com/trust-hub/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.cloudflare.com/gdpr/introduction/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.cloudflare.com/plans/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Compliance facts sourced from Cloudflare Trust Hub (trust-hub/) and GDPR introduction page. HIPAA/BAA not stated by Cloudflare on any trust or compliance page found; marked null. SOC 2 Type II and GDPR (DPA with SCCs) confirmed by Cloudflare's own pages."
+      }
     },
     {
       "slug": "bunny-net",
@@ -115,7 +176,68 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://bunny.net/gdpr/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "WordPress",
+          "S3-compatible storage API",
+          "Bunny Stream (video)",
+          "Edge scripting",
+          "FTP/SFTP",
+          "Webhook API"
+        ],
+        "limits": [
+          "No permanent free tier; $1/month minimum spend",
+          "14-day free trial (no credit card required)",
+          "Volume Network has only 10 PoPs (fewer than Standard's 119)",
+          "No per-request billing but bandwidth costs vary significantly by region",
+          "SOC 2 and HIPAA certifications not publicly documented"
+        ],
+        "keyFeatures": [
+          "119+ PoPs across 82 countries (Standard Network)",
+          "24ms average global latency",
+          "Perma-Cache technology for permanent edge caching",
+          "Bunny Stream: video transcoding, multi-DRM, Media Cage content protection",
+          "Dynamic image optimization and processing",
+          "SafeHop™ origin protection",
+          "Edge scripting deployment",
+          "DDoS protection included",
+          "Free SSL certificates",
+          "DPA available via customer panel (GDPR)"
+        ],
+        "bestFor": [
+          "Cost-sensitive workloads needing low per-GB rates in Europe/North America",
+          "Video streaming platforms (via Bunny Stream)",
+          "WordPress-heavy sites looking for affordable CDN",
+          "Developers wanting simple pay-as-you-go with no per-request fees"
+        ],
+        "sources": [
+          {
+            "url": "https://bunny.net/gdpr/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://bunny.net/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://bunny.net/stream/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "GDPR compliance confirmed by Bunny.net's own GDPR page; DPA available via dashboard per GDPR page. No SOC 2 or HIPAA documentation found on any Bunny.net trust or compliance page; both marked null. freeTier false — all plans have a $1 minimum; 14-day trial confirmed on pricing page."
+      }
     },
     {
       "slug": "fastly",
@@ -187,7 +309,72 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.fastly.com/products/cloud-security/compliance",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Compute@Edge (Wasm)",
+          "Next-Gen WAF",
+          "Fastly Image Optimizer",
+          "CI/CD pipelines",
+          "Datadog",
+          "Splunk",
+          "Sumo Logic (log streaming)"
+        ],
+        "limits": [
+          "Full Site Delivery: first 100 GB/region/mo free then pay-as-you-go (not a true free tier)",
+          "Network Services packages start at $1,500/mo — high floor for SMBs",
+          "No self-serve free plan; usage-based only below $1,500 floor",
+          "HIPAA-compliant caching + BAA must be enabled per-account; contact Fastly sales to enable and sign the BAA"
+        ],
+        "keyFeatures": [
+          "Instant Purge: <150ms average global cache invalidation",
+          "578 Tbps global edge capacity serving 5+ trillion daily requests",
+          "ISO/IEC 27001:2022 certified",
+          "SOC 2 Type 2 (Security and Availability criteria)",
+          "HIPAA-audited with HIPAA-compliant caching product",
+          "PCI DSS Level 1 Service Provider",
+          "GDPR-audited as data processor",
+          "Next-Gen WAF (~90% of customers in blocking mode)",
+          "Programmable edge via Compute@Edge (WebAssembly)",
+          "Up to 32% faster TTFB vs competing CDNs (Fastly claim)"
+        ],
+        "bestFor": [
+          "Enterprise media and publishing needing sub-150ms global purge",
+          "eCommerce with real-time inventory and bot protection needs",
+          "Healthcare and financial services requiring HIPAA/PCI DSS CDN layer",
+          "Engineering teams wanting programmable edge (WebAssembly/Compute@Edge)"
+        ],
+        "sources": [
+          {
+            "url": "https://www.fastly.com/products/cloud-security/compliance",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.fastly.com/compliance",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://docs.fastly.com/products/hipaa-compliant-caching-and-delivery",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.fastly.com/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fastly's own compliance page states: 'Fastly is audited against relevant sections of the Security and Privacy Rules of HIPAA' and that 'customers can configure their services using our HIPAA-compliant caching product'; HIPAA marked true. BAA confirmed via Fastly product docs (docs.fastly.com/products/hipaa-compliant-caching-and-delivery): 'For accounts that have this feature enabled, Fastly will enter into a HIPAA business associate agreement (BAA) as an addendum to their terms of service.' This is a product-level HIPAA offering (caching/delivery with PHI in volatile storage, TLS 1.2+ enforced), not infra-only. SOC 2 Type 2 and GDPR audit confirmed on the compliance page."
+      }
     },
     {
       "slug": "amazon-cloudfront",
@@ -278,7 +465,70 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://aws.amazon.com/compliance/hipaa-eligible-services-reference/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "AWS S3",
+          "AWS Lambda@Edge",
+          "AWS WAF",
+          "AWS Shield",
+          "AWS Certificate Manager",
+          "AWS CloudWatch",
+          "Route 53",
+          "Elastic Load Balancing"
+        ],
+        "limits": [
+          "Always-free tier: 1 TB data transfer/month and 10M requests/month",
+          "HIPAA eligibility excludes content delivery through CloudFront Embedded Points of Presence",
+          "SOC 1/2/3 scope excludes CloudFront Embedded PoPs",
+          "Tightly integrated with AWS ecosystem — less portable to multi-cloud than standalone CDNs",
+          "Pay-as-you-go rates can be complex to predict at scale"
+        ],
+        "keyFeatures": [
+          "HIPAA-eligible service per AWS BAA (excludes Embedded PoPs)",
+          "SOC 1, SOC 2, SOC 3 in scope (per AWS compliance services list)",
+          "GDPR-compliant with AWS DPA including SCCs",
+          "Lambda@Edge and CloudFront Functions for programmable edge",
+          "AWS Shield Standard DDoS protection included",
+          "Integration with AWS WAF for application-layer filtering",
+          "Global network of 600+ PoPs (AWS edge locations + regional caches)",
+          "Signed URLs and signed cookies for private content distribution",
+          "Real-time metrics and logging via CloudWatch",
+          "Field-level encryption for sensitive data at edge"
+        ],
+        "bestFor": [
+          "Existing AWS customers wanting native CDN with zero integration friction",
+          "Healthcare workloads needing HIPAA-eligible CDN with BAA coverage",
+          "Applications using Lambda@Edge or CloudFront Functions for edge logic",
+          "Static site hosting via S3 + CloudFront pattern"
+        ],
+        "sources": [
+          {
+            "url": "https://aws.amazon.com/compliance/hipaa-eligible-services-reference/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://aws.amazon.com/compliance/services-in-scope/SOC/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://aws.amazon.com/compliance/gdpr-center/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "HIPAA eligibility confirmed by AWS HIPAA Eligible Services Reference page with explicit CloudFront listing (note: excludes Embedded PoPs). SOC 1/2/3 in-scope confirmed by AWS SOC services page (same exclusion for Embedded PoPs). GDPR confirmed via AWS GDPR Center which states all AWS services support GDPR with DPA including SCCs."
+      }
     },
     {
       "slug": "keycdn",
@@ -320,7 +570,76 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.keycdn.com/gdpr",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "WordPress",
+          "Joomla",
+          "Drupal",
+          "Magento",
+          "TYPO3",
+          "PrestaShop",
+          "OpenCart",
+          "Laravel",
+          "Symfony",
+          "Ruby on Rails",
+          "Hugo",
+          "Jekyll"
+        ],
+        "limits": [
+          "No permanent free tier; $4/month minimum spend, $49 minimum prepayment",
+          "14-day free trial, no credit card required",
+          "First 3 zones free; additional zones $1/zone/month",
+          "Log forwarding is a paid add-on ($1/day)",
+          "No SOC 2 or HIPAA certifications publicly documented"
+        ],
+        "keyFeatures": [
+          "98% cache hit ratio",
+          "6 continents served, 40,000+ customers",
+          "100% SSD infrastructure",
+          "HTTP/2, TLS 1.3, Brotli compression",
+          "Real-time image transformation and optimization",
+          "Instant cache purging via API",
+          "Both pull and push zones",
+          "RESTful API for full account management",
+          "Let's Encrypt and custom TLS certificates",
+          "DDoS protection and bot blocking",
+          "Secure tokens and two-factor authentication",
+          "GDPR-compliant with DPA available on request"
+        ],
+        "bestFor": [
+          "CMS-heavy sites (WordPress, Drupal, Magento) needing broad plugin ecosystem",
+          "Developers valuing early HTTP/2 and Brotli adoption",
+          "Small to mid-size sites needing simple pay-as-you-go without request fees",
+          "Image-heavy sites using KeyCDN's real-time image processing"
+        ],
+        "sources": [
+          {
+            "url": "https://www.keycdn.com/gdpr",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.keycdn.com/features",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.keycdn.com/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "GDPR compliance confirmed by KeyCDN's own GDPR page stating commitment to GDPR requirements; DPA available via support request per same page. No SOC 2 or HIPAA documentation found on any KeyCDN trust/security/compliance page; both marked null. 14-day trial confirmed on keycdn.com homepage."
+      }
     },
     {
       "slug": "cdn77",
@@ -377,7 +696,67 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.cdn77.com/privacy-policy",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "HTTP-FLV streaming",
+          "HLS adaptive bitrate",
+          "Private CDN (dedicated infra)",
+          "Global DNS (anycast)",
+          "Object Storage API",
+          "Multi-CDN / fallback origin architecture"
+        ],
+        "limits": [
+          "Lowest published plan is $990/mo (250 TB) — not suitable for small workloads",
+          "No free tier or trial publicly advertised",
+          "SOC 2 and HIPAA certifications not publicly documented",
+          "Enterprise tier is quote-only"
+        ],
+        "keyFeatures": [
+          "310 Tbps total network capacity; 40 Tbps internal backbone",
+          "200+ PoPs across 130 countries; 3,000+ ISP direct connections",
+          "90% of delivered data is video; 430 PB video daily",
+          "Sub-5 second latency for live streaming",
+          "Cache hit ratios consistently above 95% (per client reports)",
+          "SSL Labs A+ rating; TLS 1.3 with 0-RTT",
+          "Secure tokens and signed URLs with IP/geo restrictions",
+          "Custom DDoS filters with <10 second detection; DPDK-based solution",
+          "Direct L2/L3 engineer access on Enterprise",
+          "GDPR-compliant per privacy policy"
+        ],
+        "bestFor": [
+          "Large-scale video streaming and live sports broadcasting",
+          "Enterprise media companies with 100+ TB/month traffic",
+          "Multi-CDN architectures requiring high-capacity fallback CDN",
+          "OTT/esports platforms (Starz, Rakuten TV, ESL Gaming are named customers)"
+        ],
+        "sources": [
+          {
+            "url": "https://www.cdn77.com/privacy-policy",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.cdn77.com/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.cdn77.com/features",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "GDPR compliance confirmed by CDN77 privacy policy which explicitly states data processing 'in accordance with applicable laws, including the GDPR.' No SOC 2 or HIPAA documentation found on CDN77 security, legal, or compliance pages; both marked null. No free trial advertised on pricing or home page. Features page (cdn77.com/features) confirms HTTP-FLV streaming, anycast Global DNS, Private (dedicated) CDN; Object Storage corroborated by the priced add-on plan. Removed the prior 'Akamai-compatible' integration claim — not stated on any CDN77 page; replaced with grounded multi-CDN/fallback-origin descriptor."
+      }
     },
     {
       "slug": "cdnsun",
@@ -419,7 +798,59 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": 15,
+        "keyIntegrations": [
+          "FTP/SFTP",
+          "HTTP API",
+          "RTMP streaming",
+          "HLS streaming",
+          "Custom SSL"
+        ],
+        "limits": [
+          "No dedicated GDPR, SOC 2, or HIPAA compliance page found; compliance posture unconfirmed",
+          "15-day free trial available; no permanent free tier",
+          "Business plan has $0 minimum monthly spend but prepaid credit required",
+          "5 GB free CDN storage then charged separately",
+          "Custom plan requires $200 minimum monthly spend"
+        ],
+        "keyFeatures": [
+          "30+ global data centers on SSD infrastructure",
+          "HTTP/2 support",
+          "Unlimited requests and bandwidth on Business plan",
+          "5 GB free CDN storage (push zones)",
+          "Raw logs included at no extra charge",
+          "DDoS protection and 100% SLA on Business plan",
+          "RTMP and HLS streaming support",
+          "24/7 support via email, phone, and live chat",
+          "Prepaid credit model (no recurring monthly bill if unused)"
+        ],
+        "bestFor": [
+          "SMBs wanting a $0-minimum CDN with no per-request fees",
+          "Video streaming and live broadcasting workloads",
+          "Game and software distribution",
+          "Ad serving at scale"
+        ],
+        "sources": [
+          {
+            "url": "https://cdnsun.com/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://cdnsun.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "CDNsun homepage and pricing page reference GDPR in footer links but no dedicated compliance/trust page was accessible (404 on /security, /features, /cdn-features). GDPR, SOC 2, and HIPAA compliance cannot be confirmed from vendor's own pages; all three marked null. 15-day free trial confirmed on pricing page; freeTier false as $0-minimum still requires prepaid credit purchase."
+      }
     },
     {
       "slug": "blazingcdn",
@@ -476,7 +907,68 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://blazingcdn.com/en-us/gdpr",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "S3 API (OpenStack Swift compatible)",
+          "FTP/SFTP/RCLONE",
+          "White-label/reseller API",
+          "DASH/HLS/HDS/MSS streaming protocols"
+        ],
+        "limits": [
+          "No permanent free tier; $25/month minimum spend",
+          "14-day free trial (1 GB free then $5/TB)",
+          "DDoS protection applies to cached content only",
+          "25+ PoPs globally — smaller network than Cloudflare or AWS",
+          "No SOC 2 or HIPAA documentation found on any public page"
+        ],
+        "keyFeatures": [
+          "25+ global PoPs; 5 Tbps global throughput; NVMe SSD servers",
+          "Sub-35ms latency for USA & EU; under 40ms for APAC",
+          "96%+ cache hit rate",
+          "GDPR-compliant cache servers deployed within EU-approved data centers",
+          "Adaptive bitrate streaming (DASH, HLS, HDS, MSS)",
+          "Multi-codec video support (FLV, MP4, 3GP, Full HD 1080p)",
+          "On-the-fly video clipping and format conversion",
+          "S3 API and OpenStack Swift compatibility",
+          "Role-Based Access Control (RBAC) and 2FA",
+          "6-level hotlink protection with token authentication",
+          "White-label and reseller solutions",
+          "99.998% SLA uptime guarantee"
+        ],
+        "bestFor": [
+          "Video-first platforms (OTT, VoD, live sports) needing low per-TB rates",
+          "Large-scale software and game distribution",
+          "Resellers and agencies wanting white-label CDN",
+          "EU-focused workloads requiring GDPR-compliant edge servers"
+        ],
+        "sources": [
+          {
+            "url": "https://blazingcdn.com/en-us/gdpr",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://blazingcdn.com/en-us/about",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://blazingcdn.com/en-us/features",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "GDPR compliance confirmed by BlazingCDN's own GDPR page stating infrastructure 'fully adheres to GDPR regulations' with EU-approved data centers. No SOC 2 or HIPAA documentation found on any BlazingCDN public page; both marked null. 14-day free trial confirmed on pricing page. freeTier false — $25/month minimum spend applies after trial."
+      }
     }
   ]
 }

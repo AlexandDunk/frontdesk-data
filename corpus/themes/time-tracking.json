@@ -20,6 +20,71 @@
         "Salesforce"
       ],
       "provenance": "Official pricing page https://toggl.com/track/pricing/ fetched directly and corroborated by Tekpon and CostBench listings. Starter is $9/user/month annual ($10 month-to-month); Premium is $18/user/month annual ($20 month-to-month). The displayed $9/$18 figures are the ANNUAL rates; the 'Save 10%' applies between annual and the higher monthly rates.",
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://toggl.com/track/security-and-reliability/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": 30,
+        "keyIntegrations": [
+          "Jira",
+          "Asana",
+          "Salesforce",
+          "GitHub",
+          "Google Calendar",
+          "Slack",
+          "QuickBooks Online",
+          "Zapier",
+          "Trello",
+          "HubSpot"
+        ],
+        "limits": [
+          "Free plan is limited to small teams (small user count)",
+          "Billable rates, project time estimates, and revenue/profitability reporting require Starter or higher (not on Free)",
+          "Customizable/scheduled reports, Jira & Salesforce sync, and SSO are Premium-only",
+          "Free plan excludes data-accuracy features such as locking time entries and audit logs"
+        ],
+        "keyFeatures": [
+          "One-click time tracking with timer (web, desktop, mobile)",
+          "Browser extensions (Chrome, Firefox, Edge) tracking time inside 100+ tools",
+          "Reporting and dashboards (summary, detailed, weekly)",
+          "Billable rates and invoicing (e.g. send invoices to QuickBooks Online)",
+          "Project and team management with billable/profitability analysis",
+          "Calendar sync (Google Calendar, Outlook)",
+          "100+ native integrations plus a public API",
+          "Background/idle tracking and reminders"
+        ],
+        "bestFor": [
+          "Freelancers and solopreneurs tracking billable time",
+          "Small-to-mid agencies and consultancies billing clients by project",
+          "Distributed/remote teams needing lightweight time tracking and reporting"
+        ],
+        "sources": [
+          {
+            "url": "https://toggl.com/track/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://toggl.com/track/security-and-reliability/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://toggl.com/legal/security/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://toggl.com/track/integrations/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched the pricing page (confirmed $0 free-forever plan and a 30-day free trial of paid plans), the integrations page, and two of Toggl's own security pages (/track/security-and-reliability/ and /legal/security/), which both explicitly state SOC 2 Type II, ISO 27001, and GDPR compliance. HIPAA is null because neither security page mentions HIPAA or a BAA; absence is not denial."
+      },
       "plans": [
         {
           "name": "Free",
@@ -105,6 +170,74 @@
         "Azure AD"
       ],
       "provenance": "Official pricing page https://www.getharvest.com/pricing/ fetched directly. Confirmed three tiers: Free, Teams ($108/seat/year = $9/seat/month annual; $11/seat/month-to-month), Enterprise ($168/seat/year = $14/seat/month annual; month-to-month not explicitly shown but implied higher). Zapier article corroborates 'from $11/user/month' for paid plans.",
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": {
+            "url": "https://www.getharvest.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": 30,
+        "keyIntegrations": [
+          "Asana",
+          "Slack",
+          "QuickBooks Online",
+          "Xero",
+          "Trello",
+          "Basecamp",
+          "Stripe",
+          "Jira",
+          "Google Calendar",
+          "Zapier"
+        ],
+        "limits": [
+          "Free plan: 1 seat, 2 projects",
+          "Teams plan: unlimited seats and projects ($9/seat/month annual)",
+          "Enterprise plan ($14/seat/month annual) adds SAML SSO, timesheet approvals, profitability reporting"
+        ],
+        "keyFeatures": [
+          "Time tracking",
+          "Invoicing and online payments",
+          "Expense tracking",
+          "Project and team reporting",
+          "Team scheduling/capacity planning (Forecast)",
+          "Timesheet approvals",
+          "Mac, iOS, and browser-extension apps"
+        ],
+        "bestFor": [
+          "Agencies",
+          "Consultants and professional-services firms",
+          "Freelancers",
+          "Small-to-midsize teams billing by time"
+        ],
+        "sources": [
+          {
+            "url": "https://www.getharvest.com/security",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.getharvest.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.getharvest.com/integrations",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.getharvest.com/privacy-policy",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://support.getharvest.com/hc/en-us/articles/360048685851-Security-FAQ",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched Harvest's /security, /pricing, /integrations, and /privacy-policy pages. hipaa nulled (was false): the previously cited Security FAQ is inaccessible (HTTP 403) and could not be independently verified, and Harvest publishes 'HIPAA compliant time tracking' marketing pages that contradict a flat denial while neither the /security nor /privacy-policy page confirms or denies HIPAA/BAA — so the status is unconfirmable and set to null. soc2 nulled: the /security page credits only its server host's (Google Cloud) SOC 2 audit (underlying infra), not Harvest itself. gdpr nulled: the /privacy-policy offers SCCs/DPAs and cites GDPR articles as legal bases but makes no explicit GDPR-compliance self-certification on its own trust page."
+      },
       "plans": [
         {
           "name": "Free",
@@ -177,6 +310,81 @@
         "Office 365"
       ],
       "provenance": "Official pricing page https://clockify.me/pricing fetched directly. All six tiers confirmed with exact per-seat monthly prices for both billing periods. Uniform 20% annual discount across all paid tiers confirmed.",
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://cake.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": 7,
+        "keyIntegrations": [
+          "Jira",
+          "Asana",
+          "Trello",
+          "QuickBooks",
+          "GitHub",
+          "GitLab",
+          "Google Calendar",
+          "Salesforce",
+          "ClickUp",
+          "Slack"
+        ],
+        "limits": [
+          "Free plan is capped at 5 users (changed April 2026; previously unlimited) but keeps unlimited tracking, projects, tasks, and clients",
+          "Kiosk clock-in, bulk edit, required fields, and time audit require the paid Basic tier or higher",
+          "Invoicing, approvals, time-off, and attendance require Standard tier or higher",
+          "Scheduling, expenses, GPS location tracking, screenshots, and custom fields require the Pro tier",
+          "SSO, SCIM, audit log, and custom subdomain require the Enterprise tier"
+        ],
+        "keyFeatures": [
+          "One-click timer with manual entry",
+          "Weekly timesheets with templates and approval workflows",
+          "Auto tracker (records time across apps, websites, and documents)",
+          "Idle detection to remove away-from-computer time",
+          "Pomodoro timer with break notifications",
+          "Kiosk clock-in via PIN or QR code on shared devices",
+          "GPS location tracking with route visualization",
+          "Scheduling and team capacity/forecasting"
+        ],
+        "bestFor": [
+          "Budget-conscious freelancers and small teams (free unlimited tracking and projects)",
+          "Small teams of up to 5 wanting a no-cost time tracker",
+          "Agencies and service businesses needing timesheets, billing, and approvals",
+          "Field/deskless teams needing kiosk, GPS, and attendance tracking"
+        ],
+        "sources": [
+          {
+            "url": "https://clockify.me/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://cake.com/security",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://clockify.me/features/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://clockify.me/apps",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://clockify.me/help/extra-features/idle-detection",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://cake.com/blog/news/clockify-announces-free-plan-changes/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched clockify.me/pricing (free tier, 7-day PRO trial, tier gating; note the Free plan is now capped at 5 users per an April 2026 change confirmed via cake.com blog, differing from the older unlimited-seats figure in the catalog), clockify.me/features, clockify.me/apps, and the idle-detection help doc. Compliance was confirmed on clockify.me/security which redirects to cake.com/security (Clockify's own CAKE.com trust page): SOC 2 Type II, ISO 27001, and GDPR are explicitly claimed; HIPAA/BAA is not mentioned, so hipaa is null."
+      },
       "plans": [
         {
           "name": "Free",
@@ -287,6 +495,68 @@
         "Beeminder"
       ],
       "provenance": "Official pricing page https://www.rescuetime.com/plans fetched directly. Four plans confirmed: Solo Focus, Solo+, Team Focus, Team+. All pricing verified on second fetch. No HIPAA mention found.",
+      "enrichment": {
+        "compliance": {
+          "hipaa": false,
+          "soc2": false,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.rescuetime.com/privacy",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Slack",
+          "Google Calendar",
+          "Outlook / Office 365 Calendar",
+          "GitHub",
+          "Asana",
+          "Spotify",
+          "YouTube"
+        ],
+        "limits": [
+          "No free-forever plan — only paid plans starting at $7/mo (annual); a limited 'Lite' state applies only after cancellation",
+          "Timesheets module is gated to the Solo+ and Team+ plans only (not in Focus-only plans)",
+          "Full historical report data, keyword search, file-level tracking, and advanced filters are premium-only",
+          "Team plans are priced per-user"
+        ],
+        "keyFeatures": [
+          "Automatic activity tracking across apps, websites, and documents",
+          "Focus Sessions (block selected websites/apps, silence notifications, focus music)",
+          "Goals & real-time distraction alerts",
+          "Insights & reports by category, app/website, and productivity level",
+          "Weekly productivity summaries with productivity score",
+          "Offline activity tracking for meetings and calls",
+          "The Assistant — daily command center consolidating schedule, focus sessions, and insights",
+          "iOS mobile app"
+        ],
+        "bestFor": [
+          "Individuals fighting digital distraction and wanting automatic time awareness",
+          "Remote and hybrid teams measuring focus and productivity",
+          "Freelancers and consultants needing automatic timesheets (Solo+ / Team+)"
+        ],
+        "sources": [
+          {
+            "url": "https://www.rescuetime.com/security",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.rescuetime.com/plans",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.rescuetime.com/privacy",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.rescuetime.com/features",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched rescuetime.com/security (HIPAA and SOC 2 both explicitly stated as not audited/certified, hence false), rescuetime.com/privacy (explicitly states it supports/accommodates the GDPR in the EU, hence gdpr true and used as compliance source), rescuetime.com/plans (14-day free trial on paid plans, no $0-forever tier so freeTier false; Timesheets gated to Solo+/Team+), and rescuetime.com/features. Integrations corroborated via vendor integration sub-pages."
+      },
       "plans": [
         {
           "name": "Solo Focus",
@@ -376,6 +646,66 @@
         "Todoist"
       ],
       "provenance": "Official pricing page https://www.timely.com/pricing fetched directly (redirected from timelyapp.com). Four tiers confirmed: Starter, Premium, Unlimited, Enterprise. No HIPAA mention.",
+      "enrichment": {
+        "compliance": {
+          "hipaa": false,
+          "soc2": false,
+          "gdpr": true,
+          "source": {
+            "url": "https://timely.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Asana",
+          "ClickUp",
+          "monday.com",
+          "Trello",
+          "Jira",
+          "Linear",
+          "Google Calendar",
+          "Microsoft Teams",
+          "Zoom",
+          "QuickBooks"
+        ],
+        "limits": [
+          "Starter: max 5 users, 20 projects",
+          "Premium: max 50 users, unlimited projects",
+          "Unlimited: unlimited users and projects",
+          "14-day free trial; no free-forever plan"
+        ],
+        "keyFeatures": [
+          "AI automatic time tracking (Memory tracker captures work automatically)",
+          "AI Timesheets / AutoSheet (AI-generated timesheets)",
+          "Project dashboards with billable & cost rates and project budgets",
+          "People dashboard with workspace and individual capacity planning",
+          "Live and snapshot reporting with branded report exports",
+          "Invoice generation and locked-time timesheet security",
+          "Idle detection and location tracking"
+        ],
+        "bestFor": [
+          "Agencies and consultancies wanting automatic AI-generated timesheets and accurate billing",
+          "Privacy-conscious / EU teams (ISO 27001:2022 certified, EU data centres, GDPR DPA, AES-256 at rest)",
+          "Teams needing capacity planning and project budget tracking at scale"
+        ],
+        "sources": [
+          {
+            "url": "https://timely.com/security",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://timely.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://timely.com/features",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched timely.com/security, /pricing, and /features. Compliance is explicit on the vendor's own security page: HIPAA false ('Timely isn't currently HIPAA compliant'), SOC 2 false (Timely has prioritised ISO 27001, offers only SOC 2-aligned questionnaire support with no certification), GDPR true (handled via DPA, privacy docs, and product design). Pricing confirms no $0-forever plan (cheapest is Starter $9/user/mo yearly, max 5 users) and a 14-day free trial."
+      },
       "plans": [
         {
           "name": "Starter",
@@ -459,6 +789,70 @@
         "Wrike"
       ],
       "provenance": "Official pricing page https://www.everhour.com/pricing fetched directly. Team plan confirmed at $8.50/seat/month billed annually (5-seat minimum). Monthly billing rate not explicitly shown; FAQ states 15% annual savings implying ~$10/seat/month billed monthly. Custom plan for 50+ seats. No HIPAA mention.",
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://everhour.com/gdpr",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Asana",
+          "ClickUp",
+          "Basecamp",
+          "Trello",
+          "Jira",
+          "monday.com",
+          "GitHub",
+          "Notion",
+          "Linear",
+          "Wrike"
+        ],
+        "limits": [
+          "Free plan: up to 5 seats, limited features, no integrations",
+          "Team plan: 5-seat minimum, billed yearly ($8.50/seat/mo)",
+          "Custom plan: 50+ seats, contact for quote",
+          "Annual billing required for the 15% discount; cards only, billed in USD"
+        ],
+        "keyFeatures": [
+          "Embedded time tracking inside PM tools (Asana, ClickUp, Trello, etc.)",
+          "Budgeting with overspend alerts",
+          "Invoicing from tracked hours",
+          "Resource planning / scheduling",
+          "Detailed reporting and profitability analytics",
+          "Expense tracking",
+          "Time off / PTO management"
+        ],
+        "bestFor": [
+          "Teams that live inside Asana, ClickUp, Trello or other PM tools and want native time tracking",
+          "Agencies and consultancies tracking project budgets and billable hours",
+          "Small-to-mid teams needing invoicing and resource planning without a separate tool"
+        ],
+        "sources": [
+          {
+            "url": "https://everhour.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://everhour.com/security",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://everhour.com/integrations",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://everhour.com/gdpr",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched everhour.com/pricing (free tier up to 5 seats and 14-day trial confirmed), /integrations (integrations and flagship features), and /security and /gdpr for compliance. GDPR set true from the /gdpr page ('Everhour is committed to respect your rights under the GDPR'). SOC 2 nulled because the security page claims SOC 2 only at the AWS server-host/infra level, not Everhour's own certification; HIPAA nulled as no HIPAA/BAA statement appears on any Everhour page."
+      },
       "plans": [
         {
           "name": "Free",
@@ -532,6 +926,78 @@
         "Salesforce"
       ],
       "provenance": "Official pricing page https://hubstaff.com/pricing did not render plan details (JS-only). Pricing sourced from SoftwareAdvice listing https://www.softwareadvice.com/time-tracking/hubstaff-profile/ and corroborated by GetApp listing https://www.getapp.com/project-management-software/a/hubstaff/pricing/ — both agree on Starter $7, Grow $9, Team $12, Enterprise $25. HIPAA compliance confirmed on hubstaff.com footer (HIPAA listed as certification). Annual billing for Enterprise tier only; Starter/Grow/Team shown as monthly per-user rates without confirmed annual discount.",
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://hubstaff.com/hipaa",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Jira",
+          "Asana",
+          "Trello",
+          "GitHub",
+          "GitLab",
+          "ClickUp",
+          "QuickBooks",
+          "PayPal",
+          "Gusto",
+          "Salesforce",
+          "Slack"
+        ],
+        "limits": [
+          "Free plan limited to 1 user (organization owner only)",
+          "Paid plans (Starter/Grow/Team) require a 2-seat minimum",
+          "Screenshots capped per tier: Free 100/mo, Starter 500/mo, Grow 1,500/mo, Team/Enterprise unlimited",
+          "Integrations limited on lower tiers: Grow includes 1, only Team/Enterprise get unlimited integrations",
+          "Enterprise plan billed annually only"
+        ],
+        "keyFeatures": [
+          "Time tracking (desktop, web, mobile)",
+          "Screenshots and activity-level monitoring",
+          "GPS tracking and geofencing for field/mobile teams",
+          "Online timesheets and approvals",
+          "Payroll and payments integration",
+          "Productivity insights and reporting",
+          "Employee/app & URL monitoring",
+          "Project budgeting and scheduling"
+        ],
+        "bestFor": [
+          "Remote and distributed teams needing activity monitoring",
+          "Field and mobile workforces needing GPS/geofencing",
+          "Agencies and services firms running time-based payroll",
+          "Healthcare/regulated teams needing HIPAA-ready time tracking with a BAA"
+        ],
+        "sources": [
+          {
+            "url": "https://hubstaff.com/hipaa",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://hubstaff.com/security",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://hubstaff.com/gdpr",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://hubstaff.com/integrations",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://support.hubstaff.com/new-pricing-and-plans/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched Hubstaff's own /hipaa, /security, and /gdpr pages: HIPAA is true via an explicit statement ('Hubstaff is a HIPAA-compliant time tracking software') plus a BAA offer on the official /hipaa page, verifying the catalog's hipaa=true; SOC 2 Type II and GDPR are stated on the security/GDPR pages. Free tier (true) and 14-day trial confirmed via Hubstaff's support pricing page documenting a genuine $0 single-user Free plan; the JS-only /pricing page yielded no plan data, so seat minimums were cross-checked against aggregators. Integrations and features are from Hubstaff's own /integrations and product pages."
+      },
       "plans": [
         {
           "name": "Starter",
@@ -634,6 +1100,70 @@
         "Outlook"
       ],
       "provenance": "Official pricing page https://www.trackingtime.co/pricing fetched directly. All four tiers confirmed with exact prices on both fetches. No HIPAA mention.",
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Asana",
+          "Trello",
+          "ClickUp",
+          "Basecamp",
+          "monday.com",
+          "Jira",
+          "Google Calendar",
+          "Outlook",
+          "Microsoft Teams",
+          "Bitbucket",
+          "Figma",
+          "Google Sheets"
+        ],
+        "limits": [
+          "Free plan has unlimited users, tasks & projects but gates advanced features",
+          "Invoicing, billing rates, time off management, and Google Calendar/Outlook integrations require Pro plan or higher",
+          "SSO (Azure AD & Google), audit logs, advanced user roles, and 99.9% SLA only on Business plan",
+          "14-day trial is of Pro features and auto-downgrades to Free if not upgraded"
+        ],
+        "keyFeatures": [
+          "AutoTrack automatic time tracking",
+          "Browser extension time tracking in 50+ apps",
+          "Time cards and timesheet audits",
+          "Work schedules and public holidays",
+          "Project/task estimates and billing rates",
+          "Online and scheduled reporting",
+          "Invoicing",
+          "Time off / leave management"
+        ],
+        "bestFor": [
+          "Teams wanting free unlimited seats for basic time tracking",
+          "Agencies needing project, client, and billable-rate tracking",
+          "Distributed teams tracking time across many tools via browser extension"
+        ],
+        "sources": [
+          {
+            "url": "https://trackingtime.co/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://trackingtime.co/integrations",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://support.trackingtime.co/en/articles/1192765-security",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://support.trackingtime.co/en/articles/6828952-gdpr-personal-data-protection-policy",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched trackingtime.co/pricing (free tier and 14-day Pro trial confirmed) and trackingtime.co/integrations (60+ apps). For compliance, the /security and /privacy paths 404'd, so the vendor's official Help Center security article and GDPR policy were used. HIPAA and SOC 2 are nulled (nowhere mentioned); GDPR is nulled because the vendor only states processing is 'in accordance with the GDPR' and offers a DPA/addendum rather than an explicit GDPR-compliance self-certification. With all three null, compliance.source is null."
+      },
       "plans": [
         {
           "name": "Free",

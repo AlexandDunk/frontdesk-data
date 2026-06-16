@@ -67,7 +67,69 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://mixpanel.com/legal/mixpanel-hipaa/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Segment",
+          "mParticle",
+          "RudderStack",
+          "Snowflake",
+          "BigQuery",
+          "Salesforce",
+          "Slack",
+          "Marketo",
+          "Google Analytics import"
+        ],
+        "limits": [
+          "Free plan capped at 1M events/month",
+          "Free plan: 5 saved reports per seat",
+          "Free plan: 10K session replays/month",
+          "Spark AI query builder limited to 60 queries/month on Growth",
+          "BAA and HIPAA tools only on Enterprise (contact sales)"
+        ],
+        "keyFeatures": [
+          "Event-based product analytics with funnel, retention, and flow analysis",
+          "Session replay (10K–20K replays/month on free/growth)",
+          "Spark AI natural-language query builder",
+          "Multi-touch attribution",
+          "Cohort analysis and behavioral segmentation",
+          "Data warehouse sync (Snowflake, BigQuery)",
+          "SOC 2 Type II and ISO 27001 / ISO 27701 certified",
+          "BAA available for HIPAA (Enterprise)"
+        ],
+        "bestFor": [
+          "B2B SaaS and mobile app teams needing deep funnel and retention analysis",
+          "Healthcare and finance companies requiring HIPAA compliance (Enterprise tier)",
+          "Data teams that warehouse their own data (Snowflake/BigQuery sync)",
+          "Startups on the generous 1M events/month free tier"
+        ],
+        "sources": [
+          {
+            "url": "https://mixpanel.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://mixpanel.com/legal/mixpanel-hipaa/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://mixpanel.com/legal/security-overview/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Compliance facts sourced from mixpanel.com/legal/mixpanel-hipaa/ and mixpanel.com/legal/security-overview/ on 2026-06-15. BAA availability confirmed from vendor's own HIPAA page. SOC 2 Type II and ISO 27001/27701 stated on security overview page."
+      }
     },
     {
       "slug": "amplitude",
@@ -148,7 +210,69 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://amplitude.com/trust",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Segment",
+          "Snowflake",
+          "BigQuery",
+          "Salesforce",
+          "Braze",
+          "Slack",
+          "mParticle",
+          "RudderStack",
+          "Amplitude AI Agents"
+        ],
+        "limits": [
+          "Starter free tier limited to 10K MTUs or up to 2M events/month",
+          "Plus tier starts at $49/mo (annual) for up to 300K MTUs",
+          "HIPAA BAA available; AI features covered under existing BAA for EU-provisioned orgs",
+          "Predictive audiences and multi-armed bandit experiments require Growth/Enterprise",
+          "EU data never leaves Frankfurt data center when EU-provisioned"
+        ],
+        "keyFeatures": [
+          "Behavioral Graph proprietary database enabling instant queries without SQL",
+          "Session replay and heatmaps",
+          "Feature flags, A/B experimentation, and multi-armed bandit testing",
+          "Amplitude AI Agents for automated analysis and recommendations",
+          "Predictive audiences and 1:1 behavioral targeting",
+          "EU-hosted data center in Frankfurt with data sovereignty guarantees",
+          "BAA available for HIPAA (covered entities and business associates)",
+          "Self-service data subject access and deletion APIs"
+        ],
+        "bestFor": [
+          "Product and growth teams needing deep behavioral analysis without SQL expertise",
+          "Companies running continuous A/B and multivariate experiments",
+          "Healthcare and regulated industry companies requiring HIPAA BAA",
+          "Enterprises needing EU data residency and GDPR DPAs"
+        ],
+        "sources": [
+          {
+            "url": "https://amplitude.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://amplitude.com/trust",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://amplitude.com/product",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "HIPAA BAA confirmed from amplitude.com/trust: 'Amplitude can enter a Business Associates Agreement to help you maintain your HIPAA compliance.' GDPR confirmed via EU-US Data Privacy Framework self-certification and Frankfurt EU data center. SOC 2 not stated on trust page by vendor directly (only AWS subprocessor mentioned), set to null per rules."
+      }
     },
     {
       "slug": "posthog",
@@ -214,7 +338,68 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://posthog.com/docs/privacy/hipaa-compliance",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Segment",
+          "Snowflake",
+          "BigQuery",
+          "Redshift",
+          "Stripe",
+          "Salesforce",
+          "Slack",
+          "Zapier",
+          "Bugcrowd (vulnerability program)"
+        ],
+        "limits": [
+          "Free plan: 1M analytics events/month, 5K session recordings, 1M feature flag requests, 1,500 survey responses",
+          "BAA only available on Boost, Scale, or Enterprise packages (not free tier)",
+          "Self-hosted hobby deployment not suitable for HIPAA (use PostHog Cloud under BAA)",
+          "Session recordings expire after a retention period depending on plan"
+        ],
+        "keyFeatures": [
+          "All-in-one platform: product analytics, session replay, feature flags, A/B testing, surveys, and error tracking",
+          "Autocapture with retroactive event definition (define events after data is collected)",
+          "Open-source codebase with self-hosting option",
+          "SOC 2 Type II certified (audit report via SafeBase trust center)",
+          "BAA available for HIPAA on paid packages (Boost, Scale, Enterprise)",
+          "EU data hosting in Frankfurt, Germany",
+          "Annual penetration testing and vulnerability disclosure via Bugcrowd",
+          "Per-product billing with individual spending limits"
+        ],
+        "bestFor": [
+          "Engineering-led startups wanting one platform for analytics, feature flags, and session replay",
+          "Companies wanting open-source transparency and self-hosting option",
+          "Teams needing HIPAA compliance with BAA (paid tiers)",
+          "Startups that need generous free tiers across multiple product tools"
+        ],
+        "sources": [
+          {
+            "url": "https://posthog.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://posthog.com/docs/privacy/hipaa-compliance",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://posthog.com/handbook/company/security",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "HIPAA BAA confirmed from posthog.com/docs/privacy/hipaa-compliance: 'PostHog only offers BAAs for PostHog Cloud to users with the Boost, Scale, or Enterprise package.' SOC 2 Type II confirmed from handbook/company/security: 'PostHog holds SOC 2 Type II certification following external audit.' GDPR confirmed via EU data hosting in Frankfurt and DPA availability."
+      }
     },
     {
       "slug": "heap",
@@ -294,7 +479,67 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://trust.contentsquare.com/?product=heapio",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Segment",
+          "Snowflake",
+          "BigQuery",
+          "Redshift",
+          "Salesforce",
+          "Marketo",
+          "Slack"
+        ],
+        "limits": [
+          "Free plan capped at 10K monthly sessions",
+          "Free plan: 6 months data history only",
+          "Session replay only available on Pro tier and above (add-on)",
+          "Data warehouse integration (Snowflake/BigQuery) only on Premier",
+          "Heap is now part of Contentsquare; trust portal at trust.contentsquare.com"
+        ],
+        "keyFeatures": [
+          "Automatic event capture without manual instrumentation (retroactive analysis)",
+          "Heap Illuminate: AI-powered friction and drop-off detection",
+          "Sense AI for natural-language analytics queries",
+          "Journeys: visual workflow maps with per-step conversion rates",
+          "Session replay with cued moments of interest",
+          "Heatmaps and engagement matrix",
+          "SOC 2 Type II certified (via Contentsquare trust portal; ISO 27001/27017/27018/27701 also held)",
+          "Region-specific data storage on Premier"
+        ],
+        "bestFor": [
+          "Product and UX teams wanting retroactive event analysis without pre-instrumentation",
+          "SaaS companies tracking cross-device user journeys",
+          "Enterprises needing Contentsquare's combined DXA and product analytics stack",
+          "Teams wanting AI-surfaced friction points without manual funnel setup"
+        ],
+        "sources": [
+          {
+            "url": "https://www.heap.io/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://trust.contentsquare.com/?product=heapio",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://heap.io/features",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "SOC 2 Type II confirmed from trust.contentsquare.com (Heap's trust portal post-Contentsquare acquisition): 'Contentsquare is ISO 27001, ISO 27017, ISO 27018 and ISO 27701 certified and holds a SOC 2 Type II report.' HIPAA not stated on trust portal — set to null. GDPR not explicitly stated on trust portal — set to null. Free tier confirmed (10K sessions/month)."
+      }
     },
     {
       "slug": "plausible",
@@ -371,7 +616,67 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://plausible.io/privacy-focused-web-analytics",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 30,
+        "keyIntegrations": [
+          "Google Search Console",
+          "Looker Studio",
+          "WordPress",
+          "Google Tag Manager",
+          "Stats API",
+          "NPM package"
+        ],
+        "limits": [
+          "No free forever plan; 30-day trial only",
+          "Starter: 1 site, 3 years data retention, no team members",
+          "Growth: up to 3 sites and 3 team members",
+          "Business: up to 10 sites and 10 team members, Stats API capped at 600 req/hr",
+          "Funnels and user journeys only on Business tier and above",
+          "SSO only on Enterprise"
+        ],
+        "keyFeatures": [
+          "Cookieless tracking — no consent banners required under GDPR/PECR",
+          "Open-source codebase (self-hostable)",
+          "EU-hosted on Hetzner servers in Falkenstein, Germany (data never leaves EU)",
+          "Lightweight script with no page-speed impact",
+          "Google Analytics importer",
+          "Ecommerce revenue attribution (Business+)",
+          "Funnels and user journey analysis (Business+)",
+          "Embeddable dashboards and public shared links"
+        ],
+        "bestFor": [
+          "Privacy-conscious site owners and publishers who need GDPR compliance without cookie banners",
+          "European businesses requiring EU data residency",
+          "Content creators, bloggers, and agencies wanting simple, clean dashboards",
+          "Teams migrating from Google Analytics seeking a privacy-respecting alternative"
+        ],
+        "sources": [
+          {
+            "url": "https://plausible.io/#pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://plausible.io/privacy-focused-web-analytics",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://plausible.io/simple-web-analytics",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "GDPR compliance confirmed from plausible.io/privacy-focused-web-analytics: EU-hosted servers in Germany, independent legal assessment cited. HIPAA and SOC 2 not mentioned by vendor on any reachable page — set to null. No free forever plan exists (plans start at $9/mo); 30-day free trial confirmed on pricing page."
+      }
     },
     {
       "slug": "fathom-analytics",
@@ -463,7 +768,68 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://usefathom.com/compliance",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "WordPress plugin",
+          "Looker Studio connector",
+          "API",
+          "Webhooks",
+          "Vue.js",
+          "SavvyCal",
+          "ConvertKit"
+        ],
+        "limits": [
+          "No free plan; paid plans start at $15/month (100K pageviews)",
+          "All plans include up to 50 sites; agencies can add more for additional fees",
+          "Traffic over 25M pageviews/month requires custom quote",
+          "No session replay or user-level analytics (privacy by design)"
+        ],
+        "keyFeatures": [
+          "Cookieless, privacy-first analytics — no consent banners required",
+          "Real-time dashboard with live visitor tracking",
+          "Permanent (forever) data retention on all paid plans",
+          "Custom event and ecommerce revenue tracking",
+          "UTM campaign tracking",
+          "IP and country-based blocking",
+          "Password-protected and public dashboard sharing",
+          "Google Analytics historical data importer",
+          "GDPR, CCPA, ePrivacy, PECR, Schrems II, and COPPA compliant by design",
+          "Automatic bot/crawler/DDoS filtering"
+        ],
+        "bestFor": [
+          "Privacy-first teams needing GDPR/PECR compliance without cookie consent banners",
+          "Digital agencies managing up to 50 client sites from one account",
+          "Bootstrapped founders and creators wanting simple, permanent data retention",
+          "European businesses requiring Schrems II-safe data transfers"
+        ],
+        "sources": [
+          {
+            "url": "https://usefathom.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://usefathom.com/compliance",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://usefathom.com/features",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "GDPR confirmed from usefathom.com/compliance: explicitly stated GDPR, CCPA, PECR, ePrivacy, Schrems II compliant. HIPAA and SOC 2 not mentioned on any reachable Fathom page — set to null. No free tier exists; lowest plan is $15/month. No trial period found on pricing page."
+      }
     },
     {
       "slug": "simple-analytics",
@@ -534,7 +900,62 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://docs.simpleanalytics.com/compliance",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "API",
+          "Data export (CSV)",
+          "WordPress",
+          "Webflow",
+          "Google Tag Manager",
+          "SSO (Enterprise)"
+        ],
+        "limits": [
+          "No free forever plan; Starter begins at $19/mo (monthly) or $9/mo (annual)",
+          "Starter: 100K datapoints/month, 10 websites, 1 user (additional users +$20/mo each)",
+          "Business: 1M datapoints/month, 100 websites",
+          "SOC 2 compliance only at Enterprise tier",
+          "Raw-level data export only on Business and Enterprise"
+        ],
+        "keyFeatures": [
+          "Cookieless analytics — no consent banners required under GDPR/ePrivacy",
+          "No IP address collection, no fingerprinting, no cookies",
+          "HIPAA-friendly by design: vendor states no BAA needed as no PHI is received",
+          "EU-hosted infrastructure",
+          "Aggregated data export (Starter) and raw event export (Business+)",
+          "AI-powered insights (Explorer) for natural-language data queries",
+          "Public dashboard sharing and embeds",
+          "Google Analytics import"
+        ],
+        "bestFor": [
+          "Privacy-conscious businesses wanting the simplest possible GDPR-compliant setup",
+          "Healthcare-adjacent companies seeking HIPAA-friendly analytics without a BAA",
+          "Small teams and agencies needing cookieless tracking across multiple sites",
+          "Organizations requiring EU data residency"
+        ],
+        "sources": [
+          {
+            "url": "https://www.simpleanalytics.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://docs.simpleanalytics.com/compliance",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "GDPR confirmed from docs.simpleanalytics.com/compliance: no cookies, no IP addresses, no fingerprinting. HIPAA: vendor states no BAA is needed ('You only need a BAA when an associate receives PHI from you. This is not the case with Simple Analytics') — set to null as no formal BAA/HIPAA certification is offered. SOC 2 mentioned only as an Enterprise feature on pricing page but no certification confirmed by vendor trust page — set to null. No free tier exists."
+      }
     },
     {
       "slug": "pirsch",
@@ -601,7 +1022,71 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://pirsch.io/privacy",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "RESTful API",
+          "SDKs (Go, JS, Python)",
+          "WordPress plugin",
+          "Google Analytics import",
+          "Plausible import",
+          "Fathom import",
+          "Google Search Console",
+          "Native webhooks"
+        ],
+        "limits": [
+          "No free forever plan; Standard starts at $6/month (ex. VAT)",
+          "Standard: 10K pageviews/month, 50 websites",
+          "Plus: 10K pageviews/month entry, unlimited websites; A/B testing and funnels require Plus",
+          "White-labeling, custom domains, and teams only on Plus and above",
+          "On-premise / self-hosted deployment only on Enterprise",
+          "SAML SSO only on Enterprise"
+        ],
+        "keyFeatures": [
+          "Cookieless, hash-based visitor anonymization (IP irreversibly anonymized within 24 hours)",
+          "GDPR-compliant by design; hosted on German servers",
+          "Built-in URL shortener with UTM support",
+          "A/B testing and segmentation (Plus+)",
+          "Funnel analysis (Plus+)",
+          "E-commerce revenue tracking (Plus+)",
+          "Extensive white-labeling with custom domains and themes (Plus+)",
+          "On-premise / self-hosted option (Enterprise)",
+          "Data Processing Agreement available",
+          "Import from Google Analytics, Plausible, and Fathom"
+        ],
+        "bestFor": [
+          "Budget-conscious teams wanting GDPR-compliant cookieless analytics from $6/month",
+          "Agencies needing white-label analytics with custom branding (Plus+)",
+          "Developers wanting server-side tracking via REST API and multi-language SDKs",
+          "Enterprises needing on-premise deployment for data sovereignty"
+        ],
+        "sources": [
+          {
+            "url": "https://pirsch.io/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://pirsch.io/privacy",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://pirsch.io/features",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "GDPR confirmed from pirsch.io/privacy: German server hosting, DPA available, hash-based IP anonymization, 24-hour visitor window, Standard Contractual Clauses for third-country transfers. HIPAA and SOC 2 not mentioned on any reachable Pirsch page — set to null. No free tier; Standard plan starts at $6/month."
+      }
     }
   ]
 }

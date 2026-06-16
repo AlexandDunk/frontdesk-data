@@ -58,7 +58,62 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://www.backblaze.com/cloud-storage/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 15,
+        "keyIntegrations": [
+          "JAMF",
+          "Munki",
+          "MSI Installer",
+          "Google SSO",
+          "Microsoft SSO",
+          "Okta (Enterprise)",
+          "Azure AD (Enterprise)"
+        ],
+        "limits": [
+          "Web restore capped at 500 GB per request",
+          "Personal plan covers only 1 computer (external drives attached to that computer included)",
+          "Forever version history costs extra beyond the default 1-year retention",
+          "Enterprise tier pricing not published (quote-only)"
+        ],
+        "keyFeatures": [
+          "Unlimited cloud backup storage per computer",
+          "Continuous automated backup with no file-type or file-size restrictions",
+          "SOC 2 Type 2 certified (Backblaze and its data centers)",
+          "Data-center BAAs available for HIPAA-covered entities",
+          "AES-128 encryption with optional private key",
+          "Two-factor authentication (SMS and TOTP)",
+          "Web-based restore and free mailed hard-drive restore",
+          "Centralized admin dashboard (Business and Enterprise tiers)",
+          "OIDC SSO including Okta and Azure AD (Enterprise tier)"
+        ],
+        "bestFor": [
+          "Individuals and small teams needing simple unlimited computer backup at low cost",
+          "SMBs wanting centralized endpoint backup management without per-GB pricing",
+          "Organizations already using Backblaze B2 storage wanting a unified vendor"
+        ],
+        "sources": [
+          {
+            "url": "https://www.backblaze.com/cloud-backup/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.backblaze.com/cloud-storage/security",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Compliance facts from backblaze.com/cloud-storage/security (fetched 2026-06-15); SOC 2 Type 2 and data-center BAA for HIPAA stated explicitly. HIPAA set null for computer-backup product specifically (the SOC 2 and BAA pages reference B2 Cloud Storage; no equivalent explicit statement found for the computer-backup product line). Free trial confirmed from pricing page. Feature details from backblaze.com/cloud-backup/pricing."
+      }
     },
     {
       "slug": "idrive",
@@ -220,7 +275,73 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.idrive.com/compliance",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Microsoft Office 365",
+          "Google Workspace",
+          "Salesforce",
+          "Dropbox",
+          "Box",
+          "Synology NAS",
+          "QNAP NAS",
+          "SQL Server",
+          "Exchange Server",
+          "SharePoint",
+          "Oracle",
+          "VMware",
+          "Hyper-V"
+        ],
+        "limits": [
+          "File version retention: up to 30 previous versions (10 for accounts created before 2018-11-07)",
+          "Deleted file recovery window: 30 days",
+          "BAA available only on Business, Team, and Enterprise plans with private key encryption selected",
+          "Free tier (IDrive Basic): 10 GB, single account"
+        ],
+        "keyFeatures": [
+          "SOC 2 Type 2 certified by independent third-party auditor",
+          "HIPAA BAA available on request for Business/Team/Enterprise plans with private key encryption",
+          "GDPR-compliant data handling",
+          "256-bit AES encryption with user-defined private key (not stored on servers)",
+          "Backup for PCs, Macs, Linux, iOS, Android into a single account",
+          "Continuous Data Protection option",
+          "Snapshots and up to 30 file versions",
+          "NAS device backup (Synology, QNAP)",
+          "Server backup: SQL Server, Exchange, SharePoint, Oracle, VMware, Hyper-V",
+          "Cloud-to-cloud backup add-ons: M365, Google Workspace, Salesforce, Dropbox, Box"
+        ],
+        "bestFor": [
+          "SMBs and enterprises needing HIPAA-compliant backup with private key encryption",
+          "Organizations with heterogeneous environments (Windows, Mac, Linux, NAS, servers)",
+          "Teams wanting a single account to cover all endpoints and SaaS data"
+        ],
+        "sources": [
+          {
+            "url": "https://www.idrive.com/compliance",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.idrive.com/online-backup-features",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.idrive.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "HIPAA BAA, SOC 2 Type 2, and GDPR confirmed from idrive.com/compliance (fetched 2026-06-15): 'IDrive has proudly achieved SOC 2 Type 2 certification'; BAA 'available on request to IDrive Business, Team, and Enterprise users who opt for Private key encryption.' Free 10 GB tier confirmed from idrive.com/pricing. Integrations from idrive.com/online-backup-features and signup page."
+      }
     },
     {
       "slug": "carbonite",
@@ -277,7 +398,57 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": null,
+          "gdpr": null,
+          "source": {
+            "url": "https://www.carbonite.com/backup-software/buy-carbonite-safe/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 15,
+        "keyIntegrations": [
+          "Webroot SecureAnywhere AntiVirus (optional add-on)"
+        ],
+        "limits": [
+          "Base Safe plan covers 1 computer only",
+          "Safe Pro covers up to 25 computers",
+          "Server Backup covers 1+ servers plus up to 25 computers",
+          "External-drive backup optional (not included in base Safe plan by default)",
+          "Encryption is 128-bit on Safe and Safe Pro; 128 or 256-bit on Server Backup"
+        ],
+        "keyFeatures": [
+          "Automatic unlimited cloud backup for Windows and Mac computers",
+          "HIPAA/FERPA/GLBA support on Safe Pro and Server Backup tiers",
+          "Remote file access to backed-up computer from any device",
+          "Malware recovery: restore to pre-infected file version within two weeks of detection",
+          "Image backup and bare-metal restore (Server Backup tier)",
+          "Database and live-application backup (Server Backup tier)",
+          "Centralized management and admin console (Safe Pro and Server Backup)",
+          "15-day free trial available",
+          "30-day money-back guarantee"
+        ],
+        "bestFor": [
+          "Small businesses and regulated-industry users (healthcare, finance, education) needing HIPAA/FERPA/GLBA-supported backup",
+          "Non-technical users wanting simple set-and-forget unlimited backup for Windows or Mac",
+          "Organizations needing server and database backup alongside endpoint backup"
+        ],
+        "sources": [
+          {
+            "url": "https://www.carbonite.com/backup-software/buy-carbonite-safe/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.carbonite.com/backup-software/carbonite-safe/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "HIPAA support confirmed from buy page: 'FERPA, GLBA & HIPAA support' listed for Safe Pro and Server Backup. 15-day free trial confirmed from carbonite.com/backup-software/carbonite-safe/ ('15-day trial'). SOC 2 and GDPR not found on accessible Carbonite pages (carbonite.com now redirects legal pages to cybersecurity.opentext.com which returned no relevant compliance statements). Carbonite is now an OpenText/Webroot product."
+      }
     },
     {
       "slug": "crashplan",
@@ -337,7 +508,57 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.crashplan.com/why-crashplan/security/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Microsoft 365 (Exchange Online, SharePoint, OneDrive)",
+          "Google Workspace"
+        ],
+        "limits": [
+          "SMB self-serve plans capped at 249 employees (250+ requires enterprise quote)",
+          "Microsoft 365 plan includes 50 GB pooled storage per user; overage at $7.50/month per 250 GB",
+          "Deleted file retention: 90 days maximum on endpoint plans (configurable)",
+          "Consumer backup not offered (business-only product)"
+        ],
+        "keyFeatures": [
+          "HIPAA BAA available: 'CrashPlan has a Business Associate Agreement that we will enter into with any customer that has data regulated by HIPAA'",
+          "SOC 2 Type 2 certified",
+          "ISO/IEC 27001 certified",
+          "GDPR DPA with Standard Contractual Clauses (SCCs) for EU data transfers",
+          "Unlimited cloud storage and unlimited versioning for endpoint backup",
+          "Cross-platform: Windows, Mac, Linux",
+          "Full-text indexing for Microsoft 365 data (eDiscovery-ready)",
+          "14-day fully functional free trial",
+          "Self-service restore and device migration"
+        ],
+        "bestFor": [
+          "SMBs needing HIPAA-compliant endpoint backup with explicit BAA",
+          "Organizations on Microsoft 365 wanting integrated SaaS and endpoint backup from one vendor",
+          "Security-conscious businesses requiring SOC 2 Type 2 and ISO 27001 attestations"
+        ],
+        "sources": [
+          {
+            "url": "https://www.crashplan.com/why-crashplan/security/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://smb.crashplan.com/smb-pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "HIPAA BAA, SOC 2 Type 2, ISO 27001, and GDPR DPA confirmed from crashplan.com/why-crashplan/security/ (fetched 2026-06-15). 14-day free trial confirmed from smb.crashplan.com/smb-pricing/. Deleted file retention limit and Microsoft 365 storage overage from pricing page."
+      }
     },
     {
       "slug": "spideroak-one",
@@ -409,7 +630,50 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": null,
+          "gdpr": null,
+          "source": {
+            "url": "https://spideroak.one/hipaa",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [],
+        "limits": [
+          "Storage is fixed-quota per plan (150 GB / 400 GB / 2 TB / 5 TB); no unlimited option",
+          "No third-party integrations documented"
+        ],
+        "keyFeatures": [
+          "100% client-side, zero-knowledge encryption: SpiderOak cannot read files, metadata, or passwords",
+          "HIPAA-compliant as a Business Associate; BAA available on request via compliance@spideroak.com",
+          "End-to-end encrypted backup and sync across unlimited devices",
+          "Point-in-time recovery for ransomware rollback",
+          "Secure Share Rooms for controlled file sharing",
+          "Cross-platform: Windows, Mac, Linux",
+          "Block-level deduplication to minimize bandwidth"
+        ],
+        "bestFor": [
+          "Privacy-first users and organizations requiring provable zero-knowledge encryption",
+          "Healthcare organizations needing HIPAA BAA with client-side encryption guarantees",
+          "Security-sensitive teams (legal, finance, government) where vendor data access must be technically impossible"
+        ],
+        "sources": [
+          {
+            "url": "https://spideroak.one/hipaa",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://spideroak.one/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "HIPAA compliance confirmed from spideroak.one/hipaa (fetched 2026-06-15): 'SpiderOakONE and SpiderOak Groups are HIPAA-compliant as a Business Associate.' BAA available via compliance@spideroak.com. SOC 2 and GDPR not mentioned on accessed pages. No free tier or free trial stated on product or pricing pages."
+      }
     },
     {
       "slug": "pcloud",
@@ -474,7 +738,58 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.pcloud.com/gdpr.html",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": null,
+        "freeTrialDays": null,
+        "keyIntegrations": [],
+        "limits": [
+          "Storage capped per plan tier (500 GB / 2 TB / 10 TB); no unlimited option",
+          "File version history limited to 30 days on standard plans",
+          "No native backup integrations for servers or business SaaS apps",
+          "Lifetime plans are one-time purchase, no subscription flexibility"
+        ],
+        "keyFeatures": [
+          "GDPR-compliant with client-side encryption option (pCloud Crypto / Crypto folder)",
+          "Zero-knowledge encryption available as add-on (pCloud Encryption)",
+          "Choice of data residency: US or EU data centers",
+          "AES-256 encryption at rest, TLS/SSL in transit",
+          "Automatic photo and video backup from mobile devices",
+          "File sharing with password protection and expiration dates",
+          "Lifetime (one-time purchase) plan option alongside subscription",
+          "30-day file version history and trash recovery on standard plans",
+          "99.98% uptime, 22M+ users across 130+ countries"
+        ],
+        "bestFor": [
+          "Individuals and families wanting low-cost personal cloud storage with EU or US data residency choice",
+          "Users seeking a one-time lifetime purchase to avoid recurring fees",
+          "Privacy-conscious users wanting optional zero-knowledge client-side encryption"
+        ],
+        "sources": [
+          {
+            "url": "https://www.pcloud.com/gdpr.html",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.pcloud.com/cloud-storage-pricing-plans.html",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.pcloud.com/security.html",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "GDPR compliance confirmed from pcloud.com/gdpr.html: page confirms GDPR framework, client-side encryption, AES-256/TLS, and EU/US data region choice. HIPAA BAA not mentioned on any accessed pCloud page. SOC 2 not mentioned. Free tier: no $0 forever plan listed on the pricing page (lowest paid tier is Premium 500 GB); freeTier set to null as the sign-up flow mentions 'no credit card required' but no explicit free storage tier with a defined quota was found on accessible product/pricing pages. Catalog plans cross-checked: no $0 plan present."
+      }
     },
     {
       "slug": "acronis-true-image",
@@ -543,7 +858,49 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [],
+        "limits": [
+          "Essentials plan: no cloud storage included (local backup only)",
+          "Advanced plan: 500 GB cloud storage per 1-device license (scales with device count)",
+          "Premium plan: 1 TB cloud storage per 1-device license; up to 10 TB on 5-device license",
+          "Licensed per device count (1, 3, or 5 computers per subscription)"
+        ],
+        "keyFeatures": [
+          "Full-image disk backup and bare-metal restore (disk cloning)",
+          "AI-based anti-malware and ransomware protection (Advanced and Premium tiers)",
+          "Integrated cloud backup storage included in Advanced and Premium plans",
+          "Blockchain-based file notarization and electronic signing (Premium tier)",
+          "Dual protection: simultaneous local and cloud backup",
+          "VPN included in Advanced and Premium tiers",
+          "Windows and macOS support"
+        ],
+        "bestFor": [
+          "Home users and prosumers needing full-disk image backup plus cloud storage in one product",
+          "Users wanting ransomware protection bundled with backup rather than separate tools",
+          "Anyone requiring disk cloning for system migration or bare-metal recovery"
+        ],
+        "sources": [
+          {
+            "url": "https://www.acronis.com/en-us/products/true-image/buy/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.stackscored.com/pricing/backup-tools/acronis-true-image/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "acronis.com returned HTTP 403 on all accessed pages (buy, compliance, support/security, products/true-image, gdpr, products/personal) on 2026-06-15; compliance fields set to null as vendor-stated facts could not be confirmed from official pages. Feature details derived from plan notes corroborated via stackscored.com. No free tier present in catalog plans; freeTrialDays set to null as no trial was confirmable from accessible pages."
+      }
     },
     {
       "slug": "jottacloud",
@@ -627,7 +984,58 @@
             "accessedAt": "2026-06-13"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.jottacloud.com/en/privacy.html",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [],
+        "limits": [
+          "Free plan capped at 5 GB for 1 user",
+          "Personal Unlimited plan: upload speed gradually reduced after 5 TB uploaded",
+          "File version history: last 5 versions of all files",
+          "No documented third-party integrations (backup is native client-based)"
+        ],
+        "keyFeatures": [
+          "Data stored exclusively in Norway, protected by Norwegian and European privacy laws (GDPR)",
+          "Data centers powered by 100% renewable energy (Norwegian hydropower, seawater cooling)",
+          "Automatic device backup for computers and mobile devices",
+          "File version history (last 5 versions retained)",
+          "AI-powered photo search",
+          "Original-quality photo and video storage (no compression)",
+          "Secure file sharing",
+          "5 GB free tier with no time limit",
+          "Home plans support up to 5 users with shared storage pool"
+        ],
+        "bestFor": [
+          "European users and privacy-conscious individuals wanting data stored under Norwegian/EU law",
+          "Families or small households needing a shared storage pool at low cost",
+          "Users prioritizing sustainability: Norwegian renewable energy-powered data centers"
+        ],
+        "sources": [
+          {
+            "url": "https://www.jottacloud.com/en/pricing.html",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.jottacloud.com/en/privacy.html",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.jottacloud.com/en/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "GDPR compliance confirmed from jottacloud.com/en/privacy.html: rights of access, correction, deletion stated; Norwegian Data Inspectorate referenced as supervisory authority. Data residency in Norway confirmed from homepage: 'Stored in Norway, and protected by European privacy laws.' Free 5 GB tier confirmed from jottacloud.com/en/pricing.html and homepage. HIPAA and SOC 2 not mentioned on any accessed Jottacloud page."
+      }
     }
   ]
 }
