@@ -10,7 +10,7 @@
   },
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "url": "https://frontdeskreview.com/data/",
-  "dateModified": "2026-06-14",
+  "dateModified": "2026-06-15",
   "measurementTechnique": "Per-record provenance: each price/fact carries source.url + accessedAt; a second corroborating source where available; quote-only/enterprise tiers recorded as null rather than estimated.",
   "distribution": [
     {
@@ -30,6 +30,12 @@
       "name": "vendors.jsonl",
       "encodingFormat": "application/x-ndjson",
       "contentUrl": "vendors.jsonl"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "all-products.jsonl",
+      "encodingFormat": "application/x-ndjson",
+      "contentUrl": "all-products.jsonl"
     }
   ],
   "variableMeasured": [
@@ -1393,6 +1399,216 @@
       "planCount": 30,
       "enrichedVendors": 9,
       "json": "themes/workflow-automation.json"
+    }
+  ],
+  "productCategoryCount": 11,
+  "totalProducts": 139,
+  "productCategories": [
+    {
+      "slug": "computer-monitors",
+      "category": "computer-monitors",
+      "productCount": 13,
+      "pricedCount": 13,
+      "specKeys": [
+        "size_in",
+        "resolution",
+        "panel_type",
+        "refresh_hz",
+        "response_ms",
+        "hdr",
+        "ports",
+        "adaptive_sync",
+        "release"
+      ],
+      "json": "products/computer-monitors.json"
+    },
+    {
+      "slug": "cpus",
+      "category": "cpus",
+      "productCount": 12,
+      "pricedCount": 12,
+      "specKeys": [
+        "cores",
+        "threads",
+        "base_clock_ghz",
+        "boost_clock_ghz",
+        "l3_cache_mb",
+        "tdp_w",
+        "socket",
+        "igpu",
+        "release"
+      ],
+      "json": "products/cpus.json"
+    },
+    {
+      "slug": "game-consoles",
+      "category": "game-consoles",
+      "productCount": 13,
+      "pricedCount": 13,
+      "specKeys": [
+        "cpu",
+        "gpu_tflops",
+        "ram_gb",
+        "storage_gb",
+        "max_resolution",
+        "max_fps",
+        "optical_drive",
+        "release"
+      ],
+      "json": "products/game-consoles.json"
+    },
+    {
+      "slug": "graphics-cards",
+      "category": "graphics-cards",
+      "productCount": 11,
+      "pricedCount": 11,
+      "specKeys": [
+        "gpu_chip",
+        "vram_gb",
+        "vram_type",
+        "boost_clock_mhz",
+        "cuda_or_stream_cores",
+        "tdp_w",
+        "pcie",
+        "slot_width",
+        "release"
+      ],
+      "json": "products/graphics-cards.json"
+    },
+    {
+      "slug": "laptops",
+      "category": "laptops",
+      "productCount": 13,
+      "pricedCount": 13,
+      "specKeys": [
+        "display_in",
+        "resolution",
+        "cpu",
+        "gpu",
+        "ram_gb",
+        "storage_gb",
+        "weight_kg",
+        "battery_wh",
+        "os",
+        "ports",
+        "release"
+      ],
+      "json": "products/laptops.json"
+    },
+    {
+      "slug": "over-ear-headphones",
+      "category": "over-ear-headphones",
+      "productCount": 12,
+      "pricedCount": 6,
+      "specKeys": [
+        "anc",
+        "driver_mm",
+        "battery_hr",
+        "bluetooth",
+        "codecs",
+        "wired_option",
+        "weight_g",
+        "release"
+      ],
+      "json": "products/over-ear-headphones.json"
+    },
+    {
+      "slug": "smartphones",
+      "category": "smartphones",
+      "productCount": 15,
+      "pricedCount": 12,
+      "specKeys": [
+        "display_in",
+        "display_type",
+        "refresh_hz",
+        "chipset",
+        "ram_gb",
+        "storage_gb",
+        "main_camera_mp",
+        "battery_mah",
+        "charge_w",
+        "weight_g",
+        "os",
+        "ip_rating",
+        "fiveg"
+      ],
+      "json": "products/smartphones.json"
+    },
+    {
+      "slug": "smartwatches",
+      "category": "smartwatches",
+      "productCount": 12,
+      "pricedCount": 12,
+      "specKeys": [
+        "case_size_mm",
+        "display_type",
+        "battery_hr",
+        "gps",
+        "lte_option",
+        "water_resistance_m",
+        "os",
+        "ecg",
+        "weight_g",
+        "release"
+      ],
+      "json": "products/smartwatches.json"
+    },
+    {
+      "slug": "tablets",
+      "category": "tablets",
+      "productCount": 13,
+      "pricedCount": 13,
+      "specKeys": [
+        "display_in",
+        "display_type",
+        "refresh_hz",
+        "chipset",
+        "ram_gb",
+        "storage_gb",
+        "battery_mah",
+        "weight_g",
+        "os",
+        "stylus_support",
+        "cellular",
+        "release"
+      ],
+      "json": "products/tablets.json"
+    },
+    {
+      "slug": "tvs",
+      "category": "tvs",
+      "productCount": 13,
+      "pricedCount": 8,
+      "specKeys": [
+        "screen_in",
+        "panel_type",
+        "resolution",
+        "refresh_hz",
+        "hdr_formats",
+        "hdmi_2_1_ports",
+        "smart_os",
+        "release"
+      ],
+      "json": "products/tvs.json"
+    },
+    {
+      "slug": "wireless-earbuds",
+      "category": "wireless-earbuds",
+      "productCount": 12,
+      "pricedCount": 12,
+      "specKeys": [
+        "anc",
+        "driver_mm",
+        "battery_buds_hr",
+        "battery_case_hr",
+        "bluetooth",
+        "ip_rating",
+        "wireless_charging",
+        "codecs",
+        "weight_per_bud_g",
+        "release"
+      ],
+      "json": "products/wireless-earbuds.json"
     }
   ]
 }
