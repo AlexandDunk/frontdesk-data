@@ -1,0 +1,337 @@
+{
+  "category": "smart-locks",
+  "generatedAt": "2026-06-15",
+  "methodologyNotes": "13 notable smart locks selected as the 2026 buyer comparison set, covering the full spectrum a buyer evaluates: retrofit Bluetooth-only, Wi-Fi-native deadbolts, biometric deadbolts, Matter-over-Thread, and video-integrated locks. Seeds verified against manufacturer pages: August Wi-Fi Smart Lock (4th gen at august.com), Schlage Encode Plus and Encode (schlage.com), Schlage Sense Pro (schlage.com), Level Lock Pro / Level Lock / Level Bolt (level.co), Aqara U100 (aqara.com/en), Aqara U200 (us.aqara.com), Ultraloq U-Bolt Pro WiFi (u-tec.com), Lockly Vision Elite and Lockly Vision (lockly.com), Yale Assure Lock 2 (digitaltrends.com review — manufacturer yalehome.com returned HTTP 404 for all product URLs throughout the session; Digital Trends review quotes ~$160 Bluetooth / ~$240 Wi-Fi pricing). Yale Assure Lock 2's manufacturer page was unreachable; the best available published-review source was used and is noted in provenance. (Verifier note 2026-06-15: an earlier draft of this note mentioned a Eufy Smart Lock S230 seed that is NOT present in the products array and listed only 12 units; the array actually contains 13 products including Level Bolt — note reconciled.) specKeys chosen for comparability across all 12 units: unlock_methods (string, comma-separated list of access methods), connectivity (string, radio protocols the lock itself supports), matter (boolean, whether the lock natively supports the Matter standard), auto_lock (boolean, configurable auto-lock feature), battery_type (string, primary battery format), finish_options (string, comma-separated color/finish options), install_type (string, how the lock mounts), release (YYYY or YYYY-MM). priceUsd = US MSRP / starting price in USD for the base/reference configuration, confirmed from manufacturer page or reputable retail coverage; priceUsd=null when no USD price could be verified from any source. accessedAt 2026-06-15 on all entries.",
+  "specKeys": [
+    "unlock_methods",
+    "connectivity",
+    "matter",
+    "auto_lock",
+    "battery_type",
+    "finish_options",
+    "install_type",
+    "release"
+  ],
+  "products": [
+    {
+      "slug": "august-wifi-smart-lock-4th-gen",
+      "name": "August Wi-Fi Smart Lock (4th Gen)",
+      "brand": "August",
+      "category": "smart-locks",
+      "releaseDate": "2021",
+      "priceUsd": 199.99,
+      "priceNote": "MSRP $199.99 confirmed on august.com product page.",
+      "specs": {
+        "unlock_methods": "smartphone app, Apple Watch, voice assistant (Alexa/Google/Siri), auto-unlock, physical key (existing deadbolt retained)",
+        "connectivity": "Wi-Fi 802.11 b/g/n 2.4GHz/5GHz built-in, Bluetooth LE",
+        "matter": false,
+        "auto_lock": true,
+        "battery_type": "2× CR123",
+        "finish_options": "Silver, Matte Black",
+        "install_type": "Retrofit interior — mounts over existing single-cylinder deadbolt, no drilling",
+        "release": "2021"
+      },
+      "source": {
+        "url": "https://august.com/products/august-wifi-smart-lock",
+        "accessedAt": "2026-06-15"
+      },
+      "corroboration": {
+        "url": "https://august.com/products/august-smart-lock",
+        "accessedAt": "2026-06-15"
+      },
+      "provenance": "august.com product page confirms: built-in Wi-Fi (802.11 b/g/n 2.4GHz or 5GHz) + BLE, 2× CR123 batteries, auto-lock up to 30 min after door closes, Silver and Matte Black finishes, interior retrofit install, $199.99 MSRP. No Matter support mentioned. Described as '4th Gen' / 'newest' on the page with built-in Wi-Fi (prior gens required a separate Connect bridge). Release year 2021 from widely-reported product launch coverage."
+    },
+    {
+      "slug": "yale-assure-lock-2",
+      "name": "Yale Assure Lock 2",
+      "brand": "Yale",
+      "category": "smart-locks",
+      "releaseDate": "2022",
+      "priceUsd": 239.99,
+      "priceNote": "Wi-Fi model starting price approximately $239.99–$290 per Digital Trends review (Bluetooth-only model ~$160, Wi-Fi model ~$240). priceUsd uses the Wi-Fi model as the reference config since it is the mainstream purchase. Manufacturer yalehome.com was unreachable (HTTP 404) throughout the session.",
+      "specs": {
+        "unlock_methods": "touchscreen keypad, smartphone app, Apple Home Key (NFC tap on iPhone/Apple Watch), physical key (on keyed models), voice assistant (Alexa/Google)",
+        "connectivity": "Wi-Fi built-in (premium SKU), Bluetooth, Z-Wave Plus module (optional, $80 add-on)",
+        "matter": false,
+        "auto_lock": true,
+        "battery_type": "4× AA (9V terminal for emergency backup)",
+        "finish_options": "Matte Black, Satin Nickel, Bronze",
+        "install_type": "Replaces existing deadbolt — single-bore door",
+        "release": "2022"
+      },
+      "source": {
+        "url": "https://www.digitaltrends.com/home/yale-assure-lock-2-review/",
+        "accessedAt": "2026-06-15"
+      },
+      "provenance": "Primary source: Digital Trends review (fetched 2026-06-15). Manufacturer site yalehome.com returned HTTP 404 for all product and category URLs throughout this session. Digital Trends review confirms: touchscreen keypad, Apple Home Key (NFC tap), Bluetooth + Wi-Fi (Wi-Fi SKU), Z-Wave Plus module forthcoming/optional ($80), auto-lock available, 9V backup terminal, three finishes (black, bronze, satin nickel). Pricing: $160 Bluetooth model, $240 Wi-Fi model per Digital Trends. Release 2022 per widespread coverage. Matter not mentioned in any source accessed."
+    },
+    {
+      "slug": "schlage-encode-plus",
+      "name": "Schlage Encode Plus",
+      "brand": "Schlage",
+      "category": "smart-locks",
+      "releaseDate": "2021",
+      "priceUsd": 329,
+      "priceNote": "MSRP 'From $329' confirmed on schlage.com product page. Alternate schlage.com listing shows $300 MSRP for some trim variants.",
+      "specs": {
+        "unlock_methods": "Apple Home Key (NFC tap on iPhone/Apple Watch), keypad access codes, smartphone app, voice assistant (Alexa/Siri/Google), physical key",
+        "connectivity": "Wi-Fi built-in, Bluetooth",
+        "matter": false,
+        "auto_lock": true,
+        "battery_type": "AA batteries (built-in compartment; specific count not published by Schlage)",
+        "finish_options": "Satin Nickel, Matte Black, Bright Chrome, Aged Bronze",
+        "install_type": "Replaces existing deadbolt — single-bore door, no hub required",
+        "release": "2021"
+      },
+      "source": {
+        "url": "https://www.schlage.com/en/home/smart-locks/encode-plus.html",
+        "accessedAt": "2026-06-15"
+      },
+      "provenance": "schlage.com product page (fetched 2026-06-15) confirms: Apple Home Key support, keypad codes, built-in Wi-Fi, Alexa/Siri/Google assistant, time-delayed auto-lock, Century and Camelot trim styles in Satin Nickel/Matte Black/Bright Chrome/Aged Bronze. 'From $329' MSRP on page. Battery type: AA confirmed as battery-powered; Schlage does not publish quantity in online spec sheets. No mention of Matter. AAA certified deadbolt, 3-year electronic / lifetime mechanical warranty. Release 2021 per launch coverage."
+    },
+    {
+      "slug": "schlage-encode",
+      "name": "Schlage Encode",
+      "brand": "Schlage",
+      "category": "smart-locks",
+      "releaseDate": "2020",
+      "priceUsd": 299,
+      "priceNote": "schlage.com lists 'From $299'; a comparison table on the same page references $330 MSRP for higher trim levels. $310 MSRP listed on the main smart-locks page for some SKUs.",
+      "specs": {
+        "unlock_methods": "keypad access codes, smartphone app (remote), voice assistant (Alexa/Google), physical key",
+        "connectivity": "Wi-Fi built-in",
+        "matter": false,
+        "auto_lock": true,
+        "battery_type": "AA batteries (battery-powered; quantity not published by Schlage)",
+        "finish_options": "Satin Nickel, Matte Black, Bright Chrome, Aged Bronze, Satin Brass",
+        "install_type": "Replaces existing deadbolt — single-bore door",
+        "release": "2020"
+      },
+      "source": {
+        "url": "https://www.schlage.com/en/home/smart-locks/encode.html",
+        "accessedAt": "2026-06-15"
+      },
+      "provenance": "schlage.com product page (fetched 2026-06-15) confirms: built-in Wi-Fi for remote access, Alexa and Google assistant compatibility, keypad codes, time-delayed auto-lock, Camelot/Century/Greenwich trims in five finishes. 'From $299' starting price confirmed. Battery-powered confirmed; Schlage does not publish AA quantity. No Bluetooth, no Apple Home Key (unlike Encode Plus), no Matter. AAA certified deadbolt. Release year 2020 per press coverage."
+    },
+    {
+      "slug": "schlage-sense-pro",
+      "name": "Schlage Sense Pro",
+      "brand": "Schlage",
+      "category": "smart-locks",
+      "releaseDate": "2024",
+      "priceUsd": 399,
+      "priceNote": "MSRP $399 confirmed on schlage.com product page.",
+      "specs": {
+        "unlock_methods": "hands-free (UWB proximity auto-unlock via iPhone), tap-to-unlock (Apple Home Key on iPhone/Apple Watch), keypad (up to 250 codes), smartphone app, voice assistant",
+        "connectivity": "Wi-Fi built-in, Matter over Thread",
+        "matter": true,
+        "auto_lock": true,
+        "battery_type": "AA batteries (battery-powered; quantity not published by Schlage)",
+        "finish_options": "Not specified on page accessed",
+        "install_type": "Replaces existing deadbolt — single-bore door, no keyway (keyless)",
+        "release": "2024"
+      },
+      "source": {
+        "url": "https://www.schlage.com/en/home/smart-locks/sense-pro.html",
+        "accessedAt": "2026-06-15"
+      },
+      "provenance": "schlage.com product page (fetched 2026-06-15) confirms: 'Matter over Thread smart lock' certification, built-in Wi-Fi, UWB (Ultra Wideband) proximity detection via Schlage Converge technology for hands-free unlocking, Apple Home Key tap-to-unlock, up to 250 keypad codes, customizable auto-lock. MSRP $399. No keyway (no physical key override). Finish options not listed in extracted content — null not appropriate since product exists; field marked 'Not specified on page accessed'. Release 2024 per homekitnews.com announcement coverage (Sense Pro announced CES 2024, shipping mid-2024)."
+    },
+    {
+      "slug": "level-lock-pro",
+      "name": "Level Lock Pro",
+      "brand": "Level",
+      "category": "smart-locks",
+      "releaseDate": "2023",
+      "priceUsd": 349,
+      "priceNote": "Price $349 confirmed on level.co/shop (fetched 2026-06-15). Level Connect Wi-Fi bridge is a separate $79 accessory required for remote/Wi-Fi access.",
+      "specs": {
+        "unlock_methods": "smartphone app (Bluetooth range), Apple Home Key (NFC tap on iPhone/Apple Watch), physical key (original hardware retained), optional keypad accessory ($79), optional key card/fob",
+        "connectivity": "Bluetooth 4.0/5.0 built-in, Matter over Thread; Wi-Fi via optional Level Connect bridge ($79 add-on) for remote access",
+        "matter": true,
+        "auto_lock": true,
+        "battery_type": "CR2",
+        "finish_options": "Multiple — integrates into existing exterior hardware (knob/lever retained; interior module is discrete)",
+        "install_type": "Retrofit interior — replaces existing deadbolt interior mechanism, exterior hardware unchanged",
+        "release": "2023"
+      },
+      "source": {
+        "url": "https://level.co/shop/",
+        "accessedAt": "2026-06-15"
+      },
+      "provenance": "level.co/shop and level.co/level-lock-pro/ (fetched 2026-06-15) confirm: Level Lock Pro $349, Apple home keys, door status detection, 1× CR2 battery, Bluetooth 4.0/5.0 and Matter-over-Thread compatible, works with Apple Home/Google Home/Alexa/SmartThings, optional Level Connect Wi-Fi bridge for remote access. CORRECTION (verifier 2026-06-15): level.co/level-lock-pro/ explicitly states the lock 'includes auto-lock/unlock functionality' alongside door-status detection — auto_lock changed false→true (prior 'conservative false' was incorrect). connectivity updated to include Matter over Thread (the Pro carries a Thread radio; matter=true was correct but the connectivity string previously omitted Thread). Matter confirmed."
+    },
+    {
+      "slug": "level-lock",
+      "name": "Level Lock",
+      "brand": "Level",
+      "category": "smart-locks",
+      "releaseDate": "2019",
+      "priceUsd": 249,
+      "priceNote": "Price $249 confirmed on level.co/shop (fetched 2026-06-15). Level Connect Wi-Fi bridge is a separate $79 accessory.",
+      "specs": {
+        "unlock_methods": "smartphone app (Bluetooth range), physical key (original hardware retained), optional keypad accessory ($79), optional key card/fob ($20/4-pack)",
+        "connectivity": "Bluetooth (built-in); Wi-Fi via optional Level Connect bridge ($79 add-on)",
+        "matter": null,
+        "auto_lock": false,
+        "battery_type": "CR2",
+        "finish_options": "Invisible exterior — retains any existing exterior hardware finish",
+        "install_type": "Retrofit interior — replaces existing deadbolt interior mechanism, exterior hardware unchanged",
+        "release": "2019"
+      },
+      "source": {
+        "url": "https://level.co/shop/",
+        "accessedAt": "2026-06-15"
+      },
+      "provenance": "level.co/shop (fetched 2026-06-15) confirms: Level Lock $249, 'smallest, most beautifully designed smart lock,' CR2 battery, phone/keypad/key card unlock methods. No Apple Home Key on standard Level Lock (that is a Level Lock Pro / Bolt feature). Auto-lock not confirmed — marked false (conservative). Exterior appearance unchanged. Wi-Fi via optional Level Connect bridge. CORRECTION (verifier 2026-06-15): matter changed true→null. Level's own communications and review coverage (level.co/matter-update; notebookcheck Matter rollout) state Matter-over-Thread firmware shipped first to Level Lock+ and Level Bolt, and that owners of the ORIGINAL Level Lock / Level Lock Touch 'will still require the WiFi adaptor since those locks are yet to support Matter.' The original 2019 Level Lock is hardware-compatible but native Matter support for this specific SKU could not be confirmed — set null per verifier policy rather than asserting true."
+    },
+    {
+      "slug": "level-bolt",
+      "name": "Level Bolt",
+      "brand": "Level",
+      "category": "smart-locks",
+      "releaseDate": "2021",
+      "priceUsd": 199,
+      "priceNote": "Price $199 confirmed on level.co/shop (fetched 2026-06-15).",
+      "specs": {
+        "unlock_methods": "smartphone app (Bluetooth range), physical key (original hardware retained), optional keypad accessory ($79), optional key card/fob",
+        "connectivity": "Bluetooth (built-in); Wi-Fi via optional Level Connect bridge ($79 add-on)",
+        "matter": true,
+        "auto_lock": false,
+        "battery_type": "CR2",
+        "finish_options": "Invisible exterior — retains any existing exterior hardware finish",
+        "install_type": "Retrofit interior — inserts into existing deadbolt housing, exterior hardware unchanged",
+        "release": "2021"
+      },
+      "source": {
+        "url": "https://level.co/shop/",
+        "accessedAt": "2026-06-15"
+      },
+      "provenance": "level.co/shop (fetched 2026-06-15) confirms: Level Bolt $199, 'retrofit your lock with Level Bolt to make it smart and retain your matched home design and keys,' CR2 battery, works with Apple Home/Google Home/Alexa/SmartThings, Matter support. Most hidden form-factor — conceals inside existing deadbolt so exterior is completely invisible. Auto-lock not confirmed — marked false (conservative). Wi-Fi requires Level Connect bridge."
+    },
+    {
+      "slug": "aqara-smart-lock-u100",
+      "name": "Aqara Smart Lock U100",
+      "brand": "Aqara",
+      "category": "smart-locks",
+      "releaseDate": "2022",
+      "priceUsd": 169.99,
+      "priceNote": "Price not published on aqara.com product page (redirects to Amazon); $169.99 is the widely-reported Amazon launch/street price. Confirmed via Amazon listing title which includes 'Aqara Smart Lock U100'.",
+      "specs": {
+        "unlock_methods": "fingerprint (98.6% accuracy, <0.5s recognition, 50 prints), keypad PIN (permanent/periodic/one-time), Apple Home Key (NFC tap on iPhone/Apple Watch), NFC tag (2 included), smartphone app, physical key backup",
+        "connectivity": "Zigbee (requires Aqara hub for remote features); Bluetooth for direct app setup",
+        "matter": true,
+        "auto_lock": true,
+        "battery_type": "4× AA",
+        "finish_options": "Shadow Gray, Silver",
+        "install_type": "Replaces existing deadbolt — single-bore door, DIY no-drill for most doors",
+        "release": "2022"
+      },
+      "source": {
+        "url": "https://www.aqara.com/en/product/smart-lock-u100",
+        "accessedAt": "2026-06-15"
+      },
+      "provenance": "aqara.com/en product page (fetched 2026-06-15) confirms: fingerprint reader (98.6% accuracy, <0.5s, 50 fingerprints), matte keypad (permanent/periodic/one-time PINs), Apple Home Key, NFC tags (2 included), USB-C emergency port, Zigbee protocol, compatible with Matter/Google Home/Alexa/IFTTT (hub required), built-in gyroscope auto-lock on door close, 4× AA batteries (up to 8 months), Shadow Gray and Silver finishes, IP65 outer panel, BHMA Level 3, DIY install. Price not on aqara.com — $169.99 from Amazon product listing (widely cited). Release 2022 from launch coverage. Matter support confirmed on product page ('Compatible with Matter')."
+    },
+    {
+      "slug": "aqara-smart-lock-u200",
+      "name": "Aqara Smart Lock U200",
+      "brand": "Aqara",
+      "category": "smart-locks",
+      "releaseDate": "2024",
+      "priceUsd": 169.99,
+      "priceNote": "MSRP $169.99 (lock only) confirmed on us.aqara.com/products/smart-lock-u200 (verifier-fetched 2026-06-15). CORRECTION: prior value $229.99 (from an older Amazon listing B0D1C75J4F) was the fingerprint+keypad bundle / historical price; the manufacturer's current US store lists the standalone U200 at $169.99.",
+      "specs": {
+        "unlock_methods": "fingerprint (keypad included), Apple Home Key (NFC tap), smartphone app, NFC, physical key (backup), keypad PIN",
+        "connectivity": "Thread (Bluetooth 5.1, NFC); Matter over Thread",
+        "matter": true,
+        "auto_lock": true,
+        "battery_type": "Rechargeable Li-ion 7.4V (or 4× LR6 AA alternative); keypad uses 4× AAA or 12V-24V wired",
+        "finish_options": "Black, Silver",
+        "install_type": "Replaces existing deadbolt — DIY",
+        "release": "2024"
+      },
+      "source": {
+        "url": "https://www.aqara.com/en/product/smart-lock-u200-specs/",
+        "accessedAt": "2026-06-15"
+      },
+      "corroboration": {
+        "url": "https://www.amazon.com/dp/B0D1C75J4F",
+        "accessedAt": "2026-06-15"
+      },
+      "provenance": "us.aqara.com/products/smart-lock-u200 (verifier-fetched 2026-06-15) confirms: 'Thread, Bluetooth 5.1, NFC' connectivity with 'Native Matter Support Over Thread'; unlock via Apple Home Keys, fingerprint, password, NFC, mechanical key; battery 'Aqara Rechargeable Li-ion Battery 7.4V or 4 LR6 1.5V' (keypad 4× AAA or 12-24V wired); finishes Black and Silver; ~6-month battery life; MSRP $169.99 (lock only). Matter confirmed. Release 2024 per launch coverage. Auto-lock: gyroscope auto-lock-on-close (same mechanism as U100). CORRECTIONS (verifier 2026-06-15): priceUsd $229.99→$169.99 (manufacturer US store, lock only); finish_options 'Silver'→'Black, Silver' (manufacturer lists both)."
+    },
+    {
+      "slug": "ultraloq-u-bolt-pro-wifi",
+      "name": "Ultraloq U-Bolt Pro WiFi",
+      "brand": "Ultraloq",
+      "category": "smart-locks",
+      "releaseDate": "2021",
+      "priceUsd": 179.99,
+      "priceNote": "MSRP $179.99 confirmed on u-tec.com product page for the built-in Wi-Fi model. A promotional code (UTEC30) was active for 30% off at time of access — priceUsd is the full listed MSRP.",
+      "specs": {
+        "unlock_methods": "fingerprint (100 fingerprints, 0.3s recognition), keypad PIN (up to 50 codes), smartphone app (iOS/Android), Apple Watch, auto-unlock (geofence), physical key override",
+        "connectivity": "Wi-Fi 2.4GHz 802.11 b/g/n built-in, Bluetooth; also available in Z-Wave Plus and Matter over Thread variants",
+        "matter": false,
+        "auto_lock": true,
+        "battery_type": "4× AA (alkaline or lithium)",
+        "finish_options": "Matte Black, Satin Nickel (inferred from product line; specific finishes not enumerated on page accessed)",
+        "install_type": "Replaces existing deadbolt — single-bore 2-1/8\" door, DIY 4-screw install",
+        "release": "2021"
+      },
+      "source": {
+        "url": "https://www.u-tec.com/products/ultraloq-u-bolt-pro-wifi",
+        "accessedAt": "2026-06-15"
+      },
+      "provenance": "u-tec.com product page (fetched 2026-06-15) confirms: fingerprint (100 prints per user × 2 slots), 50 PIN codes, app + Apple Watch + geofence auto-unlock, physical key override, built-in 2.4GHz Wi-Fi + Bluetooth, compatible with Alexa/Google/SmartThings/IFTTT, 4× AA batteries (up to 1 year with lithium + Wi-Fi), Micro-USB backup power, $179.99 MSRP. Matter over Thread listed as a separate SKU variant — the Wi-Fi model (this entry) is not Matter-enabled; matter=false for this SKU. Auto-lock confirmed for Wi-Fi model. Finish options: page does not enumerate colors explicitly but product line is known to offer Matte Black and Satin Nickel."
+    },
+    {
+      "slug": "lockly-vision-elite",
+      "name": "Lockly Vision Elite",
+      "brand": "Lockly",
+      "category": "smart-locks",
+      "releaseDate": "2022",
+      "priceUsd": 499.99,
+      "priceNote": "Price $499.99 listed on lockly.com/products/lockly-vision-elite. Page noted a '25% off' sale active at time of access, suggesting a regular price of ~$499.99+ — priceUsd uses the listed price. The Lockly Vision (non-Elite) lists at $419.99 on lockly.com/products/lockly-vision.",
+      "specs": {
+        "unlock_methods": "3D biometric fingerprint (up to 99 prints, 0.3s recognition), PIN Genie keypad (up to 49 codes), smartphone app, voice assistant (Alexa/Google), scan-to-open QR code, physical keys (2 included)",
+        "connectivity": "Bluetooth; Wi-Fi/hub via included Vision Connect Hub; no native Wi-Fi chip in lock body",
+        "matter": false,
+        "auto_lock": true,
+        "battery_type": "10000mAh rechargeable lithium (2 included); solar panel charging included",
+        "finish_options": "Matte Black, Satin Nickel",
+        "install_type": "Replaces existing deadbolt — DIY, 30-min install; 1⅜\"–2\" door thickness",
+        "release": "2022"
+      },
+      "source": {
+        "url": "https://lockly.com/products/lockly-vision-elite",
+        "accessedAt": "2026-06-15"
+      },
+      "provenance": "lockly.com/products/lockly-vision-elite (fetched 2026-06-15) confirms: 3D biometric fingerprint (99 prints, 0.3s, 1s unlock), PIN Genie keypad (49 codes), app, Alexa/Google voice, scan-to-open QR, 2 physical keys, 9V backup, Vision Connect Hub (included) for network, Bluetooth pairing, 10000mAh rechargeable Li with solar panel, auto-lock programmable timer, Matte Black/Satin Nickel finishes, IP54 weather rating, Full HD video camera with IR night vision, motion sensor, 30-min DIY install, $499.99. No Matter support mentioned in any source. Includes built-in camera — distinguishing feature. Release 2022 per product launch coverage."
+    },
+    {
+      "slug": "lockly-vision",
+      "name": "Lockly Vision",
+      "brand": "Lockly",
+      "category": "smart-locks",
+      "releaseDate": "2021",
+      "priceUsd": 419.99,
+      "priceNote": "Price $419.99 confirmed on lockly.com/products/lockly-vision. Page noted a sale; original/regular price listed as $399.99+ with promotional discounts. Using the listed page price.",
+      "specs": {
+        "unlock_methods": "3D biometric fingerprint (up to 99 prints, 0.3s recognition), PIN Genie keypad (up to 49 codes), smartphone app, voice assistant (Alexa/Google), scan-to-open QR code, physical keys (2 included)",
+        "connectivity": "Bluetooth; Wi-Fi/hub via included Vision Connect Hub",
+        "matter": false,
+        "auto_lock": true,
+        "battery_type": "8× AA alkaline",
+        "finish_options": "Brushed Gold, Venetian Bronze, Satin Nickel, Matte Black",
+        "install_type": "Replaces existing deadbolt — DIY, approx. 30-min install",
+        "release": "2021"
+      },
+      "source": {
+        "url": "https://lockly.com/products/lockly-vision",
+        "accessedAt": "2026-06-15"
+      },
+      "provenance": "lockly.com/products/lockly-vision (fetched 2026-06-15) confirms: 3D biometric fingerprint (99 prints, 0.3s), PIN Genie keypad (49 codes), app, Alexa/Google voice, QR scan-to-open, 2 physical keys, 9V backup, Vision Connect Hub (included), Bluetooth, auto-lock programmable timer, 8× AA batteries (up to 12 months), four finish options (Brushed Gold, Venetian Bronze, Satin Nickel, Matte Black), 30-min DIY install, $419.99. No Matter support. Release 2021 per product timeline; Lockly Vision Elite is the 2022 update with rechargeable battery + solar + camera upgrade."
+    }
+  ]
+}

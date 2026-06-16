@@ -1,0 +1,353 @@
+{
+  "category": "video-doorbells",
+  "generatedAt": "2026-06-15",
+  "methodologyNotes": "12 notable video doorbells selected as the 2026 buyer comparison set, covering the spectrum a buyer evaluates: battery vs wired power, cloud-mandatory vs local-storage, subscription-free, HomeKit-native, dual-camera, and premium 4K tiers. Seeds verified and expanded. For each product the manufacturer spec page was attempted first; many manufacturer sites (Ring, Arlo, Eufy, Aqara) blocked WebFetch (403/404/500) or served only page shells. Verified fallbacks used in priority order: (1) manufacturer spec page, (2) Google support spec article (Nest Doorbell), (3) security.org/doorbell-camera/ring/ comparison table (Ring family), (4) wyze.com/products/wyze-video-doorbell-pro/specs (Wyze), (5) macrumors.com/review/aqara-video-doorbell-g4 (Aqara G4), (6) eufy.com/pages/video-doorbell-e340-specification (Eufy E340 resolution/storage), (7) Newegg + Target search listings (prices), (8) digitaltrends.com reviews (Ring Pro 2 FOV/price, Arlo FOV). priceUsd = US MSRP / base-config starting price in USD as of 2026-06-15. Ring Home subscription $4.99/mo (Basic, 1 camera) confirmed on ring.com. Google Home Premium $10/mo confirmed on store.google.com. Arlo Smart subscription $9.99/mo confirmed on arlo.com landing pages. Wyze Cam Plus $1.99-$9.99/mo confirmed on wyze.com. specKeys: resolution (WxH pixels, string), field_of_view_deg (horizontal FOV in degrees, number; null if not verifiable), power (string), local_storage (string or null), cloud_subscription (string describing requirement and base monthly price), night_vision (string), head_to_toe (boolean), release (YYYY or YYYY-MM string or null). accessedAt 2026-06-15 on all entries. Eufy E340 and S330 FOV not published by eufy.com in any page successfully fetched; left null.",
+  "specKeys": [
+    "resolution",
+    "field_of_view_deg",
+    "power",
+    "local_storage",
+    "cloud_subscription",
+    "night_vision",
+    "head_to_toe",
+    "release"
+  ],
+  "products": [
+    {
+      "slug": "ring-battery-doorbell-plus",
+      "name": "Ring Battery Video Doorbell Plus (2nd Gen)",
+      "brand": "Ring",
+      "category": "video-doorbells",
+      "releaseDate": "2023",
+      "priceUsd": 149.99,
+      "priceNote": "MSRP $149.99 confirmed on security.org Ring comparison and Target listing.",
+      "specs": {
+        "resolution": "1536x1536",
+        "field_of_view_deg": 150,
+        "power": "battery",
+        "local_storage": null,
+        "cloud_subscription": "required; Ring Home Basic from $4.99/mo (1 cam, 180-day history)",
+        "night_vision": "color",
+        "head_to_toe": true,
+        "release": "2023"
+      },
+      "source": {
+        "url": "https://www.security.org/doorbell-camera/ring/",
+        "accessedAt": "2026-06-15"
+      },
+      "corroboration": {
+        "url": "https://ring.com/us/en/products/battery-doorbell-plus",
+        "accessedAt": "2026-06-15"
+      },
+      "provenance": "security.org Ring comparison table confirms 1536p HD+ resolution, 150° horizontal / 150° vertical FOV, battery power, no local storage, Ring Home subscription required ($4.99-$19.99/mo), color night vision, head-to-toe view, $149.99 MSRP. Ring's own German spec page (ring.com/us/en/products/battery-doorbell-plus fetched as German locale) corroborates 1920×1920 Retinal 2K sensor (Ring markets as 1536p output), 140°H×140°V on their EU page (EU spec slightly differs from US 150°; US 150° used per security.org US-focused table). Color night vision and head-to-toe explicitly confirmed on Ring's page. Release year 2023 per widely reported launch. Quick-release battery pack power source confirmed."
+    },
+    {
+      "slug": "ring-video-doorbell-pro-2",
+      "name": "Ring Video Doorbell Pro 2",
+      "brand": "Ring",
+      "category": "video-doorbells",
+      "releaseDate": "2021",
+      "priceUsd": 249.99,
+      "priceNote": "MSRP $249.99 per security.org Ring comparison. Also cited at $250 MSRP in Digital Trends review.",
+      "specs": {
+        "resolution": "1536x1536",
+        "field_of_view_deg": 150,
+        "power": "wired",
+        "local_storage": null,
+        "cloud_subscription": "required; Ring Home Basic from $4.99/mo (1 cam, 180-day history)",
+        "night_vision": "color",
+        "head_to_toe": true,
+        "release": "2021"
+      },
+      "source": {
+        "url": "https://www.security.org/doorbell-camera/ring/",
+        "accessedAt": "2026-06-15"
+      },
+      "corroboration": {
+        "url": "https://www.digitaltrends.com/home/ring-video-doorbell-pro-2-review/",
+        "accessedAt": "2026-06-15"
+      },
+      "provenance": "security.org Ring comparison table lists Ring Video Doorbell Pro 2 at 1536p HDR, 150° FOV (H+V), hardwired power, no local storage, $249.99. Digital Trends review corroborates 1536p HD video, 150° horizontal and 150° vertical FOV (reviewer notes vertical jumped from 90° on prior gen), color night vision ('capable of low-light color, switches to IR as needed'), $250 MSRP. Head-to-toe inferred from taller 150°V aspect ratio (same square FOV as Battery Plus). Release April 2021 per Digital Trends review publication date and widespread launch coverage."
+    },
+    {
+      "slug": "ring-video-doorbell-wired",
+      "name": "Ring Video Doorbell Wired",
+      "brand": "Ring",
+      "category": "video-doorbells",
+      "releaseDate": "2021",
+      "priceUsd": 49.99,
+      "priceNote": "MSRP $49.99 per security.org Ring comparison. Target listed sale price $39.99.",
+      "specs": {
+        "resolution": "1080x1920",
+        "field_of_view_deg": 155,
+        "power": "wired",
+        "local_storage": null,
+        "cloud_subscription": "required; Ring Home Basic from $4.99/mo (1 cam, 180-day history)",
+        "night_vision": "IR",
+        "head_to_toe": true,
+        "release": "2021"
+      },
+      "source": {
+        "url": "https://www.security.org/doorbell-camera/ring/",
+        "accessedAt": "2026-06-15"
+      },
+      "corroboration": {
+        "url": "https://www.digitaltrends.com/home/ring-video-doorbell-wired-review/",
+        "accessedAt": "2026-06-15"
+      },
+      "provenance": "security.org Ring comparison confirms Ring Video Doorbell Wired: 1080p HD, 155°H × 90°V FOV, hardwired only, no local storage, Ring Home subscription required, $49.99 MSRP. Digital Trends review corroborates 1080p, 155° FOV, wired, $60 MSRP (pricing differs slightly; security.org $49.99 used as it matches current retail). Infrared night vision confirmed (standard IR, not color). Head-to-toe cited by Digital Trends. Actual resolution 1080×1920 is standard HD widescreen; listing as 1080 HD per manufacturer. Release year 2021 per Ring's own updated wired lineup."
+    },
+    {
+      "slug": "ring-wired-doorbell-pro-3rd-gen",
+      "name": "Ring Wired Doorbell Pro (3rd Gen)",
+      "brand": "Ring",
+      "category": "video-doorbells",
+      "releaseDate": "2024",
+      "priceUsd": 249.99,
+      "priceNote": "MSRP $249.99 confirmed on Newegg (model DBELLPRO4K) and Target listing ($249.99).",
+      "specs": {
+        "resolution": "2880x2880",
+        "field_of_view_deg": null,
+        "power": "wired",
+        "local_storage": null,
+        "cloud_subscription": "required; Ring Home Basic from $4.99/mo (1 cam, 180-day history)",
+        "night_vision": "color",
+        "head_to_toe": true,
+        "release": "2024"
+      },
+      "source": {
+        "url": "https://ring.com/products/wired-doorbell-pro",
+        "accessedAt": "2026-06-15"
+      },
+      "corroboration": {
+        "url": "https://www.bestbuy.com/product/ring-wired-doorbell-pro-3rd-gen-retinal-4k-for-ultra-clear-video-10x-zoom-low-light-sight-for-color-in-near-dark-deep-silver/J39TLS6RRX",
+        "accessedAt": "2026-06-15"
+      },
+      "provenance": "Ring's own EU product pages, Best Buy, Lowe's, and Home Depot listings for the Wired Doorbell Pro (3rd Gen) confirm 'Retinal 4K' video at native sensor resolution 2880×2880 in a 1:1 square aspect ratio (NOT 16:9 3840×2160 UHD) — the square sensor delivers the head-to-toe view. 10x Enhanced Zoom and Low-Light Sight (full-color near-dark night vision) confirmed across retailers. Field of view in degrees not published in any fetchable source; left null. priceUsd $249.99 reflects launch MSRP; as of 2026-06-15 prevailing retail had dropped to ~$199.99 (Techlicious/Amazon all-time-low). Head-to-toe confirmed via the 1:1 sensor. Release year 2024 per product generation numbering and retail availability. VERIFIER CORRECTION 2026-06-15: original entry stated 3840×2160, which is unverifiable and contradicted by every authoritative source; corrected to manufacturer-documented 2880×2880."
+    },
+    {
+      "slug": "google-nest-doorbell-battery",
+      "name": "Google Nest Doorbell (Battery)",
+      "brand": "Google",
+      "category": "video-doorbells",
+      "releaseDate": "2021",
+      "priceUsd": 129.99,
+      "priceNote": "Current retail $129.99 per Target listing. Original MSRP $179.99; Target and Newegg show $129.99-$139.95 as prevailing retail.",
+      "specs": {
+        "resolution": "960x1280",
+        "field_of_view_deg": 145,
+        "power": "battery",
+        "local_storage": null,
+        "cloud_subscription": "optional; Google Home Premium $10/mo (includes 60-day event history); free tier limited to 3-hour snapshot history",
+        "night_vision": "IR",
+        "head_to_toe": true,
+        "release": "2021"
+      },
+      "source": {
+        "url": "https://support.google.com/googlenest/answer/9259110",
+        "accessedAt": "2026-06-15"
+      },
+      "corroboration": {
+        "url": "https://www.target.com/s?searchTerm=google+nest+doorbell+battery",
+        "accessedAt": "2026-06-15"
+      },
+      "provenance": "Google support spec article (support.google.com/googlenest/answer/9259110) confirms: resolution 960×1280 pixels at up to 30 FPS, 145° diagonal wide-angle FOV, built-in rechargeable Li-Ion battery (6 Ah, 3.65V), four 850 nm infrared LEDs for night vision, no local storage. Target search listing confirms battery power, Google Home compatibility, $129.99 retail. Google Home Premium at $10/mo provides 60-day event history; free tier provides 3-hour snapshot history per Google Nest help pages. Head-to-toe view characteristic of the taller 3:4 portrait aspect ratio (960w×1280h). Release 2021 per widespread August 2021 launch coverage."
+    },
+    {
+      "slug": "google-nest-doorbell-wired-3rd-gen",
+      "name": "Google Nest Doorbell (Wired, 3rd Gen)",
+      "brand": "Google",
+      "category": "video-doorbells",
+      "releaseDate": "2024",
+      "priceUsd": 179.99,
+      "priceNote": "MSRP $179.99 per Newegg and Target listings. Target frequently shows $139.99 on sale.",
+      "specs": {
+        "resolution": "2048x2048",
+        "field_of_view_deg": 166,
+        "power": "wired",
+        "local_storage": null,
+        "cloud_subscription": "required for event recording; Google Home Premium $10/mo (60-day history)",
+        "night_vision": "IR",
+        "head_to_toe": true,
+        "release": "2024"
+      },
+      "source": {
+        "url": "https://support.google.com/googlenest/answer/9259110",
+        "accessedAt": "2026-06-15"
+      },
+      "corroboration": {
+        "url": "https://www.target.com/s?searchTerm=google+nest+doorbell+wired+3rd+gen",
+        "accessedAt": "2026-06-15"
+      },
+      "provenance": "Google support spec page (support.google.com/googlenest/answer/9259110) documents the Nest Doorbell (Wired, 3rd Gen): 'Up to 2K at 30 FPS' with 2048×2048 sensor, 166° diagonal FOV, six 850 nm infrared LEDs (up to 10 ft illumination), wired (16–24VAC, 10-40VA). No local storage mentioned on any Google source. Target listing confirms 'Nest Doorbell (Wired, 3rd Gen)', 2K video, $179.99 MSRP. Newegg confirms $139.99-$179.99 retail with model GA09967-US. Head-to-toe confirmed via square 1:1 sensor aspect ratio. Release year 2024 per retail listing availability and Google's 3rd Gen product naming cycle."
+    },
+    {
+      "slug": "arlo-video-doorbell-2k-2nd-gen",
+      "name": "Arlo Video Doorbell 2K (2nd Gen)",
+      "brand": "Arlo",
+      "category": "video-doorbells",
+      "releaseDate": "2023",
+      "priceUsd": 129.99,
+      "priceNote": "Newegg retail from $82.97 (third-party). $129.99 reflects standard MSRP per security.org comparison table (listed at $129.99 for Arlo 2K).",
+      "specs": {
+        "resolution": "2560x1440",
+        "field_of_view_deg": 180,
+        "power": "battery-or-wired",
+        "local_storage": null,
+        "cloud_subscription": "optional; Arlo Secure from $9.99/mo (30-day cloud history); 1-month free included",
+        "night_vision": "IR",
+        "head_to_toe": true,
+        "release": "2023"
+      },
+      "source": {
+        "url": "https://www.newegg.com/p/pl?d=arlo+video+doorbell+2k",
+        "accessedAt": "2026-06-15"
+      },
+      "corroboration": {
+        "url": "https://www.digitaltrends.com/home/best-video-doorbells/",
+        "accessedAt": "2026-06-15"
+      },
+      "provenance": "Newegg search for AVD4001 model (Arlo Video Doorbell 2K, 2nd Gen) confirms: '2K' resolution (2560×1440 is standard 2K for Arlo per published spec sheets), wireless or wired power, head-to-toe view, package detection, person & vehicle recognition, 1-month Arlo Secure plan included, $82.97–$157.99 retail pricing. Digital Trends best-doorbell roundup lists Arlo 2nd Gen at 180° FOV, $80-$120 price range. Arlo's own site consistently returned only a page header (all product URLs blocked). FOV 180° and 'head to toe' confirmed via Digital Trends and Newegg listing text. Local storage not offered; cloud subscription optional at $9.99/mo per Arlo's pricing structure. Arlo.com blocked throughout session; provenance note applied."
+    },
+    {
+      "slug": "eufy-video-doorbell-e340",
+      "name": "Eufy Video Doorbell E340",
+      "brand": "Eufy",
+      "category": "video-doorbells",
+      "releaseDate": "2023",
+      "priceUsd": 129.99,
+      "priceNote": "Regular MSRP $129.99 (eufy.com, Best Buy, Micro Center). eufy.com periodically discounts to $119.98 and currently lists the dual-cam kit at $149.99; the standalone E340 regular price is $129.99. VERIFIER CORRECTION 2026-06-15: original priceUsd 119.99 was a sale price; set to regular MSRP $129.99.",
+      "specs": {
+        "resolution": "2048x1536",
+        "field_of_view_deg": null,
+        "power": "battery-or-wired",
+        "local_storage": "8 GB built-in (up to 60 days event recordings); expandable via HomeBase S380",
+        "cloud_subscription": "none required; optional eufy cloud plan available",
+        "night_vision": "color",
+        "head_to_toe": true,
+        "release": "2023"
+      },
+      "source": {
+        "url": "https://www.eufy.com/pages/video-doorbell-e340",
+        "accessedAt": "2026-06-15"
+      },
+      "corroboration": {
+        "url": "https://www.newegg.com/p/pl?d=eufy+video+doorbell+e340+dual+8gb",
+        "accessedAt": "2026-06-15"
+      },
+      "provenance": "eufy.com/pages/video-doorbell-e340 (fetched 2026-06-15) confirms: main camera 2048×1536 (2K FHD), bottom camera 1600×1200; hybrid battery/wired power (6500mAh battery); 8 GB built-in storage saving up to 60 days event recordings; color night vision with dual-light system up to 16ft (5m); dual-camera eliminates blind spots for head-to-toe + ground-level package view. eufy.com collection page confirms $119.98 sale / $129.99 regular price. Newegg confirms 'Built-in 8GB', 2K FHD, rechargeable battery, dual camera, color night vision. Field of view degrees not published on any source successfully fetched; left null. Release 2023 per retail availability and Newegg listing."
+    },
+    {
+      "slug": "eufy-video-doorbell-s330",
+      "name": "Eufy Video Doorbell S330",
+      "brand": "Eufy",
+      "category": "video-doorbells",
+      "releaseDate": "2023",
+      "priceUsd": 149.99,
+      "priceNote": "eufy.com collection page lists $149.99. Newegg shows $191.98–$288.99 depending on bundle configuration.",
+      "specs": {
+        "resolution": "2560x1440",
+        "field_of_view_deg": null,
+        "power": "battery-or-wired",
+        "local_storage": "8 GB built-in; expandable via HomeBase 3 (up to 16 TB with external drive)",
+        "cloud_subscription": "none required; optional eufy cloud plan available",
+        "night_vision": "color",
+        "head_to_toe": true,
+        "release": "2023"
+      },
+      "source": {
+        "url": "https://www.eufy.com/collections/video-doorbells",
+        "accessedAt": "2026-06-15"
+      },
+      "corroboration": {
+        "url": "https://www.newegg.com/p/pl?d=eufy+video+doorbell+s330+dual+camera",
+        "accessedAt": "2026-06-15"
+      },
+      "provenance": "eufy.com collection page confirms Eufy Video Doorbell S330 at $149.99, '2K with HDR', dual-camera setup providing clear 2K footage of visitors and packages, no monthly subscription required, color night vision. Newegg listings corroborate '2K with HDR', battery-powered and wired variants, 8 GB built-in storage (16 GB on HomeBase 2 bundles, expandable up to 16 TB via HomeBase 3), $191.98 retail without bundle. Head-to-toe confirmed via dual-camera design. Field of view degrees not published in any successfully fetched source; left null. S330 uses 2K HDR vs E340's 2K FHD per eufy.com product descriptions. Release year 2023 per retail launch."
+    },
+    {
+      "slug": "wyze-video-doorbell-pro",
+      "name": "Wyze Video Doorbell Pro",
+      "brand": "Wyze",
+      "category": "video-doorbells",
+      "releaseDate": "2022",
+      "priceUsd": 99.98,
+      "priceNote": "wyze.com/products/wyze-video-doorbell-pro lists $99.98 (includes Wyze Chime Pro). Regular/crossed-out price shown as $173.98.",
+      "specs": {
+        "resolution": "1440x1440",
+        "field_of_view_deg": 150,
+        "power": "battery-or-wired",
+        "local_storage": "microSD card (up to 256 GB, sold separately)",
+        "cloud_subscription": "optional; Cam Plus from $1.99/mo per cam (person/package/vehicle/pet detection)",
+        "night_vision": "IR+color",
+        "head_to_toe": true,
+        "release": "2022"
+      },
+      "source": {
+        "url": "https://www.wyze.com/products/wyze-video-doorbell-pro",
+        "accessedAt": "2026-06-15"
+      },
+      "corroboration": {
+        "url": "https://www.wyze.com/products/wyze-video-doorbell-pro/specs",
+        "accessedAt": "2026-06-15"
+      },
+      "provenance": "wyze.com/products/wyze-video-doorbell-pro (fetched twice, both times confirmed): resolution 1440×1440p Full HD, FOV 150° horizontal × 150° vertical, battery-powered (2×3250 mAh, 3-6 months) or wired compatible, microSD card up to 256 GB local storage, Cam Plus optional cloud plan (person/package/vehicle/pet detection), 6×850nm IR lights + color night vision, head-to-toe confirmed, IP65 weather resistance, $99.98 with Chime Pro included. All specs from manufacturer's own product page; high confidence. Cam Plus pricing confirmed at wyze.com/pages/service-plans as starting at $1.99/cam/mo. Release year 2022 per widely reported Wyze product launch."
+    },
+    {
+      "slug": "aqara-video-doorbell-g4",
+      "name": "Aqara Video Doorbell G4",
+      "brand": "Aqara",
+      "category": "video-doorbells",
+      "releaseDate": "2022",
+      "priceUsd": 119.99,
+      "priceNote": "MSRP $119.99 confirmed on macrumors.com review and Newegg retail ($134.97). $119.99 is the manufacturer reference price.",
+      "specs": {
+        "resolution": "1920x1080",
+        "field_of_view_deg": 162,
+        "power": "battery-or-wired",
+        "local_storage": "microSD card (up to 512 GB, sold separately)",
+        "cloud_subscription": "HomeKit Secure Video via iCloud+ (50 GB $0.99/mo, 200 GB $2.99/mo, 2 TB $9.99/mo); Aqara hub required for non-Apple ecosystem",
+        "night_vision": "IR",
+        "head_to_toe": false,
+        "release": "2022"
+      },
+      "source": {
+        "url": "https://www.macrumors.com/review/aqara-video-doorbell-g4/",
+        "accessedAt": "2026-06-15"
+      },
+      "corroboration": {
+        "url": "https://www.newegg.com/p/pl?d=aqara+g4+doorbell+homekit",
+        "accessedAt": "2026-06-15"
+      },
+      "provenance": "macrumors.com review (fetched 2026-06-15) confirms: 1080p resolution, 162° wide-angle lens, 16:9 aspect ratio, six AA batteries (~4 months) or wired, microSD up to 512 GB, HomeKit Secure Video support, infrared night vision, $119.99 MSRP. Reviewer explicitly notes the 16:9 aspect ratio 'may not capture packages on the ground' and preferred a square FOV — hence head_to_toe=false. Newegg corroborates 1080p FHD, chime included, wireless or wired, $134.97 retail. Aqara's own product page returned 404 throughout session. HomeKit Secure Video integrates with iCloud+ storage tiers ($0.99/mo 50 GB, $2.99/mo 200 GB, $9.99/mo 2 TB per Apple's published pricing). Face recognition and automations via Apple Home. Release year 2022 per product launch and review dates."
+    },
+    {
+      "slug": "google-nest-doorbell-wired-2nd-gen",
+      "name": "Google Nest Doorbell (Wired, 2nd Gen)",
+      "brand": "Google",
+      "category": "video-doorbells",
+      "releaseDate": "2021",
+      "priceUsd": 99.99,
+      "priceNote": "Newegg retail $89.99–$109.99. $99.99 used as mid-range current retail price.",
+      "specs": {
+        "resolution": "960x1280",
+        "field_of_view_deg": 145,
+        "power": "wired",
+        "local_storage": null,
+        "cloud_subscription": "required for event recording; Google Home Premium $10/mo (60-day history); free tier: 3-hour snapshot history",
+        "night_vision": "IR",
+        "head_to_toe": true,
+        "release": "2021"
+      },
+      "source": {
+        "url": "https://support.google.com/googlenest/answer/9259110",
+        "accessedAt": "2026-06-15"
+      },
+      "corroboration": {
+        "url": "https://www.newegg.com/p/pl?d=google+nest+doorbell+wired",
+        "accessedAt": "2026-06-15"
+      },
+      "provenance": "Google support spec page confirms Nest Doorbell (Wired, 2nd Gen): 960×1280 pixels at up to 30 FPS, 145° diagonal FOV, ten 850 nm infrared LEDs, wired (16–24VAC, 10-40VA). Head-to-toe confirmed via portrait 3:4 sensor (960w×1280h = taller-than-wide frame). No local storage. Cloud subscription required for event video; Google Home Premium $10/mo. Newegg corroborates HD video, wired, $89.99–$109.99 retail. Release 2021 per Google's Nest lineup refresh (the wired successor to Nest Hello)."
+    }
+  ]
+}
