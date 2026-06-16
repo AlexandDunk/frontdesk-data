@@ -1,7 +1,7 @@
 {
   "vertical": "seo-tools",
   "generatedAt": "2026-06-14",
-  "methodologyNotes": "Published self-serve USD pricing was collected by fetching each vendor's official pricing page directly (WebFetch tool). Where official pages rendered JS-only tables with no static price text, or geolocated to non-USD currency, pricing was corroborated and sourced from reputable 2026 pricing-comparison pages (GetApp, SoftwareAdvice, Backlinko, official vendor blog posts). SE Ranking's official page displays EUR; USD figures sourced from GetApp and SoftwareAdvice. Sitebulb's official page requires JS currency toggle to show USD; USD figures sourced from GetApp and SoftwareAdvice. Mangools' official page renders prices via JS; figures sourced from GetApp and SoftwareAdvice. Semrush's official pricing page rendered as navigation shell only; plan prices confirmed via Backlinko (updated Feb 2026) and SoftwareAdvice. Annual rates: where a vendor publishes '2 free months' (Ahrefs) the monthly equivalent is computed as (monthly × 10 / 12); where vendors publish an annual-savings dollar amount (Serpstat), the annual monthly rate is derived from (annual-total − savings) / 12; where only a percentage discount is stated, the monthly rate is not computed to avoid rounding ambiguity and annualDiscountPct is recorded instead. Quote-only / enterprise tiers are recorded with monthlyUsd null. All telephony fields (minutesIncluded, callsIncluded, overagePerMin, overagePerCall) are null throughout as this is a non-telephony vertical.",
+  "methodologyNotes": "Published self-serve USD pricing was collected by fetching each vendor's official pricing page directly (WebFetch tool). Where official pages rendered JS-only tables with no static price text, or geolocated to non-USD currency, pricing was corroborated and sourced from reputable 2026 pricing-comparison pages (GetApp, SoftwareAdvice, Backlinko, official vendor blog posts). SE Ranking's official page displays EUR; USD figures sourced from GetApp and SoftwareAdvice. Sitebulb's official page requires JS currency toggle to show USD; USD figures sourced from GetApp and SoftwareAdvice. Mangools' official page renders prices via JS; figures sourced from GetApp and SoftwareAdvice. Semrush's official pricing page rendered as JS-only navigation shell only; plan prices confirmed via Backlinko (updated Feb 2026) and SoftwareAdvice. Annual rates: where a vendor publishes '2 free months' (Ahrefs) the monthly equivalent is computed as (monthly × 10 / 12); where vendors publish an annual-savings dollar amount (Serpstat), the annual monthly rate is derived from (annual-total − savings) / 12; where only a percentage discount is stated, the monthly rate is not computed to avoid rounding ambiguity and annualDiscountPct is recorded instead. Quote-only / enterprise tiers are recorded with monthlyUsd null. All telephony fields (minutesIncluded, callsIncluded, overagePerMin, overagePerCall) are null throughout as this is a non-telephony vertical.",
   "vendors": [
     {
       "slug": "ahrefs",
@@ -133,7 +133,62 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://ahrefs.com/privacy-policy",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Google Search Console",
+          "Looker Studio",
+          "Claude MCP",
+          "ChatGPT MCP",
+          "IndexNow",
+          "Ahrefs API"
+        ],
+        "limits": [
+          "Free plan: 5,000 crawl credits/month per project, 1M web analytics events/month, 5 AI Content Helper docs/month",
+          "Starter: 100 monthly credits, 50 tracked keywords",
+          "Lite: 500 credits/month, 2 additional users",
+          "Standard and above: unlimited usage on core tools"
+        ],
+        "keyFeatures": [
+          "Site Explorer (backlink and organic traffic analysis)",
+          "Keywords Explorer (2.5B+ keyword database)",
+          "Site Audit (technical SEO crawler)",
+          "Rank Tracker (SERP position monitoring)",
+          "Content Explorer (content research and gap analysis)",
+          "Web Analytics (first-party, cookieless)",
+          "Social Media Manager (beta)",
+          "AI Content Helper",
+          "Brand Radar (AI search visibility monitoring)",
+          "MCP connector for AI assistant integrations"
+        ],
+        "bestFor": [
+          "SEO agencies and consultants needing deep backlink data",
+          "Teams that want a free entry point before committing to paid",
+          "Users who want native AI assistant (Claude/ChatGPT) integration via MCP"
+        ],
+        "sources": [
+          {
+            "url": "https://ahrefs.com/blog/ahrefs-pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://ahrefs.com/privacy-policy",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing and features from https://ahrefs.com/blog/ahrefs-pricing/ (fetched 2026-06-15). Free plan limits and feature list from same source. GDPR compliance confirmed via privacy policy (references EU GDPR 2016/679, Data Protection Officer, Standard Contractual Clauses); SOC2 not mentioned in any accessible Ahrefs trust/legal page."
+      }
     },
     {
       "slug": "semrush",
@@ -282,7 +337,70 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.semrush.com/company/legal/dpa/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 7,
+        "keyIntegrations": [
+          "Google Analytics",
+          "Google Search Console",
+          "Looker Studio",
+          "Zapier",
+          "Trello",
+          "Slack",
+          "Semrush API",
+          "MCP (ChatGPT/Claude)"
+        ],
+        "limits": [
+          "Pro: 5 projects, 500 tracked keywords, 10,000 results per report, 1 user",
+          "Guru: 15 projects, 1,500 tracked keywords, 1 user",
+          "Business: 40 projects, 5,000 tracked keywords, API access, 1 user",
+          "Free trial limited to 7 days; no permanent free plan"
+        ],
+        "keyFeatures": [
+          "Keyword research (6 tools)",
+          "Rank tracking (4 tools)",
+          "Technical SEO site audit (3 tools)",
+          "Backlink analysis and link building (6 tools)",
+          "Content optimization and marketing (4 tools)",
+          "Competitive and market analysis (5 tools)",
+          "Local SEO (6 tools)",
+          "Social media management (4 tools)",
+          "Paid advertising intelligence (3 tools)",
+          "AI Visibility Toolkit (AI search monitoring)",
+          "AI PR Toolkit",
+          "App Center marketplace"
+        ],
+        "bestFor": [
+          "All-in-one SEO and digital marketing teams needing a single platform",
+          "Agencies managing multiple client projects and needing competitor PPC + SEO data",
+          "Marketers who want AI search visibility monitoring bundled with traditional SEO"
+        ],
+        "sources": [
+          {
+            "url": "https://www.semrush.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.semrush.com/company/legal/dpa/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.semrush.com/features/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Features from https://www.semrush.com/features/ and https://www.semrush.com/pricing/ (fetched 2026-06-15). 7-day free trial confirmed on pricing page. GDPR confirmed via DPA at semrush.com/company/legal/dpa/ which explicitly covers EU GDPR 2016/679, SCCs, and data subject rights. SOC2 and HIPAA not mentioned in privacy policy or DPA."
+      }
     },
     {
       "slug": "moz-pro",
@@ -375,7 +493,59 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": 30,
+        "keyIntegrations": [
+          "Google Analytics",
+          "Google Search Console",
+          "Chrome Extension (MozBar)",
+          "Moz API",
+          "Zapier"
+        ],
+        "limits": [
+          "Starter: 1 user, 1 tracked site",
+          "Standard: 3 users, 3 tracked sites",
+          "Medium: 10 users, 10 tracked sites",
+          "Large: 25 users, 25 tracked sites"
+        ],
+        "keyFeatures": [
+          "Keyword research and difficulty scoring",
+          "Rank tracking across search engines",
+          "Site audit and technical SEO analysis",
+          "Backlink analysis and link explorer",
+          "Competitive research and benchmarking",
+          "Domain Authority (DA) metric",
+          "On-page optimization recommendations",
+          "MozBar Chrome extension (free)",
+          "AI content briefs (higher tiers)",
+          "AI visibility dashboards",
+          "Custom reporting"
+        ],
+        "bestFor": [
+          "SEO practitioners who value Domain Authority and Moz's proprietary link metrics",
+          "Small to mid-size teams that need multi-user seat plans at predictable pricing",
+          "Users who want a 30-day trial to fully evaluate before committing"
+        ],
+        "sources": [
+          {
+            "url": "https://www.getapp.com/marketing-software/a/moz-pro/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.softwareadvice.com/seo/moz-pro-profile/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "moz.com is blocked to WebFetch. Features and trial info sourced from GetApp (https://www.getapp.com/marketing-software/a/moz-pro/) and SoftwareAdvice (https://www.softwareadvice.com/seo/moz-pro-profile/), both fetched 2026-06-15. 30-day free trial confirmed by GetApp review data. Compliance data (GDPR/SOC2/HIPAA) not confirmable from any accessible page; all set to null."
+      }
     },
     {
       "slug": "mangools",
@@ -448,7 +618,66 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://mangools.com/dpa",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Google Search Console",
+          "Looker Studio",
+          "Chrome Extension",
+          "Firefox Extension",
+          "Mangools API"
+        ],
+        "limits": [
+          "Free account: 5 keyword lookups per 24 hours, 15 related keywords per lookup, 5 competitor keywords per lookup",
+          "Basic: limited daily lookups and tracked keywords (exact limits shown only after login)",
+          "Agency: highest daily lookup limits and most tracked keywords; white-label reports"
+        ],
+        "keyFeatures": [
+          "KWFinder — keyword research with 2.5B+ keyword database and difficulty scoring",
+          "SERPChecker — SERP analysis with 45+ metrics across 65k+ locations",
+          "SERPWatcher — rank tracking with daily updates and city-level granularity",
+          "LinkMiner — backlink analysis (9.5 trillion backlinks indexed)",
+          "SiteProfiler — competitor website and domain authority analysis",
+          "AI Search Watcher — brand visibility tracking in ChatGPT and AI search engines",
+          "Free browser extension (Chrome/Firefox) with on-page SEO data",
+          "Free tools requiring no sign-up: SERP Simulator, Reddit Threads Finder, AI Search Grader, SEO Content Optimizer"
+        ],
+        "bestFor": [
+          "Budget-conscious freelancers and solopreneurs who want a polished UX at a low price point",
+          "Local SEO practitioners needing granular city-level rank tracking",
+          "Teams that want AI search visibility monitoring (ChatGPT/AI search) included"
+        ],
+        "sources": [
+          {
+            "url": "https://mangools.com/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://mangools.com/kwfinder/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://mangools.com/dpa",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://mangools.com/privacy/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Features from mangools.com homepage and kwfinder page (fetched 2026-06-15). Free account with 5 lookups/day confirmed on KWFinder page. GDPR confirmed via DPA at mangools.com/dpa which references EU GDPR 2016/679 and 72-hour breach notification; infrastructure (AWS) is SOC2 Type II audited per the DPA, but Mangools itself does not claim SOC2 certification. HIPAA not mentioned."
+      }
     },
     {
       "slug": "se-ranking",
@@ -519,7 +748,72 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://seranking.com/privacy-policy.html",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Google Analytics 4",
+          "Google Search Console",
+          "Looker Studio",
+          "Matomo",
+          "Planable",
+          "SE Ranking API",
+          "ChatGPT (MCP)"
+        ],
+        "limits": [
+          "Free trial: up to 10 projects, 750 tracked keywords/day, 20 AI prompts/day, no credit card required",
+          "Core: 10 projects, 1 manager seat, 2,000 keywords/day, 250K pages/month audit, 25K API credits",
+          "Growth: 30 projects, 3 manager seats, 5,000 keywords/day, 2M pages/month audit, 100K API credits",
+          "Agency Pack ($69/month add-on): white-label reports, 100 lead credits"
+        ],
+        "keyFeatures": [
+          "Rank Tracker (cross-device, multi-location, multi-engine)",
+          "Keyword Research with long-tail and competitor analysis",
+          "Website Audit (technical SEO issue detection)",
+          "On-Page SEO Checker",
+          "Backlink Checker and Monitor",
+          "Competitive Research (traffic, keywords, PPC)",
+          "Content Editor with plagiarism and readability checks",
+          "SERP Checker (110+ ranking factors)",
+          "Page Changes Monitor",
+          "Local SEO (Google Business profile management)",
+          "Social Media Analytics",
+          "YouTube Rank Tracker",
+          "Report Builder with white-label options",
+          "MCP connector for ChatGPT integration",
+          "Available in 9 languages"
+        ],
+        "bestFor": [
+          "Agencies needing white-label reporting and multi-seat collaboration at a lower price than Semrush",
+          "Teams that want granular rank tracking (city-level, multi-device, multi-engine) with a generous 14-day trial",
+          "Multilingual SEO operations (9 supported UI languages)"
+        ],
+        "sources": [
+          {
+            "url": "https://seranking.com/pricing.html",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://seranking.com/features.html",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://seranking.com/privacy-policy.html",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Features and 14-day no-credit-card trial from seranking.com/features.html and seranking.com/pricing.html (fetched 2026-06-15). GDPR compliance confirmed via privacy policy at seranking.com/privacy-policy.html which states intent to comply with EU GDPR and applicable EEA data protection laws. SOC2 and HIPAA not found in any accessible SE Ranking trust page."
+      }
     },
     {
       "slug": "sitebulb",
@@ -593,7 +887,68 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Google Search Console",
+          "Google Analytics 4",
+          "Google Sheets",
+          "Google Data Studio / Looker Studio",
+          "MCP (Model Context Protocol)"
+        ],
+        "limits": [
+          "Lite: 10,000 URLs per audit, desktop only",
+          "Pro: 500,000 URLs per audit (expandable to 2M), desktop only",
+          "Cloud: up to 10 million URLs per audit, browser-based, minimum 2 users",
+          "Annual billing saves 15%; monthly and annual billing available; annual plans accept invoice payment"
+        ],
+        "keyFeatures": [
+          "Prioritized Hints system (300+ SEO issues categorized and explained)",
+          "JavaScript crawling via Evergreen Chromium (included at no extra cost)",
+          "Audit Comparison with historical change tracking",
+          "Accessibility audit (WCAG checks)",
+          "Hreflang validation",
+          "Structured data validator",
+          "AMP audit",
+          "Internal link auditing and visualization",
+          "Scheduled/automated recurring crawls",
+          "White-label customizable PDF reports",
+          "Data visualizations (crawl maps, charts, timelines)",
+          "Response vs Render report",
+          "Website content extraction",
+          "Code coverage analysis",
+          "MCP connector for AI assistant integration",
+          "Real-time team collaboration (Cloud plan)"
+        ],
+        "bestFor": [
+          "Technical SEO specialists who need deep crawl data with clear prioritized remediation guidance",
+          "Agencies that need white-label PDF reporting and desktop-based crawling at a low per-seat cost",
+          "Enterprise teams crawling very large sites (up to 10M URLs) via the Cloud plan"
+        ],
+        "sources": [
+          {
+            "url": "https://sitebulb.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://sitebulb.com/features/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://sitebulb.com/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Features and 14-day no-credit-card trial confirmed from sitebulb.com/features/ and sitebulb.com/pricing/ (fetched 2026-06-15). GDPR, SOC2 and HIPAA not mentioned on any accessible Sitebulb page; privacy policy URL returned 404; compliance fields set to null. MCP integration confirmed on sitebulb.com homepage and features page."
+      }
     },
     {
       "slug": "serpstat",
@@ -669,7 +1024,73 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://serpstat.com/users/privacy-policy/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 7,
+        "keyIntegrations": [
+          "ChatGPT (MCP)",
+          "Claude (MCP)",
+          "Serpstat API",
+          "Chrome Extension",
+          "Firefox Extension",
+          "Opera Extension",
+          "Edge Extension"
+        ],
+        "limits": [
+          "Individual: 5 projects, 100 daily searches, 10,000 monthly position checks",
+          "Team: unlimited projects, 500 daily searches, 50,000–99,999 position checks; API access unlocked",
+          "Team x2: unlimited projects, 1,000 daily searches, 100,000 position checks",
+          "Agency: unlimited projects, 5,000 daily searches, 500,000 position checks, phone support",
+          "7-day trial requires $1 verification charge (refunded within 5–30 minutes)"
+        ],
+        "keyFeatures": [
+          "Keyword Research across 230 countries (Google) with volume, difficulty, CPC",
+          "Competitor Analysis (traffic, keywords, PPC strategies)",
+          "Rank Tracker (daily, mobile and desktop, 230 countries, city-level)",
+          "Site Audit with priority-sorted technical issues",
+          "Backlink Analysis (1.1T backlinks indexed)",
+          "Keyword Clustering (automatic thematic grouping)",
+          "AI content tools (meta tags, article writing, paraphrasing)",
+          "Batch analysis (up to 100,000 keywords)",
+          "White-label reporting (Agency plan)",
+          "Claude and ChatGPT MCP integration (Team tier and above)",
+          "Browser extensions (Chrome, Firefox, Opera, Edge)"
+        ],
+        "bestFor": [
+          "Budget-conscious teams wanting all-in-one SEO + PPC competitive intelligence at lower cost than Semrush/Ahrefs",
+          "Agencies that need white-label reports and Claude/ChatGPT AI assistant integration",
+          "Teams that rely heavily on keyword clustering for content planning"
+        ],
+        "sources": [
+          {
+            "url": "https://serpstat.com/page/pricing-plans/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://serpstat.com/features/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://serpstat.com/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://serpstat.com/users/privacy-policy/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Features from serpstat.com/features/ and serpstat.com homepage (fetched 2026-06-15). 7-day trial with $1 refundable verification charge confirmed on official pricing page. GDPR confirmed via privacy policy at serpstat.com/users/privacy-policy/ which states processing is carried out 'in strict compliance with the EU General Data Protection Regulation (\"GDPR\") (specifically but not limited to Article 6(1)(b) to (f) and Article 28)'. SOC2 and HIPAA not mentioned on any accessible Serpstat page; set to null."
+      }
     },
     {
       "slug": "spyfu",
@@ -742,7 +1163,62 @@
             "accessedAt": "2026-06-14"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "ChatGPT (SpyFu GPT)",
+          "Google Search Console",
+          "RivalFlow AI",
+          "SpyFu API"
+        ],
+        "limits": [
+          "Basic: 10,000 row data exports and search results, 100 domain overview PDFs, 5,000 weekly tracked keywords, 250 sales leads, 6 months historical data, 1 user",
+          "Pro + AI: unlimited exports and search results, 15,000 weekly tracked keywords, 500 sales leads, 10+ years historical data, 1 user (+$30/additional)",
+          "Team: unlimited projects and exports, 50,000 weekly tracked keywords, 5 users (+$30/additional), RivalFlow for 5 sites",
+          "30-day money-back guarantee; no free trial; no free tier"
+        ],
+        "keyFeatures": [
+          "PPC competitor research (ad copy history, spend estimates, keyword bids)",
+          "SEO competitor keyword overlap analysis",
+          "Backlink research and competitor backlink discovery",
+          "Rank tracking (SEO and PPC)",
+          "18+ years of historical ranking and ad data",
+          "Domain lead generation lists (sales prospecting)",
+          "Custom branded SEO client reports",
+          "RivalFlow AI (content gap and optimization tool, Pro+ and Team)",
+          "SpyFu GPT — ChatGPT integration for AI-powered recommendations",
+          "SpyFu API for custom data pipelines",
+          "Coverage across 38 countries, 7.2 trillion search results indexed"
+        ],
+        "bestFor": [
+          "PPC and paid search teams that need deep competitor ad intelligence alongside SEO data",
+          "Sales and lead generation teams using domain contacts data for outbound prospecting",
+          "Small teams or solo practitioners wanting strong competitor analysis at a lower entry price"
+        ],
+        "sources": [
+          {
+            "url": "https://www.spyfu.com/mainpurchase/?page=default",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.spyfu.com/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://help.spyfu.com/en/collections/1734346-intro-to-spyfu",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Features and pricing from spyfu.com/mainpurchase and spyfu.com homepage (fetched 2026-06-15). No free tier or free trial confirmed; 30-day money-back guarantee noted. GDPR/SOC2/HIPAA: all SpyFu legal/privacy pages returned 404 or were inaccessible; compliance fields set to null. RivalFlow AI and SpyFu GPT confirmed on pricing page."
+      }
     }
   ]
 }
