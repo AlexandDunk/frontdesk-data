@@ -1,0 +1,1074 @@
+{
+  "vertical": "ai-customer-support",
+  "generatedAt": "2026-06-15",
+  "methodologyNotes": "Adversarially re-verified 2026-06-15 (re-checked 2026-06-18) by fetching each vendor's official pricing page via WebFetch: intercom.com/pricing, tidio.com/pricing, gorgias.com/pricing, helpscout.com/pricing. Quote-only vendors confirmed to publish NO prices: forethought.ai/pricing (blend of platform + outcome fees, sales quote), ada.cx/pricing (300K+ annual conversation minimum, consultation only), sierra.ai/pricing (HTTP 404 — no pricing page), decagon.ai/pricing (HTTP 404 — no pricing page), yuma.ai/pricing (demo-only). For all quote-only vendors monthlyUsd=null; any third-party dollar estimates are confined to notes and never placed in numeric fields. Intercom monthly seat prices ($39/$99/$139) and annual ($29/$85/$132) cross-checked via WebSearch after an initial fetch mislabeled annual as monthly. Compliance verified on first-party trust pages: trust.intercom.com / intercom help 7053674, trust.tidio.com, gorgias.com/security, helpscout.com/security + DPA, security.ada.cx, sierra.ai/product/trust-and-reliability, trust.decagon.ai, yuma.ai security blog. Forethought GDPR left null (DPA only, no first-party cert page); Yuma HIPAA left null (not stated). All 10 vendors are real; zero fabricated; zero removed. accessedAt 2026-06-15.",
+  "vendors": [
+    {
+      "slug": "intercom-fin",
+      "name": "Intercom Fin",
+      "domain": "intercom.com",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Salesforce",
+        "HubSpot",
+        "Slack",
+        "Stripe",
+        "Shopify",
+        "Zendesk",
+        "WhatsApp",
+        "Instagram",
+        "SMS"
+      ],
+      "provenance": "Plan prices fetched from intercom.com/pricing (Essential $39/$29, Advanced $99/$85, Expert $139/$132; monthly figures cross-checked via WebSearch). Compliance from intercom.com/help/.../7053674 + trust.intercom.com listing SOC 2, ISO 27001:2022, ISO 27018, ISO 27701, ISO/IEC 42001:2023, GDPR, HIPAA, CCPA, HDS.",
+      "plans": [
+        {
+          "name": "Essential",
+          "monthlyUsd": 39,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 26,
+          "billingModel": "per_seat",
+          "notes": "Monthly billing $39/seat; annual billing $29/seat (~26% off). Includes Fin AI Agent access at $0.99 per resolved outcome (charged separately on top of seat price). Messenger, shared inbox, ticketing, public help center, pre-built reports.",
+          "source": {
+            "url": "https://www.intercom.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Advanced",
+          "monthlyUsd": 99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 14,
+          "billingModel": "per_seat",
+          "notes": "Monthly billing $99/seat; annual billing $85/seat (~14% off). Adds multiple team inboxes, workflow automation, round-robin assignment, multilingual help center, 20 free Lite seats. Fin AI Agent $0.99/outcome extra.",
+          "source": {
+            "url": "https://www.intercom.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Expert",
+          "monthlyUsd": 139,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 5,
+          "billingModel": "per_seat",
+          "notes": "Monthly billing $139/seat; annual billing $132/seat (~5% off). Adds SSO & identity management, HIPAA support, SLAs, multibrand, 50 free Lite seats. Fin AI Agent $0.99/outcome extra.",
+          "source": {
+            "url": "https://www.intercom.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Fin Standalone",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_call",
+          "notes": "From $0.99 per resolved Fin outcome, no seat required. Works on top of existing helpdesks (e.g. Salesforce). An outcome counts when the customer confirms resolution, doesn't ask for more help, or Fin completes a workflow. Usage-based; minimum commitment may apply.",
+          "source": {
+            "url": "https://www.intercom.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.intercom.com/help/en/articles/7053674-accessing-security-and-compliance-documents",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Salesforce",
+          "HubSpot",
+          "Slack",
+          "Shopify",
+          "WhatsApp",
+          "Stripe",
+          "Zendesk"
+        ],
+        "limits": [
+          "Fin AI Agent billed from $0.99/outcome on top of seat fees",
+          "WhatsApp, SMS, phone and outbound carry additional usage fees",
+          "Minimum 1 full seat required for core plans"
+        ],
+        "keyFeatures": [
+          "Fin AI Agent resolves issues autonomously across chat, email, and voice",
+          "Per-outcome pricing — only pay when Fin fully resolves a conversation",
+          "Standalone Fin works on top of an existing helpdesk (no seat needed)",
+          "ISO/IEC 42001:2023 AI governance certification"
+        ],
+        "bestFor": [
+          "mid-market SaaS",
+          "e-commerce",
+          "enterprises layering AI on an existing helpdesk"
+        ],
+        "sources": [
+          {
+            "url": "https://www.intercom.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.intercom.com/help/en/articles/7053674-accessing-security-and-compliance-documents",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Plan prices and Fin per-outcome rate from intercom.com/pricing. Compliance (SOC 2, ISO 27001:2022, ISO 27018, ISO 27701, ISO/IEC 42001:2023, GDPR, HIPAA, CCPA, HDS) confirmed via Intercom help article 7053674."
+      }
+    },
+    {
+      "slug": "tidio-lyro",
+      "name": "Tidio (Lyro AI)",
+      "domain": "tidio.com",
+      "hipaa": false,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Shopify",
+        "Salesforce",
+        "Zendesk",
+        "Messenger",
+        "Instagram",
+        "WhatsApp",
+        "Email",
+        "WordPress",
+        "WooCommerce",
+        "Klaviyo"
+      ],
+      "provenance": "All plan prices fetched from tidio.com/pricing. Compliance from trust.tidio.com — SOC 2 Type II + GDPR confirmed (also CCPA, EU AI Act, NIST AI RMF); HIPAA not listed.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Forever-free. 50 billable conversations/month. Live chat and ticketing included. Lyro AI not included in base free tier.",
+          "source": {
+            "url": "https://www.tidio.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Starter",
+          "monthlyUsd": 29,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "~$29/mo monthly; ~$24.17/mo billed annually (2 months free). 100 billable conversations, 50 one-time free Lyro AI conversations, 100 Flows visitors. Basic analytics, live chat, ticketing.",
+          "source": {
+            "url": "https://www.tidio.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Growth",
+          "monthlyUsd": 59,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "~$59/mo monthly; from ~$49.17/mo annually. Scales from 250 up to 2,000 billable conversations/month. Advanced analytics, auto chat assignment, macros, permissions, ticketing automations. Lyro AI add-on from $32.50/mo for 50 conversations.",
+          "source": {
+            "url": "https://www.tidio.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Plus",
+          "monthlyUsd": 749,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "Starts at $749/mo. Custom billable conversations, departments, multiproject, custom branding, OpenAPI access, dedicated Success Manager, live chat support.",
+          "source": {
+            "url": "https://www.tidio.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Contact for pricing. Includes 3,000+ Lyro AI conversations/month, guaranteed 50% Lyro AI resolution rate, Mobile SDK, advanced Copilot, managed service, Slack support, SSO, compliance features.",
+          "source": {
+            "url": "https://www.tidio.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": false,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://trust.tidio.com/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": 7,
+        "keyIntegrations": [
+          "Shopify",
+          "Salesforce",
+          "Zendesk",
+          "Messenger",
+          "WhatsApp",
+          "Instagram",
+          "WooCommerce",
+          "Klaviyo"
+        ],
+        "limits": [
+          "Free plan capped at 50 conversations/month",
+          "Lyro AI conversations are a separate paid add-on on most plans",
+          "Growth scales 250 to 2,000 conversations; higher volume requires Plus/Premium"
+        ],
+        "keyFeatures": [
+          "Lyro AI agent handles conversations autonomously with configurable resolution rate",
+          "Flows chatbot builder for no-code automation",
+          "Multichannel: live chat, email, Messenger, WhatsApp, Instagram",
+          "Guaranteed 50% AI resolution rate on Premium tier"
+        ],
+        "bestFor": [
+          "SMB e-commerce",
+          "Shopify stores",
+          "teams wanting live chat plus AI in one tool"
+        ],
+        "sources": [
+          {
+            "url": "https://www.tidio.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://trust.tidio.com/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "All plan prices and Lyro AI add-on pricing from tidio.com/pricing. SOC 2 Type II and GDPR confirmed at trust.tidio.com; HIPAA explicitly not listed."
+      }
+    },
+    {
+      "slug": "gorgias",
+      "name": "Gorgias",
+      "domain": "gorgias.com",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Shopify",
+        "Klaviyo",
+        "Recharge",
+        "Loop Returns",
+        "Yotpo",
+        "Attentive",
+        "Instagram",
+        "Facebook",
+        "TikTok",
+        "WhatsApp",
+        "Email"
+      ],
+      "provenance": "Helpdesk plan prices and AI Agent per-resolution rate from gorgias.com/pricing. Compliance from gorgias.com/security — SOC 2 Type II and HIPAA confirmed (request-report gated); GDPR stated elsewhere.",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": 10,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "50 tickets/month included. Overage: $0.40/ticket. AI Agent overage applies per resolved conversation. Email, live chat, social channels included.",
+          "source": {
+            "url": "https://www.gorgias.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Basic",
+          "monthlyUsd": 60,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "300 tickets/month. Monthly $60; annual $50/month ($600/year). Overage: $40/100 tickets. AI Agent: $1.00/resolved conversation monthly or $0.90 annually.",
+          "source": {
+            "url": "https://www.gorgias.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 360,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "2,000 tickets/month. Monthly $360; annual $300/month ($3,600/year). Overage: $36/100 tickets. AI Agent: $1.00/resolved conversation monthly or $0.90 annually. Recommended plan.",
+          "source": {
+            "url": "https://www.gorgias.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Advanced",
+          "monthlyUsd": 900,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "5,000 tickets/month. Monthly $900; annual $750/month ($9,000/year). Overage: $36/100 tickets. AI Agent: $1.00/resolved conversation monthly or $0.90 annually.",
+          "source": {
+            "url": "https://www.gorgias.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "5,000+ tickets/month, custom pricing. Overage: $32/100 tickets. Contact sales.",
+          "source": {
+            "url": "https://www.gorgias.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.gorgias.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 7,
+        "keyIntegrations": [
+          "Shopify",
+          "Klaviyo",
+          "Recharge",
+          "Loop Returns",
+          "Yotpo",
+          "Attentive",
+          "Instagram",
+          "Facebook",
+          "TikTok",
+          "WhatsApp"
+        ],
+        "limits": [
+          "Helpdesk tickets are hard-capped per plan with per-ticket overage fees",
+          "AI Agent conversations billed separately per resolved interaction",
+          "150+ integrations but focused on e-commerce stack"
+        ],
+        "keyFeatures": [
+          "AI Agent automates order management, returns, refunds, and discounts on Shopify",
+          "Ticket-based pricing with separate AI resolution billing",
+          "Deep Shopify integration with order editing and subscription management",
+          "Revenue statistics dashboard showing support impact on sales"
+        ],
+        "bestFor": [
+          "Shopify e-commerce brands",
+          "DTC retailers",
+          "teams wanting helpdesk plus AI in one e-commerce-focused tool"
+        ],
+        "sources": [
+          {
+            "url": "https://www.gorgias.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.gorgias.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "All plan prices and ticket/AI overage rates from gorgias.com/pricing. SOC 2 Type II and HIPAA confirmed at gorgias.com/security (report-gated); GDPR corroborated via Gorgias DPA."
+      }
+    },
+    {
+      "slug": "help-scout",
+      "name": "Help Scout",
+      "domain": "helpscout.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Salesforce",
+        "HubSpot",
+        "Jira",
+        "Linear",
+        "Aircall",
+        "Slack",
+        "Shopify",
+        "Stripe",
+        "Zapier"
+      ],
+      "provenance": "Plan prices and AI Answers rate from helpscout.com/pricing. Compliance from helpscout.com/security (SOC 2 Type 2 + HIPAA, BAA required) and helpscout.com DPA (EU GDPR).",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Forever-free. Up to 5 users, 1 inbox, 1 Docs site. AI Answers add-on at $0.75/resolution (3-month free trial on new accounts).",
+          "source": {
+            "url": "https://www.helpscout.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Standard",
+          "monthlyUsd": 25,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 16,
+          "billingModel": "per_seat",
+          "notes": "$25/user/month monthly; $21/user/month billed annually (16% off). Multiple inboxes, live chat, Instagram & Messenger, AI inbox assistant, WhatsApp. AI Answers chatbot add-on at $0.75/resolution.",
+          "source": {
+            "url": "https://www.helpscout.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Plus",
+          "monthlyUsd": 45,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 16,
+          "billingModel": "per_seat",
+          "notes": "$45/user/month monthly; $37.80/user/month billed annually (16% off). Adds advanced workflows, advanced SLAs, unlimited AI drafts, round-robin routing, Salesforce/Jira/HubSpot integrations, SSO/SAML. AI Answers at $0.75/resolution.",
+          "source": {
+            "url": "https://www.helpscout.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 75,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 16,
+          "billingModel": "per_seat",
+          "notes": "$75/user/month monthly; $63/user/month billed annually (16% off). Adds HIPAA compliance, unlimited workflows/SLAs, SSO/SAML, up to 50 light users, dedicated onboarding, strategic account manager, preferred Aircall pricing. AI Answers at $0.75/resolution.",
+          "source": {
+            "url": "https://www.helpscout.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.helpscout.com/security/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": 15,
+        "keyIntegrations": [
+          "Salesforce",
+          "HubSpot",
+          "Jira",
+          "Linear",
+          "Aircall",
+          "Slack",
+          "Shopify"
+        ],
+        "limits": [
+          "Free plan limited to 5 users and 1 inbox",
+          "AI Answers charged at $0.75/resolution across all plans",
+          "HIPAA compliance available on Pro plan with signed BAA"
+        ],
+        "keyFeatures": [
+          "AI Answers autonomous chatbot at $0.75/resolution with 3-month free trial",
+          "AI inbox assistant, AI drafts, AI summarize on paid plans",
+          "HIPAA-eligible on Pro plan with BAA",
+          "Clean, simple inbox UX with 100+ integrations"
+        ],
+        "bestFor": [
+          "SMB and mid-market SaaS",
+          "healthcare teams (Pro + HIPAA/BAA)",
+          "teams wanting transparent per-resolution AI pricing"
+        ],
+        "sources": [
+          {
+            "url": "https://www.helpscout.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.helpscout.com/security/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "All seat prices and AI Answers per-resolution rate from helpscout.com/pricing. SOC 2 Type 2, HIPAA and BAA requirement confirmed at helpscout.com/security; GDPR via Help Scout DPA."
+      }
+    },
+    {
+      "slug": "forethought",
+      "name": "Forethought",
+      "domain": "forethought.ai",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Zendesk",
+        "Salesforce",
+        "ServiceNow",
+        "Intercom",
+        "Freshworks",
+        "Help Scout",
+        "Gorgias",
+        "Kustomer",
+        "HubSpot",
+        "Jira",
+        "Confluence",
+        "Slack",
+        "Shopify",
+        "Amazon Connect",
+        "Genesys",
+        "RingCentral"
+      ],
+      "provenance": "forethought.ai/pricing confirmed contact-sales only (blend of platform + outcome fees). Compliance: SOC 2 Type II + HIPAA (BAA on enterprise) corroborated via security blog and third-party analyses; GDPR via DPA only, left null.",
+      "plans": [
+        {
+          "name": "Team",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Entry tier. AI agents for chat and mobile, Autoflows, custom actions, CSAT collection, insights dashboard, multilingual, AI QA. Pricing blends platform fee + outcome-based charges — quote only.",
+          "source": {
+            "url": "https://forethought.ai/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Professional",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Most popular. Adds email, voice, and Slack agent access; AI-surfaced insights, multi-brand management, custom handoff models. Quote only.",
+          "source": {
+            "url": "https://forethought.ai/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Adds Solve API, knowledge gap detection with AI article creation, Autoflow gap detection, Analytics API, enterprise security controls. HIPAA BAA available at this tier. Quote only.",
+          "source": {
+            "url": "https://forethought.ai/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://forethought.ai/blog/how-forethought-offers-enhanced-privacy-and-security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Zendesk",
+          "Salesforce",
+          "ServiceNow",
+          "Intercom",
+          "Freshworks",
+          "Gorgias",
+          "Confluence",
+          "Shopify",
+          "Amazon Connect",
+          "Genesys"
+        ],
+        "limits": [
+          "No published pricing — all plans require a sales quote",
+          "No traditional free trial; offers Proof of Value (POV) engagement instead"
+        ],
+        "keyFeatures": [
+          "AI triage routes tickets to the right team before a human sees them",
+          "70+ integrations including major helpdesks, call centers, and knowledge bases",
+          "Outcome-based + platform fee hybrid pricing model",
+          "Supports chat, email, voice, Slack, mobile, and headless API channels"
+        ],
+        "bestFor": [
+          "mid-market to enterprise SaaS",
+          "teams with complex multi-channel support",
+          "organizations on Zendesk or Salesforce Service Cloud"
+        ],
+        "sources": [
+          {
+            "url": "https://forethought.ai/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://forethought.ai/integrations/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://forethought.ai/blog/how-forethought-offers-enhanced-privacy-and-security",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Plan tier names/features from forethought.ai/pricing; no prices published (quote only). SOC 2 Type II + HIPAA (BAA on enterprise) confirmed via Forethought security blog and third-party analyses; GDPR via DPA only → left null."
+      }
+    },
+    {
+      "slug": "ada-cx",
+      "name": "Ada",
+      "domain": "ada.cx",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Zendesk",
+        "Salesforce",
+        "Freshworks",
+        "Help Scout",
+        "Twilio Flex",
+        "Shopify",
+        "Intercom",
+        "HubSpot"
+      ],
+      "provenance": "ada.cx/pricing confirmed quote-only (300,000+ annual conversation fit, book consultation; no prices). Compliance from security.ada.cx — SOC 2/SOC 3, HIPAA, GDPR, CCPA, CPRA, PIPEDA, VPAT. AIUC-1 certification confirmed separately (Ada = first AI customer service platform certified).",
+      "plans": [
+        {
+          "name": "Enterprise (Quote)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only. Ada is a fit for companies with 300,000+ annual support conversations. Per-conversation pricing model; annual contracts typical. Third-party estimates (Vendr) suggest ~$30K starting / ~$70K median annual contracts — unconfirmed by Ada and not used as numeric values.",
+          "source": {
+            "url": "https://www.ada.cx/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://security.ada.cx/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Zendesk",
+          "Salesforce",
+          "Freshworks",
+          "Twilio Flex",
+          "Shopify",
+          "Help Scout"
+        ],
+        "limits": [
+          "Recommended for companies with 300,000+ annual support conversations",
+          "Annual contracts — no month-to-month or self-serve",
+          "No published pricing; all deals through enterprise sales"
+        ],
+        "keyFeatures": [
+          "Agentic AI supports chat, email, voice, and SMS in one platform",
+          "AIUC-1 certified — first AI customer service platform with agentic AI trust certification",
+          "No customer data used for shared model training",
+          "SOC 2 Type II + HIPAA + GDPR certified"
+        ],
+        "bestFor": [
+          "large enterprises (300K+ conversations/year)",
+          "regulated industries (healthcare, financial services)",
+          "companies needing multi-channel AI across chat, email, voice, SMS"
+        ],
+        "sources": [
+          {
+            "url": "https://www.ada.cx/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://security.ada.cx/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing confirmed quote-only with 300K conversation fit at ada.cx/pricing. SOC 2/SOC 3, HIPAA, GDPR, CCPA, CPRA, PIPEDA, VPAT verified at security.ada.cx; AIUC-1 confirmed via Ada/AIUC announcements (not on the security page itself)."
+      }
+    },
+    {
+      "slug": "sierra",
+      "name": "Sierra",
+      "domain": "sierra.ai",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Salesforce",
+        "Zendesk",
+        "Snowflake",
+        "Databricks",
+        "Google Cloud",
+        "AWS",
+        "WhatsApp",
+        "SMS",
+        "Email"
+      ],
+      "provenance": "sierra.ai/pricing returns HTTP 404 — no pricing published. Plan source uses sierra.ai/product/trust-and-reliability, which lists SOC 2, HIPAA, GDPR, PCI, FedRAMP High, CCPA, CSA STAR, ISO 27001, ISO 42001.",
+      "plans": [
+        {
+          "name": "Enterprise (Quote)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only (sierra.ai/pricing returns 404). Outcome-based pricing — pay for successful resolutions, success defined per contract. Third-party estimates (~$150K+/yr contracts, $50K–$200K implementation) are unconfirmed and not used as numeric values. No free trial; deployments typically 3–7 months. No helpdesk included.",
+          "source": {
+            "url": "https://sierra.ai/product/trust-and-reliability",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://sierra.ai/product/trust-and-reliability",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Salesforce",
+          "Zendesk",
+          "Snowflake",
+          "Databricks",
+          "Google Cloud",
+          "AWS"
+        ],
+        "limits": [
+          "No published pricing — enterprise sales only (pricing page 404)",
+          "No helpdesk included — must maintain a separate ticketing system",
+          "Deployments typically 3–7 months",
+          "No self-serve or free trial"
+        ],
+        "keyFeatures": [
+          "Conversational AI agent for complex multi-turn support with outcome-based billing",
+          "Supports chat, SMS, WhatsApp, email, and voice",
+          "PII automatically encrypted and masked mid-conversation",
+          "ISO 42001 AI governance certification + FedRAMP High"
+        ],
+        "bestFor": [
+          "large enterprises requiring heavily customized AI agents",
+          "regulated industries (HIPAA, PCI, FedRAMP)",
+          "companies with existing enterprise data platforms (Snowflake, Databricks)"
+        ],
+        "sources": [
+          {
+            "url": "https://sierra.ai/product/trust-and-reliability",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://sierra.ai/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "sierra.ai/pricing returns HTTP 404; no pricing published. Compliance (SOC 2, HIPAA, GDPR, PCI, FedRAMP High, CCPA, CSA STAR, ISO 27001, ISO 42001) confirmed at sierra.ai/product/trust-and-reliability."
+      }
+    },
+    {
+      "slug": "decagon",
+      "name": "Decagon",
+      "domain": "decagon.ai",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Salesforce",
+        "Zendesk",
+        "Intercom",
+        "Kustomer",
+        "Confluence",
+        "Contentful",
+        "Amazon Connect",
+        "RingCentral",
+        "Shopify",
+        "Stripe"
+      ],
+      "provenance": "decagon.ai/pricing returns HTTP 404 — no pricing published. Integrations from decagon.ai/product/integrations. Compliance from trust.decagon.ai + decagon.ai/legal/security — SOC 2 Type II, HIPAA (with BAA), GDPR confirmed.",
+      "plans": [
+        {
+          "name": "Enterprise (Quote)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only (decagon.ai/pricing returns 404). Per-conversation or per-resolution pricing layered on a platform fee. Third-party estimates (~$50K baseline platform fee, ~$400K median enterprise contracts) are unconfirmed and not used as numeric values. Targets high-support-volume organizations.",
+          "source": {
+            "url": "https://decagon.ai/product/integrations",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://trust.decagon.ai/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Salesforce",
+          "Zendesk",
+          "Intercom",
+          "Kustomer",
+          "Confluence",
+          "Amazon Connect",
+          "RingCentral",
+          "Shopify"
+        ],
+        "limits": [
+          "No published pricing — enterprise sales only (pricing page 404)",
+          "Minimum contract typically high-volume / enterprise",
+          "No self-serve or free trial"
+        ],
+        "keyFeatures": [
+          "Zero-day LLM data retention — customer data not held by model providers",
+          "MCP open connectivity for integrating any data system",
+          "HIPAA BAA available for healthcare enterprise clients",
+          "Pre-built integrations for major helpdesks plus API and MCP support"
+        ],
+        "bestFor": [
+          "large enterprises with high support volume",
+          "healthcare and regulated industries needing HIPAA BAA",
+          "companies wanting AI on top of Zendesk or Salesforce"
+        ],
+        "sources": [
+          {
+            "url": "https://decagon.ai/product/integrations",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://decagon.ai/legal/security",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "decagon.ai/pricing returns HTTP 404; quote-only. Integrations from decagon.ai/product/integrations. SOC 2 Type II, HIPAA (BAA), GDPR confirmed via trust.decagon.ai and decagon.ai/legal/security."
+      }
+    },
+    {
+      "slug": "yuma",
+      "name": "Yuma AI",
+      "domain": "yuma.ai",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Zendesk",
+        "Gorgias",
+        "Kustomer",
+        "Salesforce Service Cloud",
+        "Front",
+        "Shopify",
+        "WooCommerce",
+        "BigCommerce",
+        "Recharge",
+        "Loop Returns",
+        "Klaviyo",
+        "Stripe",
+        "ShipStation",
+        "AfterShip",
+        "Yotpo"
+      ],
+      "provenance": "yuma.ai/pricing confirmed demo-only ('Book a personalized demo') — no published prices. SOC 2 + GDPR stated on Yuma security blog; HIPAA not stated → null. Historical per-resolution tiers from third-party blogs not confirmed by the live page; monthlyUsd null.",
+      "plans": [
+        {
+          "name": "Resolution-Based (Quote)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "No prices published on yuma.ai/pricing — demo/sales contact required. Third-party blogs report historical tiers (~$350/mo for 500 resolutions, ~$650/mo for 1,000, ~$900/mo for 1,500; enterprise custom), billed per resolved ticket. These figures are unconfirmed by the live page and not used as numeric values.",
+          "source": {
+            "url": "https://yuma.ai/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://yuma.ai/blogs/ensuring-security-in-your-ai-powered-ecommerce-customer-support",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Zendesk",
+          "Gorgias",
+          "Shopify",
+          "Recharge",
+          "Loop Returns",
+          "Klaviyo",
+          "AfterShip",
+          "Yotpo",
+          "Stripe"
+        ],
+        "limits": [
+          "No published pricing — demo required",
+          "Focused exclusively on e-commerce use cases",
+          "Data deleted after 13 weeks by default"
+        ],
+        "keyFeatures": [
+          "Outcome-based billing — only pay for fully resolved tickets",
+          "50+ integrations covering e-commerce, shipping, returns, subscriptions, loyalty",
+          "Automates order lookups, returns, refunds, tracking natively in the Shopify ecosystem",
+          "SOC 2 compliant with Vanta-monitored public trust center"
+        ],
+        "bestFor": [
+          "Shopify and DTC e-commerce brands",
+          "high-volume e-commerce support with complex order workflows",
+          "teams on Zendesk or Gorgias wanting an AI resolution layer"
+        ],
+        "sources": [
+          {
+            "url": "https://yuma.ai/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://yuma.ai/blogs/ensuring-security-in-your-ai-powered-ecommerce-customer-support",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "yuma.ai/pricing fetched — no prices, demo-only. SOC 2 + GDPR stated on Yuma security blog; HIPAA not stated → null. Third-party per-resolution tier estimates kept in notes only; monthlyUsd null."
+      }
+    }
+  ]
+}

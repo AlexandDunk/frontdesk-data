@@ -1,0 +1,1036 @@
+{
+  "vertical": "ai-agent-platforms",
+  "generatedAt": "2026-06-15",
+  "methodologyNotes": "Official pricing pages were re-verified via WebFetch on 2026-06-15. Relevance AI's live pricing page (relevanceai.com/pricing) renders ONLY the Enterprise tier; the Free tier and overage rates are confirmed on the official docs (relevanceai.com/docs/admin/subscriptions/new-pricing, relevanceai.com/docs/get-started/subscriptions/plans), but the numeric monthly prices for Pro and Team are NOT published on any official Relevance page. Two third-party sources conflict on Team's price (costbench.com cites $234/mo billed annually; lindy.ai/blog cites $349/mo), so per a null-beats-a-guess policy Pro and Team monthlyUsd are set to null with the third-party figures noted. Lindy (lindy.ai/pricing + lindy.ai/security): Plus/Pro/Max confirmed at $49.99/$99.99/$199.99, no forever-free tier (7-day trial only), SOC2 Type II + HIPAA + GDPR + PIPEDA stated; BAA not explicitly stated on the security page so baa set to null. CrewAI (crewai.com/pricing + trust.crewai.com): only Free Basic ($0) and quote-only Enterprise; FedRAMP High and 'SAM certified' claims were not supported by any source and were removed; SOC2 Type I (Nov 2025), HIPAA audit (Feb 2026), GDPR confirmed. Stack AI (stackai.com/pricing): only Free ($0) and Enterprise; the mid-2025 Starter ($199) and Team ($899) tiers are absent from the live page and unconfirmed, so they are excluded; SOC2 Type II + HIPAA + GDPR + ISO 27001 confirmed on the homepage and blog. Gumloop (gumloop.com/pricing): Free ($0, 5k credits), Pro ($37/mo), Enterprise; SOC2 + GDPR retained but HIPAA could not be independently confirmed, so hipaa set to null. Beam AI (beam.ai/pricing-2): Core $0, Grow $499+, Scale $1,990+, Managed Services $9,990+ confirmed; ISO 27001 + SOC2 Type II + GDPR on homepage, no HIPAA. Vellum (vellum.ai/pricing): Free + Pro at $50/mo headline ($10 platform + $35 Medium compute + $5 storage) confirmed; compliance not stated, all null. Lyzr (docs.lyzr.ai/introduction/plans + lyzr.ai/pricing + security.lyzr.ai): Community $0, Starter $19, Pro $99 ($79/mo annual), Enterprise; per-run $0.08 cloud / $0.03 VPC; SOC2 Type II + ISO 27001:2022 + HIPAA + ISO 42001:2023 + GDPR confirmed. Cognosys, MultiOn, and Wordware excluded as no longer standalone/self-serve. All quote-only/enterprise plans carry null monthlyUsd. accessedAt 2026-06-15.",
+  "vendors": [
+    {
+      "slug": "relevance-ai",
+      "name": "Relevance AI",
+      "domain": "relevanceai.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Zapier",
+        "HubSpot",
+        "Salesforce",
+        "Slack",
+        "Google Workspace",
+        "WhatsApp Business",
+        "n8n",
+        "PostgreSQL",
+        "Notion"
+      ],
+      "provenance": "Live pricing page (relevanceai.com/pricing) renders only the Enterprise tier. Free tier limits and overage rates confirmed on official docs (relevanceai.com/docs/admin/subscriptions/new-pricing, confirming the Sep 8 2025 dual-meter overhaul into Actions + Vendor Credits and the sunset of the Business plan). Numeric Pro/Team monthly prices are not published on any official page; third-party sources conflict (costbench.com $234 vs lindy.ai/blog $349 for Team), so Pro and Team monthlyUsd are set to null. SOC2 Type II and GDPR per trust.relevanceai.com (referenced by official docs).",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "200 actions/month, one-time 1,000 vendor credits bonus, 1 build user, 1 project, marketplace access. Permanent free tier (not a time-limited trial). Confirmed on official docs.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://relevanceai.com/docs/admin/subscriptions/new-pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Self-serve tier exists per official docs but no price is published on any official Relevance page. Third-party (costbench.com) cites $19/mo billed annually with 2,500 actions/month (30,000/year), $240 vendor credits/year, 2 build users. Actions top-up: $80/1,000; vendor credits top-up: $20/10,000 (overage rates confirmed on official docs). monthlyUsd nulled because not officially published.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://relevanceai.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://costbench.com/software/ai-agent-platforms/relevance-ai/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Team",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Self-serve tier exists per official docs but no price is published on any official Relevance page. Third-party sources conflict on price (costbench.com $234/mo billed annually; lindy.ai/blog $349/mo); both cite 7,000 actions/month, $840 vendor credits/year, 5 build users + 45 end users. monthlyUsd nulled because not officially published and third-party figures disagree.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://relevanceai.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://costbench.com/software/ai-agent-platforms/relevance-ai/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom volume, unlimited agents and tools, unlimited workforces, SSO/RBAC/audit logs, calling and meeting agents, dedicated account manager, custom vendor credits. Contact sales. Only tier shown on the live pricing page.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://relevanceai.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://trust.relevanceai.com/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Zapier",
+          "HubSpot",
+          "Salesforce",
+          "Slack",
+          "Google Workspace",
+          "WhatsApp Business",
+          "n8n",
+          "Notion"
+        ],
+        "limits": [
+          "Free: 200 actions/month, one-time 1,000 vendor credits",
+          "Pro (third-party): ~2,500 actions/month, $240 vendor credits/year",
+          "Team (third-party): 7,000 actions/month, $840 vendor credits/year",
+          "Actions overage: $80/1,000; vendor credits top-up: $20/10,000 (official)"
+        ],
+        "keyFeatures": [
+          "Dual-meter billing (Actions + Vendor Credits split Sep 2025)",
+          "2,000+ integrations via marketplace",
+          "Calling and meeting agents (Team+)",
+          "Bring-your-own LLM support"
+        ],
+        "bestFor": [
+          "no-code agent builders",
+          "sales automation",
+          "enterprise AI workforce",
+          "multi-agent orchestration"
+        ],
+        "sources": [
+          {
+            "url": "https://relevanceai.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://relevanceai.com/docs/admin/subscriptions/new-pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://trust.relevanceai.com/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Live pricing page shows only Enterprise; Free tier and overage rates confirmed on official docs; Pro/Team numeric prices not officially published (third-party sources conflict), so nulled. Compliance from trust.relevanceai.com."
+      }
+    },
+    {
+      "slug": "lindy",
+      "name": "Lindy",
+      "domain": "lindy.ai",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Gmail",
+        "Slack",
+        "HubSpot",
+        "Salesforce",
+        "Zoom",
+        "Notion",
+        "Airtable",
+        "Stripe",
+        "Calendly",
+        "Pipedrive",
+        "Outlook",
+        "Google Calendar",
+        "iMessage",
+        "Pipedream",
+        "Apify"
+      ],
+      "provenance": "Pricing confirmed on lindy.ai/pricing: Plus $49.99, Pro $99.99, Max $199.99, Enterprise custom; no forever-free tier (7-day trial, no credit card). Compliance on lindy.ai/security: SOC2 Type II (Johanson Group), HIPAA, GDPR, PIPEDA stated. BAA is not explicitly stated on the security page, so baa set to null.",
+      "plans": [
+        {
+          "name": "Plus",
+          "monthlyUsd": 49.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Standard usage, 2 email inboxes, iMessage/SMS access, email drafting, meeting notes, calendar management, 100+ integrations. 7-day free trial with full Plus features, no credit card. Month-to-month; no annual billing published.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.lindy.ai/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 99.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "3x usage vs Plus, 3 email inboxes, computer use capability, all Plus features included.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.lindy.ai/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Max",
+          "monthlyUsd": 199.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "7x usage vs Plus, 5 email inboxes, all Pro features included.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.lindy.ai/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom usage and inboxes, SSO, SCIM, HIPAA compliance, audit logs, dedicated support and onboarding. Contact sales.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.lindy.ai/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.lindy.ai/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 7,
+        "keyIntegrations": [
+          "Gmail",
+          "Slack",
+          "HubSpot",
+          "Salesforce",
+          "Zoom",
+          "Notion",
+          "iMessage",
+          "Pipedream",
+          "Apify"
+        ],
+        "limits": [
+          "Plus: standard usage (undefined unit)",
+          "Pro: 3x Plus usage",
+          "Max: 7x Plus usage",
+          "No annual billing option published"
+        ],
+        "keyFeatures": [
+          "Personal AI employee model (inboxes, meetings, calendar)",
+          "Computer use on Pro+",
+          "6,000+ integrations via Pipedream/Apify catalogs",
+          "SOC2 Type II + HIPAA + GDPR + PIPEDA"
+        ],
+        "bestFor": [
+          "executive assistants",
+          "personal productivity",
+          "email automation",
+          "meeting automation"
+        ],
+        "sources": [
+          {
+            "url": "https://www.lindy.ai/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.lindy.ai/security",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing confirmed from lindy.ai/pricing; compliance from lindy.ai/security (SOC2 Type II by Johanson Group, HIPAA, GDPR, PIPEDA). BAA not explicitly stated, set to null."
+      }
+    },
+    {
+      "slug": "crewai",
+      "name": "CrewAI",
+      "domain": "crewai.com",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Gmail",
+        "Slack",
+        "Microsoft Teams",
+        "Jira",
+        "ClickUp",
+        "Asana",
+        "Notion",
+        "Linear",
+        "GitHub",
+        "Salesforce",
+        "HubSpot",
+        "Zendesk",
+        "Stripe",
+        "Shopify",
+        "Google Sheets",
+        "Google Calendar",
+        "Box",
+        "AWS S3",
+        "Amazon Bedrock",
+        "Composio",
+        "Zapier",
+        "LangChain"
+      ],
+      "provenance": "Pricing confirmed on crewai.com/pricing: only Free Basic ($0, 50 workflow executions/month) and quote-only Enterprise. Compliance per trust.crewai.com / official channels: SOC2 Type I (Nov 2025 audit report), HIPAA (Feb 2026 audit report), GDPR. FedRAMP High and 'SAM certified' claims in the draft were not supported by any source and have been removed.",
+      "plans": [
+        {
+          "name": "Basic",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free tier. 50 workflow executions/month, visual editor, AI copilot, GitHub integration, studio editor, templates, tracing, OpenTelemetry, guardrails, human-in-the-loop, workflow chat, usage dashboards.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.crewai.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "All Basic features plus CrewAI or private infrastructure deployment, on-site support and training, 50 hours of development/month, dedicated VPC, NAT, SSO, RBAC. SOC2, HIPAA, GDPR compliance. Contact sales. (FedRAMP High and SAM-certified claims removed as unverified.)",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.crewai.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://trust.crewai.com/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Gmail",
+          "Slack",
+          "Salesforce",
+          "HubSpot",
+          "Jira",
+          "Notion",
+          "GitHub",
+          "Zapier",
+          "Amazon Bedrock",
+          "Composio"
+        ],
+        "limits": [
+          "Free: 50 workflow executions/month",
+          "Enterprise: custom"
+        ],
+        "keyFeatures": [
+          "Open-source framework + hosted platform",
+          "Multi-agent crew orchestration",
+          "SOC2 Type I (Nov 2025), HIPAA (Feb 2026)",
+          "Enterprise VPC deployment, RBAC, audit logging"
+        ],
+        "bestFor": [
+          "developer teams",
+          "multi-agent orchestration",
+          "regulated industries",
+          "open-source AI agents"
+        ],
+        "sources": [
+          {
+            "url": "https://www.crewai.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://trust.crewai.com/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://docs.crewai.com/en/enterprise/features/tools-and-integrations",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing from crewai.com/pricing (Free Basic $0 + quote-only Enterprise). Compliance: SOC2 Type I (Nov 2025), HIPAA (Feb 2026), GDPR. FedRAMP High / SAM-certified claims removed as unverified."
+      }
+    },
+    {
+      "slug": "stack-ai",
+      "name": "Stack AI",
+      "domain": "stackai.com",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Google Drive",
+        "Notion",
+        "Slack",
+        "Microsoft Teams",
+        "Salesforce",
+        "SAP",
+        "Workday",
+        "SharePoint",
+        "Snowflake",
+        "Confluence",
+        "Zendesk",
+        "Netsuite"
+      ],
+      "provenance": "Live pricing page (stackai.com/pricing) fetched and shows only Free ($0) and Enterprise (custom). The mid-2025 Starter ($199) and Team ($899) tiers referenced by third-party sources are absent from the live page and unconfirmed, so they are excluded. SOC2 Type II + HIPAA + GDPR + ISO 27001 confirmed on the homepage and blog (stackai.com/blog/soc2-type2-hipaa).",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "500 runs/month, 2 projects, 1 seat, community Discord support. Supports text/image/audio/video inputs, web scraping, file upload, Google Drive, Notion data loaders.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.stackai.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom runs, unlimited projects, custom seats, all modules (Agents, Flow, Storage), all inputs/outputs, SSO, on-prem deployment, VPC, access control, SOC2 Type II + HIPAA + GDPR + ISO 27001 compliance, dedicated solution engineers.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.stackai.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.stackai.com/blog/soc2-type2-hipaa",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Google Drive",
+          "Notion",
+          "Slack",
+          "Microsoft Teams",
+          "Salesforce",
+          "SAP",
+          "SharePoint",
+          "Snowflake",
+          "Confluence"
+        ],
+        "limits": [
+          "Free: 500 runs/month, 2 projects, 1 seat",
+          "Enterprise: custom; third-party API calls billed separately"
+        ],
+        "keyFeatures": [
+          "No-code AI workflow builder",
+          "SOC2 Type II + HIPAA + GDPR + ISO 27001 certified",
+          "On-prem and VPC deployment on Enterprise",
+          "100+ enterprise integrations"
+        ],
+        "bestFor": [
+          "enterprise AI workflows",
+          "healthcare AI",
+          "no-code RAG pipelines",
+          "regulated industries"
+        ],
+        "sources": [
+          {
+            "url": "https://www.stackai.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.stackai.com/blog/soc2-type2-hipaa",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://trust.stackai.com/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Live page confirmed two tiers only (Free $0, Enterprise custom); Starter/Team mid-tiers excluded as unconfirmed on the live page. SOC2 Type II, HIPAA, GDPR, ISO 27001 confirmed on homepage and blog."
+      }
+    },
+    {
+      "slug": "gumloop",
+      "name": "Gumloop",
+      "domain": "gumloop.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Slack",
+        "HubSpot",
+        "Salesforce",
+        "Gmail",
+        "Google Sheets",
+        "Airtable",
+        "Notion",
+        "Microsoft Teams",
+        "WhatsApp",
+        "Zoom",
+        "Linear",
+        "Asana",
+        "Gong",
+        "Clearbit",
+        "OpenAI",
+        "Anthropic Claude",
+        "Google Gemini",
+        "Zapier"
+      ],
+      "provenance": "Pricing confirmed on gumloop.com/pricing: Free ($0, 5,000 credits/month), Pro ($37/mo base, 20k+ credits, scalable), Enterprise (custom). Solo/Team plans merged into Pro per gumloop.com/blog/simplifying-gumloop-pricing. Trust center (trust.gumloop.com) is JS-rendered and could not be parsed; SOC2 and GDPR retained but HIPAA could not be independently confirmed, so hipaa set to null.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "5,000 credits/month, 1 seat, 1 active trigger, 2 concurrent runs, 5 concurrent agent interactions, unlimited agents/flows, forum support. Bring-your-own API keys supported.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.gumloop.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 37,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "20,000+ credits/month at $37/mo base; credit slider scales 20k to 1.5M credits/month (annual ~20% off). Unlimited seats, 5 concurrent runs, 25 concurrent agent interactions, agent reflections, team analytics, MCP server hosting. Formerly separate Solo and Team plans merged into Pro.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.gumloop.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://www.gumloop.com/blog/simplifying-gumloop-pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "All Pro features plus RBAC, SCIM/SAML, admin dashboard, audit logs, custom data retention, security reports, data exports, AI model access control, virtual private cloud, workflow queuing. Custom pricing.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.gumloop.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://trust.gumloop.com/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Slack",
+          "HubSpot",
+          "Salesforce",
+          "Gmail",
+          "Google Sheets",
+          "Airtable",
+          "Notion",
+          "Zapier",
+          "OpenAI",
+          "Anthropic Claude"
+        ],
+        "limits": [
+          "Free: 5,000 credits/month, 1 seat, 1 trigger, 2 concurrent runs",
+          "Pro base: 20,000 credits/month; credits scale 20k-1.5M with price",
+          "Standard AI calls: 2 credits; advanced models: 20 credits"
+        ],
+        "keyFeatures": [
+          "No-code visual flow builder",
+          "Multi-model support (OpenAI, Anthropic, Gemini)",
+          "MCP server hosting on Pro",
+          "SOC2 + GDPR (HIPAA unconfirmed)"
+        ],
+        "bestFor": [
+          "marketing automation",
+          "no-code AI pipelines",
+          "team AI workflows",
+          "web scraping agents"
+        ],
+        "sources": [
+          {
+            "url": "https://www.gumloop.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://trust.gumloop.com/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.gumloop.com/blog/simplifying-gumloop-pricing",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing from gumloop.com/pricing; Solo/Team merger confirmed via official blog. SOC2 and GDPR retained; HIPAA set to null (could not be independently confirmed)."
+      }
+    },
+    {
+      "slug": "beam-ai",
+      "name": "Beam AI",
+      "domain": "beam.ai",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "SAP",
+        "Salesforce",
+        "DATEV",
+        "Oracle",
+        "Workday",
+        "ServiceNow",
+        "Jira",
+        "Google Workspace",
+        "Microsoft 365"
+      ],
+      "provenance": "Pricing confirmed on beam.ai/pricing-2: Core ($0), Grow (from $499), Scale (from $1,990), Managed Services (from $9,990). Homepage (beam.ai) states GDPR, ISO 27001, SOC2 Type II; HIPAA not mentioned. Page descriptions contain apparent copy errors (Grow/Scale share text); prices taken as stated.",
+      "plans": [
+        {
+          "name": "Core",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free tier for getting started. Multiple base integrations, moderate complexity supported. 1,500+ prebuilt connectors available.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://beam.ai/pricing-2",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Grow",
+          "monthlyUsd": 499,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Starting from $499/month. Designed for production use cases. Self-learning agents, human-in-the-loop approval, 1,500+ integrations.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://beam.ai/pricing-2",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Scale",
+          "monthlyUsd": 1990,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Starting from $1,990/month. Enterprise-grade deployment with multi-region support (Europe, US, GCC), on-premises/hybrid options, ISO 27001 + SOC2 Type II + GDPR compliance.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://beam.ai/pricing-2",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Managed Services",
+          "monthlyUsd": 9990,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Starting from $9,990/month. Full-service managed offering: Beam trains agents and handles operations while keeping critical decisions with specially trained human staff (human-in-the-loop BPO model).",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://beam.ai/pricing-2",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://beam.ai/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "SAP",
+          "Salesforce",
+          "DATEV",
+          "Oracle",
+          "Workday",
+          "ServiceNow",
+          "Jira",
+          "Google Workspace",
+          "Microsoft 365"
+        ],
+        "limits": [
+          "Core: free with feature/complexity limits",
+          "Grow: from $499/mo, exact limits not published",
+          "Scale: from $1,990/mo",
+          "Managed Services: from $9,990/mo"
+        ],
+        "keyFeatures": [
+          "Self-learning agents that adapt with each interaction",
+          "1,500+ prebuilt enterprise connectors",
+          "Human-in-the-loop managed services tier",
+          "ISO 27001 + SOC2 Type II + GDPR"
+        ],
+        "bestFor": [
+          "enterprise process automation",
+          "BPO replacement",
+          "finance and operations workflows",
+          "SAP/Salesforce automation"
+        ],
+        "sources": [
+          {
+            "url": "https://beam.ai/pricing-2",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://beam.ai/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing from beam.ai/pricing-2 (Core $0, Grow $499+, Scale $1,990+, Managed Services $9,990+). ISO 27001 + SOC2 Type II + GDPR on homepage; HIPAA not stated (null)."
+      }
+    },
+    {
+      "slug": "vellum",
+      "name": "Vellum",
+      "domain": "vellum.ai",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "Pricing confirmed on vellum.ai/pricing: forever-free base tier and Pro at $50/mo headline ($10 platform fee + $35 Medium compute + $5 10 GiB storage), with optional compute/storage add-ons and pay-as-you-go credits. Compliance not stated on the pricing page; all compliance fields null.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "No credit card required to start. Includes 1 vCPU / 2 GiB RAM (Small), 4 GiB storage. Credits are pay-as-you-go ($1 = 1 credit). Self-hosting (open-source) available with no platform fees.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.vellum.ai/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 50,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$50/mo headline = $10 platform fee + $35 Medium compute (2.5 vCPU, 5 GiB) + $5 storage (10 GiB). Compute add-ons: Large +$60/mo, XL +$125/mo. Storage scales to +$120/mo (500 GiB). Credits billed separately pay-as-you-go. Upgrades active immediately; downgrades at end of billing period.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.vellum.ai/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [],
+        "limits": [
+          "Free: 1 vCPU, 2 GiB RAM, 4 GiB storage",
+          "Pro: $50/mo base; modular compute/storage add-ons on top",
+          "LLM token/credit costs billed separately pay-as-you-go"
+        ],
+        "keyFeatures": [
+          "LLM workflow builder with evaluation suite",
+          "Pay-as-you-go credits model",
+          "Open-source self-hosting option",
+          "Modular compute/storage scaling"
+        ],
+        "bestFor": [
+          "LLM application development",
+          "prompt engineering",
+          "AI workflow evaluation",
+          "developer teams"
+        ],
+        "sources": [
+          {
+            "url": "https://www.vellum.ai/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing directly from vellum.ai/pricing (Free $0, Pro $50/mo headline). Compliance not stated on the pricing page; all compliance fields null."
+      }
+    },
+    {
+      "slug": "lyzr",
+      "name": "Lyzr",
+      "domain": "lyzr.ai",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Slack",
+        "Salesforce",
+        "Notion",
+        "Gmail",
+        "ClickUp",
+        "ERPs",
+        "ITSM systems"
+      ],
+      "provenance": "Subscription tiers confirmed on docs.lyzr.ai/introduction/plans: Community ($0), Starter ($19/mo), Pro ($99/mo or $79/mo annual), Enterprise (custom). Usage-based per-run rates confirmed on lyzr.ai/pricing ($0.08/run cloud, $0.03/run VPC). Compliance confirmed on security.lyzr.ai: SOC2 Type II, ISO 27001:2022, HIPAA, ISO 42001:2023, GDPR.",
+      "plans": [
+        {
+          "name": "Community",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "500 credits/month, 10 agents, 5 knowledge bases, 100 MB storage, limited orchestration. Suited for students and experimenters.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://docs.lyzr.ai/introduction/plans",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Starter",
+          "monthlyUsd": 19,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "2,000 credits/month, 15 agents, 10 knowledge bases, 100 MB storage, limited orchestration. No annual billing offered. For teams starting with AI agents.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://docs.lyzr.ai/introduction/plans",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "10,000 credits/month (120,000/year on annual plan), 25 agents, 15 knowledge bases, 1 GB storage, super-agent support, limited orchestration. Annual plan: $79/month (two months free). Extra credits: $10/1,000.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://docs.lyzr.ai/introduction/plans",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://www.lyzr.ai/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Unlimited agents and knowledge bases, full orchestration, all models, team collaboration, 24/7 support. VPC/on-prem deployment at $0.03/agent run; cloud at $0.08/agent run. LLM costs billed separately at pass-through rates.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.lyzr.ai/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://security.lyzr.ai/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Slack",
+          "Salesforce",
+          "Notion",
+          "Gmail",
+          "ClickUp"
+        ],
+        "limits": [
+          "Community: 500 credits/month, 10 agents",
+          "Starter: 2,000 credits/month, 15 agents",
+          "Pro: 10,000 credits/month, 25 agents",
+          "Production runs: $0.08/run (cloud) or $0.03/run (VPC/on-prem)"
+        ],
+        "keyFeatures": [
+          "Dual pricing: subscription for build-time + per-run for production",
+          "SOC2 Type II + HIPAA + ISO 42001:2023 + ISO 27001:2022 + GDPR",
+          "VPC/on-prem deployment at $0.03/run",
+          "Responsible AI guardrails included per agent run"
+        ],
+        "bestFor": [
+          "enterprise AI agents",
+          "regulated industries",
+          "data-sovereign deployments",
+          "multi-agent orchestration"
+        ],
+        "sources": [
+          {
+            "url": "https://www.lyzr.ai/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://docs.lyzr.ai/introduction/plans",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://security.lyzr.ai/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Subscription tiers from docs.lyzr.ai/introduction/plans; per-run rates from lyzr.ai/pricing; five compliance certifications confirmed on security.lyzr.ai."
+      }
+    }
+  ]
+}

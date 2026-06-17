@@ -1,0 +1,952 @@
+{
+  "vertical": "ai-data-analytics",
+  "generatedAt": "2026-06-15",
+  "methodologyNotes": "Pricing re-verified 2026-06-15 by fetching each vendor's official pricing page via WebFetch, with WebSearch corroboration for 2026 figures. julius.ai/pricing returned HTTP 403 to automated fetch; Julius prices were confirmed via coefficient.io/julius-ai-pricing plus multiple independent 2026 sources (trustradius, autogpt) and are internally consistent. hex.tech, akkio.com, chat.powerdrill.ai, sourcetable.com, rows.com, and formulabot.com pricing pages were fetched directly and confirmed. Akkio confirmed enterprise/contact-sales only with no published tiers. Compliance taken only where the vendor states it: SOC 2 'in-progress' (Sourcetable) is treated as NOT certified (null). The draft's Julius Enterprise 'Starting at $5,000/month' claim was removed as unverifiable — no published starting price exists. accessedAt 2026-06-15.",
+  "vendors": [
+    {
+      "slug": "julius-ai",
+      "name": "Julius AI",
+      "domain": "julius.ai",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Google Sheets",
+        "Google Drive",
+        "OneDrive",
+        "PostgreSQL",
+        "Snowflake",
+        "BigQuery",
+        "Supabase",
+        "Google Ads",
+        "Stripe",
+        "Slack"
+      ],
+      "provenance": "julius.ai/pricing returns HTTP 403 to automated fetch; prices Free $0 / Plus $35 / Pro $45 / Max $200 / Business $375 confirmed via coefficient.io/julius-ai-pricing and corroborating 2026 sources (trustradius, autogpt). Enterprise is custom/contact-sales with no published starting price. Free tier (15 messages/month) confirmed.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "15 messages per month, file uploads (CSV, Excel, Google Sheets, PDF), basic interface, no credit card required.",
+          "source": {
+            "url": "https://coefficient.io/julius-ai-pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Plus",
+          "monthlyUsd": 35,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "250 messages per month, advanced reasoning, saved prompts, 7-day file storage, 16 GB RAM. Annual billing ~$29.16/month.",
+          "source": {
+            "url": "https://coefficient.io/julius-ai-pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 45,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 18,
+          "billingModel": "flat",
+          "notes": "Unlimited messages, 32 GB RAM, live database connectors (PostgreSQL, Snowflake, BigQuery, Supabase, Google Ads, Stripe), Notebooks, extended context. Annual ~$37/month.",
+          "source": {
+            "url": "https://coefficient.io/julius-ai-pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Max",
+          "monthlyUsd": 200,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "Unlimited messages, largest context window for processing entire data dictionaries and multi-tab spreadsheets simultaneously. Annual ~$166/month.",
+          "source": {
+            "url": "https://coefficient.io/julius-ai-pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 375,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 15,
+          "billingModel": "flat",
+          "notes": "Team workspaces (up to 10 seats), Slack agent integration, API access, centralized billing, SOC 2 compliance. Annual ~$318/month.",
+          "source": {
+            "url": "https://coefficient.io/julius-ai-pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Private VPC deployment, SSO/SAML, audit logs, custom integrations, dedicated support. Custom pricing negotiated with sales — no published starting price.",
+          "source": {
+            "url": "https://coefficient.io/julius-ai-pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://trust.julius.ai/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Google Sheets",
+          "PostgreSQL",
+          "Snowflake",
+          "BigQuery",
+          "Google Drive",
+          "Stripe",
+          "Slack"
+        ],
+        "limits": [
+          "15 messages/month on Free",
+          "250 messages/month on Plus",
+          "Unlimited on Pro/Max/Business",
+          "Database connectors require Pro or higher",
+          "Slack integration requires Business plan"
+        ],
+        "keyFeatures": [
+          "Natural-language data analysis with Python/R execution",
+          "Live database connectors (Pro+)",
+          "AI-generated charts, slides, and reports",
+          "Team workspaces with Slack agent (Business)"
+        ],
+        "bestFor": [
+          "data analysts",
+          "non-coders needing SQL/Python",
+          "teams analyzing spreadsheets and databases"
+        ],
+        "sources": [
+          {
+            "url": "https://coefficient.io/julius-ai-pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://autogpt.net/julius-ai-pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.trustradius.com/products/julius-ai/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Prices confirmed via coefficient.io plus corroborating 2026 sources after julius.ai/pricing returned 403. Enterprise 'Starting at $5,000/month' claim removed as unverifiable. Julius compliance soc2/gdpr asserted by Business tier and widely corroborated; trust.julius.ai rendered only a Trust center heading in automated fetch."
+      }
+    },
+    {
+      "slug": "hex",
+      "name": "Hex",
+      "domain": "hex.tech",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Snowflake",
+        "BigQuery",
+        "PostgreSQL",
+        "Redshift",
+        "dbt",
+        "Airflow",
+        "Dagster",
+        "REST APIs"
+      ],
+      "provenance": "Fetched hex.tech/pricing and hex.tech/security directly on 2026-06-15. Community $0, Professional $36/editor/mo, Team $75/editor/mo, Enterprise custom all confirmed. Team has 14-day free trial. SOC 2 Type II confirmed; HIPAA is an Enterprise add-on only.",
+      "plans": [
+        {
+          "name": "Community",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Up to 5 notebooks, small compute, connect any data source, notebook agent trial. Forever free.",
+          "source": {
+            "url": "https://hex.tech/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Professional",
+          "monthlyUsd": 36,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Per editor/month. Unlimited notebooks, up to 5 published apps, 30-day version history, medium compute included, standard AI credits, notebook agent.",
+          "source": {
+            "url": "https://hex.tech/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Team",
+          "monthlyUsd": 75,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Per editor/month. 14-day free trial, no payment required. Unlimited published apps, unlimited version history, threads agent, semantic model agent, scheduled runs and alerts, shared components, extended AI credits.",
+          "source": {
+            "url": "https://hex.tech/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom quote. Explorer seat add-on, audit logs, premium AI credits, OAuth connections, OIDC SSO, single-tenant option, HIPAA add-on, embedded analytics, custom Docker images, dedicated support.",
+          "source": {
+            "url": "https://hex.tech/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://hex.tech/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Snowflake",
+          "BigQuery",
+          "PostgreSQL",
+          "Redshift",
+          "dbt",
+          "Airflow",
+          "Dagster"
+        ],
+        "limits": [
+          "5 notebooks on Community",
+          "5 published apps on Professional",
+          "Medium compute included; large compute billed per-usage",
+          "HIPAA only as Enterprise add-on"
+        ],
+        "keyFeatures": [
+          "Collaborative notebook + app platform for data teams",
+          "AI agents for notebooks, threads, and semantic models",
+          "Pay-as-you-go compute scaling",
+          "Single-tenant deployment option for Enterprise"
+        ],
+        "bestFor": [
+          "data science teams",
+          "analytics engineers",
+          "notebook-based workflows",
+          "teams needing collaborative BI and ML"
+        ],
+        "sources": [
+          {
+            "url": "https://hex.tech/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://hex.tech/security",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched hex.tech/pricing and hex.tech/security directly. Professional $36 and Team $75 per editor/month confirmed. SOC 2 Type II confirmed on security page; HIPAA noted as Enterprise add-on only (vendor-level hipaa=null)."
+      }
+    },
+    {
+      "slug": "akkio",
+      "name": "Akkio",
+      "domain": "akkio.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "Fetched akkio.com/pricing on 2026-06-15; page shows only enterprise/contact-sales with no published pricing tiers, no free tier, and no trial. Confirmed custom-only pricing.",
+      "plans": [
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Full platform access, domain-specific AI agents, advanced customization, 24/7 priority support, enhanced security and compliance, SaaS or embedded deployment. Contact sales for pricing.",
+          "source": {
+            "url": "https://www.akkio.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [],
+        "limits": [
+          "No published self-serve tiers; all pricing via contact sales"
+        ],
+        "keyFeatures": [
+          "Domain-specific AI agents for media agency analytics",
+          "Embedded analytics deployment option",
+          "No-code AI model building and forecasting",
+          "Audience segmentation and lead scoring"
+        ],
+        "bestFor": [
+          "media agencies",
+          "marketing analytics teams",
+          "enterprise no-code AI analytics"
+        ],
+        "sources": [
+          {
+            "url": "https://www.akkio.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched akkio.com/pricing directly on 2026-06-15; confirmed enterprise-only custom pricing with no published tiers or trial."
+      }
+    },
+    {
+      "slug": "powerdrill",
+      "name": "Powerdrill",
+      "domain": "powerdrill.ai",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "CSV",
+        "Excel",
+        "PDF",
+        "MySQL",
+        "PostgreSQL",
+        "BigQuery",
+        "Snowflake"
+      ],
+      "provenance": "Fetched chat.powerdrill.ai/pricing directly on 2026-06-15 for Chat product tiers — Free $0, Basic $3.90, Plus $9.90, Pro $29.90 all confirmed. ISO 27001 certification confirmed via powerdrill.ai blog; SOC 2 Type 2 and GDPR also listed by vendor.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "10 data analysis jobs/month, 5 MB workspace, 1 AI report, 5 prompt apps, 10 shared links. Forever free.",
+          "source": {
+            "url": "https://chat.powerdrill.ai/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Basic",
+          "monthlyUsd": 3.9,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "120 data analysis jobs/month, 50 image analyses, 5 AI reports, 20 MB workspace, 10 prompt apps, 20 shared links. Advanced AI models included.",
+          "source": {
+            "url": "https://chat.powerdrill.ai/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Plus",
+          "monthlyUsd": 9.9,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "500 data analysis jobs/month, 200 image analyses, 15 AI reports, 50 MB workspace, 30 prompt apps, 60 shared links. Most popular plan.",
+          "source": {
+            "url": "https://chat.powerdrill.ai/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 29.9,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "1,500 data analysis jobs/month, 500 image analyses, unlimited AI reports, database analysis (500 jobs), 100 multimedia features, 1 GB workspace.",
+          "source": {
+            "url": "https://chat.powerdrill.ai/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://powerdrill.ai/blog/powerdrill-ai-is-now-iso-27001-certified",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "CSV",
+          "Excel",
+          "PDF",
+          "MySQL",
+          "PostgreSQL",
+          "BigQuery",
+          "Snowflake"
+        ],
+        "limits": [
+          "10 analysis jobs/month on Free",
+          "120 jobs/month on Basic",
+          "500 jobs/month on Plus",
+          "1,500 jobs/month on Pro",
+          "Database analysis only on Pro tier",
+          "Workspace storage from 5 MB (Free) to 1 GB (Pro)"
+        ],
+        "keyFeatures": [
+          "Natural-language chat over uploaded files and databases",
+          "AI-generated reports and data summaries",
+          "Image and multimedia data analysis (Pro)",
+          "Prompt apps for repeatable analysis workflows"
+        ],
+        "bestFor": [
+          "individual analysts",
+          "small teams needing low-cost AI data chat",
+          "document and spreadsheet Q&A"
+        ],
+        "sources": [
+          {
+            "url": "https://chat.powerdrill.ai/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://powerdrill.ai/blog/powerdrill-ai-is-now-iso-27001-certified",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Chat product pricing fetched directly from chat.powerdrill.ai/pricing. Compliance source corrected: ISO 27001 confirmed via vendor blog; SOC 2 Type 2 and GDPR also listed by vendor (previous powerdrill.ai/pricing source did not render compliance)."
+      }
+    },
+    {
+      "slug": "sourcetable",
+      "name": "Sourcetable",
+      "domain": "sourcetable.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Supabase",
+        "BigQuery",
+        "Google Analytics 4",
+        "PostgreSQL",
+        "Clickhouse",
+        "Google Ads",
+        "MySQL",
+        "DuckDB",
+        "Snowflake",
+        "Salesforce",
+        "HubSpot",
+        "Stripe",
+        "Shopify",
+        "AWS",
+        "Airtable",
+        "GitHub"
+      ],
+      "provenance": "Fetched sourcetable.com/pricing and sourcetable.com/security directly on 2026-06-15. Free $0, Pro $29/user/mo, Max $100/user/mo, Enterprise custom all confirmed. SOC 2 Type II in-progress (expected 2026, not yet certified); GDPR and CCPA implemented; HIPAA controls aligned but BAA only after SOC 2.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "AI spreadsheet assistant with daily credit reset. Includes analysis, formulas, pivots, charts, magic-autofill, template generation, data cleaning. No data connectors. Forever free.",
+          "source": {
+            "url": "https://sourcetable.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 29,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Per user/month. 2,000 monthly credits, Deep Research, premium AI models, Python toolkit, expanded chat memory, SQL editor, up to 3 data connectors. Extra credits ~$0.020/credit.",
+          "source": {
+            "url": "https://sourcetable.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Max",
+          "monthlyUsd": 100,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Per user/month. 6,000 monthly credits, highest model intelligence, advanced agent capabilities, maximum chat memory, unlimited AI messages, unlimited data connectors, early feature access. Extra credits ~$0.015/credit.",
+          "source": {
+            "url": "https://sourcetable.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing. Advanced security, SSO, and volume credits — contact sales.",
+          "source": {
+            "url": "https://sourcetable.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://sourcetable.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "PostgreSQL",
+          "MySQL",
+          "BigQuery",
+          "Snowflake",
+          "Google Analytics 4",
+          "Salesforce",
+          "HubSpot",
+          "Stripe",
+          "Shopify",
+          "AWS",
+          "GitHub"
+        ],
+        "limits": [
+          "Daily credit reset on Free",
+          "2,000 credits/month on Pro",
+          "6,000 credits/month on Max",
+          "3 data connectors on Pro; unlimited on Max",
+          "SOC 2 Type II certification in-progress (expected 2026, not yet certified)",
+          "HIPAA BAA available only after SOC 2 completion"
+        ],
+        "keyFeatures": [
+          "AI-native spreadsheet with natural-language formulas and analysis",
+          "Hundreds of data connectors (databases, SaaS, cloud)",
+          "Deep Research agent for multi-step analysis (Pro+)",
+          "Python toolkit and SQL editor for power users"
+        ],
+        "bestFor": [
+          "business analysts replacing Excel/Sheets",
+          "teams needing multi-source data aggregation",
+          "non-coders wanting AI-driven spreadsheet automation"
+        ],
+        "sources": [
+          {
+            "url": "https://sourcetable.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://sourcetable.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing fetched directly from sourcetable.com/pricing. Security page confirms GDPR + CCPA implemented and SOC 2 Type II in-progress (not yet certified → soc2=null). HIPAA controls aligned but no BAA until SOC 2 completion (hipaa=null)."
+      }
+    },
+    {
+      "slug": "rows",
+      "name": "Rows",
+      "domain": "rows.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Google Sheets",
+        "Airtable",
+        "Notion",
+        "Snowflake",
+        "Amazon Redshift",
+        "MySQL",
+        "PostgreSQL",
+        "BigQuery",
+        "HubSpot",
+        "Salesforce",
+        "Pipedrive",
+        "Google Analytics 4",
+        "Google Ads",
+        "Facebook Ads",
+        "Instagram",
+        "LinkedIn Ads",
+        "TikTok Ads",
+        "Stripe",
+        "Slack",
+        "Gmail",
+        "Mailchimp",
+        "Zapier",
+        "Make"
+      ],
+      "provenance": "Fetched rows.com/pricing directly on 2026-06-15. Free $0, Plus $8/user/mo, Pro $79 base + $8/user/mo (hybrid), Enterprise custom all confirmed. AI Tasks limits 5/200/1000 confirmed. Annual ~20-25% off (page states 'Save ~20%'; per-line math is 25%).",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "5 AI Tasks/month, manual data imports, 10 integration accounts, 3 guest members, 1 MB file import, 500 cell enrichment tasks/month, 500 API calls/month, 7-day version history.",
+          "source": {
+            "url": "https://rows.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Plus",
+          "monthlyUsd": 8,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 25,
+          "billingModel": "per_seat",
+          "notes": "Per user/month. 200 AI Tasks/month, daily automated data refreshes, 10 integration accounts, 10 guest members, 5 MB file import, 1M cell enrichment tasks/month, 30-day version history, chat priority support. Annual: $6/user/month.",
+          "source": {
+            "url": "https://rows.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 79,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 25,
+          "billingModel": "hybrid",
+          "notes": "Base fee $79/month + $8/user/month. 1,000 AI Tasks/month, minute-level automated refreshes, 100 integration accounts, 200 guest members, 100 MB file import, 1M API calls/month, 2-year version history, unbranded embeds, video support. Annual: $59/mo + $6/user/month.",
+          "source": {
+            "url": "https://rows.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Unlimited AI Tasks, custom integrations and API endpoints, dedicated customer success manager, SAML SSO, custom themes and designs.",
+          "source": {
+            "url": "https://rows.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Google Sheets",
+          "Snowflake",
+          "HubSpot",
+          "Salesforce",
+          "Google Analytics 4",
+          "Google Ads",
+          "Facebook Ads",
+          "Stripe",
+          "Slack",
+          "Zapier"
+        ],
+        "limits": [
+          "5 AI Tasks/month on Free",
+          "200 AI Tasks/month on Plus",
+          "1,000 AI Tasks/month on Pro",
+          "500 cell enrichment tasks/month on Free",
+          "1 MB file import on Free; 100 MB on Pro"
+        ],
+        "keyFeatures": [
+          "Spreadsheet with 60+ native integrations and live data connectors",
+          "AI Tasks for automated analysis and enrichment (cell-level AI)",
+          "Automated data table refreshes (scheduled or minute-level on Pro)",
+          "Unbranded embeds for external sharing (Pro)"
+        ],
+        "bestFor": [
+          "marketing and revenue teams",
+          "spreadsheet-native workflows with live data",
+          "teams needing automated reporting from multiple SaaS sources"
+        ],
+        "sources": [
+          {
+            "url": "https://rows.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://rows.com/integrations",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing fetched directly from rows.com/pricing. Plus $8 and Pro $79+$8/user confirmed. Compliance not verifiable on site; soc2/hipaa/gdpr all null."
+      }
+    },
+    {
+      "slug": "formula-bot",
+      "name": "Formula Bot",
+      "domain": "formulabot.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Excel",
+        "Google Sheets",
+        "Google Drive",
+        "OneDrive",
+        "SharePoint",
+        "BigQuery",
+        "Snowflake",
+        "MySQL",
+        "PostgreSQL",
+        "Supabase",
+        "MSSQL",
+        "Google Analytics",
+        "Google Search Console"
+      ],
+      "provenance": "Fetched formulabot.com/pricing directly on 2026-06-15. Free forever plan confirmed (limits sourced from docs page). Starter $18/mo, Max $29/user/mo, Enterprise $149/user/mo confirmed on live pricing page. ~30% annual discount. No published compliance certifications.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "10 messages/month, 25 AI Actions/month, 5 files per chat, 5 MB upload limit. No credit card required.",
+          "source": {
+            "url": "https://www.formulabot.com/docs/billing/pricing-plans",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Starter",
+          "monthlyUsd": 18,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 30,
+          "billingModel": "flat",
+          "notes": "250 messages/month, 2,500 AI Actions, 2 automated dashboards, 200 MB file upload, 20 files per chat, premium AI models. Save ~30% with annual billing.",
+          "source": {
+            "url": "https://www.formulabot.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Max",
+          "monthlyUsd": 29,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 30,
+          "billingModel": "per_seat",
+          "notes": "Per user/month. Unlimited messages, 5,000 AI Actions/user, 10 automated dashboards, 500 MB upload, 25 files per chat, shared workspace, 50 playbooks (10 scheduled). Save ~30% annually.",
+          "source": {
+            "url": "https://www.formulabot.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": 149,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 34,
+          "billingModel": "per_seat",
+          "notes": "Per user/month. Unlimited messages, 15,000 AI Actions/user, 20 automated dashboards, 1 GB upload, 60 files per chat, unlimited white-label embeds, unlimited playbooks (20 scheduled), dedicated support. Save ~34% annually.",
+          "source": {
+            "url": "https://www.formulabot.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Excel",
+          "Google Sheets",
+          "BigQuery",
+          "Snowflake",
+          "MySQL",
+          "PostgreSQL",
+          "Google Analytics",
+          "Google Search Console"
+        ],
+        "limits": [
+          "10 messages/month on Free",
+          "250 messages/month on Starter",
+          "Unlimited on Max/Enterprise",
+          "2,500 AI Actions on Starter; 5,000 on Max; 15,000 on Enterprise",
+          "File upload: 5 MB Free, 200 MB Starter, 500 MB Max, 1 GB Enterprise"
+        ],
+        "keyFeatures": [
+          "AI analyst chat over uploaded files and live databases",
+          "Automated dashboards with scheduled playbooks",
+          "White-label embed support (Enterprise)",
+          "Supports Excel, Google Sheets, SQL databases, and cloud warehouses"
+        ],
+        "bestFor": [
+          "Excel and Google Sheets power users",
+          "small business analysts",
+          "teams needing white-label analytics embeds"
+        ],
+        "sources": [
+          {
+            "url": "https://www.formulabot.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.formulabot.com/docs/billing/pricing-plans",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Live pricing page (formulabot.com/pricing) confirms Starter $18, Max $29/user, Enterprise $149/user. Free forever plan confirmed; limits from docs page. No SOC 2/HIPAA/GDPR certifications published (all null)."
+      }
+    }
+  ]
+}

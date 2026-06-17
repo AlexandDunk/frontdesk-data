@@ -1,0 +1,454 @@
+{
+  "vertical": "ai-voice-agents",
+  "generatedAt": "2026-06-15",
+  "methodologyNotes": "Official pricing pages were fetched directly for Vapi (vapi.ai/pricing, security.vapi.ai), Retell AI (retellai.com/pricing, docs.retellai.com/general/compliance), Bland AI (bland.ai/pricing, bland.ai/integrations), and Synthflow (synthflow.ai/pricing). Two vendors were REMOVED as not purchasable: (1) Air AI — the autonomous voice agent is defunct (services dark since late 2024; FTC complaint Aug 2025; March 2026 settlement with $18M judgment), and the air.ai domain now hosts an unrelated military/defense platform whose FedRAMP/IL5 certs do not belong to the voice product. (2) PlayAI — acquired by Meta July 2025, API shut down 2025-07-26, platform retired 2025-12-31; play.ai/pricing returns connection-refused and no plan can be purchased. billingModel='per_minute' for all retained vendors because all charge usage-based per-minute rates; monthlyUsd carries the published platform/seat fee where one exists and is null for contact-sales tiers. accessedAt 2026-06-15.",
+  "vendors": [
+    {
+      "slug": "vapi",
+      "name": "Vapi",
+      "domain": "vapi.ai",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Twilio",
+        "Telnyx",
+        "WebRTC"
+      ],
+      "provenance": "Pricing fetched from vapi.ai/pricing; compliance from security.vapi.ai (Trust Center). HIPAA add-on is $2,000/month on Build; included on Scale. SOC2, GDPR, PCI DSS v4.0.1, and CCPA confirmed via Trust Center.",
+      "plans": [
+        {
+          "name": "Build",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": 0.05,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_minute",
+          "notes": "No upfront cost; pay-as-you-go at $0.05/min for call hosting. Model provider costs passed through at actual cost (or $0 with own API key). SMS/Chat: $0.005/message. 10 concurrent calls included; additional at $10/month each. HIPAA add-on $2,000/month. Zero Data Retention add-on $1,000/month. 14-day call history retention.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://vapi.ai/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Scale",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_minute",
+          "notes": "Annual contract with fixed platform fee plus committed volume. Volume-based per-minute pricing (negotiated). Includes SOC2, HIPAA, PCI, SSO, RBAC, enterprise SLA, and custom data retention. Price is custom / contact sales.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://vapi.ai/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://security.vapi.ai",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Twilio",
+          "Telnyx",
+          "WebRTC"
+        ],
+        "limits": [
+          "10 concurrent calls on Build (additional $10/month each)",
+          "14-day call history on Build",
+          "30-day chat history on Build",
+          "HIPAA requires $2,000/month add-on on Build"
+        ],
+        "keyFeatures": [
+          "API-first developer platform with full BYOK (bring your own LLM key) support",
+          "Call hosting at $0.05/min with model costs passed through at actual price",
+          "Enterprise compliance add-ons (HIPAA, Zero Data Retention) available on Build tier",
+          "Trusted by Amazon Ring, Intuit, ServiceTitan, New York Life"
+        ],
+        "bestFor": [
+          "developers",
+          "startups",
+          "enterprise",
+          "outbound-calling",
+          "inbound-calling"
+        ],
+        "sources": [
+          {
+            "url": "https://vapi.ai/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://security.vapi.ai",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing from vapi.ai/pricing; compliance certifications (SOC2, GDPR, CCPA, PCI DSS v4.0.1) from Vapi Trust Center at security.vapi.ai. HIPAA available as add-on on Build and included on Scale."
+      }
+    },
+    {
+      "slug": "retell-ai",
+      "name": "Retell AI",
+      "domain": "retellai.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Make",
+        "Twilio",
+        "Vonage",
+        "Go High Level",
+        "n8n",
+        "HubSpot"
+      ],
+      "provenance": "Pricing fetched from retellai.com/pricing; compliance from docs.retellai.com/general/compliance. SOC2 Type I & II, HIPAA, and GDPR confirmed. BAA available for self-signing on all plans including pay-as-you-go.",
+      "plans": [
+        {
+          "name": "Pay-as-You-Go",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": 0.07,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_minute",
+          "notes": "Starts with $10 in free credits; no commitments. Per-minute rate ranges $0.07–$0.31/min depending on LLM, TTS, and add-ons. Component breakdown: LLM $0.003–$0.16/min, Voice Infrastructure $0.055/min, TTS $0.015–$0.040/min, Telephony $0.015/min. Add-ons: Knowledge Base $0.005/min, PII Removal $0.01/min, AI QA $0.10/min (first 100 min free), Branded Calls $0.10/outbound call. 20 concurrent calls included; additional $8/month per slot. HIPAA BAA available for self-signing on this plan.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.retellai.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_minute",
+          "notes": "Custom pricing. Unlimited concurrent calls, dedicated implementation support, 24/7 omnichannel support, custom DPA, custom BAA, custom MSA. Contact sales.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.retellai.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://docs.retellai.com/general/compliance",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Make",
+          "Twilio",
+          "Vonage",
+          "Go High Level",
+          "n8n",
+          "HubSpot"
+        ],
+        "limits": [
+          "20 concurrent calls on pay-as-you-go (additional $8/month per slot)",
+          "$10 free credits to start (trial credits, not a forever-free plan)",
+          "Per-minute rate varies by LLM and TTS choices"
+        ],
+        "keyFeatures": [
+          "Transparent per-component pricing (LLM + STT + TTS + telephony shown separately)",
+          "HIPAA BAA available for self-signing on all plans including pay-as-you-go — no enterprise contract required",
+          "AI Quality Assurance add-on at $0.10/min with first 100 minutes free",
+          "SOC2 Type I & II certified"
+        ],
+        "bestFor": [
+          "developers",
+          "healthcare",
+          "startups",
+          "high-volume-outbound",
+          "inbound-support"
+        ],
+        "sources": [
+          {
+            "url": "https://www.retellai.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://docs.retellai.com/general/compliance",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing from retellai.com/pricing; compliance from docs.retellai.com/general/compliance confirming SOC2 Type I & II, HIPAA, and GDPR. BAA available for self-signing on all plans. freeTier is false — only $10 trial credits, no perpetual free plan."
+      }
+    },
+    {
+      "slug": "bland-ai",
+      "name": "Bland AI",
+      "domain": "bland.ai",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Twilio",
+        "SIP",
+        "Genesys",
+        "Five9",
+        "NICE CXone",
+        "Amazon Connect",
+        "Talkdesk",
+        "Salesforce",
+        "HubSpot",
+        "Cal.com",
+        "Calendly",
+        "Zapier",
+        "Make",
+        "Pipedream",
+        "Slack",
+        "Notion"
+      ],
+      "provenance": "Pricing fetched from bland.ai/pricing; integrations from bland.ai/integrations. SOC2 Type I & II, HIPAA-eligible with signed BAA, GDPR, and PCI DSS all confirmed on the pricing page. Build $299/mo and Scale $499/mo corroborated by multiple 2026 sources.",
+      "plans": [
+        {
+          "name": "Start",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": 0.14,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_minute",
+          "notes": "No platform fee, no card required. $0.14/min talk time, $0.05/min transfer time. Includes 2 free credits and free inbound number ($15/month value). Limits: 10 concurrent calls, 100 calls/day, 1 voice clone, 10 knowledge bases. LLM, STT, TTS, and telephony all bundled into per-minute rate.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.bland.ai/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Build",
+          "monthlyUsd": 299,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": 0.12,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_minute",
+          "notes": "$299/month platform fee (does not include minutes; usage billed on top). $0.12/min talk time, $0.04/min transfer time. For teams. Limits: 50 concurrent calls, 2,000 calls/day, 5 voice clones, 50 knowledge bases. All-in bundled per-minute pricing (no third-party pass-throughs).",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.bland.ai/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Scale",
+          "monthlyUsd": 499,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": 0.11,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_minute",
+          "notes": "$499/month platform fee (does not include minutes; usage billed on top). $0.11/min talk time, $0.04/min transfer time. For high-volume use. Limits: 100 concurrent calls, 5,000 calls/day, 15 voice clones, 100 knowledge bases.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.bland.ai/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_minute",
+          "notes": "Custom pricing contracted to volume. Unlimited concurrent calls, on-premises/VPC deployment, dedicated FDE, unlimited voice clones and knowledge bases. Contact sales.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.bland.ai/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.bland.ai/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Twilio",
+          "SIP",
+          "Genesys",
+          "Five9",
+          "NICE CXone",
+          "Amazon Connect",
+          "Talkdesk",
+          "Salesforce",
+          "HubSpot",
+          "Cal.com",
+          "Calendly",
+          "Zapier",
+          "Make",
+          "Pipedream"
+        ],
+        "limits": [
+          "Start: 10 concurrent calls, 100 calls/day",
+          "Build: 50 concurrent calls, 2,000 calls/day",
+          "Scale: 100 concurrent calls, 5,000 calls/day",
+          "Subscription fees do not include minutes; usage billed on top"
+        ],
+        "keyFeatures": [
+          "All-inclusive bundled per-minute pricing — LLM, STT, TTS, and telephony in one rate, no third-party pass-throughs",
+          "SOC2 Type I & II, HIPAA (BAA on request), GDPR, and PCI DSS compliance",
+          "Broad contact-center telephony integrations (Genesys, Five9, NICE CXone, Amazon Connect, Talkdesk)",
+          "MCP server for Claude Code and Cursor integration"
+        ],
+        "bestFor": [
+          "contact-centers",
+          "enterprise",
+          "high-volume-outbound",
+          "developers",
+          "healthcare"
+        ],
+        "sources": [
+          {
+            "url": "https://www.bland.ai/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.bland.ai/integrations",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing and compliance from bland.ai/pricing; full integration list from bland.ai/integrations. All four compliance standards (SOC2 Type I & II, HIPAA-eligible with BAA, GDPR, PCI DSS) stated directly on the pricing page. Build $299/mo and Scale $499/mo verified."
+      }
+    },
+    {
+      "slug": "synthflow",
+      "name": "Synthflow",
+      "domain": "synthflow.ai",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Cal.com",
+        "GoHighLevel",
+        "HubSpot",
+        "Salesforce",
+        "Zapier",
+        "WhatsApp"
+      ],
+      "provenance": "Pricing and compliance fetched directly from synthflow.ai/pricing. SOC2 and GDPR on all plans; HIPAA listed as Enterprise-only. Enterprise adds on-premise hosting. No fixed monthly subscription tiers (Starter/Pro/Growth) exist — usage-based Pay As You Go only.",
+      "plans": [
+        {
+          "name": "Pay As You Go",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": 0.09,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_minute",
+          "notes": "Free to start; usage-based billing. Voice Engine: $0.09/min. LLM add-ons range $0.02–$0.05/min depending on model. Synthflow Twilio telephony $0.02/min or BYOT $0.00/min. Total typical range $0.15–$0.24/min. 5 concurrent calls included; additional concurrency $20/unit/month. Phone numbers $1.50 each. White-Label + Custom Domain add-on $2,000/month. Performance Routing $0.04/min. Global Low Latency Edge $0.04/min.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://synthflow.ai/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_minute",
+          "notes": "Minimum 10,000 minutes/month. Custom per-minute pricing. Unlimited concurrent calls, Synthflow Native Telephony, white-label toolkit, 99.99% SLA. Adds HIPAA, MSA support, geo-based sub-processing, on-premise multi-region deployment. Contact sales.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://synthflow.ai/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://synthflow.ai/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Cal.com",
+          "GoHighLevel",
+          "HubSpot",
+          "Salesforce",
+          "Zapier",
+          "WhatsApp"
+        ],
+        "limits": [
+          "5 concurrent calls on Pay As You Go (additional $20/unit/month)",
+          "10,000 min/month minimum for Enterprise",
+          "White-label add-on $2,000/month extra",
+          "HIPAA available on Enterprise only"
+        ],
+        "keyFeatures": [
+          "Modular per-minute pricing: voice engine, LLM, and telephony priced separately so you can BYOT",
+          "SOC2 and GDPR on all plans; HIPAA on Enterprise",
+          "White-label toolkit with custom domain option",
+          "Synthflow Native Telephony on Enterprise"
+        ],
+        "bestFor": [
+          "agencies",
+          "no-code-builders",
+          "enterprise",
+          "outbound-sales",
+          "appointment-setting"
+        ],
+        "sources": [
+          {
+            "url": "https://synthflow.ai/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "All data from synthflow.ai/pricing fetched directly. Voice engine base rate confirmed at $0.09/min; total range $0.15–$0.24/min depending on LLM and telephony selections. HIPAA listed as Enterprise-only. No fixed-fee subscription tiers exist."
+      }
+    }
+  ]
+}

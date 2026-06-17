@@ -1,0 +1,923 @@
+{
+  "vertical": "ai-presentation-tools",
+  "generatedAt": "2026-06-15",
+  "methodologyNotes": "Re-verified against official pricing pages via WebFetch (beautiful.ai/pricing-plans, beautiful.ai/pricing, beautiful.ai/enterprise, decktopus.com/pricing, plusai.com/pricing, plusai.com/security, slidesai.io/pricing, presentations.ai/pricing, pitch.com/pricing/usd). Gamma's official pricing page (gamma.app/pricing) returns HTTP 403 to automated fetch (real page, anti-bot protection); Gamma figures triangulated across multiple aggregators (costbench.com, checkthat.ai, flowith.io) — only the monthly rates corroborated by the majority were used ($10/$20/$100 monthly for Plus/Pro/Ultra), rejecting aggregators that conflated annual-equivalent with monthly. Tome excluded: Tome Slides was sunset 2025-04-30, founders pivoted to the Lightfield CRM and the brand was acquired by AngelList. Pitch USD prices fetched from pitch.com/pricing/usd. All prices reflect self-serve published rates; enterprise/custom tiers carry monthlyUsd null. Compliance flags set true only where stated on the vendor's own pages; otherwise null. accessedAt 2026-06-15.",
+  "vendors": [
+    {
+      "slug": "gamma",
+      "name": "Gamma",
+      "domain": "gamma.app",
+      "hipaa": false,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "Official gamma.app/pricing returned HTTP 403 to automated fetch (real, anti-bot). Monthly prices triangulated across costbench.com, checkthat.ai, and flowith.io; $10/$20/$100 monthly (Plus/Pro/Ultra) corroborated by the majority. SOC 2 Type II and GDPR indicated via trust.gamma.app and gamma.app/dpa; HIPAA explicitly excluded per gamma.app/dpa (customers must not submit PHI).",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "400 one-time AI credits that never refresh. Gamma branding on all outputs. Up to 10 cards per prompt.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://costbench.com/software/ai-presentations/gamma/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Plus",
+          "monthlyUsd": 10,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "per_seat",
+          "notes": "1,000 AI credits/month (rollover up to 2,000). $8/seat/month when billed annually (20% off). Removes Gamma branding. Up to 20 cards per prompt.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://costbench.com/software/ai-presentations/gamma/",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://checkthat.ai/brands/gamma/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 20,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 25,
+          "billingModel": "per_seat",
+          "notes": "4,000 AI credits/month (rollover up to 8,000). $15/seat/month when billed annually (25% off). Premium AI models, custom branding, analytics, API access, custom domains. Up to 60 cards per prompt.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://costbench.com/software/ai-presentations/gamma/",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://checkthat.ai/brands/gamma/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Ultra",
+          "monthlyUsd": 100,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "20,000 AI credits/month (rollover up to 40,000). Most advanced AI image models, Studio Mode, custom domains. Up to 75 cards per prompt. Annual rate not consistently published across sources; monthly-only rate listed.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://costbench.com/software/ai-presentations/gamma/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Team",
+          "monthlyUsd": 20,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "6,000 AI credits/seat/month. Minimum 2 seats. Billed annually at $240/seat/year ($20/seat/month equivalent). Custom company theme, shared folders, admin controls, centralized billing.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://checkthat.ai/brands/gamma/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 40,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "10,000 AI credits/seat/month. Minimum 10 seats. Billed annually at $480/seat/year ($40/seat/month equivalent). Enterprise-grade controls.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://checkthat.ai/brands/gamma/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "100+ seat minimum. Custom pricing — contact sales.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://costbench.com/software/ai-presentations/gamma/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": false,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://gamma.app/dpa",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [],
+        "limits": [
+          "Free tier: 400 one-time credits, never refreshes",
+          "Plus: 1,000 credits/month, rollover cap 2,000",
+          "Pro: 4,000 credits/month, rollover cap 8,000",
+          "Ultra: 20,000 credits/month, rollover cap 40,000",
+          "HIPAA-covered PHI explicitly prohibited per DPA"
+        ],
+        "keyFeatures": [
+          "AI-generated slides, websites, and documents from a single prompt",
+          "Credit rollover up to 2x monthly allocation",
+          "Studio Mode for cinematic full-image slides (Ultra)",
+          "SOC 2 Type II and GDPR (per trust center / DPA)"
+        ],
+        "bestFor": [
+          "individuals",
+          "solopreneurs",
+          "content creators",
+          "teams needing web-embeddable decks"
+        ],
+        "sources": [
+          {
+            "url": "https://costbench.com/software/ai-presentations/gamma/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://checkthat.ai/brands/gamma/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://gamma.app/dpa",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Monthly prices triangulated across costbench.com, checkthat.ai, and flowith.io (official page 403s automated fetch). HIPAA excluded per gamma.app/dpa; SOC 2 Type II and GDPR indicated via trust center and DPA."
+      }
+    },
+    {
+      "slug": "beautiful-ai",
+      "name": "Beautiful.ai",
+      "domain": "beautiful.ai",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Slack",
+        "ChatGPT",
+        "PowerPoint",
+        "Webex"
+      ],
+      "provenance": "Pricing fetched directly from beautiful.ai/pricing-plans, beautiful.ai/pricing, and beautiful.ai/enterprise. SOC 2 Type II, GDPR, CCPA, and PCI confirmed on the enterprise page ('CCPA, PCI, SOC 2 Type II, and GDPR certified'). Pro $45 is a per-project monthly option, not a standard recurring subscription; the recurring individual rate is $12/mo billed annually.",
+      "plans": [
+        {
+          "name": "Pro",
+          "monthlyUsd": 45,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 73,
+          "billingModel": "flat",
+          "notes": "$45 is the per-project monthly option (single presentation); the recurring rate is $12/month billed annually. Single user. Unlimited AI content generation, 300+ Smart Slide layouts, custom branding, PowerPoint import/export, viewer analytics.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.beautiful.ai/pricing-plans",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Team",
+          "monthlyUsd": 50,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "per_seat",
+          "notes": "$40/user/month when billed annually (20% off). 2–20 seats. Everything in Pro plus real-time collaborative editing, centralized libraries, version control, engagement tracking, multi-language support (100+ languages), live data linking.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.beautiful.ai/pricing-plans",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "20+ users. Custom pricing — contact sales. Dedicated onboarding, advanced permissions, audit logs, brand guardrails, SCIM provisioning, SOC 2 Type II, GDPR, CCPA, PCI compliance.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.beautiful.ai/pricing-plans",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.beautiful.ai/enterprise",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Slack",
+          "ChatGPT",
+          "PowerPoint",
+          "Webex"
+        ],
+        "limits": [
+          "14-day free trial requires credit card; auto-charges at trial end",
+          "Pro plan is single-user only; $45 monthly option is per-project",
+          "Team plan capped at 20 seats; Enterprise required for 20+",
+          "Free year offered to students with valid .edu email"
+        ],
+        "keyFeatures": [
+          "300+ Smart Slide layouts with design-locked AI automation",
+          "Real-time collaborative editing on Team plan",
+          "Live data linking for dynamic charts",
+          "SOC 2 Type II, GDPR, CCPA, PCI certified"
+        ],
+        "bestFor": [
+          "design-conscious teams",
+          "sales teams",
+          "enterprise brand control"
+        ],
+        "sources": [
+          {
+            "url": "https://www.beautiful.ai/pricing-plans",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.beautiful.ai/enterprise",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.beautiful.ai/integrations",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing fetched from beautiful.ai/pricing-plans and beautiful.ai/pricing; compliance from beautiful.ai/enterprise. No free-forever tier; credit-card 14-day trial only. Pro $45 clarified as per-project monthly option."
+      }
+    },
+    {
+      "slug": "decktopus",
+      "name": "Decktopus",
+      "domain": "decktopus.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "Pricing fetched directly from decktopus.com/pricing; forever-free plan corroborated via costbench.com (20 AI credits, below the 30-credit cost of one full AI deck). No SOC2/GDPR/HIPAA certifications found on official pages.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Forever free. 20 AI credits (insufficient for a full AI-generated deck, which costs 30 credits). 3-deck limit, Decktopus branding, limited templates, no PDF export.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.decktopus.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://costbench.com/software/ai-presentations/decktopus/free-plan/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 14.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 40,
+          "billingModel": "flat",
+          "notes": "$14.99/month or $179.99/year (40% savings). 9,000 AI credits/year (~300 AI presentations). Credits refill annually with no monthly cap.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.decktopus.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 34.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 40,
+          "billingModel": "per_seat",
+          "notes": "$34.99/user/month or $419.99/user/year (40% savings). 12,000 AI credits/year/user (~400 AI presentations). Custom domain, slide analytics, webhook support, team and organization features.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.decktopus.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing — book a demo. 100% corporate branding, custom slide layouts, document importing, custom corporate templates.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.decktopus.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [],
+        "limits": [
+          "Free: 20 AI credits (one full AI deck costs 30 credits — free credits cannot generate a single AI deck)",
+          "Pro: 9,000 credits/year, annual refill only (no monthly rollover)",
+          "Business: 12,000 credits/year/user",
+          "50% student discount with code SUPPORTEDUCATION"
+        ],
+        "keyFeatures": [
+          "Annual AI credit pools with no monthly caps",
+          "AI Q&A mode for interactive presentations",
+          "Webhook support on Business plan",
+          "Custom domain connection on Business plan"
+        ],
+        "bestFor": [
+          "educators",
+          "solo creators",
+          "small businesses needing interactive decks"
+        ],
+        "sources": [
+          {
+            "url": "https://www.decktopus.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://costbench.com/software/ai-presentations/decktopus/free-plan/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing fetched directly from decktopus.com/pricing; free plan corroborated by costbench.com. No compliance certifications found on official pages."
+      }
+    },
+    {
+      "slug": "plus-ai",
+      "name": "Plus AI",
+      "domain": "plusai.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Google Slides",
+        "PowerPoint",
+        "Zapier",
+        "MCP server"
+      ],
+      "provenance": "Pricing fetched directly from plusai.com/pricing. SOC 2 Type II confirmed on plusai.com/security ('Plus has achieved SOC 2 Type II compliance', Vanta trust portal). GDPR not stated on official pages -> null.",
+      "plans": [
+        {
+          "name": "Basic",
+          "monthlyUsd": 15,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 33,
+          "billingModel": "per_seat",
+          "notes": "$15/user/month or $10/user/month billed annually. 1,500 AI credits/month. AI presentations in Google Slides and PowerPoint, single slide insertion, rewrite/remix. 7-day free trial with 1,000 credits.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.plusai.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 25,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "per_seat",
+          "notes": "$25/user/month or $20/user/month billed annually. 3,000 AI credits/month. Everything in Basic plus document uploads (PDF, docx, txt), 100K+ character prompts, AI image generation, unlimited team members.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.plusai.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Team",
+          "monthlyUsd": 40,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 25,
+          "billingModel": "per_seat",
+          "notes": "$40/user/month or $30/user/month billed annually. 6,000 AI credits/month. Everything in Pro plus custom branding, advanced AI image models, saved presets, team-wide branding and templates, shared preset library.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.plusai.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Max",
+          "monthlyUsd": 240,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "per_seat",
+          "notes": "$240/user/month or $200/user/month billed annually. Unlimited AI credits. Everything in Team plus priority email support.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.plusai.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing. Custom templates, asset libraries, SSO, user management, white-glove onboarding.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.plusai.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://www.plusai.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 7,
+        "keyIntegrations": [
+          "Google Slides",
+          "PowerPoint",
+          "Zapier",
+          "MCP server"
+        ],
+        "limits": [
+          "Basic: 1,500 credits/month",
+          "Pro: 3,000 credits/month",
+          "Team: 6,000 credits/month",
+          "Max: unlimited credits",
+          "7-day free trial limited to new customers only"
+        ],
+        "keyFeatures": [
+          "Works natively inside Google Slides and Microsoft PowerPoint",
+          "MCP server integration for AI-native workflows",
+          "Custom brand templates and shared preset library on Team+",
+          "SOC 2 Type II certified"
+        ],
+        "bestFor": [
+          "Google Slides power users",
+          "PowerPoint teams",
+          "sales teams",
+          "brand-consistent orgs"
+        ],
+        "sources": [
+          {
+            "url": "https://www.plusai.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.plusai.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing fetched directly from plusai.com/pricing; SOC 2 Type II confirmed on plusai.com/security. No free-forever plan; 7-day trial only. GDPR not claimed -> null."
+      }
+    },
+    {
+      "slug": "slidesai",
+      "name": "SlidesAI",
+      "domain": "slidesai.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Google Slides",
+        "PowerPoint"
+      ],
+      "provenance": "Pricing fetched directly from slidesai.io/pricing. No SOC2/GDPR/HIPAA certifications stated on official pages. Billing via Paddle.com as merchant of record.",
+      "plans": [
+        {
+          "name": "Basic",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Forever free. 12 presentations/year, 2,500 character input per presentation, 120 AI credits/year.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.slidesai.io/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 10,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 16,
+          "billingModel": "flat",
+          "notes": "$10/month or $120/year (save 16%). 120 presentations/year, 6,000 character input per presentation, 600 AI credits/year, document upload.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.slidesai.io/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": 20.83,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 16,
+          "billingModel": "flat",
+          "notes": "$20.83/month or $250/year (save 16%). Unlimited presentations, 12,000 character input per presentation, 1,200 AI credits/year, document upload.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.slidesai.io/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Google Slides",
+          "PowerPoint"
+        ],
+        "limits": [
+          "Free: 12 presentations/year, 2,500 chars input, 120 AI credits/year",
+          "Pro: 120 presentations/year, 6,000 chars input, 600 AI credits/year",
+          "Premium: unlimited presentations, 12,000 chars input, 1,200 AI credits/year"
+        ],
+        "keyFeatures": [
+          "Google Slides add-on for AI slide generation inside the native editor",
+          "Document upload for context-aware generation (Pro+)",
+          "Most affordable paid entry point in the category at $10/month",
+          "Annual credit pools billed via Paddle.com"
+        ],
+        "bestFor": [
+          "budget-conscious creators",
+          "educators",
+          "Google Slides users wanting AI in-app"
+        ],
+        "sources": [
+          {
+            "url": "https://www.slidesai.io/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing fetched directly from slidesai.io/pricing. No compliance certifications stated on official pages."
+      }
+    },
+    {
+      "slug": "presentations-ai",
+      "name": "Presentations.AI",
+      "domain": "presentations.ai",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "Pricing fetched directly from presentations.ai/pricing. No SOC2/GDPR/HIPAA certifications found on official pages. Paid tiers billed annually only.",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Forever free. 100 AI credits (one-time annual allotment), up to 20 slides, basic AI model, PDF and PowerPoint export, embed capability, unbranded public links, up to 5 guest collaborators, basic brand customization, view tracking.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://presentations.ai/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 20,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$20/month billed annually ($240/year). 5,000 AI credits/year, advanced AI features, high-quality PowerPoint export, analytics, brand customization, password-protected links, up to 10 guest collaborators, fast generation speed.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://presentations.ai/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Gold",
+          "monthlyUsd": 100,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$100/month billed annually ($1,200/year). 50,000 AI credits/year, frontier AI models and agents, advanced brand customization, shared knowledge base, project knowledge upload, presentation refresh, ultra generation speed, unlimited guest collaborators, unlimited brand asset storage.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://presentations.ai/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [],
+        "limits": [
+          "Starter: 100 AI credits total, up to 20 slides",
+          "Pro: 5,000 AI credits/year",
+          "Gold: 50,000 AI credits/year",
+          "Paid plans require annual billing (no confirmed monthly option)"
+        ],
+        "keyFeatures": [
+          "Frontier AI models and autonomous research agents on Gold tier",
+          "Shared knowledge base for team context (Gold)",
+          "Presentation refresh to update existing decks with new data",
+          "View tracking and slide engagement analytics on free tier"
+        ],
+        "bestFor": [
+          "marketing teams",
+          "agencies",
+          "frequent deck creators needing AI agents"
+        ],
+        "sources": [
+          {
+            "url": "https://presentations.ai/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing fetched directly from presentations.ai/pricing. No integrations or compliance certifications found on official pages. Paid plan prices shown as annual-billing equivalents."
+      }
+    },
+    {
+      "slug": "pitch",
+      "name": "Pitch",
+      "domain": "pitch.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Google Sheets",
+        "Google Analytics",
+        "ChartMogul",
+        "HubSpot",
+        "Unsplash",
+        "Giphy",
+        "Brandfetch",
+        "YouTube",
+        "Vimeo",
+        "Loom",
+        "Figma",
+        "Airtable",
+        "Calendly",
+        "LottieFiles"
+      ],
+      "provenance": "Pricing fetched directly from pitch.com/pricing/usd. GDPR confirmed via pitch.com/security-policy; SOC2 not explicitly stated on official pages -> null. Pitch remains operational as of mid-2026 (post-2024 restructuring but actively shipping).",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Forever free. Up to 5 members. 100 one-time AI credits (non-renewing), unlimited presentations, custom templates, branded sharing links, branded PDF exports, 2 external guests.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://pitch.com/pricing/usd",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Plus",
+          "monthlyUsd": 12,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "$12/month or $10/month billed annually. 1 member. 6,000 AI credits/year. Everything in Free plus custom fonts, video uploads, unbranded exports, PowerPoint exports, 5 external guests. Overage: $0.004/extra credit.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://pitch.com/pricing/usd",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Team",
+          "monthlyUsd": 18,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "per_seat",
+          "notes": "$18/seat/month or $15/seat/month billed annually. Up to 25 members. 6,000 AI credits/seat/year. Everything in Plus plus 25 external guests, 25 advanced links, 2 pitch rooms, 3 teamspaces, custom domain, interactive embeds, co-presenting, content variables, workspace roles, 30-day version history.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://pitch.com/pricing/usd",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 24,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "per_seat",
+          "notes": "$24/seat/month or $20/seat/month billed annually. Up to 200 members. 9,000 AI credits/seat/year. Everything in Team plus unlimited external guests, links, pitch rooms, teamspaces, batch create presentations, asset library collections, unlimited version history.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://pitch.com/pricing/usd",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "30+ members. Custom pricing — contact sales. Everything in Business plus SAML SSO, dedicated success manager, tailored onboarding, invoiced billing, priority support.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://pitch.com/pricing/usd",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://pitch.com/security-policy",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Google Sheets",
+          "Google Analytics",
+          "HubSpot",
+          "ChartMogul",
+          "Figma",
+          "Airtable",
+          "Loom",
+          "Calendly"
+        ],
+        "limits": [
+          "Free: 100 AI credits one-time, non-renewing; max 5 members",
+          "Plus: 6,000 AI credits/year, single user only",
+          "Team: 6,000 AI credits/seat/year, max 25 members",
+          "Business: 9,000 AI credits/seat/year, max 200 members",
+          "Enterprise required for 30+ members"
+        ],
+        "keyFeatures": [
+          "Richest native integration ecosystem in category (14+ tools including HubSpot, Figma, Airtable)",
+          "Pitch Rooms for async sales follow-ups with engagement tracking",
+          "Co-presenting and content variables for personalized deck delivery",
+          "Infrastructure on AWS EU regions with GDPR DPA"
+        ],
+        "bestFor": [
+          "sales teams",
+          "startups fundraising",
+          "collaborative teams",
+          "agencies needing live data embeds"
+        ],
+        "sources": [
+          {
+            "url": "https://pitch.com/pricing/usd",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://pitch.com/security-policy",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing fetched from pitch.com/pricing/usd. GDPR confirmed via pitch.com/security-policy; SOC2 not explicitly stated -> null. Pitch operational as of mid-2026."
+      }
+    }
+  ]
+}
