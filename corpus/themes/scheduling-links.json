@@ -1,0 +1,517 @@
+{
+  "vertical": "scheduling-links",
+  "generatedAt": "2026-06-15",
+  "methodologyNotes": "Self-serve USD pricing fetched from each vendor's official pricing page on 2026-06-15. monthlyUsd reflects the effective monthly cost on annual billing (smallest paid unit) as required by schema; month-to-month rates are noted in plan notes where known. annualDiscountPct is calculated where both billing periods are published. Cal.com annual prices ($12/$28) are billed annually with 25% savings vs month-to-month (~$16/$37). SavvyCal annual billing offers '2 months free' (~16.7% off); $10/$17 are month-to-month rates, annual effective ~$8.33/$14.17. Motion positions itself as an AI task/calendar planner with scheduling-link functionality; included because it is a direct Calendly competitor in self-serve scheduling. Zcal pricing page is JS-rendered and returned only navigation markup on direct fetch; price sourced from Zapier's 2026 scheduling-app roundup (zapier.com/blog/best-meeting-scheduler-apps, accessed 2026-06-15). YouCanBookMe pricing page is JS-rendered with all prices shown as '$0' placeholder (no USD figures extractable from HTML); multiple fallback sources (alternativeto.net mentions 'up to $14/month' without plan breakdown) did not yield verifiable per-plan USD figures; monthlyUsd set to null for all paid plans per methodology. TidyCal lifetime plans are one-time payments, not recurring; monthlyUsd set to null for lifetime tiers and the effective monthly rate of the Pro subscription is recorded. minutesIncluded/callsIncluded/overagePerMin/overagePerCall are null on all plans (non-telephony product category).",
+  "vendors": [
+    {
+      "slug": "calendly",
+      "name": "Calendly",
+      "domain": "calendly.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Google Calendar",
+        "Microsoft Outlook",
+        "Office 365",
+        "Zoom",
+        "Google Meet",
+        "Microsoft Teams",
+        "Stripe",
+        "PayPal",
+        "HubSpot",
+        "Salesforce",
+        "Mailchimp",
+        "Marketo",
+        "Pardot",
+        "Zapier",
+        "Microsoft Dynamics 365"
+      ],
+      "provenance": "https://calendly.com/pricing (official pricing page, accessed 2026-06-15); HIPAA/BAA status confirmed via https://calendly.com/security (accessed 2026-06-15) — SOC 2 Type 2, ISO 27001, PCI-compliant; no HIPAA mention.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Always free, single user. 1 event type, 1 calendar connection, video conferencing, mobile apps.",
+          "source": {
+            "url": "https://calendly.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Standard",
+          "monthlyUsd": 10,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 16,
+          "billingModel": "per_seat",
+          "notes": "$10/seat/month on annual billing (save 16%). Month-to-month rate approximately $12/seat. Unlimited event types, multiple calendar connections, Stripe/PayPal payments, Zapier, automated reminders, 24/7 chat support.",
+          "source": {
+            "url": "https://calendly.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://zapier.com/blog/best-meeting-scheduler-apps/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Teams",
+          "monthlyUsd": 16,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "per_seat",
+          "notes": "$16/seat/month on annual billing (save 20%). Month-to-month approximately $20/seat. All Standard features plus Salesforce routing, round-robin scheduling, advanced admin, SSO add-on.",
+          "source": {
+            "url": "https://calendly.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only; starts at $15,000/year. SAML/SSO, domain control, audit logs, dedicated support, data deletion API.",
+          "source": {
+            "url": "https://calendly.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "cal-com",
+      "name": "Cal.com",
+      "domain": "cal.com",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Google Calendar",
+        "Microsoft Outlook",
+        "Zoom",
+        "Google Meet",
+        "Microsoft Teams",
+        "Slack",
+        "HubSpot",
+        "Salesforce",
+        "Zapier",
+        "Stripe",
+        "PayPal",
+        "100+ apps via native integrations"
+      ],
+      "provenance": "https://cal.com/pricing (official pricing page, accessed 2026-06-15); HIPAA confirmed via https://cal.com/security (accessed 2026-06-15): 'achieved ISO 27001, SOC 2 Type II, CCPA, GDPR, and HIPAA certifications'. BAA not explicitly confirmed on public pages.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free forever, single user. Unlimited event types and calendar connections, email & SMS notifications, 100+ app integrations.",
+          "source": {
+            "url": "https://cal.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Teams",
+          "monthlyUsd": 12,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 25,
+          "billingModel": "per_seat",
+          "notes": "$12/user/month on annual billing (save 25% vs ~$16/user month-to-month). Schedule across 1 team, round-robin scheduling, managed and collective event types, recurring events.",
+          "source": {
+            "url": "https://cal.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Organizations",
+          "monthlyUsd": 28,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 25,
+          "billingModel": "per_seat",
+          "notes": "$28/user/month on annual billing (save 25% vs ~$37/user month-to-month). Unlimited sub-teams, custom variable routing, company subdomain, SAML SSO and SCIM, HIPAA compliance support.",
+          "source": {
+            "url": "https://cal.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only / contact sales. Dedicated onboarding and engineering support, SLA and uptime guarantees, HRIS and directory integrations.",
+          "source": {
+            "url": "https://cal.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "savvycal",
+      "name": "SavvyCal",
+      "domain": "savvycal.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Google Calendar",
+        "Apple Calendar",
+        "Microsoft Outlook",
+        "Zoom",
+        "Google Meet",
+        "Stripe",
+        "Zapier",
+        "Linear",
+        "GitHub"
+      ],
+      "provenance": "https://savvycal.com/pricing (official pricing page, accessed 2026-06-15). $10/$17 are month-to-month rates; annual billing offers 2 months free (~16.7% off), yielding effective ~$8.33/$14.17/month respectively.",
+      "plans": [
+        {
+          "name": "Basic",
+          "monthlyUsd": 8.33,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "per_seat",
+          "notes": "Annual rate ~$8.33/user/month ($100/year, '2 months free'). Month-to-month rate: $10/user/month. Unlimited calendars, unlimited scheduling links, team scheduling, meeting polls.",
+          "source": {
+            "url": "https://savvycal.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": 14.17,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "per_seat",
+          "notes": "Annual rate ~$14.17/user/month ($170/year, '2 months free'). Month-to-month rate: $17/user/month. All Basic features plus custom domains, delegate to assistant, paid bookings, time defense, advanced branding.",
+          "source": {
+            "url": "https://savvycal.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "youcanbook-me",
+      "name": "YouCanBook.me",
+      "domain": "youcanbook.me",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Google Calendar",
+        "Microsoft Outlook",
+        "Office 365",
+        "iCloud",
+        "Zoom",
+        "Google Meet",
+        "Microsoft Teams",
+        "Zapier",
+        "Stripe",
+        "PayPal"
+      ],
+      "provenance": "https://youcanbook.me/pricing (official pricing page, accessed 2026-06-15). Page is JavaScript-rendered: plan names and feature tiers are visible (Free, Individual, Professional, Team) but all dollar prices render as '$0' placeholder in static HTML — no USD figures were extractable from the authoritative source. Third-party guides were checked and CONFLICT, so no figure meets the confirmation bar: zeeg.me/en/blog/post/youcanbookme-pricing-features quotes Individual ~$7/Professional ~$10/Team ~$14 per member (annual); other roundups quote Individual $9/Professional $13/Team $18 (month-to-month); schedulingkit.com describes a single ~$14/month paid plan priced per calendar connection (not per user). Because sources disagree on both the figures and the unit (per-user vs per-calendar), monthlyUsd is set to null for all paid plans per methodology (cannot independently confirm).",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free forever. 1 calendar connection, 1 booking page, basic customization.",
+          "source": {
+            "url": "https://youcanbook.me/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Individual",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "Price not publicly confirmed (official page is JS-rendered, shows $0 placeholders). Includes 2 calendar connections, 2 booking pages, custom branding. Annual billing saves 10%; 2-year saves 20%. Third-party estimates range from ~$7 (annual) to $9 (month-to-month), but sources conflict on figures and on whether pricing is per-user or per-calendar, so monthlyUsd is left null.",
+          "source": {
+            "url": "https://youcanbook.me/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://zeeg.me/en/blog/post/youcanbookme-pricing-features",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Professional",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "Price not publicly confirmed (JS-rendered). Includes 6 calendar connections, 10 booking pages, automations, analytics, Zapier. Annual billing saves 10%; 2-year saves 20%.",
+          "source": {
+            "url": "https://youcanbook.me/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Team",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "per_seat",
+          "notes": "Price not publicly confirmed (JS-rendered). Per-member pricing. Includes 10 calendar connections/user, 15+ booking pages/user, role-based access, centralized billing.",
+          "source": {
+            "url": "https://youcanbook.me/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "zcal",
+      "name": "Zcal",
+      "domain": "zcal.co",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Google Calendar",
+        "Microsoft Outlook",
+        "Zoom",
+        "Google Meet",
+        "Stripe"
+      ],
+      "provenance": "https://zcal.co/pricing fetched 2026-06-15: page is JS-rendered, returned only navigation markup — no pricing figures extractable. Price sourced from Zapier roundup article: https://zapier.com/blog/best-meeting-scheduler-apps/ (accessed 2026-06-15) which states 'Pro plan: $9.50/month'. Zcal homepage (https://zcal.co, accessed 2026-06-15) confirms free tier covers '99% of features' with paid plan for 'team functionality or advanced features'.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free tier includes 99% of features: unlimited scheduling links, unlimited calendar connections. Paid plan required only for team features and advanced reminders.",
+          "source": {
+            "url": "https://zcal.co",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 9.5,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$9.50/month per Zapier's 2026 scheduling-app roundup. Adds team scheduling features and advanced reminders. Annual discount not confirmed. Official pricing page is JS-rendered and could not be parsed directly.",
+          "source": {
+            "url": "https://zapier.com/blog/best-meeting-scheduler-apps/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "tidycal",
+      "name": "TidyCal",
+      "domain": "tidycal.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Google Calendar",
+        "Apple Calendar",
+        "Microsoft Outlook",
+        "Office 365",
+        "iCal",
+        "Zoom",
+        "Google Meet",
+        "Microsoft Teams",
+        "Stripe",
+        "PayPal"
+      ],
+      "provenance": "https://tidycal.com/pricing (official pricing page, accessed 2026-06-15). Lifetime plans are one-time purchases, not recurring subscriptions; monthlyUsd=null per schema rules. Pro subscription pricing ($12/mo or $99/yr) confirmed on official page and corroborated by AppSumo listing.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free forever. Unlimited bookings, unlimited booking types, paid bookings via Stripe/PayPal, recurring/package bookings, translation/localization.",
+          "source": {
+            "url": "https://tidycal.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Individual Lifetime",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 29,
+          "notes": "One-time payment of $29 (lifetime access, no recurring fee). Includes auto-generated meeting links, group bookings, AI assistant, custom emails, analytics, 10 calendar connections. Not a subscription — monthlyUsd set to null.",
+          "source": {
+            "url": "https://tidycal.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://www.appsumo.com/products/tidycal/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Agency Lifetime",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 79,
+          "notes": "One-time payment of $79 (lifetime access, no recurring fee). Adds round-robin meetings, dedicated team page, SMS reminders, reduced branding, 25 calendar connections. Not a subscription — monthlyUsd set to null.",
+          "source": {
+            "url": "https://tidycal.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://www.appsumo.com/products/tidycal/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 8.25,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 31,
+          "billingModel": "flat",
+          "notes": "$8.25/month effective on annual billing ($99/year, 31% off vs $12/month month-to-month). All Agency Lifetime features plus custom domain, no branding, priority support.",
+          "source": {
+            "url": "https://tidycal.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "motion",
+      "name": "Motion",
+      "domain": "usemotion.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Google Calendar",
+        "Microsoft Outlook",
+        "Office 365",
+        "Zoom",
+        "Google Meet",
+        "Linear",
+        "GitHub",
+        "Asana",
+        "Jira",
+        "Slack"
+      ],
+      "provenance": "https://usemotion.com/pricing (official pricing page, accessed 2026-06-15). Motion is primarily an AI task/calendar planner; scheduling link functionality is a core included feature. Annual billing at $19/$29 saves 33% vs month-to-month (~$28/$43).",
+      "plans": [
+        {
+          "name": "Pro AI",
+          "monthlyUsd": 19,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 33,
+          "billingModel": "per_seat",
+          "notes": "$19/seat/month on annual billing (save 33% vs ~$28/seat month-to-month). Individual plan. Includes AI scheduling links, AI calendar and meetings, AI projects and tasks, AI docs/wiki/notes, unlimited storage, 7,500 AI credits/seat/month.",
+          "source": {
+            "url": "https://usemotion.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Business AI",
+          "monthlyUsd": 29,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 33,
+          "billingModel": "per_seat",
+          "notes": "$29/seat/month on annual billing (save 33% vs ~$43/seat month-to-month). All Pro AI features plus team capacity planning, advanced dashboards and reports, timeline/Gantt charts, time tracking, permissions and access control, central billing, priority support, 15,000 AI credits/seat/month.",
+          "source": {
+            "url": "https://usemotion.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    }
+  ]
+}

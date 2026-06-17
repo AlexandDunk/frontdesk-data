@@ -1,0 +1,535 @@
+{
+  "vertical": "roadmap-tools",
+  "generatedAt": "2026-06-15",
+  "methodologyNotes": "Self-serve USD pricing for leading product roadmap tools was fetched from each vendor's official pricing page on 2026-06-15. monthlyUsd records the effective monthly cost at the annual-billing rate (the most common published price) for the smallest paid unit; where a vendor publishes month-to-month rates they are captured in plan notes with annualDiscountPct set. Quote-only / contact-sales tiers carry monthlyUsd=null. Roadmunk was acquired by Tempo and now redirects to tempo.io/pricing/roadmaps — that page was fetched and is the authoritative source. ProdPad's pricing page does not render dollar amounts without JS execution; GetApp and SoftwareAdvice both indicate a $24/month starting figure, used as a fallback and noted accordingly. airfocus removed public pricing from its website (both plans now say 'Request pricing'); GetApp (accessed same date) shows a $59/user/month Core plan — that figure is included with a caveat noting it may reflect an older pricing structure. Aha! Roadmaps: the main aha.io/pricing page advertises $59/user/month as a blended entry point for the platform; the product-specific page aha.io/roadmaps/pricing lists Premium at $74.59, Enterprise at $124.99, Enterprise+ at $149 — the product-specific page is used as it is more granular. minutesIncluded, callsIncluded, overagePerMin, and overagePerCall are null on every plan (non-telephony product category). hipaa/baa/bilingual are null unless explicitly stated by the vendor.",
+  "vendors": [
+    {
+      "slug": "productboard",
+      "name": "Productboard",
+      "domain": "productboard.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Jira",
+        "Azure DevOps",
+        "Salesforce",
+        "Zendesk",
+        "Slack",
+        "GitHub",
+        "Intercom"
+      ],
+      "provenance": "Prices from productboard.com/pricing/productboard/ on 2026-06-15; corroborated by GetApp listing showing $25/user and $75/user monthly figures.",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Free plan with limited features; single maker seat included. Good for individuals exploring the platform.",
+          "source": {
+            "url": "https://www.productboard.com/pricing/productboard/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Essentials",
+          "monthlyUsd": 19,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 24,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "$19/maker/mo billed annually; $25/maker/mo month-to-month. Includes unlimited roadmaps, prioritization features, and portal. Minimum 1 maker seat.",
+          "source": {
+            "url": "https://www.productboard.com/pricing/productboard/",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/project-management-planning-software/a/productboard/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 59,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 21,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "$59/maker/mo billed annually; $75/maker/mo month-to-month. Minimum 2 maker seats. Adds customer feedback management, advanced integrations, and reporting. Free viewer seats included.",
+          "source": {
+            "url": "https://www.productboard.com/pricing/productboard/",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/project-management-planning-software/a/productboard/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Contact sales. Minimum 5 maker seats. Adds SSO, SCIM, advanced security, dedicated CSM, and SLA. Custom pricing only.",
+          "source": {
+            "url": "https://www.productboard.com/pricing/productboard/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "aha",
+      "name": "Aha!",
+      "domain": "aha.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Jira",
+        "Azure DevOps",
+        "Salesforce",
+        "GitHub",
+        "GitLab",
+        "Zendesk",
+        "Slack",
+        "Microsoft Teams"
+      ],
+      "provenance": "Prices from aha.io/roadmaps/pricing on 2026-06-15 (product-specific tier page). Main aha.io/pricing page advertises $59/user as a blended platform entry price; roadmaps-specific page lists Premium at $74.59 which is used as the authoritative per-product price.",
+      "plans": [
+        {
+          "name": "Premium",
+          "monthlyUsd": 74.59,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "$74.59/user/mo; annual billing. All users (including reviewers) require paid seats at this tier. Includes strategy-to-delivery linking, roadmaps, whiteboards, and 30+ integrations. Free trial available with no credit card.",
+          "source": {
+            "url": "https://www.aha.io/roadmaps/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": 124.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "$124.99/user/mo; annual billing. Unlimited read-only reviewers and viewers included at no extra charge. Adds advanced security, SSO, SCIM, and priority support.",
+          "source": {
+            "url": "https://www.aha.io/roadmaps/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise+",
+          "monthlyUsd": 149,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "$149/user/mo; annual billing only (no monthly option). Unlimited reviewers and viewers. Adds highest-tier security, custom compliance controls, and advanced enterprise administration.",
+          "source": {
+            "url": "https://www.aha.io/roadmaps/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "canny",
+      "name": "Canny",
+      "domain": "canny.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Jira",
+        "GitHub",
+        "Intercom",
+        "Salesforce",
+        "HubSpot",
+        "Zendesk",
+        "Zapier",
+        "Segment"
+      ],
+      "provenance": "Prices from canny.io/pricing on 2026-06-15; corroborated by GetApp listing showing Free $0, Core $19/mo, Pro $79/mo as flat fees.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Free forever. Up to 25 tracked users (a tracked user is someone who has submitted feedback). Unlimited posts, boards, changelog, roadmap, API access.",
+          "source": {
+            "url": "https://canny.io/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/customer-management-software/a/canny/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Core",
+          "monthlyUsd": 19,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Flat $19/mo billed annually (20% discount applied). Includes 100+ tracked users, custom domains, content translations, Segment integration. Not per-seat — flat workspace fee.",
+          "source": {
+            "url": "https://canny.io/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/customer-management-software/a/canny/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 79,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Flat $79/mo billed annually (20% discount applied). Confirmed as flat fee by both canny.io/pricing and GetApp. Includes 100+ tracked users, PM integrations (Jira, GitHub), advanced privacy controls, custom post fields, user segmentation, automation rules, smart AI replies, Zapier.",
+          "source": {
+            "url": "https://canny.io/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/customer-management-software/a/canny/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Contact sales. For 5,000+ tracked users. Adds SSO integrations, CRM integrations (Salesforce, HubSpot), custom admin roles, dedicated support, security review.",
+          "source": {
+            "url": "https://canny.io/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "roadmunk",
+      "name": "Roadmunk (by Tempo)",
+      "domain": "tempo.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Jira",
+        "Azure DevOps",
+        "Confluence",
+        "Slack",
+        "GitHub",
+        "GitLab"
+      ],
+      "provenance": "Roadmunk domain permanently redirects (308) to tempo.io/pricing/roadmaps since Tempo acquired Roadmunk. Prices fetched from tempo.io/pricing/roadmaps on 2026-06-15; corroborated by GetApp roadmunk pricing page showing matching tier structure ($19/$49/$99).",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": 19,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "$19/editor/mo billed annually. Single roadmapper use case. Includes unlimited roadmaps, one-way Jira/Azure syncs, shareable roadmaps, 3 included reviewer seats. ISO/IEC 27001:2013 certified. 14-day free trial.",
+          "source": {
+            "url": "https://www.tempo.io/pricing/roadmaps",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/project-management-planning-software/a/roadmunk/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 49,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "$49/editor/mo billed annually. For small teams. Adds feedback insights, customizable portals, idea management, portfolio roadmaps, dependency tracking, REST API, 5 reviewer seats. Optional two-way Jira/Azure DevOps add-on at $9/collaborator/mo.",
+          "source": {
+            "url": "https://www.tempo.io/pricing/roadmaps",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/project-management-planning-software/a/roadmunk/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Professional",
+          "monthlyUsd": 99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "$99/editor/mo billed annually. For scaling teams. Adds advanced visualizations, real-time publishing, usage reports, SSO, two-way syncs included (no add-on fee), 10 reviewer seats.",
+          "source": {
+            "url": "https://www.tempo.io/pricing/roadmaps",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/project-management-planning-software/a/roadmunk/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing, billed annually. Adds private cloud deployment, advanced customization, unlimited reviewer count. Contact Tempo sales.",
+          "source": {
+            "url": "https://www.tempo.io/pricing/roadmaps",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "prodpad",
+      "name": "ProdPad",
+      "domain": "prodpad.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Jira",
+        "Trello",
+        "GitHub",
+        "Slack",
+        "Salesforce",
+        "HubSpot",
+        "Zapier"
+      ],
+      "provenance": "prodpad.com/pricing/ pricing page uses heavy client-side JS and did not render dollar amounts in two fetch attempts (2026-06-15). Starting price of $24/mo corroborated by GetApp and SoftwareAdvice listings (both accessed 2026-06-15). ProdPad uses a modular per-product pricing model; exact per-module USD rates not confirmed from primary source. Single confirmed data point used; higher tiers and Enterprise are contact-sales.",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": 24,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "Starting at $24/mo per seat (annualized). Annual billing gives 20% discount vs monthly. Modular pricing: users select Roadmaps, Ideas, and/or other modules separately. Unlimited free Reviewer seats. Free trial at least 7 days (extendable). CAVEAT: exact price not confirmed from primary source — prodpad.com/pricing page is JS-gated; figure from GetApp/SoftwareAdvice fallback.",
+          "source": {
+            "url": "https://www.getapp.com/project-management-planning-software/a/prodpad/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://www.softwareadvice.com/project-management/prodpad-profile/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "ProdPad Enterprise for large organizations. Custom pricing via sales. Supports invoicing, multi-year discounts, and bank transfer payment.",
+          "source": {
+            "url": "https://www.prodpad.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "airfocus",
+      "name": "airfocus",
+      "domain": "airfocus.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Jira Cloud",
+        "Azure DevOps Cloud",
+        "Trello",
+        "Slack",
+        "Salesforce",
+        "GitHub",
+        "Zapier"
+      ],
+      "provenance": "airfocus.com/pricing/ (fetched 2026-06-15) shows only 'Professional' and 'Enterprise' plans with no USD prices — both say 'Request pricing'. GetApp listing (accessed 2026-06-15) showed a 'Core' plan at $59/user/mo; Slashdot showed older tiers (Essential $15, Advanced $49, Pro $89) that appear outdated. monthlyUsd=null used for both current tiers per the official page. The GetApp $59 figure is noted in plan notes for reference but is not used as the authoritative price given the vendor's current opaque pricing stance.",
+      "plans": [
+        {
+          "name": "Professional",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Request pricing via sales. Includes roadmaps, prioritization, feedback management, Jira Cloud and Azure DevOps Cloud integrations, core workspace features. GetApp (2026-06-15) previously listed a 'Core' tier at $59/user/mo — likely reflects an earlier pricing structure before airfocus moved to quote-only. No free trial; demo available.",
+          "source": {
+            "url": "https://airfocus.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/project-management-planning-software/a/airfocus/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Request pricing via sales. Adds portfolio management, capacity planning, unlimited product hierarchy, Salesforce integration, SSO enforcement, IP whitelisting, SCIM provisioning, dedicated CSM.",
+          "source": {
+            "url": "https://airfocus.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "craft-io",
+      "name": "Craft.io",
+      "domain": "craft.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Jira",
+        "Azure DevOps",
+        "GitHub",
+        "GitLab",
+        "Salesforce",
+        "HubSpot",
+        "Slack",
+        "Trello",
+        "Confluence"
+      ],
+      "provenance": "Prices from craft.io/pricing on 2026-06-15. Starter and Pro tier monthly and annual prices confirmed directly from vendor page. Annual discount verified as 20% for both tiers.",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": 19,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "$19/editor/mo billed annually; $24/editor/mo month-to-month. Single workspace. Unlimited free contributors and viewers. 14-day free trial (no credit card). Good for individual PMs or small teams.",
+          "source": {
+            "url": "https://craft.io/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 79,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "$79/editor/mo billed annually; $99/editor/mo month-to-month. Unlimited workspaces. Optional add-ons (OKRs & Product Strategy, Feedback portal, Capacity planning) available at $15/editor/mo annual or $20/editor/mo monthly. Users with paid licenses are not double-billed across workspaces.",
+          "source": {
+            "url": "https://craft.io/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing billed annually. Contact sales. Adds advanced security, SSO, SCIM, dedicated CSM, SLA. Pro plan add-ons included.",
+          "source": {
+            "url": "https://craft.io/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    }
+  ]
+}

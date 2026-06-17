@@ -1,0 +1,432 @@
+{
+  "vertical": "bookkeeping-services",
+  "generatedAt": "2026-06-15",
+  "methodologyNotes": "Six vendor pricing pages fetched directly via WebFetch on 2026-06-15/16. QuickBooks Live (quickbooks.intuit.com/live/) returned HTTP timeout on every attempt (JS-heavy SPA) and all known alternate Intuit pricing URLs either 404'd or timed out; QuickBooks Live is excluded rather than guessed. Pilot Core plan shows '$0/month billed annually' for pre-revenue startups only; for revenue-generating companies the price requires contacting sales, so Core is recorded as null. Botkeeper is priced per accounting-firm license (one license = one client entity), so billingModel is per_seat. Bench annual prices confirmed as $1,910/$3,830/$5,750/year with 20% discount versus $199/$399/$599 month-to-month. All minutesIncluded/callsIncluded/overagePerMin/overagePerCall fields are null (non-telephony vertical). hipaa/baa/bilingual set to null unless explicitly stated on vendor pages.",
+  "vendors": [
+    {
+      "slug": "bench",
+      "name": "Bench",
+      "domain": "bench.co",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Gusto",
+        "Relay",
+        "Bluevine",
+        "Shopify",
+        "Square"
+      ],
+      "provenance": "https://bench.co/pricing/ fetched 2026-06-15",
+      "plans": [
+        {
+          "name": "Bookkeeping Grow",
+          "monthlyUsd": 159,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Billed annually at $1,910/yr ($159.17/mo effective). Month-to-month rate $199/mo. For businesses under $250K annual revenue. Includes dedicated bookkeeping experts, monthly books, P&L and balance sheet, pre-scheduled touchpoints.",
+          "source": {
+            "url": "https://bench.co/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Bookkeeping Core",
+          "monthlyUsd": 319,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Billed annually at $3,830/yr ($319.17/mo effective). Month-to-month rate $399/mo. Includes dedicated experts, unlimited communication, monthly books, custom categorizations.",
+          "source": {
+            "url": "https://bench.co/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Bookkeeping Core + Tax",
+          "monthlyUsd": 479,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Billed annually at $5,750/yr ($479.17/mo effective). Month-to-month rate $599/mo. Includes everything in Core plus licensed tax professionals filing business and individual income tax returns.",
+          "source": {
+            "url": "https://bench.co/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "pilot",
+      "name": "Pilot",
+      "domain": "pilot.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "QuickBooks Online",
+        "Stripe",
+        "Gusto",
+        "ADP",
+        "Rippling",
+        "Paychex",
+        "Deel",
+        "Justworks",
+        "Bill.com",
+        "Expensify",
+        "Carta",
+        "Salesforce",
+        "HubSpot",
+        "Avalara",
+        "Wave",
+        "FreshBooks",
+        "Tipalti",
+        "Chargebee",
+        "PayPal",
+        "Square",
+        "Shopify",
+        "Amazon Seller Central"
+      ],
+      "provenance": "https://pilot.com/pricing fetched 2026-06-15; integrations from https://pilot.com/integrations fetched 2026-06-15",
+      "plans": [
+        {
+          "name": "Essentials",
+          "monthlyUsd": 99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "AI-assisted bookkeeping: automated categorization, reconciliation, monthly closing, basic reporting. No human bookkeeper included at this tier.",
+          "source": {
+            "url": "https://pilot.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Core",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Billed annually. Price shown as $0/mo for pre-revenue startups only (contact sales for discount); revenue-generating companies must contact sales for pricing. Includes US-based bookkeeper, accrual/cash basis, bill management, custom chart of accounts, 10th business day monthly close.",
+          "source": {
+            "url": "https://pilot.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Custom",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Contact sales. Includes QuickBooks integration, complex entity structures, custom workflows, 6th business day close, AR/AP, payroll, CFO advisory.",
+          "source": {
+            "url": "https://pilot.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "bookkeeper360",
+      "name": "Bookkeeper360",
+      "domain": "bookkeeper360.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "QuickBooks",
+        "Xero",
+        "Gusto",
+        "Bill.com"
+      ],
+      "provenance": "https://www.bookkeeper360.com/pricing/ fetched 2026-06-15; integrations from https://www.bookkeeper360.com/app/ fetched 2026-06-15",
+      "plans": [
+        {
+          "name": "Monthly Bookkeeping",
+          "monthlyUsd": 399,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Month-to-month. Dedicated bookkeeping team, monthly financial statements, trend analysis, US-based support, software dashboard. Onboarding project ($1,000 one-time) available separately.",
+          "source": {
+            "url": "https://www.bookkeeper360.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Weekly Bookkeeping",
+          "monthlyUsd": 599,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Most popular plan. Weekly financial reports plus monthly statements. Dedicated team, US-based support, software dashboard.",
+          "source": {
+            "url": "https://www.bookkeeper360.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "1800accountant",
+      "name": "1-800Accountant",
+      "domain": "1800accountant.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "https://www.1800accountant.com/pricing fetched 2026-06-15",
+      "plans": [
+        {
+          "name": "Tax Advisory",
+          "monthlyUsd": 209,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Billed annually. Includes portal access, dedicated accountant, year-round tax advice, proactive tax planning, quarterly reviews, financial planning. No bookkeeping included at this tier.",
+          "source": {
+            "url": "https://www.1800accountant.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Core Accounting",
+          "monthlyUsd": 249,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Billed annually. Most popular. Includes annual income tax return filing (Schedule C/1065/1120/1120S), AI-automated filing, ClientBooks bookkeeping subscription, expert review, proactive tax advisory, quarterly reviews, annual tax plan.",
+          "source": {
+            "url": "https://www.1800accountant.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Core Accounting+",
+          "monthlyUsd": 419,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Billed annually. Everything in Core Accounting plus full-service bookkeeping with dedicated bookkeeper.",
+          "source": {
+            "url": "https://www.1800accountant.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "merritt-bookkeeping",
+      "name": "Merritt Bookkeeping",
+      "domain": "merrittbookkeeping.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "QuickBooks"
+      ],
+      "provenance": "https://www.merrittbookkeeping.com/pricing/ fetched 2026-06-15",
+      "plans": [
+        {
+          "name": "Standard Bookkeeping",
+          "monthlyUsd": 250,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Single flat monthly rate, no contracts, no hidden fees. 3-month money-back guarantee. Uses QuickBooks. Catch-up bookkeeping available at $200/month per month behind (clients without QBooks) or $100/mo for mostly-complete months.",
+          "source": {
+            "url": "https://www.merrittbookkeeping.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "xendoo",
+      "name": "Xendoo",
+      "domain": "xendoo.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Xero",
+        "QuickBooks Online"
+      ],
+      "provenance": "https://xendoo.com/xendoo-pricing/ fetched 2026-06-15",
+      "plans": [
+        {
+          "name": "Essential",
+          "monthlyUsd": 355,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Billed annually at $355/mo ($4,260/yr). Month-to-month rate $395/mo. For businesses with up to $50K in monthly expenses. Saves $480/yr vs monthly.",
+          "source": {
+            "url": "https://xendoo.com/xendoo-pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Growth",
+          "monthlyUsd": 625,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Billed annually at $625/mo ($7,500/yr). Month-to-month rate $695/mo. Most popular. For businesses up to $75K in monthly expenses. Saves $840/yr vs monthly.",
+          "source": {
+            "url": "https://xendoo.com/xendoo-pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Scale",
+          "monthlyUsd": 895,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Billed annually at $895/mo ($10,740/yr). Month-to-month rate $995/mo. For businesses up to $125K in monthly expenses. Custom plans for over $125K/mo or full accrual basis. Saves $1,200/yr vs monthly.",
+          "source": {
+            "url": "https://xendoo.com/xendoo-pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "botkeeper",
+      "name": "Botkeeper",
+      "domain": "botkeeper.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "https://www.botkeeper.com/pricing fetched 2026-06-15 and https://www.botkeeper.com/pricing/ fetched 2026-06-15. Note: Botkeeper is sold to accounting firms (B2B2C); each license covers one client entity.",
+      "plans": [
+        {
+          "name": "1-4 Licenses",
+          "monthlyUsd": 149,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "Per entity license/month on monthly billing. Annual rate $134/license/mo (10% discount). For accounting firms managing 1-4 client entities. Auto-renews monthly. Cancel anytime on monthly plan.",
+          "source": {
+            "url": "https://www.botkeeper.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "5-9 Licenses",
+          "monthlyUsd": 109,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "Per entity license/month on monthly billing. Annual rate $98/license/mo (10% discount). For accounting firms managing 5-9 client entities.",
+          "source": {
+            "url": "https://www.botkeeper.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "10-24 Licenses",
+          "monthlyUsd": 79,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "Most popular tier. Per entity license/month on monthly billing. Annual rate $71/license/mo (10% discount). For accounting firms managing 10-24 client entities.",
+          "source": {
+            "url": "https://www.botkeeper.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "25+ Licenses",
+          "monthlyUsd": 59,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "Per entity license/month on monthly billing. Annual rate $53/license/mo (10% discount). For accounting firms managing 25+ client entities. Additional 25% volume savings mentioned.",
+          "source": {
+            "url": "https://www.botkeeper.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,694 @@
+{
+  "vertical": "translation-services",
+  "generatedAt": "2026-06-15",
+  "methodologyNotes": "Pricing fetched from official vendor pricing pages and reputable 2026 comparison sources via WebFetch/WebSearch on 2026-06-16/17. Access notes by vendor: (1) DeepL — official page (deepl.com/en/pro) JS-renders and returned nav shell only; prices sourced from eesel.ai/blog/deepl-pricing and checkthat.ai/brands/deepl/pricing, two independent 2026 aggregators that both independently confirm Individual $8.74/mo, Team $28.74/user/mo, Business $57.49/user/mo (annual-only billing). DeepL is annual-only for paid plans; no month-to-month option published. (2) Google Cloud Translation — official GCP pricing page rendered cleanly; all figures direct from cloud.google.com/translate/pricing. (3) Smartling — official pricing page returned 404; vendr.com, saasworthy.com, and crozdesk.com all confirm no published self-serve pricing; Smartling operates entirely on custom quotes; all plans set monthlyUsd=null. (4) Lokalise — official page (lokalise.com/pricing) confirmed Explorer $144/mo, Growth $499/mo, Advanced $999/mo monthly prices; corroborated by aiproductivity.ai and the G2 listing; annual discount rate not published; the new plan structure (2025 migration from key-based to word-based billing) confirmed via docs.lokalise.com/en/articles/11694835. (5) Phrase — official phrase.com/pricing rendered with clear prices; Freelancer $27/mo, Software UI/UX $525/mo, Professional $525/mo, Team $1245/mo all billed annually only; corroborated by saasworthy. (6) Crowdin — official page (crowdin.com/pricing) JS-renders; prices sourced from tekpon.com/software/crowdin/pricing which independently confirms Pro $59/mo ($50/mo annual), Team $179/mo ($150/mo annual), Team+ $450/mo (same monthly/annual); corroborated by costbench.com/software/localization/crowdin. Crowdin does not charge per seat. (7) Weglot — official weglot.com/pricing rendered cleanly; annual discount is exactly 2 months free (16.67%), confirmed by the page itself. monthlyUsd for annually-billed plans is the per-month equivalent derived from annual total. annualDiscountPct calculated from published monthly vs. annual-monthly rates. minutesIncluded, callsIncluded, overagePerMin, overagePerCall are null on all plans (non-telephony services). setupFeeUsd not applicable to any vendor. For Google Cloud Translation (usage-metered API): monthlyUsd=0 represents the free tier (500K chars/month at no charge); unit rates recorded in notes.",
+  "vendors": [
+    {
+      "slug": "deepl",
+      "name": "DeepL",
+      "domain": "deepl.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": true,
+      "integrations": [
+        "Microsoft Word",
+        "Microsoft PowerPoint",
+        "Google Docs",
+        "Zapier",
+        "CAT tools",
+        "REST API"
+      ],
+      "provenance": "Official page deepl.com/en/pro JS-renders (nav shell only returned). Prices sourced from eesel.ai/blog/deepl-pricing (2026) and checkthat.ai/brands/deepl/pricing (2026), both independently confirming the same figures. Annual-only billing for all paid plans confirmed by multiple sources.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "50,000 characters/month, 1 file translation/month (5 MB max). Data may be used for model training. No team features.",
+          "source": {
+            "url": "https://www.eesel.ai/blog/deepl-pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://checkthat.ai/brands/deepl/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Individual",
+          "monthlyUsd": 8.74,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 16,
+          "billingModel": "flat",
+          "notes": "Annual-only billing at $8.74/month (billed annually). Single user. 300,000 characters/month, 3 file translations/month (30 MB max). No month-to-month option published.",
+          "source": {
+            "url": "https://www.eesel.ai/blog/deepl-pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://checkthat.ai/brands/deepl/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Team",
+          "monthlyUsd": 28.74,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 16,
+          "billingModel": "per_seat",
+          "notes": "Annual-only billing at $28.74/user/month (billed annually). Per-seat pricing. 1,000,000 characters/user/month, 20 file translations/month (30 MB max). No month-to-month option published.",
+          "source": {
+            "url": "https://www.eesel.ai/blog/deepl-pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://checkthat.ai/brands/deepl/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 57.49,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 16,
+          "billingModel": "per_seat",
+          "notes": "Annual-only billing at $57.49/user/month (billed annually). Per-seat pricing. Unlimited characters (fair usage policy), 100 file translations/month (30 MB max). Includes Write Pro add-on. No month-to-month option published.",
+          "source": {
+            "url": "https://www.eesel.ai/blog/deepl-pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://checkthat.ai/brands/deepl/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing via sales. Dedicated support, custom character limits, advanced admin controls.",
+          "source": {
+            "url": "https://www.eesel.ai/blog/deepl-pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "google-cloud-translation",
+      "name": "Google Cloud Translation",
+      "domain": "cloud.google.com",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Google Cloud",
+        "Firebase",
+        "BigQuery",
+        "REST API",
+        "client libraries (Python, Java, Go, Node.js, Ruby, PHP, C#)"
+      ],
+      "provenance": "Official GCP pricing page cloud.google.com/translate/pricing fetched directly; page rendered cleanly with full pricing tables.",
+      "plans": [
+        {
+          "name": "Translation API Basic (v2) Free Tier",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "First 500,000 characters/month free (as a $10/month credit applied collectively to Basic and Advanced). Credit does not roll over. Overage: $20/million characters (up to 1B chars/month). Usage-metered; no flat subscription. Charges per character (code point) including whitespace.",
+          "source": {
+            "url": "https://cloud.google.com/translate/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Translation API Advanced (v3) NMT",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "First 500,000 characters/month free (shared $10/month credit with Basic). Overage: $20/million characters. Document translation: $0.08/page. Usage-metered pay-as-you-go; no flat subscription. LLM Text Translation: $10/million input characters + $10/million output characters.",
+          "source": {
+            "url": "https://cloud.google.com/translate/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Custom Model Training",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom model text translation: $80/million chars (500K–250M), $60/million (250M–2.5B), $40/million (2.5B–4B), $30/million (4B+). First 500K chars/month free via $40/month credit. Training: $45/hour (max $300/job). Document translation: $0.25/page. No flat monthly fee.",
+          "source": {
+            "url": "https://cloud.google.com/translate/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "smartling",
+      "name": "Smartling",
+      "domain": "smartling.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Salesforce",
+        "Adobe Experience Manager",
+        "Contentful",
+        "Drupal",
+        "GitHub",
+        "Jira",
+        "Zendesk",
+        "REST API"
+      ],
+      "provenance": "Official pricing page (smartling.com/pricing) returned 404 on two attempts. vendr.com/marketplace/smartling, crozdesk.com/software/smartling/pricing, and aiproductivity.ai/pricing/smartling all confirm no published self-serve pricing; all tiers are custom-quoted. Typical annual contract values from Vendr: $20K–$200K+/year.",
+      "plans": [
+        {
+          "name": "Essentials",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Contact sales only. No published price. Entry-level TMS with translation memory, visual context, basic workflow. Annual contract.",
+          "source": {
+            "url": "https://www.vendr.com/marketplace/smartling",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Professional",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Contact sales only. No published price. Advanced workflows, API integrations, custom roles. Annual contract.",
+          "source": {
+            "url": "https://www.vendr.com/marketplace/smartling",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Contact sales only. No published price. Dedicated CSM, SLA guarantees, SSO, custom integrations. Annual contract.",
+          "source": {
+            "url": "https://www.vendr.com/marketplace/smartling",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "lokalise",
+      "name": "Lokalise",
+      "domain": "lokalise.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "GitHub",
+        "GitLab",
+        "Bitbucket",
+        "Figma",
+        "Sketch",
+        "Jira",
+        "Slack",
+        "Zendesk",
+        "Contentful",
+        "WordPress",
+        "REST API"
+      ],
+      "provenance": "Official pricing page lokalise.com/pricing fetched directly; confirmed Explorer $144/mo, Growth $499/mo, Advanced $999/mo. Corroborated by aiproductivity.ai/pricing/lokalise (2026). New plan structure (word-based billing, unlimited keys) confirmed via docs.lokalise.com/en/articles/11694835 (migrated from key-based billing in 2025).",
+      "plans": [
+        {
+          "name": "Explorer",
+          "monthlyUsd": 144,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Flat monthly fee. 5 advanced seats (unlimited standard/translator seats). Up to 10 advanced seats max. 240K AI translation words/year. 5 projects, 10 languages. Billing based on processed words (not keys). 14-day free trial. Annual discount not published on pricing page.",
+          "source": {
+            "url": "https://lokalise.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://aiproductivity.ai/pricing/lokalise/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Growth",
+          "monthlyUsd": 499,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Flat monthly fee. 10 advanced seats (unlimited standard seats). Unlimited projects and languages. Advanced workflow automation, branching. 14-day free trial.",
+          "source": {
+            "url": "https://lokalise.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://aiproductivity.ai/pricing/lokalise/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Advanced",
+          "monthlyUsd": 999,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Flat monthly fee. 15 advanced seats (unlimited standard seats). Full workflow customization, versioning, chained tasks, 2FA, auto-snapshots, translation memory. Unlimited projects and languages. 14-day free trial.",
+          "source": {
+            "url": "https://lokalise.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://aiproductivity.ai/pricing/lokalise/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Contact sales. 40+ advanced seats. Dedicated CSM, regular business reviews, custom security and SSO configurations. Annual contract.",
+          "source": {
+            "url": "https://lokalise.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "phrase",
+      "name": "Phrase",
+      "domain": "phrase.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "GitHub",
+        "GitLab",
+        "Bitbucket",
+        "Figma",
+        "Sketch",
+        "Android Studio",
+        "Xcode",
+        "REST API",
+        "CLI"
+      ],
+      "provenance": "Official pricing page phrase.com/pricing fetched directly; rendered with plan names and annual USD prices. Annual-only billing shown for all published tiers. Quarterly billing available per page note but prices not displayed. All prices are billed annually.",
+      "plans": [
+        {
+          "name": "Freelancer",
+          "monthlyUsd": 27,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Annual billing only at $27/month (billed annually). 1 TMS Seat, no Strings Seats. For individual translators/LSPs. 14-day free trial.",
+          "source": {
+            "url": "https://phrase.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Software UI/UX",
+          "monthlyUsd": 525,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Annual billing only at $525/month (billed annually). 15 Strings Seats, 1M Strings Managed Words. For product/design teams. 14-day free trial.",
+          "source": {
+            "url": "https://phrase.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Professional",
+          "monthlyUsd": 525,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Annual billing only at $525/month (billed annually). Unlimited TMS Seats, 150 Strings Seats. For LSPs and professional translation agencies. 14-day free trial.",
+          "source": {
+            "url": "https://phrase.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Team",
+          "monthlyUsd": 1245,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Annual billing only at $1,245/month (billed annually). 20 Strings Seats, Unlimited TMS Seats. For growing software teams. 14-day free trial.",
+          "source": {
+            "url": "https://phrase.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Contact sales. 150 Strings Seats, Unlimited TMS Seats, higher capacities than Team. Annual contract.",
+          "source": {
+            "url": "https://phrase.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Contact sales. 150+ Strings Seats, Unlimited TMS Seats, tailored capacities, premium dedicated support. Annual contract.",
+          "source": {
+            "url": "https://phrase.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "crowdin",
+      "name": "Crowdin",
+      "domain": "crowdin.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "GitHub",
+        "GitLab",
+        "Bitbucket",
+        "Jira",
+        "Slack",
+        "Figma",
+        "Android Studio",
+        "Xcode",
+        "REST API",
+        "CLI"
+      ],
+      "provenance": "Official page crowdin.com/pricing JS-renders. Prices sourced from tekpon.com/software/crowdin/pricing (2026) which shows monthly vs annual breakdown, corroborated by costbench.com/software/localization/crowdin. Crowdin does not charge per seat; pricing based on hosted words and manager role count.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "60,000 hosted words, 1 private project, 1 integration, unlimited public projects, unlimited translators, Crowdin AI included. Best for open source and personal projects.",
+          "source": {
+            "url": "https://tekpon.com/software/crowdin/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://costbench.com/software/localization/crowdin/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 50,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 15,
+          "billingModel": "flat",
+          "notes": "Annual billing: $50/month (billed annually, ~15% savings). Month-to-month: $59/month. 60,000 hosted words (expandable). Flat pricing — not per seat; unlimited translators included. 14-day free trial.",
+          "source": {
+            "url": "https://tekpon.com/software/crowdin/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://costbench.com/software/localization/crowdin/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Team",
+          "monthlyUsd": 150,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 16,
+          "billingModel": "flat",
+          "notes": "Annual billing: $150/month (billed annually, ~16% savings). Month-to-month: $179/month. 100,000 hosted words. Flat pricing — not per seat; unlimited translators included. 14-day free trial.",
+          "source": {
+            "url": "https://tekpon.com/software/crowdin/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://costbench.com/software/localization/crowdin/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Team+",
+          "monthlyUsd": 450,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 0,
+          "billingModel": "flat",
+          "notes": "Same price monthly and annually: $450/month. 500,000+ hosted words. Includes invoice-based billing. Flat pricing — not per seat; unlimited translators included. 14-day free trial.",
+          "source": {
+            "url": "https://tekpon.com/software/crowdin/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://costbench.com/software/localization/crowdin/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Contact sales. Unlimited hosted words, 10 managers, SAML SSO, SCIM, SIEM. 30-day free trial. Annual contract.",
+          "source": {
+            "url": "https://tekpon.com/software/crowdin/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "weglot",
+      "name": "Weglot",
+      "domain": "weglot.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "WordPress",
+        "Shopify",
+        "Webflow",
+        "Squarespace",
+        "Wix",
+        "BigCommerce",
+        "JavaScript API",
+        "REST API"
+      ],
+      "provenance": "Official pricing page weglot.com/pricing fetched directly; full pricing table rendered cleanly with all plan tiers, monthly and annual prices. Annual discount explicitly stated as '2 months free (17% saving)'. monthlyUsd for annual plans is the per-month equivalent (annual total / 12).",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "1 language, 2,000 translated words. AI translation, glossary included. Good for small landing pages.",
+          "source": {
+            "url": "https://www.weglot.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Starter",
+          "monthlyUsd": 14.17,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "Annual billing: $14.17/month ($170/year). Month-to-month: $17/month. 1 language, 10,000 translated words. 14-day free trial on all plans.",
+          "source": {
+            "url": "https://www.weglot.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 26.67,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "Annual billing: $26.67/month ($320/year). Month-to-month: $32/month. 3 languages, 50,000 translated words. 14-day free trial.",
+          "source": {
+            "url": "https://www.weglot.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 72.5,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "Annual billing: $72.50/month ($870/year). Month-to-month: $87/month. 5 languages, 200,000 translated words. 14-day free trial.",
+          "source": {
+            "url": "https://www.weglot.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Advanced",
+          "monthlyUsd": 274.17,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "Annual billing: $274.17/month ($3,290/year). Month-to-month: $329/month. 10 languages, 1,000,000 translated words. 14-day free trial.",
+          "source": {
+            "url": "https://www.weglot.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Extended",
+          "monthlyUsd": 640.83,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "Annual billing: $640.83/month ($7,690/year). Month-to-month: $769/month. 20 languages, 5,000,000 translated words. 14-day free trial.",
+          "source": {
+            "url": "https://www.weglot.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Contact sales. Custom languages, words, dedicated support. Annual contract.",
+          "source": {
+            "url": "https://www.weglot.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    }
+  ]
+}

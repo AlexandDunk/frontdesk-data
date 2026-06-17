@@ -1,0 +1,673 @@
+{
+  "vertical": "vps-hosting",
+  "generatedAt": "2026-06-15",
+  "methodologyNotes": "Self-serve USD pricing collected from each vendor's official pricing page where accessible (2026-06-15). Akamai/Linode: linode.com/pricing redirects to akamai.com/cloud/pricing; Shared CPU prices confirmed from official page. Vultr: official vultr.com/pricing page confirmed plan tiers and prices. DigitalOcean: official digitalocean.com/pricing/droplets page confirmed Basic Droplet tiers. OVHcloud: official ovhcloud.com/en/vps/ confirmed VPS 2027 plan prices — listed prices reflect the annual (upfront-12-month) billing cycle; no separate month-to-month USD rate was published on page. Hetzner Cloud: official hetzner.com/cloud page is JavaScript-rendered and returned only placeholder text. On adversarial re-verification (2026-06-17) the prior vpsbenchmarks-derived USD figures did not reconcile with two concordant independent sources (bitdoze.com, betterstack.com) reporting post-1-Apr-2026 EUR prices (CX23 €3.99, CX43 €11.99, CPX22 €7.99, CAX11 €4.49; CCX13 €12.49–15.99 — sources conflict), and a further Hetzner price adjustment took effect 15 Jun 2026. All Hetzner plan monthlyUsd values therefore set to null with per-plan notes; no USD price asserted. Kamatera: official kamatera.com/pricing page returned three preset plan tiers (Basic/Standard/Pro); deeper plan matrix sourced from vpsbenchmarks.com (Availability and General Purpose families). Hostinger: official hostinger.com/vps-hosting page confirmed KVM plan promotional pricing on 2-year term. minutesIncluded/callsIncluded/overagePerMin/overagePerCall = null on all plans (non-telephony vertical). Only representative entry-level and mid-tier plans recorded per vendor to keep dataset actionable; higher tiers noted in methodologyNotes. hipaa/baa/bilingual null unless explicitly stated on pricing page. annualDiscountPct null unless both monthly and annual rates were explicitly published.",
+  "vendors": [
+    {
+      "slug": "akamai-cloud",
+      "name": "Akamai Cloud (Linode)",
+      "domain": "linode.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Akamai CDN",
+        "Object Storage",
+        "Kubernetes (LKE)",
+        "NodeBalancers",
+        "Block Storage",
+        "Terraform",
+        "Ansible"
+      ],
+      "provenance": "https://www.akamai.com/cloud/pricing (official pricing page via linode.com/pricing redirect, fetched 2026-06-15)",
+      "plans": [
+        {
+          "name": "Nanode 1 GB",
+          "monthlyUsd": 5,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "1 vCPU, 1 GB RAM, 25 GB SSD, 1 TB transfer. Hourly: $0.0075. Shared CPU tier. Month-to-month billing; no annual discount published.",
+          "source": {
+            "url": "https://www.akamai.com/cloud/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://www.vpsbenchmarks.com/hosters/hetzner",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Linode 2 GB",
+          "monthlyUsd": 12,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "1 vCPU, 2 GB RAM, 50 GB SSD, 2 TB transfer. Hourly: $0.018. Shared CPU tier.",
+          "source": {
+            "url": "https://www.akamai.com/cloud/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Linode 4 GB",
+          "monthlyUsd": 24,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "2 vCPU, 4 GB RAM, 80 GB SSD, 4 TB transfer. Hourly: $0.036. Shared CPU tier.",
+          "source": {
+            "url": "https://www.akamai.com/cloud/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Linode 8 GB",
+          "monthlyUsd": 48,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "4 vCPU, 8 GB RAM, 160 GB SSD, 5 TB transfer. Hourly: $0.072. Shared CPU tier.",
+          "source": {
+            "url": "https://www.akamai.com/cloud/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "High Memory 24 GB",
+          "monthlyUsd": 60,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "1 vCPU, 24 GB RAM. Hourly: $0.09. High Memory tier optimized for memory-intensive workloads.",
+          "source": {
+            "url": "https://www.akamai.com/cloud/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "vultr",
+      "name": "Vultr",
+      "domain": "vultr.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Kubernetes",
+        "Object Storage",
+        "Block Storage",
+        "Managed Databases",
+        "Terraform",
+        "Ansible",
+        "Load Balancers"
+      ],
+      "provenance": "https://www.vultr.com/pricing/ (official pricing page, fetched 2026-06-15)",
+      "plans": [
+        {
+          "name": "Cloud Compute Regular — 1 GB",
+          "monthlyUsd": 5,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "1 vCPU, 1 GB RAM, 25 GB SSD, 1 TB bandwidth. Previous-gen Intel CPUs, regular SSD. Hourly billing available. No annual discount published.",
+          "source": {
+            "url": "https://www.vultr.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://www.vpsbenchmarks.com/hosters/vultr",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Cloud Compute Regular — 2 GB",
+          "monthlyUsd": 10,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "1 vCPU, 2 GB RAM, 55 GB SSD, 2 TB bandwidth.",
+          "source": {
+            "url": "https://www.vultr.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "High Frequency — 1 GB",
+          "monthlyUsd": 6,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "1 vCPU, 1 GB RAM, NVMe SSD. High Frequency shared CPU tier with faster storage.",
+          "source": {
+            "url": "https://www.vultr.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "High Frequency — 2 GB",
+          "monthlyUsd": 12,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "1 vCPU, 2 GB RAM, NVMe SSD.",
+          "source": {
+            "url": "https://www.vultr.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "High Performance — 1 GB",
+          "monthlyUsd": 6,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "1 vCPU, 1 GB RAM. High Performance shared CPU (AMD/Intel, NVMe).",
+          "source": {
+            "url": "https://www.vultr.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "digitalocean",
+      "name": "DigitalOcean",
+      "domain": "digitalocean.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Kubernetes (DOKS)",
+        "Managed Databases",
+        "Spaces Object Storage",
+        "App Platform",
+        "CDN",
+        "Terraform",
+        "GitHub Actions"
+      ],
+      "provenance": "https://www.digitalocean.com/pricing/droplets (official pricing page, fetched 2026-06-15)",
+      "plans": [
+        {
+          "name": "Basic Droplet — 1 GB",
+          "monthlyUsd": 6,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "1 vCPU, 1 GB RAM, 25 GB SSD, 1 TB transfer. Shared CPU. Billed per-second with 60-second minimum and monthly cap (effective 2026-01-01). No annual discount published.",
+          "source": {
+            "url": "https://www.digitalocean.com/pricing/droplets",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://www.vpsbenchmarks.com/hosters/digitalocean",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Basic Droplet — 2 GB",
+          "monthlyUsd": 12,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "1 vCPU, 2 GB RAM, 50 GB SSD, 2 TB transfer. Shared CPU.",
+          "source": {
+            "url": "https://www.digitalocean.com/pricing/droplets",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Basic Droplet — 4 GB",
+          "monthlyUsd": 24,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "2 vCPU, 4 GB RAM, 80 GB SSD, 4 TB transfer. Shared CPU.",
+          "source": {
+            "url": "https://www.digitalocean.com/pricing/droplets",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Basic Droplet — 8 GB",
+          "monthlyUsd": 48,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "4 vCPU, 8 GB RAM, 160 GB SSD, 5 TB transfer. Shared CPU.",
+          "source": {
+            "url": "https://www.digitalocean.com/pricing/droplets",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "CPU-Optimized Droplet — 4 GB",
+          "monthlyUsd": 42,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "2 vCPU, 4 GB RAM, dedicated CPU. Entry CPU-optimized tier.",
+          "source": {
+            "url": "https://www.digitalocean.com/pricing/droplets",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "General Purpose Droplet — 8 GB",
+          "monthlyUsd": 63,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "2 vCPU, 8 GB RAM. Entry General Purpose dedicated CPU tier.",
+          "source": {
+            "url": "https://www.digitalocean.com/pricing/droplets",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "hetzner-cloud",
+      "name": "Hetzner Cloud",
+      "domain": "hetzner.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Kubernetes (managed)",
+        "Load Balancers",
+        "Object Storage",
+        "Block Volumes",
+        "Terraform",
+        "Ansible",
+        "Packer"
+      ],
+      "provenance": "https://www.hetzner.com/cloud/ (official page is JS-rendered — USD prices not extractable). All plan monthlyUsd values set null on adversarial review (2026-06-17): the prior vpsbenchmarks-derived USD figures were ~€0.50/plan above the EUR prices confirmed by two concordant independent sources (bitdoze.com, betterstack.com) for the post-1-Apr-2026 schedule, and a further Hetzner price adjustment took effect 15 Jun 2026. EUR→USD conversion and US-region surcharge are not independently verifiable, so no USD price is asserted.",
+      "plans": [
+        {
+          "name": "CX23 (Cost-Optimized)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "2 vCPU (shared), 4 GB RAM, 40 GB SSD. USD figure set null: prior value (~€4.49 → $5.25) could not be independently confirmed. Two concordant sources (bitdoze, betterstack, Jun 2026) put CX23 at €3.99/month (Germany/Finland) after the 1 Apr 2026 increase; a further price adjustment took effect 15 Jun 2026. EUR→USD rate and US-region surcharge also unverifiable, so no USD price asserted.",
+          "source": {
+            "url": "https://www.vpsbenchmarks.com/hosters/hetzner",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://www.hetzner.com/cloud/cost-optimized/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "CX43 (Cost-Optimized)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "8 vCPU (shared), 16 GB RAM, 160 GB SSD. USD figure set null: prior value (~€12.49 → $14.61) not independently confirmed. bitdoze/betterstack (Jun 2026) list CX43 at €11.99/month (Germany/Finland) after the 1 Apr 2026 increase. No verifiable USD rate, so no USD price asserted.",
+          "source": {
+            "url": "https://www.vpsbenchmarks.com/hosters/hetzner",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://www.hetzner.com/cloud/cost-optimized/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "CPX22 (Regular Performance)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "2 vCPU (shared AMD), 4 GB RAM, 80 GB SSD. USD figure set null: prior value (~€8.49 → $9.93) not independently confirmed. bitdoze/betterstack (Jun 2026) list CPX22 at €7.99/month (Germany/Finland) after the 1 Apr 2026 increase. No verifiable USD rate, so no USD price asserted.",
+          "source": {
+            "url": "https://www.vpsbenchmarks.com/hosters/hetzner",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://www.hetzner.com/cloud/regular-performance/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "CCX13 (General Purpose Dedicated)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "2 dedicated vCPU, 8 GB RAM, 80 GB SSD. Entry dedicated CPU tier. USD figure set null: prior value (~€16.49 → $19.29) not confirmed and sources conflict — betterstack lists CCX13 at €15.99/month post-1-Apr-2026, bitdoze lists €12.49/month. No verifiable USD figure, so no price asserted.",
+          "source": {
+            "url": "https://www.vpsbenchmarks.com/hosters/hetzner",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://www.hetzner.com/cloud/general-purpose/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "CAX11 (Cost-Optimized ARM)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "2 vCPU (ARM64, shared), 4 GB RAM, 40 GB SSD. USD figure set null: prior value (~€4.99 → $5.84) not independently confirmed. bitdoze/betterstack (Jun 2026) list CAX11 at €4.49/month (Germany/Finland) after the 1 Apr 2026 increase. No verifiable USD rate, so no USD price asserted.",
+          "source": {
+            "url": "https://www.vpsbenchmarks.com/hosters/hetzner",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "ovhcloud",
+      "name": "OVHcloud",
+      "domain": "ovhcloud.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "OVHcloud Load Balancer",
+        "Snapshot/Backup",
+        "Private Network (vRack)",
+        "Anti-DDoS",
+        "Object Storage"
+      ],
+      "provenance": "https://www.ovhcloud.com/en/vps/ (official pricing page, fetched 2026-06-15; prices shown are under upfront-12-month billing)",
+      "plans": [
+        {
+          "name": "VPS-1",
+          "monthlyUsd": 4.54,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "2 vCores, 4 GB RAM, 40 GB SSD NVMe. Price shown on official page as 'From $4.54/month' with upfront-12-month billing. Includes daily backup, unlimited traffic, anti-DDoS. Month-to-month rate not published in USD on page.",
+          "source": {
+            "url": "https://www.ovhcloud.com/en/vps/",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://www.vpsbenchmarks.com/hosters/ovhcloud",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "VPS-2",
+          "monthlyUsd": 8.5,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "4 vCores, 8 GB RAM, 75 GB SSD NVMe. Upfront-12-month billing. Includes daily backup, unlimited traffic, anti-DDoS.",
+          "source": {
+            "url": "https://www.ovhcloud.com/en/vps/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "VPS-3",
+          "monthlyUsd": 12.32,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "6 vCores, 12 GB RAM, 100 GB SSD NVMe. Upfront-12-month billing.",
+          "source": {
+            "url": "https://www.ovhcloud.com/en/vps/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "VPS-4",
+          "monthlyUsd": 23.37,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "8 vCores, 24 GB RAM, 200 GB SSD NVMe. Upfront-12-month billing.",
+          "source": {
+            "url": "https://www.ovhcloud.com/en/vps/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "kamatera",
+      "name": "Kamatera",
+      "domain": "kamatera.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Load Balancers",
+        "Managed Firewall",
+        "Private Network",
+        "Managed Backup",
+        "Block Storage"
+      ],
+      "provenance": "https://www.kamatera.com/pricing (official pricing page, fetched 2026-06-15; three preset plan tiers confirmed; detailed plan matrix from vpsbenchmarks.com/hosters/kamatera)",
+      "plans": [
+        {
+          "name": "Basic (Availability 1 GB)",
+          "monthlyUsd": 4,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "1 vCPU (Type A – Availability/burstable), 1 GB RAM, 20 GB NVMe SSD, 5 TB traffic. No long-term contracts; also available hourly. Extra traffic at $0.01/GB, extra storage at $0.05/GB/month.",
+          "source": {
+            "url": "https://www.kamatera.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://www.vpsbenchmarks.com/hosters/kamatera",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Standard (General Purpose 2 GB)",
+          "monthlyUsd": 25,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "2 vCPU (Type B – General Purpose, dedicated thread), 2 GB RAM, 20 GB NVMe SSD, 5 TB traffic.",
+          "source": {
+            "url": "https://www.kamatera.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Pro (General Purpose 4 GB)",
+          "monthlyUsd": 39,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "2 vCPU (Type B – General Purpose, dedicated thread), 4 GB RAM, 20 GB NVMe SSD, 5 TB traffic.",
+          "source": {
+            "url": "https://www.kamatera.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Availability 4 GB / 2 cores",
+          "monthlyUsd": 19,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "2 vCPU (Type A – Availability/burstable), 4 GB RAM. Price from vpsbenchmarks.com review (May 2026); not listed as a named preset on official pricing page.",
+          "source": {
+            "url": "https://www.vpsbenchmarks.com/hosters/kamatera",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "hostinger-vps",
+      "name": "Hostinger VPS",
+      "domain": "hostinger.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "AI Web Terminal",
+        "Kodee AI Assistant",
+        "Cloudflare",
+        "Weekly Backups",
+        "VPS Control Panel",
+        "WordPress"
+      ],
+      "provenance": "https://www.hostinger.com/vps-hosting (official pricing page, fetched 2026-06-15; promotional prices apply to 2-year term)",
+      "plans": [
+        {
+          "name": "KVM 1",
+          "monthlyUsd": 6.49,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "AMD EPYC, 1 vCPU, 4 GB RAM, 50 GB NVMe SSD. Promotional price on 2-year term ($6.49/mo); regular renewal rate $11.99/mo. 67% promotional discount vs. regular rate. Free weekly backups, AI Web terminal included.",
+          "source": {
+            "url": "https://www.hostinger.com/vps-hosting",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "KVM 2",
+          "monthlyUsd": 8.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "AMD EPYC, 2 vCPU, 8 GB RAM, 100 GB NVMe SSD. Most popular plan. Promotional price on 2-year term ($8.99/mo); regular renewal rate $14.99/mo. 63% promotional discount vs. regular rate.",
+          "source": {
+            "url": "https://www.hostinger.com/vps-hosting",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "KVM 4",
+          "monthlyUsd": 12.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "AMD EPYC, 4 vCPU, 16 GB RAM, 200 GB NVMe SSD. Promotional price on 2-year term ($12.99/mo); regular renewal rate $28.99/mo. 70% promotional discount vs. regular rate.",
+          "source": {
+            "url": "https://www.hostinger.com/vps-hosting",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "KVM 8",
+          "monthlyUsd": 25.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "AMD EPYC, 8 vCPU, 32 GB RAM, 400 GB NVMe SSD. Promotional price on 2-year term ($25.99/mo); regular renewal rate $49.99/mo. 65% promotional discount vs. regular rate.",
+          "source": {
+            "url": "https://www.hostinger.com/vps-hosting",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    }
+  ]
+}

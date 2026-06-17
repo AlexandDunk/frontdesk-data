@@ -1,0 +1,805 @@
+{
+  "vertical": "ssl-certificates",
+  "generatedAt": "2026-06-15",
+  "methodologyNotes": "Self-serve USD pricing was collected on 2026-06-15 from each vendor's official pricing or product pages via WebFetch. Where an official page returned HTTP 403 (Namecheap — all paths) or used JavaScript-only price rendering (GlobalSign shop.globalsign.com renders prices dynamically after region/currency selection — bullet-placeholder '•' visible in raw HTML), monthlyUsd is set to null and provenance explains the failure mode. GoGetSSL catalog pages (gogetssl.com/ssl-certificates/*) returned usable HTML price tables and serve as the primary source for GoGetSSL's own-brand plans. Sectigo's official site (sectigo.com) only publishes a headline '$110/yr DV SSL' figure; per-product breakdowns come from GoGetSSL's reseller catalog pages which carry Sectigo-branded products at reseller rates — noted in provenance. DigiCert pricing was taken from digicert.com/tls-ssl/ (subscription monthly rates, 12-month auto-renewing); the compare-certificates page shows different per-cert retail prices and is recorded as corroboration with a note. ZeroSSL is included as a modern alternative with clearly published self-serve pricing. All plans have minutesIncluded, callsIncluded, overagePerMin, and overagePerCall set to null (non-telephony vertical). billingModel is 'flat' for all fixed-term certificate plans; 'custom' for quote-only enterprise tiers. hipaa/baa/bilingual are null unless explicitly stated on the vendor page. monthlyUsd is the effective monthly cost of the cheapest annual term (annual price / 12). annualDiscountPct is recorded only where the vendor explicitly publishes both a monthly and an annual rate, or two different term lengths with percentages. SSL certificate validity changed industry-wide to a maximum of ~200 days (two 90-day or one 199-day issuance) as of March 2026 (CA/Browser Forum BR); all plans reflect this context in notes.",
+  "vendors": [
+    {
+      "slug": "digicert",
+      "name": "DigiCert",
+      "domain": "digicert.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "CertCentral",
+        "ACME",
+        "REST API",
+        "Azure Key Vault",
+        "AWS Certificate Manager",
+        "HashiCorp Vault"
+      ],
+      "provenance": "Primary: digicert.com/tls-ssl/ fetched 2026-06-15 — subscription monthly rates visible in page text ($26/mo Basic OV, etc.). Corroboration: digicert.com/tls-ssl/compare-certificates fetched 2026-06-15 shows per-cert retail annual prices ($218 Basic OV, $344 Basic EV, $399 Secure Site OV, $995 Secure Site EV/Pro OV, $1,495 Secure Site Pro EV) which differ from subscription monthly equivalents — both sets of data noted. Monthly-subscription page used as primary; subscription plans auto-renew every 12 months.",
+      "plans": [
+        {
+          "name": "Basic OV — Single Domain",
+          "monthlyUsd": 26,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Organization Validated single-domain certificate. $26/month billed as 12-month auto-renewing subscription ($312/yr). Includes unlimited server licensing, free reissues, CertCentral management portal. Max cert validity ~200 days per 2026 BR rules; DigiCert issues two 199-day certificates per annual subscription.",
+          "source": {
+            "url": "https://www.digicert.com/tls-ssl/",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://www.digicert.com/tls-ssl/compare-certificates",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Basic EV — Single Domain",
+          "monthlyUsd": 39,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Extended Validation single-domain. $39/month billed annually ($468/yr). Highest assurance level with full business identity vetting. Compare-certificates page shows $344/yr retail price.",
+          "source": {
+            "url": "https://www.digicert.com/tls-ssl/",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://www.digicert.com/tls-ssl/compare-certificates",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Basic OV — Wildcard",
+          "monthlyUsd": 82,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "OV wildcard covering all subdomains of one domain. $82/month billed annually ($984/yr).",
+          "source": {
+            "url": "https://www.digicert.com/tls-ssl/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Secure Site OV — Single Domain",
+          "monthlyUsd": 44,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "OV single domain with added vulnerability assessment, blocklist monitoring, and CT log monitoring. $44/month billed annually ($528/yr). Compare-certificates page shows $399/yr retail.",
+          "source": {
+            "url": "https://www.digicert.com/tls-ssl/",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://www.digicert.com/tls-ssl/compare-certificates",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Secure Site EV — Single Domain",
+          "monthlyUsd": 100,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "EV single domain with premium security suite. $100/month billed annually ($1,200/yr). Compare-certificates page shows $995/yr retail.",
+          "source": {
+            "url": "https://www.digicert.com/tls-ssl/",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://www.digicert.com/tls-ssl/compare-certificates",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Secure Site Pro OV — Single Domain",
+          "monthlyUsd": 108,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "OV single domain, top-tier with post-quantum cryptography readiness and $2M warranty. $108/month billed annually ($1,296/yr). Compare-certificates page shows $995/yr retail.",
+          "source": {
+            "url": "https://www.digicert.com/tls-ssl/",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://www.digicert.com/tls-ssl/compare-certificates",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Secure Site Pro EV — Single Domain",
+          "monthlyUsd": 155,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "EV single domain, highest tier with post-quantum readiness and $2M warranty. $155/month billed annually ($1,860/yr). Compare-certificates page shows $1,495/yr retail.",
+          "source": {
+            "url": "https://www.digicert.com/tls-ssl/",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://www.digicert.com/tls-ssl/compare-certificates",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "sectigo",
+      "name": "Sectigo",
+      "domain": "sectigo.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "ACME",
+        "REST API",
+        "SCM Enterprise",
+        "cPanel",
+        "Plesk"
+      ],
+      "provenance": "Official sectigo.com page confirms DV SSL 'starts at $110 for a one year single domain DV SSL' — that is the only price published on the main SSL page (fetched 2026-06-15). Per-product breakdowns (PositiveSSL, EssentialSSL, InstantSSL, EV variants, wildcards) were sourced from GoGetSSL reseller catalog pages (gogetssl.com/ssl-certificates/domain-validation/, /business-validation/, /extended-validation/) fetched 2026-06-15. Reseller prices are typically at or below Sectigo's own retail; Sectigo's own retail may be higher. Both sources cited.",
+      "plans": [
+        {
+          "name": "PositiveSSL DV — Single Domain",
+          "monthlyUsd": 1.33,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Entry-level DV single domain. $16.00/yr via GoGetSSL reseller. Sectigo's official page cites '$110/yr' as the DV starting price — the delta reflects reseller discount. Fastest issuance (minutes). $500k warranty.",
+          "source": {
+            "url": "https://www.gogetssl.com/ssl-certificates/domain-validation/",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://sectigo.com/ssl-certificates-tls",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "EssentialSSL DV — Single Domain",
+          "monthlyUsd": 2.2,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "DV single domain, mid-tier DV. $26.40/yr via GoGetSSL reseller. Includes www + non-www coverage. $10k warranty.",
+          "source": {
+            "url": "https://www.gogetssl.com/ssl-certificates/domain-validation/",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://sectigo.com/ssl-certificates-tls",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "PositiveSSL Wildcard DV",
+          "monthlyUsd": 10.67,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "DV wildcard covering unlimited subdomains. $128.00/yr via GoGetSSL reseller.",
+          "source": {
+            "url": "https://www.gogetssl.com/ssl-certificates/domain-validation/",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://sectigo.com/ssl-certificates-tls",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "EssentialSSL Wildcard DV",
+          "monthlyUsd": 7,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "DV wildcard, lower-cost tier. $84.00/yr via GoGetSSL reseller.",
+          "source": {
+            "url": "https://www.gogetssl.com/ssl-certificates/domain-validation/",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://sectigo.com/ssl-certificates-tls",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "InstantSSL OV — Single Domain",
+          "monthlyUsd": 2.73,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "OV single domain with business identity verification, 1-3 day issuance. $32.80/yr via GoGetSSL reseller. $250k warranty.",
+          "source": {
+            "url": "https://www.gogetssl.com/ssl-certificates/business-validation/",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://sectigo.com/ssl-certificates-tls",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "PositiveSSL EV — Single Domain",
+          "monthlyUsd": 6.25,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "EV single domain, entry-level EV with full business vetting. $74.97/yr via GoGetSSL reseller. 2-7 day issuance. $1M warranty.",
+          "source": {
+            "url": "https://www.gogetssl.com/ssl-certificates/extended-validation/",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://sectigo.com/ssl-certificates-tls",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "EV SSL Certificate — Single Domain",
+          "monthlyUsd": 14.13,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "EV single domain, premium Sectigo EV tier. $169.60/yr via GoGetSSL reseller. $1.75M warranty.",
+          "source": {
+            "url": "https://www.gogetssl.com/ssl-certificates/extended-validation/",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://sectigo.com/ssl-certificates-tls",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "globalsign",
+      "name": "GlobalSign",
+      "domain": "globalsign.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "ACME",
+        "REST API",
+        "Atlas CMP",
+        "AWS",
+        "Azure",
+        "GCP",
+        "Kubernetes cert-manager"
+      ],
+      "provenance": "shop.globalsign.com/en/ssl-tls-certificates fetched 2026-06-15 — pricing is rendered client-side via JavaScript after region/currency selection; raw HTML shows only bullet-point placeholders ('•/year') where prices should appear. Multiple shop subpages (domain-ssl, organization-ssl, ev-ssl) confirmed the same behaviour. GlobalSign instructs users to select a region before prices are shown. USD prices could not be extracted; all monthlyUsd values are null. Globalsign.com/en/ssl/ redirects to the shop (301). Per their shop page: certificate terms offered are 'Half Year (1 x 199 day)' and '1 Year (2 x 199 day certificates)' consistent with 2026 BR rules. This vendor is included because it is one of the six seed vendors; pricing requires direct browser interaction or GlobalSign sales contact.",
+      "plans": [
+        {
+          "name": "DomainSSL (DV)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Domain Validated single-domain certificate. Issued in minutes, no paperwork. $10k warranty. Price requires JavaScript-rendered region/currency selection on shop.globalsign.com — USD price not extractable via static fetch.",
+          "source": {
+            "url": "https://shop.globalsign.com/en/ssl/domain-ssl",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "OrganizationSSL (OV)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Organization Validated certificate with full business identity check. 1-2 business day issuance. $1.25M warranty. Price not extractable — JS-only rendering.",
+          "source": {
+            "url": "https://shop.globalsign.com/en/ssl/organization-ssl",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "ExtendedSSL (EV)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Extended Validation certificate for ecommerce and financial institutions. 3-4 business day issuance. $1.5M warranty. Price not extractable — JS-only rendering.",
+          "source": {
+            "url": "https://shop.globalsign.com/en/ssl/ev-ssl",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "gogetssl",
+      "name": "GoGetSSL",
+      "domain": "gogetssl.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "ACME",
+        "REST API",
+        "WHMCS",
+        "cPanel",
+        "Plesk"
+      ],
+      "provenance": "gogetssl.com homepage and category pages (ssl-certificates/domain-validation/, ssl-certificates/extended-validation/) fetched 2026-06-15 — HTML price tables returned usable USD figures for own-brand and reseller products. Own-brand 'GoGetSSL' plans recorded here; reseller Sectigo/DigiCert prices recorded under those vendors.",
+      "plans": [
+        {
+          "name": "GoGetSSL Domain SSL (DV)",
+          "monthlyUsd": 2,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "GoGetSSL's own-brand DV single domain certificate. $24.00/yr. DV validation, no paperwork required.",
+          "source": {
+            "url": "https://www.gogetssl.com/ssl-certificates/domain-validation/",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://www.gogetssl.com/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "GoGetSSL Wildcard SSL (DV)",
+          "monthlyUsd": 6,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "GoGetSSL own-brand DV wildcard. $72.00/yr. Covers unlimited subdomains.",
+          "source": {
+            "url": "https://www.gogetssl.com/",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://www.gogetssl.com/ssl-certificates/domain-validation/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "GoGetSSL BusinessTrust SSL (OV)",
+          "monthlyUsd": 6,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Own-brand OV single domain. $72.00/yr. Business validation with 2-4 day issuance.",
+          "source": {
+            "url": "https://www.gogetssl.com/ssl-certificates/business-validation/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "GoGetSSL BusinessTrust EV (EV)",
+          "monthlyUsd": 9.33,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Own-brand EV single domain. $112.00/yr. Extended Validation with green site seal.",
+          "source": {
+            "url": "https://www.gogetssl.com/ssl-certificates/extended-validation/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "ACME Certificate-as-a-Service",
+          "monthlyUsd": 2.08,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Automated certificate issuance and renewal via ACME protocol. $25.00/yr subscription. Suited for DevOps environments needing automated certificate lifecycle management.",
+          "source": {
+            "url": "https://www.gogetssl.com/",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://www.gogetssl.com/ssl-certificates/domain-validation/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "ssl-com",
+      "name": "SSL.com",
+      "domain": "ssl.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "ACME",
+        "REST API",
+        "Certbot",
+        "cPanel",
+        "Plesk",
+        "Let's Encrypt migration tool"
+      ],
+      "provenance": "Primary: ssl.com/certificates/ page fetched 2026-06-15 — returned HTML price table with all major product prices. Individual product pages (high-assurance, enterprise-ev, wildcard, multi-domain) also fetched to confirm and obtain multi-year discount details. ssl.com/certificates/enterprise-ev/ returned 1yr $239.50 and 2yr $319.20/yr (20% off).",
+      "plans": [
+        {
+          "name": "Basic SSL (DV)",
+          "monthlyUsd": 3.06,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Domain Validated single domain. $36.75/yr (1-year). Multi-year discounts available. Fastest issuance (minutes). Compatible with ACME for automated renewal.",
+          "source": {
+            "url": "https://www.ssl.com/certificates/",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://www.ssl.com/certificates/high-assurance/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "High Assurance SSL (OV)",
+          "monthlyUsd": 4.03,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Organization Validated single domain. $48.40/yr (1-year). Displays company name in certificate details. 1-3 business day issuance.",
+          "source": {
+            "url": "https://www.ssl.com/certificates/high-assurance/",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://www.ssl.com/certificates/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Premium SSL (DV — 3 subdomains)",
+          "monthlyUsd": 6.19,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "DV certificate covering the main domain plus 3 subdomains. $74.25/yr (1-year). Can be upgraded to OV verification.",
+          "source": {
+            "url": "https://www.ssl.com/certificates/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Wildcard SSL (OV)",
+          "monthlyUsd": 18.69,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "OV wildcard covering unlimited subdomains. $224.25/yr (1-year). Multi-year discounts available.",
+          "source": {
+            "url": "https://www.ssl.com/certificates/wildcard/",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://www.ssl.com/certificates/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Multi-Domain UCC/SAN OV",
+          "monthlyUsd": 11.8,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "OV multi-domain SAN certificate covering up to 500 domains. 1-year: $177.00/yr; 5-year lowest rate: $141.60/yr (20% off). $141.60 used as monthlyUsd base ($11.80/mo). $250k warranty. Suited for Microsoft Exchange environments.",
+          "source": {
+            "url": "https://www.ssl.com/certificates/multi-domain/",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://www.ssl.com/certificates/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise EV SSL",
+          "monthlyUsd": 19.96,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Extended Validation single domain. $239.50/yr (1-year). Highest assurance level. 1-3 business day issuance.",
+          "source": {
+            "url": "https://www.ssl.com/certificates/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise EV UCC/SAN",
+          "monthlyUsd": 26.6,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "EV multi-domain covering up to 500 domains. 1-year: $399.00/yr; 2-year: $319.20/yr (20% off). $319.20 used as monthlyUsd base ($26.60/mo). $1.75M warranty. Additional non-wildcard domains after the 3rd cost $206.40 each.",
+          "source": {
+            "url": "https://www.ssl.com/certificates/enterprise-ev/",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://www.ssl.com/certificates/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "namecheap",
+      "name": "Namecheap",
+      "domain": "namecheap.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "cPanel",
+        "Plesk",
+        "WHMCS",
+        "AutoInstall"
+      ],
+      "provenance": "All namecheap.com paths attempted (namecheap.com/security/ssl-certificates/, /comodo/positivessl, /comodo/ev-ssl, /comodo/wildcard, /security/ssl-certificates/comodo/premiumssl, multiple others) returned HTTP 403 Forbidden consistently on 2026-06-15 — Namecheap blocks automated fetches site-wide. No USD prices could be extracted from any official Namecheap page. All monthlyUsd values are null. Namecheap is known to resell Sectigo (formerly Comodo) certificates under Sectigo product names; their PositiveSSL DV is typically priced competitively in the $5–15/yr range for first year promotions.",
+      "plans": [
+        {
+          "name": "PositiveSSL DV",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Sectigo PositiveSSL DV resold by Namecheap. Price not obtainable — namecheap.com returns HTTP 403 to all automated fetches. Typically one of the most price-competitive DV options on the market.",
+          "source": {
+            "url": "https://www.namecheap.com/security/ssl-certificates/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "EssentialSSL DV",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Sectigo EssentialSSL DV resold by Namecheap. Price not obtainable — HTTP 403 on all paths.",
+          "source": {
+            "url": "https://www.namecheap.com/security/ssl-certificates/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "PositiveSSL Wildcard DV",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Sectigo PositiveSSL Wildcard DV resold by Namecheap. Price not obtainable — HTTP 403 on all paths.",
+          "source": {
+            "url": "https://www.namecheap.com/security/ssl-certificates/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "EV SSL",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Extended Validation certificate resold by Namecheap. Price not obtainable — HTTP 403 on all paths.",
+          "source": {
+            "url": "https://www.namecheap.com/security/ssl-certificates/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "zerossl",
+      "name": "ZeroSSL",
+      "domain": "zerossl.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "ACME",
+        "REST API",
+        "cPanel",
+        "Certbot",
+        "Kubernetes cert-manager"
+      ],
+      "provenance": "Primary: zerossl.com/pricing/ fetched 2026-06-15 — returned complete pricing table with all plan names, monthly (billed yearly) and monthly (billed monthly) rates. Free tier confirmed ($0). All prices extracted from live page HTML.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free tier with unlimited 90-day DV certificates, multi-domain, wildcard, and ACME access. No credit card required. Annual certificates not included on free tier.",
+          "source": {
+            "url": "https://zerossl.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Basic",
+          "monthlyUsd": 9.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Unlimited 90-day certificates with REST API access. $9.99/month billed yearly; $13.99/month billed monthly. Annual certificates included.",
+          "source": {
+            "url": "https://zerossl.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Basic + Protect",
+          "monthlyUsd": 14.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Basic plan plus security scanning/malware monitoring features. $14.99/month billed yearly; $19.99/month billed monthly.",
+          "source": {
+            "url": "https://zerossl.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": 54.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Enhanced annual certificate access with extended wildcard support. $54.99/month billed yearly; $74.99/month billed monthly.",
+          "source": {
+            "url": "https://zerossl.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 109.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Extensive package with greater wildcard support and priority issuance. $109.99/month billed yearly; $149.99/month billed monthly.",
+          "source": {
+            "url": "https://zerossl.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Platinum",
+          "monthlyUsd": 169.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Highest publicly available certificate package. $169.99/month billed yearly; $219.99/month billed monthly.",
+          "source": {
+            "url": "https://zerossl.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    }
+  ]
+}

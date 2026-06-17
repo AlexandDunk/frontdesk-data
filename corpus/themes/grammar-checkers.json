@@ -1,0 +1,562 @@
+{
+  "vertical": "grammar-checkers",
+  "generatedAt": "2026-06-15",
+  "methodologyNotes": "Self-serve USD pricing for 8 leading grammar-checker vendors was collected by fetching each vendor's official pricing page on 2026-06-15. Where the live page rendered a non-USD currency or failed (403/JS-only), the figure was sourced from a reputable 2025/2026 comparison page (fixthephoto.com/best-grammar-checker.html, slashdot.org software profiles, getapp.com, sourceforge.net) and flagged in provenance. monthlyUsd records the effective monthly cost at the smallest self-serve unit: for annual plans this is the annualised monthly equivalent (annual total ÷ 12). Quote-only / contact-sales tiers carry monthlyUsd=null. minutesIncluded, callsIncluded, overagePerMin, overagePerCall are null on every plan (non-telephony). hipaa/baa/bilingual are null unless the vendor explicitly states otherwise on their public site.",
+  "vendors": [
+    {
+      "slug": "grammarly",
+      "name": "Grammarly",
+      "domain": "grammarly.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Chrome extension",
+        "Firefox extension",
+        "Safari extension",
+        "Edge extension",
+        "MS Word add-in",
+        "Google Docs",
+        "Slack",
+        "Outlook",
+        "Windows app",
+        "Mac app",
+        "iOS",
+        "Android",
+        "API"
+      ],
+      "provenance": "Official pricing page grammarly.com/plans fetched 2026-06-15 but rendered EUR prices and hid USD amounts (geo-IP). USD starting price of $12/mo corroborated by sourceforge.net/software/product/Grammarly/ and slashdot.org/software/p/Grammarly/ (both 2026-06-15). Enterprise = contact sales confirmed on official page.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Unlimited basic spell/grammar checks, tone detection, 100 AI prompts/month. No credit card required.",
+          "source": {
+            "url": "https://www.grammarly.com/plans",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 12,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "VERIFIED 2026-06-16: $12/mo is the annual-billing rate ($144/yr); month-to-month is $30/mo and quarterly ~$20/mo (confirmed by demandsage 2026 pricing guide; official page geo-served EUR). monthlyUsd reflects the lowest self-serve (annual) rate per methodology. Grammarly Pro is billed per member (adds members up to 149) — hence per_seat. Includes full sentence rewrites, tone adjustment, fluency suggestions, plagiarism detection, AI-generated text detection, 2,000 AI prompts/member/month. 7-day free trial.",
+          "source": {
+            "url": "https://www.grammarly.com/plans",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://www.demandsage.com/how-much-is-grammarly-premium/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Contact sales. Includes proactive AI across platforms, BYOK encryption, data loss prevention, custom roles/permissions, dedicated support, cost-center visibility, SSO, SCIM.",
+          "source": {
+            "url": "https://www.grammarly.com/plans",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "prowritingaid",
+      "name": "ProWritingAid",
+      "domain": "prowritingaid.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Chrome extension",
+        "Firefox extension",
+        "MS Word add-in",
+        "Google Docs",
+        "Scrivener",
+        "Final Draft",
+        "Open Office",
+        "Mac app",
+        "Windows app"
+      ],
+      "provenance": "Official pricing page prowritingaid.com/pricing returned HTTP 405 on 2026-06-15. USD prices sourced from getapp.com/content-management-software/a/prowritingaid/pricing/ (2026-06-15): $20/mo monthly, $120/yr annual, $399 lifetime confirmed. Premium Pro shown in EUR on official page (€30/mo monthly, €10/mo annual) — USD equivalent not confirmed; omitted from dataset.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "500-word limit per check, 2 report runs/day, 10 rephrases/day, 3 Sparks AI prompts/day, grammar/spelling/punctuation only.",
+          "source": {
+            "url": "https://prowritingaid.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/content-management-software/a/prowritingaid/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Premium (Monthly)",
+          "monthlyUsd": 30,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "VERIFIED 2026-06-16: month-to-month billing is now $30/mo (raised from $20 in the 2026 pricing restructure, confirmed by saaspricepulse.com and getapp). Prior dataset value of $20/mo was outdated and has been corrected. Unlimited word count, unlimited rephrases, 5 Sparks/day, 1 Chapter Critique/day, 25+ analysis reports, custom style guide, snippets, author comparison, citations. 3-day refund available on yearly/lifetime only (not monthly).",
+          "source": {
+            "url": "https://www.saaspricepulse.com/tools/prowritingaid",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/content-management-software/a/prowritingaid/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Premium (Annual)",
+          "monthlyUsd": 10,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 50,
+          "billingModel": "flat",
+          "notes": "Billed $120/year (~$10/mo effective). Same features as monthly Premium. 50% saving vs monthly. 3-day money-back guarantee.",
+          "source": {
+            "url": "https://www.getapp.com/content-management-software/a/prowritingaid/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Premium (Lifetime)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 399,
+          "notes": "One-time payment of $399 for lifetime access. Same features as annual Premium. Not a recurring subscription; monthlyUsd set to null per schema convention — one-time cost noted in setupFeeUsd.",
+          "source": {
+            "url": "https://www.getapp.com/content-management-software/a/prowritingaid/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "languagetool",
+      "name": "LanguageTool",
+      "domain": "languagetool.org",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Chrome extension",
+        "Firefox extension",
+        "Safari extension",
+        "Edge extension",
+        "MS Word add-in",
+        "LibreOffice add-on",
+        "Google Docs",
+        "VS Code",
+        "Thunderbird"
+      ],
+      "provenance": "Official page languagetool.org/premium fetched 2026-06-15 — page loaded but prices failed to render ('There was an issue displaying the prices'). Annual starting price of $59/yr sourced from sourceforge.net/software/product/LanguageTool/ and slashdot.org/software/p/LanguageTool/ (both 2026-06-15). Monthly rate and Teams per-seat USD price not confirmed in USD from accessible sources; monthly rate null.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "2,000 character limit per text field. Basic grammar/punctuation/spelling checks, personal dictionary, text statistics. Browser add-on available.",
+          "source": {
+            "url": "https://languagetool.org/premium",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "monthlyUsd set null on re-verification (2026-06-16): the prior $4.92/mo ($59/yr) figure conflates LanguageTool's EUR annual rate (€59.89/yr) with USD. The official page geo-serves EUR and the help page is 403; independent USD sources disagree — spotsaas/stackscored cite ~$7/mo annual ($84/yr), other reviews cite $4.99/mo annual and $4.17/mo only on the 2-year plan, with $19.90/mo month-to-month. No single confirmable USD annual figure, so monthlyUsd is null pending a directly verifiable USD price. Premium includes 150,000 character limit per text field, 20,000+ additional style/grammar checks, unlimited AI sentence paraphrasing, style guide for custom rules, all languages and dialects. 14-day money-back guarantee.",
+          "source": {
+            "url": "https://languagetool.org/premium",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://www.spotsaas.com/product/languagetool/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Teams",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Per-seat pricing for 2–1000+ users; USD per-seat rate not confirmed from accessible sources (official page prices failed to render on fetch). Includes all Premium features plus user management, Team Style Guide, Team Dictionary.",
+          "source": {
+            "url": "https://languagetool.org/premium",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "ginger",
+      "name": "Ginger Software",
+      "domain": "gingersoftware.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Chrome extension",
+        "Safari extension",
+        "MS Word add-in",
+        "iOS",
+        "Android",
+        "Windows app",
+        "Mac app"
+      ],
+      "provenance": "Official pricing page gingersoftware.com/pricing and /premium returned HTTP 404 on 2026-06-15. Premium monthly price of $13.99/mo sourced from getapp.com/content-management-software/a/ginger/pricing/ (2026-06-15). Annual price of $99/yr sourced from fixthephoto.com/best-grammar-checker.html (2026-06-15 comparison article).",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Limited grammar corrections, definitions, sentence rephrasing, and synonyms.",
+          "source": {
+            "url": "https://www.getapp.com/content-management-software/a/ginger/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Premium (Monthly)",
+          "monthlyUsd": 13.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Month-to-month billing at $13.99/mo. Unlimited AI-powered grammar corrections, unlimited sentence rephrasing, unlimited synonyms, punctuation checker, spell checker, translation to 40+ languages.",
+          "source": {
+            "url": "https://www.getapp.com/content-management-software/a/ginger/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Premium (Annual)",
+          "monthlyUsd": 8.25,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 41,
+          "billingModel": "flat",
+          "notes": "Annual plan billed $99/year (~$8.25/mo effective). Same features as monthly Premium. Annual price from fixthephoto.com comparison article (2026-06-15); official Ginger pricing pages returned 404.",
+          "source": {
+            "url": "https://www.fixthephoto.com/best-grammar-checker.html",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/content-management-software/a/ginger/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "quillbot",
+      "name": "QuillBot",
+      "domain": "quillbot.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Chrome extension",
+        "MS Word add-in",
+        "Google Docs",
+        "iOS",
+        "Android"
+      ],
+      "provenance": "Official pricing page quillbot.com/plans and quillbot.com/premium returned HTTP 404 on 2026-06-15; quillbot.com/pricing also 404. Homepage rendered but contained no prices. Annual Premium price of $4.17/mo sourced from fixthephoto.com/best-grammar-checker.html (2026-06-15). EUR annual price €8.33/mo (quillbot.com/premium served to EU) confirmed separately — converted rate not used as USD source. Monthly USD rate not confirmed.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Up to 125-word paraphrasing, basic grammar fixes, limited humanization (6 uses/day), basic summaries, limited AI detector access.",
+          "source": {
+            "url": "https://quillbot.com",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": 8.33,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 58,
+          "billingModel": "flat",
+          "notes": "VERIFIED 2026-06-16: annual billing $8.33/mo ($99.95/yr), confirmed by official QuillBot FAQ (quillbot.com/blog/.../how-much-is-quillbot-premium). Month-to-month $19.95/mo; semi-annual $13.31/mo ($39.95/quarter). Prior dataset value of $4.17/mo was incorrect/outdated and has been corrected. Includes unlimited paraphrasing across 9 modes, advanced grammar suggestions, unlimited humanization, custom summaries, unlimited AI detector, plagiarism prevention (25,000 words/mo), unlimited AI chat, 300 AI-generated images/mo. ~58% annual discount vs monthly. 14-day money-back guarantee.",
+          "source": {
+            "url": "https://quillbot.com/blog/frequently-asked-questions/how-much-is-quillbot-premium/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Teams",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Contact sales / custom pricing. All Premium features plus team usage metrics, user management dashboard, centralized billing, data controls, priority support.",
+          "source": {
+            "url": "https://quillbot.com",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "writer",
+      "name": "Writer",
+      "domain": "writer.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Chrome extension",
+        "MS Word add-in",
+        "Google Docs",
+        "Figma",
+        "Contentful",
+        "HubSpot",
+        "Slack",
+        "API",
+        "SSO"
+      ],
+      "provenance": "Official pricing page writer.com/pricing returned HTTP 403 on 2026-06-15. Per-seat pricing sourced from slashdot.org/software/p/Writer/ ($29/user/mo annual) and getapp.com/content-management-software/a/writer/pricing/ ($39/user/mo) and sourceforge.net/software/compare/Grammarly-vs-Writer/ ($29/user/mo annual as starting price), all accessed 2026-06-15.",
+      "plans": [
+        {
+          "name": "Team",
+          "monthlyUsd": 29,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 26,
+          "billingModel": "per_seat",
+          "notes": "Annual billing: $29/seat/mo. Month-to-month: $39/seat/mo. ~26% annual discount. AI writing assistant with brand voice, style guide enforcement, knowledge graph, team collaboration, content templates, Chrome extension, MS Word add-in. Free trial available. Price from slashdot.org profile and getapp.com (2026-06-15); official page returned 403.",
+          "source": {
+            "url": "https://slashdot.org/software/p/Writer/",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://www.getapp.com/content-management-software/a/writer/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Contact sales. Custom pricing. Includes advanced AI models, BYOK, SSO, SCIM, dedicated support, custom knowledge base, API access, compliance features.",
+          "source": {
+            "url": "https://slashdot.org/software/p/Writer/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "wordtune",
+      "name": "Wordtune",
+      "domain": "wordtune.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Chrome extension",
+        "MS Word add-in",
+        "Google Docs",
+        "iOS",
+        "Android"
+      ],
+      "provenance": "Official pricing page wordtune.com/pricing fetched successfully 2026-06-15. All USD prices confirmed directly from the page.",
+      "plans": [
+        {
+          "name": "Basic",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "10 rewrites/day, unlimited grammar checks, limited daily use.",
+          "source": {
+            "url": "https://www.wordtune.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Advanced",
+          "monthlyUsd": 4.89,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 30,
+          "billingModel": "flat",
+          "notes": "Annual billing: $4.89/mo. Month-to-month: $6.99/mo. 30 rewrites/day, 15 AI summarizations/month. 3-day free trial.",
+          "source": {
+            "url": "https://www.wordtune.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Unlimited",
+          "monthlyUsd": 6.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 30,
+          "billingModel": "flat",
+          "notes": "Annual billing: $6.99/mo. Month-to-month: $9.99/mo. Unlimited rewrites, all paraphrasing modes, vocabulary enhancements, premium support. Recommended tier. 3-day free trial.",
+          "source": {
+            "url": "https://www.wordtune.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "sapling",
+      "name": "Sapling",
+      "domain": "sapling.ai",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Chrome extension",
+        "Gmail",
+        "Outlook",
+        "Salesforce",
+        "Zendesk",
+        "HubSpot",
+        "Intercom",
+        "Slack",
+        "API"
+      ],
+      "provenance": "Official pricing page sapling.ai/pricing fetched successfully 2026-06-15. All USD prices confirmed directly from the page.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Basic grammar/spelling suggestions, limited daily use, Chrome extension.",
+          "source": {
+            "url": "https://sapling.ai/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 12,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 52,
+          "billingModel": "flat",
+          "notes": "Annual billing: $12/mo ($144/yr). Month-to-month: $25/mo. ~52% annual discount. Includes advanced grammar suggestions, autocomplete everywhere, team snippets, AI detector. CRM and customer-service integrations.",
+          "source": {
+            "url": "https://sapling.ai/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Contact sales. Minimum 10 seats, starts at $15/seat/mo. Custom LLM fine-tuning, on-prem deployment options, SSO, dedicated support, advanced analytics.",
+          "source": {
+            "url": "https://sapling.ai/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    }
+  ]
+}

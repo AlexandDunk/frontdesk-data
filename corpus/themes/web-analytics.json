@@ -1,0 +1,540 @@
+{
+  "vertical": "web-analytics",
+  "generatedAt": "2026-06-15",
+  "methodologyNotes": "Self-serve USD pricing fetched from each vendor's official pricing page on 2026-06-15 via WebFetch. Plausible's pricing page is fully JS-rendered and returned locked-dashboard HTML on every attempt; prices confirmed from multiple secondary pages (wordpress-analytics-plugin page stated '$9/month', homepage stated Starter=$9, Growth=$14, Business=$19 for 10k PV base) and corroborated by kinsta.com blog ($9/month starting price, May 2024). Pirsch pricing was captured from the first successful fetch of pirsch.io/pricing (Standard $6/mo, Plus $12/mo); the page subsequently returned 404 on retries, so alternativeto.net was used for corroboration (range $5–$799/mo confirmed). Matomo Cloud is priced in EUR only (€29/mo starter); USD equivalent ~$31.60 at 1.09 EUR/USD is noted but monthlyUsd records the published EUR-converted approximation with a caveat in notes. Cloudflare Web Analytics is free standalone. GA4 360 is contact-sales only. All minutesIncluded / callsIncluded / overagePerMin / overagePerCall fields are null (non-telephony vertical). Annual discount of ~17% ('2 months free') is consistent across Plausible, Fathom, Matomo, and Simple Analytics. accessedAt='2026-06-15' on all source records.",
+  "vendors": [
+    {
+      "slug": "google-analytics-4",
+      "name": "Google Analytics 4",
+      "domain": "analytics.google.com",
+      "hipaa": false,
+      "baa": false,
+      "bilingual": null,
+      "integrations": [
+        "Google Ads",
+        "Google Search Console",
+        "BigQuery",
+        "Looker Studio",
+        "Google Tag Manager",
+        "Firebase",
+        "Salesforce"
+      ],
+      "provenance": "https://marketingplatform.google.com/about/analytics/ accessed 2026-06-15; GA4 360 enterprise tier confirmed contact-sales only",
+      "plans": [
+        {
+          "name": "Google Analytics 4 (Free)",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free forever. Up to 10M events/month per property, 500 distinct events, standard reports, BigQuery export (free tier), up to 2 years data retention. No HIPAA compliance on free tier.",
+          "source": {
+            "url": "https://marketingplatform.google.com/about/analytics/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Google Analytics 360",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Contact sales / quote-only. Enterprise tier with higher event limits (25B events/month), unsampled reports, advanced attribution, SLA, dedicated support. Historically priced at ~$150k/year but Google does not publish current rates.",
+          "source": {
+            "url": "https://marketingplatform.google.com/about/analytics/360/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "plausible",
+      "name": "Plausible Analytics",
+      "domain": "plausible.io",
+      "hipaa": false,
+      "baa": false,
+      "bilingual": null,
+      "integrations": [
+        "Google Analytics (import)",
+        "WordPress",
+        "Ghost",
+        "Squarespace",
+        "Looker Studio",
+        "Google Tag Manager",
+        "Slack (email reports)",
+        "Zapier"
+      ],
+      "provenance": "https://plausible.io/ (homepage) accessed 2026-06-15; pricing JS-rendered, plan names/base prices confirmed from multiple plausible.io sub-pages; corroborated by kinsta.com/blog/plausible-analytics/ (May 2024). Official page states 'Plans start at $9/month based on page views' and homepage shows Starter=$9, Growth=$14, Business=$19 for 10k PV entry tier with '2 months free' annual billing.",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": 9,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "Entry tier at 10k pageviews/month. 1 site, solo use, no team sharing. 3-year data retention. Email/Slack reports, GA import, goals, segments. Price scales with pageview volume (slider-based). Annual billing saves ~2 months (~17% off). 30-day free trial, no credit card.",
+          "source": {
+            "url": "https://plausible.io/",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://kinsta.com/blog/plausible-analytics/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Growth",
+          "monthlyUsd": 14,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "Entry tier at 10k pageviews/month; scales with traffic. Up to 3 sites, 3 team members. Team management, shared links, embedded dashboards. 3-year data retention. Annual billing saves ~2 months (~17%).",
+          "source": {
+            "url": "https://plausible.io/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 19,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "Entry tier at 10k pageviews/month; scales with traffic. Up to 10 sites, 10 team members. 5-year data retention. Custom properties, Stats API, Looker Studio connector, ecommerce revenue tracking, funnels. Annual billing saves ~2 months (~17%).",
+          "source": {
+            "url": "https://plausible.io/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Contact sales / quote-only. 10+ sites, 600+ API requests/hour, SSO, managed proxy, raw data exports, priority support. Custom pageview limits.",
+          "source": {
+            "url": "https://plausible.io/enterprise-web-analytics",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "fathom-analytics",
+      "name": "Fathom Analytics",
+      "domain": "usefathom.com",
+      "hipaa": false,
+      "baa": false,
+      "bilingual": null,
+      "integrations": [
+        "WordPress",
+        "Vue.js",
+        "SavvyCal",
+        "ConvertKit",
+        "Ghost",
+        "Squarespace",
+        "Webflow"
+      ],
+      "provenance": "https://usefathom.com/pricing accessed 2026-06-15; full pricing table fetched successfully including all pageview tiers from 100k to 25M+.",
+      "plans": [
+        {
+          "name": "100k pageviews/mo",
+          "monthlyUsd": 15,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "Up to 100k pageviews/month. Up to 50 sites. Includes ecommerce/event tracking, API access, forever data retention, unlimited email reports and data exports. Annual plan: $150/year (~$12.50/mo effective). 7-day free trial.",
+          "source": {
+            "url": "https://usefathom.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "200k pageviews/mo",
+          "monthlyUsd": 25,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "Up to 200k pageviews/month. All features included. Annual plan: $250/year (~$20.83/mo effective). Same feature set as all other tiers.",
+          "source": {
+            "url": "https://usefathom.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "500k pageviews/mo",
+          "monthlyUsd": 45,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "Up to 500k pageviews/month. Annual: $450/year.",
+          "source": {
+            "url": "https://usefathom.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "1M pageviews/mo",
+          "monthlyUsd": 60,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "Up to 1M pageviews/month. Annual: $600/year.",
+          "source": {
+            "url": "https://usefathom.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "2M pageviews/mo",
+          "monthlyUsd": 100,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "Up to 2M pageviews/month. Annual: $1,000/year.",
+          "source": {
+            "url": "https://usefathom.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "5M pageviews/mo",
+          "monthlyUsd": 140,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "Up to 5M pageviews/month. Annual: $1,400/year.",
+          "source": {
+            "url": "https://usefathom.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "10M pageviews/mo",
+          "monthlyUsd": 200,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "Up to 10M pageviews/month. Annual: $2,000/year.",
+          "source": {
+            "url": "https://usefathom.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Over 25M pageviews/mo",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Contact support for custom pricing above 25M pageviews/month.",
+          "source": {
+            "url": "https://usefathom.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "matomo",
+      "name": "Matomo",
+      "domain": "matomo.org",
+      "hipaa": true,
+      "baa": false,
+      "bilingual": null,
+      "integrations": [
+        "WordPress",
+        "WooCommerce",
+        "Shopify",
+        "Magento",
+        "Google Ads",
+        "Google Search Console",
+        "Looker Studio",
+        "Zapier",
+        "Slack"
+      ],
+      "provenance": "https://matomo.org/pricing/ accessed 2026-06-15. Cloud plans priced in EUR only; USD approximate at 1.09 EUR/USD noted in plan notes. HIPAA available on-premise only (Matomo Cloud is not HIPAA compliant per matomo.org/matomo-analytics-hipaa-compliance/). hipaa=true reflects on-premise capability; baa=false because Matomo explicitly states no BAA is needed/offered.",
+      "plans": [
+        {
+          "name": "On-Premise Community",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free open-source self-hosted edition. Unlimited websites, unlimited users, unlimited hits. Community forum support only. HIPAA-capable when self-hosted on compliant infrastructure.",
+          "source": {
+            "url": "https://matomo.org/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Cloud Starter",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "Priced at €29/month (ex tax) — Matomo Cloud is billed in EUR only and does not publish a USD price, so monthlyUsd is null (USD equivalent is ~$32 at ~1.09 EUR/USD but that is a derived approximation, not a confirmable published figure). 50,000 hits/month. Annual billing gives 2 months free (~17% discount). Unlimited websites. Hosted in Frankfurt, Germany. Cloud is NOT HIPAA compliant. 21-day free trial, no credit card. Verified at matomo.org/pricing 2026-06-15 (€29/mo, '2 months free' annual).",
+          "source": {
+            "url": "https://matomo.org/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Cloud Business",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Contact sales / quote-only. Higher hit limits (100k–600k+ hits/month). Custom pricing for larger traffic volumes.",
+          "source": {
+            "url": "https://matomo.org/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Cloud Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Contact sales / quote-only. 1M+ hits/month, dedicated infrastructure, SLA, advanced support.",
+          "source": {
+            "url": "https://matomo.org/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "simple-analytics",
+      "name": "Simple Analytics",
+      "domain": "simpleanalytics.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "WordPress",
+        "Ghost",
+        "Webflow",
+        "Squarespace",
+        "Cloudflare Workers",
+        "Next.js",
+        "Gatsby"
+      ],
+      "provenance": "https://www.simpleanalytics.com/pricing accessed 2026-06-15 (via redirect from simpleanalytics.com/pricing); confirmed plan structure: free forever, $20/mo self-serve (slider up to 2.5M PV), Enterprise custom.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free forever with privacy-preserving badge required. Unlimited pageviews (fair use). 30-day data history. 1 user, 5 websites. 14-day full-feature trial included.",
+          "source": {
+            "url": "https://www.simpleanalytics.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Starter",
+          "monthlyUsd": 20,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "Self-serve $20/month. Traffic-based slider from 100k to 2.5M pageviews/month. 1 included user; +$20/month per additional user (per-seat add-on). Annual billing: 2 months free (~17% off; effective ~$16.67/mo). 14-day free trial.",
+          "source": {
+            "url": "https://www.simpleanalytics.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Contact sales / quote-only. Custom traffic limits, SOC 2, SSO/SAML, role-based access, priority support, manual invoicing available (min $500 invoice).",
+          "source": {
+            "url": "https://www.simpleanalytics.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "pirsch",
+      "name": "Pirsch Analytics",
+      "domain": "pirsch.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "WordPress",
+        "Astro",
+        "Caddy",
+        "Docusaurus",
+        "Gatsby",
+        "Laravel",
+        "Shopify",
+        "Strapi",
+        "Webflow",
+        "Google Search Console",
+        "Google Tag Manager"
+      ],
+      "provenance": "https://pirsch.io/pricing accessed 2026-06-15 (first fetch succeeded; subsequent fetches returned 404 suggesting rate-limiting/JS gate). Standard=$6/mo for 10k PV (50 sites), Plus=$12/mo (unlimited sites). Corroborated by alternativeto.net listing range '$5–$799/mo'.",
+      "plans": [
+        {
+          "name": "Standard",
+          "monthlyUsd": 6,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Starting at $6/month for 10,000 monthly pageviews. Up to 50 websites. Annual billing available with savings (exact % not published on pricing page). Payment: credit card, PayPal, SEPA direct debit (EUR). Prices ex applicable sales taxes. 30-day free trial (or 100k pageviews, whichever first), no credit card.",
+          "source": {
+            "url": "https://pirsch.io/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://alternativeto.net/software/pirsch-analytics/about/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Plus",
+          "monthlyUsd": 12,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Best value tier at $12/month. Unlimited websites. Custom domains, white-label dashboard, advanced features. Annual billing available with savings. Price scales with pageview volume.",
+          "source": {
+            "url": "https://pirsch.io/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Contact sales / quote-only. Custom pageview limits, dedicated infrastructure, SLA, on-premise/self-hosted license options. Price depends on size and needs.",
+          "source": {
+            "url": "https://pirsch.io/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "cloudflare-web-analytics",
+      "name": "Cloudflare Web Analytics",
+      "domain": "cloudflare.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Cloudflare Workers",
+        "Cloudflare Pages",
+        "Next.js",
+        "Gatsby",
+        "Hugo",
+        "WordPress (via Cloudflare plugin)"
+      ],
+      "provenance": "https://www.cloudflare.com/web-analytics/ accessed 2026-06-15; page states 'essential web analytics to everyone with a website without compromising user privacy. For free.' Cloudflare plan pricing confirmed from https://cloudflare.com/plans/ (Free $0, Pro $25/mo, Business $250/mo, Enterprise custom).",
+      "plans": [
+        {
+          "name": "Free (All Plans)",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Cloudflare Web Analytics is free and included with all Cloudflare plans including the free tier. No pageview limits published. Privacy-first, cookieless, no personal data collection. Works on any website (not just those proxied through Cloudflare). Core Web Vitals, referrer, country, device, page views, visitors.",
+          "source": {
+            "url": "https://www.cloudflare.com/web-analytics/",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://www.cloudflare.com/plans/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    }
+  ]
+}

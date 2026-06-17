@@ -1,0 +1,626 @@
+{
+  "vertical": "proxy-services",
+  "generatedAt": "2026-06-15",
+  "methodologyNotes": "Residential proxy pricing was collected on 2026-06-15 from each vendor's official pricing page where the page returned usable USD figures. For Bright Data, the residential-proxies product page returned pricing (brightdata.com/proxy-types/residential-proxies); the main /pricing page only showed category links without figures. For Oxylabs, the product detail page (oxylabs.io/products/residential-proxy-pool) returned tier data; the main /pricing page showed only starting rates. For NetNut, the homepage returned a pricing table; dedicated /pricing and /pricing-residential-proxies paths returned 404. Corroboration was sourced from proxyway.com reviews (accessed same date) and aimultiple.com/proxy-pricing. All prices are monthly USD for the lowest published committed tier; for usage-metered plans the lowest flat/committed monthly amount is used as monthlyUsd with per-GB/per-IP unit rates noted in the notes field. HIPAA/BAA are not standard in the proxy industry and are null unless explicitly stated. minutesIncluded, callsIncluded, overagePerMin, overagePerCall are null on every plan (non-telephony). billingModel is 'flat' for fixed monthly commitments and 'custom' for quote-only or fully usage-metered tiers with no published floor. annualDiscountPct is noted where both monthly and annual rates are published.",
+  "vendors": [
+    {
+      "slug": "bright-data",
+      "name": "Bright Data",
+      "domain": "brightdata.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "AWS",
+        "Google Cloud",
+        "Azure",
+        "Puppeteer",
+        "Playwright",
+        "Selenium",
+        "Scrapy"
+      ],
+      "provenance": "Pricing sourced from brightdata.com/proxy-types/residential-proxies (official product page, accessed 2026-06-15). The main /pricing page returned only category links without tier amounts. Corroborated against proxyway.com/reviews/bright-data (2026-06-15) which confirmed the $500/$999/$1999 monthly commitment structure and pay-as-you-go $4/GB rate.",
+      "plans": [
+        {
+          "name": "Pay As You Go",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "No monthly minimum; $4.00/GB for residential proxies. Promotional code RESIGB50 cited on the page offers 50% off for 3 months. No commitment required.",
+          "source": {
+            "url": "https://brightdata.com/proxy-types/residential-proxies",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://proxyway.com/reviews/bright-data",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Growth — 141 GB",
+          "monthlyUsd": 499,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "141 GB residential bandwidth included at $3.50/GB. Targeted at small businesses with moderate usage. Overage billed at standard pay-as-you-go rate. Monthly billing; no published annual discount.",
+          "source": {
+            "url": "https://brightdata.com/proxy-types/residential-proxies",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://proxyway.com/reviews/bright-data",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Scale — 332 GB",
+          "monthlyUsd": 999,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "332 GB residential bandwidth included at $3.00/GB. Targeted at large teams with extensive operational needs. Overage billed at standard rate. Monthly billing.",
+          "source": {
+            "url": "https://brightdata.com/proxy-types/residential-proxies",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://aimultiple.com/proxy-pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise — 798 GB",
+          "monthlyUsd": 1999,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "798 GB residential bandwidth included at $2.50/GB. For enterprises running large-scale operations. Custom plans available for usage exceeding 1 TB.",
+          "source": {
+            "url": "https://brightdata.com/proxy-types/residential-proxies",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://aimultiple.com/proxy-pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "oxylabs",
+      "name": "Oxylabs",
+      "domain": "oxylabs.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Puppeteer",
+        "Playwright",
+        "Selenium",
+        "Python requests",
+        "Node.js"
+      ],
+      "provenance": "Pricing sourced from oxylabs.io/products/residential-proxy-pool (official product detail page, accessed 2026-06-15) and cross-checked against the main /pricing page starting rates. Corroborated by proxyway.com/reviews/oxylabs (2026-06-15) which confirmed the $30/5GB entry plan and the $2,500/1TB tier, and noted pay-as-you-go was removed in March 2026.",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": 30,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "5 GB residential bandwidth included at $6.00/GB. Monthly subscription. 7-day free trial for companies; 3-day refund policy. No pay-as-you-go option (removed March 2026). Top-up available without upgrading plan.",
+          "source": {
+            "url": "https://oxylabs.io/products/residential-proxy-pool",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://proxyway.com/reviews/oxylabs",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Basic",
+          "monthlyUsd": 100,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "20 GB residential bandwidth included at $5.00/GB. Most popular plan. Monthly billing. Includes 24/7 support and dedicated account manager.",
+          "source": {
+            "url": "https://oxylabs.io/products/residential-proxy-pool",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://proxyway.com/reviews/oxylabs",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Advanced",
+          "monthlyUsd": 500,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "125 GB residential bandwidth included at $4.00/GB. Monthly billing. Top-up available up to 2 TB.",
+          "source": {
+            "url": "https://oxylabs.io/products/residential-proxy-pool",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://proxyway.com/reviews/oxylabs",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Corporate",
+          "monthlyUsd": 2500,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "1 TB (1,000 GB) residential bandwidth included at $2.50/GB. Monthly billing. Includes dedicated account manager, 24/7 support, IPv4/IPv6 selection.",
+          "source": {
+            "url": "https://oxylabs.io/products/residential-proxy-pool",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://proxyway.com/reviews/oxylabs",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "decodo",
+      "name": "Decodo",
+      "domain": "decodo.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Puppeteer",
+        "Playwright",
+        "Selenium",
+        "Python",
+        "Node.js",
+        "PHP",
+        "Java",
+        "C#"
+      ],
+      "provenance": "Residential proxy pricing sourced from decodo.com/proxies/residential-proxies (official product page, accessed 2026-06-15). Datacenter proxy pricing sourced from decodo.com/proxies/datacenter-proxies (accessed 2026-06-15). Decodo is the rebranded name for Smartproxy. Prices shown exclude VAT. Corroborated by aimultiple.com/proxy-pricing (2026-06-15) which confirmed the $35/10GB mid-tier rate.",
+      "plans": [
+        {
+          "name": "Residential — 3 GB",
+          "monthlyUsd": 11.25,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "3 GB residential bandwidth at $3.75/GB. Monthly subscription. 3-day free trial with 100 MB. 14-day money-back guarantee. VAT added at checkout. Pay-as-you-go alternative available at $4.00/GB via Wallet (cannot combine with subscription).",
+          "source": {
+            "url": "https://decodo.com/proxies/residential-proxies",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://aimultiple.com/proxy-pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Residential — 25 GB",
+          "monthlyUsd": 81.25,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "25 GB residential bandwidth at $3.25/GB. Most popular tier. Monthly subscription. Access to 115M+ IPs across 195+ locations. 14-day money-back guarantee.",
+          "source": {
+            "url": "https://decodo.com/proxies/residential-proxies",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://aimultiple.com/proxy-pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Residential — 100 GB",
+          "monthlyUsd": 275,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "100 GB residential bandwidth at $2.75/GB. Monthly subscription.",
+          "source": {
+            "url": "https://decodo.com/proxies/residential-proxies",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Datacenter — 10 GB",
+          "monthlyUsd": 6,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "10 GB shared datacenter bandwidth at $0.60/GB. Monthly subscription. Response time <0.3s, 99.99% uptime. Also offers per-IP pricing starting from $0.035/IP for 100 IPs/month.",
+          "source": {
+            "url": "https://decodo.com/proxies/datacenter-proxies",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "iproyal",
+      "name": "IPRoyal",
+      "domain": "iproyal.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Scrapy",
+        "Puppeteer",
+        "Playwright",
+        "Python",
+        "Node.js"
+      ],
+      "provenance": "Residential proxy pricing sourced from iproyal.com/pricing/residential-proxies/ (official page, accessed 2026-06-15), which showed subscription and pay-as-you-go tiers. Main pricing page at iproyal.com/pricing/ showed summary rates only. Corroborated by proxyway.com/reviews/iproyal (2026-06-15) which confirmed $7/GB starting rate and the subscription vs. PAYG model.",
+      "plans": [
+        {
+          "name": "Residential — 1 GB (Pay As You Go)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Pay-as-you-go: $7.00/GB for 1 GB, scaling down to $4.90/GB at 50 GB. Traffic never expires. No monthly minimum, no contracts. Auto-topup available. Pricing page from $1.75/GB reflects bulk/enterprise rates.",
+          "source": {
+            "url": "https://iproyal.com/pricing/residential-proxies/",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://proxyway.com/reviews/iproyal",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Residential — 10 GB (Subscription)",
+          "monthlyUsd": 52.5,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "10 GB residential bandwidth at $5.25/GB on subscription (5% discount vs. PAYG rate of $5.51/GB). Most popular tier. Includes VIP support and access to high-end proxy pool. Subscription rates range from $7.00/GB (1 GB) to $4.90/GB (50 GB, $245/mo). Traffic never expires.",
+          "source": {
+            "url": "https://iproyal.com/pricing/residential-proxies/",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://proxyway.com/reviews/iproyal",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Mobile Proxies",
+          "monthlyUsd": 117,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Mobile proxies starting at $117/month. Pool of 4.5M+ IPs with 5G, 4G, 3G access, speeds up to 100 Mbps. Exact GB allocation at this entry tier not specified on the pricing overview page.",
+          "source": {
+            "url": "https://iproyal.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "soax",
+      "name": "SOAX",
+      "domain": "soax.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Puppeteer",
+        "Playwright",
+        "Selenium",
+        "Python",
+        "Node.js",
+        "cURL"
+      ],
+      "provenance": "Pricing sourced directly from soax.com/pricing (accessed 2026-06-15) and cross-checked against soax.com/residential-proxies (same date). Both pages returned consistent tier data. Corroborated by proxyway.com/reviews/soax (2026-06-15) which confirmed $90/25GB entry tier and $2/GB at 800 GB. SOAX uses platform-based pricing: one subscription unlocks residential, mobile, datacenter proxies, and scraping APIs.",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": 90,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "25 GB bandwidth at $3.60/GB. Monthly subscription. Platform pricing includes access to residential, mobile, and datacenter proxies plus scraping APIs. Trial: 400 MB for 3 days at $1.99. HTTP(S), SOCKS5, UDP, QUIC protocols supported. Startup discount: 50% off Enterprise for 1 year for qualifying companies.",
+          "source": {
+            "url": "https://soax.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://proxyway.com/reviews/soax",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Advanced",
+          "monthlyUsd": 170,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "50 GB bandwidth at $3.40/GB. Monthly subscription. Same platform access as Starter.",
+          "source": {
+            "url": "https://soax.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://proxyway.com/reviews/soax",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Professional",
+          "monthlyUsd": 740,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "300 GB bandwidth at $2.46/GB. Most popular tier. Monthly subscription.",
+          "source": {
+            "url": "https://soax.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://soax.com/residential-proxies",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 1600,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "800 GB bandwidth at $2.00/GB. Monthly subscription.",
+          "source": {
+            "url": "https://soax.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing for high-volume needs. Bulk discounts; rates reportedly starting at $0.32/GB for very high volumes. Personalized SLAs and custom integrations included. Contact sales.",
+          "source": {
+            "url": "https://soax.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "webshare",
+      "name": "Webshare",
+      "domain": "webshare.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Python",
+        "Node.js",
+        "cURL",
+        "Scrapy",
+        "Puppeteer",
+        "Playwright",
+        "Chrome extension"
+      ],
+      "provenance": "Pricing sourced from webshare.io/pricing (official pricing page, accessed 2026-06-15) which returned full tiered data for datacenter, ISP/static residential, and rotating residential proxy products. Corroborated by proxyway.com/reviews/webshare (2026-06-15) which confirmed datacenter entry at $2.99/100 proxies and residential at $3.50/GB. Webshare uses a modular per-IP/per-GB model without named plan tiers; smallest published unit is used as the entry plan.",
+      "plans": [
+        {
+          "name": "Datacenter Proxy — 100 IPs (Monthly)",
+          "monthlyUsd": 2.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 33,
+          "billingModel": "flat",
+          "notes": "100 shared datacenter IPs at $0.0299/IP/month. Annual billing brings this to $1.99/mo (33% discount, $0.0199/IP). Volume tiers available: 1,000 IPs at $26.91/mo (or $17.95/mo annual); 5,000 IPs at $119.60/mo; 60,000 IPs at $1,076.40/mo. Free plan: 10 proxies at no cost.",
+          "source": {
+            "url": "https://webshare.io/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://proxyway.com/reviews/webshare",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Static Residential (ISP) — 20 IPs (Monthly)",
+          "monthlyUsd": 6,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 33,
+          "billingModel": "flat",
+          "notes": "20 static residential (ISP) IPs at $0.30/IP/month. Annual billing: $4.00/mo (33% discount). Volume tiers: 100 IPs at $30/mo; 1,000 IPs at $270/mo; 10,000 IPs at $2,250/mo. Annual rates at 33–50% discount.",
+          "source": {
+            "url": "https://webshare.io/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://proxyway.com/reviews/webshare",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Rotating Residential — 1 GB (Monthly)",
+          "monthlyUsd": 3.5,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 30,
+          "billingModel": "flat",
+          "notes": "1 GB rotating residential bandwidth at $3.50/GB. Annual billing: $2.45/mo (30% discount). Volume tiers: 10 GB at $27.50/mo; 100 GB at $225/mo; 3,000 GB at $4,200/mo. Annual discounts range 30–86% at higher volumes. Upsells available: additional threads, IP refresh, network priority, sub-users.",
+          "source": {
+            "url": "https://webshare.io/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://proxyway.com/reviews/webshare",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "netnut",
+      "name": "NetNut",
+      "domain": "netnut.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Python",
+        "Node.js",
+        "cURL",
+        "Puppeteer",
+        "Playwright"
+      ],
+      "provenance": "Pricing sourced from netnut.io homepage which displayed a residential proxy pricing table (accessed 2026-06-15). Dedicated /pricing and /pricing-residential-proxies paths returned HTTP 404. Corroborated by proxyway.com/reviews/netnut (2026-06-15) which reported an entry plan of $99/28 GB — a discrepancy with the homepage $210/72 GB entry; the homepage figures are used as primary, with the review's figures noted. NetNut accepts PayPal, Visa, MasterCard, Amex, bank wire, and cryptocurrency.",
+      "plans": [
+        {
+          "name": "Entry",
+          "monthlyUsd": 210,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "72 GB rotating residential bandwidth at ~$2.92/GB. Monthly subscription required (no pay-as-you-go). Long-term plans (3, 6, 12 months) available at lower rates via sales contact. Note: a proxyway.com review (2026-06-15) reported an entry plan of $99/28 GB — possible plan restructuring; homepage figures used here as primary source.",
+          "source": {
+            "url": "https://netnut.io",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://proxyway.com/reviews/netnut",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Standard",
+          "monthlyUsd": 850,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "350 GB rotating residential bandwidth at ~$2.43/GB. Monthly subscription.",
+          "source": {
+            "url": "https://netnut.io",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Professional",
+          "monthlyUsd": 1696,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "800 GB rotating residential bandwidth at ~$2.12/GB. Monthly subscription. Bandwidth calculated as sum of request + response headers and data.",
+          "source": {
+            "url": "https://netnut.io",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": 3180,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "2,000 GB rotating residential bandwidth at ~$1.59/GB. Monthly subscription. Rates improve significantly at $500+ commitment levels for enterprise customers.",
+          "source": {
+            "url": "https://netnut.io",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://proxyway.com/reviews/netnut",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ]
+    }
+  ]
+}
