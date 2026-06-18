@@ -51,7 +51,63 @@
             "accessedAt": "2026-06-15"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": false,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://support.google.com/analytics/answer/6004245",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Google Ads",
+          "Search Ads 360",
+          "Display & Video 360",
+          "Google Cloud",
+          "Google Search Console",
+          "BigQuery",
+          "Looker Studio"
+        ],
+        "limits": [
+          "Free: data retention max 14 months for user/event data; GA4 360: up to 50 months retention; Google-signals data capped at 26 months regardless of tier"
+        ],
+        "keyFeatures": [
+          "Cross-platform measurement and attribution",
+          "Machine learning-powered predictive insights",
+          "Event-based data model replacing sessions",
+          "Deep Google Ads and GCP ecosystem integration"
+        ],
+        "bestFor": [
+          "Large enterprises",
+          "Google Ads heavy spenders",
+          "E-commerce",
+          "Cross-platform apps"
+        ],
+        "sources": [
+          {
+            "url": "https://marketingplatform.google.com/about/analytics/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://support.google.com/analytics/answer/7667196",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://support.google.com/analytics/answer/6004245",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://cloud.google.com/security/compliance/hipaa",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Verified via Google Marketing Platform product page, GA4 data-retention help article, GA4 privacy/security help page, and Google Cloud HIPAA covered-products list. HIPAA: GA4 is explicitly excluded from Google Cloud's BAA covered-products list — set false. GDPR: GA4 help page explicitly states 'Google operates as a data processor for Google Analytics' under GDPR — set true. SOC2: not mentioned on any fetched Google Analytics page — left null."
+      }
     },
     {
       "slug": "plausible",
@@ -136,7 +192,58 @@
             "accessedAt": "2026-06-15"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": false,
+          "soc2": false,
+          "gdpr": true,
+          "source": {
+            "url": "https://plausible.io/data-policy",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 30,
+        "keyIntegrations": [
+          "Google Analytics (import)",
+          "Google Search Console",
+          "Google Tag Manager",
+          "Looker Studio",
+          "WordPress",
+          "NPM package"
+        ],
+        "limits": [
+          "Starter: $9/mo, up to 10k pageviews, 1 site; Growth: $14/mo, up to 10k pageviews, 3 sites, 3 team members; Business: $19/mo, up to 10k pageviews, 10 sites, 10 team members; Enterprise: custom for 10M+ pageviews. 30-day free trial, no credit card; no forever-free plan."
+        ],
+        "keyFeatures": [
+          "Lightweight script (~2.5 KB vs ~135 KB for GA4)",
+          "No cookies — no consent banner required",
+          "EU-hosted on European-owned infrastructure; visitor data does not leave the EU",
+          "Open-source codebase publicly auditable on GitHub"
+        ],
+        "bestFor": [
+          "Privacy-first teams",
+          "GDPR-sensitive EU businesses",
+          "SaaS",
+          "Agencies and freelancers"
+        ],
+        "sources": [
+          {
+            "url": "https://plausible.io/privacy-focused-web-analytics",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://plausible.io/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://plausible.io/data-policy",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Verified via Plausible product/features page, homepage pricing, and data-policy page. GDPR: data-policy provides 'a legal assessment of GDPR compliance written by a data protection expert' and states visitor data is stored in the EU on European-owned infrastructure and does not leave the EU — set true. freeTier false: pricing page confirms a 30-day trial with no forever-free plan. No HIPAA or SOC2 mention on any fetched page — both false. The specific host (Hetzner/Germany) is not stated on the fetched pages, so the keyFeature was softened to 'EU-hosted on European-owned infrastructure'."
+      }
     },
     {
       "slug": "fathom-analytics",
@@ -276,7 +383,56 @@
             "accessedAt": "2026-06-15"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": false,
+          "soc2": false,
+          "gdpr": true,
+          "source": {
+            "url": "https://usefathom.com/legal/privacy",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 7,
+        "keyIntegrations": [
+          "WordPress",
+          "Vue.js",
+          "SavvyCal",
+          "ConvertKit"
+        ],
+        "limits": [
+          "Plans from $15/mo (100K pageviews) to $380/mo (20M pageviews); up to 50 sites on all plans; 7-day free trial, no forever-free plan; overage handled via auto-upgrade after sustained over-limit usage"
+        ],
+        "keyFeatures": [
+          "Forever data retention on all paid plans",
+          "EU Isolation option (data never leaves EU) for Schrems II compliance",
+          "No cookies — no consent banner needed",
+          "Consistent pricing — no data monetization"
+        ],
+        "bestFor": [
+          "Privacy-conscious businesses",
+          "EU-regulated companies",
+          "Bloggers and content creators",
+          "Teams needing long-term historical data"
+        ],
+        "sources": [
+          {
+            "url": "https://usefathom.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://usefathom.com/legal/privacy",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://usefathom.com/features",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Verified via Fathom pricing, privacy/legal, and features pages. GDPR: privacy notice explicitly references processing 'as per the General Data Protection Regulation (GDPR)' and an appointed Privacy Officer; ePrivacy, CCPA, PECR, and Schrems II also addressed — set true. freeTier false: pricing page confirms a 7-day trial and explicitly states there is no free tier. No HIPAA or SOC2 mention found — both false."
+      }
     },
     {
       "slug": "matomo",
@@ -358,7 +514,64 @@
             "accessedAt": "2026-06-15"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": false,
+          "gdpr": true,
+          "source": {
+            "url": "https://matomo.org/gdpr-analytics/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "WordPress",
+          "Drupal",
+          "Shopify",
+          "PrestaShop",
+          "BigCommerce",
+          "Google Tag Manager",
+          "WooCommerce",
+          "Webflow",
+          "Joomla",
+          "Cloudflare",
+          "OneTrust",
+          "Cookiebot"
+        ],
+        "limits": [
+          "Self-hosted Community plan: free forever, unlimited users and hits; Cloud Starter: €29/mo for 50K hits; On-premise Team: €275/yr, 4 users, 5M hits; Business: €1,450/yr, 20 users, 30M hits; Enterprise: €3,400/yr, 50 users, 100M hits"
+        ],
+        "keyFeatures": [
+          "100% data ownership — self-host or EU cloud, no third-party data sharing",
+          "ISO 27001:2022 certified (cloud)",
+          "No data sampling on any plan",
+          "GDPR Manager built-in with anonymization, erasure, and consent tools"
+        ],
+        "bestFor": [
+          "Privacy-first teams",
+          "Self-hosting teams",
+          "Enterprises needing full data ownership",
+          "Regulated industries needing EU data residency"
+        ],
+        "sources": [
+          {
+            "url": "https://matomo.org/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://matomo.org/gdpr-analytics/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://matomo.org/integrations/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Verified via Matomo pricing, GDPR-analytics, and integrations pages. HIPAA downgraded true→null: the GDPR page only makes a passing self-claim ('compliant with a range of privacy laws... such as HIPAA, CCPA, LGPD, and PECR') with no BAA, audit, or formal HIPAA attestation — not a verifiable certification, so null rather than a false 'true'. GDPR: extensively documented (GDPR Manager, anonymization/erasure tools) — set true. freeTier true: self-hosted Community plan is 'free forever, unlimited users and hits'. ISO 27001:2022 (cloud) is the only formal certification and is reflected as a feature, not asserted in the compliance object. SOC2 not mentioned — false."
+      }
     },
     {
       "slug": "simple-analytics",
@@ -423,7 +636,56 @@
             "accessedAt": "2026-06-15"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": false,
+          "soc2": false,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.simpleanalytics.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Looker Studio",
+          "Google Analytics (alongside, not replacing)",
+          "BI tools",
+          "Data warehouses"
+        ],
+        "limits": [
+          "Free forever: unlimited pageviews (fair use), 30-day history, 1 user, up to 5 websites, badge required; Paid Self-Serve: from $20/mo for 100K pageviews, additional users $20 each; Enterprise: custom pricing; 14-day trial of paid features"
+        ],
+        "keyFeatures": [
+          "No cookies, no consent banner, no personal data collection",
+          "EU-hosted (Netherlands), EU-owned company",
+          "Counts visitors that block GA",
+          "SOC 2 certification in progress (not yet certified)"
+        ],
+        "bestFor": [
+          "Privacy-first teams",
+          "EU-based businesses",
+          "GDPR-sensitive publishers",
+          "Teams replacing GA to avoid cookie banners"
+        ],
+        "sources": [
+          {
+            "url": "https://www.simpleanalytics.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://simpleanalytics.com/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.simpleanalytics.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Verified via Simple Analytics pricing, homepage, and security pages. GDPR: 'GDPR-compliant by design' with EU (Netherlands) hosting — set true. SOC2 false: security page explicitly states 'SOC 2 (in progress)' / 'SOC 2 Type II in progress' — not yet certified, so false (and surfaced as 'in progress' in keyFeatures rather than asserted). freeTier true: pricing page confirms 'free forever' (30-day history, 1 user, 5 websites, badge required), separate from the 14-day trial. HIPAA not mentioned — false."
+      }
     },
     {
       "slug": "pirsch",
@@ -496,7 +758,64 @@
             "accessedAt": "2026-06-15"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": false,
+          "soc2": false,
+          "gdpr": true,
+          "source": {
+            "url": "https://pirsch.io/privacy",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 30,
+        "keyIntegrations": [
+          "WordPress",
+          "Webflow",
+          "Framer",
+          "React",
+          "Vue",
+          "Angular",
+          "Laravel",
+          "Drupal",
+          "Go SDK",
+          "Plausible (import)",
+          "Fathom (import)",
+          "Google Analytics (import)"
+        ],
+        "limits": [
+          "Standard: $6/mo, 10K pageviews, 50 websites; Plus: $12/mo, unlimited pageviews, unlimited websites; Enterprise: custom, on-premise available; 30-day free trial, no credit card; no forever-free plan"
+        ],
+        "keyFeatures": [
+          "Cookie-free, no personal data stored",
+          "Data hosted on servers in Germany (Hetzner), with possible safeguarded transfers per privacy policy",
+          "Built-in URL shortener",
+          "A/B testing and funnel analysis on Plus tier"
+        ],
+        "bestFor": [
+          "Developer-friendly teams",
+          "Privacy-first startups",
+          "Agencies needing white-labeling",
+          "EU-based businesses"
+        ],
+        "sources": [
+          {
+            "url": "https://pirsch.io/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://pirsch.io/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://pirsch.io/privacy",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Verified via Pirsch pricing, homepage, and privacy policy. GDPR: privacy policy states data is processed 'in accordance with the provisions of the GDPR' and primarily stored on servers in Germany (Hetzner) — set true. freeTier false: pricing confirms a 30-day trial with no permanent free tier. Provenance corrected — the privacy page does NOT mention CCPA, PECR, or Schrems II (the draft overstated these); no HIPAA or SOC2 mention either — both false."
+      }
     },
     {
       "slug": "cloudflare-web-analytics",
@@ -534,7 +853,55 @@
             "accessedAt": "2026-06-15"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": false,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.cloudflare.com/trust-hub/gdpr/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Cloudflare Dashboard",
+          "Cloudflare Speed (performance insights)",
+          "Cloudflare Analytics (broader platform metrics)"
+        ],
+        "limits": [
+          "Free JavaScript-beacon path available with a free Cloudflare account (no proxying required); the edge/zone-analytics path requires a paid Cloudflare plan; no published pageview caps for the Web Analytics beacon specifically"
+        ],
+        "keyFeatures": [
+          "No cookies, no client-side state, no IP fingerprinting",
+          "Beacon path works without proxying through Cloudflare (no DNS change required)",
+          "Real-time traffic spike investigation",
+          "Lightweight beacon — privacy-first by design"
+        ],
+        "bestFor": [
+          "Cloudflare customers",
+          "Privacy-conscious site owners",
+          "Teams wanting zero-config analytics with no consent banner",
+          "Developers already on Cloudflare infrastructure"
+        ],
+        "sources": [
+          {
+            "url": "https://www.cloudflare.com/web-analytics/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.cloudflare.com/trust-hub/gdpr/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://developers.cloudflare.com/analytics/web-analytics/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Verified via Cloudflare Web Analytics product page, Trust Hub GDPR page, and developer docs. SOC2 true: Trust Hub explicitly lists 'SOC 2 Type II' among maintained validations (alongside ISO 27001/27701/27018 and PCI DSS L1). GDPR true: EU-U.S. DPF certification plus a GDPR-aligned program. freeTier true: the JavaScript-beacon path is free ('Sign up now for free') and works without proxying; the limits field was clarified to note the edge/zone path requires a paid Cloudflare plan, correcting the draft's blanket 'free on all plans' wording. HIPAA not mentioned on any fetched Cloudflare page — false."
+      }
     }
   ]
 }

@@ -100,7 +100,58 @@
             "accessedAt": "2026-06-15"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": {
+            "url": "https://trust.akamai.com/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Kubernetes (LKE)",
+          "Terraform",
+          "S3-compatible object storage",
+          "REST API",
+          "NodeBalancers"
+        ],
+        "limits": [
+          "Shared CPU from $5/month (1 vCPU, 1 GB RAM); dedicated CPU from $0.07/hour",
+          "Block storage $1/10 GB/month; outbound transfer overage $0.005/GB",
+          "$100 promotional credit for new accounts (time-limited; standard billing begins after credit is exhausted or expires)"
+        ],
+        "keyFeatures": [
+          "$100 promotional credit for new users (not a forever-free tier; payment method required)",
+          "Akamai edge network integration for low-latency delivery",
+          "Managed databases (MySQL, PostgreSQL), GPU instances, Kubernetes (LKE)",
+          "S3-compatible object storage; multiple global regions for data sovereignty"
+        ],
+        "bestFor": [
+          "developers needing edge-adjacent compute",
+          "cost-conscious startups",
+          "multi-cloud workflows"
+        ],
+        "sources": [
+          {
+            "url": "https://www.akamai.com/cloud/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.akamai.com/cloud-computing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://trust.akamai.com/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing and feature data from akamai.com/cloud/pricing and akamai.com/cloud-computing. $100 credit confirmed promotional (page: 'card gets charged after you have exhausted the promotional credit amount or after the promotional credit window expires'). Trust Center (trust.akamai.com) returned only a loading shell with no explicit certification listings; all compliance values left null."
+      }
     },
     {
       "slug": "vultr",
@@ -199,7 +250,65 @@
             "accessedAt": "2026-06-15"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.vultr.com/trust-center/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Docker",
+          "WordPress",
+          "Laravel",
+          "Node.js",
+          "WireGuard",
+          "K3s",
+          "Managed Kubernetes (free control plane)",
+          "MySQL",
+          "PostgreSQL",
+          "Apache Kafka",
+          "Valkey",
+          "CDN"
+        ],
+        "limits": [
+          "Cloud Compute from $2.50/month (1 vCPU, 0.5 GB RAM, IPv6-only) or $3.50/month with IPv4; Optimized Cloud Compute from $28/month; Bare Metal from $120/month",
+          "33 global data center regions; no permanent free tier and no free trial",
+          "Managed Kubernetes control plane free of charge"
+        ],
+        "keyFeatures": [
+          "HIPAA compliance achieved through SOC 2+ with Business Associate Agreements (BAAs); also SOC 2 Type II, ISO 27001, ISO 27017/27018, ISO 20000, PCI DSS, CSA STAR Level 1, GDPR (controller and processor)",
+          "Managed Kubernetes with free control plane (vs. paid control planes at some competitors)",
+          "Independent cloud with 33 regions",
+          "Cloud Compute entry price from $2.50/month (IPv6-only)"
+        ],
+        "bestFor": [
+          "compliance-sensitive workloads",
+          "developers wanting an AWS alternative",
+          "Kubernetes-heavy teams"
+        ],
+        "sources": [
+          {
+            "url": "https://www.vultr.com/trust-center/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.vultr.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.vultr.com/features/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Compliance verified on Vultr Trust Center: HIPAA ('Through SOC 2+, Vultr achieves HIPAA compliance... through execution of Business Associate Agreements (BAAs)'), SOC 2 Type II, ISO 27001/27017/27018/20000, PCI DSS, CSA STAR Level 1, and GDPR ('acts as both a data controller and a data processor') all explicitly listed. Pricing from vultr.com/pricing confirms no free tier; cheapest $2.50/mo IPv6-only."
+      }
     },
     {
       "slug": "digitalocean",
@@ -313,7 +422,70 @@
             "accessedAt": "2026-06-15"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": false,
+          "source": {
+            "url": "https://www.digitalocean.com/trust/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Terraform",
+          "Kubernetes (DOKS)",
+          "Docker",
+          "WordPress",
+          "MySQL",
+          "PostgreSQL",
+          "MongoDB",
+          "Node.js",
+          "LAMP",
+          "Datadog",
+          "REST API",
+          "CLI"
+        ],
+        "limits": [
+          "Droplets from $4/month (Basic) or $6/month (1 vCPU/1 GB RAM)",
+          "Outbound bandwidth from 500 GiB/month included; overages at $0.01/GiB",
+          "Managed databases from $15/month; backups at 20% (weekly) or 30% (daily) of Droplet cost",
+          "New users receive promotional credits (amount varies by promotion)"
+        ],
+        "keyFeatures": [
+          "SOC 2 Type II, SOC 3 Type II, HIPAA-eligible workloads, PCI-DSS SAQ-A, ISO 27001 (data centers), Global PRP, and CSA STAR Level 1",
+          "99.99% uptime SLA on Droplets with per-second billing (60s minimum)",
+          "DORA-eligible workloads",
+          "One-click app marketplace; GPU Droplets for AI/ML"
+        ],
+        "bestFor": [
+          "SMB SaaS builders",
+          "developer-focused teams",
+          "HIPAA-eligible workloads on a budget"
+        ],
+        "sources": [
+          {
+            "url": "https://www.digitalocean.com/trust/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.digitalocean.com/trust/certification-reports",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.digitalocean.com/products/droplets",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.digitalocean.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Compliance verified: /trust/ states 'SOC 2, SOC 3, Global PRP certifications as well as eligibility to process HIPAA and DORA workloads' (HIPAA-eligible). /trust/certification-reports confirms SOC 2 Type II, SOC 3 Type II (Schellman), PCI-DSS SAQ-A, ISO 27001 (data centers), CSA STAR Level 1, Global PRP. GDPR is NOT mentioned on either page, so gdpr left false."
+      }
     },
     {
       "slug": "hetzner-cloud",
@@ -424,7 +596,65 @@
             "accessedAt": "2026-06-15"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": false,
+          "soc2": false,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.hetzner.com/unternehmen/zertifizierung/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Terraform",
+          "Ansible",
+          "Kubernetes",
+          "Python SDK",
+          "Go SDK",
+          "REST API",
+          "CLI (hcloud)",
+          "Docker",
+          "WordPress",
+          "Nextcloud",
+          "GitLab",
+          "Grafana"
+        ],
+        "limits": [
+          "Cost Optimized (shared vCPU) and General Purpose (dedicated vCPU) tiers",
+          "Data centers in Germany (Nuremberg, Falkenstein), Finland (Helsinki), USA (Oregon, Virginia), Singapore",
+          "Stateful firewalls and private networks included free; no free trial"
+        ],
+        "keyFeatures": [
+          "ISO/IEC 27001:2022 certified by SOCOTEC (Nuremberg, Falkenstein, Helsinki data centers); GDPR-compliant German-hosted infrastructure",
+          "Among the lowest price-per-resource in the EU; dedicated vCPU plans for business workloads",
+          "One-click apps (Docker, Nextcloud, GitLab, Grafana); native Terraform and Ansible support",
+          "No free trial; transparent hourly + monthly billing with no egress fees within Hetzner network"
+        ],
+        "bestFor": [
+          "EU privacy-first workloads",
+          "cost-conscious European developers",
+          "self-hosted open source stacks"
+        ],
+        "sources": [
+          {
+            "url": "https://www.hetzner.com/unternehmen/zertifizierung/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.hetzner.com/cloud/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.hetzner.com/legal/privacy-policy",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "ISO/IEC 27001:2022 confirmed on hetzner.com/unternehmen/zertifizierung/ ('certified in accordance with DIN ISO/IEC 27001:2022', awarded by SOCOTEC, covering Nuremberg, Falkenstein, Helsinki). BSI C5 claim REMOVED — not mentioned on the certification page. GDPR referenced in data-protection context. SOC 2 and HIPAA not mentioned anywhere — left false."
+      }
     },
     {
       "slug": "ovhcloud",
@@ -506,7 +736,64 @@
             "accessedAt": "2026-06-15"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.ovhcloud.com/en/enterprise/certification-conformity/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "OpenStack API",
+          "Terraform",
+          "Kubernetes (Managed Kubernetes)",
+          "Ansible",
+          "Plesk",
+          "cPanel",
+          "WordPress",
+          "Windows Server",
+          "REST API",
+          "KMS console"
+        ],
+        "limits": [
+          "VPS from $4.54/month (2 vCores, 4 GB RAM, 40 GB NVMe); top tier 8 vCores/24 GB RAM/$23.37/month",
+          "Unlimited traffic (200 Mbps–1.5 Gbps); daily 24-hour backup included",
+          "Public Cloud: $200 free credit for new users; 30+ global regions",
+          "Network traffic and API calls free in most regions"
+        ],
+        "keyFeatures": [
+          "Broad compliance portfolio: SOC 1/2/3 (SSAE 16/ISAE 3402 Type 2), HIPAA/HITECH (US datacentres), PCI DSS Level 1, HDS (French health data), ISO 27001/27017/27018/27701, SecNumCloud (ANSSI), and GDPR",
+          "$200 free Public Cloud credit for new users; no hidden egress fees",
+          "Vertically integrated (owns hardware and DCs) enabling competitive pricing",
+          "30+ global regions; NVMe-only VPS storage; unlimited bandwidth included"
+        ],
+        "bestFor": [
+          "European regulated industries (healthcare, finance)",
+          "sovereign cloud requirements",
+          "price-sensitive high-bandwidth workloads"
+        ],
+        "sources": [
+          {
+            "url": "https://www.ovhcloud.com/en/enterprise/certification-conformity/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.ovhcloud.com/en/vps/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.ovhcloud.com/en/public-cloud/prices/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Compliance verified on ovhcloud.com/en/enterprise/certification-conformity/: HIPAA/HITECH (US datacentres), SOC 1/2/3 (SSAE 16/ISAE 3402 Type 2), GDPR (Regulation EU 2016/679), PCI DSS Level 1, ISO 27001:2013, ISO 27017/27018, ISO 27701:2019, HDS (ANS), SecNumCloud (ANSSI) all explicitly listed. VPS/pricing from /en/vps/ and /en/public-cloud/prices/."
+      }
     },
     {
       "slug": "kamatera",
@@ -588,7 +875,59 @@
             "accessedAt": "2026-06-15"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": {
+            "url": "https://www.kamatera.com/gdpr-and-data-processing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 30,
+        "keyIntegrations": [
+          "Portainer",
+          "n8n",
+          "REST API",
+          "Load Balancer",
+          "Cloud Firewall",
+          "Block Storage"
+        ],
+        "limits": [
+          "30-day free trial with no upfront payment required",
+          "Fully customizable CPU/RAM/storage (no fixed tiers); hourly and monthly billing",
+          "Global data centers; 24/7 technical support included"
+        ],
+        "keyFeatures": [
+          "30-day free trial — among the longest in segment of evaluated vendors",
+          "Fully custom server specs (choose any CPU/RAM/storage combination) rather than fixed tiers",
+          "Publishes a GDPR Data Processing Agreement (contractual DPA), but no explicit GDPR/SOC 2/HIPAA compliance certification page found",
+          "24/7 live phone support; Portainer and n8n integrations in marketplace"
+        ],
+        "bestFor": [
+          "teams needing flexible custom server specs",
+          "startups evaluating before committing",
+          "SMBs wanting a long trial period"
+        ],
+        "sources": [
+          {
+            "url": "https://www.kamatera.com/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.kamatera.com/gdpr-and-data-processing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.kamatera.com/express/compute/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "30-day free trial confirmed on kamatera.com ('Start your 30 day free trial today'); no forever-free tier. The /gdpr-and-data-processing/ page is a Data Processing Agreement (contractual framework citing GDPR Article 32(1)), NOT an explicit compliance-certification statement — gdpr downgraded true→null. SOC 2 appears only in a blog post link, not as a held certification — null. HIPAA not mentioned — null."
+      }
     },
     {
       "slug": "hostinger-vps",
@@ -667,7 +1006,64 @@
             "accessedAt": "2026-06-15"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": false,
+          "soc2": false,
+          "gdpr": true,
+          "source": {
+            "url": "https://trust.hostinger.com/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Docker",
+          "Docker Compose",
+          "WordPress",
+          "GitLab",
+          "n8n",
+          "Claude (MCP)",
+          "Cursor",
+          "100+ one-click apps",
+          "Public API",
+          "Kodee AI assistant (MCP-powered)"
+        ],
+        "limits": [
+          "KVM 1: 1 vCPU, 4 GB RAM, 50 GB NVMe, 4 TB bandwidth — from $6.49/month (promotional)",
+          "KVM 8: 8 vCPU, 32 GB RAM, 400 GB NVMe, 32 TB bandwidth — from $25.99/month",
+          "30-day money-back guarantee; no free trial; renewal rates higher than promotional pricing",
+          "1 Gbps network; free weekly automated backups on all plans"
+        ],
+        "keyFeatures": [
+          "ISO/IEC 27001:2022 certified and GDPR-compliant per trust.hostinger.com",
+          "AI-powered web terminal (Kodee, MCP-powered) and 100+ one-click app deployments",
+          "AMD EPYC + NVMe SSD across all plans; 1 Gbps network; DDoS protection (Wanguard)",
+          "Public API + MCP server support; Claude and Cursor AI tool integration built-in"
+        ],
+        "bestFor": [
+          "developers wanting AI-augmented VPS management",
+          "agencies deploying multiple app stacks",
+          "WordPress and Docker hosting"
+        ],
+        "sources": [
+          {
+            "url": "https://www.hostinger.com/vps-hosting",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://trust.hostinger.com/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.hostinger.com/about",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "ISO/IEC 27001:2022 confirmed on trust.hostinger.com ('Hostinger is an ISO/IEC 27001:2022 certified hosting provider'); GDPR listed in Compliance section. HIPAA and SOC 2 not claimed on any fetched page — left false. VPS plan details and integrations from hostinger.com/vps-hosting."
+      }
     }
   ]
 }

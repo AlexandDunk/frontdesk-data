@@ -73,7 +73,58 @@
             "accessedAt": "2026-06-15"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": false,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.hcaptcha.com/certifications",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "WordPress",
+          "Drupal",
+          "Joomla",
+          "Cloudflare",
+          "SAML SSO (Enterprise)"
+        ],
+        "limits": [
+          "Free (Basic): unlimited challenges, world-class bot protection",
+          "Pro: $99/mo annual ($139/mo monthly), 100,000 evaluations/month included, $0.99 per additional 1,000",
+          "Enterprise: custom volume, passive mode, risk scoring"
+        ],
+        "keyFeatures": [
+          "Privacy-first: no cross-site user tracking, zero-PII mode for Enterprise",
+          "SOC 2 Type II, ISO/IEC 27001 and ISO/IEC 27701 certified (per certifications page)",
+          "99.9% passive mode on Pro (no visible challenge for most users)",
+          "Paid publishers program — sites earn revenue from the free tier"
+        ],
+        "bestFor": [
+          "privacy-conscious teams",
+          "publishers wanting revenue share",
+          "SMBs needing GDPR-compliant captcha"
+        ],
+        "sources": [
+          {
+            "url": "https://www.hcaptcha.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.hcaptcha.com/certifications",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.hcaptcha.com/gdpr",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Certifications page explicitly lists SOC 2 Type II, ISO/IEC 27001, ISO/IEC 27701, PCI DSS 4.0 Level 1, and DPF enrollment. GDPR confirmed via dedicated GDPR page (standard DPA with EU/UK SCCs + ISO 27701). HIPAA is not mentioned on any hCaptcha page. Pricing page confirms a free-forever Basic plan and a 14-day Pro trial (no payment required, auto-reverts to free)."
+      }
     },
     {
       "slug": "recaptcha-enterprise",
@@ -140,7 +191,54 @@
             "accessedAt": "2026-06-15"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://cloud.google.com/security/compliance/hipaa",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Google Cloud Armor",
+          "Firebase",
+          "Android SDK",
+          "iOS SDK",
+          "REST API"
+        ],
+        "limits": [
+          "Essentials: 10,000 assessments/month free per organization, but a valid Google Cloud billing instrument is required",
+          "Premium: $8 flat fee for 10,001–100,000 assessments/month, then $1 per 1,000",
+          "Enterprise: comprehensive protection with advanced fraud-analyst features (custom commitment)"
+        ],
+        "keyFeatures": [
+          "reCAPTCHA Enterprise is explicitly covered under the Google Cloud HIPAA BAA (PHI must not appear in URIs or actions)",
+          "Enhanced bot, account and transaction protection on Premium/Enterprise vs foundational protection on Essentials",
+          "Password defense and SMS toll-fraud detection on Premium/Enterprise",
+          "Enterprise tier adds advanced features tailored for security and fraud analysts"
+        ],
+        "bestFor": [
+          "Google Cloud-native apps",
+          "healthcare platforms needing HIPAA coverage",
+          "high-volume e-commerce"
+        ],
+        "sources": [
+          {
+            "url": "https://docs.cloud.google.com/recaptcha/docs/compare-tiers",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://cloud.google.com/security/compliance/hipaa",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Google Cloud HIPAA page explicitly lists reCAPTCHA Enterprise as a BAA-covered product with a 'avoid PHI in URIs/actions' caveat. GDPR via the Cloud Data Processing Addendum. SOC 2 coverage for reCAPTCHA Enterprise specifically could NOT be confirmed from fetched pages, so soc2 is set to null rather than asserting true. Free Essentials tier confirmed at 10,000 assessments/month per organization, but it requires a valid billing instrument; Premium overage verified on the compare-tiers docs page."
+      }
     },
     {
       "slug": "arkose-labs",
@@ -176,7 +274,47 @@
             "accessedAt": "2026-06-15"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.arkoselabs.com/compliance/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [],
+        "limits": [
+          "Enterprise/custom pricing only — no self-serve tiers or published quotas"
+        ],
+        "keyFeatures": [
+          "SOC 2 Type II, SOC 1 Type II, ISO/IEC 27001/27002/27018/27701, and HIPAA (BAA available for regulated healthcare customers)",
+          "Advanced enforcement challenges designed to defeat AI agents and fraud farms",
+          "24/7 embedded security operations team actively tunes protection alongside customers",
+          "Unified platform: bot detection, email intelligence, and device ID via single API call"
+        ],
+        "bestFor": [
+          "large enterprises with high fraud-farm exposure",
+          "financial services",
+          "gaming platforms",
+          "healthcare requiring HIPAA BAA"
+        ],
+        "sources": [
+          {
+            "url": "https://www.arkoselabs.com/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.arkoselabs.com/compliance/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Compliance page explicitly lists SOC 2 Type II, SOC 1 Type II, HIPAA (with BAA for regulated healthcare customers), GDPR/UK GDPR, CCPA/CPRA, ISO/IEC 27001, 27002, 27018, 27701, and PCI DSS. No free tier or trial is offered; enterprise sales-only model (verified — page shows only Contact Us)."
+      }
     },
     {
       "slug": "friendly-captcha",
@@ -273,7 +411,72 @@
             "accessedAt": "2026-06-15"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": false,
+          "soc2": false,
+          "gdpr": true,
+          "source": {
+            "url": "https://friendlycaptcha.com/legal/gdpr/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": 30,
+        "keyIntegrations": [
+          "WordPress",
+          "Shopify",
+          "Magento 2",
+          "Drupal",
+          "Joomla",
+          "React",
+          "Vue",
+          "Angular",
+          "Next.js",
+          "Laravel",
+          "Django",
+          "Salesforce",
+          "Auth0",
+          "Keycloak",
+          "TYPO3",
+          "Adobe Commerce"
+        ],
+        "limits": [
+          "Free (non-commercial): 1 domain, 1,000 requests/month",
+          "Starter: €9/month, 1 domain, 1,000 requests/month",
+          "Growth: €39/month, 5 domains, 5,000 requests/month",
+          "Advanced: €200/month, 50 domains, 50,000 requests/month",
+          "Enterprise: custom, unlimited domains and requests"
+        ],
+        "keyFeatures": [
+          "EU-hosted, GDPR-compliant by design: no cookies, no cross-site tracking, IP anonymized via one-way hash",
+          "Proof-of-work verification — no personal data required to solve challenge",
+          "Supports NIS2 and DORA compliance frameworks (per security page)",
+          "30-day free trial on all paid plans"
+        ],
+        "bestFor": [
+          "EU-based businesses",
+          "GDPR-sensitive industries",
+          "privacy-first teams",
+          "public sector and healthcare in Europe"
+        ],
+        "sources": [
+          {
+            "url": "https://friendlycaptcha.com/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://friendlycaptcha.com/legal/gdpr/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://friendlycaptcha.com/security/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Homepage confirmed pricing tiers, a free non-commercial plan (1 domain, 1,000 req/mo), and a 30-day paid trial. GDPR page confirms EU-only data processing, no cookies, and one-way-hash IP anonymization. SOC 2 and HIPAA are NOT mentioned on the GDPR, security, or home pages, so both are kept false. Security page references NIS2 and DORA only."
+      }
     },
     {
       "slug": "cloudflare-turnstile",
@@ -325,7 +528,52 @@
             "accessedAt": "2026-06-15"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.cloudflare.com/trust-hub/compliance-resources/soc-2/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Cloudflare WAF",
+          "Cloudflare Bot Management",
+          "Cloudflare DDoS Protection",
+          "Cloudflare Rate Limiting"
+        ],
+        "limits": [
+          "Free: up to 20 widgets, 10 hostnames per widget, unlimited challenges/verification requests",
+          "Enterprise: unlimited widgets, up to 200 hostnames per widget, ephemeral IDs, branding removal"
+        ],
+        "keyFeatures": [
+          "Completely free for unlimited challenge volume — no per-request pricing",
+          "Works without Cloudflare CDN; can be embedded on any site",
+          "Three widget modes: Managed (risk-adaptive), Non-interactive, Invisible",
+          "Cloudflare holds SOC 2 Type II, ISO/IEC 27001/27701/27018, and PCI DSS Level 1"
+        ],
+        "bestFor": [
+          "developers and indie builders needing free unlimited captcha",
+          "Cloudflare customers",
+          "sites prioritizing accessibility"
+        ],
+        "sources": [
+          {
+            "url": "https://developers.cloudflare.com/turnstile/plans/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.cloudflare.com/trust-hub/compliance-resources/soc-2/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Turnstile plans page confirms an unlimited-challenge free tier with a 20-widget / 10-hostname cap, permanently free (no trial). Cloudflare holds SOC 2 Type II, ISO/IEC 27001/27701/27018, and PCI DSS Level 1 (confirmed via Cloudflare trust hub). HIPAA is kept null: Cloudflare offers a HIPAA AoC on request but Turnstile is not specifically named as HIPAA-covered."
+      }
     },
     {
       "slug": "geetest",
@@ -379,7 +627,53 @@
             "accessedAt": "2026-06-15"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": false,
+          "soc2": false,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.geetest.com/en/legal/data-processing-agreement",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": null,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Web (JS)",
+          "iOS SDK",
+          "Android SDK",
+          "HTML5",
+          "WAP"
+        ],
+        "limits": [
+          "Pricing and quota details not publicly disclosed; free trial registration available"
+        ],
+        "keyFeatures": [
+          "CAPTCHA v4 with adaptive security that changes challenge difficulty based on real-time attacker behavior",
+          "Device fingerprinting and risk signals for bot and fraud detection",
+          "Business Rules Engine for combining GeeTest risk signals with existing risk-management systems",
+          "Mobile-native SDKs for iOS and Android"
+        ],
+        "bestFor": [
+          "Asia-Pacific market enterprises",
+          "gaming platforms",
+          "e-commerce with high bot volume",
+          "apps requiring mobile-native SDK integration"
+        ],
+        "sources": [
+          {
+            "url": "https://www.geetest.com/en",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.geetest.com/en/legal/data-processing-agreement",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "GeeTest GDPR confirmed via a genuine Data Processing Agreement that explicitly references Regulation (EU) 2016/679 and GDPR Articles 32/35/36. No SOC 2 or HIPAA certifications found on the homepage or DPA. No published pricing or plan quotas; only free-trial registration is available, so freeTier is kept null (no confirmed forever-free plan). Removed unverifiable marketing-stat keyFeatures (fingerprint accuracy percentages and customer counts) that could not be confirmed on fetched pages."
+      }
     },
     {
       "slug": "mtcaptcha",
@@ -476,7 +770,46 @@
             "accessedAt": "2026-06-15"
           }
         }
-      ]
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": false,
+          "soc2": false,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.mtcaptcha.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": 30,
+        "keyIntegrations": [],
+        "limits": [
+          "Free: 10,000 evaluations/month, 1 domain, 7-day dashboard history (no credit card)",
+          "Core ($29/month): 300,000 evaluations, 1 domain, 30-day history",
+          "Pro ($95/month): 1,000,000 evaluations, 3 domains, 90-day history",
+          "Business ($170/month): 2,000,000 evaluations, 6 domains, unlimited history",
+          "Enterprise: custom evaluations, unlimited domains"
+        ],
+        "keyFeatures": [
+          "Low-friction invisible CAPTCHA with fully customizable CSS",
+          "WCAG 2.1 AAA and EAA accessibility compliant on paid plans",
+          "99.999% guaranteed uptime",
+          "30-day free trial with no credit card required on all paid tiers"
+        ],
+        "bestFor": [
+          "accessibility-sensitive applications",
+          "SMBs needing transparent per-domain pricing",
+          "GDPR-compliant EU deployments"
+        ],
+        "sources": [
+          {
+            "url": "https://www.mtcaptcha.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing page confirms GDPR compliance, WCAG 2.1 AAA/EAA accessibility (paid plans), a free-forever plan (10,000 eval/mo, 1 domain, no credit card), and a 30-day no-credit-card trial on paid tiers with all plan quotas. No SOC 2 or HIPAA certifications are mentioned, so both kept false."
+      }
     }
   ]
 }
