@@ -1,0 +1,942 @@
+{
+  "vertical": "bug-reporting",
+  "generatedAt": "2026-06-18",
+  "methodologyNotes": "Official pricing pages were re-fetched directly via WebFetch on 2026-06-18 for all seven vendors (marker.io/pricing, bugherd.com/pricing, userback.io/pricing, ruttl.com/pricing, jam.dev/pricing, usersnap.com/pricing, zipboard.co/pricing) plus vendor security/privacy pages for compliance. Prices are USD billed monthly unless a plan is explicitly per-seat. Where a plan is 'contact sales' / enterprise with no published price, monthlyUsd is null. CRITICAL CORRECTION: Usersnap's official pricing page renders prices in EURO and does NOT display machine-readable USD figures; the draft's USD prices ($49/$109/$199/$319) could not be verified on the official page and are contradicted by third-party aggregators (Capterra lists Startup $99 / Company $189 / Premium $329 under different plan names). Per a strict no-guess policy, all unverifiable Usersnap paid prices are set to null. Usersnap's free offering is a TRIAL (ends after 20 feedback items; accounts deactivated after 90 days), not a forever-free plan. Ruttl's annual per-seat price is not published and is omitted rather than estimated. All accessedAt = 2026-06-18.",
+  "vendors": [
+    {
+      "slug": "marker-io",
+      "name": "Marker.io",
+      "domain": "marker.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Jira",
+        "Trello",
+        "Asana",
+        "ClickUp",
+        "GitHub",
+        "GitLab",
+        "Linear",
+        "Zendesk",
+        "Intercom",
+        "Slack",
+        "Azure DevOps"
+      ],
+      "provenance": "Re-fetched https://marker.io/pricing and https://marker.io/security on 2026-06-18. Confirmed Starter $59/mo monthly ($39/mo annual), Team $199/mo monthly ($149/mo annual), Agency $129/mo ($99/mo annual, application required), Business custom. Starter extra seats corrected to $4/mo (draft had $9). SOC 2 Type II and GDPR confirmed on security page; no HIPAA mention. No forever-free plan; 15-day trial.",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": 59,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 34,
+          "billingModel": "flat",
+          "notes": "3 seats, 1 project, 10 guests, 5k page views/month. Annual billing: $39/mo. Extra seats $4/mo (per official pricing page).",
+          "source": {
+            "url": "https://marker.io/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Team",
+          "monthlyUsd": 199,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 25,
+          "billingModel": "flat",
+          "notes": "15 seats, 3 projects, 50 guests, 25k page views/month. Annual billing: $149/mo. Extra seats $6/mo. Includes session replay, developer tools, CSV export.",
+          "source": {
+            "url": "https://marker.io/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Agency",
+          "monthlyUsd": 129,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 23,
+          "billingModel": "flat",
+          "notes": "15 members, 50 projects, 50 guests. Annual billing: $99/mo. Application required to qualify. For agencies managing many client sites.",
+          "source": {
+            "url": "https://marker.io/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom seats, projects, guests. Annual billing only. SSO SAML, audit logs, sensitive data masking, webhooks, analytics, Zendesk & Intercom, account manager, custom terms. Contact sales.",
+          "source": {
+            "url": "https://marker.io/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://marker.io/security",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 15,
+        "keyIntegrations": [
+          "Jira",
+          "GitHub",
+          "GitLab",
+          "Linear",
+          "Trello",
+          "Asana",
+          "ClickUp",
+          "Zendesk",
+          "Intercom",
+          "Slack"
+        ],
+        "limits": [
+          "Starter: 3 seats, 1 project, 5k page views/mo",
+          "Team: 15 seats, 3 projects, 25k page views/mo",
+          "Agency: 15 members, 50 projects"
+        ],
+        "keyFeatures": [
+          "Visual bug capture widget with annotated screenshots",
+          "Session replay and developer console/network logs",
+          "Unlimited guest reporters on all plans",
+          "Two-way sync with issue trackers (Jira, Linear, GitHub)"
+        ],
+        "bestFor": [
+          "product teams",
+          "web agencies",
+          "QA teams",
+          "client feedback workflows"
+        ],
+        "sources": [
+          {
+            "url": "https://marker.io/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://marker.io/security",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Pricing and compliance re-verified directly from marker.io official pages on 2026-06-18."
+      }
+    },
+    {
+      "slug": "bugherd",
+      "name": "BugHerd",
+      "domain": "bugherd.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Jira",
+        "Asana",
+        "Linear",
+        "ClickUp",
+        "Monday.com",
+        "Teamwork",
+        "Trello",
+        "Slack",
+        "GitHub",
+        "Zapier",
+        "Make",
+        "FullStory",
+        "LogRocket",
+        "Harvest",
+        "Time Doctor",
+        "LambdaTest",
+        "MS Teams",
+        "WordPress",
+        "Drupal"
+      ],
+      "provenance": "Re-fetched https://bugherd.com/pricing and https://bugherd.com/privacy on 2026-06-18. Standard $50/$42, Studio $80/$67, Premium $150/$125 confirmed (annual ~16% off, '2 months free'). Trial day count not published (kept null). GDPR confirmed in privacy policy; SOC 2 and HIPAA not mentioned.",
+      "plans": [
+        {
+          "name": "Standard",
+          "monthlyUsd": 50,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 16,
+          "billingModel": "flat",
+          "notes": "5 members, unlimited projects, unlimited client users, 10 GB storage. Annual: $42/mo. Additional members $8/mo or $6.60/mo annual. Standard integrations (Trello, Slack, GitHub, Zapier).",
+          "source": {
+            "url": "https://bugherd.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Studio",
+          "monthlyUsd": 80,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 16,
+          "billingModel": "flat",
+          "notes": "10 members, unlimited projects, 25 GB storage. Annual: $67/mo. Additional members $8/mo or $6.60/mo annual.",
+          "source": {
+            "url": "https://bugherd.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": 150,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 16,
+          "billingModel": "flat",
+          "notes": "25 members, unlimited projects, 50 GB storage. Annual: $125/mo. Premium integrations (Jira, Asana, Linear, ClickUp, Monday.com). Custom branding, auto-tagging, member-only commenting.",
+          "source": {
+            "url": "https://bugherd.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Custom",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom member count, unlimited storage, dedicated Success Manager, SSO, 99.9% SLA. Contact sales.",
+          "source": {
+            "url": "https://bugherd.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://bugherd.com/privacy",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Jira",
+          "Asana",
+          "Linear",
+          "ClickUp",
+          "Monday.com",
+          "Trello",
+          "Slack",
+          "GitHub",
+          "Zapier"
+        ],
+        "limits": [
+          "Standard: 5 members, 10 GB storage",
+          "Studio: 10 members, 25 GB storage",
+          "Premium: 25 members, 50 GB storage"
+        ],
+        "keyFeatures": [
+          "Point-and-click visual bug pinning on live websites",
+          "Technical metadata auto-captured (browser, OS, console)",
+          "Unlimited client guest users on all plans",
+          "Figma, PDF, and image feedback in addition to web"
+        ],
+        "bestFor": [
+          "web development agencies",
+          "client review workflows",
+          "QA teams",
+          "website projects"
+        ],
+        "sources": [
+          {
+            "url": "https://bugherd.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://bugherd.com/privacy",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Pricing re-fetched from bugherd.com/pricing; compliance from bugherd.com/privacy, both 2026-06-18."
+      }
+    },
+    {
+      "slug": "userback",
+      "name": "Userback",
+      "domain": "userback.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Jira",
+        "ClickUp",
+        "Zapier",
+        "Slack",
+        "GitHub",
+        "GitLab",
+        "Trello",
+        "Asana",
+        "Monday.com",
+        "Linear",
+        "Intercom",
+        "Zendesk"
+      ],
+      "provenance": "Re-fetched https://userback.io/pricing and https://userback.io/security on 2026-06-18. Free Forever (2 seats/2 projects), Team $9/$7, Business $19/$15, Business Plus $29/$23 per seat confirmed. SSO minimum 25 seats on Business Plus confirmed. SOC 2 Type II and GDPR confirmed; HIPAA only via datacenter provider (null).",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Up to 2 seats, 2 projects, 7-day feedback availability. Core widget and feedback collection. Forever free.",
+          "source": {
+            "url": "https://userback.io/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Team",
+          "monthlyUsd": 9,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 22,
+          "billingModel": "per_seat",
+          "notes": "Per user/seat. Annual: $7/seat/mo. Unlimited feedback availability, Jira and ClickUp integrations, Zapier, customizable widgets.",
+          "source": {
+            "url": "https://userback.io/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 19,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 21,
+          "billingModel": "per_seat",
+          "notes": "Per user/seat. Annual: $15/seat/mo. 25 projects. AI Feedback & Insights, session replays, JavaScript SDK, user surveys, behavioral targeting, custom branding, developer tools, console logs.",
+          "source": {
+            "url": "https://userback.io/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Business Plus",
+          "monthlyUsd": 29,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 21,
+          "billingModel": "per_seat",
+          "notes": "Per user/seat. Annual: $23/seat/mo. Unlimited projects, Mobile SDK, advanced privacy controls, REST API, webhooks, email forwarding, SSO (minimum 25 seats), premium support.",
+          "source": {
+            "url": "https://userback.io/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://userback.io/security",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Jira",
+          "ClickUp",
+          "Zapier",
+          "Slack",
+          "GitHub",
+          "Linear",
+          "Zendesk",
+          "Intercom"
+        ],
+        "limits": [
+          "Free: 2 seats, 2 projects, 7-day feedback retention",
+          "Business: 25 projects",
+          "SSO requires minimum 25 seats (Business Plus)"
+        ],
+        "keyFeatures": [
+          "Forever-free tier with unlimited feedback collection",
+          "AI Feedback & Insights for automatic categorization",
+          "Session replay built in (Business plan)",
+          "Mobile SDK for in-app feedback (Business Plus)"
+        ],
+        "bestFor": [
+          "SaaS product teams",
+          "customer feedback management",
+          "user research",
+          "mobile and web QA"
+        ],
+        "sources": [
+          {
+            "url": "https://userback.io/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://userback.io/security",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Pricing and compliance re-verified directly from userback.io official pages on 2026-06-18."
+      }
+    },
+    {
+      "slug": "ruttl",
+      "name": "Ruttl",
+      "domain": "ruttl.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Trello",
+        "Slack",
+        "Asana",
+        "Jira",
+        "ClickUp"
+      ],
+      "provenance": "Re-fetched https://ruttl.com/pricing on 2026-06-18. Basic free, Pro $18/user/month (monthly billing) confirmed on official page; annual toggle exists but exact annual per-user rate not published (omitted, not guessed). Business custom. No compliance certifications published.",
+      "plans": [
+        {
+          "name": "Basic",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Up to 5 users, 1 project, 5 pages, 10 comments, 1 GB storage. Integrations: Trello, Slack, Asana, Jira. Forever free.",
+          "source": {
+            "url": "https://ruttl.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 18,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Per user/month, billed monthly. Annual billing available but exact per-user annual price not published on pricing page. 1 admin + up to 50 users, unlimited projects and pages, unlimited comments, 50 GB storage. All integrations including ClickUp. Dedicated Success Manager, versioning, 15 device sizes.",
+          "source": {
+            "url": "https://ruttl.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing. Unlimited admins and users, unlimited projects and pages, 100 GB storage, SAML SSO, centralized project management, dedicated team workspace. Contact sales.",
+          "source": {
+            "url": "https://ruttl.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Jira",
+          "Trello",
+          "Slack",
+          "Asana",
+          "ClickUp"
+        ],
+        "limits": [
+          "Basic: 1 project, 5 pages, 10 comments, 5 users",
+          "Pro: up to 50 users per workspace, 50 GB storage",
+          "Business: 100 GB storage"
+        ],
+        "keyFeatures": [
+          "Visual website feedback with point-and-click comment pins",
+          "Mobile responsiveness testing across 15 device sizes",
+          "Versioning to compare before/after design changes",
+          "Figma and PDF annotation in addition to live websites"
+        ],
+        "bestFor": [
+          "web designers",
+          "design agencies",
+          "website review workflows",
+          "client approvals"
+        ],
+        "sources": [
+          {
+            "url": "https://ruttl.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Pricing re-fetched from ruttl.com/pricing on 2026-06-18; annual per-seat price omitted as not verifiable from live page content."
+      }
+    },
+    {
+      "slug": "jam",
+      "name": "Jam",
+      "domain": "jam.dev",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Jira",
+        "Linear",
+        "Slack",
+        "GitHub",
+        "GitLab",
+        "ClickUp",
+        "Asana",
+        "Trello",
+        "Shortcut"
+      ],
+      "provenance": "Re-fetched https://jam.dev/pricing and https://jam.dev/security on 2026-06-18. Free (5 creator seats), Team $14/creator/mo (billed yearly), Enterprise custom confirmed. SOC 2 Type II and GDPR confirmed; HIPAA listed 'coming soon' so hipaa=null (not asserted). 14-day trial.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "5 creator seats, unlimited viewer seats. 30 Jams/month, 5 recording links/month, 5-minute recording limit. Console & network logs, device metadata, Slack and issue tracker integrations, webhooks, backend logging, workspace analytics. Forever free.",
+          "source": {
+            "url": "https://jam.dev/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Team",
+          "monthlyUsd": 14,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Per creator/month, billed yearly. 50 creator seats, unlimited viewer seats. Unlimited Jams, 150 recording links/month, 15-minute recording limit, 200 AI summaries/month. Access controls, private folders, private Jams. 14-day free trial.",
+          "source": {
+            "url": "https://jam.dev/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing, yearly billing only. Unlimited creator and viewer seats, unlimited recording links, unlimited AI summaries. SAML/SSO, audit logs, priority support, dedicated support team.",
+          "source": {
+            "url": "https://jam.dev/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://jam.dev/security",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Jira",
+          "Linear",
+          "Slack",
+          "GitHub",
+          "GitLab",
+          "ClickUp"
+        ],
+        "limits": [
+          "Free: 30 Jams/month, 5 recording links/month, 5-minute max recording",
+          "Team: 150 recording links/month, 15-minute max recording, 200 AI summaries/month",
+          "Team: 50 creator seats max"
+        ],
+        "keyFeatures": [
+          "One-click bug report with auto-captured console & network logs",
+          "AI-generated bug summaries for faster triage",
+          "Instant browser extension with no SDK needed",
+          "Generous free tier with full technical metadata capture"
+        ],
+        "bestFor": [
+          "engineering teams",
+          "QA automation",
+          "developer-focused bug reporting",
+          "remote bug reproduction"
+        ],
+        "sources": [
+          {
+            "url": "https://jam.dev/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://jam.dev/security",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Pricing and compliance re-verified directly from jam.dev official pages on 2026-06-18."
+      }
+    },
+    {
+      "slug": "usersnap",
+      "name": "Usersnap",
+      "domain": "usersnap.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Jira",
+        "Slack",
+        "Azure DevOps",
+        "Zendesk",
+        "Linear",
+        "Trello",
+        "Asana",
+        "GitHub",
+        "GitLab",
+        "Intercom",
+        "HubSpot",
+        "Salesforce"
+      ],
+      "provenance": "Re-fetched https://usersnap.com/pricing and https://usersnap.com/security on 2026-06-18. The official pricing page renders prices in EURO and does NOT display machine-readable USD figures for any paid plan. The draft's USD prices ($49/$109/$199/$319) could NOT be verified on the official page and are contradicted by Capterra (Startup $99 / Company $189 / Premium $329 under different plan names). Per a strict no-guess policy ALL paid-plan monthlyUsd are set to null. The free offering is a TRIAL (ends after 20 feedback items; accounts deactivated after 90 days), not forever-free, so freeTier=false. GDPR confirmed on security page ('compliant with the EU GDPR'); SOC 2 only cited for AWS datacenter, not Usersnap (null).",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "5 seats, 5 active projects, 500 feedback items stored, 100k page views/month. Screen capture widgets, basic metadata, opportunity board. Official page does not render a verifiable USD price (euro display only); third-party aggregators conflict, so monthlyUsd set to null per no-guess policy.",
+          "source": {
+            "url": "https://usersnap.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Growth",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "10 seats, 15 active projects, unlimited feedback storage, 500k page views/month. Feedback menu, channels, reply follow-ups, AI sentiment sensor. No verifiable USD price on official page; monthlyUsd null.",
+          "source": {
+            "url": "https://usersnap.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Professional",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "20 seats, 20 active projects, unlimited feedback storage, 1M page views/month. Customer request portal, error console logs, behavioral targeting, segment identification. No verifiable USD price on official page; monthlyUsd null.",
+          "source": {
+            "url": "https://usersnap.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "50 seats, 50 active projects, unlimited feedback storage, 2M page views/month. Custom branding, Mobile SDK, multi-lingual translations, roles & permissions. Official page shows 'Starts from' with no verifiable USD figure; monthlyUsd null.",
+          "source": {
+            "url": "https://usersnap.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing. Unlimited feedback, seats, projects, page views. Dedicated success manager, SSO (SAML/OIDC), custom terms, bank transfer payment available.",
+          "source": {
+            "url": "https://usersnap.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://usersnap.com/security",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Jira",
+          "Slack",
+          "Azure DevOps",
+          "Zendesk",
+          "Linear",
+          "GitHub",
+          "GitLab"
+        ],
+        "limits": [
+          "Starter: 5 seats, 5 projects, 500 feedback items, 100k page views/mo",
+          "Growth: 10 seats, 15 projects, 500k page views/mo",
+          "Professional: 20 seats, 20 projects, 1M page views/mo",
+          "Premium: 50 seats, 50 projects, 2M page views/mo",
+          "Free offering is a trial only: ends after 20 feedback items, deactivated after 90 days"
+        ],
+        "keyFeatures": [
+          "50+ widget templates and flexible form builder",
+          "AI sentiment analysis and auto-categorization labels",
+          "Customer request portal for feature voting (Professional+)",
+          "30+ integrations including Azure DevOps and Zendesk"
+        ],
+        "bestFor": [
+          "customer feedback management",
+          "enterprise product teams",
+          "user research",
+          "feedback-driven roadmaps"
+        ],
+        "sources": [
+          {
+            "url": "https://usersnap.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://usersnap.com/security",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://www.capterra.com/p/135579/Usersnap/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Official pricing page (usersnap.com/pricing) re-fetched 2026-06-18 displays euro and no verifiable USD figures; all paid-plan USD prices set to null. Capterra retained only as a contradicting third-party reference (Startup $99 / Company $189 / Premium $329, different plan names), not as authoritative source for the official-plan USD prices."
+      }
+    },
+    {
+      "slug": "zipboard",
+      "name": "zipBoard",
+      "domain": "zipboard.co",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Jira",
+        "Slack",
+        "Wrike",
+        "Zapier",
+        "Procore",
+        "LambdaTest",
+        "Microsoft Teams",
+        "Microsoft Outlook"
+      ],
+      "provenance": "Re-fetched https://zipboard.co/pricing on 2026-06-18. Team 'starts at $99/mo', Agency 'starts at $199/mo' confirmed; annual figures not published (null). Trial length shown inconsistently as 14 vs 15 days on the page (kept 15 per primary banner; ambiguity noted). GDPR confirmed via DPA; SOC 2 and HIPAA not mentioned.",
+      "plans": [
+        {
+          "name": "Team",
+          "monthlyUsd": 99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Starts at $99/mo. Up to 20 digital asset pieces, 1 GB storage, unlimited collaborators/reviewers/projects. Standard email support and knowledge base. Annual billing available but exact annual price not published.",
+          "source": {
+            "url": "https://zipboard.co/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Agency",
+          "monthlyUsd": 199,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Starts at $199/mo. Up to 100 digital asset uploads, 5 project managers, project reports, integrations (Jira, Slack, Wrike, Zapier, Procore, LambdaTest, MS Teams). Annual billing available but exact annual price not published.",
+          "source": {
+            "url": "https://zipboard.co/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing. Flexible content volume, SSO, archive projects, custom integrations/workflows/training/reports/permissions, priority support, dedicated account manager.",
+          "source": {
+            "url": "https://zipboard.co/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://zipboard.co/data-processing-addendum-dpa-for-zipboard/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 15,
+        "keyIntegrations": [
+          "Jira",
+          "Slack",
+          "Wrike",
+          "Zapier",
+          "Procore",
+          "LambdaTest",
+          "Microsoft Teams"
+        ],
+        "limits": [
+          "Team: 20 digital asset pieces, 1 GB storage",
+          "Agency: 100 digital asset uploads, 5 project managers",
+          "Trial length shown inconsistently on page (14 vs 15 days)"
+        ],
+        "keyFeatures": [
+          "Visual annotation on websites, PDFs, eLearning content, and images",
+          "Built-in review workflow with task assignment and status tracking",
+          "Procore integration for construction/AEC project feedback",
+          "Flat-rate pricing with unlimited collaborators and reviewers"
+        ],
+        "bestFor": [
+          "eLearning content review",
+          "digital agencies",
+          "construction and AEC projects",
+          "PDF and document annotation"
+        ],
+        "sources": [
+          {
+            "url": "https://zipboard.co/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://zipboard.co/data-processing-addendum-dpa-for-zipboard/",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Pricing re-fetched from zipboard.co/pricing on 2026-06-18; GDPR confirmed via Data Processing Addendum page."
+      }
+    }
+  ]
+}

@@ -1,0 +1,947 @@
+{
+  "vertical": "changelog-tools",
+  "generatedAt": "2026-06-18",
+  "methodologyNotes": "Official pricing pages were fetched directly via WebFetch for all seven vendors on 2026-06-18: getbeamer.com/pricing, announcekit.app/pricing, launchnotes.com/pricing, olvy.co/pricing, noticeable.io/pricing, frill.co/pricing, released.so/pricing. Security/compliance pages were fetched where they exist: getbeamer.com/security (SOC 2 Type II + GDPR confirmed), announcekit.app/security (SOC 2 + GDPR confirmed), launchnotes.com/security (SOC 2 Type II + GDPR confirmed), released.so homepage (SOC 2 Type II confirmed). frill.co/security returns HTTP 404; Frill SOC2 is stated only as an Enterprise-plan feature on frill.co/pricing and Frill GDPR could not be explicitly verified, so Frill GDPR was set to null. Noticeable's pricing page renders prices client-side via JavaScript and returned no numeric data in HTML; the static feature-comparison table confirms tier names and limits and a $0 Free plan plus a 14-day trial, but exact per-tier USD prices could not be independently verified from a live official page and are therefore null (the third-party $19–$399 range was not used to populate any field). All populated prices are taken from the live official pages. accessedAt for every record = 2026-06-18.",
+  "vendors": [
+    {
+      "slug": "beamer",
+      "name": "Beamer",
+      "domain": "www.getbeamer.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Segment",
+        "Intercom",
+        "WordPress",
+        "Zapier",
+        "Slack",
+        "Pabbly",
+        "Integromat",
+        "Webhooks",
+        "API"
+      ],
+      "provenance": "Prices fetched from getbeamer.com/pricing on 2026-06-18 and confirmed exactly (Free $0, Starter $59 / $49 annual, Pro $119 / $99 annual, Scale $299 / $249 annual, Custom = contact sales). Compliance from getbeamer.com/security: SOC 2 Type II and GDPR explicitly stated; HIPAA not mentioned. The '14-day free trial' text on the pricing page refers to a separate Userflow product, not Beamer changelog plans, so freeTrialDays is null.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "1,000 MAUs, 1 teammate, unlimited changelog posts, basic analytics.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.getbeamer.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Starter",
+          "monthlyUsd": 59,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "5,000 MAUs, unlimited teammates, in-app & standalone changelog, boosted announcements, customization. $49/month billed annually.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.getbeamer.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 119,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "10,000 MAUs, dedicated inbox, comments & reactions, basic segmentation. $99/month billed annually. Marked 'Most popular'.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.getbeamer.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Scale",
+          "monthlyUsd": 299,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "50,000 MAUs, advanced segmentation, user activities, staging account. $249/month billed annually.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.getbeamer.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Custom",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom MAU limits, enterprise support. Contact sales.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.getbeamer.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.getbeamer.com/security",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Segment",
+          "Intercom",
+          "WordPress",
+          "Zapier",
+          "Slack"
+        ],
+        "limits": [
+          "Free: 1,000 MAU cap, 1 teammate",
+          "Starter: 5,000 MAUs",
+          "Pro: 10,000 MAUs",
+          "Scale: 50,000 MAUs",
+          "Extra MAUs: $50/month per 5,000"
+        ],
+        "keyFeatures": [
+          "In-app changelog widget with MAU-based targeting",
+          "Boosted announcements (push-style notifications)",
+          "NPS and Feedback add-ons available separately ($99/month each)",
+          "User segmentation on Pro/Scale"
+        ],
+        "bestFor": [
+          "SaaS product teams",
+          "Mobile apps",
+          "High-MAU consumer products"
+        ],
+        "sources": [
+          {
+            "url": "https://www.getbeamer.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://www.getbeamer.com/security",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "All data fetched from official Beamer pages on 2026-06-18. Prices confirmed exactly. Annual discount ~17% ((59-49)/59); Beamer markets it as ~17% savings. SOC 2 Type II + GDPR confirmed on /security."
+      }
+    },
+    {
+      "slug": "announcekit",
+      "name": "AnnounceKit",
+      "domain": "announcekit.app",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Slack",
+        "Jira",
+        "Zapier",
+        "WordPress",
+        "Intercom",
+        "Segment",
+        "Mailgun",
+        "Google Analytics",
+        "n8n",
+        "Custom SMTP",
+        "Webhooks"
+      ],
+      "provenance": "Prices fetched from announcekit.app/pricing on 2026-06-18 and confirmed exactly (Essentials $89 / $79 annual, Growth $149 / $129 annual, Scale $399 / $339 annual, Enterprise = custom). A separate 'AnnounceKit NPS' product ($49/mo) exists on the page but is not a changelog tier and is excluded. No forever-free plan; 15-day trial then read-only mode. Compliance from announcekit.app/security: SOC 2 + GDPR confirmed, HIPAA not mentioned.",
+      "plans": [
+        {
+          "name": "Essentials",
+          "monthlyUsd": 89,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 15,
+          "billingModel": "flat",
+          "notes": "1 team member seat, unlimited posts/visitors/subscribers, changelog widget, roadmap, email updates, comments, reactions, AI editor, analytics. $79/month billed annually. 15-day trial.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://announcekit.app/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Growth",
+          "monthlyUsd": 149,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 15,
+          "billingModel": "flat",
+          "notes": "Unlimited team members, user tracking, segmentation, custom domain, feature requests, advanced analytics, standard integrations (Slack, Zapier). $129/month billed annually. 15-day trial. Marked 'Popular'.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://announcekit.app/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Scale",
+          "monthlyUsd": 399,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 15,
+          "billingModel": "flat",
+          "notes": "Post boosters, in-app notifications, multi-language, email digest, SMTP, custom CSS, SSO/SAML, private changelog. $339/month billed annually. 15-day trial.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://announcekit.app/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "RBAC, white-label removal, dedicated account manager, private Slack support, SOC 2 access, annual security reviews, custom contracts. Quote required.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://announcekit.app/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://announcekit.app/security",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 15,
+        "keyIntegrations": [
+          "Slack",
+          "Jira",
+          "Zapier",
+          "Intercom",
+          "Segment",
+          "WordPress"
+        ],
+        "limits": [
+          "Essentials: 1 team member seat",
+          "Growth+: Unlimited team members",
+          "All plans: unlimited posts, visitors, subscribers"
+        ],
+        "keyFeatures": [
+          "Unlimited subscribers/visitors on all plans",
+          "Post boosters for re-engagement (Scale+)",
+          "SSO/SAML on Scale+",
+          "Multi-language changelog (Scale+)"
+        ],
+        "bestFor": [
+          "SaaS startups",
+          "Product teams needing subscriber email updates",
+          "Teams requiring SSO and white-label"
+        ],
+        "sources": [
+          {
+            "url": "https://announcekit.app/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://announcekit.app/security",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "All data fetched from official AnnounceKit pages on 2026-06-18. Prices confirmed exactly. 15% annual discount stated explicitly. SOC 2 (AICPA) + GDPR confirmed on /security. No forever-free tier — trial only."
+      }
+    },
+    {
+      "slug": "launchnotes",
+      "name": "LaunchNotes",
+      "domain": "www.launchnotes.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Jira",
+        "Confluence",
+        "Slack",
+        "Microsoft Teams",
+        "Intercom",
+        "HubSpot",
+        "Segment",
+        "Amplitude",
+        "Mixpanel",
+        "Google Analytics",
+        "Zapier",
+        "Airtable",
+        "Asana",
+        "SendGrid",
+        "Mailgun",
+        "Notion",
+        "Loom",
+        "Pendo",
+        "Heap",
+        "Fullstory"
+      ],
+      "provenance": "Prices fetched from launchnotes.com/pricing on 2026-06-18: Growth $249/month confirmed (2 users, 1 page); Premium is custom/quote (annual billing only) so monthlyUsd is null. Compliance from launchnotes.com/security: SOC 2 Type II + GDPR/CCPA confirmed; HIPAA not mentioned.",
+      "plans": [
+        {
+          "name": "Growth",
+          "monthlyUsd": 249,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "2 users, 1 page, embeddable widget, announcements, roadmap, customer feedback, premium onboarding, priority support, custom SLA, integrations. Annual discount available but percentage not published.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.launchnotes.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "10+ users, 1+ pages, all Growth features, annual billing only. Quote required.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.launchnotes.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.launchnotes.com/security",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Jira",
+          "Confluence",
+          "Slack",
+          "HubSpot",
+          "Segment",
+          "Amplitude",
+          "Zapier"
+        ],
+        "limits": [
+          "Growth: 2 user seats, 1 page",
+          "Premium: 10+ seats, 1+ pages"
+        ],
+        "keyFeatures": [
+          "Deep analytics integrations (Amplitude, Mixpanel, Pendo, Heap)",
+          "Customer feedback collection built in",
+          "Public roadmap with subscriber notifications",
+          "SOC 2 Type II certified"
+        ],
+        "bestFor": [
+          "Enterprise product teams",
+          "Companies with large analytics stacks",
+          "Teams needing roadmap + changelog combined"
+        ],
+        "sources": [
+          {
+            "url": "https://www.launchnotes.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://www.launchnotes.com/security",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Prices from official launchnotes.com/pricing on 2026-06-18. Growth $249 confirmed; Premium custom (null). Annual discount exists for Growth but percentage not published; set to null. SOC 2 Type II + GDPR confirmed on /security."
+      }
+    },
+    {
+      "slug": "olvy",
+      "name": "Olvy",
+      "domain": "olvy.co",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Slack",
+        "Zendesk",
+        "Telegram",
+        "Microsoft Teams",
+        "Google Play Store",
+        "Zapier",
+        "Crisp",
+        "HubSpot",
+        "Intercom",
+        "Discord",
+        "ClickUp",
+        "Linear",
+        "Jira",
+        "GitHub",
+        "Chrome Extension"
+      ],
+      "provenance": "Prices fetched from olvy.co/pricing on 2026-06-18: Free $0, Essentials $60/month, Business $240/month (20% off annual), Enterprise = 'Let's Talk' (null). No SOC 2 or HIPAA stated on fetched pages; GDPR referenced in footer.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "1 builder, unlimited release notes, 1,000 unique visitors/month, feedback analysis up to 25, announcement widget, Chrome extension.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://olvy.co/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Essentials",
+          "monthlyUsd": 60,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "1 builder (additional at $25/builder/month), advanced customization, 2 widgets, no Olvy branding, up to 100 feedback analysis. Annual pricing toggle exists but discount % not published.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://olvy.co/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 240,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "5 builders, unlimited viewers, up to 10,000 feedback analysis, feedback summarization, unlimited widgets and integrations, email subscriptions, API access, CRM integrations, multi-language, user segmentation. 20% off with annual billing.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://olvy.co/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom limits, bulk user import, SSO/SAML, audit logs, priority support, custom integrations, migration assistance. Contact sales.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://olvy.co/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://olvy.co",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Slack",
+          "Jira",
+          "Linear",
+          "HubSpot",
+          "Intercom",
+          "Zapier",
+          "GitHub"
+        ],
+        "limits": [
+          "Free: 1,000 unique visitors/month, 1 builder, 25 feedback analyses",
+          "Essentials: 1 builder, 100 feedback analyses, 2 widgets",
+          "Business: 5 builders, 10,000 feedback analyses"
+        ],
+        "keyFeatures": [
+          "AI-powered feedback analysis and summarization",
+          "Multi-source feedback collection (Slack, Zendesk, Intercom, etc.)",
+          "Release notes with in-app announcement widget",
+          "GitHub import for release notes auto-generation"
+        ],
+        "bestFor": [
+          "Product teams aggregating feedback from many channels",
+          "Teams wanting AI feedback summarization",
+          "Startups on free tier"
+        ],
+        "sources": [
+          {
+            "url": "https://olvy.co/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://olvy.co",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Prices confirmed from olvy.co/pricing on 2026-06-18 (Free $0, Essentials $60, Business $240 with 20% annual badge, Enterprise custom). Essentials annual price not shown numerically so its discount % is null. SOC 2/HIPAA not stated (null); GDPR referenced in footer."
+      }
+    },
+    {
+      "slug": "noticeable",
+      "name": "Noticeable",
+      "domain": "noticeable.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Zapier",
+        "Slack",
+        "Twitter",
+        "Facebook",
+        "MailChimp",
+        "GitHub"
+      ],
+      "provenance": "noticeable.io/pricing was fetched on 2026-06-18; the static HTML feature-comparison table confirms five tiers (Free, Starter, Growth, Business, Enterprise) and their project/collaborator/widget limits, plus a $0 Free plan and a 14-day trial, but all paid-tier dollar amounts are JavaScript-rendered and absent from the HTML. The third-party $19–$399 range could not be verified on a live official page, so every paid monthlyUsd is null (no number invented). GDPR confirmed via Noticeable help center.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free tier with limited features (1 project, 0 collaborators, 1 widget). Confirmed by the static feature table on noticeable.io/pricing.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://noticeable.io/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Starter",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "1 project, 0 collaborators, 1 widget, email support, custom domain. Price is JavaScript-rendered and not extractable from a live official page fetch; set to null.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://noticeable.io/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Growth",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "2 projects, 3 collaborators, 2 widgets, scheduling, analytics. Price not extractable from JS-rendered page; null.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://noticeable.io/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "3 projects, 5 collaborators, 3 widgets, advanced customization (CSS, code injection). Price not extractable from JS-rendered page; null.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://noticeable.io/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "5+ projects, unlimited collaborators, 5+ widgets, SSO, 24/7 support, custom contracts. Custom pricing.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://noticeable.io/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://help.noticeable.io/en-us/article/whats-noticeable-eu-gdpr-compliance-status-q5z8h6/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Zapier",
+          "Slack",
+          "GitHub",
+          "MailChimp"
+        ],
+        "limits": [
+          "Free: 1 project, 0 collaborators, 1 widget",
+          "Starter: 1 project, 0 collaborators, 1 widget",
+          "Growth: 2 projects, 3 collaborators",
+          "Business: 3 projects, 5 collaborators",
+          "Enterprise: 5+ projects, unlimited collaborators"
+        ],
+        "keyFeatures": [
+          "In-app widget and standalone newspage",
+          "GraphQL API for custom integrations",
+          "Publication scheduling (Growth+)",
+          "Customizable CSS and code injection (Business+)"
+        ],
+        "bestFor": [
+          "Indie hackers and small teams",
+          "SaaS products needing embeddable widget",
+          "Teams wanting a GraphQL API"
+        ],
+        "sources": [
+          {
+            "url": "https://noticeable.io/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://noticeable.io",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Feature tiers and limits confirmed from the static feature-comparison table on noticeable.io/pricing (2026-06-18). All paid-tier prices are JavaScript-rendered and unverifiable from a live official page, so monthlyUsd is null for every paid plan; only the $0 Free tier is asserted. 14-day trial confirmed; GDPR confirmed via help center. No third-party price guesses introduced."
+      }
+    },
+    {
+      "slug": "frill",
+      "name": "Frill",
+      "domain": "frill.co",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Jira",
+        "Trello",
+        "Monday.com",
+        "Asana",
+        "Linear",
+        "Basecamp",
+        "Azure DevOps",
+        "Slack",
+        "Intercom",
+        "Zendesk",
+        "Help Scout",
+        "Google Docs",
+        "Google Sheets",
+        "Airtable",
+        "Miro",
+        "Zapier"
+      ],
+      "provenance": "Prices fetched from frill.co/pricing on 2026-06-18: Startup $25, Business $49, Growth $149, Enterprise 'starting at $349' — all confirmed exactly. Add-ons: Privacy +$25/mo, Surveys +$25/mo, White Labeling +$100/mo. No forever-free plan; 14-day trial (no card). SOC2 is listed only as an Enterprise-plan feature on the pricing page (kept true, sourced to the pricing page). GDPR could not be explicitly verified on any fetched official page (frill.co/security returns 404; help.frill.co shows no GDPR statement) and is set to null.",
+      "plans": [
+        {
+          "name": "Startup",
+          "monthlyUsd": 25,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 8,
+          "billingModel": "flat",
+          "notes": "50 ideas, 1 survey, unlimited teammates and tracked users. Annual billing: 1 month free (~8.3% discount). Add-ons: Privacy +$25/mo, White Labeling +$100/mo.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://frill.co/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 49,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 8,
+          "billingModel": "flat",
+          "notes": "Unlimited ideas, 3 surveys, unlimited teammates and tracked users. Annual billing: 1 month free (~8.3% discount). Add-ons: Privacy +$25/mo, White Labeling +$100/mo.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://frill.co/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Growth",
+          "monthlyUsd": 149,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 8,
+          "billingModel": "flat",
+          "notes": "Unlimited ideas, unlimited surveys, white labeling and privacy included. Annual billing: 1 month free (~8.3% discount).",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://frill.co/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": 349,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Starting at $349/month. Dedicated support, SOC2 compliance, audit logs, IP whitelisting, dedicated hosting. Custom pricing available above the floor.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://frill.co/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://frill.co/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Jira",
+          "Slack",
+          "Intercom",
+          "Zapier",
+          "Zendesk",
+          "Linear"
+        ],
+        "limits": [
+          "Startup: 50 ideas limit",
+          "Business+: unlimited ideas",
+          "White labeling requires add-on or Growth plan"
+        ],
+        "keyFeatures": [
+          "Feature voting and public roadmap combined with changelog",
+          "Idea voting with subscriber tracking",
+          "White-label option as add-on or built into Growth",
+          "SOC2 compliance listed as an Enterprise-tier feature"
+        ],
+        "bestFor": [
+          "Product teams wanting feature voting + changelog",
+          "Startups with affordable entry price",
+          "Teams needing public roadmap with subscriber email updates"
+        ],
+        "sources": [
+          {
+            "url": "https://frill.co/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://frill.co",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Prices confirmed from frill.co/pricing on 2026-06-18 (Startup $25, Business $49, Growth $149, Enterprise from $349). SOC2 appears only as an Enterprise-plan feature on the pricing page (kept true, source = pricing page). GDPR not explicitly stated on any fetched page (frill.co/security 404, help.frill.co homepage silent) so gdpr=null. No free tier; 14-day trial. Annual discount = '1 month free' (~8.3%)."
+      }
+    },
+    {
+      "slug": "released",
+      "name": "Released",
+      "domain": "released.so",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Jira",
+        "Confluence",
+        "Slack",
+        "Active Directory (via Atlassian Access)"
+      ],
+      "provenance": "Prices fetched from released.so/pricing on 2026-06-18: Free $0 (up to 10 users, 2,000 AI tokens/user), Standard $1.10/user/month, Advanced $1.70/user/month (per-seat, volume discounts as low as $0.01/user). SOC 2 Type II confirmed on released.so homepage. Jira-native app; pricing counts licensed Jira users; 30-day trial via Jira Marketplace.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Up to 10 users, 2,000 AI tokens per user, unlimited idea portals, public roadmaps, AI-generated release notes, Jira linking, Confluence & Slack publishing. 30-day trial available for paid tiers.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://released.so/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Standard",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$1.10 per user/month (licensed Jira users). Unlimited users, 10,000 AI tokens per user, watermark removal. Volume discounts as low as $0.01/user.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://released.so/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Advanced",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$1.70 per user/month (licensed Jira users). Unlimited users, 20,000 AI tokens per user, embeddable feedback forms, Slack feedback integration, premium support and onboarding.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://released.so/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://released.so",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": 30,
+        "keyIntegrations": [
+          "Jira",
+          "Confluence",
+          "Slack"
+        ],
+        "limits": [
+          "Free: up to 10 users, 2,000 AI tokens/user",
+          "Standard: 10,000 AI tokens/user",
+          "Advanced: 20,000 AI tokens/user",
+          "Pricing based on licensed Jira user count"
+        ],
+        "keyFeatures": [
+          "Jira-native — no separate database required",
+          "AI-generated release notes from Jira issues",
+          "Public roadmap and feedback portal built in",
+          "SOC 2 Type II certified, data never used for AI training"
+        ],
+        "bestFor": [
+          "Jira-centric engineering teams",
+          "Atlassian ecosystem users",
+          "Teams wanting AI-drafted release notes from existing Jira workflow"
+        ],
+        "sources": [
+          {
+            "url": "https://released.so/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://released.so",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Prices from released.so/pricing on 2026-06-18 (Free $0, Standard $1.10/user, Advanced $1.70/user). Per-seat so flat monthlyUsd is null; per-user rates in notes. SOC 2 Type II confirmed on homepage; GDPR not explicitly stated (null). 30-day trial confirmed."
+      }
+    }
+  ]
+}
