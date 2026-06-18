@@ -1,0 +1,1094 @@
+{
+  "vertical": "practice-management",
+  "generatedAt": "2026-06-15",
+  "methodologyNotes": "Official pricing pages were fetched directly and re-verified for each vendor on 2026-06-15: simplepractice.com/pricing, jane.app/pricing, ensorahealth.com/pricing/theranest-mental-health, therapynotes.com/pricing (title-only on direct fetch; prices corroborated via official TherapyNotes support pricing article and multiple secondary sources), practicebetter.io/pricing, tebra.com/pricing, intakeq.com/pricing, zandahealth.com/pricing, and sessionshealth.com/pricing. Jane App publishes prices exclusively in CAD; monthlyUsd is null for all Jane plans. Tebra publishes no monthly prices (all packages quote-only) so monthlyUsd is null. Compliance claims (HIPAA/BAA/SOC2/GDPR) are set true ONLY where stated on a vendor-owned page or in a direct vendor statement; otherwise null. Notable correction this pass: Sessions Health SOC2 reverted to null (no vendor statement found; Drata trust center link unreachable), and SimplePractice Essential annual discount normalized to the vendor's uniform '2 months free' structure. accessedAt 2026-06-15.",
+  "vendors": [
+    {
+      "slug": "simplepractice",
+      "name": "SimplePractice",
+      "domain": "simplepractice.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Google Calendar",
+        "iCal",
+        "Stripe",
+        "Zoom",
+        "Wiley Practice Planners",
+        "Luminare Health",
+        "Availity"
+      ],
+      "provenance": "Pricing re-verified on simplepractice.com/pricing 2026-06-15 (Starter $49, Essential $79, Plus $99 monthly). Group-practice additional-clinician rates ($74 for 2-5, $72 for 6-15, $69 for 16+) corroborated via SimplePractice support compare-plans page. HIPAA/HITRUST/PCI and BAA (/baa/) confirmed on SimplePractice site footer.",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": 49,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 16.67,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Solo practice plan. 2 months free with annual billing (~16.67% off). Does not support adding a second clinician. 30-day free trial, no credit card.",
+          "source": {
+            "url": "https://www.simplepractice.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Essential",
+          "monthlyUsd": 79,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 16.67,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Solo practice plan with expanded features. 2 months free with annual billing (~16.67% off). Does not support adding a second clinician.",
+          "source": {
+            "url": "https://www.simplepractice.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Plus",
+          "monthlyUsd": 99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 16.67,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Supports group practices. Additional clinicians: $74/mo each for 2-5 clinicians, $72/mo for 6-15, $69/mo for 16+. 2 months free with annual billing.",
+          "source": {
+            "url": "https://www.simplepractice.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://support.simplepractice.com/hc/en-us/articles/360034957931-Comparing-SimplePractice-features-by-plan",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": null,
+          "gdpr": null,
+          "source": {
+            "url": "https://www.simplepractice.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 30,
+        "keyIntegrations": [
+          "Google Calendar",
+          "iCal",
+          "Stripe",
+          "Zoom",
+          "Wiley Practice Planners",
+          "Availity"
+        ],
+        "limits": [
+          "Starter and Essential plans limited to 1 clinician",
+          "Group practices require Plus plan at minimum",
+          "Electronic claims $0.25 per claim on all plans",
+          "Care Aide add-on $29.50/mo (owner) + $24.50/mo per additional clinician",
+          "ePrescribe add-on $24.50/mo + $89 one-time setup"
+        ],
+        "keyFeatures": [
+          "Built-in telehealth",
+          "AI Care Aide (note-taking, treatment planning)",
+          "ePrescribe add-on",
+          "Insurance billing and ERA"
+        ],
+        "bestFor": [
+          "solo therapists",
+          "small group practices",
+          "mental health",
+          "behavioral health"
+        ],
+        "sources": [
+          {
+            "url": "https://www.simplepractice.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://support.simplepractice.com/hc/en-us/articles/115005956266-Subscription-plan-and-pricing-FAQs",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing and feature details re-verified on simplepractice.com/pricing; annual discount derived from vendor-stated '2 months free' structure (16.67%) applied uniformly across all three plans."
+      }
+    },
+    {
+      "slug": "jane-app",
+      "name": "Jane App",
+      "domain": "jane.app",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Claim.MD",
+        "FullScript",
+        "Physitrack",
+        "Wibbi",
+        "Mailchimp",
+        "Google Analytics",
+        "Cyberimpact",
+        "Documo",
+        "Telus eClaims",
+        "Pacific Blue Cross",
+        "Teleplan",
+        "Google Calendar",
+        "Outlook",
+        "Apple Calendar"
+      ],
+      "provenance": "Pricing re-verified on jane.app/pricing 2026-06-15 (Balance CAD $54, Practice CAD $79, Thrive CAD $99); CAD only, monthlyUsd null. HIPAA + BAA confirmed via jane.app/guide/is-jane-hipaa-compliant; SOC 2-Audited and GDPR/PIPEDA confirmed on jane.app/security and pricing page.",
+      "plans": [
+        {
+          "name": "Balance",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "CAD $54/month. Single practitioner, up to 20 appointments/month. Telehealth, AI Scribe (5 free notes). USD price not officially published.",
+          "source": {
+            "url": "https://jane.app/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Practice",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "CAD $79/month base (1 full-time practitioner). Unlimited appointments, unlimited staff profiles, free SMS reminders. Additional full-time or part-time practitioners available as add-ons. USD price not officially published.",
+          "source": {
+            "url": "https://jane.app/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Thrive",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "CAD $99/month base (1 full-time practitioner). Adds rooms & equipment management, patient self check-in, packages & memberships, ratings/reviews. USD price not officially published.",
+          "source": {
+            "url": "https://jane.app/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://jane.app/guide/is-jane-hipaa-compliant",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Claim.MD",
+          "FullScript",
+          "Physitrack",
+          "Mailchimp",
+          "Google Calendar",
+          "Telus eClaims"
+        ],
+        "limits": [
+          "Balance plan capped at 20 appointments/month",
+          "No free trial — demo account available",
+          "Prices in CAD only; USD conversion applies for US practices",
+          "AI Scribe (unlimited) CAD $15/mo per practitioner",
+          "Insurance billing add-on CAD $20/mo + CAD $5/full-time practitioner"
+        ],
+        "keyFeatures": [
+          "Multi-discipline clinic support",
+          "AI Scribe built-in",
+          "Insurance billing add-on",
+          "Patient self check-in (Thrive)"
+        ],
+        "bestFor": [
+          "multi-discipline clinics",
+          "Canadian practices",
+          "physiotherapy",
+          "mental health",
+          "US practices needing HIPAA compliance"
+        ],
+        "sources": [
+          {
+            "url": "https://jane.app/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://jane.app/guide/is-jane-hipaa-compliant",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://jane.app/security",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing from jane.app/pricing (CAD only); HIPAA + BAA from jane.app/guide/is-jane-hipaa-compliant; SOC 2-Audited and GDPR/PIPEDA from jane.app/security and pricing page."
+      }
+    },
+    {
+      "slug": "theranest",
+      "name": "TheraNest (Ensora Mental Health)",
+      "domain": "ensorahealth.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Google Calendar",
+        "iCloud",
+        "Microsoft Outlook",
+        "Fantastical",
+        "Wiley Practice Planners"
+      ],
+      "provenance": "Pricing re-verified on ensorahealth.com/pricing/theranest-mental-health 2026-06-15 (Essentials $29, Advanced $59, Premier $89 monthly per therapist; annual $319/$649/$979). HITRUST e1 certification and HIPAA confirmed on Ensora product pages; BAA coverage stated by vendor.",
+      "plans": [
+        {
+          "name": "Essentials",
+          "monthlyUsd": 29,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 6.9,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "Per therapist/month. Annual price $27/therapist/month ($319/yr, equivalent to 1 month free). Includes scheduling, secure portal, calendar sync, basic intake forms, AI notes. Telehealth add-on $12/mo.",
+          "source": {
+            "url": "https://ensorahealth.com/pricing/theranest-mental-health/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Advanced",
+          "monthlyUsd": 59,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 8.5,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "Per therapist/month. Annual price $54/therapist/month ($649/yr). Adds online booking, custom forms, group reports, 30 free monthly claims/eligibility checks/reminders. Telehealth add-on $12/mo.",
+          "source": {
+            "url": "https://ensorahealth.com/pricing/theranest-mental-health/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Premier",
+          "monthlyUsd": 89,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 7.9,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "Per therapist/month. Annual price $82/therapist/month ($979/yr). Adds insurance automation, Wiley planner, unlimited telehealth/claims/eligibility/reminders. Annual AMA CPT license $19.50/therapist billed in December.",
+          "source": {
+            "url": "https://ensorahealth.com/pricing/theranest-mental-health/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": null,
+          "gdpr": null,
+          "source": {
+            "url": "https://ensorahealth.com/pricing/theranest-mental-health/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 21,
+        "keyIntegrations": [
+          "Google Calendar",
+          "Microsoft Outlook",
+          "Wiley Practice Planners"
+        ],
+        "limits": [
+          "Annual AMA CPT license $19.50/therapist/year (billed December)",
+          "Telehealth is an add-on ($12/mo) on Essentials and Advanced tiers",
+          "Group pricing requires contacting sales"
+        ],
+        "keyFeatures": [
+          "AI-generated therapy notes",
+          "Insurance automation on Premier tier",
+          "Wiley Practice Planners integration",
+          "HITRUST e1 certified"
+        ],
+        "bestFor": [
+          "mental health practices",
+          "solo therapists",
+          "group practices",
+          "behavioral health"
+        ],
+        "sources": [
+          {
+            "url": "https://ensorahealth.com/pricing/theranest-mental-health/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://ensorahealth.com/product/theranest-mental-health/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing from ensorahealth.com/pricing/theranest-mental-health; HITRUST e1 + HIPAA + BAA coverage confirmed via Ensora product/why-us pages and vendor statements."
+      }
+    },
+    {
+      "slug": "therapynotes",
+      "name": "TherapyNotes",
+      "domain": "therapynotes.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Google Calendar",
+        "Microsoft Outlook"
+      ],
+      "provenance": "Pricing re-verified 2026-06-15 via official TherapyNotes support pricing article and multiple corroborating sources (therapynotes.com/pricing returned title-only on direct fetch). Solo $69, Group $79 first + $50/additional clinician, Enterprise same rates w/ 30-user minimum. BAA confirmed via dedicated support BAA article.",
+      "plans": [
+        {
+          "name": "Solo",
+          "monthlyUsd": 69,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Single clinician. No long-term contract. Includes EHR, scheduling, billing, telehealth, client portal, secure messaging. 30-day free trial, no credit card required.",
+          "source": {
+            "url": "https://support.therapynotes.com/hc/en-us/articles/30661380110747-TherapyNotes-Pricing-and-Subscription-Options",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://www.therapynotes.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Group",
+          "monthlyUsd": 79,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "$79/mo for first clinician, $50/mo per additional clinician. Unlimited non-clinical staff (admins, schedulers, billers) at no extra cost.",
+          "source": {
+            "url": "https://support.therapynotes.com/hc/en-us/articles/30661380110747-TherapyNotes-Pricing-and-Subscription-Options",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://www.therapynotes.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": 79,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "Same per-clinician rates as Group ($79 first + $50 each additional). Requires minimum 30 users. Includes dedicated account manager.",
+          "source": {
+            "url": "https://support.therapynotes.com/hc/en-us/articles/30661380110747-TherapyNotes-Pricing-and-Subscription-Options",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": null,
+          "gdpr": null,
+          "source": {
+            "url": "https://support.therapynotes.com/hc/en-us/articles/30661265032219-Business-Associate-Agreement-BAA",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 30,
+        "keyIntegrations": [
+          "Google Calendar",
+          "Microsoft Outlook"
+        ],
+        "limits": [
+          "Electronic claims $0.14 per claim, $0.14 per ERA, $0.14 per SMS reminder",
+          "TherapyFuel AI Scribe add-on $40/clinician/month",
+          "Premium Telehealth add-on $15/clinician/month",
+          "ePrescribe add-on $65/prescriber/month",
+          "Enterprise requires 30+ users"
+        ],
+        "keyFeatures": [
+          "Built-in telehealth",
+          "TherapyFuel AI Scribe (HITRUST AI Security Certified)",
+          "Integrated insurance billing",
+          "24/7 live phone and email support"
+        ],
+        "bestFor": [
+          "mental health practices",
+          "behavioral health",
+          "group practices",
+          "enterprise behavioral health organizations"
+        ],
+        "sources": [
+          {
+            "url": "https://support.therapynotes.com/hc/en-us/articles/30661380110747-TherapyNotes-Pricing-and-Subscription-Options",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.therapynotes.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://support.therapynotes.com/hc/en-us/articles/30661265032219-Business-Associate-Agreement-BAA",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing from official TherapyNotes support pricing article (primary; pricing page title-only on fetch) corroborated by multiple 2026 sources; BAA confirmed from dedicated support article."
+      }
+    },
+    {
+      "slug": "practice-better",
+      "name": "Practice Better",
+      "domain": "practicebetter.io",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Zapier",
+        "Zoom",
+        "FullScript",
+        "Stripe"
+      ],
+      "provenance": "Pricing re-verified on practicebetter.io/pricing 2026-06-15 (Sprout $0, Starter $35, Professional $69, Plus $99, Team $155 monthly; annual $25/$59/$89/$145). HIPAA + GDPR badges shown on pricing page; SOC2 and BAA not stated on public pages.",
+      "plans": [
+        {
+          "name": "Sprout",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Forever free. Up to 3 clients, 1 practitioner. Basic features. For students and recent graduates.",
+          "source": {
+            "url": "https://www.practicebetter.io/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Starter",
+          "monthlyUsd": 35,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 28.6,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Annual price $25/month (saves $120/year). Up to 10 clients, 1 practitioner license, 1 GB storage. 14-day free trial.",
+          "source": {
+            "url": "https://www.practicebetter.io/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Professional",
+          "monthlyUsd": 69,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 14.5,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Annual price $59/month (saves $84/year). Up to 300 clients, 1 practitioner license, 5 GB storage. Adds group scheduling, PDF branding, Zapier. 14-day free trial.",
+          "source": {
+            "url": "https://www.practicebetter.io/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Plus",
+          "monthlyUsd": 99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 12.1,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Annual price $89/month (saves $120/year). Unlimited clients, 1 practitioner + 3 admin licenses, unlimited storage. Adds evergreen programs, portal branding, 750 SMS/month, dedicated fax. 14-day free trial.",
+          "source": {
+            "url": "https://www.practicebetter.io/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Team",
+          "monthlyUsd": 155,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 6.5,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "Annual price $145/month. Includes 2 practitioner licenses; additional practitioners $50/month each (up to 200). Unlimited admins/clients/storage. Adds custom roles, team scheduling, advanced workflows, managed billing. Free migration ($500 value). 30-day free trial.",
+          "source": {
+            "url": "https://www.practicebetter.io/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.practicebetter.io/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Zapier",
+          "Zoom",
+          "FullScript",
+          "Stripe"
+        ],
+        "limits": [
+          "Sprout: 3 clients max",
+          "Starter: 10 clients max",
+          "Professional: 300 clients max",
+          "AI Charting Assistant: $0.60/hour after 600 free minutes",
+          "ePrescribe add-on: $49/month"
+        ],
+        "keyFeatures": [
+          "Health coaching and nutrition focus",
+          "Programs and courses builder",
+          "AI Charting Assistant",
+          "Client journaling and mobile app"
+        ],
+        "bestFor": [
+          "health coaches",
+          "nutritionists",
+          "functional medicine",
+          "wellness practitioners",
+          "group practices"
+        ],
+        "sources": [
+          {
+            "url": "https://www.practicebetter.io/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "All pricing re-verified on practicebetter.io/pricing; HIPAA and GDPR stated on pricing page; SOC2 and BAA not confirmable from publicly accessible pages -> null."
+      }
+    },
+    {
+      "slug": "tebra",
+      "name": "Tebra (formerly Kareo)",
+      "domain": "tebra.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "Pricing page re-verified on tebra.com/pricing 2026-06-15. No monthly prices published; Tebra states pricing varies by providers/features/implementation. All five packages are quote-only.",
+      "plans": [
+        {
+          "name": "EHR Starter",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "Certified EHR technology. Quote-only. Priced per clinical provider; non-clinical staff seats included at no extra cost. Low-volume discount for practices billing 100 or fewer claims/month.",
+          "source": {
+            "url": "https://www.tebra.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Billing Starter",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "Billing-only module. Quote-only.",
+          "source": {
+            "url": "https://www.tebra.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Patient Experience + Marketing",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "Patient engagement and marketing tools module. Quote-only.",
+          "source": {
+            "url": "https://www.tebra.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "EHR+",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "Enhanced EHR tier (marked 'top choice'). Quote-only.",
+          "source": {
+            "url": "https://www.tebra.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Practice Automation",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "All-in-one platform (marked 'Best deal'). Quote-only.",
+          "source": {
+            "url": "https://www.tebra.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [],
+        "limits": [
+          "All pricing is quote-only; no self-serve signup",
+          "EPCS setup ~$75/provider one-time",
+          "PDMP integration $500/facility one-time + ~$50/user/year"
+        ],
+        "keyFeatures": [
+          "Combined EHR + practice management + billing",
+          "Provider-based licensing (non-clinical staff free)",
+          "Low-volume billing discount for small practices",
+          "Modular: buy only the components needed"
+        ],
+        "bestFor": [
+          "independent physician practices",
+          "multi-specialty groups",
+          "practices needing RCM"
+        ],
+        "sources": [
+          {
+            "url": "https://www.tebra.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing page at tebra.com/pricing confirmed all five packages are quote-only with no published prices; no HIPAA/BAA statement present on the pricing page -> compliance null."
+      }
+    },
+    {
+      "slug": "intakeq",
+      "name": "IntakeQ",
+      "domain": "intakeq.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Stripe",
+        "Square",
+        "Zoom",
+        "Office Ally",
+        "Microsoft Outlook",
+        "Google Drive",
+        "Dropbox",
+        "Zapier",
+        "RevolutionEHR",
+        "Elation",
+        "SRFax"
+      ],
+      "provenance": "Pricing re-verified on intakeq.com/pricing 2026-06-15 ($29.90/$54.90/$59.90/$84.90). HIPAA BAA included on all plans confirmed on the pricing page.",
+      "plans": [
+        {
+          "name": "Forms Only (Low Volume)",
+          "monthlyUsd": 29.9,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Limit of 10 form submissions/month. HIPAA BAA included. Additional practitioners $10/month each. 14-day free trial.",
+          "source": {
+            "url": "https://www.intakeq.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Forms Only",
+          "monthlyUsd": 54.9,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Unlimited forms, branded custom forms, e-signatures, treatment notes, secure document sharing, e-faxing, HIPAA BAA. 2 assistant accounts included. Additional practitioners $20/month each. 14-day free trial.",
+          "source": {
+            "url": "https://www.intakeq.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Practice Management (Low Volume)",
+          "monthlyUsd": 59.9,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Limit of 25 appointments + 25 form submissions per 30-day period per practitioner. All Practice Management features. HIPAA BAA included. Additional practitioners $25/month each. 14-day free trial.",
+          "source": {
+            "url": "https://www.intakeq.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Practice Management",
+          "monthlyUsd": 84.9,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "All Forms Only features plus appointment management, reminders, booking widget, automated intake, secure client portal, payments/invoices, recurring payments, claims & superbills, task management, telehealth, phone support. HIPAA BAA included. Additional practitioners $30/month each. 14-day free trial.",
+          "source": {
+            "url": "https://www.intakeq.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": null,
+          "gdpr": null,
+          "source": {
+            "url": "https://www.intakeq.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Stripe",
+          "Square",
+          "Zoom",
+          "Office Ally",
+          "Google Drive",
+          "Dropbox",
+          "Zapier",
+          "Elation"
+        ],
+        "limits": [
+          "Low-volume tier capped at 10 form submissions OR 25 appointments/month",
+          "No annual discount published",
+          "Additional practitioner seats charged per user"
+        ],
+        "keyFeatures": [
+          "Intake form builder with e-signatures",
+          "Automated client intake workflow",
+          "Superbill and insurance claims generation",
+          "E-faxing included"
+        ],
+        "bestFor": [
+          "intake-heavy practices",
+          "multi-provider clinics",
+          "practices needing strong form automation",
+          "mental health and allied health"
+        ],
+        "sources": [
+          {
+            "url": "https://www.intakeq.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing re-verified directly on intakeq.com/pricing; HIPAA BAA included on all plans confirmed on the pricing page. GDPR not stated -> null."
+      }
+    },
+    {
+      "slug": "zanda",
+      "name": "Zanda (formerly Power Diary)",
+      "domain": "zandahealth.com",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Stripe",
+        "Xero",
+        "Telehealth by Coviu",
+        "Mailchimp",
+        "Google Calendar",
+        "Outlook"
+      ],
+      "provenance": "Pricing re-verified on zandahealth.com/pricing 2026-06-15 (Starter $19, Growth $49; +$19/additional practitioner). HIPAA audit completion + ISO 27001 certification confirmed via Zanda blog (Prescient Security audit); BAA not explicitly stated on public pages.",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": 19,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Solo practitioners only. 1 user account, unlimited clients, 100 GB file storage, 1,000 appointments/month limit. Includes intake forms, progress notes, integrated billing, client booking portal, telehealth, appointment reminders. 14-day free trial.",
+          "source": {
+            "url": "https://zandahealth.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Growth",
+          "monthlyUsd": 49,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "Base price includes 1 practitioner. Additional practitioners $19/month each. Unlimited appointments, unlimited users, unlimited file storage. Adds advanced waitlist, customizable note templates, multiple locations, room/resource management, bulk communication, comprehensive reports. 14-day free trial.",
+          "source": {
+            "url": "https://zandahealth.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://zandahealth.com/blog/power-diary-completes-hipaa-compliance-audit/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Stripe",
+          "Xero",
+          "Google Calendar",
+          "Mailchimp"
+        ],
+        "limits": [
+          "Starter plan capped at 1,000 appointments/month",
+          "SMS costs extra ($4.99/month dedicated number + ~$0.09/message)",
+          "Telehealth Pro $9/month/practitioner for unlimited video (free tier: 100 min/month)",
+          "BizzyAI Scribe $1/transcription hour"
+        ],
+        "keyFeatures": [
+          "Multi-location practice management",
+          "ISO 27001 certified",
+          "BizzyAI Scribe for session notes",
+          "100% money-back guarantee within 12 months"
+        ],
+        "bestFor": [
+          "allied health",
+          "psychology practices",
+          "multi-location clinics",
+          "solo practitioners"
+        ],
+        "sources": [
+          {
+            "url": "https://zandahealth.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://zandahealth.com/blog/power-diary-completes-hipaa-compliance-audit/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing from zandahealth.com/pricing; HIPAA audit completion + ISO 27001 + independent GDPR analysis confirmed via Zanda blog post; BAA not explicitly stated -> null."
+      }
+    },
+    {
+      "slug": "sessions-health",
+      "name": "Sessions Health",
+      "domain": "sessionshealth.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Stripe",
+        "Google Calendar",
+        "Claim.MD"
+      ],
+      "provenance": "Pricing re-verified on sessionshealth.com/pricing 2026-06-15 (Freemium $0, Professional $39 first + $29/additional practitioner). HIPAA confirmed on pricing/features pages; BAA confirmed via support.sessionshealth.com BAA article. SOC2 NOT stated by vendor on any reachable page (Drata trust center unreachable) -> soc2 null.",
+      "plans": [
+        {
+          "name": "Freemium",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Forever free. Up to 3 active clients, 1 practitioner. Core EHR with scheduling, documentation, client portal, billing tools, unlimited storage.",
+          "source": {
+            "url": "https://www.sessionshealth.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Professional",
+          "monthlyUsd": 39,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "$39/month for first practitioner, $29/month each additional. Unlimited clients, unlimited administrators at no cost. All Freemium features. 30-day free trial, no credit card required.",
+          "source": {
+            "url": "https://www.sessionshealth.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": null,
+          "gdpr": null,
+          "source": {
+            "url": "https://www.sessionshealth.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": 30,
+        "keyIntegrations": [
+          "Stripe",
+          "Google Calendar",
+          "Claim.MD"
+        ],
+        "limits": [
+          "Freemium capped at 3 active clients",
+          "Telehealth is an add-on ($10/month/practitioner)",
+          "Electronic claims $0.19-$0.25 per claim",
+          "Real-time eligibility $0.15 per report",
+          "AI Assist $35/month/practitioner"
+        ],
+        "keyFeatures": [
+          "Built-in couples/family session support",
+          "Auto-scored outcome assessments with visual graphs",
+          "Batch and secondary claims",
+          "AES-256 encryption, US-based servers"
+        ],
+        "bestFor": [
+          "individual therapists",
+          "mental health practices",
+          "practices wanting a free start",
+          "small group practices"
+        ],
+        "sources": [
+          {
+            "url": "https://www.sessionshealth.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://support.sessionshealth.com/article/251-business-associate-agreement-baa",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing from sessionshealth.com/pricing; HIPAA from pricing/features pages; BAA confirmed from support.sessionshealth.com BAA article. SOC2 reverted to null — no vendor statement found on reachable pages."
+      }
+    }
+  ]
+}

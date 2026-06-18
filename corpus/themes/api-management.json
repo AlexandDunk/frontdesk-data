@@ -1,0 +1,1150 @@
+{
+  "vertical": "api-management",
+  "generatedAt": "2026-06-15",
+  "methodologyNotes": "Official pricing pages were fetched and verified via WebFetch on 2026-06-15 for Postman (postman.com/pricing), Kong (konghq.com/pricing), Apigee (cloud.google.com/apigee/pricing, corroborated against official Google Cloud pay-as-you-go docs), Tyk (tyk.io/pricing), Zuplo (zuplo.com/pricing), Stoplight (stoplight.io/pricing), Gravitee (gravitee.io/pricing), and Treblle (treblle.com/pricing — now reachable live). Treblle was rebuilt: the live official page shows only Core ($233/mo billed yearly), Growth (custom), and Enterprise (custom) — NO free tier and NO $25 Starter tier; the draft's Free and Starter plans were fabricated from stale Capterra/GetApp aggregator data and have been removed. Kong Konnect Plus overage corrected to the official $200/million-requests figure (the aggregator's $34.25 contradicts the live page). Zuplo's dead pricingsaas.com corroboration (404) was removed. MuleSoft and RapidAPI Enterprise Hub remain excluded (blocked, unverifiable). For quote-only/contact-sales plans, monthlyUsd is null. Prices in USD. accessedAt 2026-06-15.",
+  "vendors": [
+    {
+      "slug": "postman",
+      "name": "Postman",
+      "domain": "postman.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "GitHub",
+        "GitLab",
+        "Bitbucket",
+        "Slack",
+        "Azure DevOps",
+        "Newman CLI",
+        "Jenkins",
+        "CircleCI"
+      ],
+      "provenance": "Fetched postman.com/pricing live 2026-06-15; Free $0, Solo $9 (annual), Team $19/user (annual only), Enterprise $49/user (annual only) all confirmed. Annual-only billing for Team/Enterprise corroborated via apidog.com/blog/postman-pricing-2026/ (live).",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "1 user, 50 AI credits/month, API client and core tools, specs and mock servers, native Git, collection runner.",
+          "source": {
+            "url": "https://www.postman.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Solo",
+          "monthlyUsd": 9,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 25,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "1 user, $9/mo billed annually (up to 25% savings vs monthly). 400 AI credits/month, data-driven testing, unlimited private NPM packages, custom-branded docs, unlimited custom domains.",
+          "source": {
+            "url": "https://www.postman.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Team",
+          "monthlyUsd": 19,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 25,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "$19/user/month billed annually only; requires annual commitment. 400 AI credits/user/month, basic RBAC, SDK generation and distribution, unlimited workspace viewers.",
+          "source": {
+            "url": "https://www.postman.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": 49,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 25,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "$49/user/month billed annually only; requires annual commitment. API Catalog, private API Network, advanced RBAC, governance, audit logs, 800 AI credits/user/month (pooled).",
+          "source": {
+            "url": "https://www.postman.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "GitHub",
+          "GitLab",
+          "Bitbucket",
+          "Slack",
+          "Jenkins",
+          "CircleCI",
+          "Newman CLI"
+        ],
+        "limits": [
+          "Free plan: 1 user only, 50 AI credits/month",
+          "Solo: 400 AI credits/month, 1 user",
+          "Team/Enterprise: annual commitment required"
+        ],
+        "keyFeatures": [
+          "API client with built-in testing and mock servers",
+          "AI-assisted API design and documentation generation",
+          "Private API Network and catalog (Enterprise)",
+          "SDK generation and distribution"
+        ],
+        "bestFor": [
+          "API development teams",
+          "API testing automation",
+          "API documentation",
+          "Enterprise API governance"
+        ],
+        "sources": [
+          {
+            "url": "https://www.postman.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://apidog.com/blog/postman-pricing-2026/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Plan names and prices fetched live from postman.com/pricing; annual-only billing requirement for Team/Enterprise confirmed via apidog.com/blog/postman-pricing-2026/."
+      }
+    },
+    {
+      "slug": "kong-konnect",
+      "name": "Kong Konnect",
+      "domain": "konghq.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "AWS",
+        "GCP",
+        "Azure",
+        "Kubernetes",
+        "Terraform",
+        "Kafka",
+        "GraphQL",
+        "gRPC",
+        "Datadog",
+        "Splunk"
+      ],
+      "provenance": "Fetched konghq.com/pricing live 2026-06-15; covers Kong Konnect gateway plans and Insomnia API client plans. Konnect Plus $105/service/month confirmed; overage corrected to official $200/million requests (max 10M/month) — supersedes the aggregator's $34.25 figure.",
+      "plans": [
+        {
+          "name": "Free Trial",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "30-day free trial of full enterprise functionality; no credit card required. Includes unlimited gateways and 30-day analytics retention.",
+          "source": {
+            "url": "https://konghq.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Konnect Plus",
+          "monthlyUsd": 105,
+          "minutesIncluded": null,
+          "callsIncluded": 1000000,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "hybrid",
+          "setupFeeUsd": 0,
+          "notes": "$105/service/month (per gateway service), billed monthly. Includes 1M API requests/month; additional requests $200/month per 1M (max 10M/month). Up to 5 Serverless Gateways, 2 Hybrid Gateways, 2 Dedicated Cloud Gateways, 2 developer portals, service catalog for 2 services. Email support, 2-business-day SLA.",
+          "source": {
+            "url": "https://konghq.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Kong Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "Custom pricing, annual billing. Unlimited gateways and developer portals, unlimited services catalog, SSO, audit logging, dedicated success manager, higher SLAs.",
+          "source": {
+            "url": "https://konghq.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Insomnia Essentials",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "API client free tier. Git Sync up to 3 users, unlimited cloud/local projects, CLI access, 1,000 mock server requests/month.",
+          "source": {
+            "url": "https://konghq.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Insomnia Pro",
+          "monthlyUsd": 12,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 15,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "$12/user/month; 15% discount with annual billing. Unlimited users, RBAC, Git Sync for all, 10,000 mock server requests/month.",
+          "source": {
+            "url": "https://konghq.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Insomnia Enterprise",
+          "monthlyUsd": 45,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "$45/user/month, self-serve up to 50 users. Kong Konnect integration, SSO, SCIM, unlimited mock requests, enterprise support.",
+          "source": {
+            "url": "https://konghq.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": 30,
+        "keyIntegrations": [
+          "Kubernetes",
+          "Terraform",
+          "AWS",
+          "GCP",
+          "Azure",
+          "Kafka",
+          "Datadog",
+          "Splunk",
+          "GraphQL",
+          "gRPC"
+        ],
+        "limits": [
+          "Konnect Plus: priced per gateway service; 1M requests/month included per service, overage $200/million (max 10M/month)",
+          "Insomnia Essentials: Git Sync capped at 3 users, 1,000 mock requests/month",
+          "Insomnia Pro: 10,000 mock requests/month"
+        ],
+        "keyFeatures": [
+          "Multi-protocol gateway (REST, gRPC, Kafka, WebSockets, GraphQL)",
+          "AI gateway capabilities",
+          "Service catalog and developer portal",
+          "Open-source Kong Gateway core (Apache 2.0)"
+        ],
+        "bestFor": [
+          "API gateway management",
+          "Multi-cloud deployments",
+          "AI API routing",
+          "API client / testing (Insomnia)"
+        ],
+        "sources": [
+          {
+            "url": "https://konghq.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Prices fetched live from konghq.com/pricing 2026-06-15; Konnect Plus overage uses the official $200/million figure (aggregator costbench.com $34.25 figure was rejected as it contradicts the live page)."
+      }
+    },
+    {
+      "slug": "apigee",
+      "name": "Apigee (Google Cloud)",
+      "domain": "cloud.google.com",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Google Cloud",
+        "BigQuery",
+        "Cloud Logging",
+        "Cloud Monitoring",
+        "Anthos",
+        "Apigee hybrid",
+        "Apigee X"
+      ],
+      "provenance": "cloud.google.com/apigee/pricing fetched live (truncated on render) and cross-verified against official Google Cloud pay-as-you-go docs: hourly rates $0.5/$2.0/$4.7 x ~730h = $365/$1,460/$3,431 per month per region. 60-day Evaluation trial confirmed.",
+      "plans": [
+        {
+          "name": "Evaluation",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "60-day free sandbox trial; no upfront commitment. Shared environment with limited throughput for prototyping and evaluation only.",
+          "source": {
+            "url": "https://cloud.google.com/apigee/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Pay-as-you-go — Base",
+          "monthlyUsd": 365,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "hybrid",
+          "setupFeeUsd": 0,
+          "notes": "$365/month per region (≈$0.50/hour), plus API call charges. Up to 20 API proxies per environment, 50 QPS, standard proxy only, 99% SLA. Standard-proxy calls billed at 1/5 of extensible-proxy calls.",
+          "source": {
+            "url": "https://cloud.google.com/apigee/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/pay-as-you-go-updated-overview",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Pay-as-you-go — Intermediate",
+          "monthlyUsd": 1460,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "hybrid",
+          "setupFeeUsd": 0,
+          "notes": "$1,460/month per region (≈$2.00/hour), plus API call charges. Up to 50 API proxies/shared flows, 100 QPS, supports standard and extensible proxies.",
+          "source": {
+            "url": "https://cloud.google.com/apigee/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/pay-as-you-go-updated-overview",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Pay-as-you-go — Comprehensive",
+          "monthlyUsd": 3431,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "hybrid",
+          "setupFeeUsd": 0,
+          "notes": "$3,431/month per region (≈$4.70/hour), plus API call charges. Up to 100 proxies/shared flows, autoscaled QPS, up to 85 environments per project, 99.9%–99.99% SLA.",
+          "source": {
+            "url": "https://cloud.google.com/apigee/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/pay-as-you-go-updated-overview",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Subscription",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "Custom pricing, annual commitment, contact sales. Committed-capacity tiers (Standard/Enterprise/Enterprise Plus), higher SLAs, extended analytics retention.",
+          "source": {
+            "url": "https://cloud.google.com/apigee/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://cloud.google.com/security/compliance",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 60,
+        "keyIntegrations": [
+          "Google Cloud",
+          "BigQuery",
+          "Cloud Logging",
+          "Anthos",
+          "GKE",
+          "Cloud Armor"
+        ],
+        "limits": [
+          "Base: 20 proxies, 50 QPS per environment",
+          "Intermediate: 50 proxies, 100 QPS",
+          "Comprehensive: 100 proxies, autoscaled QPS",
+          "Pricing is per-region — multi-region costs multiply"
+        ],
+        "keyFeatures": [
+          "Pay-per-region environment model (hourly billed)",
+          "Full-lifecycle API management with advanced analytics",
+          "Hybrid and multi-cloud deployment (Apigee hybrid)",
+          "Google Cloud security and compliance (HIPAA eligible)"
+        ],
+        "bestFor": [
+          "Enterprise Google Cloud workloads",
+          "High-volume API programs",
+          "Regulated industries needing HIPAA/compliance",
+          "Multi-environment API lifecycle management"
+        ],
+        "sources": [
+          {
+            "url": "https://cloud.google.com/apigee/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/pay-as-you-go-updated-overview",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pay-as-you-go monthly prices ($365/$1,460/$3,431 per region) confirmed via official Google Cloud pay-as-you-go documentation (hourly $0.5/$2.0/$4.7 x ~730h)."
+      }
+    },
+    {
+      "slug": "tyk",
+      "name": "Tyk",
+      "domain": "tyk.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "AWS",
+        "GCP",
+        "Azure",
+        "Kubernetes",
+        "Docker",
+        "Redis",
+        "GraphQL",
+        "gRPC",
+        "Datadog",
+        "Prometheus"
+      ],
+      "provenance": "Fetched tyk.io/pricing live 2026-06-15; billing models described (usage-based Core, flat Professional, custom Enterprise) but NO dollar amounts published — Core and Professional require contacting sales.",
+      "plans": [
+        {
+          "name": "Open Source",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Fully open-source API gateway (GitHub), self-managed. No cloud control plane; community support only.",
+          "source": {
+            "url": "https://tyk.io/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Core",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_call",
+          "setupFeeUsd": 0,
+          "notes": "Usage-based / consumption pricing. Unlimited API gateways, developer portal, enhanced success plan. Price not published; contact sales.",
+          "source": {
+            "url": "https://tyk.io/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Professional",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Flat monthly fee, unlimited API requests. All Core features plus unlimited APIs and requests. Price not published; contact sales.",
+          "source": {
+            "url": "https://tyk.io/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "Custom pricing. Advanced governance and security, premium support with custom SLAs, multi-region/multi-cloud, named customer success manager.",
+          "source": {
+            "url": "https://tyk.io/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": 2,
+        "keyIntegrations": [
+          "AWS",
+          "GCP",
+          "Azure",
+          "Kubernetes",
+          "Docker",
+          "Redis",
+          "GraphQL",
+          "Prometheus",
+          "Datadog"
+        ],
+        "limits": [
+          "48-hour cloud trial only (no credit card)",
+          "Open source self-managed has no official call limits",
+          "Paid cloud plans: call limits tied to consumption tier (undisclosed)"
+        ],
+        "keyFeatures": [
+          "Open-source gateway",
+          "Cloud, hybrid, and self-managed deployment in all plans",
+          "Usage-based Core and unlimited flat-rate Professional tiers",
+          "Developer portal included on all paid plans"
+        ],
+        "bestFor": [
+          "Teams wanting open-source first with optional cloud",
+          "Hybrid deployments",
+          "Self-hosted API gateway",
+          "Developer portal requirements"
+        ],
+        "sources": [
+          {
+            "url": "https://tyk.io/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched tyk.io/pricing live 2026-06-15; billing models described but no prices published — Core and Professional require contacting sales; 48-hour cloud trial confirmed."
+      }
+    },
+    {
+      "slug": "stoplight",
+      "name": "Stoplight",
+      "domain": "stoplight.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "GitHub",
+        "GitLab",
+        "Bitbucket",
+        "Azure DevOps",
+        "Google Analytics",
+        "Okta (SAML SSO)",
+        "LDAP"
+      ],
+      "provenance": "Fetched stoplight.io/pricing live 2026-06-15; all four published tiers plus Enterprise confirmed with both monthly and annual rates.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "1 user, 1 project. API editor, interactive docs, instant mock servers, OpenAPI export.",
+          "source": {
+            "url": "https://stoplight.io/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Basic",
+          "monthlyUsd": 56,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 21,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "$56/month (monthly) or $44/month (annual). 3 users; additional users $14/mo (monthly) or $11/mo (annual). Unlimited projects, visual OpenAPI designer, interactive docs.",
+          "source": {
+            "url": "https://stoplight.io/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Startup",
+          "monthlyUsd": 147,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 23,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "$147/month (monthly) or $113/month (annual). 8 users; additional users $14/mo (monthly) or $11/mo (annual). Private projects, multi-branch, custom domains, Google Analytics.",
+          "source": {
+            "url": "https://stoplight.io/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Pro Team",
+          "monthlyUsd": 453,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "$453/month (monthly) or $362/month (annual). 15 users; additional users $27/mo (monthly) or $22/mo (annual). Up to 20 teams, shared style guides, SAML/LDAP SSO, branding removal.",
+          "source": {
+            "url": "https://stoplight.io/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "Custom pricing. Unlimited projects/teams/users, custom payment terms, invoicing, priority support.",
+          "source": {
+            "url": "https://stoplight.io/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "GitHub",
+          "GitLab",
+          "Bitbucket",
+          "Azure DevOps",
+          "Google Analytics",
+          "Okta",
+          "LDAP"
+        ],
+        "limits": [
+          "Free: 1 user, 1 project only",
+          "Basic: 3 users included, unlimited projects",
+          "Startup: 8 users included",
+          "Pro Team: 15 users included, up to 20 teams"
+        ],
+        "keyFeatures": [
+          "Visual OpenAPI/JSON Schema designer (no YAML required)",
+          "Instant mock servers from spec",
+          "Style guides and governance (Pro Team+)",
+          "Git-native branching and version control for API specs"
+        ],
+        "bestFor": [
+          "API design-first teams",
+          "OpenAPI documentation",
+          "API governance and style guides",
+          "Small-to-mid API design programs"
+        ],
+        "sources": [
+          {
+            "url": "https://stoplight.io/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Prices fetched live from stoplight.io/pricing 2026-06-15; all four published tiers with monthly and annual rates confirmed."
+      }
+    },
+    {
+      "slug": "gravitee",
+      "name": "Gravitee",
+      "domain": "gravitee.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Kafka",
+        "RabbitMQ",
+        "MQTT",
+        "AWS",
+        "Azure",
+        "GCP",
+        "Kubernetes",
+        "Keycloak",
+        "Okta"
+      ],
+      "provenance": "Fetched gravitee.io/pricing live 2026-06-15; Planet ($2,500/mo) and Comet ($1,250/mo) published on-page; Galaxy, Universe, Meteor, Asteroid are contact-sales. Open-source community edition referenced on site and confirmed via GitHub.",
+      "plans": [
+        {
+          "name": "Community (Open Source)",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Fully open-source, self-hosted APIM. Apache 2.0 license. Available on GitHub. Community support only.",
+          "source": {
+            "url": "https://gravitee.io/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Planet (API Management)",
+          "monthlyUsd": 2500,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Flat pricing: unlimited users, unlimited APIs, 1 production gateway, Gold support. No per-call fees.",
+          "source": {
+            "url": "https://gravitee.io/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Galaxy (API Management)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Pricing on request. Unlimited users and APIs, 2 production gateways, enterprise plugins, hybrid/managed deployment, Gold support.",
+          "source": {
+            "url": "https://gravitee.io/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Universe (API Management)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "Custom pricing. 4+ production gateways, all event brokers, IAM, technical account manager, 24/7 support.",
+          "source": {
+            "url": "https://gravitee.io/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Comet (Event Management)",
+          "monthlyUsd": 1250,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Event management entry tier. 1 production gateway, 1 third-party broker, developer portal, failover/DR, Gold support. Flat pricing.",
+          "source": {
+            "url": "https://gravitee.io/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Meteor (Event Management)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Pricing on request. 2 production gateways, 2 brokers, developer portal, failover/DR.",
+          "source": {
+            "url": "https://gravitee.io/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Asteroid (Event Management)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "Custom pricing. 4+ production gateways, 4 brokers, customer-hosted control plane, platinum support, protocol mediation.",
+          "source": {
+            "url": "https://gravitee.io/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Kafka",
+          "RabbitMQ",
+          "MQTT",
+          "Kubernetes",
+          "Keycloak",
+          "Okta",
+          "AWS",
+          "Azure"
+        ],
+        "limits": [
+          "Planet: 1 production gateway",
+          "Comet: 1 production gateway, 1 broker",
+          "Galaxy/Meteor: 2 production gateways (price on request)",
+          "Flat pricing means no per-call overage fees"
+        ],
+        "keyFeatures": [
+          "Dual product: API Management + Event Management",
+          "Flat unlimited pricing model (no per-call charges on paid plans)",
+          "Native async/event API support (Kafka, MQTT, WebSocket)",
+          "Open-source core with Apache 2.0 license"
+        ],
+        "bestFor": [
+          "Event-driven API architectures",
+          "Async API management",
+          "Teams wanting open-source + commercial option",
+          "Enterprises needing both REST and event broker management"
+        ],
+        "sources": [
+          {
+            "url": "https://gravitee.io/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://github.com/gravitee-io/gravitee-api-management",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Planet ($2,500) and Comet ($1,250) prices fetched live from gravitee.io/pricing; open-source edition confirmed via GitHub."
+      }
+    },
+    {
+      "slug": "zuplo",
+      "name": "Zuplo",
+      "domain": "zuplo.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "GitHub",
+        "AWS",
+        "GCP",
+        "Azure",
+        "OpenAI",
+        "Anthropic",
+        "Google Gemini",
+        "Datadog",
+        "Splunk"
+      ],
+      "provenance": "Fetched zuplo.com/pricing live 2026-06-15; Free ($0, 100K req) and Builder ($25, 100K req, $100/additional 100K) confirmed. Enterprise is contact-sales; the $1,000/mo figure is a disclosed base estimate, not a fixed published price, so monthlyUsd=null. Dead pricingsaas.com corroboration (404) removed.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": 100000,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "100K requests/month, 1 GB egress/month, unlimited environments, API keys, and developer portals. Deploy to 300+ data centers. Up to 2 gateway developers. No custom domains or SLA.",
+          "source": {
+            "url": "https://zuplo.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Builder",
+          "monthlyUsd": 25,
+          "minutesIncluded": null,
+          "callsIncluded": 100000,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "hybrid",
+          "setupFeeUsd": 0,
+          "notes": "$25/month includes 100K requests; scales to 1M/month at $100 per additional 100K requests. 2 custom domains, 1 GB egress per 100K requests. Community support; no SLA.",
+          "source": {
+            "url": "https://zuplo.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "Contact sales; annual contract. Base estimate disclosed as ~$1,000/month (not a fixed published rate), includes ~1M requests and entry-level SLA. Unlimited requests/domains/environments/egress, SLA up to 99.999%, SSO, RBAC, advanced analytics, dedicated support.",
+          "source": {
+            "url": "https://zuplo.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "GitHub",
+          "OpenAI",
+          "Anthropic",
+          "Google Gemini",
+          "AWS",
+          "Datadog",
+          "Splunk"
+        ],
+        "limits": [
+          "Free: 100K requests/month, no custom domains, no SLA",
+          "Builder: 100K included, scales to 1M/month at $100 per additional 100K",
+          "Enterprise: contact sales, annual contract"
+        ],
+        "keyFeatures": [
+          "Edge-native deployment to 300+ data centers globally",
+          "Built-in AI gateway routing to OpenAI, Anthropic, Gemini",
+          "Unlimited developer portals and API key management on all tiers",
+          "Programmable TypeScript gateway"
+        ],
+        "bestFor": [
+          "Edge API gateway",
+          "AI API management and routing",
+          "Startups needing global distribution on low budget",
+          "Developer-portal-first API programs"
+        ],
+        "sources": [
+          {
+            "url": "https://zuplo.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Free and Builder prices fetched live from zuplo.com/pricing 2026-06-15; Enterprise is contact-sales (null). Dead pricingsaas.com news corroboration (HTTP 404) removed."
+      }
+    },
+    {
+      "slug": "treblle",
+      "name": "Treblle",
+      "domain": "treblle.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Laravel",
+        "Node.js",
+        "Python",
+        "Ruby on Rails",
+        "Go",
+        "Java",
+        "PHP",
+        "Stripe"
+      ],
+      "provenance": "treblle.com/pricing fetched live 2026-06-15 (now reachable). The page shows only Core ($233/mo billed yearly), Growth (custom), and Enterprise (custom) — NO free tier and NO $25 Starter plan. The draft's Free and Starter plans were fabricated from stale Capterra/GetApp aggregator data ($0 free, $77 Basic) that contradicts the live official page; both removed. 'Team $233' corrected to 'Core $233'.",
+      "plans": [
+        {
+          "name": "Core",
+          "monthlyUsd": 233,
+          "minutesIncluded": null,
+          "callsIncluded": 5000000,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "$233/month billed yearly. For small professional API teams. 5 APIs, 500 requests/min (~5 million requests/month). API Intelligence, documentation, analytics, testing, observability.",
+          "source": {
+            "url": "https://treblle.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Growth",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": 50000000,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "Custom pricing. For teams developing and maintaining business-critical APIs. Comparison table shows ~50 million requests; adds API security and governance.",
+          "source": {
+            "url": "https://treblle.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "Custom pricing. Unlimited requests, custom API count and retention, enterprise support, agentic AI, SSO, on-prem / BYO Cloud deployment.",
+          "source": {
+            "url": "https://treblle.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Laravel",
+          "Node.js",
+          "Python",
+          "Ruby on Rails",
+          "Go",
+          "Java",
+          "PHP"
+        ],
+        "limits": [
+          "Core: 5 APIs, ~5M requests/month (500 req/min), billed yearly",
+          "Growth: ~50M requests/month, custom pricing",
+          "Enterprise: unlimited requests, custom limits"
+        ],
+        "keyFeatures": [
+          "Real-time API monitoring and error tracking",
+          "Auto-generated API documentation from traffic",
+          "API quality scoring and analytics",
+          "API observability across the full lifecycle"
+        ],
+        "bestFor": [
+          "API observability and monitoring",
+          "Auto-documentation generation",
+          "Small professional API teams",
+          "Laravel/PHP API teams"
+        ],
+        "sources": [
+          {
+            "url": "https://treblle.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "All plans fetched live from treblle.com/pricing 2026-06-15: Core $233/mo (billed yearly), Growth (custom), Enterprise (custom). No free tier exists. Fabricated Free and Starter ($25) tiers from the draft were removed; outdated Capterra/GetApp aggregator sources dropped."
+      }
+    }
+  ]
+}

@@ -1,0 +1,1076 @@
+{
+  "vertical": "property-management",
+  "generatedAt": "2026-06-15",
+  "methodologyNotes": "Pricing was re-verified by fetching each vendor's official pricing page (buildium.com/pricing, doorloop.com/pricing, rentredi.com/pricing, hemlane.com/pricing, rentecdirect.com/pricing, propertyware.com/pricing, yardibreeze.com/pricing, avail.com/pricing) on 2026-06-15. Corrections applied: Rentec Direct base prices were wrong in the draft and were fixed to the live page ($55 Pro, $65 PM). AppFolio publishes no per-unit prices and directs visitors to request a quote, so all AppFolio monthlyUsd values are null (a null beats a guess; third-party per-unit estimates are noted but not used as confirmed prices). TurboTenant's pricing page returns HTTP 403; the free-forever tier and the $149/yr ($12.42/mo) Premium entry price were corroborated via TurboTenant's official Premium page/announcement and support center, with the clarification that Premium now scales by unit count (Essentials $149–$349/yr, Pro $199–$999/yr) rather than being a single flat plan. Yardi Breeze and Propertyware use per-unit pricing with monthly minimums and no single flat monthly fee, so their monthlyUsd values are null with per-unit rates and minimums recorded in notes. All prices are USD, monthly basis; where only an annual total was published the monthly equivalent is shown. accessedAt 2026-06-15.",
+  "vendors": [
+    {
+      "slug": "buildium",
+      "name": "Buildium",
+      "domain": "buildium.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "QuickBooks",
+        "Zillow",
+        "Trulia",
+        "HotPads",
+        "TransUnion SmartMove",
+        "Lowe's for Pros",
+        "Property Meld",
+        "Zapier"
+      ],
+      "provenance": "Prices fetched directly from buildium.com/pricing on 2026-06-15. Plans are flat monthly fees that scale with unit count; Essential supports up to 150 units, Growth and Premium scale higher. Portfolios over 5,000 units require a call (877-396-7876).",
+      "plans": [
+        {
+          "name": "Essential",
+          "monthlyUsd": 62,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Starting at $62/month (scales with unit count); up to 150 units; core accounting, maintenance, leasing, basic communications and AI assistant, standard reporting. eSignatures $5/doc, bank account setup $99/account, property inspections $99 setup, EFT fees apply.",
+          "source": {
+            "url": "https://www.buildium.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Growth",
+          "monthlyUsd": 192,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Starting at $192/month (scales with unit count); everything in Essential plus reporting automation, AI-enhanced communications, business analytics, enhanced tenant screening, reduced eSignature costs ($1/doc), 10 free bank accounts.",
+          "source": {
+            "url": "https://www.buildium.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": 400,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Starting at $400/month (scales with unit count); everything in Growth plus Open API, free property inspections, unlimited eSignatures, free first-year incoming EFT transactions (then $0.60/txn), 100 free bank accounts, full AI and automations suite, priority support.",
+          "source": {
+            "url": "https://www.buildium.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "QuickBooks",
+          "Zillow",
+          "TransUnion SmartMove",
+          "Property Meld",
+          "Zapier"
+        ],
+        "limits": [
+          "Essential capped at 150 units",
+          "Over 5,000 units requires a call for pricing",
+          "eSignatures per-transaction on lower tiers",
+          "Bank account setup $99/account on Essential",
+          "EFT fees vary by plan"
+        ],
+        "keyFeatures": [
+          "Full property accounting and trust accounting",
+          "AI-assisted communications and analytics",
+          "Open API on Premium tier",
+          "Built-in tenant screening and online rent collection"
+        ],
+        "bestFor": [
+          "small-to-mid residential portfolios",
+          "property management companies needing full accounting",
+          "scaling residential portfolios"
+        ],
+        "sources": [
+          {
+            "url": "https://www.buildium.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Features and trial info fetched from buildium.com/pricing on 2026-06-15; 14-day free trial, no credit card required, confirmed on page."
+      }
+    },
+    {
+      "slug": "appfolio",
+      "name": "AppFolio Property Manager",
+      "domain": "appfolio.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "QuickBooks",
+        "Zillow",
+        "Apartments.com",
+        "TransUnion",
+        "Knock CRM",
+        "Maintenance Connection"
+      ],
+      "provenance": "Fetched appfolio.com/pricing on 2026-06-15; the page publishes no specific per-unit rates and directs visitors to 'Get a Quote'. Each tier states a minimum spend and unit minimum (Core: 50-unit minimum). Per-unit estimates from third-party aggregators are noted but treated as unverified; monthlyUsd is null on all plans because no price is confirmed on the official page (a null beats a guess).",
+      "plans": [
+        {
+          "name": "Core",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Per-unit/month pricing (no public rate); 50-unit minimum and minimum monthly spend required per official page. Third-party sources estimate ~$1.40–$1.49/unit/month with ~$280–$298/mo minimum — UNVERIFIED, not on official page. Includes accounting, marketing/leasing, work orders, inspections, communications, standard integrations.",
+          "source": {
+            "url": "https://www.appfolio.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Plus",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Per-unit/month pricing (no public rate); minimum spend and unit minimum apply per official page. Third-party sources estimate ~$3.00–$3.20/unit/month — UNVERIFIED. Adds affordable/student housing, advanced budgeting, data analysis, custom fields, read-only API.",
+          "source": {
+            "url": "https://www.appfolio.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Max",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Per-unit/month pricing (no public rate); minimum spend and unit minimum apply per official page. Third-party sources estimate ~$5.00/unit/month with ~$7,500/mo minimum — UNVERIFIED. Adds leasing CRM, leasing signals, read/write API, dedicated customer success.",
+          "source": {
+            "url": "https://www.appfolio.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "QuickBooks",
+          "Zillow",
+          "Apartments.com",
+          "TransUnion",
+          "Knock CRM"
+        ],
+        "limits": [
+          "50-unit minimum on Core",
+          "minimum monthly spend on all plans",
+          "No per-unit pricing published — quote required"
+        ],
+        "keyFeatures": [
+          "AI-powered leasing and maintenance automation",
+          "Full property accounting with owner portals",
+          "Leasing CRM and signals on Max tier",
+          "Single platform for residential, commercial, student, affordable housing"
+        ],
+        "bestFor": [
+          "mid-to-large residential portfolios",
+          "professional property management companies",
+          "companies managing 50+ units needing enterprise features"
+        ],
+        "sources": [
+          {
+            "url": "https://www.appfolio.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Features fetched from appfolio.com/pricing on 2026-06-15; pricing not publicly disclosed (quote-only)."
+      }
+    },
+    {
+      "slug": "doorloop",
+      "name": "DoorLoop",
+      "domain": "doorloop.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "QuickBooks",
+        "Zapier",
+        "Zillow",
+        "Apartments.com",
+        "HotPads",
+        "Trulia",
+        "Stripe",
+        "PayPal"
+      ],
+      "provenance": "Prices fetched directly from doorloop.com/pricing on 2026-06-15. Plans show a $3/unit label with flat monthly minimums; Starter is capped at 10 units; portfolios over 300 units require a custom demo. A '30% off for 3 months' promo banner was active but the base list prices below are the standard rates. Aggregators show lower legacy monthly figures; deferred to live official page.",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": 99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 30,
+          "billingModel": "flat",
+          "notes": "$99/month billed monthly or $69/month billed annually (save ~30%). Capped at 10 units. Includes rent collection, tenant portal, maintenance, text communications, accounting, rental applications with screening, lease management, basic support. No phone/Zoom support.",
+          "source": {
+            "url": "https://www.doorloop.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 189,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 21,
+          "billingModel": "flat",
+          "notes": "$189/month billed monthly or $149/month billed annually (~21% off). Unlimited units. Adds AI capabilities, QuickBooks integration, bank sync, workflow automations, vendor payments, budgeting, phone/Zoom support, property listings, user role controls.",
+          "source": {
+            "url": "https://www.doorloop.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": 239,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 13,
+          "billingModel": "flat",
+          "notes": "$239/month billed monthly or $209/month billed annually (~13% off). Unlimited units. Adds VIP priority support, free ACH payments, free property websites, Zapier integration, unlimited eSignatures, unlimited users, unlimited storage, affordable housing reporting.",
+          "source": {
+            "url": "https://www.doorloop.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "QuickBooks",
+          "Zapier",
+          "Zillow",
+          "Apartments.com",
+          "Stripe"
+        ],
+        "limits": [
+          "Starter limited to 10 units",
+          "Portfolios over 300 units require custom demo quote",
+          "Per-unit overage applies above included units"
+        ],
+        "keyFeatures": [
+          "AI-assisted property management on Pro+",
+          "Full accounting with bank sync and QuickBooks",
+          "Affordable housing reporting on Premium",
+          "Free property websites on Premium"
+        ],
+        "bestFor": [
+          "small-to-mid residential landlords",
+          "property managers wanting QuickBooks integration",
+          "growing portfolios up to 300 units"
+        ],
+        "sources": [
+          {
+            "url": "https://www.doorloop.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Prices fetched from doorloop.com/pricing on 2026-06-15; annual discounts verified by computing monthly-vs-annual list prices."
+      }
+    },
+    {
+      "slug": "rentredi",
+      "name": "RentRedi",
+      "domain": "rentredi.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Zillow",
+        "Trulia",
+        "HotPads",
+        "Latchel",
+        "REI Hub",
+        "TransUnion"
+      ],
+      "provenance": "Prices fetched from rentredi.com/pricing on 2026-06-15. All plans cover unlimited units; pricing is per account, not per property. Start $5/mo, Grow $29.95/mo (or $12/mo annual), Pro is custom (contact required).",
+      "plans": [
+        {
+          "name": "Start",
+          "monthlyUsd": 5,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$5/month, unlimited units and tenants. Includes online rent collection (ACH, card, cash), AutoPay, late fees, tenant portal, credit reporting, in-app chat, 24/7 support. No leasing or screening tools.",
+          "source": {
+            "url": "https://rentredi.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Grow",
+          "monthlyUsd": 29.95,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 60,
+          "billingModel": "flat",
+          "notes": "$29.95/month (monthly) or $12/month billed annually (~60% savings). Unlimited units. Adds property listings, one-click syndication, custom website, e-signatures, document storage, maintenance requests, vendor management, income/expense tracking, financial reports, tenant screening ($39.99–$49.99 tenant-paid), priority phone support.",
+          "source": {
+            "url": "https://rentredi.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing, contact required ('Call Us' on the page). All Grow features plus dedicated account manager and elite priority support. Designed for professional landlords and growing portfolios.",
+          "source": {
+            "url": "https://rentredi.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Zillow",
+          "Trulia",
+          "HotPads",
+          "Latchel",
+          "REI Hub",
+          "TransUnion"
+        ],
+        "limits": [
+          "No unit caps — all plans cover unlimited properties",
+          "Tenant screening is tenant-paid ($39.99–$49.99)",
+          "30-day money-back guarantee on all plans",
+          "No free tier (lowest paid plan is $5/mo)"
+        ],
+        "keyFeatures": [
+          "Unlimited units on all plans including $5/month entry tier",
+          "Significant annual discount (60%) on Grow plan",
+          "Built-in credit reporting for tenants",
+          "Mobile-first landlord and tenant apps"
+        ],
+        "bestFor": [
+          "budget-conscious landlords",
+          "small landlords wanting low monthly cost",
+          "DIY landlords managing unlimited units affordably"
+        ],
+        "sources": [
+          {
+            "url": "https://rentredi.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://help.rentredi.com/en/articles/7044895-rentredi-pricing",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Prices fetched from rentredi.com/pricing on 2026-06-15; 30-day money-back guarantee and unlimited-units confirmed."
+      }
+    },
+    {
+      "slug": "turbotenant",
+      "name": "TurboTenant",
+      "domain": "turbotenant.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Zillow",
+        "Trulia",
+        "Apartments.com",
+        "HotPads",
+        "Realtor.com",
+        "TransUnion"
+      ],
+      "provenance": "TurboTenant's pricing page returns HTTP 403. Free-forever tier and Premium $149/yr ($12.42/mo) entry price corroborated via TurboTenant's official Premium page, the Premium announcement blog, and the support center. Note: Premium now scales with unit count — Essentials tier $149–$349/yr and Pro tier $199–$999/yr per portfolio size — so $12.42/mo is the published starting (floor) price, not a universal flat rate. Capterra still lists a legacy flat $12.42 Premium (and a defunct $9.92 'Pro'); treated as lagging aggregator.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free forever, unlimited units. Includes property listings syndicated to many rental sites, tenant screening (tenant-paid), rent collection, maintenance requests, lease management, in-app messaging. Tenants pay ACH and card processing fees.",
+          "source": {
+            "url": "https://www.turbotenant.com/tools/announcing-turbotenant-premium/",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": 12.42,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Starting at $149/year billed annually ($12.42/month equivalent) for the base Essentials tier; no month-to-month option. Premium now scales by unit count: Essentials $149–$349/yr, Pro $199–$999/yr depending on portfolio size. Adds income verification, unlimited e-signatures, eviction assistance, waived ACH fees, advanced reporting, priority support.",
+          "source": {
+            "url": "https://www.turbotenant.com/tools/announcing-turbotenant-premium/",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://www.capterra.com/p/147659/Turbo-Tenant/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Zillow",
+          "Trulia",
+          "Apartments.com",
+          "HotPads",
+          "Realtor.com",
+          "TransUnion"
+        ],
+        "limits": [
+          "Premium is annual-only (no monthly billing)",
+          "Premium price scales with number of units ($149–$349/yr Essentials, $199–$999/yr Pro)",
+          "Tenant screening fees are tenant-paid on free plan"
+        ],
+        "keyFeatures": [
+          "Generous free-forever tier with full feature access",
+          "Low-cost paid tier starting at $149/year",
+          "Listings syndicated to many rental sites",
+          "Eviction assistance included in Premium"
+        ],
+        "bestFor": [
+          "individual landlords",
+          "first-time landlords wanting no upfront cost",
+          "budget-sensitive DIY property managers"
+        ],
+        "sources": [
+          {
+            "url": "https://www.turbotenant.com/tools/announcing-turbotenant-premium/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.capterra.com/p/147659/Turbo-Tenant/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing page returned 403; free tier and $149/yr Premium floor confirmed via official Premium/announcement pages and support center on 2026-06-15. Premium is unit-tiered, not flat."
+      }
+    },
+    {
+      "slug": "avail",
+      "name": "Avail",
+      "domain": "avail.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Zillow",
+        "Trulia",
+        "Apartments.com",
+        "HotPads",
+        "Realtor.com",
+        "TransUnion",
+        "Experian"
+      ],
+      "provenance": "Prices fetched from avail.com/pricing on 2026-06-15. Avail offers two plans: a free Unlimited tier ($0/unit) and a paid Unlimited Plus at $9/unit/month; no flat-fee option exists.",
+      "plans": [
+        {
+          "name": "Unlimited",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free forever, unlimited units. Listings on multiple platforms, rental applications, tenant screening (tenant-paid), state-specific lease templates, online rent collection, maintenance tracking, income/expense tracking. Tenants pay $2.50 per ACH transfer; 3.5% card fee always applies.",
+          "source": {
+            "url": "https://www.avail.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Unlimited Plus",
+          "monthlyUsd": 9,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$9/unit/month. Adds FastPay (next-day rent deposits), waived ACH fees for tenants, custom lease templates with cloning, custom application questions, branded property website, priority support. 3.5% card fee still applies.",
+          "source": {
+            "url": "https://www.avail.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Zillow",
+          "Trulia",
+          "Apartments.com",
+          "TransUnion",
+          "Experian"
+        ],
+        "limits": [
+          "Unlimited Plus scales with unit count ($9 per unit)",
+          "ACH fee $2.50/transfer for tenants on free plan",
+          "3.5% card processing fee always charged to tenants"
+        ],
+        "keyFeatures": [
+          "Free tier with state-specific lease templates",
+          "FastPay next-day deposits on Plus tier",
+          "Backed by Realtor.com parent (Move, Inc.)",
+          "Tenant portal with online applications and screening"
+        ],
+        "bestFor": [
+          "DIY landlords wanting free software",
+          "small portfolios needing state-specific leases",
+          "landlords who want next-day rent deposits"
+        ],
+        "sources": [
+          {
+            "url": "https://www.avail.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Prices fetched from avail.com/pricing on 2026-06-15; free tier and $9/unit Plus confirmed."
+      }
+    },
+    {
+      "slug": "hemlane",
+      "name": "Hemlane",
+      "domain": "hemlane.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Zillow",
+        "Apartments.com",
+        "Trulia",
+        "HotPads",
+        "Realtor.com",
+        "Stripe"
+      ],
+      "provenance": "Prices fetched from hemlane.com/pricing on 2026-06-15. Hemlane uses a hybrid base-fee-plus-per-unit model ($28 base + per-unit). The free Starter tier covers advertising, screening, and accounting only.",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free forever, no credit card required. Listings on Apartments.com, Zillow, and more sites; applicant screening; full rental accounting with bank sync. No rent collection or lease management.",
+          "source": {
+            "url": "https://hemlane.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Basic",
+          "monthlyUsd": 30,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "hybrid",
+          "notes": "$28 base fee + $2/unit/month (shown as $30/month for one unit). Annual billing saves up to 20%. Adds lease tracking, document storage with e-sign, online rent collection, $0 ACH fees, private messaging, tenant perks.",
+          "source": {
+            "url": "https://hemlane.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Essential",
+          "monthlyUsd": 48,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "hybrid",
+          "notes": "$28 base fee + $20/unit/month (shown as $48/month for one unit). Annual billing saves up to 20%. Adds 24/7 emergency repair coordination, automatic maintenance diagnosis, work order management, state-specific leases.",
+          "source": {
+            "url": "https://hemlane.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Complete",
+          "monthlyUsd": 86,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "hybrid",
+          "notes": "$28 base fee + $58/unit/month (shown as $86/month for one unit). Annual billing saves up to 20%. Adds property management assistant, vetted repair network, VIP support, leasing and turnover coordination network.",
+          "source": {
+            "url": "https://hemlane.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Zillow",
+          "Apartments.com",
+          "Trulia",
+          "HotPads",
+          "Realtor.com"
+        ],
+        "limits": [
+          "Paid plans scale with unit count via per-unit fees",
+          "Tenant placement add-on starts at $695",
+          "Eviction Shield add-on from $4.95/month",
+          "Inspections add-on from $300"
+        ],
+        "keyFeatures": [
+          "24/7 emergency repair coordination on Essential+",
+          "Vetted local vendor network on Complete tier",
+          "Hybrid pricing with base fee plus per-unit cost",
+          "Free Starter tier with advertising and accounting"
+        ],
+        "bestFor": [
+          "landlords wanting human-assisted property management",
+          "small landlords needing repair coordination",
+          "investors who want hybrid self-manage + support"
+        ],
+        "sources": [
+          {
+            "url": "https://hemlane.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Prices fetched from hemlane.com/pricing on 2026-06-15; base+per-unit structure and add-on fees confirmed."
+      }
+    },
+    {
+      "slug": "rentec-direct",
+      "name": "Rentec Direct",
+      "domain": "rentecdirect.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "QuickBooks",
+        "Zillow",
+        "Apartments.com",
+        "Rentometer",
+        "TransUnion",
+        "Equifax"
+      ],
+      "provenance": "Prices fetched from rentecdirect.com/pricing on 2026-06-15. CORRECTED: base prices are $55/month (Rentec Pro) and $65/month (Rentec PM) per the live page — the draft's $45/$55 were wrong. Prices scale with unit count via an on-page calculator; two-week free trial and ~10% annual discount confirmed.",
+      "plans": [
+        {
+          "name": "Rentec Pro",
+          "monthlyUsd": 55,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "Starts at $55/month (scales with unit count via calculator, up to 2,500 units; contact for more). For landlords and real estate investors. Includes accounting, reporting, free ACH rent payments, mobile apps, tenant screening, online applications, 1099 e-filing, unlimited US-based support, free onboarding. No trust accounting.",
+          "source": {
+            "url": "https://www.rentecdirect.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Rentec PM",
+          "monthlyUsd": 65,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "Starts at $65/month (scales with unit count via calculator, up to 2,500 units; contact for more). For property managers. All Rentec Pro features plus trust accounting, owner portal, owner ACH disbursements, marketing and maintenance manager tools.",
+          "source": {
+            "url": "https://www.rentecdirect.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "QuickBooks",
+          "Zillow",
+          "Apartments.com",
+          "Rentometer",
+          "TransUnion"
+        ],
+        "limits": [
+          "Pricing scales with unit count (calculator-based)",
+          "Contact required for portfolios over 2,500 units",
+          "Tenant screening $10–$18/report extra",
+          "Credit/debit card payments: 2.95% fee; outgoing ACH: $0.50/transaction"
+        ],
+        "keyFeatures": [
+          "Trust accounting on PM tier",
+          "Owner portal with ACH disbursements",
+          "1099 e-filing included",
+          "10% annual billing discount"
+        ],
+        "bestFor": [
+          "property managers needing trust accounting",
+          "landlords wanting US-based support",
+          "portfolios up to 2,500 units"
+        ],
+        "sources": [
+          {
+            "url": "https://www.rentecdirect.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Prices fetched from rentecdirect.com/pricing on 2026-06-15; base prices corrected to $55 (Pro) / $65 (PM) and two-week free trial confirmed."
+      }
+    },
+    {
+      "slug": "propertyware",
+      "name": "Propertyware",
+      "domain": "propertyware.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "QuickBooks",
+        "Zillow",
+        "TransUnion",
+        "Stripe",
+        "DocuSign"
+      ],
+      "provenance": "Prices fetched directly from propertyware.com/pricing on 2026-06-15. Per-unit pricing with monthly minimums; implementation fee of 2x first month applies to all plans. No single flat monthly fee, so monthlyUsd is null on all plans.",
+      "plans": [
+        {
+          "name": "Basic",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$1.00/unit/month, $250/month minimum. Implementation fee = 2x monthly subscription. Includes global customization, reports, marketing, property management, owner portals, tenant portals, maintenance, accounting, screening, payments, two-way texting, eSignature, inspections, unlimited support/storage/training.",
+          "source": {
+            "url": "https://www.propertyware.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Plus",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$1.50/unit/month, $350/month minimum. Implementation fee = 2x monthly subscription. Same core features as Basic; differentiation is by portfolio tier, not feature set.",
+          "source": {
+            "url": "https://www.propertyware.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$2.00/unit/month, $450/month minimum. Implementation fee = 2x monthly subscription. Same core features as Basic and Plus.",
+          "source": {
+            "url": "https://www.propertyware.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "QuickBooks",
+          "Zillow",
+          "TransUnion",
+          "Stripe",
+          "DocuSign"
+        ],
+        "limits": [
+          "$250–$450/month minimums depending on tier",
+          "Implementation fee = 2x first month on all plans",
+          "Add-ons (maintenance contact center $110/unit, leasing contact center $285/unit) priced separately",
+          "Professional websites $99/month + setup"
+        ],
+        "keyFeatures": [
+          "Open API and enterprise integrations on Premium",
+          "Two-way text messaging included",
+          "Unlimited support, storage, and online training on all plans",
+          "Maintenance and leasing contact center add-ons available"
+        ],
+        "bestFor": [
+          "professional property management companies",
+          "large residential portfolios (250+ units)",
+          "operators needing deep customization and open API"
+        ],
+        "sources": [
+          {
+            "url": "https://www.propertyware.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Prices fetched from propertyware.com/pricing on 2026-06-15; per-unit rates and $250/$350/$450 minimums confirmed directly."
+      }
+    },
+    {
+      "slug": "yardi-breeze",
+      "name": "Yardi Breeze",
+      "domain": "yardibreeze.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Yardi Marketplace",
+        "TransUnion",
+        "LexisNexis",
+        "RentGrow",
+        "Forecast by Yardi"
+      ],
+      "provenance": "Prices fetched from yardibreeze.com/pricing on 2026-06-15. Per-unit pricing with monthly minimums and annual agreement; no single flat monthly fee, so monthlyUsd is null. Residential Breeze $1/unit ($100 min); Breeze Premier (Residential) $2/unit standard ($400 min, $1/unit promo with 12-mo screening+insurance bundle); Commercial Breeze $2/unit ($200 min). No onboarding, training, or support fees.",
+      "plans": [
+        {
+          "name": "Breeze (Residential)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$1/unit/month, $100/month minimum. Annual agreement required, billed monthly. Includes property management, marketing and leasing, rent collection, accounting, accounts payable, owner tools, maintenance, renters insurance. No onboarding, training, or support fees.",
+          "source": {
+            "url": "https://www.yardibreeze.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Breeze Premier (Residential)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$2/unit/month standard, $400/month minimum (limited promo: $1/unit/month with a 12-month agreement bundled with screening and insurance). Billed annually, annual agreement required. Adds corporate general ledger, menu-level security, CRM queue, online lease execution, automated workflows, customizable property websites.",
+          "source": {
+            "url": "https://www.yardibreeze.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://www.yardibreeze.com/blog/2024/11/yardi-breeze-pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Breeze (Commercial)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$2/unit/month, $200/month minimum. Annual agreement required. Same core feature set as residential Breeze. (Breeze Premier Commercial is quote-only on the page.)",
+          "source": {
+            "url": "https://www.yardibreeze.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Yardi Marketplace",
+          "TransUnion",
+          "LexisNexis",
+          "RentGrow"
+        ],
+        "limits": [
+          "Annual agreement required on all plans",
+          "Minimum monthly charges apply ($100–$400)",
+          "Breeze Premier billed annually upfront",
+          "Breeze Premier Commercial is quote-only"
+        ],
+        "keyFeatures": [
+          "No onboarding, training, or support fees",
+          "Supports residential, commercial, affordable, HOA, self-storage, manufactured housing",
+          "Corporate general ledger on Breeze Premier",
+          "Part of the broader Yardi ecosystem"
+        ],
+        "bestFor": [
+          "property managers wanting Yardi ecosystem at lower cost",
+          "mixed residential/commercial portfolios",
+          "operators needing affordable housing or HOA support"
+        ],
+        "sources": [
+          {
+            "url": "https://www.yardibreeze.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.yardibreeze.com/faq/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Prices fetched from yardibreeze.com/pricing on 2026-06-15; per-unit rates, minimums, and annual-agreement terms confirmed."
+      }
+    }
+  ]
+}
