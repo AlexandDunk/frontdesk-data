@@ -1,0 +1,992 @@
+{
+  "vertical": "rank-tracking",
+  "generatedAt": "2026-06-18",
+  "methodologyNotes": "Each vendor's official pricing page was re-fetched via WebFetch on 2026-06-18 (accuranker.com/pricing, nightwatch.io/pricing/, seranking.com/pricing.html + seranking.com/subscription.html, wincher.com/pricing + help.wincher.com, mangools.com/plans-and-pricing, advancedwebranking.com/pricing/, serpstat.com/page/pricing-plans/, proranktracker.com/plans_and_pricing). Rule applied: a null beats a guess; monthlyUsd is only populated when the OFFICIAL page bills in USD. SE Ranking's official page (subscription.html and pricing.html) displays EUR (Core €109/mo, Growth €235/mo); the third-party $129/$279 figures conflict with the official billing currency, so monthlyUsd was set to null and the official EUR prices are recorded in notes. Nightwatch and Wincher likewise publish EUR-only pricing -> monthlyUsd null. Mangools' official page is JS-rendered and would not return prices; monthly USD $49/$69/$129 is corroborated by two independent sources (webmetools.com, ecommerceparadise.com) but annual-billing figures conflict across sources, so annualDiscountPct was nulled. AWR free trial corrected to 30 days; Serpstat trial set to 7 days. Rank Ranger excluded (domain redirects to SimilarWeb post-acquisition). billingModel is flat for self-serve tiers, custom for contact-sales tiers. accessedAt 2026-06-18.",
+  "vendors": [
+    {
+      "slug": "accuranker",
+      "name": "AccuRanker",
+      "domain": "accuranker.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Google Analytics",
+        "Google Search Console",
+        "Looker Studio",
+        "Adobe Analytics",
+        "Google BigQuery",
+        "Databox",
+        "Swydo",
+        "Google Sheets"
+      ],
+      "provenance": "Pricing re-verified at accuranker.com/pricing on 2026-06-18: Professional $224/mo (entry at 2,000 keywords), Expert $764/mo (entry at 10,000 keywords), Enterprise custom (25,000+). 10% annual discount confirmed. No free trial length and no HIPAA/SOC2/GDPR statements found on the page.",
+      "plans": [
+        {
+          "name": "Professional",
+          "monthlyUsd": 224,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "$224/mo entry price at 2,000 keywords; selectable 2,000/3,000/5,000 keyword tiers priced higher. Unlimited users and domains. 10% discount on annual payment.",
+          "source": {
+            "url": "https://www.accuranker.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Expert",
+          "monthlyUsd": 764,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "$764/mo entry price at 10,000 keywords; selectable 10,000/15,000/20,000/25,000 keyword tiers. 10% discount on annual payment.",
+          "source": {
+            "url": "https://www.accuranker.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "25,000+ keywords; custom pricing via sales contact.",
+          "source": {
+            "url": "https://www.accuranker.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Google Analytics",
+          "Google Search Console",
+          "Looker Studio",
+          "Adobe Analytics",
+          "Google BigQuery"
+        ],
+        "limits": [
+          "Professional: 2,000-5,000 keywords",
+          "Expert: 10,000-25,000 keywords",
+          "Enterprise: 25,000+ keywords (custom)"
+        ],
+        "keyFeatures": [
+          "On-demand ranking updates",
+          "Unlimited users and domains on all plans",
+          "Share of Voice metric",
+          "Full API access at no extra cost"
+        ],
+        "bestFor": [
+          "agencies",
+          "enterprise SEO",
+          "large keyword volumes"
+        ],
+        "sources": [
+          {
+            "url": "https://www.accuranker.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://www.accuranker.com/integration/",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Pricing from accuranker.com/pricing; integrations from accuranker.com/integration/. No publicly stated free trial length or HIPAA/SOC2/GDPR certifications found on the pricing page."
+      }
+    },
+    {
+      "slug": "nightwatch",
+      "name": "Nightwatch",
+      "domain": "nightwatch.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Google Search Console",
+        "Looker Studio",
+        "Google Analytics",
+        "Zapier"
+      ],
+      "provenance": "Re-verified at nightwatch.io/pricing/ on 2026-06-18. Official page bills EUR only (Starter €79, Professional €159, Agency €399 per month; annual €948/€1,908/€4,788 = 20% off). No currency switcher and no USD list found -> monthlyUsd null. Page states 'SOC 2 compliant'. 14-day trial on all plans.",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "EUR-only on official page: €79/mo monthly or €948/yr (20% off). 500 daily keywords, 5 websites, unlimited team seats. 14-day free trial. monthlyUsd null (no official USD pricing).",
+          "source": {
+            "url": "https://nightwatch.io/pricing/",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Professional",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "EUR-only: €159/mo monthly or €1,908/yr (20% off). 2,500 daily keywords, 25 websites, Looker Studio, white-label reports, API. 14-day free trial. monthlyUsd null.",
+          "source": {
+            "url": "https://nightwatch.io/pricing/",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Agency",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "EUR-only: €399/mo monthly or €4,788/yr (20% off). 7,500 daily keywords, 100 websites, dedicated account manager, SSO. 14-day free trial. monthlyUsd null.",
+          "source": {
+            "url": "https://nightwatch.io/pricing/",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "20,000+ keywords; custom pricing.",
+          "source": {
+            "url": "https://nightwatch.io/pricing/",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://nightwatch.io/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Google Search Console",
+          "Looker Studio",
+          "API",
+          "SSO (Agency+)"
+        ],
+        "limits": [
+          "Starter: 500 keywords, 5 websites",
+          "Professional: 2,500 keywords, 25 websites",
+          "Agency: 7,500 keywords, 100 websites",
+          "Enterprise: 20,000+ keywords"
+        ],
+        "keyFeatures": [
+          "Unlimited team seats on all plans",
+          "Tracks AI platforms (ChatGPT, Gemini, Perplexity)",
+          "100,000+ locations across 190+ countries",
+          "SOC 2 compliant (stated on pricing page)"
+        ],
+        "bestFor": [
+          "agencies",
+          "teams needing unlimited users",
+          "AI visibility tracking"
+        ],
+        "sources": [
+          {
+            "url": "https://nightwatch.io/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "All data from nightwatch.io/pricing/. Official site prices in EUR only; USD monthlyUsd set to null. SOC 2 statement confirmed on the page."
+      }
+    },
+    {
+      "slug": "se-ranking",
+      "name": "SE Ranking",
+      "domain": "seranking.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Google Analytics",
+        "Google Search Console",
+        "Looker Studio",
+        "Zapier",
+        "Make.com",
+        "n8n"
+      ],
+      "provenance": "Re-verified at seranking.com/pricing.html and seranking.com/subscription.html on 2026-06-18. Both official pages display EUR: Core €109/mo monthly (€87.20/mo annual), Growth €235/mo monthly (€188/mo annual), Enterprise custom; 20% annual discount; 14-day trial, no card. The third-party USD figures ($129/$279) conflict with the official billing currency, so monthlyUsd was set to null per the null-beats-a-guess rule and EUR prices recorded in notes.",
+      "plans": [
+        {
+          "name": "Core",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "Official page EUR-only: €109/mo monthly, €87.20/mo billed annually (20% off). 2,000 daily keyword positions, 100 AI prompts/day, 10 projects, 1 manager seat, 250K audit pages. 14-day free trial, no credit card. monthlyUsd null (third-party USD $129 conflicts with official EUR billing).",
+          "source": {
+            "url": "https://seranking.com/pricing.html",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Growth",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "Official page EUR-only: €235/mo monthly, €188/mo billed annually (20% off). 5,000 daily keyword positions, 250 AI prompts/day, 30 projects, 3 manager seats, 2M audit pages. 14-day free trial. monthlyUsd null (third-party USD $279 conflicts with official EUR billing).",
+          "source": {
+            "url": "https://seranking.com/pricing.html",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Flexible limits, full API, advanced integrations; custom pricing via sales.",
+          "source": {
+            "url": "https://seranking.com/pricing.html",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Google Analytics",
+          "Google Search Console",
+          "Looker Studio",
+          "Zapier",
+          "Make.com",
+          "n8n"
+        ],
+        "limits": [
+          "Core: 2,000 daily keywords, 10 projects",
+          "Growth: 5,000 daily keywords, 30 projects"
+        ],
+        "keyFeatures": [
+          "AI search tracking (ChatGPT, Gemini) included",
+          "MCP server integration",
+          "Agency Pack add-on for white-label",
+          "On-page SEO checker bundled"
+        ],
+        "bestFor": [
+          "small agencies",
+          "in-house teams",
+          "AI visibility monitoring"
+        ],
+        "sources": [
+          {
+            "url": "https://seranking.com/pricing.html",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://seranking.com/subscription.html",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Official pricing pages (pricing.html and subscription.html) both display EUR (Core €109/mo, Growth €235/mo). monthlyUsd nulled because the official billing currency is EUR and third-party USD figures conflict. Integrations from seranking.com/integrations.html."
+      }
+    },
+    {
+      "slug": "wincher",
+      "name": "Wincher",
+      "domain": "wincher.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Google Search Console",
+        "Google Analytics",
+        "WordPress (plugin)",
+        "Yoast SEO",
+        "API"
+      ],
+      "provenance": "Re-verified at wincher.com/pricing and help.wincher.com/en/articles/3303542 on 2026-06-18. Help article states prices start at 49/89/319 EUR/USD per month for the three tiers; live page shows the same keyword ladder (500 kw/10 sites, 1,000 kw/unlimited, 5,000 kw/unlimited). Annual plan = 2 months free (~17% off). Official page does not publish a distinct USD list, so monthlyUsd left null. Free trial length not stated on official sources -> nulled (page only says 'Try for free').",
+      "plans": [
+        {
+          "name": "Basic",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "From €49/mo (help article lists '49 EUR/USD'). 500 keywords, 10 websites, 1 user. Annual = 2 months free (~17% off). monthlyUsd null (no distinct official USD list).",
+          "source": {
+            "url": "https://www.wincher.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Standard",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "From €89/mo. 1,000 keywords, unlimited websites, multiple users. Annual = 2 months free (~17% off). monthlyUsd null.",
+          "source": {
+            "url": "https://www.wincher.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Professional",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "From €319/mo. 5,000 keywords, unlimited websites, multiple users, API access. Annual = 2 months free (~17% off). monthlyUsd null.",
+          "source": {
+            "url": "https://www.wincher.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Google Search Console",
+          "WordPress plugin",
+          "Yoast SEO",
+          "API"
+        ],
+        "limits": [
+          "Basic: 500 keywords, 10 websites",
+          "Standard: 1,000 keywords, unlimited websites",
+          "Professional: 5,000 keywords, unlimited websites"
+        ],
+        "keyFeatures": [
+          "Native WordPress and Yoast SEO plugin integration",
+          "Daily ranking updates",
+          "Local and mobile rank tracking",
+          "Keyword research tool included"
+        ],
+        "bestFor": [
+          "WordPress site owners",
+          "freelancers",
+          "small agencies"
+        ],
+        "sources": [
+          {
+            "url": "https://www.wincher.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://help.wincher.com/en/articles/3303542-how-much-does-wincher-cost",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Help article lists '49/89/319 EUR/USD per month'; no distinct USD list, so monthlyUsd left null. Free trial length not confirmed on official sources -> nulled (draft's '7 days' was unverifiable)."
+      }
+    },
+    {
+      "slug": "serpwatcher-mangools",
+      "name": "SERPWatcher (Mangools)",
+      "domain": "mangools.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Google Analytics",
+        "Google Search Console",
+        "API"
+      ],
+      "provenance": "Official mangools.com/plans-and-pricing is JS-rendered and returns no prices. Monthly USD $49/$69/$129 corroborated by two independent sources (webmetools.com, ecommerceparadise.com) on 2026-06-18. Annual-billing figures conflict across sources ($29.90/$39.90/$79.90 vs $29.90/$44.90/$89.90), and some aggregators report a monthly increase to $61/$81/$141, so annualDiscountPct was nulled. SERPWatcher (rank tracking) is bundled in all Mangools plans.",
+      "plans": [
+        {
+          "name": "Basic",
+          "monthlyUsd": 49,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$49/mo billed monthly (corroborated by webmetools.com and ecommerceparadise.com). ~200 tracked keywords/day in SERPWatcher. Includes all 5 Mangools tools. Annual-billing monthly-equivalent reported as ~$29.90 but discount % conflicts across sources -> annualDiscountPct nulled. Some 2026 aggregators report a monthly increase to $61; treat as a price-watch item.",
+          "source": {
+            "url": "https://mangools.com/plans-and-pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "corroboration": {
+            "url": "https://webmetools.com/mangools/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": 69,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$69/mo billed monthly (corroborated). ~700 tracked keywords/day. Includes all 5 Mangools tools, 3 additional team seats. Annual monthly-equivalent reported as $39.90-$44.90 (sources conflict) -> annualDiscountPct nulled.",
+          "source": {
+            "url": "https://mangools.com/plans-and-pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "corroboration": {
+            "url": "https://webmetools.com/mangools/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Agency",
+          "monthlyUsd": 129,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$129/mo billed monthly (corroborated). ~1,500 tracked keywords/day. Includes all 5 Mangools tools, 5 additional team seats. Annual monthly-equivalent reported as $79.90-$89.90 (sources conflict) -> annualDiscountPct nulled.",
+          "source": {
+            "url": "https://mangools.com/plans-and-pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "corroboration": {
+            "url": "https://webmetools.com/mangools/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": 10,
+        "keyIntegrations": [
+          "Google Search Console",
+          "Google Analytics",
+          "API"
+        ],
+        "limits": [
+          "Basic: ~200 tracked keywords/day",
+          "Premium: ~700 tracked keywords/day",
+          "Agency: ~1,500 tracked keywords/day"
+        ],
+        "keyFeatures": [
+          "SERPWatcher bundled with KWFinder, SERPChecker, LinkMiner, SiteProfiler",
+          "Dominance Index score",
+          "SERP snapshot and keyword tracking history",
+          "Aggressive annual discount"
+        ],
+        "bestFor": [
+          "solopreneurs",
+          "freelance SEOs",
+          "small to mid-size agencies needing an all-in-one budget suite"
+        ],
+        "sources": [
+          {
+            "url": "https://mangools.com/plans-and-pricing",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://webmetools.com/mangools/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://ecommerceparadise.com/kwfinder-pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Official page JS-rendered (no prices). Monthly $49/$69/$129 corroborated by two independent sources; annual-billing discount nulled due to source conflict. 10-day trial reported (some sources cite a 48-hour money-back guarantee instead) -> treat trial length as approximate."
+      }
+    },
+    {
+      "slug": "advanced-web-ranking",
+      "name": "Advanced Web Ranking",
+      "domain": "advancedwebranking.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Google Analytics",
+        "Google Search Console",
+        "Looker Studio",
+        "Google BigQuery",
+        "Adobe Analytics"
+      ],
+      "provenance": "Re-verified at advancedwebranking.com/pricing/ on 2026-06-18. All four self-serve tiers with exact USD prices confirmed: Pro $139, Agency $279, Enterprise $699, Ent Plus 50k $980; 10% annual discount; 30-day free trial confirmed (draft had null -> corrected to 30).",
+      "plans": [
+        {
+          "name": "Pro",
+          "monthlyUsd": 139,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "$139/mo monthly; $125.10/mo annually (10% off). 7,000 keywords, unlimited projects and users, local/mobile rankings, AI visibility tracking. 30-day free trial.",
+          "source": {
+            "url": "https://www.advancedwebranking.com/pricing/",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Agency",
+          "monthlyUsd": 279,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "$279/mo monthly; $251.10/mo annually (10% off). 14,500 keywords, unlimited SEO forecasts, 1-hour on-demand updates, custom dashboards, Looker Studio, API access. 30-day free trial.",
+          "source": {
+            "url": "https://www.advancedwebranking.com/pricing/",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": 699,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "$699/mo monthly; $629.10/mo annually (10% off). 35,500 keywords, unlimited scheduled reports, cross-project reporting, BigQuery connector, 1-to-1 training. 30-day free trial.",
+          "source": {
+            "url": "https://www.advancedwebranking.com/pricing/",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Ent Plus 50k",
+          "monthlyUsd": 980,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "$980/mo (10% off annually = $882/mo). 50,000 keywords, unlimited historical rankings, keyword research add-on, SSO, dedicated account manager. 30-day free trial.",
+          "source": {
+            "url": "https://www.advancedwebranking.com/pricing/",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": 30,
+        "keyIntegrations": [
+          "Google Analytics",
+          "Google Search Console",
+          "Looker Studio",
+          "Google BigQuery",
+          "Adobe Analytics"
+        ],
+        "limits": [
+          "Pro: 7,000 keywords",
+          "Agency: 14,500 keywords",
+          "Enterprise: 35,500 keywords",
+          "Ent Plus 50k: 50,000 keywords"
+        ],
+        "keyFeatures": [
+          "AI visibility tracking on all plans",
+          "SEO forecasting built-in",
+          "1-hour on-demand ranking updates (Agency+)",
+          "BigQuery connector (Enterprise+)"
+        ],
+        "bestFor": [
+          "agencies needing detailed forecasting",
+          "enterprise teams",
+          "data-warehouse SEO workflows"
+        ],
+        "sources": [
+          {
+            "url": "https://www.advancedwebranking.com/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "All pricing directly from advancedwebranking.com/pricing/. Four tiers with exact USD prices confirmed. Free trial corrected from null to 30 days (plus 14-day post-trial data retention)."
+      }
+    },
+    {
+      "slug": "serpstat",
+      "name": "Serpstat",
+      "domain": "serpstat.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Google Search Console",
+        "Google Sheets",
+        "Looker Studio",
+        "Airbyte",
+        "Reportz",
+        "Oviond",
+        "Stackby",
+        "Datorama (Salesforce)"
+      ],
+      "provenance": "Re-verified at serpstat.com/page/pricing-plans/ on 2026-06-18. Four tiers confirmed at monthly USD: Individual $50, Team $100, Team x2 $169, Agency $410. Annual discount ~27% per published yearly savings. 7-day free trial confirmed (draft had null -> corrected to 7).",
+      "plans": [
+        {
+          "name": "Individual",
+          "monthlyUsd": 50,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 38,
+          "billingModel": "flat",
+          "notes": "$50/mo monthly; ~$31/mo annually (saves $228/yr). 5 projects, 100 daily searches, 10,000 monthly position checks, 30,000 audit pages.",
+          "source": {
+            "url": "https://serpstat.com/page/pricing-plans/",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Team",
+          "monthlyUsd": 100,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 29,
+          "billingModel": "flat",
+          "notes": "$100/mo monthly; ~$71/mo annually (saves $348/yr). Unlimited projects, 500 daily searches, 50,000-99,999 monthly position checks, 150,000 audit pages. ChatGPT/Claude MCP integration included.",
+          "source": {
+            "url": "https://serpstat.com/page/pricing-plans/",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Team x2",
+          "monthlyUsd": 169,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 24,
+          "billingModel": "flat",
+          "notes": "$169/mo monthly; ~$129/mo annually (saves $484/yr). Unlimited projects, 1,000 daily searches, 100,000 monthly position checks, 300,000 audit pages.",
+          "source": {
+            "url": "https://serpstat.com/page/pricing-plans/",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Agency",
+          "monthlyUsd": 410,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 22,
+          "billingModel": "flat",
+          "notes": "$410/mo monthly; ~$321/mo annually (saves $1,068/yr). Unlimited projects, 5,000 daily searches, 500,000 monthly position checks, 1,500,000 audit pages.",
+          "source": {
+            "url": "https://serpstat.com/page/pricing-plans/",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": 7,
+        "keyIntegrations": [
+          "Google Search Console",
+          "Google Sheets",
+          "Looker Studio",
+          "Airbyte",
+          "ChatGPT MCP",
+          "Claude MCP"
+        ],
+        "limits": [
+          "Individual: 5 projects, 10,000 position checks/mo",
+          "Team: unlimited projects, 50,000-99,999 position checks/mo",
+          "Agency: unlimited projects, 500,000 position checks/mo"
+        ],
+        "keyFeatures": [
+          "AI Platform Monitoring (ChatGPT, Gemini brand tracking)",
+          "MCP server for Claude and ChatGPT integration",
+          "Competitor keyword gap analysis bundled",
+          "Site audit included on all plans"
+        ],
+        "bestFor": [
+          "budget-conscious agencies",
+          "teams needing keyword research + rank tracking combined",
+          "AI search visibility monitoring"
+        ],
+        "sources": [
+          {
+            "url": "https://serpstat.com/page/pricing-plans/",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://serpstat.com/apps/",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Pricing confirmed directly on serpstat.com/page/pricing-plans/. Annual discount percentages computed from published yearly savings. Free trial corrected from null to 7 days."
+      }
+    },
+    {
+      "slug": "proranktracker",
+      "name": "ProRankTracker",
+      "domain": "proranktracker.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Google Analytics",
+        "Google Search Console",
+        "Looker Studio",
+        "API"
+      ],
+      "provenance": "Re-verified at proranktracker.com/plans_and_pricing on 2026-06-18. Starter $99, Pro $149, and Agency sub-tiers (3k $199, 5k $299, 10k $549) confirmed; Agency intermediate steps (4k/6k/8k/15k) also exist. 20,000+ terms is custom/contact-sales (no published flat price). 7-day, 100-term, no-card trial confirmed; no forever-free plan.",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": 99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "$99/mo monthly; $89/mo annually (~10% off). 1,000 terms (1 term = keyword x URL x search engine). Daily rank updates.",
+          "source": {
+            "url": "https://proranktracker.com/plans_and_pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 149,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "$149/mo monthly; $134/mo annually (~10% off). 2,000 terms. Looker Studio integration, multi-user (up to 10), unlimited reports.",
+          "source": {
+            "url": "https://proranktracker.com/plans_and_pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Agency 3k",
+          "monthlyUsd": 199,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "$199/mo monthly; $179/mo annually (~10% off). 3,000 terms. Unlimited users, API access, dedicated support, update-on-demand. Intermediate Agency steps exist at 4k ($249), 6k ($349), 8k ($449), 15k ($789).",
+          "source": {
+            "url": "https://proranktracker.com/plans_and_pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Agency 5k",
+          "monthlyUsd": 299,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "$299/mo monthly; $269/mo annually (~10% off). 5,000 terms. Unlimited users, API access.",
+          "source": {
+            "url": "https://proranktracker.com/plans_and_pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Agency 10k",
+          "monthlyUsd": 549,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "$549/mo monthly; $494/mo annually (~10% off). 10,000 terms. Unlimited users, API access.",
+          "source": {
+            "url": "https://proranktracker.com/plans_and_pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Agency 20k+",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "20,000+ terms; custom/contact-sales high-volume plan (no published flat price).",
+          "source": {
+            "url": "https://proranktracker.com/plans_and_pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": 7,
+        "keyIntegrations": [
+          "Looker Studio",
+          "Google Analytics",
+          "Google Search Console",
+          "API",
+          "MyRanks client portal"
+        ],
+        "limits": [
+          "Starter: 1,000 terms",
+          "Pro: 2,000 terms",
+          "Agency tiers: 3,000-15,000 terms (published), 20,000+ custom"
+        ],
+        "keyFeatures": [
+          "Term-based billing (keyword x URL x search engine)",
+          "AI search tracking (2 terms per AI prompt/URL/platform)",
+          "MyRanks white-label client portal",
+          "Update-on-demand ranking refresh (Agency)"
+        ],
+        "bestFor": [
+          "agencies managing client portfolios",
+          "multi-URL keyword tracking",
+          "white-label reporting"
+        ],
+        "sources": [
+          {
+            "url": "https://proranktracker.com/plans_and_pricing",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "All pricing tiers fetched from proranktracker.com/plans_and_pricing. Agency sub-tiers 3k/5k/10k confirmed; intermediate 4k/6k/8k/15k steps also exist; 20,000+ is custom/contact-sales."
+      }
+    }
+  ]
+}

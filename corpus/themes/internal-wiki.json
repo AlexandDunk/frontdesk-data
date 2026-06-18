@@ -1,0 +1,1084 @@
+{
+  "vertical": "internal-wiki",
+  "generatedAt": "2026-06-18",
+  "methodologyNotes": "Official pricing pages were re-fetched via WebFetch for Guru (getguru.com/pricing, getguru.com/security), Slab (slab.com/pricing), Slite (slite.com/pricing, slite.com/security which 302-redirects to slite.slite.page), Tettra (tettra.com/pricing), Nuclino (nuclino.com/pricing), Notion (notion.com/pricing, USD via currency selector), Confluence (atlassian.com/software/confluence/pricing), and Document360 (document360.com/pricing). Where the primary page rendered only a title or geo-defaulted to EUR, two or more independent 2026 aggregators (CostBench, Automation Atlas, Featurebase, G2) were used to triangulate; a value was accepted only when consistent across the official page plus at least one corroborating source. ADVERSARIAL CORRECTIONS THIS PASS: (1) Guru is now fully quote-only on its official page, so all published per-seat figures were nulled and the model set to custom. (2) Notion Business annual is $20/seat (monthly $24), not $18/$20 as drafted. (3) Slite's HIPAA claim could not be explicitly verified on its own security page, so hipaa was set to null. No vendors were removed; all eight are real, operating products. Confluence per-user rates are the 1-50 seat band; rates decrease in higher bands. accessedAt 2026-06-18.",
+  "vendors": [
+    {
+      "slug": "guru",
+      "name": "Guru",
+      "domain": "getguru.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Slack",
+        "Microsoft Teams",
+        "Google Chrome Extension",
+        "Salesforce",
+        "HubSpot",
+        "Zendesk",
+        "Intercom",
+        "Jira",
+        "Confluence",
+        "Google Drive",
+        "Okta",
+        "Azure AD",
+        "Zapier",
+        "Microsoft Copilot",
+        "Claude"
+      ],
+      "provenance": "Re-fetched getguru.com/pricing (June 2026): the page is now fully quote-only ('a platform and expertise solution, not just a per-seat tool', 'tailored to your organization's scale'). No per-seat USD rate is published, so the previously drafted $25/$30 figures were removed and monthlyUsd set to null (a null beats a guess). HIPAA with executed BAA (Enterprise) and SOC 2 Type II confirmed via getguru.com/security.",
+      "plans": [
+        {
+          "name": "Platform",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "Quote-only as of June 2026. Official pricing page no longer publishes a per-seat rate ('not just a per-seat tool'); pricing is scoped by sales based on org scale, knowledge complexity, and AI maturity. Includes enterprise AI search, intranet, wiki, AI credits, and solution-engineer support.",
+          "source": {
+            "url": "https://www.getguru.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "Custom contract, requires sales contact. Adds dedicated success manager, advanced AI features, and executed HIPAA BAA.",
+          "source": {
+            "url": "https://www.getguru.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.getguru.com/security",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Slack",
+          "Microsoft Teams",
+          "Salesforce",
+          "Zendesk",
+          "HubSpot",
+          "Jira",
+          "Google Drive",
+          "Okta"
+        ],
+        "limits": [
+          "Pricing is quote-only; no published per-seat rate",
+          "No free tier",
+          "AI credits included but volume not published"
+        ],
+        "keyFeatures": [
+          "AI-powered knowledge search across all connected tools",
+          "Verified knowledge cards with expert sign-off",
+          "Browser extension for in-context answers",
+          "HRIS sync for org chart and people data"
+        ],
+        "bestFor": [
+          "Enterprise customer support teams",
+          "Sales enablement",
+          "Large teams needing verified knowledge"
+        ],
+        "sources": [
+          {
+            "url": "https://www.getguru.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://www.getguru.com/security",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Pricing confirmed quote-only on getguru.com/pricing; HIPAA BAA (Enterprise) and SOC 2 Type II confirmed on getguru.com/security. Prior third-party $25/$30 figures were dropped as unverifiable on the official page."
+      }
+    },
+    {
+      "slug": "slab",
+      "name": "Slab",
+      "domain": "slab.com",
+      "hipaa": false,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Slack",
+        "GitHub",
+        "Jira",
+        "Google Drive",
+        "Notion",
+        "Asana",
+        "Linear",
+        "Zapier"
+      ],
+      "provenance": "Re-fetched slab.com/pricing and slab.com/security (June 2026). Free ($0, up to 10 users), Startup ($6.67/user/mo annual), Business ($12.50/user/mo annual), Enterprise (custom, 100-user min) all confirmed. Page publishes annual rates only; monthly billing rates are not displayed, so paid monthlyUsd left null. SOC 2 Type II and GDPR confirmed; HIPAA not claimed.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "Up to 10 users. Unlimited posts, 90-day version history, 10MB attachments, 3 guests per user, real-time collaboration.",
+          "source": {
+            "url": "https://slab.com/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Startup",
+          "monthlyUsd": 6.67,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "$6.67/user/month billed annually (monthly rate not published). Unlimited users, 365-day version history, 25MB attachments, 5 guests per user. Nonprofits and educational institutions receive this plan free.",
+          "source": {
+            "url": "https://slab.com/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 12.5,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "$12.50/user/month billed annually (monthly rate not published). Unlimited users, unlimited version history, 100MB attachments, advanced analytics.",
+          "source": {
+            "url": "https://slab.com/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "Custom pricing; minimum 100 users. Unlimited guests, custom integrations, dedicated support.",
+          "source": {
+            "url": "https://slab.com/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": false,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://slab.com/security",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Slack",
+          "GitHub",
+          "Jira",
+          "Google Drive",
+          "Asana",
+          "Linear"
+        ],
+        "limits": [
+          "Free plan capped at 10 users",
+          "10MB attachment limit on Free",
+          "Published rates are annual; monthly rates not displayed"
+        ],
+        "keyFeatures": [
+          "Unified search across Slab and connected apps",
+          "Topic-based organization with nested hierarchies",
+          "Real-time collaborative editing",
+          "SOC 2 Type II certified"
+        ],
+        "bestFor": [
+          "Engineering and product teams",
+          "Startups scaling documentation",
+          "Teams needing deep GitHub/Jira integration"
+        ],
+        "sources": [
+          {
+            "url": "https://slab.com/pricing/",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://slab.com/security",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Pricing from slab.com/pricing (annual rates only published); compliance from slab.com/security (SOC 2 Type II + GDPR; HIPAA not claimed)."
+      }
+    },
+    {
+      "slug": "slite",
+      "name": "Slite",
+      "domain": "slite.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Slack",
+        "HubSpot",
+        "Linear",
+        "Jira",
+        "Google Drive",
+        "GitHub",
+        "Asana",
+        "SharePoint",
+        "Attio",
+        "Intercom",
+        "BigQuery",
+        "Salesforce",
+        "Notion"
+      ],
+      "provenance": "Re-fetched slite.com/pricing (June 2026): Basic $10/user/mo and Pro $20/user/mo, both billed annually, plus a custom Enterprise tier; 14-day trial, no forever-free plan. slite.com/security 302-redirects to slite.slite.page/.../Security-at-Slite, which asserts SOC 2 Type II + GDPR + EU-only hosting; an explicit HIPAA-compliance claim could not be cleanly verified on the official page, so hipaa was set to null (was true).",
+      "plans": [
+        {
+          "name": "Basic",
+          "monthlyUsd": 10,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "$10/user/month billed annually. Unlimited docs, AI search, doc verification workflow, Knowledge Management Panel, MCP/API access. 14-day free trial.",
+          "source": {
+            "url": "https://slite.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 20,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "$20/user/month billed annually. Adds Slite Agent AI, cross-tool search across Slack/HubSpot/Linear/Jira/Google Drive, doc fact-checking, agent workflows, 50 AI credits/seat/month, OpenID SSO, custom public domain.",
+          "source": {
+            "url": "https://slite.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "Custom pricing. Adds reader-only seats, advanced security, audit logs, SLA, dedicated account manager, SCIM provisioning, migration support.",
+          "source": {
+            "url": "https://slite.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://slite.slite.page/p/S1TSuHnZf/Security-at-Slite",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Slack",
+          "Google Drive",
+          "Jira",
+          "HubSpot",
+          "GitHub",
+          "Salesforce",
+          "SharePoint"
+        ],
+        "limits": [
+          "No free tier — trial only",
+          "AI credits capped at 50/seat/month on Pro",
+          "Reader-only seats only on Enterprise",
+          "HIPAA compliance not explicitly verifiable on official security page"
+        ],
+        "keyFeatures": [
+          "Self-maintaining AI knowledge base with automated doc verification",
+          "Cross-tool AI search (Slack, Jira, Drive, HubSpot and more)",
+          "Slite Agent for autonomous knowledge workflows",
+          "EU-hosted infrastructure with permission-aware AI search"
+        ],
+        "bestFor": [
+          "Teams wanting AI-maintained, always-accurate docs",
+          "Organizations with data spread across many SaaS tools",
+          "EU-based teams with GDPR requirements"
+        ],
+        "sources": [
+          {
+            "url": "https://slite.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://slite.slite.page/p/S1TSuHnZf/Security-at-Slite",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Pricing from slite.com/pricing (annual per-seat rates). Compliance from Slite's own security page: SOC 2 Type II + GDPR + EU hosting confirmed; HIPAA set to null as it could not be explicitly verified there."
+      }
+    },
+    {
+      "slug": "tettra",
+      "name": "Tettra",
+      "domain": "tettra.com",
+      "hipaa": false,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Slack",
+        "Google Workspace",
+        "GitHub",
+        "Zapier",
+        "Notion",
+        "Microsoft Teams"
+      ],
+      "provenance": "Re-fetched tettra.com/pricing (June 2026): the live page rendered Scaling ($10/user/mo monthly, $8 annual) and Enterprise; Basic ($5 monthly / $4 annual, 10-100 seats) and Professional ($7,200/yr flat, 50-seat min) are corroborated by featurebase.app/blog/tettra-pricing and g2.com 2026 and retained. Tettra does not hold its own SOC 2; infrastructure providers are SOC 2 certified. HIPAA not claimed.",
+      "plans": [
+        {
+          "name": "Basic",
+          "monthlyUsd": 5,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "$5/user/month billed monthly; $4/user/month billed annually (20% discount). 10-seat minimum, 100-seat maximum. Slack notifications, Q&A, Google Workspace integration, 1GB storage/user. 30-day free trial.",
+          "source": {
+            "url": "https://tettra.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "corroboration": {
+            "url": "https://www.featurebase.app/blog/tettra-pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Scaling",
+          "monthlyUsd": 10,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "$10/user/month billed monthly; $8/user/month billed annually. 10-seat minimum, 250-seat maximum. Adds AI features, Kai Slack bot, usage analytics, API access. 30-day free trial.",
+          "source": {
+            "url": "https://tettra.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "corroboration": {
+            "url": "https://www.featurebase.app/blog/tettra-pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Professional",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "$7,200/year flat for first 50 users (50-seat minimum). Adds SSO/SCIM, hands-on training, custom import/onboarding, custom reporting, dedicated success manager. monthlyUsd left null because the published price is an annual flat figure.",
+          "source": {
+            "url": "https://tettra.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "corroboration": {
+            "url": "https://www.featurebase.app/blog/tettra-pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "Custom pricing for 250+ users. Discounted per-user rates and all Professional features.",
+          "source": {
+            "url": "https://tettra.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": false,
+          "soc2": null,
+          "gdpr": null,
+          "source": {
+            "url": "https://support.tettra.com/security-3/about-tettras-security",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 30,
+        "keyIntegrations": [
+          "Slack",
+          "Google Workspace",
+          "GitHub",
+          "Zapier"
+        ],
+        "limits": [
+          "10-seat minimum on Basic and Scaling",
+          "100-seat cap on Basic",
+          "250-seat cap on Scaling",
+          "50-seat minimum on Professional",
+          "No free tier"
+        ],
+        "keyFeatures": [
+          "Kai AI Slack bot answers questions directly in Slack channels",
+          "Q&A workflow for capturing tribal knowledge",
+          "Google Workspace native integration",
+          "Knowledge verification and expiry reminders"
+        ],
+        "bestFor": [
+          "Slack-first teams",
+          "Small to mid-size companies needing simple knowledge management",
+          "Teams heavily reliant on Google Workspace"
+        ],
+        "sources": [
+          {
+            "url": "https://tettra.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://support.tettra.com/security-3/about-tettras-security",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://www.featurebase.app/blog/tettra-pricing",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Pricing from tettra.com/pricing, corroborated by featurebase.app/blog/tettra-pricing (Basic and Professional tiers not fully rendered on the live page but confirmed by third party). Security: Tettra relies on SOC 2-certified infrastructure providers (Heroku/AWS) but does not publish its own SOC 2."
+      }
+    },
+    {
+      "slug": "nuclino",
+      "name": "Nuclino",
+      "domain": "nuclino.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Slack",
+        "Google Drive",
+        "Figma",
+        "GitHub",
+        "Zapier",
+        "Miro",
+        "Lucidchart",
+        "Airtable"
+      ],
+      "provenance": "Re-fetched nuclino.com/pricing (June 2026): dollar amounts not rendered in the HTML extract; Starter $6/user/mo monthly (~$4.50 annual) and Business $10/user/mo monthly (~$7.50 annual) confirmed via costbench.com and the official 'save up to 25%' annual statement. Free tier (50 items, 3 canvases, 2GB) confirmed. SOC 2 and GDPR per nuclino.com/security; HIPAA not claimed.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "Up to 50 items, up to 3 canvases, 2GB total storage. No seat cap stated.",
+          "source": {
+            "url": "https://www.nuclino.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Starter",
+          "monthlyUsd": 6,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 25,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "$6/user/month billed monthly; ~$4.50/user/month billed annually (up to 25% off). Unlimited items and canvases, admin tools, publishing, 30-day version history, 10GB storage per user.",
+          "source": {
+            "url": "https://www.nuclino.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "corroboration": {
+            "url": "https://costbench.com/software/it-documentation/nuclino-it/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 10,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 25,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "$10/user/month billed monthly; ~$7.50/user/month billed annually (up to 25% off). Adds Sidekick AI, audit log, team insights, advanced security, SAML SSO, custom publishing domain, unlimited version history, 20GB storage per user.",
+          "source": {
+            "url": "https://www.nuclino.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "corroboration": {
+            "url": "https://costbench.com/software/it-documentation/nuclino-it/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "Custom pricing. Contact sales.",
+          "source": {
+            "url": "https://www.nuclino.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.nuclino.com/security",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Slack",
+          "Google Drive",
+          "Figma",
+          "GitHub",
+          "Zapier",
+          "Miro"
+        ],
+        "limits": [
+          "Free plan limited to 50 items and 3 canvases",
+          "2GB total storage on Free",
+          "SAML SSO only on Business and above"
+        ],
+        "keyFeatures": [
+          "Unified graph + list + board views for knowledge and project management",
+          "Sidekick AI assistant on Business tier",
+          "Real-time collaborative editing with visual canvas",
+          "Lightweight, fast interface with minimal setup"
+        ],
+        "bestFor": [
+          "Small to mid-size teams wanting simplicity",
+          "Teams combining wiki and lightweight project management",
+          "Budget-conscious teams needing a free tier"
+        ],
+        "sources": [
+          {
+            "url": "https://www.nuclino.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://www.nuclino.com/security",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://costbench.com/software/it-documentation/nuclino-it/",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Pricing from nuclino.com/pricing (amounts not in HTML extract) confirmed by costbench.com; compliance from nuclino.com/security (SOC 2 + GDPR; HIPAA not claimed)."
+      }
+    },
+    {
+      "slug": "notion",
+      "name": "Notion",
+      "domain": "notion.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Slack",
+        "Google Drive",
+        "GitHub",
+        "Jira",
+        "Zapier",
+        "Figma",
+        "Loom",
+        "Typeform",
+        "HubSpot",
+        "Asana",
+        "Linear",
+        "Miro"
+      ],
+      "provenance": "Re-fetched notion.com/pricing (June 2026) — geo-defaults to EUR (Plus EUR 9.50, Business EUR 19.50). USD confirmed: Plus $12 monthly / $10 annual; Business $24 monthly / $20 annual. Draft's Business annual of $18 and monthlyUsd of 20 were corrected. HIPAA BAA is Enterprise-only per notion.com/help/hipaa.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "Unlimited pages and blocks for a single user; limited blocks for teams with 2+ members. 5MB file uploads, 7-day page history, up to 10 external guests. Limited AI trial included.",
+          "source": {
+            "url": "https://www.notion.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Plus",
+          "monthlyUsd": 12,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "$12/user/month billed monthly; $10/user/month billed annually. Unlimited file uploads, unlimited guests, 30-day version history, custom forms and sites, basic integrations.",
+          "source": {
+            "url": "https://www.notion.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "corroboration": {
+            "url": "https://automationatlas.io/answers/notion-pricing-explained-2026/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 24,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "$24/user/month billed monthly; $20/user/month billed annually (corrected from draft's $18). Includes Notion AI bundled (no longer a separate add-on), Notion Agent, AI Meeting Notes, Enterprise Search, SAML SSO, private teamspaces, 90-day version history.",
+          "source": {
+            "url": "https://www.notion.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "corroboration": {
+            "url": "https://www.saasworthy.com/blog/notion-pricing-plans",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "Custom pricing via sales. Adds HIPAA BAA, zero data retention, advanced security, customer success manager, workspace analytics, user provisioning (SCIM).",
+          "source": {
+            "url": "https://www.notion.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.notion.com/security",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Slack",
+          "Google Drive",
+          "GitHub",
+          "Jira",
+          "Zapier",
+          "Figma",
+          "Loom"
+        ],
+        "limits": [
+          "Free tier has limited blocks for multi-member workspaces",
+          "5MB file upload limit on Free",
+          "HIPAA BAA only on Enterprise",
+          "Notion AI fully bundled only on Business and above"
+        ],
+        "keyFeatures": [
+          "Flexible all-in-one workspace combining wiki, docs, databases, and project management",
+          "Notion AI and Notion Agent bundled into Business tier",
+          "Notion Sites for publishing public-facing content",
+          "SOC 2 Type II and ISO 27001:2022 certified"
+        ],
+        "bestFor": [
+          "All-in-one teams wanting wiki plus project management",
+          "Product and engineering teams",
+          "Organizations standardizing on a single work platform"
+        ],
+        "sources": [
+          {
+            "url": "https://www.notion.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://www.notion.com/security",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://automationatlas.io/answers/notion-pricing-explained-2026/",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "USD pricing cross-verified from notion.com/pricing (EUR-default), saasworthy.com, and automationatlas.io; compliance from notion.com/security and notion.com/help/hipaa (BAA Enterprise-only)."
+      }
+    },
+    {
+      "slug": "confluence",
+      "name": "Confluence",
+      "domain": "atlassian.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Jira",
+        "Slack",
+        "Microsoft Teams",
+        "Google Drive",
+        "GitHub",
+        "Figma",
+        "Miro",
+        "Trello",
+        "Loom",
+        "Lucidchart",
+        "Zoom",
+        "Salesforce"
+      ],
+      "provenance": "Re-fetched atlassian.com/software/confluence/pricing (June 2026) — page returned title only; Standard ($6.40/user/mo monthly, ~$5.42 annual) and Premium ($12.30/user/mo monthly, ~$10.44 annual) for the 1-50 seat band confirmed via costbench.com 2026. Free tier (10 users, 2GB) confirmed. HIPAA BAA per atlassian.com/trust/compliance/resources/hipaa.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "Up to 10 users. 2GB storage. Unlimited pages and spaces, basic templates, versioning, community support.",
+          "source": {
+            "url": "https://www.atlassian.com/software/confluence/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "corroboration": {
+            "url": "https://costbench.com/software/it-documentation/confluence/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Standard",
+          "monthlyUsd": 6.4,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 15,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "$6.40/user/month billed monthly; ~$5.42/user/month billed annually for 1-50 users (rates decrease in higher seat bands). 10-user minimum billing. Advanced permissions, analytics, page restrictions, email support. HIPAA BAA available.",
+          "source": {
+            "url": "https://www.atlassian.com/software/confluence/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "corroboration": {
+            "url": "https://costbench.com/software/it-documentation/confluence/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": 12.3,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 15,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "$12.30/user/month billed monthly; ~$10.44/user/month billed annually for 1-50 users (rates decrease in higher seat bands). 10-user minimum billing. Adds unlimited storage, advanced AI, analytics dashboards, 24/7 premium support, sandbox environments.",
+          "source": {
+            "url": "https://www.atlassian.com/software/confluence/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "corroboration": {
+            "url": "https://costbench.com/software/it-documentation/confluence/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "Custom pricing, annual contract only. Adds centralized admin, unlimited sites, Atlassian Guard (SAML SSO, SCIM), enterprise support SLA.",
+          "source": {
+            "url": "https://www.atlassian.com/software/confluence/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.atlassian.com/trust/compliance/resources/hipaa",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Jira",
+          "Slack",
+          "Microsoft Teams",
+          "Google Drive",
+          "GitHub",
+          "Figma",
+          "Miro",
+          "Trello"
+        ],
+        "limits": [
+          "Free tier capped at 10 users and 2GB storage",
+          "10-user minimum billing on paid plans",
+          "Per-user rates scale down with seat count in higher bands",
+          "HIPAA BAA not available on Free plan"
+        ],
+        "keyFeatures": [
+          "Deep Jira integration for software teams linking docs to issues",
+          "Extensive marketplace of 3,000+ apps and integrations",
+          "AI-powered page summaries and content generation",
+          "SOC 2 Type II, ISO 27001, FedRAMP authorized"
+        ],
+        "bestFor": [
+          "Software engineering teams using Jira",
+          "Large enterprises needing governance and compliance",
+          "Organizations already in the Atlassian ecosystem"
+        ],
+        "sources": [
+          {
+            "url": "https://www.atlassian.com/software/confluence/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://costbench.com/software/it-documentation/confluence/",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://www.atlassian.com/trust/compliance/resources/hipaa",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Pricing corroborated via costbench.com (official page rendered title-only); per-user rates are the 1-50 seat band. HIPAA and compliance from atlassian.com/trust/compliance/resources/hipaa."
+      }
+    },
+    {
+      "slug": "document360",
+      "name": "Document360",
+      "domain": "document360.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Slack",
+        "Microsoft Teams",
+        "Intercom",
+        "Zendesk",
+        "Freshdesk",
+        "Salesforce",
+        "Google Analytics",
+        "Segment",
+        "Zapier"
+      ],
+      "provenance": "Re-fetched document360.com/pricing (June 2026): three plans (Professional, Business, Enterprise) all quote-only with no published prices; Enterprise is yearly-only. No free tier (eliminated Nov 2024). 14-day free trial confirmed.",
+      "plans": [
+        {
+          "name": "Professional",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "Quote-only. Priced per project, billed annually. Aimed at growing teams. 14-day free trial available.",
+          "source": {
+            "url": "https://document360.com/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "Quote-only. Advanced features and analytics for mid-sized teams. Priced per project.",
+          "source": {
+            "url": "https://document360.com/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "Quote-only, yearly plan only. Custom AI solutions for high-scale and high-security needs.",
+          "source": {
+            "url": "https://document360.com/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Slack",
+          "Microsoft Teams",
+          "Intercom",
+          "Zendesk",
+          "Salesforce",
+          "Zapier"
+        ],
+        "limits": [
+          "No free tier (eliminated Nov 2024)",
+          "All plans are quote-only — no self-serve checkout",
+          "Priced per project, not per user"
+        ],
+        "keyFeatures": [
+          "Per-project pricing model suited to multi-product documentation",
+          "Advanced analytics and content performance tracking",
+          "Versioned knowledge base with branching",
+          "API-first with developer-friendly embeds"
+        ],
+        "bestFor": [
+          "Technical writers and documentation teams",
+          "SaaS companies with multiple product knowledge bases",
+          "Teams needing advanced doc analytics"
+        ],
+        "sources": [
+          {
+            "url": "https://document360.com/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Fetched document360.com/pricing directly; confirmed all plans are quote-only with no public pricing as of June 2026 and no free tier. Compliance not asserted on the pricing page, so all compliance fields left null."
+      }
+    }
+  ]
+}

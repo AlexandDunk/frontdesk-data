@@ -1,0 +1,1150 @@
+{
+  "vertical": "whatsapp-business",
+  "generatedAt": "2026-06-18",
+  "methodologyNotes": "Pricing re-verified by fetching each vendor's official pricing page via WebFetch (wati.io/pricing, respond.io/pricing + respond.io/security, trengo.com/pricing, aisensy.com/pricing/usd, gallabox.com/pricing, doubletick.io/pricing, zoko.io/pricing, 360dialog.com/pricing + docs.360dialog.com/docs/get-started/pricing, twilio.com/en-us/whatsapp/pricing). WATI's pricing page renders prices via dynamic JS not extractable by WebFetch; prices were corroborated across multiple independent analyses (costbench.com, flowcart.ai) plus WATI help-center references and corrected from the draft's outdated $29/$99/$249 to the current $59/$119/$279 (annual-billing headline). Interakt's USD page (interakt.shop/pricing-us) returns navigation-only content via WebFetch; entry plan ~$12/mo is corroborated, but the Growth-tier USD figure is reported inconsistently across third-party sources ($35, $41, and $55) and could not be confirmed on an official live page, so it is set to null per NULL-BEATS-A-GUESS rather than asserting an unverified number. Monthly prices reflect base platform fee only; Meta per-conversation/template charges are excluded from monthlyUsd and noted per plan. Trengo prices are EUR as published; no official USD price exists so monthlyUsd is null with EUR in notes. 360dialog USD prices taken from the official USD toggle in docs.360dialog.com. accessedAt 2026-06-18.",
+  "vendors": [
+    {
+      "slug": "wati",
+      "name": "WATI",
+      "domain": "wati.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "HubSpot",
+        "Shopify",
+        "Salesforce",
+        "WooCommerce",
+        "Zapier",
+        "Google Sheets",
+        "Zoho CRM"
+      ],
+      "provenance": "Plan prices corrected from outdated draft values; current WATI tiers are $59/$119/$279 (annual-billing headline) per costbench.com and flowcart.ai analyses and WATI help center, since wati.io/pricing renders dynamically and is not WebFetch-extractable. GDPR confirmed via support.wati.io help article.",
+      "plans": [
+        {
+          "name": "Growth",
+          "monthlyUsd": 59,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "$59/month is the annual-billing headline; month-to-month is reported higher (~$69). 3 users hard cap (no expansion). Broadcasts and automation triggers capped; AI co-pilot credits included. Meta per-message charges apply separately (WATI applies ~20% markup on Meta rates). Draft's $29/month was outdated/incorrect.",
+          "source": {
+            "url": "https://www.wati.io/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 119,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "$119/month annual-billing headline; month-to-month reported ~$149. 5 users included; additional users $24/user/month; unlimited broadcasts; AI co-pilot credits; integrations including HubSpot. Meta per-message charges apply separately. Draft's $99/month was outdated/incorrect.",
+          "source": {
+            "url": "https://www.wati.io/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 279,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "$279/month annual-billing headline; month-to-month reported ~$349. 5 users included; additional users $69/user/month; unlimited broadcasts with volume discounts; highest AI co-pilot credits; unlimited integrations including Salesforce. Meta per-message charges apply separately. Draft's $249/month was outdated/incorrect.",
+          "source": {
+            "url": "https://www.wati.io/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://support.wati.io/en/articles/11462490-is-wati-gdpr-general-data-protection-regulation-compliant",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 7,
+        "keyIntegrations": [
+          "HubSpot",
+          "Shopify",
+          "Salesforce",
+          "WooCommerce",
+          "Zapier"
+        ],
+        "limits": [
+          "Growth: 3 users hard cap (no expansion)",
+          "Pro: 5 users base; $24/user/month additional",
+          "Business: 5 users base; $69/user/month additional",
+          "~20% markup on Meta per-message rates"
+        ],
+        "keyFeatures": [
+          "Official WhatsApp Business API partner",
+          "AI co-pilot inbox assistant",
+          "Broadcast campaigns with audience segmentation",
+          "No-code automation builder"
+        ],
+        "bestFor": [
+          "SMB sales teams",
+          "e-commerce",
+          "WhatsApp marketing campaigns"
+        ],
+        "sources": [
+          {
+            "url": "https://www.wati.io/pricing/",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://costbench.com/software/live-chat/wati/",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Prices corrected to current $59/$119/$279 (annual headline) per costbench.com and flowcart.ai; compliance from WATI help center."
+      }
+    },
+    {
+      "slug": "respond-io",
+      "name": "Respond.io",
+      "domain": "respond.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "WhatsApp",
+        "Telegram",
+        "Instagram",
+        "Facebook Messenger",
+        "Viber",
+        "LINE",
+        "Zapier",
+        "Make",
+        "HubSpot",
+        "Salesforce",
+        "Shopify",
+        "Slack"
+      ],
+      "provenance": "Pricing fetched from respond.io/pricing on 2026-06-18 (Starter $79, Growth $159, Advanced $279, Enterprise custom — all confirmed); ISO 27001 + GDPR explicitly stated on respond.io/security.",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": 79,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "5 users included; additional users $12/month each; unlimited MACs; team inboxes, mobile app, AI Prompt, basic reports, 2FA. Annual billing saves up to 20% ($948/year). WhatsApp/Meta fees charged separately.",
+          "source": {
+            "url": "https://respond.io/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Growth",
+          "monthlyUsd": 159,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "10 users included; additional users $20/month each; 1,000 Monthly Active Contacts (MACs) included; overage $12/100 MACs; broadcasts, workflows, AI Agents, advanced reports, Zapier/Make, developer API. Annual saves up to 20% ($1,908/year). Meta fees separate.",
+          "source": {
+            "url": "https://respond.io/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Advanced",
+          "monthlyUsd": 279,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "10 users included; additional users $24/month each; 1,000 MACs included; overage $15/100 MACs; phone/email masking, multiple workspaces, webhooks, SSO, custom channels. Annual saves up to 20% ($3,348/year). Meta fees separate.",
+          "source": {
+            "url": "https://respond.io/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "Unlimited users; higher workspace and API rate limits; contact sales for pricing.",
+          "source": {
+            "url": "https://respond.io/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://respond.io/security/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 7,
+        "keyIntegrations": [
+          "WhatsApp",
+          "Telegram",
+          "Instagram",
+          "Facebook Messenger",
+          "HubSpot",
+          "Salesforce",
+          "Zapier",
+          "Make"
+        ],
+        "limits": [
+          "Starter: 5 users; unlimited MACs; $12/user additional",
+          "Growth: 10 users; 1,000 MACs included; $12/100 MACs overage",
+          "Advanced: 10 users; 1,000 MACs included; $15/100 MACs overage"
+        ],
+        "keyFeatures": [
+          "Omnichannel inbox across multiple messaging channels",
+          "AI Agents for automated conversations",
+          "Contact-based billing (MACs model)",
+          "ISO 27001 certified infrastructure"
+        ],
+        "bestFor": [
+          "multi-channel customer support",
+          "enterprise messaging",
+          "sales automation",
+          "omnichannel CX teams"
+        ],
+        "sources": [
+          {
+            "url": "https://respond.io/pricing/",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://respond.io/security/",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Pricing from respond.io/pricing; ISO 27001 + GDPR confirmed on respond.io/security; both fetched 2026-06-18."
+      }
+    },
+    {
+      "slug": "interakt",
+      "name": "Interakt",
+      "domain": "interakt.shop",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Shopify",
+        "WooCommerce",
+        "Zapier",
+        "Zoho CRM",
+        "HubSpot",
+        "Razorpay",
+        "Google Sheets"
+      ],
+      "provenance": "Official USD pricing page (interakt.shop/pricing-us) returns navigation-only content via WebFetch. Entry plan ~$12/mo corroborated by multiple third parties. Growth-tier USD figure reported inconsistently ($35, $41, $55 across sources) with no official live confirmation, so it is set to null. Plan naming also differs across sources (Home vs Starter); kept as published in draft.",
+      "plans": [
+        {
+          "name": "Home",
+          "monthlyUsd": 12,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "~$12/month entry tier (corroborated across respond.io review, hyperleap, prospeo). Unlimited team members; basic automation; basic segmentation; 1 third-party integration; WhatsApp Catalog. Annual discount ~20%. Meta per-message charges apply separately and may include a markup on Meta base rates.",
+          "source": {
+            "url": "https://www.interakt.shop/pricing-us/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Growth",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "USD monthly price could NOT be verified — third-party sources report $35, $41, and $55 with no agreement and the official USD page is not WebFetch-extractable, so monthlyUsd is set to null (draft's $55 was unverified). India pricing is ~Rs 2,499-2,799/month. Advanced automation, chatbots, rich media templates, WhatsApp Payments, conversion analytics. Meta per-message charges apply separately with a markup on Meta base rates.",
+          "source": {
+            "url": "https://www.interakt.shop/pricing-us/",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Shopify",
+          "WooCommerce",
+          "Zapier",
+          "HubSpot",
+          "Razorpay"
+        ],
+        "limits": [
+          "Growth USD price unverified — sources disagree ($35/$41/$55)",
+          "Markup on Meta conversation rates reported on some plans",
+          "Free 14-day trial only — no permanent free tier"
+        ],
+        "keyFeatures": [
+          "WhatsApp Payments integration",
+          "Click-to-WhatsApp ad analytics",
+          "Shopify abandoned cart recovery",
+          "India-first platform with INR and USD pricing"
+        ],
+        "bestFor": [
+          "Indian e-commerce",
+          "D2C brands",
+          "WhatsApp commerce",
+          "Shopify merchants"
+        ],
+        "sources": [
+          {
+            "url": "https://www.interakt.shop/pricing-us/",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Entry plan ~$12/mo corroborated by third-party sources; Growth USD set to null due to conflicting unverified figures; official USD page not WebFetch-extractable."
+      }
+    },
+    {
+      "slug": "trengo",
+      "name": "Trengo",
+      "domain": "trengo.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "HubSpot",
+        "Salesforce",
+        "Pipedrive",
+        "Zoho CRM",
+        "Shopify",
+        "WooCommerce",
+        "Magento 2",
+        "BigCommerce",
+        "Slack",
+        "Zapier",
+        "ActiveCampaign",
+        "Booking.com"
+      ],
+      "provenance": "Pricing fetched from trengo.com/pricing on 2026-06-18 (Boost €299/€349, Pro €499/€599, Enterprise custom — all confirmed); prices are EUR as published, no official USD pricing found so monthlyUsd is null.",
+      "plans": [
+        {
+          "name": "Boost",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 14,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "EUR pricing: €299/month on annual billing (€349/month month-to-month). 10 users included; 6,000 conversations/year (500/month); AI Agent (HelpMate) included; extra conversations €15/100 (annual) or €18/100 (monthly); extra users €25/month (annual) or €30/month (monthly). Meta WhatsApp fees passed through at cost with no markup. No USD price published.",
+          "source": {
+            "url": "https://trengo.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "EUR pricing: €499/month on annual billing (€599/month month-to-month). 20 users included; 18,000 conversations/year (1,500/month); AI, advanced security, integrations, live chat support; extra conversations €15/100 (annual); extra users €40/month (annual). Meta WhatsApp fees passed through at cost with no markup. No USD price published.",
+          "source": {
+            "url": "https://trengo.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "Custom pricing and conversation allowance; tailored solutions with dedicated support.",
+          "source": {
+            "url": "https://trengo.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "HubSpot",
+          "Salesforce",
+          "Shopify",
+          "WooCommerce",
+          "Zapier",
+          "Booking.com"
+        ],
+        "limits": [
+          "Boost: 10 users, 6,000 conversations/year",
+          "Pro: 20 users, 18,000 conversations/year",
+          "Overage charged per 100 conversations",
+          "EUR-only pricing — no USD published"
+        ],
+        "keyFeatures": [
+          "Conversation-based (not seat-based) pricing model",
+          "Deep hospitality vertical integrations (Booking.com, Airbnb, MEWS)",
+          "Omnichannel: WhatsApp, email, voice, Instagram, live chat",
+          "No Meta markup — pass-through at cost"
+        ],
+        "bestFor": [
+          "hospitality and travel",
+          "e-commerce customer support",
+          "European businesses",
+          "omnichannel team inboxes"
+        ],
+        "sources": [
+          {
+            "url": "https://trengo.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Pricing fetched from trengo.com/pricing; EUR-only confirmed; monthlyUsd null as no official USD price exists."
+      }
+    },
+    {
+      "slug": "aisensy",
+      "name": "AiSensy",
+      "domain": "aisensy.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Shopify",
+        "WooCommerce",
+        "Zapier",
+        "HubSpot",
+        "Salesforce",
+        "Razorpay",
+        "Google Sheets",
+        "Pabbly"
+      ],
+      "provenance": "Pricing fetched from aisensy.com/pricing/usd on 2026-06-18; Free Forever confirmed as genuine permanent free plan; Basic $45, Pro $99, 10% annual discount all confirmed.",
+      "plans": [
+        {
+          "name": "Free Forever",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Genuine permanent free plan ($0 Forever). Free WhatsApp API access; $1 conversation credit on signup; unlimited free service conversations; up to 10 tags; 5 custom attributes; free Blue Tick application. Meta per-message charges apply separately; service conversations free per Meta policy.",
+          "source": {
+            "url": "https://aisensy.com/pricing/usd",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Basic",
+          "monthlyUsd": 45,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "1 owner + 5 agents included; additional agents $20/month each; broadcasting, multi-agent chat, smart audience segmentation, Shopify integration, 2,400 messages/minute. Annual price $40.50/month. Meta per-message charges apply separately.",
+          "source": {
+            "url": "https://aisensy.com/pricing/usd",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "1 owner + 5 agents included; additional agents $20/month each; all Basic features plus 100 tags, 20 custom attributes, campaign scheduler, click tracking, smart routing, API access. Annual price $89.10/month. Meta per-message charges apply separately.",
+          "source": {
+            "url": "https://aisensy.com/pricing/usd",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "Custom pricing for 500,000+ messages/month; dedicated account manager, priority support, webhooks, unlimited tags/attributes.",
+          "source": {
+            "url": "https://aisensy.com/pricing/usd",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Shopify",
+          "WooCommerce",
+          "Zapier",
+          "HubSpot",
+          "Razorpay"
+        ],
+        "limits": [
+          "Free: $1 credit only; no broadcasts",
+          "Basic/Pro: 5 agents base; $20/agent/month additional",
+          "No contact count limits stated on platform"
+        ],
+        "keyFeatures": [
+          "Forever-free plan with live WhatsApp API access",
+          "2,400 messages/minute throughput",
+          "India-origin platform with strong SMB focus",
+          "Prepaid model for predictable spend"
+        ],
+        "bestFor": [
+          "startups",
+          "India SMBs",
+          "WhatsApp marketing broadcasts",
+          "e-commerce automation"
+        ],
+        "sources": [
+          {
+            "url": "https://aisensy.com/pricing/usd",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "USD pricing fetched directly from aisensy.com/pricing/usd on 2026-06-18; Free Forever verified as genuine permanent plan."
+      }
+    },
+    {
+      "slug": "gallabox",
+      "name": "Gallabox",
+      "domain": "gallabox.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Shopify",
+        "WooCommerce",
+        "HubSpot",
+        "Zoho CRM",
+        "Zoho Books",
+        "Salesforce",
+        "Razorpay",
+        "Google Sheets",
+        "Zapier",
+        "Calendly",
+        "LeadSquared",
+        "WebEngage"
+      ],
+      "provenance": "Pricing fetched from gallabox.com/pricing on 2026-06-18; USD annual-billing prices Basic $89, Essential $197, Advanced $377 all confirmed; quarterly figures and AI credits confirmed.",
+      "plans": [
+        {
+          "name": "Basic",
+          "monthlyUsd": 89,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 26,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "3 users hard cap; 500 AI credits/month; 1 WhatsApp channel, 1 Instagram, 1 web widget; 10K broadcast contacts. Annual price $89/month (quarterly $120/month). Meta per-message charges apply separately.",
+          "source": {
+            "url": "https://gallabox.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Essential",
+          "monthlyUsd": 197,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 26,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "6 users included; additional users $18/month each; 2,000 AI credits/month; 500K broadcast contacts. Annual price $197/month (quarterly $267/month). Meta per-message charges apply separately.",
+          "source": {
+            "url": "https://gallabox.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Advanced",
+          "monthlyUsd": 377,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 26,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "10 users included; additional users $24/month each; 8,000 AI credits/month; unlimited channels; 1M broadcast contacts. Annual price $377/month (quarterly $507/month). Meta per-message charges apply separately.",
+          "source": {
+            "url": "https://gallabox.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "Custom seats, AI credit pool, unlimited channels, multi-year contracts available.",
+          "source": {
+            "url": "https://gallabox.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Shopify",
+          "HubSpot",
+          "Zoho CRM",
+          "Razorpay",
+          "Zapier",
+          "WooCommerce"
+        ],
+        "limits": [
+          "Basic: 3 users hard cap; 10K broadcast contacts",
+          "Essential: 6 users base; 500K broadcast contacts",
+          "Advanced: 10 users base; 1M broadcast contacts"
+        ],
+        "keyFeatures": [
+          "AI credits built into every plan for chatbot interactions",
+          "Broadcast contact limits by tier",
+          "Multi-channel (WhatsApp + Instagram + web widget)",
+          "India-origin with USD and INR pricing"
+        ],
+        "bestFor": [
+          "growing SMBs",
+          "WhatsApp-first support teams",
+          "India market",
+          "AI-assisted customer service"
+        ],
+        "sources": [
+          {
+            "url": "https://gallabox.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Pricing fetched from gallabox.com/pricing on 2026-06-18; USD annual-equivalent prices confirmed."
+      }
+    },
+    {
+      "slug": "doubletick",
+      "name": "DoubleTick",
+      "domain": "doubletick.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Shopify",
+        "WooCommerce",
+        "Zapier",
+        "Pabbly",
+        "Google Sheets"
+      ],
+      "provenance": "Pricing fetched from doubletick.io/pricing on 2026-06-18; Starter $169.9 and Pro $217.8 (annual-only billing) confirmed; Enterprise custom.",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": 169.9,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Billed annually only (no monthly option stated); 5 agents included; unlimited messages, conversations, and customers; team inbox, bulk broadcasts, customer segmentation, basic analytics; 10 broadcast schedules/month. WhatsApp conversation charges apply separately per Meta rate card.",
+          "source": {
+            "url": "https://doubletick.io/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 217.8,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Billed annually only; 10 agents included; everything in Starter plus roles/permissions, number masking, automated ordering bot, third-party integrations, developer API; 20 broadcast schedules/month. WhatsApp conversation charges apply separately per Meta rate card.",
+          "source": {
+            "url": "https://doubletick.io/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "Custom pricing per agent; complex journeys, special customizations, AI/ChatGPT bot support; 100 broadcast schedules/month.",
+          "source": {
+            "url": "https://doubletick.io/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Shopify",
+          "WooCommerce",
+          "Zapier",
+          "Google Sheets"
+        ],
+        "limits": [
+          "Annual-only billing",
+          "Starter: 5 agents; 10 broadcast schedules",
+          "Pro: 10 agents; 20 broadcast schedules"
+        ],
+        "keyFeatures": [
+          "Unlimited messages and contacts on all plans",
+          "Automated ordering bot on Pro",
+          "Free onboarding with WhatsApp registration assistance",
+          "Number masking on Pro+"
+        ],
+        "bestFor": [
+          "WhatsApp sales teams",
+          "order management",
+          "India SMBs",
+          "simple chatbot automation"
+        ],
+        "sources": [
+          {
+            "url": "https://doubletick.io/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Pricing fetched from doubletick.io/pricing on 2026-06-18; annual-only billing confirmed."
+      }
+    },
+    {
+      "slug": "zoko",
+      "name": "Zoko",
+      "domain": "zoko.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Shopify",
+        "WooCommerce",
+        "Klaviyo",
+        "Gorgias",
+        "Zapier",
+        "Facebook",
+        "Instagram"
+      ],
+      "provenance": "Pricing fetched from zoko.io/pricing on 2026-06-18; Starter $49.99, Plus $79.99, Elite $139.99, Max $499.99 all confirmed including conversation allowances and overage rates.",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": 49.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Unlimited agents; $0.015/conversation markup on all conversations (no free conversation tier); Instagram add-on $9.99/month; 7-day free trial. Meta per-conversation charges apply separately on top of Zoko markup.",
+          "source": {
+            "url": "https://www.zoko.io/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Plus",
+          "monthlyUsd": 79.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "5 agents included; $15/agent additional; 5,000 conversations/month with no Zoko markup; $0.00199/conversation overage beyond 5K; 7-day free trial. Meta per-conversation charges apply separately.",
+          "source": {
+            "url": "https://www.zoko.io/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Elite",
+          "monthlyUsd": 139.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "10 agents included; $12/agent additional; 100,000 conversations/month with no Zoko markup; $0.00099/conversation overage beyond 100K; 7-day free trial. Meta per-conversation charges apply separately.",
+          "source": {
+            "url": "https://www.zoko.io/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Max",
+          "monthlyUsd": 499.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "30 agents included; $9/agent additional; 5,000,000 conversations/month with no Zoko markup; $0.00049/conversation overage beyond 5M; 7-day free trial. Meta per-conversation charges apply separately.",
+          "source": {
+            "url": "https://www.zoko.io/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": 7,
+        "keyIntegrations": [
+          "Shopify",
+          "WooCommerce",
+          "Klaviyo",
+          "Gorgias",
+          "Zapier"
+        ],
+        "limits": [
+          "Starter: $0.015/conversation markup on all; unlimited agents",
+          "Plus: 5K free conversations; $0.00199 overage",
+          "Elite: 100K free conversations; $0.00099 overage",
+          "Max: 5M free conversations; $0.00049 overage"
+        ],
+        "keyFeatures": [
+          "Transparent conversation-based pricing with tiered markup model",
+          "Shopify catalog sync for WhatsApp commerce",
+          "Zoko AI Agents ($24.99/month each)",
+          "Prepaid billing model"
+        ],
+        "bestFor": [
+          "Shopify merchants",
+          "WhatsApp commerce",
+          "high-volume messaging",
+          "e-commerce sales via WhatsApp"
+        ],
+        "sources": [
+          {
+            "url": "https://www.zoko.io/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Pricing fetched directly from zoko.io/pricing on 2026-06-18; conversation markup structure confirmed."
+      }
+    },
+    {
+      "slug": "360dialog",
+      "name": "360dialog",
+      "domain": "360dialog.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "HubSpot",
+        "Salesforce",
+        "Zapier",
+        "Make",
+        "Kommo",
+        "Brevo"
+      ],
+      "provenance": "Pricing fetched from 360dialog.com/pricing and docs.360dialog.com/docs/get-started/pricing on 2026-06-18; USD prices (Regular $59, Premium $119, High Throughput $299) confirmed from the official USD toggle; EUR equivalents €49/€99/€249.",
+      "plans": [
+        {
+          "name": "Regular Channel",
+          "monthlyUsd": 59,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "$59/month (€49/month) per WhatsApp number; API-only access (no inbox, no CRM); ~80 messages/second throughput; 24/7 chat support; month-to-month with zero lock-in. Meta per-message fees charged separately at official Meta rates with no markup (except 7% surcharge if standard /messages endpoint used instead of Marketing Messages API).",
+          "source": {
+            "url": "https://docs.360dialog.com/docs/get-started/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Premium Channel",
+          "monthlyUsd": 119,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "$119/month (€99/month) per WhatsApp number; enhanced 24/7 chat support with faster first-response SLA; account pre-verification; credit line access. Meta per-message fees charged separately.",
+          "source": {
+            "url": "https://docs.360dialog.com/docs/get-started/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "High Throughput Channel",
+          "monthlyUsd": 299,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "$299/month (€249/month) per WhatsApp number; up to 1,000 messages/second throughput; for very high-volume senders. Meta per-message fees charged separately.",
+          "source": {
+            "url": "https://docs.360dialog.com/docs/get-started/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "HubSpot",
+          "Salesforce",
+          "Zapier",
+          "Make"
+        ],
+        "limits": [
+          "API-only: no built-in inbox, CRM, or template builder",
+          "Per-number pricing — each WhatsApp number billed separately",
+          "7% surcharge on standard /messages endpoint vs. Marketing Messages API"
+        ],
+        "keyFeatures": [
+          "Pure API access — BSP infrastructure layer only",
+          "1,000 msg/sec throughput on High Throughput tier",
+          "Zero lock-in, month-to-month billing",
+          "No markup on Meta rates (official pass-through)"
+        ],
+        "bestFor": [
+          "developers building custom WhatsApp apps",
+          "BSP partners",
+          "ISVs needing raw API access",
+          "high-throughput enterprise messaging"
+        ],
+        "sources": [
+          {
+            "url": "https://docs.360dialog.com/docs/get-started/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://360dialog.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Pricing fetched from 360dialog.com/pricing and docs.360dialog.com pricing documentation on 2026-06-18; USD figures confirmed from official USD toggle."
+      }
+    },
+    {
+      "slug": "twilio-whatsapp",
+      "name": "Twilio (WhatsApp)",
+      "domain": "twilio.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Salesforce",
+        "HubSpot",
+        "Zendesk",
+        "Segment",
+        "AWS",
+        "Google Cloud",
+        "Stripe",
+        "Shopify"
+      ],
+      "provenance": "Pricing fetched from twilio.com/en-us/whatsapp/pricing on 2026-06-18; confirmed pay-as-you-go with no monthly platform fee, $0.005/message Twilio fee, Meta template fees passed through.",
+      "plans": [
+        {
+          "name": "Pay-As-You-Go",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_message",
+          "setupFeeUsd": 0,
+          "notes": "No monthly subscription/platform fee; $0.005/message (inbound or outbound) Twilio fee; Meta template fees passed through separately: Utility $0.0034/message (free in 24h service window), Authentication $0.0034/message, Marketing $0 Meta fee, Free-form/service $0 Meta fee. Messaging Engagement Suite add-on: $0.015/message (first 1,000/month free). Failed message fee: $0.001/message.",
+          "source": {
+            "url": "https://www.twilio.com/en-us/whatsapp/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Salesforce",
+          "Zendesk",
+          "Segment",
+          "AWS",
+          "Stripe"
+        ],
+        "limits": [
+          "No monthly minimum but fully metered — costs scale with usage",
+          "No built-in inbox or CRM — requires custom development or third-party integration",
+          "Meta template fees passed through on top of Twilio's $0.005/msg fee"
+        ],
+        "keyFeatures": [
+          "True pay-as-you-go with no monthly minimum",
+          "Programmable API for full custom development",
+          "Twilio's global telephony and messaging infrastructure",
+          "Twilio Segment, Flex, and Studio integration"
+        ],
+        "bestFor": [
+          "developers",
+          "enterprise custom builds",
+          "multi-channel programmatic messaging",
+          "high-scale transactional WhatsApp"
+        ],
+        "sources": [
+          {
+            "url": "https://www.twilio.com/en-us/whatsapp/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Per-message pricing fetched directly from twilio.com/en-us/whatsapp/pricing on 2026-06-18; no monthly platform fee confirmed."
+      }
+    }
+  ]
+}
