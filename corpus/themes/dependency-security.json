@@ -1,0 +1,856 @@
+{
+  "vertical": "dependency-security",
+  "generatedAt": "2026-06-18",
+  "methodologyNotes": "Pricing re-verified via WebFetch against each vendor's official pricing page (snyk.io/plans, socket.dev/pricing, mend.io/pricing, debricked.com/pricing, fossa.com/pricing, endorlabs.com/pricing) on 2026-06-18, plus vendor trust/security pages and the cited compliance blog posts. Where a tier is sales-quote-only with no published number, monthlyUsd is null (no estimates). Annual-only prices are reported as their monthly-equivalent with a note. Debricked's page is live and now branded OpenText Fortify SCA / 'Debricked by OpenText'; plan structure and prices unchanged from the draft. All compliance flags set true only where the vendor explicitly states the certification; GDPR/HIPAA left null where not explicitly claimed. accessedAt 2026-06-18.",
+  "vendors": [
+    {
+      "slug": "snyk",
+      "name": "Snyk",
+      "domain": "snyk.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "GitHub",
+        "GitLab",
+        "Bitbucket",
+        "Azure Repos",
+        "GitHub Enterprise Server",
+        "Bitbucket Data Center",
+        "GitHub Actions",
+        "GitLab CI",
+        "Jenkins",
+        "CircleCI",
+        "Azure Pipelines",
+        "AWS CodePipeline",
+        "Jira",
+        "Slack",
+        "VS Code",
+        "IntelliJ",
+        "Eclipse",
+        "Docker Hub",
+        "Amazon ECR",
+        "Kubernetes",
+        "ServiceNow",
+        "Terraform Cloud"
+      ],
+      "provenance": "Pricing re-verified at snyk.io/plans on 2026-06-18; compliance from snyk.io/security. Snyk states SOC 2 Type II (assessed by Schellman) and ISO 27001/27017; HIPAA not listed. Prices: Free $0, Team $25/dev/mo (min 5, max 10), Ignite $1,260/dev/yr (=$105/mo), Enterprise quote-only.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Unlimited contributing developers; 200 Open Source tests/month, 100 Code tests/month, 300 IaC tests/month, 100 Container tests/month. No credit card required.",
+          "source": {
+            "url": "https://snyk.io/plans/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Team",
+          "monthlyUsd": 25,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 8,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "Starting at $25 per contributing developer/month. Minimum 5, maximum 10 contributing developers per org. 1,000 Open Source tests/month, up to 1,000 Code tests/month, unlimited IaC and Container tests. 1 month free with annual billing (~8% effective discount).",
+          "source": {
+            "url": "https://snyk.io/plans/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Ignite",
+          "monthlyUsd": 105,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "$1,260/year per contributing developer (billed annually only); $105/mo monthly-equivalent. Up to 50 contributing developers. Unlimited tests across all products. 10 DAST targets included.",
+          "source": {
+            "url": "https://snyk.io/plans/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "Custom pricing, contact sales. Unlimited contributing developers, unlimited tests, FedRAMP compliance, enhanced support.",
+          "source": {
+            "url": "https://snyk.io/plans/",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://snyk.io/security/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "GitHub",
+          "GitLab",
+          "Bitbucket",
+          "Jira",
+          "Jenkins",
+          "VS Code",
+          "IntelliJ",
+          "Kubernetes",
+          "Terraform Cloud"
+        ],
+        "limits": [
+          "Free: 200 Open Source tests/month, 100 Code tests/month, 300 IaC tests/month, 100 Container tests/month",
+          "Team: min 5 / max 10 contributing developers per org, 1,000 Open Source tests/month",
+          "Ignite: up to 50 contributing developers, annual billing required"
+        ],
+        "keyFeatures": [
+          "Developer-first SCA with IDE and CLI integrations",
+          "AI-assisted remediation with fix pull requests",
+          "Reachability analysis to prioritize exploitable vulnerabilities",
+          "Unified platform covering Open Source, Code (SAST), IaC, and Container scanning"
+        ],
+        "bestFor": [
+          "developer-first SCA",
+          "multi-product AppSec platform",
+          "open-source vulnerability management",
+          "DevSecOps teams"
+        ],
+        "sources": [
+          {
+            "url": "https://snyk.io/plans/",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://snyk.io/security/",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Pricing from snyk.io/plans; compliance from snyk.io/security. SOC 2 Type II confirmed (Schellman); GDPR commitment stated; HIPAA not mentioned. Note: Snyk's security page says it offers no formal certificate but SOC 2 report is available on request."
+      }
+    },
+    {
+      "slug": "socket",
+      "name": "Socket",
+      "domain": "socket.dev",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "GitHub",
+        "GitLab",
+        "Bitbucket",
+        "Azure Repos",
+        "GitHub Actions",
+        "GitLab CI",
+        "Jenkins",
+        "CircleCI",
+        "Azure Pipelines",
+        "AWS CodePipeline",
+        "Bitbucket Pipelines",
+        "VS Code",
+        "JetBrains",
+        "Eclipse",
+        "Cursor",
+        "Jira",
+        "Linear",
+        "Slack",
+        "Microsoft Teams",
+        "PagerDuty",
+        "ServiceNow",
+        "Splunk",
+        "Datadog",
+        "Microsoft Sentinel",
+        "Vanta",
+        "Drata"
+      ],
+      "provenance": "Pricing re-verified at socket.dev/pricing on 2026-06-18. Free $0, Team $25/dev/mo, Business $50/dev/mo, Enterprise quote-only; 20% annual discount on Team and Business. SOC 2 confirmed via socket.dev blog (page notes Type II since achieved). GDPR/HIPAA not explicitly stated.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "1,000 scans/month, up to 5 members, 1 repository label. Detects 70+ risk types including malware, vulnerabilities, and license issues. Permanently free for open-source projects.",
+          "source": {
+            "url": "https://socket.dev/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Team",
+          "monthlyUsd": 25,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "Per developer/month. Up to 10 members, 5,000 scans/month, 3 repository labels. Includes reachability analysis. 20% discount with annual billing.",
+          "source": {
+            "url": "https://socket.dev/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 50,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "Per developer/month. Unlimited members and scans, 3 repository labels. SBOM support, compliance integrations, GitHub Actions scanning. 20% discount with annual billing.",
+          "source": {
+            "url": "https://socket.dev/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "Custom pricing, contact sales. Unlimited members, scans, and repository labels. Full function-level reachability. Volume-based discounts; ACH/wire available for annual contracts.",
+          "source": {
+            "url": "https://socket.dev/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://socket.dev/blog/announcing-soc-2-type-i-compliance",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "GitHub",
+          "GitLab",
+          "Bitbucket",
+          "npm",
+          "PyPI",
+          "cargo",
+          "Maven",
+          "Jira",
+          "Slack",
+          "Splunk",
+          "Vanta"
+        ],
+        "limits": [
+          "Free: 1,000 scans/month, up to 5 members, 1 repository label",
+          "Team: 5,000 scans/month, up to 10 members",
+          "Business: unlimited scans and members"
+        ],
+        "keyFeatures": [
+          "Proactive malware and supply-chain attack detection (70+ risk types)",
+          "Reachability analysis to cut CVE false positives",
+          "Deep package inspection without uploading source code",
+          "SIEM integrations (Splunk, Datadog, Sentinel) for security operations"
+        ],
+        "bestFor": [
+          "supply-chain attack prevention",
+          "malicious package detection",
+          "npm/PyPI ecosystem security",
+          "security-first teams"
+        ],
+        "sources": [
+          {
+            "url": "https://socket.dev/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://socket.dev/blog/announcing-soc-2-type-i-compliance",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Pricing from socket.dev/pricing; SOC 2 confirmed via blog (Type I announced, page notes Type II since achieved). GDPR and HIPAA not explicitly stated, set null."
+      }
+    },
+    {
+      "slug": "mend",
+      "name": "Mend (formerly WhiteSource)",
+      "domain": "mend.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "GitHub",
+        "GitLab",
+        "Bitbucket",
+        "Azure DevOps",
+        "Jenkins",
+        "GitHub Actions",
+        "GitLab CI",
+        "Azure Pipelines",
+        "CircleCI",
+        "TeamCity",
+        "Bamboo",
+        "AWS CodeBuild",
+        "VS Code",
+        "IntelliJ IDEA",
+        "Eclipse",
+        "Docker",
+        "Amazon ECR",
+        "Azure Container Registry",
+        "JFrog Artifactory",
+        "Jira",
+        "ServiceNow",
+        "Microsoft Defender for Cloud",
+        "Wiz",
+        "Backstage"
+      ],
+      "provenance": "Pricing re-verified at mend.io/pricing on 2026-06-18. All three products are list-price maximums ('up to $X/dev/year') with actual cost quote-driven, so monthlyUsd is null. Compliance from mend.io/trust: SOC 2 Type II (Schellman), ISO 27001/27017/27701, GDPR; HIPAA not mentioned.",
+      "plans": [
+        {
+          "name": "Mend AppSec",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "Up to $1,000/developer/year (billed annually), quote-driven so no fixed monthly price. Includes SAST, reachability-driven SCA, container scanning, AI-generated code security, AI-powered remediation, automated dependency updates. No per-scan or per-project fees.",
+          "source": {
+            "url": "https://www.mend.io/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Mend AI",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "Up to $300/developer/year (billed annually), quote-driven. AI component discovery (AI-BoM), system prompt hardening, automated red teaming, runtime guardrails, continuous AI governance.",
+          "source": {
+            "url": "https://www.mend.io/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Mend Renovate Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "Up to $250/developer/year (billed annually), quote-driven. Automated dependency management, full-scale automation, Merge Confidence ratings, dedicated support.",
+          "source": {
+            "url": "https://www.mend.io/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.mend.io/trust/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "GitHub",
+          "GitLab",
+          "Bitbucket",
+          "Azure DevOps",
+          "Jenkins",
+          "Jira",
+          "ServiceNow",
+          "Docker",
+          "JFrog Artifactory",
+          "Microsoft Defender for Cloud"
+        ],
+        "limits": [
+          "No per-scan or per-project limitations",
+          "No per-GB fees",
+          "Contributing developer = any employee/contractor accessing the UI or writing/modifying scanned code",
+          "Published prices are maximums; actual quotes may be lower"
+        ],
+        "keyFeatures": [
+          "Reachability-driven SCA to surface only exploitable vulnerabilities",
+          "Automated dependency updates via Mend Renovate (open-source core)",
+          "AI security for AI-generated code and AI component governance",
+          "Unified SAST + SCA + container scanning under one per-developer price"
+        ],
+        "bestFor": [
+          "enterprise AppSec programs",
+          "automated dependency hygiene",
+          "AI code security",
+          "Java/.NET heavy teams"
+        ],
+        "sources": [
+          {
+            "url": "https://www.mend.io/pricing/",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://www.mend.io/trust/",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Pricing from mend.io/pricing (list-price maximums, quote-driven); compliance from mend.io/trust (SOC 2 Type II via Schellman, ISO 27001/27017/27701, GDPR). HIPAA not stated."
+      }
+    },
+    {
+      "slug": "debricked",
+      "name": "Debricked (OpenText Core SCA / Fortify SCA)",
+      "domain": "debricked.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "GitHub",
+        "GitLab",
+        "Bitbucket",
+        "Azure DevOps",
+        "GitHub Actions",
+        "GitLab CI",
+        "Jenkins",
+        "CircleCI",
+        "Azure Pipelines"
+      ],
+      "provenance": "Pricing re-verified at debricked.com/pricing on 2026-06-18. Page is live with hybrid OpenText Fortify SCA / 'Debricked by OpenText' branding. Free $0, Premium $25/dev/mo ($275/yr), Enterprise from $30/dev/mo ($360/yr), OSS Select Free $0, OSS Select Enterprise $96/dev/yr. Compliance not published on pricing page; left null.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "1,000 initial scan credits in the first month, then 100 scans/month thereafter. Includes Vulnerability Management, License Management, Project Health. No credit card required.",
+          "source": {
+            "url": "https://debricked.com/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": 25,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "Per contributing developer/month ($275/year per developer with annual billing). Unlimited scans. Adds Vulnerability Report, License Report, API access (5,000 requests/hour/developer), chat and email support.",
+          "source": {
+            "url": "https://debricked.com/pricing/",
+            "accessedAt": "2026-06-18"
+          },
+          "corroboration": {
+            "url": "https://docs.debricked.com/product/administration/billing/manage-your-subscription",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": 30,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "Starting at $30/contributing developer/month ($360/year). Unlimited scans, unlimited API access, SBOM export, Enterprise SSO, increased computation, enterprise-level support.",
+          "source": {
+            "url": "https://debricked.com/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Open Source Select Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Free access to the open source component intelligence database (40M+ projects) for filtering and comparison. No scanning included.",
+          "source": {
+            "url": "https://debricked.com/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Open Source Select Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "$96/contributing developer/year (annual billing only; ~$8/mo equivalent). Adds Start Left Policies and unlimited API access to the open source database.",
+          "source": {
+            "url": "https://debricked.com/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "GitHub",
+          "GitLab",
+          "Bitbucket",
+          "Azure DevOps",
+          "Jenkins",
+          "GitHub Actions",
+          "CircleCI"
+        ],
+        "limits": [
+          "Free: 1,000 scan credits first month, 100 scans/month thereafter",
+          "Premium API: 5,000 requests/hour/developer",
+          "Open Source Select Enterprise: annual billing only"
+        ],
+        "keyFeatures": [
+          "Open source component intelligence database covering 40M+ projects",
+          "SBOM export on Enterprise tier",
+          "License compliance and vulnerability management in one platform",
+          "CI/CD integration via GitHub Actions and Jenkins plugins"
+        ],
+        "bestFor": [
+          "open-source license compliance",
+          "SBOM generation",
+          "CI/CD-integrated SCA",
+          "OpenText ecosystem customers"
+        ],
+        "sources": [
+          {
+            "url": "https://debricked.com/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Pricing from debricked.com/pricing (now OpenText Fortify SCA / 'Debricked by OpenText'). Compliance not published on the pricing page; OpenText enterprise compliance requires contacting sales, so flags left null."
+      }
+    },
+    {
+      "slug": "fossa",
+      "name": "FOSSA",
+      "domain": "fossa.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "GitHub",
+        "GitLab",
+        "Bitbucket",
+        "Azure DevOps",
+        "GitHub Actions",
+        "GitLab CI",
+        "Jenkins",
+        "CircleCI",
+        "Jira",
+        "Docker",
+        "VS Code"
+      ],
+      "provenance": "Pricing re-verified at fossa.com/pricing on 2026-06-18. Free $0, Business $20 PER PROJECT/month (billed annually) — not per developer — Enterprise quote-only. SOC 2 confirmed via fossa.com/trust; HIPAA not stated.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Forever free. 5 projects, 10 contributing developers, 1 release group, 5 dependency levels, 1 quality check (outdated packages), 5 imported SBOMs. Includes container scanning, basic email support, API access, SBOM export.",
+          "source": {
+            "url": "https://fossa.com/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 20,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "$20 PER PROJECT/month billed annually (priced per project, NOT per developer). Up to 10 projects, 10 contributing developers, 1 release group, unlimited dependency levels, full quality check suite, unlimited imported SBOMs. Automated license and vulnerability scanning, multi-project reporting, priority support. ~10% savings with annual billing.",
+          "source": {
+            "url": "https://fossa.com/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "Custom pricing, contact sales. Unlimited projects, custom developer count, unlimited release groups and dependency levels. Adds enterprise APIs, SSO, RBAC, custom deployment options, advanced compliance reporting. Optional add-ons: Snippet Scanning, Binary Scanning.",
+          "source": {
+            "url": "https://fossa.com/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://fossa.com/trust",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "GitHub",
+          "GitLab",
+          "Bitbucket",
+          "Jenkins",
+          "GitHub Actions",
+          "Jira",
+          "Docker"
+        ],
+        "limits": [
+          "Free: 5 projects, 10 developers, 5 imported SBOMs, 1 quality check",
+          "Business: 10 projects, 10 developers, annual billing required",
+          "Business: priced per project ($20/project/mo), FOSSA CLI required for scanning"
+        ],
+        "keyFeatures": [
+          "License compliance focus with deep dependency-level analysis",
+          "SBOM import and export across all tiers including free",
+          "Snippet scanning for AI-generated and unlicensed code (Enterprise add-on)",
+          "Binary scanning for compiled artifacts and containers (Enterprise add-on)"
+        ],
+        "bestFor": [
+          "license compliance",
+          "SBOM management",
+          "legal/compliance teams",
+          "regulated industries requiring attribution reports"
+        ],
+        "sources": [
+          {
+            "url": "https://fossa.com/pricing/",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://fossa.com/trust",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Pricing from fossa.com/pricing; SOC 2 confirmed from fossa.com/trust. Business plan is priced PER PROJECT ($20/project/mo), not per developer — modeled as billingModel 'flat' (per-project unit) since the schema has no per_project value. GDPR/HIPAA not stated, null."
+      }
+    },
+    {
+      "slug": "endor-labs",
+      "name": "Endor Labs",
+      "domain": "endorlabs.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "GitHub",
+        "GitLab",
+        "Bitbucket",
+        "Azure DevOps",
+        "GitHub Actions",
+        "Jenkins",
+        "CircleCI",
+        "Jira",
+        "Slack",
+        "Microsoft Defender for Cloud",
+        "Vanta",
+        "Cursor",
+        "GitHub Copilot",
+        "Claude",
+        "AWS Marketplace",
+        "Azure Marketplace",
+        "Google Cloud Marketplace"
+      ],
+      "provenance": "Pricing re-verified at endorlabs.com/pricing on 2026-06-18. Developer (Free) $0; Core and Pro are quote-only (no published price), so monthlyUsd null. SOC 2 Type II confirmed via Endor Labs blog; page also lists FedRAMP, ISO 42001, PCI DSS, CRA.",
+      "plans": [
+        {
+          "name": "Developer (Free)",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Permanently free, no account required. Local scanning only, read-only vulnerability data access. No UI, no policies, no scan history. For individual developer evaluation.",
+          "source": {
+            "url": "https://www.endorlabs.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Core",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "Pricing not published; contact sales. Team deployments with reachability analysis, vulnerability prioritization, and policies. Seat-based pricing with volume discounts as contributor count grows.",
+          "source": {
+            "url": "https://www.endorlabs.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "Pricing not published; contact sales. Built for scale with advanced features for detecting, triaging, and fixing vulnerabilities. Includes SBOM Hub, Package Firewall, Agent Governance, and Patches.",
+          "source": {
+            "url": "https://www.endorlabs.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://www.endorlabs.com/learn/endor-labs-is-soc-2-type-ii-certified",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "GitHub",
+          "GitLab",
+          "Bitbucket",
+          "Azure DevOps",
+          "Jenkins",
+          "Jira",
+          "Slack",
+          "AWS Marketplace",
+          "Azure Marketplace",
+          "Google Cloud Marketplace"
+        ],
+        "limits": [
+          "Free: local scanning only, no UI or scan history, no account required",
+          "Core/Pro: seat-based with fair-usage annual quotas (not hard-enforced)",
+          "Scan credits available for purchase for scan-intensive workflows"
+        ],
+        "keyFeatures": [
+          "Function-level reachability analysis for accurate vulnerability prioritization",
+          "SBOM Hub for generating and managing SBOMs and VEX documents",
+          "Package Firewall to block malicious or unapproved dependencies at install time",
+          "AI agent governance to discover and control AI components in the supply chain"
+        ],
+        "bestFor": [
+          "reachability-based triage",
+          "SBOM and VEX workflows",
+          "AI supply chain governance",
+          "cloud-native teams on AWS/Azure/GCP"
+        ],
+        "sources": [
+          {
+            "url": "https://www.endorlabs.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://www.endorlabs.com/learn/endor-labs-is-soc-2-type-ii-certified",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Pricing from endorlabs.com/pricing; Core/Pro are quote-only. SOC 2 Type II confirmed from company blog. FedRAMP, ISO 42001, PCI DSS, CRA also mentioned on the pricing page. GDPR/HIPAA not explicitly claimed, null."
+      }
+    }
+  ]
+}

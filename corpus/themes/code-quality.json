@@ -1,0 +1,623 @@
+{
+  "vertical": "code-quality",
+  "generatedAt": "2026-06-18",
+  "methodologyNotes": "Re-verified via WebFetch on official pricing pages on 2026-06-18: codacy.com/pricing, deepsource.com/pricing, sonarsource.com/plans-and-pricing, codescene.com/pricing. embold.io/pricing returned HTTP 502 (unreachable); Embold plan structure supplemented via WebSearch (G2/SaaSworthy, last updated June 2025) and Premium price left null because no official source confirms a number. Key correction: DeepSource Team has a real monthly rate of $30/user/month (the draft incorrectly stored the $24 annual-equivalent as monthlyUsd). CodeScene prices are published in EUR (numbers stored as published monthly EUR; no official USD list price exists) and CodeScene offers a 14-day trial. Codiga remains excluded (discontinued/acquired by Datadog 2023). Enterprise/custom plans with no published price are monthlyUsd:null. accessedAt 2026-06-18.",
+  "vendors": [
+    {
+      "slug": "codacy",
+      "name": "Codacy",
+      "domain": "codacy.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "GitHub",
+        "GitLab",
+        "Bitbucket",
+        "Jira",
+        "Slack",
+        "VS Code",
+        "JetBrains",
+        "Cursor"
+      ],
+      "provenance": "Pricing re-fetched from codacy.com/pricing on 2026-06-18: Developer $0/dev forever, Team $21/dev/mo monthly or $18/dev/mo annual (14-day trial, no card), Business custom. SOC2 Type 2 and GDPR confirmed on codacy.com/security; HIPAA not mentioned (null).",
+      "plans": [
+        {
+          "name": "Developer",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "Free forever for individual developers. IDE plugin (VS Code, JetBrains, Cursor), real-time feedback, AI guardrails, security/quality scans (SAST, SCA, secrets), auto-fix. No private repo integrations.",
+          "source": {
+            "url": "https://www.codacy.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Team",
+          "monthlyUsd": 21,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 14,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "$21/dev/month billed monthly, $18/dev/month billed annually (~14% off). Up to 30 developers, up to 100 private repos (unlimited LOC), GitHub/Bitbucket/GitLab Cloud, AI Reviewer, merge gates, 49 languages, coverage reports, malicious package detection, Jira + Slack. Free for open-source. 14-day free trial, no credit card.",
+          "source": {
+            "url": "https://www.codacy.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "Custom pricing, contact sales. For orgs exceeding 30 developers or 100 private projects. Unlimited private projects, daily CVE re-scans, AI Inventory, AI Risk Hub, license scanning, DAST, container scanning, SSO/SAML, audit logs, dedicated CSM, premium support.",
+          "source": {
+            "url": "https://www.codacy.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.codacy.com/security",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "GitHub",
+          "GitLab",
+          "Bitbucket",
+          "Jira",
+          "Slack",
+          "VS Code",
+          "JetBrains",
+          "Cursor"
+        ],
+        "limits": [
+          "Team plan: up to 30 developers",
+          "Team plan: up to 100 private repos",
+          "Cloud-only (no self-hosted, no Azure Repos)"
+        ],
+        "keyFeatures": [
+          "AI Reviewer with merge gates",
+          "49-language static analysis",
+          "Malicious package detection",
+          "Real-time IDE feedback with AI guardrails"
+        ],
+        "bestFor": [
+          "teams up to 30 developers",
+          "multi-language static analysis",
+          "PR-gated code quality"
+        ],
+        "sources": [
+          {
+            "url": "https://www.codacy.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://www.codacy.com/security",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Plans/limits from codacy.com/pricing; SOC2 Type 2 and GDPR confirmed on codacy.com/security; HIPAA not stated."
+      }
+    },
+    {
+      "slug": "deepsource",
+      "name": "DeepSource",
+      "domain": "deepsource.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "GitHub",
+        "GitLab",
+        "Bitbucket",
+        "Google Cloud",
+        "VS Code",
+        "PyCharm",
+        "IntelliJ IDEA"
+      ],
+      "provenance": "Pricing re-fetched from deepsource.com/pricing on 2026-06-18. CORRECTED: Team has a published monthly rate of $30/user/month; $24/user/month is the annual-billing price (~20% savings). Draft wrongly stored $24 as monthlyUsd and claimed no monthly rate exists. SOC2 Type II confirmed via deepsource.com/blog/soc2; GDPR not explicitly confirmed (null).",
+      "plans": [
+        {
+          "name": "Open Source",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Free for unlimited public repositories. 1,000 pull requests reviewed monthly, 1,000 code formatting runs/month. Pay-as-you-go AI Review and Autofix credits available.",
+          "source": {
+            "url": "https://deepsource.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Team",
+          "monthlyUsd": 30,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "$30/user/month billed monthly; $24/user/month billed annually (~20% savings). Unlimited repos and PR reviews, unlimited code formatting, bundled AI Review credit ($10/user/mo monthly or $100/user/yr annual). AI Review add-on: $8/10K LOC (Standard) or $15/10K LOC (Advanced). 14-day free trial with up to $50 bundled AI Review credits.",
+          "source": {
+            "url": "https://deepsource.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "Custom pricing, contact sales. All Team features plus self-hosted deployment, BYOK for AI Review, SSO, SLA-backed priority support, manual invoicing, dedicated account manager, migration assistance, volume discounts.",
+          "source": {
+            "url": "https://deepsource.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://deepsource.com/blog/soc2",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "GitHub",
+          "GitLab",
+          "Bitbucket",
+          "Google Cloud",
+          "VS Code",
+          "PyCharm",
+          "IntelliJ IDEA"
+        ],
+        "limits": [
+          "Open Source plan: 1,000 PR reviews/month",
+          "Open Source plan: public repos only",
+          "Team AI Review credits: bundled then pay-as-you-go"
+        ],
+        "keyFeatures": [
+          "Automated Autofix suggestions",
+          "AI-powered code review with credit-based billing",
+          "OSS Dependency Scanning",
+          "Self-hosted Enterprise deployment option"
+        ],
+        "bestFor": [
+          "open source projects",
+          "teams wanting AI-assisted autofix",
+          "organizations needing self-hosted SAST"
+        ],
+        "sources": [
+          {
+            "url": "https://deepsource.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://deepsource.com/blog/soc2",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Plan details from deepsource.com/pricing (Team monthly $30 corrected from draft's $24 annual figure); SOC2 Type II from DeepSource blog (May 2022); GDPR not confirmed."
+      }
+    },
+    {
+      "slug": "sonarqube-cloud",
+      "name": "SonarQube Cloud (Sonar)",
+      "domain": "sonarsource.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "GitHub",
+        "GitLab",
+        "Bitbucket",
+        "Azure DevOps",
+        "Jenkins",
+        "CircleCI"
+      ],
+      "provenance": "Pricing re-fetched from sonarsource.com/plans-and-pricing on 2026-06-18. SonarCloud rebranded to SonarQube Cloud. Free (50k LOC private, 5 users; unlimited public). Team starts at $32/mo for 100k LOC, scales to 1.9M LOC. Enterprise custom (from 5M LOC). SOC2 and GDPR cited from sonarsource.com/trust-center.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Up to 50,000 LOC for private projects, up to 5 users. Unlimited public/open-source project scanning with no LOC restriction. Community support only.",
+          "source": {
+            "url": "https://www.sonarsource.com/plans-and-pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Team",
+          "monthlyUsd": 32,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Starts at $32/month for 100k LOC; scales up to 1.9M LOC (higher LOC tiers priced incrementally). Unlimited users. 30+ languages, bug/vulnerability detection, secrets detection, AI-driven fixes, PR analysis. Billed monthly via credit card. Recommended for teams under 50 developers.",
+          "source": {
+            "url": "https://www.sonarsource.com/plans-and-pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "Custom annual pricing, starting from 5M LOC. Unlimited users/projects, 40+ languages incl. ABAP/COBOL/Apex, SSO/SCIM/CMK/BYOK, IP allowlist, advanced security reports and audit logs, OWASP/CWE/PCI DSS/MISRA compliance reporting, portfolios, dedicated SLA.",
+          "source": {
+            "url": "https://www.sonarsource.com/plans-and-pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.sonarsource.com/trust-center/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "GitHub",
+          "GitLab",
+          "Bitbucket",
+          "Azure DevOps",
+          "Jenkins",
+          "CircleCI"
+        ],
+        "limits": [
+          "Free plan: 50k LOC private, 5 users",
+          "Team plan: max 1.9M LOC",
+          "Public-repo OSS analysis unlimited but no private projects on free public-only path"
+        ],
+        "keyFeatures": [
+          "LOC-based billing (not per-seat)",
+          "Unlimited users on paid plans",
+          "AI-driven fix suggestions",
+          "Free forever for open-source projects"
+        ],
+        "bestFor": [
+          "open source projects",
+          "teams needing unlimited users",
+          "compliance-focused enterprises (OWASP, PCI DSS, MISRA)"
+        ],
+        "sources": [
+          {
+            "url": "https://www.sonarsource.com/plans-and-pricing/",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://www.sonarsource.com/trust-center/",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Plan data from sonarsource.com/plans-and-pricing (Team $32/mo confirmed). SOC2 Type II and ISO 27001 cited from sonarsource.com/trust-center; GDPR via Sonar trust documentation. The official pricing page itself does not enumerate SOC2/GDPR badges."
+      }
+    },
+    {
+      "slug": "codescene",
+      "name": "CodeScene",
+      "domain": "codescene.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "GitHub",
+        "GitLab",
+        "Bitbucket",
+        "Azure DevOps",
+        "Jira",
+        "Trello",
+        "GitHub Issues",
+        "YouTrack"
+      ],
+      "provenance": "Pricing re-fetched from codescene.com/pricing on 2026-06-18. Prices published in EUR: Standard €20/author/mo monthly or €18 annual; Pro €30/author/mo monthly or €27 annual (10% annual savings). Free Community/OSS tier plus a 14-day free trial for Standard/Pro (codescene.com/product/free-trial). ISO 27001 certified; GDPR via policies. SOC2 not stated (null).",
+      "plans": [
+        {
+          "name": "Community (Open Source)",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Free forever for open-source projects. Automated PR code reviews, technical debt management, Code Health measurement, knowledge distribution visualization, PDF reports, virtual code reviews, customizable Code Health rules.",
+          "source": {
+            "url": "https://codescene.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Standard",
+          "monthlyUsd": 20,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "Published in EUR: €20/active author/month (monthly) or €18/active author/month (annual, 10% savings). Unlimited private repos, technical debt management, Code Health analysis, knowledge distribution, quality gates for AI coding, automated code review, 30+ languages, IDE Code Health Monitor. 'Active author' = anyone who committed code in past 3 months. 14-day free trial.",
+          "source": {
+            "url": "https://codescene.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 30,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "Published in EUR: €30/active author/month (monthly) or €27/active author/month (annual, 10% savings). All Standard features plus Software Portfolio overview, team insights, delivery insights, code coverage measurement. Monthly cancels anytime; yearly requires 30 days notice. 14-day free trial.",
+          "source": {
+            "url": "https://codescene.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "Custom pricing, contact sales. All Pro features plus scalable pricing, dedicated workshops, tailored onboarding and support. On-premise deployment option available.",
+          "source": {
+            "url": "https://codescene.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://codescene.com/policies",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "GitHub",
+          "GitLab",
+          "Bitbucket",
+          "Azure DevOps",
+          "Jira",
+          "Trello",
+          "YouTrack"
+        ],
+        "limits": [
+          "Paid plans priced per 'active author' (committed code in past 3 months)",
+          "Each author counted once across all repos",
+          "Yearly plans require 30-day cancellation notice",
+          "Prices published in EUR, not USD"
+        ],
+        "keyFeatures": [
+          "Behavioral code analysis (hotspot detection via git history)",
+          "Code Health metric for technical debt prioritization",
+          "Team/delivery insights on Pro plan",
+          "ISO 27001 certified (company-level)"
+        ],
+        "bestFor": [
+          "teams wanting behavioral/hotspot analysis",
+          "technical debt management",
+          "engineering team productivity insights"
+        ],
+        "sources": [
+          {
+            "url": "https://codescene.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://codescene.com/product/free-trial",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://codescene.com/policies",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Plan prices from codescene.com/pricing (EUR as published; per-author licensing). 14-day trial confirmed via codescene.com/product/free-trial. GDPR and ISO 27001 from codescene.com/policies; SOC2 not stated (null)."
+      }
+    },
+    {
+      "slug": "embold",
+      "name": "Embold",
+      "domain": "embold.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "GitHub",
+        "GitLab",
+        "Bitbucket",
+        "VS Code",
+        "IntelliJ IDEA"
+      ],
+      "provenance": "embold.io/pricing returned HTTP 502 (unreachable) on 2026-06-18 — official prices could not be verified. Plan structure (Open Source free; Cloud Free 5 users/5 scans/up to 50k LOC; Cloud Premium 10 users/100k LOC; On-Premise quote) confirmed via G2/SaaSworthy (last updated June 2025). Aggregators cite a starting price of ~$299/mo, but per 'null beats a guess' the Cloud Premium monthlyUsd is left null because no official source confirms it. Compliance unverified (all null). Lower confidence vendor.",
+      "plans": [
+        {
+          "name": "Open Source",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Free for all open-source projects. Unlimited public repository analysis. Plan structure per third-party aggregators; official page unreachable (502).",
+          "source": {
+            "url": "https://embold.io/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Cloud Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "5 seats/users, 5 scans per month, up to 50,000 LOC for private repositories. No credit card required. Per third-party aggregators; official page unreachable (502).",
+          "source": {
+            "url": "https://embold.io/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Cloud Premium",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "10 users, 100k LOC, unlimited scans. Additional users and LOC as add-ons. Official embold.io/pricing returned 502 on 2026-06-18; aggregators cite a starting price of ~$299/month but this could not be verified on any official source, so monthlyUsd is null. Contact Embold for current price.",
+          "source": {
+            "url": "https://embold.io/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "On-Premise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "Self-hosted deployment for larger organizations. Custom pricing, contact sales. Supports C, C++, C#, Java, Python, JavaScript and more.",
+          "source": {
+            "url": "https://embold.io/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "GitHub",
+          "GitLab",
+          "Bitbucket",
+          "VS Code",
+          "IntelliJ IDEA"
+        ],
+        "limits": [
+          "Cloud Free: 5 users, 5 scans/month, up to 50k LOC",
+          "Cloud Premium: 10 users, 100k LOC base",
+          "Official pricing page returned 502 at time of research"
+        ],
+        "keyFeatures": [
+          "Anti-pattern detection beyond standard linting",
+          "Component-level metrics (coupling, complexity)",
+          "Self-hosted on-premise option",
+          "Support for C/C++/C#/Java/Python/JS"
+        ],
+        "bestFor": [
+          "C/C++ codebases",
+          "teams needing on-premise deployment",
+          "deep component-level quality metrics"
+        ],
+        "sources": [
+          {
+            "url": "https://embold.io/pricing/",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://www.saasworthy.com/product/embold-io/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Official pricing page unreachable (502) on 2026-06-18; plan structure from G2/SaaSworthy (June 2025). Cloud Premium price could not be verified on any official source and is null. Compliance unverified (all null)."
+      }
+    }
+  ]
+}
