@@ -1,0 +1,643 @@
+{
+  "vertical": "marketplace-management",
+  "generatedAt": "2026-06-18",
+  "methodologyNotes": "Each vendor's official pricing page was re-verified via WebFetch on 2026-06-18: sellbrite.com/pricing-pro/ and sellbrite.com/pricing-power/, linnworks.com/pricing/, zentail.com/pricing, sellercloud.com/pricing/, and rithum.com (pricing page returns 404). Compliance pages were fetched directly: linnworks.com/security/, rithum.com/rithum-security/, rithum.com/gdpr-faq/. WebSearch was used to corroborate plan-level details. Corrections from the draft: (1) Sellbrite's pricing page has a monthly/annual billing toggle and the displayed prices ($29/$79/$179 etc.) are the standard MONTHLY rates, not annual-billing rates as the draft claimed; annual billing is CHEAPER (~17% off). monthlyUsd now records the published monthly rate. (2) The Sellbrite Shopify edition has lower platform-specific pricing (e.g. Pro 100 ~$19/mo) but is not a separate vendor; noted only. (3) Zentail 'pricing-zentail-launch' is not a real/separate plan page — removed; no 'Launch' tier exists. (4) Linnworks compliance source corrected to the live security page (linnworks.com/security/); the blog URL in the draft was not used. Zentail Base/Pro monthlyUsd are 'starting at' published floors on annual-contract-only billing (noted). Rithum and Linnworks lower tiers are quote-only so monthlyUsd is null. No vendors were fabricated; all five exist. accessedAt 2026-06-18.",
+  "vendors": [
+    {
+      "slug": "sellbrite",
+      "name": "Sellbrite",
+      "domain": "sellbrite.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Amazon",
+        "eBay",
+        "Etsy",
+        "Walmart",
+        "Shopify",
+        "BigCommerce",
+        "WooCommerce",
+        "Google Shopping",
+        "Newegg",
+        "ShipStation",
+        "ShipEngine",
+        "Fulfillment by Amazon",
+        "USPS",
+        "UPS",
+        "FedEx"
+      ],
+      "provenance": "Plans and prices re-verified directly from sellbrite.com/pricing-pro/ and sellbrite.com/pricing-power/ on 2026-06-18. CORRECTION vs draft: the pricing page has a 'Monthly Billing / Annual Billing' toggle and the displayed prices ($29/$79/$179/$399/$699/$999/$1,699) are the standard MONTHLY rates; annual billing is cheaper (~17% off). monthlyUsd reflects the published monthly rate. Forever Free plan (up to 30 orders/mo) confirmed as a real forever-free tier. 14-day full-access free trial, no credit card.",
+      "plans": [
+        {
+          "name": "Forever Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Up to 30 orders/month. Unlimited SKUs, unlimited sales channels, unlimited users. Sync every 2 hours. No FBA integration. Genuine forever-free plan, not a trial.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.sellbrite.com/pricing-pro/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Pro 100",
+          "monthlyUsd": 29,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "Up to 100 orders/month. Unlimited SKUs, channels, users. 15-min sync. $29 is the standard MONTHLY rate; annual billing is ~17% cheaper. FBA Integration add-on +$19/mo. (Sellbrite-for-Shopify edition prices this tier lower, ~$19/mo.)",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.sellbrite.com/pricing-pro/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Pro 500",
+          "monthlyUsd": 79,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "Up to 500 orders/month. Unlimited SKUs, channels, users. 15-min sync. $79 is the standard MONTHLY rate; annual billing ~17% cheaper. FBA Integration add-on +$19/mo.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.sellbrite.com/pricing-pro/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Pro 2K",
+          "monthlyUsd": 179,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "Up to 2,000 orders/month. Unlimited SKUs, channels, users. 15-min sync. Phone callback support. $179 is the standard MONTHLY rate; annual billing ~17% cheaper. FBA Integration add-on +$19/mo.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.sellbrite.com/pricing-pro/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Power 10K",
+          "monthlyUsd": 399,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "Up to 10,000 orders/month. Unlimited SKUs, channels, users. One-on-one onboarding. API access. $399 is the standard MONTHLY rate; annual billing ~17% cheaper. FBA Integration add-on +$19/mo.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.sellbrite.com/pricing-power/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Power 25K",
+          "monthlyUsd": 699,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "Up to 25,000 orders/month. Unlimited SKUs, channels, users. API access. $699 is the standard MONTHLY rate; annual billing ~17% cheaper. FBA Integration add-on +$19/mo.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.sellbrite.com/pricing-power/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Power 50K",
+          "monthlyUsd": 999,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "Up to 50,000 orders/month. Unlimited SKUs, channels, users. API access. $999 is the standard MONTHLY rate; annual billing ~17% cheaper. FBA Integration add-on +$19/mo.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.sellbrite.com/pricing-power/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Power 100K",
+          "monthlyUsd": 1699,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "Up to 100,000 orders/month. Unlimited SKUs, channels, users. API access. $1,699 is the standard MONTHLY rate; annual billing ~17% cheaper. FBA Integration add-on +$19/mo.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.sellbrite.com/pricing-power/",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Amazon",
+          "eBay",
+          "Etsy",
+          "Walmart",
+          "Shopify",
+          "BigCommerce",
+          "WooCommerce",
+          "ShipStation",
+          "Fulfillment by Amazon"
+        ],
+        "limits": [
+          "Order-count based tiers (30 / 100 / 500 / 2K / 10K / 25K / 50K / 100K orders/mo)",
+          "FBA orders do not count toward plan limit",
+          "Free plan syncs every 2 hours vs 15 min on paid",
+          "Displayed prices are monthly; annual billing ~17% cheaper"
+        ],
+        "keyFeatures": [
+          "Forever-free plan up to 30 orders/month",
+          "Order-count flat billing with no revenue share",
+          "Unlimited SKUs and sales channels on all plans",
+          "Shopify-native edition with lower pricing"
+        ],
+        "bestFor": [
+          "SMB multichannel sellers",
+          "Shopify merchants expanding to Amazon/eBay/Walmart/Etsy",
+          "Budget-conscious sellers wanting predictable flat pricing"
+        ],
+        "sources": [
+          {
+            "url": "https://www.sellbrite.com/pricing-pro/",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://www.sellbrite.com/pricing-power/",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Plans and prices verified directly from Sellbrite's official pricing pages on 2026-06-18. Displayed prices confirmed as monthly rates (toggle to annual is cheaper). No compliance certifications found on official domain."
+      }
+    },
+    {
+      "slug": "linnworks",
+      "name": "Linnworks",
+      "domain": "linnworks.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Amazon",
+        "eBay",
+        "Walmart",
+        "Etsy",
+        "Shopify",
+        "BigCommerce",
+        "Magento",
+        "WooCommerce",
+        "TikTok Shop",
+        "Wayfair",
+        "OnBuy",
+        "Newegg",
+        "Google Shopping",
+        "ShipStation",
+        "ShipEngine",
+        "Fulfillment by Amazon"
+      ],
+      "provenance": "Pricing page re-fetched from linnworks.com/pricing/ on 2026-06-18 — confirmed quote-only, no dollar/pound amounts published; all plans require a custom quote with a one-time onboarding fee. Compliance re-verified from linnworks.com/security/ (corrected from draft's blog URL): ISO 27001 certified and GDPR compliant; no SOC 2 or HIPAA claimed.",
+      "plans": [
+        {
+          "name": "Linnworks Advanced",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Connected commerce for complex fulfillment. Priced on order volume, not revenue. Modular add-ons (Listing, WMS, Enhanced Warehouse, Forecasting) carry additional monthly charges. Overages apply above the monthly order limit. One-time onboarding fee. Quote required — no published price.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.linnworks.com/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "SkuVault Core",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Streamlined warehouse inventory for growing retailers. Part of the Linnworks product family. Quote required — no published price.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.linnworks.com/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.linnworks.com/security/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Amazon",
+          "eBay",
+          "Walmart",
+          "Etsy",
+          "Shopify",
+          "TikTok Shop",
+          "Wayfair",
+          "ShipStation"
+        ],
+        "limits": [
+          "Order volume determines tier; overages charged if limit exceeded",
+          "Add-on modules (Listing, WMS, Forecasting) are separate fees",
+          "One-time onboarding fee required",
+          "No published pricing — quote only"
+        ],
+        "keyFeatures": [
+          "Order-volume pricing with no revenue-share fees",
+          "ISO 27001 certified, GDPR compliant",
+          "Broad channel coverage including TikTok Shop and regional marketplaces",
+          "Modular WMS and forecasting add-ons"
+        ],
+        "bestFor": [
+          "Mid-market and enterprise multichannel sellers",
+          "Sellers with complex fulfillment or warehouse needs",
+          "UK/EU-based ecommerce businesses"
+        ],
+        "sources": [
+          {
+            "url": "https://www.linnworks.com/pricing/",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://www.linnworks.com/security/",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Pricing confirmed quote-only from the official pricing page. ISO 27001 and GDPR confirmed directly from linnworks.com/security/. No SOC 2 or HIPAA mentioned."
+      }
+    },
+    {
+      "slug": "zentail",
+      "name": "Zentail",
+      "domain": "zentail.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Amazon",
+        "Walmart",
+        "eBay",
+        "Target Plus",
+        "Shopify",
+        "BigCommerce"
+      ],
+      "provenance": "Pricing re-fetched from zentail.com/pricing on 2026-06-18. Three tiers: Base (starting at $300/mo), Pro (starting at $2,000/mo), Enterprise (contact us). Annual contracts only — FAQ explicitly states no monthly plans. 'Starting at' figures; final price is usage-based on annual sales across connected channels. CORRECTION vs draft: the second source URL 'zentail.com/pricing-zentail-launch' does not correspond to a real published page or a 'Launch' plan and has been removed.",
+      "plans": [
+        {
+          "name": "Base",
+          "monthlyUsd": 300,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "'Starting at $300/month', billed on an annual contract (no monthly billing). 100% usage-based — pay for listings and orders consumed; final price depends on annual sales volume. Core catalog, listing, and order management. Email and chat support.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.zentail.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 2000,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "'Starting at $2,000/month', billed on an annual contract. Volume discounts on usage, advanced automation and rules, priority support. Final price usage-based.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.zentail.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing, annual contract. Large listing/order volumes, custom workflows, advanced permissions, SLAs, strategic account management. No published price — contact sales.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.zentail.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Amazon",
+          "Walmart",
+          "eBay",
+          "Target Plus",
+          "Shopify",
+          "BigCommerce"
+        ],
+        "limits": [
+          "Annual contracts only — no monthly billing",
+          "Pricing scales with catalog size, order volume, and annual sales",
+          "Base/Pro prices are 'starting at' floors, not fixed rates",
+          "No published SKU or channel caps"
+        ],
+        "keyFeatures": [
+          "Usage-based pricing tied to actual listings and orders consumed",
+          "Published 'starting at' floor prices for Base and Pro",
+          "Strong focus on Amazon and Walmart multichannel automation",
+          "Plan adjustments allowed during annual contract period"
+        ],
+        "bestFor": [
+          "Brands scaling across Amazon, Walmart, and eBay",
+          "Mid-market sellers needing catalog automation",
+          "Businesses wanting per-usage costs without revenue share"
+        ],
+        "sources": [
+          {
+            "url": "https://www.zentail.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Base ($300/mo) and Pro ($2,000/mo) 'starting at' prices confirmed directly from the official Zentail pricing page on 2026-06-18. Annual-contract-only confirmed in FAQ. No compliance certifications found on official domain."
+      }
+    },
+    {
+      "slug": "sellercloud",
+      "name": "Descartes Sellercloud",
+      "domain": "sellercloud.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Amazon",
+        "eBay",
+        "Walmart",
+        "Etsy",
+        "Shopify",
+        "BigCommerce",
+        "WooCommerce",
+        "Magento",
+        "Wayfair",
+        "Home Depot",
+        "Best Buy",
+        "TikTok Shop",
+        "Target Plus",
+        "FedEx",
+        "UPS",
+        "DHL",
+        "Amazon FBA",
+        "Walmart Fulfillment Services",
+        "QuickBooks",
+        "TaxJar"
+      ],
+      "provenance": "Pricing re-fetched from sellercloud.com/pricing/ on 2026-06-18. Published starting price is $1,349/month on an annual subscription based on order volume, per-order fee model (no revenue share). Private Cloud and Enterprise Support are custom-quote. Per-order rate details corroborated by third-party reviews. No compliance certifications disclosed on the pricing page.",
+      "plans": [
+        {
+          "name": "Standard",
+          "monthlyUsd": 1349,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "hybrid",
+          "notes": "'Starting at $1,349/month', billed annually based on order volume. Per-order fee model — no revenue share. Includes unlimited users, plugins, integrations, inventory/order/listing/shipping management, 24/7 emergency support, API access. Per-order rates reported ~$0.25/order at low volume declining toward ~$0.15/order at high volume (third-party). Exact tier needs a quote.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://sellercloud.com/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Private Cloud",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Enhanced control for high-volume operations. Unlimited job queuing, SKUs, and data storage. Custom pricing — contact sales.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://sellercloud.com/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Amazon",
+          "eBay",
+          "Walmart",
+          "Etsy",
+          "Shopify",
+          "BigCommerce",
+          "Wayfair",
+          "TikTok Shop",
+          "FedEx",
+          "QuickBooks"
+        ],
+        "limits": [
+          "Minimum $1,349/month regardless of order volume",
+          "Per-order fees apply above base; rate decreases at higher volumes",
+          "Implementation costs typically $1,000–$10,000+ depending on complexity"
+        ],
+        "keyFeatures": [
+          "Per-order pricing with no revenue share",
+          "350+ integrations including 150+ marketplace channels",
+          "Unlimited users and seats included in base price",
+          "Full WMS, shipping, and predictive purchasing in one platform"
+        ],
+        "bestFor": [
+          "High-volume multichannel sellers",
+          "Sellers needing deep WMS and fulfillment integration",
+          "Enterprises requiring 150+ marketplace connections"
+        ],
+        "sources": [
+          {
+            "url": "https://sellercloud.com/pricing/",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://sellercloud.com/integrations/",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Starting price of $1,349/month confirmed from official sellercloud.com/pricing/ on 2026-06-18. Per-order fee details corroborated from third-party reviews. No compliance certifications disclosed, so compliance fields are null."
+      }
+    },
+    {
+      "slug": "rithum",
+      "name": "Rithum (ChannelAdvisor)",
+      "domain": "rithum.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Amazon",
+        "eBay",
+        "Walmart",
+        "Target Plus",
+        "Wayfair",
+        "Zalando",
+        "Newegg",
+        "MercadoLibre",
+        "Tmall",
+        "Otto",
+        "Bol.com",
+        "Google Shopping",
+        "Facebook",
+        "Shopify",
+        "BigCommerce"
+      ],
+      "provenance": "No public pricing page exists for Rithum as of 2026-06-18; rithum.com/pricing/ returned HTTP 404 (verified). Pricing is enterprise custom-quote only; third-party reviews (Capterra/G2/TrustRadius) report base subscriptions above ~$2,000/month plus GMV revenue share above thresholds and paid onboarding — first-year mid-enterprise deployments commonly $30K–$100K. monthlyUsd left null (no published price). SOC 2 Type II and GDPR confirmed directly from rithum.com/rithum-security/ and rithum.com/gdpr-faq/.",
+      "plans": [
+        {
+          "name": "Enterprise (Custom)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "No published pricing — enterprise custom quote only. Third-party sources report base subscription typically above $2,000/month plus GMV-based revenue share above thresholds, plus paid implementation. Best suited for $50M+ GMV brands. Contact sales.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.rithum.com/",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.rithum.com/rithum-security/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Amazon",
+          "eBay",
+          "Walmart",
+          "Target Plus",
+          "Wayfair",
+          "Zalando",
+          "MercadoLibre",
+          "Google Shopping",
+          "Facebook"
+        ],
+        "limits": [
+          "Enterprise-only with no self-serve sign-up",
+          "Paid implementation required",
+          "GMV-based revenue share may apply above thresholds",
+          "No published pricing — quote only"
+        ],
+        "keyFeatures": [
+          "600+ global marketplace and retail integrations",
+          "SOC 2 Type II audited annually, GDPR compliant",
+          "Managed marketplace services available",
+          "Formerly ChannelAdvisor; now part of Rithum"
+        ],
+        "bestFor": [
+          "Large enterprise brands with $50M+ GMV",
+          "Global multichannel sellers needing 600+ marketplace connections",
+          "Retailers requiring managed marketplace services"
+        ],
+        "sources": [
+          {
+            "url": "https://www.rithum.com/rithum-security/",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://www.rithum.com/gdpr-faq/",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Pricing confirmed custom-quote only; rithum.com/pricing/ returns 404 (verified 2026-06-18). SOC 2 Type II ('annual SOC 2 Type II audit') and GDPR compliance verified directly from rithum.com/rithum-security/ and rithum.com/gdpr-faq/. ISO 27001 and HIPAA not claimed — left null."
+      }
+    }
+  ]
+}

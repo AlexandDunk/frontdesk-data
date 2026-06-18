@@ -1,0 +1,919 @@
+{
+  "vertical": "notary-software",
+  "generatedAt": "2026-06-18",
+  "methodologyNotes": "Official pricing pages were re-fetched per vendor on 2026-06-18: proof.com/pricing, bluenotary.us/pricing and ?tab=business, onenotary.com/pricing-new and /new-individuals-pricing, signix.com/notary-software-pricing and /digital-signature-pricing, notarylive.com/pricing (which DOES publish self-serve plans, contrary to the draft), and stavvy.com (no public pricing page). docverify.com is effectively dead — the official domain returns an expired-certificate error — so DocVerify e-sign prices rest ONLY on third-party aggregators (Verdocs/Capterra/G2) and could not be confirmed on a live official page; they are flagged accordingly. Compliance pages were fetched separately: proof.com/product/notarize (SOC 2, IAL2/Kantara, MISMO, WCAG AA, WebTrust; HIPAA/GDPR not stated), bluenotary.us homepage (HIPAA + SOC 2 Type 2 + MISMO badges), onenotary.com/compliance (SOC 2 Type II + ISO 27001:2022 + MISMO; HIPAA not stated), signix.com/digital-signature-legality-and-compliance (HIPAA, SOC 2 Type II, SOC 3, ISO 27001, FIPS 140-2 explicitly stated), stavvy.com (SOC 2 Type 2 + MISMO). Telephony fields (minutes/calls/overage) are null throughout — this is software, not telephony. Quote-only/enterprise tiers carry monthlyUsd=null. Per-notarization fees are captured in plan notes.",
+  "vendors": [
+    {
+      "slug": "proof",
+      "name": "Proof (formerly Notarize)",
+      "domain": "proof.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Salesforce",
+        "Adobe eSign",
+        "eOriginal",
+        "ResWare",
+        "SoftPro 360",
+        "Encompass",
+        "SimpleNexus"
+      ],
+      "provenance": "Pricing re-fetched from proof.com/pricing on 2026-06-18; compliance from proof.com/product/notarize (SOC 2, IAL2 via Kantara, MISMO, WCAG AA, WebTrust audited explicitly listed; HIPAA and GDPR not stated). No flat monthly subscription is published — Business Pro and Title Pro are pay-per-transaction; Premium/Enterprise are annual/custom-quote. CORRECTION: the draft inverted the Business Pro Notarize fee — the official page shows $25 per notarization meeting via the Notarize Network (standard rate, one seal/one signer); $10 is the additional-seal fee, not a meeting fee. The claimed '$25 in-house' rate is not supported by the page.",
+      "plans": [
+        {
+          "name": "Business Pro",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": 25,
+          "annualDiscountPct": null,
+          "billingModel": "per_call",
+          "notes": "No flat monthly fee, no setup cost, no monthly minimum — pay-per-transaction. Notarize: $25 per notarization meeting via the Notarize Network (covers one notary seal, one signer); $10 per additional seal; $5 per additional signer. Identify: $4 per signer. Sign: $4 per transaction. On-demand witness: $10 each. Targeted at teams sending up to 25 transactions/month.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.proof.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Business Premium",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Billed annually; price not published — contact sales. Includes API access, custom co-branding, Salesforce/eOriginal/Adobe eSign integrations, Proof Defend fraud monitoring. For teams scaling beyond 25 transactions/month.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.proof.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Business Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing — contact sales. Includes Command Center (SSO, SCIM), preferred Notarize Network access, enterprise notary management, dedicated Customer Success Manager.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.proof.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Real Estate Title Pro",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_call",
+          "notes": "Pay-per-meeting. Rates shown are for in-house notaries: seller-side/cash/HELOC closings $45/meeting; mortgage packages $90/meeting; ancillary docs $25/meeting. Meetings fulfilled by the Notarize Network bill at standard rates ($99 / $150 / $35 respectively). Identify $4/signer; Sign $4/transaction. Targeted at small title teams with in-house notaries.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.proof.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Real Estate Title Premium",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Billed annually; price not published — contact sales. Includes ResWare and SoftPro 360 integrations, closing concierge team, templating services.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.proof.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Lender Premium",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing — contact sales. Unlimited seats, Notarize API access, Encompass and SimpleNexus integrations.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.proof.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://www.proof.com/product/notarize",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Salesforce",
+          "Adobe eSign",
+          "eOriginal",
+          "ResWare",
+          "SoftPro 360",
+          "Encompass",
+          "SimpleNexus"
+        ],
+        "limits": [
+          "Business Pro targeted at up to 25 transactions/month",
+          "Notarize Network available 24/7/365",
+          "Accepted in all 50 states"
+        ],
+        "keyFeatures": [
+          "Large on-demand notary network",
+          "Multi-product platform: Notarize, Sign, Identify, Verify, Certify, Defend",
+          "NIST IAL2-certified identity verification (Kantara)",
+          "SOC 2, MISMO, WCAG AA, WebTrust audited"
+        ],
+        "bestFor": [
+          "enterprises",
+          "mortgage-lenders",
+          "title-agencies",
+          "high-volume-RON"
+        ],
+        "sources": [
+          {
+            "url": "https://www.proof.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://www.proof.com/product/notarize",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Pricing from proof.com/pricing; compliance from proof.com/product/notarize (SOC 2, IAL2/Kantara, MISMO, WCAG AA, WebTrust listed; HIPAA/GDPR not stated). Unverifiable 'proof.com/trust' source from the draft was removed. Business Pro Notarize fee corrected to $25 (Network standard) from the draft's inverted $10."
+      }
+    },
+    {
+      "slug": "bluenotary",
+      "name": "BlueNotary",
+      "domain": "bluenotary.us",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Google Drive",
+        "Box",
+        "Dropbox",
+        "OneDrive"
+      ],
+      "provenance": "Pricing re-fetched from bluenotary.us/pricing and ?tab=business on 2026-06-18. HIPAA + SOC 2 Type 2 + MISMO certification badges confirmed on bluenotary.us homepage. GDPR not stated. All published prices match the draft.",
+      "plans": [
+        {
+          "name": "Notary Basic",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free forever for notaries. Includes eJournal access, automatic billing, 10-year recording storage, audit logs, self-paced training, live chat support.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://bluenotary.us/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Notary Pro",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "$297/year billed annually (saves up to ~10% vs ~$324/year monthly equivalent; ~$24.75/mo effective). Includes white label, free eSeal/DC, BlueNotary client network access, loan signing, custom invoicing, 7+ advanced courses, mileage/tax tracking, in-person notarizations, branded emails, priority support.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://bluenotary.us/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Business Pro",
+          "monthlyUsd": 37,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "per_seat",
+          "notes": "$37 per notary seat/month (up to ~10% off with annual billing). Includes 2 free notarization sessions/month/seat; additional sessions $10 each. Additional signers $5, BlueNotary witness $10, closing package $45. Includes KBA & biometrics, free eSeal/DC, 10-year audit logs.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://bluenotary.us/pricing?tab=business",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Closing Pro",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": 45,
+          "annualDiscountPct": null,
+          "billingModel": "per_call",
+          "notes": "$45 per eClosing transaction. General notary work $25 per session ($8 per additional stamp, $5 per additional signer, $10 BlueNotary witness). Includes unlimited eSigns, unlimited notary seats, KBA & biometrics, 10-year storage.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://bluenotary.us/pricing?tab=business",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "eSign Basic",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free forever. 5 eSign sessions/month, 1 reusable template, multi-party, ESIGN Act compliance, audit logs, live chat support.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://bluenotary.us/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "eSign Pro",
+          "monthlyUsd": 15,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$15/user/month billed yearly; $12/user/month at 5+ seats (yearly). Unlimited sessions, unlimited templates, Google Drive/Box/Dropbox/OneDrive integration, branded emails, priority support.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://bluenotary.us/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing. Volume discounts, API access, white-label, CRM/LMS integration, dedicated success manager, custom development, priority support.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://bluenotary.us/pricing?tab=business",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://bluenotary.us",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Google Drive",
+          "Box",
+          "Dropbox",
+          "OneDrive"
+        ],
+        "limits": [
+          "Business Pro includes 2 free sessions/month per seat",
+          "eSign Basic capped at 5 sessions/month"
+        ],
+        "keyFeatures": [
+          "Dual audience: notary-side platform + business-side platform in one product",
+          "HIPAA, SOC 2 Type 2, and MISMO certified",
+          "Closing Pro pay-per-transaction model with no monthly commitment",
+          "Free eJournal and 10-year video/audit log storage"
+        ],
+        "bestFor": [
+          "individual-notaries",
+          "small-businesses",
+          "title-companies",
+          "real-estate-closings"
+        ],
+        "sources": [
+          {
+            "url": "https://bluenotary.us/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://bluenotary.us/pricing?tab=business",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Pricing fetched from bluenotary.us/pricing and ?tab=business; HIPAA + SOC 2 Type 2 + MISMO confirmed on homepage. Draft's '14-day free trial' was removed (no forever-free-vs-trial distinction needed — Basic and eSign Basic ARE forever-free; a separate 14-day trial was not confirmed on the pricing page). Unverified title-company integrations (First American / Old Republic / Fidelity National) removed from keyIntegrations — not shown on official pricing/homepage; only cloud-storage integrations confirmed. The '20,000+ notaries / 40+ states' marketing claim was dropped from limits as unverified."
+      }
+    },
+    {
+      "slug": "onenotary",
+      "name": "OneNotary",
+      "domain": "onenotary.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Clio",
+        "DocuSign",
+        "REST API"
+      ],
+      "provenance": "Pricing re-fetched from onenotary.com/pricing-new (business) and /new-individuals-pricing on 2026-06-18. Compliance from onenotary.com/compliance (SOC 2 Type II + ISO 27001:2022 + MISMO confirmed; HIPAA and GDPR not stated). Business Professional confirmed at $49/mo.",
+      "plans": [
+        {
+          "name": "Individual Pay-As-You-Go",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": 25,
+          "annualDiscountPct": null,
+          "billingModel": "per_call",
+          "notes": "No subscription fee. Online notarization: $25 per session (1 seal, 1 signer); additional seals +$10; additional signers +$10; OneNotary witness +$15. Mobile notarization: $80 per visit (1 seal, up to 5 pages); additional seals +$5; additional pages +$0.60; travel free in popular areas or $10–$50 remote. 7-day document storage.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://onenotary.com/new-individuals-pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Business Pay-As-You-Go",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": 25,
+          "annualDiscountPct": null,
+          "billingModel": "per_call",
+          "notes": "No monthly fee. Online notarizations from $25/session; mobile from $80. On-demand, no commitment. Connect-Your-Own-Notary: $10/notarization (requires $25/month professional notary subscription). 7-day document storage.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://onenotary.com/pricing-new/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Business Professional",
+          "monthlyUsd": 49,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$49/month (billed monthly; an annual option exists but no discount percentage is published). Includes unlimited storage, biometric verification, document templates, REST API access, Form I-9 + E-Verify integration, team members. Per-notarization fees still apply on top of subscription.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://onenotary.com/pricing-new/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing ('Let's discuss'). Volume discounts, dedicated account manager, custom workflows, SSO (Okta, OAuth, SAML, Google), embedded integration, custom branding.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://onenotary.com/pricing-new/",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://onenotary.com/compliance/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Clio",
+          "DocuSign",
+          "REST API",
+          "Form I-9 / E-Verify",
+          "Okta SSO"
+        ],
+        "limits": [
+          "Pay-as-you-go document storage limited to 7 days",
+          "Legal in all 50 states"
+        ],
+        "keyFeatures": [
+          "SOC 2 Type II, ISO 27001:2022, and MISMO certified",
+          "Clio integration for law firms",
+          "Signer-pays option to pass notarization cost to the end-signer",
+          "Connect-Your-Own-Notary option at $10/notarization"
+        ],
+        "bestFor": [
+          "law-firms",
+          "individuals",
+          "small-businesses",
+          "legal-professionals"
+        ],
+        "sources": [
+          {
+            "url": "https://onenotary.com/pricing-new/",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://onenotary.com/new-individuals-pricing/",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://onenotary.com/compliance/",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Pricing from official onenotary.com plan pages; compliance from onenotary.com/compliance (SOC 2 Type II + ISO 27001:2022 + MISMO; HIPAA not mentioned). Unverified '45,000+ virtual notaries' and '35 MB document limit' marketing claims dropped from limits."
+      }
+    },
+    {
+      "slug": "signix",
+      "name": "SIGNiX",
+      "domain": "signix.com",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Zoom",
+        "API"
+      ],
+      "provenance": "Pricing re-fetched from signix.com/notary-software-pricing and /digital-signature-pricing on 2026-06-18. Compliance from signix.com/digital-signature-legality-and-compliance — HIPAA, SOC 2 Type II, SOC 3, ISO 27001, FIPS 140-2 explicitly stated. GDPR not stated; BAA not mentioned.",
+      "plans": [
+        {
+          "name": "eNotary Individual",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": 10,
+          "annualDiscountPct": null,
+          "billingModel": "hybrid",
+          "notes": "$299/year on a 3-year agreement (or $300/year on a 1-year agreement), PLUS a $50/month transaction minimum billed monthly. $50/month is included with the plan; each transaction is $10 (includes one notary seal); additional seals $5 each. Brand Center add-on $499/year. Includes X.509 Digital Certificate, eNotary Journal, video meetings, 10-year video storage, live training, phone and email support.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.signix.com/notary-software-pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "eNotary Team",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": 10,
+          "annualDiscountPct": null,
+          "billingModel": "hybrid",
+          "notes": "$300/year base plus $299 or $449 per additional user annually, plus a $50/month pooled transaction minimum (billed monthly). Same per-transaction structure ($10/transaction incl. one seal, $5 per additional seal). Adds multi-user management, Brand Center, API integration, white labeling. Brand Center add-on $499/year.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.signix.com/notary-software-pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "eNotary Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing — contact sales. Same per-transaction structure applies. Custom features, dedicated support.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.signix.com/notary-software-pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Digital Signature Standard",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$180/user/year billed annually ($15/user/month equivalent). Minimum 100 transactions/year (billed annually at $300/year). Includes PKI digital signatures, ReadyDoX, Mass Mailer, TotalAudit audit trail, unlimited templates, multiple authentication methods, web support, webinar training. Brand Center add-on $499/year.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.signix.com/digital-signature-pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Digital Signature Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing. All Standard features plus team admins, shared templates, custom branding, API integration, white labeling. No minimum transaction requirement.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.signix.com/digital-signature-pricing",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://www.signix.com/digital-signature-legality-and-compliance",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Zoom",
+          "API (REST)",
+          "FINRA/SEC systems",
+          "FDA 21 CFR Part 11 compatible systems"
+        ],
+        "limits": [
+          "$50/month transaction minimum required on eNotary plans",
+          "Standard digital signature plan requires minimum 100 transactions/year"
+        ],
+        "keyFeatures": [
+          "Independent X.509 digital certificates — documents remain verifiable without SIGNiX servers",
+          "HIPAA, SOC 2 Type II, SOC 3, ISO 27001, FIPS 140-2 compliant",
+          "10-year video recording storage for RON sessions",
+          "Serves healthcare, finance (FINRA/SEC), and regulated industries"
+        ],
+        "bestFor": [
+          "regulated-industries",
+          "healthcare",
+          "financial-services",
+          "individual-notaries",
+          "law-firms"
+        ],
+        "sources": [
+          {
+            "url": "https://www.signix.com/notary-software-pricing",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://www.signix.com/digital-signature-pricing",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://www.signix.com/digital-signature-legality-and-compliance",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Pricing from signix.com pricing pages; compliance (HIPAA, SOC 2 Type II, SOC 3, ISO 27001, FIPS 140-2) explicitly listed at signix.com/digital-signature-legality-and-compliance. Unverified healthcare-HIPAA URL from the draft was removed; the compliance/legality page already substantiates HIPAA."
+      }
+    },
+    {
+      "slug": "docverify",
+      "name": "DocVerify",
+      "domain": "docverify.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "ICE Mortgage Technology / Encompass",
+        "Black Knight Expedite Close"
+      ],
+      "provenance": "DocVerify is owned by ICE Mortgage Technology (formerly Black Knight). On 2026-06-18 the official docverify.com domain returned an EXPIRED TLS CERTIFICATE — the site is effectively dead/unreachable. No official live pricing page could be reached. The $24/$65-per-user e-sign prices come ONLY from third-party aggregators (Verdocs, Capterra, G2), which cannot substitute for an official live pricing page; they are flagged and should be treated as low-confidence. RON transaction fees are not publicly listed.",
+      "plans": [
+        {
+          "name": "Business E-Sign",
+          "monthlyUsd": 24,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$24/user/month (~$268/user/year). Standard eSign workflows, Smart Tags, multi-party signing, audit trail, automated reminders. RON notarization fees not included. WARNING: price is from third-party aggregators only — the official docverify.com page is unreachable (expired certificate) and could not confirm this.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://verdocs.com/docverify-pricing/",
+            "accessedAt": "2026-06-18"
+          },
+          "corroboration": {
+            "url": "https://www.capterra.com/p/165951/E-Signature/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Enterprise E-Sign",
+          "monthlyUsd": 65,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$65/user/month (~$760/user/year). Adds API access and deeper compliance tooling. RON fees separate. WARNING: third-party-aggregator price only; not confirmed on a live official page (docverify.com certificate expired).",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://verdocs.com/docverify-pricing/",
+            "accessedAt": "2026-06-18"
+          },
+          "corroboration": {
+            "url": "https://www.g2.com/products/docverify/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Enterprise Group",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom negotiated pricing with ICE Mortgage Technology for high-volume mortgage/real-estate orgs. Includes RON, IPEN, eVault via Expedite Close.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://verdocs.com/docverify-pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "ICE Mortgage Technology Encompass",
+          "Black Knight Expedite Close",
+          "MERS"
+        ],
+        "limits": [
+          "Official docverify.com is unreachable (expired TLS certificate) — no official pricing/compliance page verifiable as of 2026-06-18",
+          "All e-sign plan prices are third-party-aggregator-sourced, not official",
+          "RON transaction pricing not publicly listed — contact ICE Mortgage Technology"
+        ],
+        "keyFeatures": [
+          "Embedded in ICE Mortgage Technology / Encompass LOS workflow",
+          "Supports RON, IPEN, and hybrid eClosings",
+          "ESIGN Act and UETA compliant cryptographic audit trails"
+        ],
+        "bestFor": [
+          "mortgage-lenders",
+          "title-companies",
+          "real-estate-closings",
+          "enterprise"
+        ],
+        "sources": [
+          {
+            "url": "https://verdocs.com/docverify-pricing/",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://www.capterra.com/p/165951/E-Signature/pricing/",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://www.g2.com/products/docverify/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Official docverify.com returned an expired-certificate error on 2026-06-18 (site effectively dead). E-sign prices ($24/$65) sourced only from third-party aggregators and corroborated consistently across them, but NOT verifiable on a live official page — treat as low-confidence. RON fees and compliance certifications unconfirmable."
+      }
+    },
+    {
+      "slug": "stavvy",
+      "name": "Stavvy",
+      "domain": "stavvy.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Encompass (ICE Mortgage Technology)",
+        "MERS",
+        "Fannie Mae",
+        "Freddie Mac",
+        "Ginnie Mae"
+      ],
+      "provenance": "stavvy.com homepage re-fetched 2026-06-18: confirmed NO public pricing page exists — all pricing is quote-only via 'Contact Us'. SOC 2 Type 2 and MISMO certification confirmed on the homepage; HIPAA not mentioned.",
+      "plans": [
+        {
+          "name": "Stavvy Platform",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only pricing; no self-serve plans published. Platform includes eSign, RON, IPEN, eNote, eVault, and notary signing services in one unified workflow. Targeted at mortgage lenders, servicers, and title companies. Contact sales for pricing.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://stavvy.com",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://stavvy.com",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Encompass (ICE Mortgage Technology)",
+          "MERS",
+          "Fannie Mae",
+          "Freddie Mac",
+          "Ginnie Mae"
+        ],
+        "limits": [
+          "No public pricing — enterprise/quote-only sales model",
+          "Primarily serves US mortgage lending and servicing market",
+          "RON availability varies by state law"
+        ],
+        "keyFeatures": [
+          "SOC 2 Type 2 and MISMO certified",
+          "Unified eSign + RON + IPEN + eNote + eVault in one platform",
+          "Encompass LOS integration for end-to-end digital mortgage closing",
+          "Approved by Fannie Mae, Freddie Mac, Ginnie Mae, and MERS"
+        ],
+        "bestFor": [
+          "mortgage-lenders",
+          "mortgage-servicers",
+          "title-companies",
+          "enterprise"
+        ],
+        "sources": [
+          {
+            "url": "https://stavvy.com",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "No public pricing page confirmed on stavvy.com (homepage 2026-06-18). SOC 2 Type 2 + MISMO confirmed on official homepage. Unverifiable press URL (press.stavvy.com/new-encompass-integration) and the secondary /ron-platform URL were removed from sources since the homepage substantiates the claims and the press URL could not be confirmed live."
+      }
+    },
+    {
+      "slug": "notarylive",
+      "name": "NotaryLive",
+      "domain": "notarylive.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "CORRECTION: the draft falsely claimed NotaryLive's pricing page was not fetchable and gave a vague '~$25' guess. notarylive.com/pricing WAS fetched on 2026-06-18 and publishes three concrete self-serve plans: Basic (pay-per-session) $25/session, Business $59/month, Business Premier $99/month. SOC 2 Type II confirmed (SOC 2 report dated Dec 11, 2025; examination period May–Oct 2025 by A-LIGN; official blog post 2026-05-12).",
+      "plans": [
+        {
+          "name": "Basic",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": 25,
+          "annualDiscountPct": null,
+          "billingModel": "per_call",
+          "notes": "Pay-as-you-go, no monthly fee. $25 per notarization session; +$5 per additional signer; +$5 per additional 25 pages.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://notarylive.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 59,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": 23,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$59/month (monthly/annual toggle exists but no annual price/discount is published). Includes 1–5 users; $23 per session (billed monthly) when participants are in multiple locations.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://notarylive.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Business Premier",
+          "monthlyUsd": 99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$99/month. Unlimited users, volume discounts available. Contact sales for high-volume rates.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://notarylive.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://notarylive.com/blogs/2026/05/12/notarylive-is-soc-ii-type-ii-compliant/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [],
+        "limits": [
+          "Basic is pay-per-session with no monthly fee but no included sessions",
+          "Business plan limited to 1–5 users; $23/session applies for multi-location participants",
+          "No forever-free plan"
+        ],
+        "keyFeatures": [
+          "SOC 2 Type II certified (A-LIGN, report Dec 2025)",
+          "Self-serve published pricing for individuals and businesses",
+          "US RON platform"
+        ],
+        "bestFor": [
+          "individuals",
+          "small-businesses"
+        ],
+        "sources": [
+          {
+            "url": "https://notarylive.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://notarylive.com/blogs/2026/05/12/notarylive-is-soc-ii-type-ii-compliant/",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Pricing fetched directly from notarylive.com/pricing on 2026-06-18 (Basic $25/session, Business $59/mo, Business Premier $99/mo) — replacing the draft's fabricated single placeholder plan. SOC 2 Type II confirmed via official blog + multiple press releases (A-LIGN, Dec 2025 report)."
+      }
+    }
+  ]
+}

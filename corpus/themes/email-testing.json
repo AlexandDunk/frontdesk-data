@@ -1,0 +1,690 @@
+{
+  "vertical": "email-testing",
+  "generatedAt": "2026-06-18",
+  "methodologyNotes": "Official pricing pages were re-fetched on 2026-06-18: litmus.com/pricing (shows only Enterprise contact-sales; no self-serve prices published), mailgun.com/pricing/inspect, emailonacid.com/pricing, mailtrap.io/pricing (Email Sandbox section), mailosaur.com/pricing, testi.at/pricing (JavaScript-rendered, not machine-readable), and mailpit.axllent.org plus github.com/axllent/mailpit. Litmus self-serve pricing is no longer displayed on the official pricing page; the $500/mo Core figure is corroborated by Capterra and multiple third-party trackers (xhtmlteam, emailexpert, machinecdn) reporting the Aug 2025 Validity overhaul. Litmus annual discount is reported only vaguely (10-20%) and not published as an exact figure, so it is set null. Mailosaur prices shown are the published annual-billing rates ($20/$50 per month billed annually); the monthly-billing rate is not published, so the draft's $25/$62.50 'monthly' figures were removed as unverifiable inflation. Mailtrap SOC 2 Type 2 is explicitly stated on the pricing/compliance pages. Testi@ prices ($7/2-day, $14/31-day, $50/6-month) are corroborated by saasworthy/spotsaas/G2; the supported-client count is reported as ~50 (not 130+) by those sources, so the inflated count was corrected. accessedAt 2026-06-18.",
+  "vendors": [
+    {
+      "slug": "litmus",
+      "name": "Litmus",
+      "domain": "litmus.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Mailchimp",
+        "Klaviyo",
+        "Salesforce Marketing Cloud",
+        "HubSpot",
+        "Marketo",
+        "Campaign Monitor",
+        "Braze"
+      ],
+      "provenance": "Re-fetched litmus.com/pricing on 2026-06-18: page now shows ONLY Enterprise contact-sales, with no self-serve price displayed. The $500/mo Core plan (5 seats, 2,000 previews/mo, 100+ clients) is corroborated by Capterra and third-party trackers documenting the Aug 2025 Validity pricing overhaul (Plus->Core, Basic eliminated). source.url for Core changed from litmus.com/pricing to Capterra because the official page no longer publishes the number. Annual discount removed (10-20% reported vaguely, no exact published figure). SOC 2 Type 2 status per Litmus compliance materials.",
+      "plans": [
+        {
+          "name": "Core",
+          "monthlyUsd": 500,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "5 full user seats; 2,000 email previews/month across 100+ clients; analytics; Litmus Personalize impressions; code + no-code builder; ESP integrations. NOTE: litmus.com/pricing no longer publishes this price (shows only Enterprise contact-sales); $500/mo is corroborated by Capterra and third-party pricing trackers reporting the Aug 2025 Validity overhaul. Annual-billing discount reported only as a vague 10-20% range, not an exact published figure.",
+          "source": {
+            "url": "https://www.capterra.com/p/178360/Litmus/pricing/",
+            "accessedAt": "2026-06-18"
+          },
+          "corroboration": {
+            "url": "https://www.litmus.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "Custom seats and preview volume; advanced personalization (rule-based images, scratch-offs); SSO; enterprise ESP integrations; dedicated support. Contact sales for pricing. This is the only tier shown on the official pricing page.",
+          "source": {
+            "url": "https://www.litmus.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.litmus.com/blog/soc-2-type-2-compliance",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 7,
+        "keyIntegrations": [
+          "Mailchimp",
+          "Klaviyo",
+          "Salesforce Marketing Cloud",
+          "HubSpot",
+          "Marketo",
+          "Campaign Monitor"
+        ],
+        "limits": [
+          "2,000 previews/month on Core",
+          "5 seats on Core",
+          "Self-serve prices no longer shown on official pricing page"
+        ],
+        "keyFeatures": [
+          "100+ email client previews with automated QA",
+          "Code and no-code email builder",
+          "Litmus Personalize (countdown timers, custom images)",
+          "Email analytics and engagement tracking"
+        ],
+        "bestFor": [
+          "Enterprise marketing teams",
+          "High-volume email QA",
+          "End-to-end email workflow"
+        ],
+        "sources": [
+          {
+            "url": "https://www.litmus.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://www.capterra.com/p/178360/Litmus/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Official litmus.com/pricing shows only Enterprise contact-sales as of 2026-06-18. Core $500/mo corroborated by Capterra; not published on the official page. Free trial exists (confirmed by Capterra) but exact duration not stated on official page; Litmus's historical trial is 7 days. Annual discount removed as no exact published figure exists. SOC 2 Type 2 and GDPR per Litmus compliance materials."
+      }
+    },
+    {
+      "slug": "mailgun-inspect",
+      "name": "Mailgun Inspect (formerly Email on Acid)",
+      "domain": "mailgun.com",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Mailgun Send",
+        "Mailgun Optimize",
+        "Sinch Email platforms"
+      ],
+      "provenance": "Re-fetched mailgun.com/pricing/inspect on 2026-06-18: Basic $99 and Premium $199 confirmed exactly, $0.15/preview overage, 1-month free trial, Contract = contact-sales. emailonacid.com/pricing confirms the same Basic $99 / Premium $199 and documents migration to Mailgun Inspect beginning June 2026. Mailgun security page confirms HIPAA and SOC 2 Type II.",
+      "plans": [
+        {
+          "name": "Basic",
+          "monthlyUsd": 99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "1,000 email previews/month; unlimited users; 100+ email clients and devices; API access; $0.15/preview overage. Includes 1-month free trial (not a forever-free tier).",
+          "source": {
+            "url": "https://www.mailgun.com/pricing/inspect/",
+            "accessedAt": "2026-06-18"
+          },
+          "corroboration": {
+            "url": "https://www.emailonacid.com/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": 199,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "2,000 email previews/month; unlimited users; 100+ email clients and devices; API access; accessibility tests; HTML code analysis; link and image validation; spam content checks; $0.15/preview overage. Includes 1-month free trial.",
+          "source": {
+            "url": "https://www.mailgun.com/pricing/inspect/",
+            "accessedAt": "2026-06-18"
+          },
+          "corroboration": {
+            "url": "https://www.emailonacid.com/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Contract",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "Custom preview allotment; unlimited users; all Premium features. Contact sales. Existing Email on Acid annual customers migrate at term end starting June 2026.",
+          "source": {
+            "url": "https://www.mailgun.com/pricing/inspect/",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.mailgun.com/enterprise/security/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 30,
+        "keyIntegrations": [
+          "Mailgun Send",
+          "Mailgun Optimize",
+          "REST API"
+        ],
+        "limits": [
+          "1,000 previews/month on Basic",
+          "2,000 previews/month on Premium",
+          "$0.15/preview overage on both self-serve plans"
+        ],
+        "keyFeatures": [
+          "100+ email client and device previews",
+          "Accessibility testing and HTML code analysis",
+          "Link and image validation",
+          "Spam content checks on Premium+"
+        ],
+        "bestFor": [
+          "Teams already on Mailgun",
+          "Email QA with accessibility compliance",
+          "Mid-size email teams"
+        ],
+        "sources": [
+          {
+            "url": "https://www.mailgun.com/pricing/inspect/",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://www.emailonacid.com/pricing/",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://www.mailgun.com/enterprise/security/",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Pricing from mailgun.com/pricing/inspect, corroborated by emailonacid.com/pricing. Mailgun Inspect is the successor to Email on Acid; migration begins June 2026. Compliance from mailgun.com/enterprise/security. The '1-month free trial' is a trial, not a forever-free tier (freeTier=false)."
+      }
+    },
+    {
+      "slug": "mailtrap",
+      "name": "Mailtrap",
+      "domain": "mailtrap.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "SMTP",
+        "REST API",
+        "GitHub Actions",
+        "GitLab CI",
+        "CircleCI",
+        "Laravel",
+        "Rails",
+        "Node.js",
+        "PHP"
+      ],
+      "provenance": "Re-fetched mailtrap.io/pricing on 2026-06-18: Email Sandbox tiers Free $0, Basic $17 ($14 annual), Team $42 ($34 annual), Business $123 ($99 annual), Enterprise $498 ($399 annual) all confirmed exactly. Pricing page explicitly states GDPR, ISO 27001, and SOC 2 Type 2 compliance, so soc2 corrected from null to true. Free tier (50 test emails/mo) is genuinely forever-free.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Email Sandbox: 50 test emails/month; 1 user; 1 sandbox inbox; 10 emails per sandbox max; HTML preview; spam testing via SpamAssassin. Forever free.",
+          "source": {
+            "url": "https://mailtrap.io/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Basic",
+          "monthlyUsd": 17,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 18,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Email Sandbox: 500 test emails/month; 3 users; 1 sandbox. Annual billing: $14/mo ($168/year), ~18% off.",
+          "source": {
+            "url": "https://mailtrap.io/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Team",
+          "monthlyUsd": 42,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 19,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Email Sandbox: 5,000 test emails/month; 5 users; 5 sandboxes; priority support. Annual billing: $34/mo ($408/year), ~19% off.",
+          "source": {
+            "url": "https://mailtrap.io/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 123,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Email Sandbox: 50,000 test emails/month; 50 users; 50 sandboxes; chat support. Annual billing: $99/mo ($1,188/year), ~20% off.",
+          "source": {
+            "url": "https://mailtrap.io/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": 498,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Email Sandbox: unlimited test emails; unlimited users; 300 sandboxes; SSO included. Annual billing: $399/mo ($4,788/year), ~20% off. Note: this is a published flat self-serve price, not contact-sales.",
+          "source": {
+            "url": "https://mailtrap.io/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://mailtrap.io/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "SMTP",
+          "REST API",
+          "GitHub Actions",
+          "GitLab CI",
+          "Laravel",
+          "Rails",
+          "Node.js"
+        ],
+        "limits": [
+          "50 test emails/month on Free",
+          "1 sandbox on Free and Basic",
+          "10 emails per sandbox on Free"
+        ],
+        "keyFeatures": [
+          "Fake SMTP server that traps emails (never sends to real recipients)",
+          "HTML/CSS compatibility checker and spam score (SpamAssassin)",
+          "Multiple isolated sandbox environments per team",
+          "API and SMTP access for CI/CD integration"
+        ],
+        "bestFor": [
+          "Developer teams",
+          "QA/staging environments",
+          "CI/CD pipeline email testing"
+        ],
+        "sources": [
+          {
+            "url": "https://mailtrap.io/pricing/",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://docs.mailtrap.io/account-and-organization/privacy-and-security/gdpr-compliance",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Sandbox pricing confirmed via mailtrap.io/pricing. GDPR, ISO 27001, and SOC 2 Type 2 are explicitly stated on the pricing page (soc2 corrected null->true). Only the Email Sandbox (testing) product is listed; Mailtrap also sells separate Email API/SMTP and Email Marketing products not covered here."
+      }
+    },
+    {
+      "slug": "mailosaur",
+      "name": "Mailosaur",
+      "domain": "mailosaur.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Selenium",
+        "Cypress",
+        "Playwright",
+        "Postman",
+        "Robot Framework",
+        "Cucumber",
+        "TestCafe",
+        "Webdriver.IO",
+        "Ghost Inspector"
+      ],
+      "provenance": "Re-fetched mailosaur.com/pricing on 2026-06-18: the ONLY published prices are the annual-billing rates of $20/mo (Personal) and $50/mo (Core), each marked 'Save 20%' vs monthly. The monthly-billing rate is NOT published on the page. The draft's monthlyUsd values of $25 and $62.50 were fabricated 'monthly equivalents' and are corrected to the actual published $20/$50 annual-billing rates. Enterprise is contact-sales. 14-day free trial; no forever-free tier.",
+      "plans": [
+        {
+          "name": "Personal",
+          "monthlyUsd": 20,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "1 primary user (up to 3 total); 1 inbox with unlimited email addresses; 15,000 inbound emails/month (500/day limit); API access; SMTP. Price shown is the published annual-billing rate ($20/mo, $240/year); the page advertises 'Save 20%' vs monthly but does not publish the monthly-billing figure. Email previews add-on from $25/mo extra; SMS testing add-on from $37.50/mo extra.",
+          "source": {
+            "url": "https://mailosaur.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Core",
+          "monthlyUsd": 50,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "5 seats; multiple inboxes with unlimited addresses each; 75,000 inbound emails/month (2,500/day); mail rules; auto-forwarding; reply/send; POP3 and IMAP. Price shown is the published annual-billing rate ($50/mo, $600/year); monthly-billing figure not published. Email previews add-on from $25/mo; SMS testing included.",
+          "source": {
+            "url": "https://mailosaur.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "Custom users/inboxes; SSO (SAML2/OIDC); separate team/project permissions; enterprise security; dedicated account manager; SLA support. Contact sales.",
+          "source": {
+            "url": "https://mailosaur.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://mailosaur.com/faqs",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Selenium",
+          "Cypress",
+          "Playwright",
+          "Postman",
+          "Robot Framework",
+          "Cucumber"
+        ],
+        "limits": [
+          "15,000 inbound emails/month on Personal (500/day)",
+          "75,000 inbound emails/month on Core (2,500/day)",
+          "Email previews and SMS testing are paid add-ons",
+          "Published prices are annual-billing rates; monthly-billing rate not published"
+        ],
+        "keyFeatures": [
+          "Automated email testing via API for QA pipelines",
+          "Real inboxes with unlimited addresses for each inbox",
+          "POP3, IMAP, and SMTP connectivity",
+          "Email previews add-on (render testing across clients)"
+        ],
+        "bestFor": [
+          "QA automation engineers",
+          "Software development teams",
+          "Test-driven email workflow"
+        ],
+        "sources": [
+          {
+            "url": "https://mailosaur.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://mailosaur.com/faqs",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Pricing from mailosaur.com/pricing. Only the annual-billing rates ($20 Personal / $50 Core per month) are published; the draft's $25/$62.50 'monthly equivalents' were invented and have been corrected. ISO 27001 and GDPR per FAQ; SOC 2 not explicitly stated, kept null. 14-day free trial, no forever-free tier."
+      }
+    },
+    {
+      "slug": "testi-at",
+      "name": "Testi@",
+      "domain": "testi.at",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "testi.at/pricing is JavaScript-rendered and not machine-readable. Prices ($7/2-day, $14/31-day, $50/6-month) are corroborated by saasworthy, spotsaas and G2. Those same sources report testing across ~50 email clients, so the draft's '130+' was corrected to '50+'. The free plan's specific client list (Thunderbird/Android 4.4) could not be verified on the official page and is softened.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Free plan with limited email-client previews (a small subset of clients). No expiry. Exact client list not verifiable on the official page.",
+          "source": {
+            "url": "https://testi.at/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "2-Day Access",
+          "monthlyUsd": 7,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Pay-as-you-go: $7 for 2 days of access (NOT a recurring monthly price). Screenshots across ~50 email clients. No preview caps during the period.",
+          "source": {
+            "url": "https://testi.at/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "31-Day Access",
+          "monthlyUsd": 14,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Pay-as-you-go: $14 for 31 days of access (one-time, not auto-renewing). Screenshots across ~50 email clients. No preview caps during the period.",
+          "source": {
+            "url": "https://testi.at/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "6-Month Access",
+          "monthlyUsd": 50,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Pay-as-you-go: $50 for 6 months of access TOTAL (~$8.33/mo equivalent; monthlyUsd field holds the full period price, not a monthly rate). Screenshots across ~50 email clients. No preview caps during the period.",
+          "source": {
+            "url": "https://testi.at/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [],
+        "limits": [
+          "Free plan limited to a small subset of email clients",
+          "Paid access periods are time-limited one-time purchases (2-day, 31-day, 6-month), not rolling monthly subscriptions"
+        ],
+        "keyFeatures": [
+          "Screenshots from ~50 email clients in seconds",
+          "Pay-as-you-go access periods (no subscription required)",
+          "Spam testing included",
+          "Chrome extension for quick testing"
+        ],
+        "bestFor": [
+          "Freelancers",
+          "Occasional testers",
+          "Budget-conscious small teams"
+        ],
+        "sources": [
+          {
+            "url": "https://testi.at/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://www.saasworthy.com/product/testi/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Prices corroborated by saasworthy/spotsaas/G2 (testi.at/pricing not machine-readable). The $7/2-day, $14/31-day, $50/6-month structure is consistently reported as one-time access periods, NOT monthly subscriptions. Supported-client count corrected from '130+' to '~50' per aggregator sources. No compliance claims are published, so hipaa/soc2/gdpr remain null."
+      }
+    },
+    {
+      "slug": "mailpit",
+      "name": "Mailpit",
+      "domain": "mailpit.axllent.org",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "SpamAssassin",
+        "Docker",
+        "SMTP relay"
+      ],
+      "provenance": "Re-fetched github.com/axllent/mailpit on 2026-06-18: confirmed MIT license, self-hosted single binary / Docker, no paid or SaaS tier. Entirely free.",
+      "plans": [
+        {
+          "name": "Self-Hosted (Free)",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Open-source (MIT license). Self-hosted via single binary or Docker image. No usage limits; no seats; no SaaS offering. All features included at no cost.",
+          "source": {
+            "url": "https://github.com/axllent/mailpit",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "SpamAssassin",
+          "Docker",
+          "SMTP relay",
+          "REST API",
+          "Webhooks"
+        ],
+        "limits": [
+          "Self-hosted only — no managed cloud option",
+          "SpamAssassin integration requires separate SpamAssassin install"
+        ],
+        "keyFeatures": [
+          "MIT-licensed self-hosted SMTP trap with web UI",
+          "HTML/CSS email client compatibility checker",
+          "SpamAssassin spam score integration",
+          "REST API for automated testing"
+        ],
+        "bestFor": [
+          "Developers needing local/CI email testing",
+          "Teams avoiding SaaS data exposure",
+          "Open-source stacks"
+        ],
+        "sources": [
+          {
+            "url": "https://mailpit.axllent.org",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://github.com/axllent/mailpit",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Confirmed open-source MIT license via github.com/axllent/mailpit and mailpit.axllent.org. No commercial tiers exist. Throughput claim '200-300 emails/second' from the draft was removed from keyFeatures as it is not a published benchmark."
+      }
+    }
+  ]
+}

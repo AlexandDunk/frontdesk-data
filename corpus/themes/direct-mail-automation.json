@@ -1,0 +1,680 @@
+{
+  "vertical": "direct-mail-automation",
+  "generatedAt": "2026-06-18",
+  "methodologyNotes": "Pricing re-verified via WebFetch against each vendor's official pricing page (lob.com/pricing, postgrid.com/pricing-print-mail, postalytics.com/pricing, easylettersender.click2mail.com/pricing, inkit.com/pricing, postpilot.com/pricing) on 2026-06-18, with compliance cross-checked against lob.com/security, postgrid.com/security, and the Click2Mail HIPAA blog. For Lob, PostGrid, Postalytics, and PostPilot the monthlyUsd field carries the platform/seat fee; per-piece print-and-postage rates are placed in plan notes because they are not a fixed monthly charge. Click2Mail publishes no monthly subscription; per-piece rates appear in notes. Inkit has repositioned as a document-automation and eSign platform: its pricing page publishes eSign/DocGen plans ($0 Free, $15 Personal, $25 Standard, custom Enterprise) and NO direct mail pricing — only the published $0 Free tier and custom Enterprise (which gates direct mail API access) are retained here, both flagged as off-core-vertical eSign products. accessedAt 2026-06-18.",
+  "vendors": [
+    {
+      "slug": "lob",
+      "name": "Lob",
+      "domain": "lob.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "HubSpot",
+        "Salesforce",
+        "Zapier",
+        "Marketo",
+        "Braze",
+        "Iterable",
+        "Figma"
+      ],
+      "provenance": "Pricing re-verified from lob.com/pricing 2026-06-18: Developer $0, Startup $260, Growth $550, Enterprise custom — all confirmed exactly. Compliance from lob.com/security which explicitly states annual SOC 2 Type 2 audits across all five Trust Services Criteria, HIPAA support with BAA for healthcare, and GDPR + CCPA/CPRA alignment.",
+      "plans": [
+        {
+          "name": "Developer",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "1 user, up to 500 mailings/month, 10 HTML templates. Per-piece rates: postcard $0.872, letter $0.806, check $1.159 (print + postage included). Confirmed on lob.com/pricing 2026-06-18.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.lob.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Startup",
+          "monthlyUsd": 260,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "3 users, up to 3,000 mailings/month, 10 HTML templates. Per-piece rates: postcard $0.612, letter $0.636, check $1.009. Confirmed on lob.com/pricing 2026-06-18.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.lob.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Growth",
+          "monthlyUsd": 550,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "5 users, up to 6,000 mailings/month, 25 HTML templates. Per-piece rates: postcard $0.582, letter $0.606, check $1.009. Confirmed on lob.com/pricing 2026-06-18.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.lob.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "20+ users, custom mail capacity, 50+ HTML templates, HIPAA-compliant mailings, user role management. Custom per-piece rates — contact sales. No published price.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.lob.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.lob.com/security",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "HubSpot",
+          "Salesforce",
+          "Zapier",
+          "Marketo",
+          "Braze",
+          "Iterable"
+        ],
+        "limits": [
+          "Developer: 500 mailings/month, 1 user",
+          "Startup: 3,000 mailings/month, 3 users",
+          "Growth: 6,000 mailings/month, 5 users",
+          "Enterprise required for HIPAA-compliant mailings"
+        ],
+        "keyFeatures": [
+          "REST API for postcards, letters, and checks",
+          "Address verification (CASS + NCOA)",
+          "SOC 2 Type 2 + HIPAA + BAA available (Enterprise)",
+          "No-code and API integrations"
+        ],
+        "bestFor": [
+          "developer-first",
+          "api-integration",
+          "healthcare-mail",
+          "high-volume-print-mail"
+        ],
+        "sources": [
+          {
+            "url": "https://www.lob.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://www.lob.com/security",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Pricing from lob.com/pricing (all four tiers confirmed exactly); compliance from lob.com/security confirming annual SOC 2 Type 2 audits, HIPAA with BAA, and GDPR + CCPA/CPRA alignment."
+      }
+    },
+    {
+      "slug": "postgrid",
+      "name": "PostGrid",
+      "domain": "postgrid.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "HubSpot",
+        "Salesforce",
+        "Zapier",
+        "ActiveCampaign",
+        "Shopify",
+        "Make",
+        "Marketo",
+        "QuickBooks",
+        "Zoho",
+        "Klaviyo",
+        "Customer.io",
+        "Stripe",
+        "Microsoft Dynamics 365"
+      ],
+      "provenance": "Pricing re-verified from postgrid.com/pricing-print-mail 2026-06-18: Starter $0, Enterprise custom — confirmed. Compliance from postgrid.com/security confirming SOC 2 Type II (auditor Prescient Assurance LLC), HIPAA (audited by Compliancy Group) with standard BAA, PCI DSS 3.2.1, and GDPR. Live page confirms US letter B&W First Class $1.019, Color First Class $1.179, postcard 4x6 $0.862, check $1.10; the 6x9/6x11 postcard and Standard-class rates in the original draft were not visible on the live tier table and have been trimmed to verified values.",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Up to 500 mailings/month, up to 50 checks/month, 1 user, 10 templates. US per-piece (confirmed on live page): letter B&W First Class $1.019, Color First Class $1.179; postcard 4x6 First Class $0.862; check $1.10. All-in (printing + processing + postage). Freemium model, not time-limited; overage fees apply above limits.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.postgrid.com/pricing-print-mail/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Unlimited mailings, unlimited users, unlimited templates, custom delivery SLAs, priority delivery network, HIPAA-compliant mailings, SSO, dedicated account manager, custom per-piece rates. Contact sales — no published price.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.postgrid.com/pricing-print-mail/",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.postgrid.com/security/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "HubSpot",
+          "Salesforce",
+          "Zapier",
+          "ActiveCampaign",
+          "Marketo",
+          "Shopify",
+          "Klaviyo"
+        ],
+        "limits": [
+          "Starter: 500 mailings/month, 50 checks/month, 1 user, 10 templates",
+          "Compliance documents (SOC 2 Type II, PCI DSS) require an NDA to review"
+        ],
+        "keyFeatures": [
+          "US and Canada print & mail API (letters, postcards, checks)",
+          "SOC 2 Type II + HIPAA (BAA) + PCI DSS 3.2.1",
+          "Native and Zapier integrations",
+          "Address verification across 245+ countries"
+        ],
+        "bestFor": [
+          "api-integration",
+          "canada-cross-border",
+          "healthcare-mail",
+          "high-compliance"
+        ],
+        "sources": [
+          {
+            "url": "https://www.postgrid.com/pricing-print-mail/",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://www.postgrid.com/security/",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Pricing from postgrid.com/pricing-print-mail (Starter $0, Enterprise custom confirmed); compliance from postgrid.com/security confirming SOC 2 Type II (Prescient Assurance), HIPAA with signed BAA (Compliancy Group audit), GDPR, and PCI DSS 3.2.1. The '888+ integrations' claim was unverifiable and removed."
+      }
+    },
+    {
+      "slug": "postalytics",
+      "name": "Postalytics",
+      "domain": "postalytics.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "HubSpot",
+        "Salesforce",
+        "Zapier",
+        "ActiveCampaign",
+        "Zoho CRM",
+        "Keap",
+        "Marketo",
+        "HighLevel",
+        "Klaviyo",
+        "Canva",
+        "Figma",
+        "Pipedrive"
+      ],
+      "provenance": "Pricing re-verified from postalytics.com/pricing 2026-06-18 showing three self-serve plans at $0 (Free), $199 (Marketer), and $399 (Pro & Agency)/month — confirmed exactly. No explicit SOC2 or HIPAA certification found on public pages; compliance left null.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "No minimum order. Per-piece, all-in (print + postage + paper): Standard Mail from ~$1.02; First Class from ~$1.08 (6x9 postcard reference rates per live page). Basic integrations. Confirmed $0 on postalytics.com/pricing 2026-06-18.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.postalytics.com/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Marketer",
+          "monthlyUsd": 199,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Lower per-piece rates vs Free: Standard Mail (6x9, 0-2,499) from ~$0.90; First Class from ~$0.95. Enhanced support, campaign dashboards, volume discount tiers (2,500-4,999 / 5,000-9,999 / 10,000-24,999). Confirmed $199/mo on live page.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.postalytics.com/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Pro & Agency",
+          "monthlyUsd": 399,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Best per-piece rates: Standard Mail (6x9, 0-2,499) from ~$0.81; First Class from ~$0.79. Includes Flows automation, Salesforce integration, unlimited user logins with access controls. Confirmed $399/mo on live page. Higher volume / annual / nonprofit pricing via sales.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.postalytics.com/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "HubSpot",
+          "Salesforce",
+          "Klaviyo",
+          "ActiveCampaign",
+          "Zapier",
+          "Marketo",
+          "HighLevel"
+        ],
+        "limits": [
+          "Volume tiers up to 24,999 pieces on self-serve; higher volumes require sales contact",
+          "Salesforce integration only on Pro & Agency plan"
+        ],
+        "keyFeatures": [
+          "Marketer-friendly no-code campaign builder",
+          "Flows automation for triggered direct mail",
+          "Deep HubSpot and Salesforce CRM integration",
+          "All-in pricing (print + postage + paper)"
+        ],
+        "bestFor": [
+          "marketers",
+          "crm-triggered-mail",
+          "agency-white-label",
+          "automated-drip-campaigns"
+        ],
+        "sources": [
+          {
+            "url": "https://www.postalytics.com/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Pricing re-verified from postalytics.com/pricing (all three tiers $0/$199/$399 confirmed exactly); no public compliance certification page found — hipaa/soc2/gdpr left null."
+      }
+    },
+    {
+      "slug": "click2mail",
+      "name": "Click2Mail",
+      "domain": "click2mail.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Zapier",
+        "Keragon",
+        "Microsoft Word (Add-in)",
+        "Google Workspace (Mail My Doc)",
+        "Google Workspace (Mail My PDF)"
+      ],
+      "provenance": "Pricing re-verified from easylettersender.click2mail.com/pricing 2026-06-18: pure pay-per-piece, no monthly subscription — confirmed. Per-piece rates confirmed exactly. HIPAA/BAA confirmed via blog.click2mail.com/2026/02/23/hipaa-compliant-mailing (states full HIPAA compliance, signed BAAs requested via BAA_Request@click2mail.com) and Click2Mail support docs. IMPORTANT correction: Click2Mail does NOT support HIPAA-compliant mailing for postcards, self-mailers, open-faced cards, or Email-to-Mail submissions — HIPAA applies only to enclosed letter mail. The 'EU-US Data Privacy Framework compliant' claim in the original draft was not corroborated and has been removed.",
+      "plans": [
+        {
+          "name": "Pay-As-You-Go",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_call",
+          "notes": "No monthly subscription, no minimum volume. Domestic First-Class: postcard $0.64/pc; letter $1.45/pc (1 sheet/2 pages), +$0.75/additional sheet. International First-Class: postcard $1.25/pc, letter $2.17/pc (1 sheet). Print + postage included. EDDM available. HIPAA-compliant mailing supported for enclosed letters only (NOT postcards/self-mailers/Email-to-Mail). Confirmed on live pricing page 2026-06-18.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://easylettersender.click2mail.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": null,
+          "gdpr": null,
+          "source": {
+            "url": "https://blog.click2mail.com/2026/02/23/hipaa-compliant-mailing/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Zapier",
+          "Keragon",
+          "Microsoft Word",
+          "Google Workspace",
+          "REST API"
+        ],
+        "limits": [
+          "No volume minimums; public rates do not decrease with volume (volume pricing via API/custom)",
+          "HIPAA-compliant mailing NOT available for postcards, self-mailers, open-faced cards, or Email-to-Mail"
+        ],
+        "keyFeatures": [
+          "Zero subscription fees — pure pay-per-piece model",
+          "HIPAA compliant with signed BAAs for enclosed letter mail",
+          "Next-business-day printing for most products",
+          "EDDM (Every Door Direct Mail) support"
+        ],
+        "bestFor": [
+          "occasional-mailers",
+          "hipaa-healthcare",
+          "small-business",
+          "no-commitment"
+        ],
+        "sources": [
+          {
+            "url": "https://easylettersender.click2mail.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://blog.click2mail.com/2026/02/23/hipaa-compliant-mailing/",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Pricing from easylettersender.click2mail.com/pricing (pay-per-piece, no subscription confirmed); HIPAA/BAA from official blog 2026-02-23 and support docs (BAA via BAA_Request@click2mail.com). SOC 2 not directly confirmed on Click2Mail's own page — left null. HIPAA scope limited to enclosed letters."
+      }
+    },
+    {
+      "slug": "inkit",
+      "name": "Inkit",
+      "domain": "inkit.com",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Salesforce",
+        "AWS S3"
+      ],
+      "provenance": "Re-verified inkit.com/pricing 2026-06-18. CORRECTION to original draft: Inkit DOES publish plan pricing, but for its document-generation / eSign product — Free $0, Personal $15/mo, Standard $25/mo, Enterprise custom — NOT for direct mail. Inkit has repositioned away from public direct mail pricing; the direct mail API is only reachable via Enterprise sales. The original draft's claim of 'no published pricing / all null' was inaccurate (the $0 Free tier IS published) and its '$30,000+ deal size per third-party sources' note was unverifiable and removed. Only the published $0 Free tier and the custom Enterprise tier (which gates direct mail API access) are retained, both flagged as eSign/off-core-vertical. Pricing page states HIPAA Certified, SOC 2 Certified, IL4 and IL5 compliant.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Published $0 eSign/document plan (3 eSign requests/month, 1 seat, 10GB storage) — NOT a direct mail plan. Inkit has pivoted to document generation + eSign; no public direct mail (postcard/letter) pricing exists. Direct mail API access requires Enterprise sales engagement. Confirmed $0 on inkit.com/pricing 2026-06-18.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://inkit.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing for workflow automation, API automation, and direct mail API access. IL4/IL5 compliant, HIPAA certified, SOC 2 certified. No published price — contact sales. (Original '$30,000+ third-party deal size' claim removed as unverifiable.)",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://inkit.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://inkit.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Salesforce",
+          "AWS S3"
+        ],
+        "limits": [
+          "Direct mail pricing not publicly published; requires Enterprise sales engagement",
+          "Published Free/Personal/Standard plans are eSign/document products, not direct mail"
+        ],
+        "keyFeatures": [
+          "HIPAA certified + IL4/IL5 government compliance",
+          "SOC 2 certified",
+          "Document generation + eSign platform (primary product)",
+          "Direct mail API available only via Enterprise engagement"
+        ],
+        "bestFor": [
+          "government-regulated",
+          "enterprise-document-automation",
+          "hipaa-compliant-records"
+        ],
+        "sources": [
+          {
+            "url": "https://inkit.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://inkit.com/",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Re-verified inkit.com/pricing showing eSign/DocGen plans ($0 Free, $15 Personal, $25 Standard, custom Enterprise); no direct mail pricing published. Corrected the original draft's inaccurate 'all-null / no published pricing' framing and removed the unverifiable $30K deal-size note. Compliance (HIPAA, SOC 2, IL4/IL5) stated on pricing page; freeTrialDays set null (the Free tier is a forever-free plan, not a time-limited trial)."
+      }
+    },
+    {
+      "slug": "postpilot",
+      "name": "PostPilot",
+      "domain": "postpilot.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Shopify",
+        "Klaviyo",
+        "Recharge",
+        "LoyaltyLion",
+        "Amazon Seller Central",
+        "Yotpo",
+        "Attentive",
+        "Omnisend",
+        "Repeat",
+        "Loop",
+        "Orita",
+        "Swym",
+        "Stay AI",
+        "Stamped",
+        "Sendlane",
+        "Smile",
+        "Rivo",
+        "Talkable",
+        "Proxima",
+        "Skio"
+      ],
+      "provenance": "Pricing re-verified from postpilot.com/pricing 2026-06-18: Free $0, Growth $99/mo ($82.50/mo billed annually), Pro $499/mo ($419/mo billed annually), Enterprise custom — all confirmed exactly. Live page states 16.67% annual savings on both paid tiers; recomputed annualDiscountPct from the actual annual prices ($82.50/$99 = 17%; $419/$499 = 16%). SOC 2 (2025) badge shown on pricing page; no HIPAA mention found.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Platform access, 10+ Shopify analytics reports, sociodemographic audience insights. No mail sending included. Confirmed $0 on postpilot.com/pricing 2026-06-18.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.postpilot.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Growth",
+          "monthlyUsd": 99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "Cards from $0.64/pc (postage included). Automated retargeting and retention automations, MailMatch, strategy calls. Billed monthly at $99 or annually at $82.50/mo (~17% off). Targeted at brands $1M-$3M/yr Shopify revenue. Confirmed on live page.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.postpilot.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 499,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 16,
+          "billingModel": "flat",
+          "notes": "Cards as low as $0.55/pc (postage included). Up to 50,000 mailpieces/month. Dedicated account manager, data science team, unlimited creative design, full AI suite, AcquisitionAI, SiteMatch. Billed monthly at $499 or annually at $419/mo (~16% off). Confirmed on live page.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.postpilot.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "50,000+ mailpieces/month. Two-person dedicated team, priority beta access, custom reporting, lowest per-card rates. Custom pricing — contact sales, no published price.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.postpilot.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://www.postpilot.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Shopify",
+          "Klaviyo",
+          "Recharge",
+          "Yotpo",
+          "Attentive",
+          "Omnisend",
+          "LoyaltyLion"
+        ],
+        "limits": [
+          "Pro plan: up to 50,000 mailpieces/month",
+          "Enterprise required for 50,000+ pieces/month"
+        ],
+        "keyFeatures": [
+          "DTC/ecommerce-native — built around Shopify + Klaviyo stack",
+          "SiteMatch: retargeting anonymous site visitors by mail",
+          "AcquisitionAI: prospect cold audiences via programmatic direct mail",
+          "SOC 2 compliant (2025 badge)"
+        ],
+        "bestFor": [
+          "dtc-ecommerce",
+          "shopify-brands",
+          "retention-marketing",
+          "postcard-retargeting"
+        ],
+        "sources": [
+          {
+            "url": "https://www.postpilot.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://www.postpilot.com/company/integrations",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Pricing from postpilot.com/pricing (Free/$99/$499/custom confirmed exactly, including annual $82.50 and $419 rates); integrations from postpilot.com/company/integrations. SOC 2 (2025) badge shown; no HIPAA claims found — hipaa left null."
+      }
+    }
+  ]
+}

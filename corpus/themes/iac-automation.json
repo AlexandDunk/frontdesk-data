@@ -1,0 +1,958 @@
+{
+  "vertical": "iac-automation",
+  "generatedAt": "2026-06-18",
+  "methodologyNotes": "Official pricing pages fetched and verified directly on 2026-06-18: spacelift.io/pricing, env0.com/pricing (plus env0's docs domain docs.envzero.com/guides/billing/subscription-tiers, which is the live redirect target of docs.env0.com), scalr.com/pricing, docs.scalr.io/docs/pricing-faq, AWS Marketplace listing prodview-6mlcdsurh25r2 (Scalr Annual Business Subscription), terrateam.io/pricing, terramate.io/pricing, and hashicorp.com/products/terraform/pricing. Compliance verified against each vendor's OWN security/trust page; third-party aggregator profiles (e.g. nudgesecurity.com) were NOT treated as vendor claims. Key corrections vs. draft: (1) Spacelift's own security page claims only SOC 2 Type II and FedRAMP — HIPAA and GDPR are NOT vendor-claimed, so set null. (2) Scalr's current pricing page shows the free tier is named 'Business' (50 runs/mo) plus an Enterprise custom tier; the draft's separate paid 'Business' at $99/mo for 100 prepaid runs is NOT on the current page (outdated/removed) and was dropped; the free tier was renamed to its real name 'Business'. Scalr's public compliance announcement is SOC 2 Type I (the 'soc-2-type-2-achieved' URL redirects to trust.scalr.io and the standing announcement is Type I), so the Type II claim was downgraded. (3) HCP Terraform per-resource rates ($0.10/$0.47/$0.99 per resource/mo) and 500-resource PAYG free allowance verified; legacy free plan EOL was March 31, 2026. (4) Digger rebranded to OpenTaco on 2025-11-07; community edition is MIT-licensed; digger.dev/pricing returns 404 and there is no public commercial price, so the old unverified $3,000-$5,000/mo note was removed. accessedAt 2026-06-18.",
+  "vendors": [
+    {
+      "slug": "spacelift",
+      "name": "Spacelift",
+      "domain": "spacelift.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "GitHub",
+        "GitLab",
+        "Bitbucket",
+        "AWS",
+        "Azure",
+        "GCP",
+        "Terraform",
+        "OpenTofu",
+        "Pulumi",
+        "Ansible",
+        "OPA",
+        "Checkov",
+        "Datadog",
+        "Slack",
+        "PagerDuty"
+      ],
+      "provenance": "Fetched spacelift.io/pricing on 2026-06-18. Compliance taken from spacelift.io/security, which explicitly claims SOC 2 Type II and FedRAMP only. HIPAA and GDPR are NOT claimed on the vendor's own security page (they appear only on a third-party Nudge Security profile), so they are set null.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "2 users, 1 public shared worker, no credit card required, no time limit. Full platform access with limits.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://spacelift.io/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Starter+",
+          "monthlyUsd": 1667,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Billed annually at $20,000/year (=$1,667/mo equivalent). Unlimited users, 2 public workers + 1-2 private workers. Annual subscription only.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://spacelift.io/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom quote. Unlimited users, 3 private workers. Annual subscription.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://spacelift.io/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom quote. Unlimited users, 5-30 private workers. Annual subscription.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://spacelift.io/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Enterprise+",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom quote. Unlimited users, 12-30 private workers. Self-hosted, on-premise, and air-gapped deployment options. 24/7 escalation, named TAM available.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://spacelift.io/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://spacelift.io/security",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "GitHub",
+          "GitLab",
+          "Bitbucket",
+          "AWS",
+          "Azure",
+          "GCP",
+          "Terraform",
+          "OpenTofu",
+          "Pulumi",
+          "OPA",
+          "Checkov",
+          "Datadog",
+          "Slack"
+        ],
+        "limits": [
+          "Free plan: 2 users, 1 public worker",
+          "Starter+: 2 public + 1-2 private workers",
+          "No per-resource charges"
+        ],
+        "keyFeatures": [
+          "FedRAMP authorized (first IaC platform)",
+          "SOC 2 Type II certified",
+          "Air-gapped and on-prem deployment options",
+          "Policy-as-code with OPA"
+        ],
+        "bestFor": [
+          "regulated industries",
+          "large enterprises",
+          "government",
+          "multi-cloud teams"
+        ],
+        "sources": [
+          {
+            "url": "https://spacelift.io/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://spacelift.io/security",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Pricing from spacelift.io/pricing; compliance from spacelift.io/security, which explicitly states SOC 2 Type II and FedRAMP only. HIPAA/GDPR/ISO27001/PCI/CSA-Star are not claimed on the vendor's own page and were removed."
+      }
+    },
+    {
+      "slug": "env0",
+      "name": "env0",
+      "domain": "env0.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "GitHub",
+        "GitLab",
+        "Bitbucket",
+        "Azure DevOps",
+        "Terraform",
+        "OpenTofu",
+        "Terragrunt",
+        "Pulumi",
+        "AWS",
+        "Azure",
+        "GCP",
+        "Slack",
+        "Infracost",
+        "OPA",
+        "Datadog"
+      ],
+      "provenance": "Fetched env0.com/pricing on 2026-06-18; docs.envzero.com/guides/billing/subscription-tiers is env0's live docs (docs.env0.com 302-redirects to docs.envzero.com). SOC 2 Type II (2023 report) stated on the pricing page, available on request.",
+      "plans": [
+        {
+          "name": "Cloud Compass",
+          "monthlyUsd": 1500,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Flat $1,500/month ($18,000/yr). Up to 100 active environments. Unlimited users, concurrent runs, and cloud resources. IaC coverage tracking, risk assessment, basic drift detection.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.env0.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Cloud Navigator",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom quote, billed per apply or per active environment. Unlimited active environments. Adds full IaC automation, GitOps workflows, self-service, RBAC, private registry, governance policies.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.env0.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Cloud Pilot",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom quote, billed per apply or per active environment. All Navigator features plus AI-powered Cloud Analyst, advanced cost management (Infracost), FinOps integrations, observability, advanced drift remediation, Proof-of-Value guarantee.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.env0.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://www.env0.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "GitHub",
+          "GitLab",
+          "Bitbucket",
+          "Azure DevOps",
+          "Terraform",
+          "OpenTofu",
+          "Terragrunt",
+          "Pulumi",
+          "Infracost",
+          "OPA",
+          "Datadog",
+          "Slack"
+        ],
+        "limits": [
+          "Cloud Compass capped at 100 active environments",
+          "Navigator/Pilot: unlimited environments but custom pricing",
+          "No forever-free plan (free trial only)"
+        ],
+        "keyFeatures": [
+          "AI-powered Cloud Analyst (Pilot tier)",
+          "Cost management with Infracost integration",
+          "Proof-of-Value guarantee (Pilot)",
+          "Unlimited concurrent runs on all plans"
+        ],
+        "bestFor": [
+          "cloud cost management",
+          "enterprise IaC governance",
+          "teams wanting unlimited users from day one"
+        ],
+        "sources": [
+          {
+            "url": "https://www.env0.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://docs.envzero.com/guides/billing/subscription-tiers",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Pricing from env0.com/pricing and docs.envzero.com (env0's live docs domain) fetched 2026-06-18; SOC 2 Type II (2023 audit) stated on pricing page, report available on request. No forever-free tier (free trial only)."
+      }
+    },
+    {
+      "slug": "scalr",
+      "name": "Scalr",
+      "domain": "scalr.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "GitHub",
+        "GitLab",
+        "Bitbucket",
+        "Azure DevOps",
+        "Terraform",
+        "OpenTofu",
+        "AWS",
+        "Azure",
+        "GCP",
+        "OPA",
+        "Checkov",
+        "Infracost",
+        "SAML/SSO",
+        "Slack"
+      ],
+      "provenance": "Fetched scalr.com/pricing and docs.scalr.io/docs/pricing-faq on 2026-06-18. Current pricing page shows only two named tiers: 'Business' (free, 50 runs/mo) and 'Enterprise' (custom). The draft's separate paid Business tier at $99/mo for 100 prepaid runs is NOT on the current page and was removed. Annual paid consumption tiers exist on AWS Marketplace (prodview-6mlcdsurh25r2) as add-on usage. Public compliance announcement is SOC 2 Type I.",
+      "plans": [
+        {
+          "name": "Business",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": 50,
+          "overagePerMin": null,
+          "overagePerCall": 0.99,
+          "annualDiscountPct": null,
+          "billingModel": "per_call",
+          "notes": "Free tier: 50 runs/month at no cost, 2 concurrent runs. Unlimited users, workspaces, environments, self-hosted agents. All core features included. Drift detection runs not counted. Overage / additional runs charged at the $0.99 flex run rate. Annual prepaid run bundles available via AWS Marketplace (e.g. 6,000 runs/$5,469yr, 8,400 runs/$7,591yr, 12,000 runs/$10,746yr).",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://scalr.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "corroboration": {
+            "url": "https://aws.amazon.com/marketplace/pp/prodview-6mlcdsurh25r2",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom quote. Minimum ~20,000 runs/year. Adds data residency, customer-managed encryption keys, SCIM, advanced audit logs, dedicated support. 10 concurrent managed runs.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://scalr.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://scalr.com/blog/soc-2-type-1",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "GitHub",
+          "GitLab",
+          "Bitbucket",
+          "Azure DevOps",
+          "Terraform",
+          "OpenTofu",
+          "OPA",
+          "Checkov",
+          "Infracost",
+          "SAML/SSO"
+        ],
+        "limits": [
+          "Business (free): 50 runs/month, 2 concurrent runs",
+          "Enterprise: custom, ~20,000 runs/year minimum",
+          "No charges for users, workspaces, resources, or private agents"
+        ],
+        "keyFeatures": [
+          "Pure per-run billing (no seat or resource fees)",
+          "Drift detection runs excluded from billing",
+          "Unlimited self-hosted agents at no extra cost",
+          "SOC 2 Type I certified"
+        ],
+        "bestFor": [
+          "cost-predictable IaC automation",
+          "large teams wanting no per-seat fees",
+          "OpenTofu adopters"
+        ],
+        "sources": [
+          {
+            "url": "https://scalr.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://docs.scalr.io/docs/pricing-faq",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://aws.amazon.com/marketplace/pp/prodview-6mlcdsurh25r2",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Pricing from scalr.com/pricing (free 'Business' tier + custom Enterprise) and AWS Marketplace annual run bundles, fetched 2026-06-18. The draft's standalone paid $99/mo Business tier is not on the current page and was removed. SOC 2 Type I confirmed via scalr.com/blog/soc-2-type-1; a public SOC 2 Type II completion is not confirmed."
+      }
+    },
+    {
+      "slug": "terrateam",
+      "name": "Terrateam",
+      "domain": "terrateam.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "GitHub",
+        "Terraform",
+        "OpenTofu",
+        "Terragrunt",
+        "OPA",
+        "Conftest",
+        "Slack",
+        "AWS",
+        "GCP",
+        "Azure",
+        "OIDC"
+      ],
+      "provenance": "Fetched terrateam.io/pricing on 2026-06-18; compliance from terrateam.io/security, which states SOC 2 Type II is in progress (not yet certified).",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Unlimited users, runs, concurrency, and private runners. Pull-request automation for Terraform, monorepo execution, concurrent plans, custom workflows, OPA/Conftest policy testing, community support.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://terrateam.io/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 224,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "$224/month (save 10% annually = ~$201.60/mo billed annually). 30-day free trial. Adds scheduled drift detection, programmatic config generation, customer-owned plan storage, apply requirements, email support, 90-day audit log retention.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://terrateam.io/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": 563,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$563/month (technical support only) or $1,087.50/month with procurement support. 30-day free trial. Adds API access, CODEOWNERS integration, RBAC, Gatekeeper approvals, centralized org-wide config, 365-day audit log retention, Slack Connect. Non-profits receive 50% discount.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://terrateam.io/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "OSS Self-Hosted",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$0/year. Core workflows only. Self-hosted open-source edition.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://terrateam.io/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Paid Self-Hosted",
+          "monthlyUsd": 1088,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$13,050/year (=$1,087.50/mo equivalent). Self-hosted with governance controls. Adds RBAC, CODEOWNERS, Gatekeeper approvals, 365-day audit retention.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://terrateam.io/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": {
+            "url": "https://terrateam.io/security",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": 30,
+        "keyIntegrations": [
+          "GitHub",
+          "Terraform",
+          "OpenTofu",
+          "Terragrunt",
+          "OPA",
+          "Conftest",
+          "Slack",
+          "OIDC"
+        ],
+        "limits": [
+          "Free tier: GitHub only (no GitLab/Bitbucket)",
+          "SOC 2 Type II in progress (not yet certified)"
+        ],
+        "keyFeatures": [
+          "Unlimited users/runs/concurrency on all plans including Free",
+          "GitHub-native PR workflow (no separate UI)",
+          "No per-seat or per-run billing",
+          "Non-profit 50% discount"
+        ],
+        "bestFor": [
+          "GitHub-centric teams",
+          "open-source projects",
+          "teams wanting flat predictable pricing"
+        ],
+        "sources": [
+          {
+            "url": "https://terrateam.io/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://terrateam.io/security",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://terrateam.io/product/security-and-compliance",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Pricing from terrateam.io/pricing fetched 2026-06-18; SOC 2 Type II noted as in-progress on terrateam.io/security, not yet certified, so soc2 is null."
+      }
+    },
+    {
+      "slug": "terramate",
+      "name": "Terramate",
+      "domain": "terramate.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "GitHub Actions",
+        "GitLab CI/CD",
+        "Bitbucket Pipelines",
+        "Terraform",
+        "OpenTofu",
+        "Terragrunt",
+        "Slack",
+        "Microsoft Teams",
+        "Okta",
+        "Microsoft Entra",
+        "Google Workspace",
+        "SAML 2.0"
+      ],
+      "provenance": "Fetched terramate.io/pricing on 2026-06-18; compliance page references data-center ISO 27001 only. Terramate does not explicitly claim its own SOC 2, ISO 27001, or GDPR certification, so all are null.",
+      "plans": [
+        {
+          "name": "Community",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Forever free. Up to 2 users, up to 1,000 managed resources, 30-day data retention. Includes code management, deployment workflows, PR previews, drift management, observability, SSO. Community Discord support.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://terramate.io/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Teams",
+          "monthlyUsd": 449,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$449/month. 14-day free trial. Unlimited users, up to 5,000 managed resources, 90-day data retention. Adds asset management, policies, CIS benchmarks, DORA metrics, incident management. 24-hour support response via email, chat, Slack.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://terramate.io/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing. PoC trial program. Unlimited users, custom resource limits, custom data retention. Adds SAML 2.0 SSO, RBAC, audit trails, private VCS support, cloud or on-premises deployment. 4-hour SLA, dedicated account manager.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://terramate.io/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": {
+            "url": "https://terramate.io/compliance/security",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "GitHub Actions",
+          "GitLab CI/CD",
+          "Bitbucket Pipelines",
+          "Terraform",
+          "OpenTofu",
+          "Slack",
+          "Microsoft Teams",
+          "Okta",
+          "SAML 2.0"
+        ],
+        "limits": [
+          "Community: 2 users max, 1,000 resources max, 30-day retention",
+          "Teams: 5,000 resources max, 90-day retention"
+        ],
+        "keyFeatures": [
+          "Stack-based orchestration (native Terramate CLI)",
+          "DORA metrics and incident management (Teams+)",
+          "CIS benchmarks and policy enforcement",
+          "On-premises deployment option (Enterprise)"
+        ],
+        "bestFor": [
+          "monorepo IaC setups",
+          "platform engineering teams",
+          "teams using Terramate CLI open source"
+        ],
+        "sources": [
+          {
+            "url": "https://terramate.io/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://terramate.io/compliance/security",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Pricing from terramate.io/pricing fetched 2026-06-18; compliance page states data-center ISO 27001 only; Terramate's own SOC 2 / ISO 27001 / GDPR certifications are not explicitly claimed, so all compliance fields are null."
+      }
+    },
+    {
+      "slug": "hcp-terraform",
+      "name": "HCP Terraform (HashiCorp)",
+      "domain": "hashicorp.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "GitHub",
+        "GitLab",
+        "Bitbucket",
+        "Azure DevOps",
+        "AWS",
+        "Azure",
+        "GCP",
+        "Sentinel",
+        "OPA",
+        "HCP Vault",
+        "HCP Waypoint",
+        "Slack",
+        "PagerDuty",
+        "Datadog"
+      ],
+      "provenance": "Fetched hashicorp.com/products/terraform/pricing on 2026-06-18; legacy free plan EOL March 31, 2026 and 500-resource PAYG free allowance confirmed. Per-resource prices are published starting rates; total cost depends on resource count, so per-plan monthlyUsd is null.",
+      "plans": [
+        {
+          "name": "Free (PAYG allowance)",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Pay-as-you-go model with a free allowance of 500 managed resources. The legacy perpetual free plan was discontinued March 31, 2026. $500 HCP platform credit available to new users. Unlimited users; one concurrent run.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.hashicorp.com/products/terraform/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Essentials",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "hybrid",
+          "notes": "$0.10/month per managed resource ($0.00013/hour) — usage-based, total depends on resource count so monthlyUsd is null. Includes remote state storage, VCS connection, projects, secure variables, remote runs, private registry (10 modules). No minimum commitment on PAYG.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.hashicorp.com/products/terraform/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Standard",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "hybrid",
+          "notes": "$0.47/month per managed resource ($0.00064/hour) — usage-based, total depends on resource count so monthlyUsd is null. Adds unlimited module publishing, module deprecation, team notifications, no-code provisioning, HCP Waypoint templates.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.hashicorp.com/products/terraform/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "hybrid",
+          "notes": "$0.99/month per managed resource ($0.00135/hour) — usage-based, total depends on resource count so monthlyUsd is null. Adds module revocation, HCP Waypoint actions, generated module tests (beta).",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.hashicorp.com/products/terraform/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Enterprise (Self-Managed)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing. Terraform Enterprise for self-managed deployments. Includes premium support, cross-organization registry sharing. Contact sales.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.hashicorp.com/products/terraform/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "GitHub",
+          "GitLab",
+          "Bitbucket",
+          "Azure DevOps",
+          "AWS",
+          "Azure",
+          "GCP",
+          "Sentinel",
+          "OPA",
+          "HCP Vault",
+          "HCP Waypoint"
+        ],
+        "limits": [
+          "Free PAYG allowance: 500 managed resources",
+          "Essentials private registry: 10 modules only",
+          "Legacy free plan discontinued March 31, 2026",
+          "Free tier: one concurrent run"
+        ],
+        "keyFeatures": [
+          "Per-resource usage-based billing (no seat fees)",
+          "HCP Waypoint self-service templates (Standard+)",
+          "Integrated with full HCP platform (Vault, Packer, Consul)",
+          "Multi-year Flex plans available via sales"
+        ],
+        "bestFor": [
+          "HashiCorp ecosystem users",
+          "enterprises standardizing on Terraform",
+          "teams wanting usage-based pricing"
+        ],
+        "sources": [
+          {
+            "url": "https://www.hashicorp.com/products/terraform/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://scalr.com/learning-center/hcp-terraform-free-tier-is-being-discontinued-what-you-need-to-know",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Pricing from hashicorp.com/products/terraform/pricing fetched 2026-06-18; per-resource prices ($0.10/$0.47/$0.99 per resource/mo) are published starting rates with monthlyUsd null because totals are usage-dependent; legacy free tier EOL March 2026 confirmed. Compliance not asserted (left null)."
+      }
+    },
+    {
+      "slug": "digger-opentaco",
+      "name": "Digger (OpenTaco)",
+      "domain": "digger.dev",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "GitHub Actions",
+        "GitLab CI",
+        "Terraform",
+        "OpenTofu",
+        "Terragrunt",
+        "AWS",
+        "GCP",
+        "Azure",
+        "OPA"
+      ],
+      "provenance": "Fetched digger.dev and github.com/diggerhq/digger on 2026-06-18; Digger rebranded to OpenTaco on 2025-11-07; community edition is MIT-licensed open source; digger.dev/pricing returns 404 and no public commercial price exists, so the enterprise price is null and the prior unverified $3,000-$5,000/mo figure was removed.",
+      "plans": [
+        {
+          "name": "Community (Open Source)",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "MIT-licensed. Fully self-hosted. Runs Terraform/OpenTofu natively inside your existing CI (GitHub Actions, GitLab CI). PR automation, drift detection, state management. No vendor compute costs.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://github.com/diggerhq/digger",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Commercial license. No public pricing page as of June 2026 (digger.dev/pricing returns 404). Contact sales for quote. Adds enterprise governance, RBAC, audit logs, dedicated support.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://github.com/diggerhq/digger",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "GitHub Actions",
+          "GitLab CI",
+          "Terraform",
+          "OpenTofu",
+          "Terragrunt",
+          "AWS",
+          "GCP",
+          "Azure"
+        ],
+        "limits": [
+          "Community edition is fully self-hosted; no managed backend provided",
+          "Enterprise pricing not publicly listed (no pricing page)"
+        ],
+        "keyFeatures": [
+          "Runs Terraform inside your own CI (no third-party compute)",
+          "MIT open-source community edition",
+          "PR-driven workflow with comment-based plan/apply",
+          "Rebranded to OpenTaco Nov 2025 (same engine)"
+        ],
+        "bestFor": [
+          "open-source projects",
+          "teams wanting CI-native execution",
+          "security-conscious teams avoiding third-party compute"
+        ],
+        "sources": [
+          {
+            "url": "https://github.com/diggerhq/digger",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://opentaco.dev/digger-rebranded-to-opentaco",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Community edition confirmed MIT open source via github.com/diggerhq/digger (which also displays the OpenTaco rebrand notice dated 2025-11-07); digger.dev/pricing returns 404, no public enterprise pricing, so monthlyUsd is null and the 2023-era $3,000-$5,000/mo figure was removed as unverified."
+      }
+    }
+  ]
+}
