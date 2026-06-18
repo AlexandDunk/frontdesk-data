@@ -1,0 +1,941 @@
+{
+  "vertical": "desk-booking",
+  "generatedAt": "2026-06-18",
+  "methodologyNotes": "Official pricing pages were re-fetched via WebFetch on 2026-06-18: skedda.com/pricing, deskbird.com/pricing, robinpowered.com/pricing, officernd.com/pricing/hybrid/, gettactic.com/pricing, nibol.com/en/pricing, tribeloo.com/pricing, envoy.com/pricing. Compliance corroborated on dedicated security pages (skedda.com/platform/security, envoy.com/security) and via WebSearch. EUR-denominated plans (Nibol, Tribeloo, OfficeRnD) are reported in their published currency; USD equivalents are NOT synthesized to avoid FX guesses, so monthlyUsd is null for those. Quote-only / contact-sales tiers carry monthlyUsd=null (a null beats a guess). Note on Tribeloo: the published page lists MONTHLY prices (€3.00/€3.75/€4.00) that are LOWER than the YEARLY-tab prices (€3.60/€4.50/€4.80) — annual is more expensive, the reverse of typical SaaS discounting; monthly rates are reported here. accessedAt 2026-06-18.",
+  "vendors": [
+    {
+      "slug": "skedda",
+      "name": "Skedda",
+      "domain": "skedda.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Microsoft 365",
+        "Google Workspace",
+        "Microsoft Teams",
+        "Slack",
+        "SAML 2.0 SSO"
+      ],
+      "provenance": "Pricing re-verified from skedda.com/pricing on 2026-06-18 ($99/$149/$199 flat monthly, billed annually, with per-space tiers). Compliance from skedda.com/platform/security (SOC 2 Type 2 certified; GDPR via DPAs). 30-day Premium trial, no forever-free tier.",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": 99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "15 bookable spaces included, unlimited users and bookings, interactive floor plans, basic rules and roles engine, limited insights dashboard, mobile apps. Billed annually.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.skedda.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Plus",
+          "monthlyUsd": 149,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "20 spaces included (expanded 35-space tier listed at $249/mo), unlimited users and bookings, limited rules and roles engine, full insights dashboard. Billed annually.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.skedda.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Premier",
+          "monthlyUsd": 199,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "25 spaces included (expanded 45-space tier listed at $349/mo), full rules and roles engine, full insights dashboard. Billed annually.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.skedda.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom space count, dedicated account manager, white-glove implementation, legal agreement flexibility. Contact sales.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.skedda.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.skedda.com/platform/security",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 30,
+        "keyIntegrations": [
+          "Microsoft 365",
+          "Google Workspace",
+          "Microsoft Teams",
+          "Slack",
+          "SAML 2.0 SSO"
+        ],
+        "limits": [
+          "15 spaces on Starter",
+          "20 spaces on Plus",
+          "25 spaces on Premier",
+          "Annual billing required on all self-serve plans",
+          "No forever-free tier (30-day trial only)"
+        ],
+        "keyFeatures": [
+          "Interactive floor plans with drag-and-drop booking",
+          "Granular booking rules and roles engine",
+          "Per-space (not per-user) pricing",
+          "Full insights and analytics dashboard"
+        ],
+        "bestFor": [
+          "SMB offices",
+          "university campuses",
+          "hybrid team desk hoteling"
+        ],
+        "sources": [
+          {
+            "url": "https://www.skedda.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://www.skedda.com/platform/security",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Plans and SOC 2 Type 2 / GDPR compliance re-verified from Skedda's official pricing and security pages on 2026-06-18."
+      }
+    },
+    {
+      "slug": "deskbird",
+      "name": "deskbird",
+      "domain": "deskbird.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Microsoft Teams",
+        "Slack",
+        "Outlook",
+        "Google Calendar",
+        "Microsoft Entra ID",
+        "Google Workspace"
+      ],
+      "provenance": "Pricing re-verified from deskbird.com/pricing on 2026-06-18: Business is $3.75/active user/month billed annually ($4.75/user/month billed monthly). Professional and Enterprise are custom/quote-only. 30-day free trial (no card required); no forever-free tier. SOC 2 Type 2, ISO 27001, and GDPR stated on the pricing page.",
+      "plans": [
+        {
+          "name": "Business",
+          "monthlyUsd": 3.75,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$3.75 per active user/month billed annually ($4.75/user/month if billed monthly). Desk, room, and parking booking; native mobile apps; MS Teams integration; smart booking recommendations. Starter tier limited to 15 users available post-trial.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.deskbird.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Professional",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing. Adds advanced booking rules, advanced analytics, AI floor plan designer, deskbird Dock automation, workplace ticketing, compliance management, public API access.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.deskbird.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing. Adds workplace surveys, custom analytics, advanced data privacy, custom integrations, advanced SLAs, dedicated Senior Customer Success Manager.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.deskbird.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.deskbird.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 30,
+        "keyIntegrations": [
+          "Microsoft Teams",
+          "Slack",
+          "Outlook",
+          "Google Calendar",
+          "Microsoft Entra ID",
+          "Google Workspace"
+        ],
+        "limits": [
+          "Starter tier capped at 15 users after trial",
+          "Active-user billing model (only paying users who book)",
+          "No forever-free tier (30-day trial)"
+        ],
+        "keyFeatures": [
+          "Active-user billing (pay only for who books)",
+          "SOC 2 Type 2 and ISO 27001 certified",
+          "AI floor plan designer (Professional+)",
+          "Built and hosted in Europe (GDPR-native)"
+        ],
+        "bestFor": [
+          "European enterprises",
+          "GDPR-sensitive orgs",
+          "hybrid teams with variable office attendance"
+        ],
+        "sources": [
+          {
+            "url": "https://www.deskbird.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Plans and compliance re-verified from deskbird.com/pricing on 2026-06-18; SOC 2 Type 2 and ISO 27001 stated on pricing page; 30-day trial confirmed via deskbird signup pages."
+      }
+    },
+    {
+      "slug": "robin-powered",
+      "name": "Robin",
+      "domain": "robinpowered.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Microsoft Outlook",
+        "Google Calendar",
+        "Microsoft Teams",
+        "Slack",
+        "Microsoft Entra",
+        "Okta"
+      ],
+      "provenance": "Pricing page re-fetched from robinpowered.com/pricing on 2026-06-18 — no published prices; contact-sales / lead-gen only, billed annually. SOC 2, ISO/IEC 27001, GDPR, and STAR Level One badges shown on pricing page; SOC 2 and ISO 27001 independently corroborated via Robin's security blog.",
+      "plans": [
+        {
+          "name": "Robin (Quote Only)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "All pricing requires contacting sales. Billed annually. Includes resource booking (desks, rooms, parking, lockers), space management, meeting management, workplace analytics, visitor management, employee experience. Targets organizations with 500+ employees.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://robinpowered.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://robinpowered.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Microsoft Outlook",
+          "Google Calendar",
+          "Microsoft Teams",
+          "Slack",
+          "Microsoft Entra",
+          "Okta"
+        ],
+        "limits": [
+          "No self-serve signup; all plans require sales engagement",
+          "Targets 500+ employee organizations",
+          "Annual billing only"
+        ],
+        "keyFeatures": [
+          "Comprehensive space + visitor + meeting + analytics suite",
+          "SOC 2 and ISO 27001 certified",
+          "STAR Level One certification",
+          "Annual billing only"
+        ],
+        "bestFor": [
+          "mid-market and enterprise offices",
+          "multi-location hybrid workplaces"
+        ],
+        "sources": [
+          {
+            "url": "https://robinpowered.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Pricing page re-fetched on 2026-06-18; no published prices (contact-sales only) — billingModel corrected from per_seat to custom. SOC 2 + ISO 27001 + GDPR + STAR badges confirmed."
+      }
+    },
+    {
+      "slug": "officernd-workplace",
+      "name": "OfficeRnD Workplace",
+      "domain": "officernd.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Microsoft Teams",
+        "Slack",
+        "Outlook",
+        "Google Calendar",
+        "Azure AD (Office 365)",
+        "Okta",
+        "Google Workspace",
+        "OIDC"
+      ],
+      "provenance": "Pricing re-verified from officernd.com/pricing/hybrid/ on 2026-06-18. Plans default to EUR on the page (USD/GBP/AUD selectable but exact USD figures not captured, so monthlyUsd is null — a null beats an FX guess). Annual billing shows 25% savings vs monthly. No free trial or free tier on the page.",
+      "plans": [
+        {
+          "name": "Start",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 25,
+          "billingModel": "flat",
+          "notes": "€99/month billed annually (€137/month billed monthly). Per-resource add-on: €2/bookable resource/month (annual) or €2.70/month (monthly). Per-meeting-room add-on: €8/room/month (annual) or €11/month (monthly). Max 150 users. Includes desk/room bookings, office maps, analytics, Microsoft/Google/Slack integrations, email/chat support. USD not captured; monthlyUsd null.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.officernd.com/pricing/hybrid/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Professional",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 25,
+          "billingModel": "flat",
+          "notes": "€399/month billed annually (€532/month billed monthly). Per-resource: €3/resource/month (annual) or €4/month (monthly). Per-meeting-room: €10/room/month (annual) or €13/month (monthly). Max 1,000 users. Adds SSO, automated provisioning, advanced booking policies, bulk bookings, QR codes, WiFi check-in, compliance analytics, multi-location management, priority support. USD not captured; monthlyUsd null.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.officernd.com/pricing/hybrid/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing. Unlimited users, customizable admin roles, audit trails, door access integrations, API/webhooks, dedicated CSM, phone support.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.officernd.com/pricing/hybrid/",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.officernd.com/pricing/hybrid/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Microsoft Teams",
+          "Slack",
+          "Outlook",
+          "Google Calendar",
+          "Azure AD",
+          "Okta",
+          "OIDC"
+        ],
+        "limits": [
+          "Start plan capped at 150 users",
+          "Professional plan capped at 1,000 users",
+          "EUR pricing reported (USD selectable but not captured)",
+          "No published free trial or free tier"
+        ],
+        "keyFeatures": [
+          "SOC 2 Type 2, ISO 27001, GDPR, and CCPA compliant",
+          "Per-resource add-on pricing model on top of flat plan fee",
+          "Multi-location management on Professional+",
+          "Door access control integrations on Enterprise"
+        ],
+        "bestFor": [
+          "European enterprises",
+          "coworking operators needing hybrid workplace add-on",
+          "multi-location companies"
+        ],
+        "sources": [
+          {
+            "url": "https://www.officernd.com/pricing/hybrid/",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Plans and EUR prices re-verified from officernd.com/pricing/hybrid/ on 2026-06-18; SOC 2 Type 2, ISO 27001, GDPR, CCPA stated on that page. monthlyUsd kept null (no synthesized FX)."
+      }
+    },
+    {
+      "slug": "tactic",
+      "name": "Tactic",
+      "domain": "gettactic.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Microsoft Teams",
+        "Outlook",
+        "Slack",
+        "Google Workspace",
+        "Workday",
+        "BambooHR",
+        "HiBob",
+        "Okta",
+        "Azure AD"
+      ],
+      "provenance": "Pricing re-verified from gettactic.com/pricing on 2026-06-18: Core $3 and Pro $4 per workspace/month (annual terms standard). HIPAA is only available on Enterprise (not a self-serve certification) so compliance.hipaa is null. SOC 2 Type II corroborated via Tactic's own compliance blog.",
+      "plans": [
+        {
+          "name": "Core",
+          "monthlyUsd": 3,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$3 per workspace/month (annual terms standard). Includes desk booking, room scheduling, calendar integrations, analytics and reporting, resource check-in, mobile app. Per-workspace, not per-headcount.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.gettactic.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 4,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$4 per workspace/month (annual terms standard). All Core features plus visitor management, workplace requests, SSO and directory sync, Tessa AI, event and multi-room booking, advanced booking rules.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.gettactic.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing. Adds dedicated customer success, custom deployment and training, 24/7 priority support, custom integrations, advanced security and permissions, enterprise SLAs, SOC 2 / HIPAA / GDPR compliance. Contact sales.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.gettactic.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.gettactic.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Microsoft Teams",
+          "Outlook",
+          "Slack",
+          "Google Workspace",
+          "Workday",
+          "BambooHR",
+          "Okta",
+          "Azure AD"
+        ],
+        "limits": [
+          "No free tier or published trial duration",
+          "Enterprise required for HIPAA and advanced compliance",
+          "Per-workspace pricing (not per-user headcount)"
+        ],
+        "keyFeatures": [
+          "Tessa AI assistant for booking and workplace intelligence",
+          "Per-workspace pricing model",
+          "SOC 2 Type II certified",
+          "SCIM provisioning with Workday, BambooHR, HiBob"
+        ],
+        "bestFor": [
+          "enterprise hybrid teams",
+          "regulated industries on Enterprise tier",
+          "orgs needing AI-assisted booking"
+        ],
+        "sources": [
+          {
+            "url": "https://www.gettactic.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://www.gettactic.com/blog/workplace-experience-platforms-with-soc-2-compliance-for-enterprise",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Plans re-verified from gettactic.com/pricing on 2026-06-18 ($3 Core / $4 Pro per workspace, annual); SOC 2 Type II corroborated via Tactic's compliance blog."
+      }
+    },
+    {
+      "slug": "nibol",
+      "name": "Nibol",
+      "domain": "nibol.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Slack",
+        "Microsoft Teams",
+        "Active Directory",
+        "HRIS integrations",
+        "NFC access"
+      ],
+      "provenance": "Pricing re-verified from nibol.com/en/pricing on 2026-06-18: Base €1.50 and Plus €2.40 per resource/month on a 12-month subscription, with volume discounts (unit cost decreases as resources increase). EUR only; monthlyUsd null. GDPR stated; SOC 2 and HIPAA not stated (null).",
+      "plans": [
+        {
+          "name": "Base",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "€1.50 per resource/month on a 12-month subscription. Includes desk, parking, and capacity-entity booking; colleague reservation visibility; check-in confirmation; Slack booking integration. Volume discounts available. EUR only; monthlyUsd null.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.nibol.com/en/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Plus",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "€2.40 per resource/month on a 12-month subscription (most popular). All Base features plus floor-plan booking, reservation notes, user reservation management. Volume discounts available. EUR only; monthlyUsd null.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.nibol.com/en/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.nibol.com/en/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Slack",
+          "Microsoft Teams",
+          "Active Directory",
+          "NFC access passes"
+        ],
+        "limits": [
+          "12-month subscription commitment required",
+          "EUR pricing only",
+          "No free tier; trial available but duration unspecified"
+        ],
+        "keyFeatures": [
+          "Per-resource pricing with volume discounts",
+          "GDPR-compliant; EU-hosted data",
+          "NFC pass system (Nibol Pass add-on)",
+          "Visitor management module (Nibol Welcome add-on)"
+        ],
+        "bestFor": [
+          "European SMBs and enterprises",
+          "GDPR-conscious organizations",
+          "offices needing parking + desk booking in one tool"
+        ],
+        "sources": [
+          {
+            "url": "https://www.nibol.com/en/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Plans re-verified from nibol.com/en/pricing on 2026-06-18; EUR-denominated, 12-month commitment, volume discounts stated but not quantified; GDPR only (SOC 2/HIPAA null)."
+      }
+    },
+    {
+      "slug": "tribeloo",
+      "name": "Tribeloo",
+      "domain": "tribeloo.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Outlook",
+        "Google Calendar",
+        "Active Directory",
+        "SSO (Premium)"
+      ],
+      "provenance": "Pricing re-verified from tribeloo.com/pricing on 2026-06-18. The reported figures (€3.00/€3.75/€4.00 per resource/month) are the MONTHLY-tab prices; the YEARLY tab is HIGHER (€3.60/€4.50/€4.80) — annual is more expensive than monthly here, the reverse of typical SaaS discounting. No SOC 2/GDPR/HIPAA certifications are disclosed on the pricing, security (404), or terms pages; compliance fields are null. Free trial available on request; duration unspecified.",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "€3.00/resource/month (monthly tab; yearly tab is higher at €3.60). Includes booking rules per site (check-in, no-shows), booking from web or mobile app. EUR only; monthlyUsd null.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.tribeloo.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "€3.75/resource/month (monthly tab; yearly tab is higher at €4.50). All Starter features plus Outlook and Google Calendar booking integration, workspace optimization insights. EUR only; monthlyUsd null.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.tribeloo.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "€4.00/resource/month (monthly tab; yearly tab is higher at €4.80). All Pro features plus Active Directory user provisioning and Single Sign-On (SSO). EUR only; monthlyUsd null.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.tribeloo.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing for complex security, safety, and compliance needs. Contact sales.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.tribeloo.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Outlook",
+          "Google Calendar",
+          "Active Directory",
+          "SSO"
+        ],
+        "limits": [
+          "EUR-only pricing on website",
+          "No compliance certifications disclosed on pricing, security, or terms pages",
+          "Annual billing is priced higher than monthly (atypical)",
+          "Trial available on request but duration not specified"
+        ],
+        "keyFeatures": [
+          "Per-resource pricing (desks, rooms, parking in one plan)",
+          "Active Directory provisioning on Premium",
+          "Outlook and Google Calendar native booking on Pro+",
+          "Workspace optimization analytics on Pro+"
+        ],
+        "bestFor": [
+          "European SMBs",
+          "offices needing multi-resource type booking",
+          "teams wanting calendar-native desk booking"
+        ],
+        "sources": [
+          {
+            "url": "https://www.tribeloo.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Plans re-verified from tribeloo.com/pricing on 2026-06-18; corrected the draft's muddled annual-vs-monthly note (monthly is the LOWER price, annual is higher). No SOC 2/GDPR/HIPAA disclosed; compliance null."
+      }
+    },
+    {
+      "slug": "envoy-workplace",
+      "name": "Envoy Workplace",
+      "domain": "envoy.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Microsoft Teams",
+        "Slack",
+        "Zoom",
+        "Google Workspace",
+        "Okta",
+        "Azure AD",
+        "Wi-Fi provisioning",
+        "access control systems"
+      ],
+      "provenance": "Pricing re-verified from envoy.com/pricing on 2026-06-18. Envoy uses modular per-product pricing; a platform fee applies to Reservations, Emergency Notifications, Screens, and Deliveries (amount not published). SOC 2 Type II and GDPR explicitly confirmed on envoy.com/security. The desk-booking product is Reservations Standard at $5/resource/month (annual).",
+      "plans": [
+        {
+          "name": "Visitors Basic",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free forever. Up to 100 visitor entries/month, up to 50 employees in directory, host notifications, multi-language support, basic kiosk functionality.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://envoy.com/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Visitors Premium",
+          "monthlyUsd": 362,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Per location/month, billed annually. Unlimited visitor entries, badge printing, legal document signing, visitor photos, analytics, SSO/directory integrations.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://envoy.com/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Reservations Standard",
+          "monthlyUsd": 5,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Per bookable resource/month, billed annually. Covers desks, meeting rooms, and parking spots. Includes mobile reservations, real-time availability displays, auto-release. Platform fee applies separately (amount not published).",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://envoy.com/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Emergency Notifications Standard",
+          "monthlyUsd": 2,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Per user/month, billed annually. Multi-channel alerts (email, SMS, Teams, Slack, push), two-way communications, emergency roll call, unlimited locations. Platform fee applies separately.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://envoy.com/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Screens Standard",
+          "monthlyUsd": 12,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$12 per device/month, billed annually. Room/desk display screens. Platform fee applies separately (amount not published).",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://envoy.com/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Visitors Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing. Adds ID scanning, blocklist checking, access control integrations, Wi-Fi provisioning, facial recognition.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://envoy.com/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://envoy.com/security",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Microsoft Teams",
+          "Slack",
+          "Zoom",
+          "Google Workspace",
+          "Okta",
+          "Azure AD",
+          "access control systems"
+        ],
+        "limits": [
+          "Visitors Basic capped at 100 entries/month and 50 employees",
+          "Reservations/Emergency/Screens require separate undisclosed platform fee",
+          "Modular pricing — each product billed separately per location/resource/device"
+        ],
+        "keyFeatures": [
+          "Modular workplace OS (visitors + desks + rooms + screens + deliveries)",
+          "SOC 2 Type II certified",
+          "Free visitor management tier to start",
+          "Reservations is the desk/room/parking booking product"
+        ],
+        "bestFor": [
+          "enterprise offices needing full visitor + desk + room management",
+          "orgs wanting modular add-on pricing",
+          "high-security facilities"
+        ],
+        "sources": [
+          {
+            "url": "https://envoy.com/pricing/",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://envoy.com/security",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Plans re-verified from envoy.com/pricing on 2026-06-18; SOC 2 Type II and GDPR explicitly confirmed from envoy.com/security. Added Screens Standard ($12/device) found on the live page; HIPAA is listed as a 'supported' framework (not a held certification) so compliance.hipaa is null."
+      }
+    }
+  ]
+}

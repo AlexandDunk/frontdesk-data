@@ -1,0 +1,820 @@
+{
+  "vertical": "business-travel-management",
+  "generatedAt": "2026-06-18",
+  "methodologyNotes": "Pricing re-verified via WebFetch on each vendor's official pricing page on 2026-06-18: perk.com/pricing, itilite.com/pricing, routespring.com/pricing, navan.com/pricing, travelbank.com/travel-pricing-package, travelbank.com/all-in-one-pricing-package. The TravelPerk->Perk rebrand (Nov 2025) is confirmed; perk.com/pricing is live and lists Starter $0 / Premium $99 / Pro $299 with 5%/3%/3% per-booking fees (NA travel-only plans). Egencia is now branded 'Amex GBT Egencia'; both egencia.com/en/business-travel-pricing and the Amex GBT pricing/Egencia pages were blocked (HTTP 403), and all aggregator + vendor sources confirm a quote-only, sales-led model with no published numeric pricing — monthlyUsd left null. Spotnana's /pricing page is confirmed HTTP 404; platform + security pages confirm a quote-only model. TravelBank travel-only plans are flat ANNUAL fees ($5,000 and $10,000/year); monthlyUsd is populated with the monthly-equivalent ($416.67 and $833.33) and the annual flat-fee nature is noted. Compliance set true ONLY where the vendor explicitly states a first-party certification on an accessible page: Perk soc2 downgraded to null (security page only says policies are 'aligned with' SOC 2 / ISO 27001 and the explicit certs belong to its AWS data center — no explicit first-party SOC 2 certification claim verifiable); Routespring and Navan gdpr downgraded to null (GDPR appears only as a page-title/badge, not an explicit compliance statement). Per-booking/per-trip fees are placed in plan notes; overagePerMin/overagePerCall are telephony fields and left null. accessedAt 2026-06-18.",
+  "vendors": [
+    {
+      "slug": "perk-travelperk",
+      "name": "Perk (formerly TravelPerk)",
+      "domain": "perk.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Oracle NetSuite",
+        "Microsoft Dynamics 365",
+        "Xero",
+        "DATEV",
+        "Ramp",
+        "Expensify",
+        "Rydoo",
+        "BambooHR",
+        "HiBob",
+        "Personio",
+        "Deel",
+        "Okta",
+        "OneLogin",
+        "Slack",
+        "ClickUp",
+        "monday.com",
+        "International SOS",
+        "Riskline",
+        "Safeture"
+      ],
+      "provenance": "Pricing re-verified on perk.com/pricing (2026-06-18): Starter $0, Premium $99, Pro $299 — all NA travel-only plans with 5%/3%/3% per-booking fees (min $2, max $30). TravelPerk->Perk rebrand confirmed (Nov 2025). soc2 set to null: perk.com/security only states policies are 'aligned with' SOC 2/ISO 27001 and lists certs for its AWS data center, with no explicit first-party SOC 2 certification claim on the accessible page.",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "No monthly platform fee (NA travel-only plan). 5% per-booking fee (min $2, max $30 per booking). 1 travel policy/approval process, simplified reporting, cost objects, access to global inventory, travel alerts, events access. Fee applies from first booking (no free-booking allowance).",
+          "source": {
+            "url": "https://www.perk.com/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": 99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "$99/mo (NA travel-only plan). 3% per-booking fee (min $2, max $30). Up to 10 travel policies/approvals, advanced reporting, budget tracking (up to 5), SSO, HR integrations, events access, dedicated account manager. Separately, a Europe-only Travel + Spend combo plan starts at $11/user/month (different SKU).",
+          "source": {
+            "url": "https://www.perk.com/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 299,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "$299/mo (NA travel-only plan). 3% per-booking fee (min $2, max $30). Unlimited policies/approvals, custom reporting, unlimited budget tracking, SSO, advanced HR integrations, custom integrations, events access. Separately, a Europe-only Travel + Spend combo plan starts at $13/user/month (different SKU).",
+          "source": {
+            "url": "https://www.perk.com/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": {
+            "url": "https://www.perk.com/security/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Oracle NetSuite",
+          "Microsoft Dynamics 365",
+          "Xero",
+          "DATEV",
+          "BambooHR",
+          "Expensify",
+          "Ramp",
+          "Slack",
+          "International SOS",
+          "Okta"
+        ],
+        "limits": [
+          "Starter: 1 travel policy only",
+          "Premium: max 10 travel policies, 5 budget-tracking cost centers",
+          "Per-booking fee applies to all plans (5% Starter, 3% Premium/Pro)",
+          "$11/$13 Travel+Spend combo pricing is Europe-only, not the NA travel-only SKU"
+        ],
+        "keyFeatures": [
+          "Per-booking-fee model with a forever-free Starter tier",
+          "VAT recovery on European travel",
+          "FlexiPerk flexible cancellation add-on",
+          "Open integration ecosystem"
+        ],
+        "bestFor": [
+          "SMBs wanting zero upfront cost",
+          "European companies needing VAT recovery",
+          "Teams that book infrequently (Starter)"
+        ],
+        "sources": [
+          {
+            "url": "https://www.perk.com/pricing/",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://www.perk.com/security/",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://www.perk.com/integrations/",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Pricing re-verified on perk.com/pricing 2026-06-18. soc2 downgraded to null — security page uses 'aligned with' language and attributes explicit certs to its AWS data center; no explicit first-party SOC 2 certification claim verifiable on the accessible page. GDPR/HIPAA not explicitly stated."
+      }
+    },
+    {
+      "slug": "travelbank",
+      "name": "TravelBank",
+      "domain": "travelbank.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "QuickBooks Online",
+        "Sage Intacct",
+        "NetSuite",
+        "SSO (SAML)",
+        "HRIS platforms",
+        "American Express commercial cards"
+      ],
+      "provenance": "Pricing re-verified on travelbank.com/travel-pricing-package and travelbank.com/all-in-one-pricing-package (2026-06-18). Premium = $5,000/year and Elite = $10,000/year flat ANNUAL fees; monthlyUsd populated with monthly-equivalent and the annual flat-fee nature noted. All-in-one is custom per-user pricing.",
+      "plans": [
+        {
+          "name": "Premium (Travel)",
+          "monthlyUsd": 416.67,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Billed as a flat $5,000/year (monthlyUsd = $416.67 monthly-equivalent; this is NOT a monthly-billed plan). Includes travel policies, approval workflows, delegates, Core Insights reporting, 24/7 travel agent support, 1M+ hotel access, 1% travel rebate on spend over $250K/year.",
+          "source": {
+            "url": "https://travelbank.com/travel-pricing-package",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Elite (Travel)",
+          "monthlyUsd": 833.33,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Billed as a flat $10,000/year (monthlyUsd = $833.33 monthly-equivalent; this is NOT a monthly-billed plan). Adds Premium Insights analytics, custom reporting, specialist-guided implementation, dedicated CSM, 2% travel rebate on spend over $250K/year.",
+          "source": {
+            "url": "https://travelbank.com/travel-pricing-package",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Corporate Custom (Travel)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "Custom (quote-only) pricing for large enterprises (100+ users). Custom implementation, unlimited bookings/users, 2% travel rebate on spend over $250K/year.",
+          "source": {
+            "url": "https://travelbank.com/travel-pricing-package",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "All-in-One (Travel + Expense)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "Custom per-user pricing (quote-only on the official all-in-one page; a ~$25/user/month figure appears only on G2/Capterra aggregators and is not published by the vendor). Includes travel booking, expense management, corporate card reconciliation, unlimited receipt scans, mileage tracking, QuickBooks/Sage/NetSuite integrations, dedicated CSM.",
+          "source": {
+            "url": "https://travelbank.com/all-in-one-pricing-package",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "QuickBooks Online",
+          "Sage Intacct",
+          "NetSuite",
+          "American Express",
+          "HRIS (multiple)",
+          "SSO/SAML"
+        ],
+        "limits": [
+          "$250,000 minimum annual travel spend required for rebate eligibility",
+          "Travel-only plans billed annually as flat fees ($5K or $10K/year), not monthly",
+          "All-in-one pricing is quote-only (requires demo/sales contact)"
+        ],
+        "keyFeatures": [
+          "Unified travel, expense, and corporate card on one platform",
+          "1-2% travel rebate on qualifying spend",
+          "24/7 live travel agent support",
+          "Dynamic trip budgets based on real-time rates"
+        ],
+        "bestFor": [
+          "Mid-market companies wanting all-in-one T&E",
+          "Teams needing corporate card + expense reconciliation",
+          "Organizations with $250K+ annual travel spend"
+        ],
+        "sources": [
+          {
+            "url": "https://travelbank.com/travel-pricing-package",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://travelbank.com/all-in-one-pricing-package",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Pricing re-verified on two official TravelBank pricing pages 2026-06-18. Travel-only Premium/Elite are flat annual fees ($5K/$10K); monthlyUsd populated as monthly-equivalent. Compliance certs not found on accessible pages; set to null. ~$25/user all-in-one figure is aggregator-only, so plan kept as custom/null."
+      }
+    },
+    {
+      "slug": "itilite",
+      "name": "ITILITE",
+      "domain": "itilite.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "SAP ERP",
+        "Oracle",
+        "NetSuite",
+        "Sage Intacct",
+        "QuickBooks",
+        "Microsoft Dynamics 365",
+        "Acumatica",
+        "Deltek",
+        "Workday",
+        "BambooHR",
+        "ADP",
+        "Rippling",
+        "UKG Pro",
+        "UKG Ready",
+        "Okta",
+        "Azure AD",
+        "Google Workspace",
+        "Darwinbox",
+        "International SOS"
+      ],
+      "provenance": "Pricing re-verified on itilite.com/pricing (2026-06-18): Corporate Travel $10/trip (or $7/trip with wallet), Expense $9/user/mo (or $6 annual), Corporate Card free. Compliance from itilite.com/blog/data-security-travel-expense (SOC2, GDPR, ISO 27001:2013, PCI DSS Level 1 explicitly stated).",
+      "plans": [
+        {
+          "name": "Corporate Travel",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "No platform/support/after-hours fee. $10 per-trip (standard) or $7 per-trip with pre-funded ITILITE wallet. Includes 500,000+ hotels, 500+ airlines, 24/7 support, group/event/guest booking, unused airline credits management, ERP/HRMS integrations, dedicated CSM.",
+          "source": {
+            "url": "https://www.itilite.com/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Expense Management",
+          "monthlyUsd": 9,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 33,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "$9/active user/month (monthly billing) or $6/active user/month (annual billing, ~33% discount). Billed per active user who submits reports. Unlimited reports, OCR receipt capture, auto GL code tagging, multi-level approvals, AI fraud detection, per diem and mileage tracking. No setup fees.",
+          "source": {
+            "url": "https://www.itilite.com/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Corporate Card",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Free. Unlimited virtual and physical cards, 1.5% cashback on all spends, spend limits per card, instant freeze/unfreeze, PCI-compliant storage, ERP exports. Requires ITILITE platform.",
+          "source": {
+            "url": "https://www.itilite.com/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.itilite.com/blog/data-security-travel-expense/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "SAP ERP",
+          "Oracle",
+          "NetSuite",
+          "QuickBooks",
+          "Workday",
+          "BambooHR",
+          "Okta",
+          "Azure AD",
+          "International SOS"
+        ],
+        "limits": [
+          "Per-trip fee applies even on Travel plan ($10 or $7 per booking)",
+          "Expense plan billed per active user (not total seats)",
+          "Corporate card availability may depend on region"
+        ],
+        "keyFeatures": [
+          "$10/trip flat fee with no platform fee (low entry cost for light travelers)",
+          "1.5% cashback on corporate card spend",
+          "AI-based fraud detection on expenses",
+          "ERP/HRMS/SSO integration breadth"
+        ],
+        "bestFor": [
+          "Companies wanting a la carte travel vs. expense pricing",
+          "Teams with high ERP/HRMS integration requirements",
+          "Organizations in India/APAC markets"
+        ],
+        "sources": [
+          {
+            "url": "https://www.itilite.com/pricing/",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://www.itilite.com/integrations/",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://www.itilite.com/blog/data-security-travel-expense/",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Pricing re-verified on itilite.com/pricing 2026-06-18. SOC2, GDPR, ISO 27001:2013, and PCI DSS Level 1 explicitly confirmed on the security blog post. HIPAA not mentioned."
+      }
+    },
+    {
+      "slug": "routespring",
+      "name": "Routespring",
+      "domain": "routespring.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Okta",
+        "SAP Concur",
+        "Expensify",
+        "NetSuite",
+        "QuickBooks",
+        "Slack",
+        "BambooHR",
+        "Salesforce"
+      ],
+      "provenance": "Pricing re-verified on routespring.com/pricing (2026-06-18): Basic free (5 free bookings/mo then 3%), Economy $49/mo (2%), Business $349/mo (1%), Professional custom. Compliance from routespring.com/security (SOC 2 Type II and ISO 27001 explicitly stated; GDPR only referenced in page header, not an explicit certification — set to null).",
+      "plans": [
+        {
+          "name": "Basic",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Free. 5 complimentary bookings per month, then 3% per-booking fee. 24/7 phone/email/text support, unlimited workflows, cost centers, departments, policies, SSO/SAML, approval workflows via Slack/Teams/SMS/email, corporate car rates.",
+          "source": {
+            "url": "https://www.routespring.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Economy",
+          "monthlyUsd": 49,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "$49/mo. 2% per-booking fee. All Basic features plus corporate hotel and car rates, flexible payment options (card, prepaid, direct debit).",
+          "source": {
+            "url": "https://www.routespring.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 349,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "$349/mo. 1% per-booking fee. All Economy features plus corporate airline rates, NetSuite integration, carbon emissions reporting, 3 custom reports, named customer support, developer APIs.",
+          "source": {
+            "url": "https://www.routespring.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Professional",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "Custom (quote-only) pricing and custom per-booking fee. Enterprise-grade features; contact sales.",
+          "source": {
+            "url": "https://www.routespring.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://www.routespring.com/security",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Okta",
+          "SAP Concur",
+          "Expensify",
+          "NetSuite",
+          "QuickBooks",
+          "Slack",
+          "BambooHR",
+          "Salesforce"
+        ],
+        "limits": [
+          "Basic: only 5 free bookings/month, then 3% fee applies",
+          "Business: only 3 custom reports included",
+          "Custom integrations only available on Business+ plans"
+        ],
+        "keyFeatures": [
+          "Per-booking-fee model with transparent % pricing tiers",
+          "SOC 2 Type II and ISO 27001 certified",
+          "Automatic airline credit utilization across all plans",
+          "Approval workflows via Slack, Teams, SMS, and email"
+        ],
+        "bestFor": [
+          "Small teams wanting a free starting tier",
+          "Companies needing Slack/Teams approval integrations",
+          "SMBs scaling into corporate airline rates"
+        ],
+        "sources": [
+          {
+            "url": "https://www.routespring.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://www.routespring.com/security",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Pricing re-verified on routespring.com/pricing 2026-06-18. SOC 2 Type II and ISO 27001 explicitly confirmed on security page. GDPR downgraded to null — referenced only in page header, no explicit compliance statement. HIPAA not mentioned."
+      }
+    },
+    {
+      "slug": "navan",
+      "name": "Navan",
+      "domain": "navan.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Oracle NetSuite",
+        "Sage Intacct",
+        "Xero",
+        "Workday",
+        "BambooHR",
+        "ADP",
+        "Rippling",
+        "HiBob",
+        "Personio",
+        "Gusto",
+        "Okta",
+        "Microsoft Azure",
+        "OneLogin",
+        "American Express",
+        "Brex",
+        "Expensify",
+        "Concur",
+        "Coupa",
+        "Slack",
+        "Google Calendar",
+        "Microsoft Outlook",
+        "International SOS",
+        "Crisis24"
+      ],
+      "provenance": "Pricing re-verified on navan.com/pricing (2026-06-18): Navan Business free for companies up to 300 employees (expense free for first 5 users, then $15/user/mo); Navan Enterprise custom. Compliance from navan.com/security (SOC 1 Type 2, SOC 2 Type 2, ISO 27001, PCI DSS Level 1 explicitly stated; GDPR only as a hero badge — set to null).",
+      "plans": [
+        {
+          "name": "Navan Business",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Free for companies with up to 300 employees (funded by travel providers' commission fees). Includes unlimited travel booking, global inventory, 24/7 support, unlimited policy/approval workflows, rewards program. Expense module free for first 5 users, then $15/user/month for additional users. No per-trip fees.",
+          "source": {
+            "url": "https://www.navan.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        {
+          "name": "Navan Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "Custom (quote-only) pricing for organizations over 300 employees. Adds dedicated Account Executive, Customer Success Manager, corporate negotiated rates, custom implementation, comprehensive back-office support. Unlimited travelers and expensing users.",
+          "source": {
+            "url": "https://www.navan.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://navan.com/security",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Oracle NetSuite",
+          "Sage Intacct",
+          "Workday",
+          "BambooHR",
+          "Okta",
+          "Rippling",
+          "American Express",
+          "Slack",
+          "International SOS"
+        ],
+        "limits": [
+          "Business plan limited to companies with <=300 employees",
+          "Expense module free only for first 5 users; $15/user/month after that",
+          "Enterprise requires custom contract"
+        ],
+        "keyFeatures": [
+          "Free travel management platform for SMBs up to 300 employees",
+          "SOC 1, SOC 2 Type II, ISO 27001, and PCI DSS Level 1 certified",
+          "Navan Rewards program for traveler incentives",
+          "30+ HRIS integrations plus major ERP and card providers"
+        ],
+        "bestFor": [
+          "SMBs and mid-market companies wanting free travel management",
+          "Companies needing strong expense + travel integration",
+          "Organizations requiring enterprise-grade security certifications"
+        ],
+        "sources": [
+          {
+            "url": "https://www.navan.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://navan.com/security",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://www.navan.com/integrations",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Pricing re-verified on navan.com/pricing 2026-06-18. SOC 1 Type 2, SOC 2 Type 2, ISO 27001, PCI DSS Level 1 explicitly confirmed on security page. GDPR downgraded to null — appears only as a hero badge without an explicit compliance statement. HIPAA not stated."
+      }
+    },
+    {
+      "slug": "egencia",
+      "name": "Amex GBT Egencia",
+      "domain": "egencia.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "SAP Concur",
+        "Expensify",
+        "Salesforce",
+        "Workday",
+        "Oracle",
+        "NetSuite",
+        "American Express GBT"
+      ],
+      "provenance": "Egencia is now branded 'Amex GBT Egencia'. Both egencia.com/en/business-travel-pricing and the Amex GBT pricing/Egencia pages returned HTTP 403 and are not directly fetchable. Quote-only, sales-led model confirmed via web search across aggregators (Vendr, Capterra, ITQlick, Research.com) and Amex GBT marketing pages — no public numeric pricing. Source URL updated to the Amex GBT business-travel-pricing page (the current owner) since the legacy egencia pricing URL is blocked. monthlyUsd null.",
+      "plans": [
+        {
+          "name": "Custom Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "All pricing is quote-only. Egencia (an American Express Global Business Travel company) serves mid-market and enterprise segments with volume-based, customized pricing. A 50%-off-booking-fees promotion has been advertised but cannot be verified from an accessible official page. Contact sales for a quote.",
+          "source": {
+            "url": "https://www.amexglobalbusinesstravel.com/business-travel-pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "SAP Concur",
+          "Expensify",
+          "Workday",
+          "Oracle",
+          "American Express GBT"
+        ],
+        "limits": [
+          "No self-serve plans; all pricing via sales",
+          "No public free tier or trial"
+        ],
+        "keyFeatures": [
+          "Backed by American Express Global Business Travel network",
+          "Volume-based pricing with multi-year discount options",
+          "Serves mid-market to global enterprise segments",
+          "Duty of care and risk management tools included"
+        ],
+        "bestFor": [
+          "Enterprise companies needing a globally managed travel program",
+          "Organizations already using AmEx GBT ecosystem",
+          "Large enterprises requiring account management and SLAs"
+        ],
+        "sources": [
+          {
+            "url": "https://www.amexglobalbusinesstravel.com/business-travel-pricing/",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://www.amexglobalbusinesstravel.com/egencia/",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Egencia/Amex GBT pricing pages blocked (HTTP 403); quote-only model confirmed via multiple aggregator + vendor sources. Source URL corrected to Amex GBT (current owner). Compliance not verifiable from accessible pages; set to null."
+      }
+    },
+    {
+      "slug": "spotnana",
+      "name": "Spotnana",
+      "domain": "spotnana.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "TMC partners (via API)",
+        "Travelodge (direct API)",
+        "Premier Inn (direct API)"
+      ],
+      "provenance": "Spotnana's /pricing page confirmed HTTP 404 on 2026-06-18. Platform page (spotnana.com/travel-management) and security page (spotnana.com/security-and-trust) fetched; quote-only model with no self-serve tiers confirmed. SOC 2 Type 2 and ISO 27001:2022 explicitly stated on the security page.",
+      "plans": [
+        {
+          "name": "Custom / Quote Only",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "All pricing is quote-only. Spotnana is a Travel-as-a-Service infrastructure platform selling primarily to TMCs, enterprises, and travel suppliers. No self-serve plans or public pricing. Request a demo to get pricing.",
+          "source": {
+            "url": "https://www.spotnana.com/travel-management/",
+            "accessedAt": "2026-06-18"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://www.spotnana.com/security-and-trust/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "TMC partner APIs",
+          "Direct hotel supplier APIs (Travelodge, Premier Inn)",
+          "White-label embedding"
+        ],
+        "limits": [
+          "No self-serve plans; enterprise and TMC sales only",
+          "No public free tier or trial"
+        ],
+        "keyFeatures": [
+          "Travel-as-a-Service infrastructure platform (not just an app)",
+          "ISO 27001:2022 and SOC 2 Type II certified",
+          "Direct API integrations with hotel suppliers",
+          "White-label capability for TMCs"
+        ],
+        "bestFor": [
+          "Travel management companies (TMCs) needing modern tech infrastructure",
+          "Large enterprises wanting a platform-level travel stack",
+          "Companies building custom travel products on top of TaaS"
+        ],
+        "sources": [
+          {
+            "url": "https://www.spotnana.com/travel-management/",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://www.spotnana.com/security-and-trust/",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Spotnana /pricing confirmed 404; platform and security pages fetched directly. SOC 2 Type 2 and ISO 27001:2022 explicitly confirmed on security-and-trust page. GDPR and HIPAA not explicitly stated."
+      }
+    }
+  ]
+}

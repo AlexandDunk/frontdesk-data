@@ -1,0 +1,912 @@
+{
+  "vertical": "pim-software",
+  "generatedAt": "2026-06-18",
+  "methodologyNotes": "Each vendor's official pricing page was re-fetched via WebFetch on 2026-06-18. Published prices confirmed directly: Plytix (Standard $0, Pro $499/mo USD, Enterprise custom) and Pimberly (Regular/Pro/Corporate published as annual USD/GBP/EUR; monthly-equivalents derived and noted). Quote-only vendors (Sales Layer, Catsy, inriver, Bluestone PIM, Productsup, and Akeneo's Growth/Enterprise editions) verified to publish NO amounts; monthlyUsd set to null. Akeneo Community Edition confirmed free/open-source; akeneo.com/pricing returns 404 so the Community Edition page was used. Compliance set true only where the vendor's own page explicitly states it: inriver gdpr corrected to null (page states SOC2 Type II + ISO 27001:2022 + ISO 27701:2019 but does not explicitly claim GDPR); Productsup soc2 null (held only by its cloud host, not Productsup directly). No vendors were fabricated; all nine exist. accessedAt 2026-06-18.",
+  "vendors": [
+    {
+      "slug": "plytix",
+      "name": "Plytix",
+      "domain": "plytix.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Shopify",
+        "Amazon",
+        "WooCommerce",
+        "BigCommerce",
+        "REST API",
+        "Google Shopping"
+      ],
+      "provenance": "Fetched plytix.com/pricing 2026-06-18: Standard $0, Pro $499/month (USD shown directly, not just EUR), Enterprise custom. Free version and SKU limits corroborated by Capterra listing (which loads, not 404). Official page is authoritative for the 500-SKU Standard limit (Capterra states 1,000 SKUs; official 500 used).",
+      "plans": [
+        {
+          "name": "Standard",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Forever free. 500 SKUs, 500 AI credits/month, 5,000 API calls/hour, unlimited users, basic team management. No credit card required.",
+          "source": {
+            "url": "https://www.plytix.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 499,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "50,000 SKUs, 500 AI credits/month, 15,000 API calls/hour, unlimited users, advanced team management. Official pricing page displays $499/mo USD (also shown in EUR by region). Billed monthly, cancel anytime.",
+          "source": {
+            "url": "https://www.plytix.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Unlimited SKUs, custom AI credits, unlimited API calls/hour, unlimited users, multi-account support. Custom pricing — contact sales.",
+          "source": {
+            "url": "https://www.plytix.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Shopify",
+          "Amazon",
+          "WooCommerce",
+          "BigCommerce",
+          "REST API"
+        ],
+        "limits": [
+          "Standard: 500 SKUs max",
+          "Pro: 50,000 SKUs max",
+          "Standard: 500 AI credits/month",
+          "Standard: 5,000 API calls/hour",
+          "Pro: 15,000 API calls/hour"
+        ],
+        "keyFeatures": [
+          "Unlimited users on all plans",
+          "AI credits for product enrichment",
+          "Channel distribution add-ons (Marketplace feeds, Brand Portals)",
+          "Monthly billing with no lock-in"
+        ],
+        "bestFor": [
+          "SMBs starting with PIM",
+          "teams needing unlimited seats",
+          "mid-market ecommerce"
+        ],
+        "sources": [
+          {
+            "url": "https://www.plytix.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://www.capterra.com/p/149113/Plytix-PIM/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Fetched plytix.com/pricing (live, prices published in USD) and corroborated free tier via Capterra (page loads). No security certification page was accessible; compliance left null."
+      }
+    },
+    {
+      "slug": "sales-layer",
+      "name": "Sales Layer",
+      "domain": "saleslayer.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Shopify",
+        "Shopify Plus",
+        "BigCommerce",
+        "WooCommerce",
+        "Magento",
+        "Prestashop",
+        "Amazon",
+        "Google Shopping",
+        "Google Manufacturer",
+        "ChannelAdvisor",
+        "Lengow",
+        "Feedonomics",
+        "BMECat4",
+        "REST API"
+      ],
+      "provenance": "Fetched saleslayer.com/pricing 2026-06-18: confirmed quote-only — all four tiers (Scale, Premium, Enterprise, Enterprise Plus) show 'Get a quote' with a EUR/USD toggle but no published amounts. SKU/user limits displayed. 30-day free trial confirmed in the FAQ. ISO 27001 certification stated; no SOC2/HIPAA.",
+      "plans": [
+        {
+          "name": "Scale",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Up to 5 users, 10,000 SKUs. CSV/Excel export, data quality score, transformation engine. Quote-only.",
+          "source": {
+            "url": "https://saleslayer.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Up to 10 users, 50,000 SKUs, up to 5 languages. Multilanguage support, Shopify/BigCommerce/Amazon connectors, user permissions. Marked 'Popular'. Quote-only.",
+          "source": {
+            "url": "https://saleslayer.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Up to 35 users, 200,000 SKUs, up to 10 languages. Adds workflows, teams, collaborative tracking, advanced DAM, all native connectors. Quote-only.",
+          "source": {
+            "url": "https://saleslayer.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Enterprise Plus",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Users and SKUs as requested. Adds SSO (SAML), corporate white labeling, dedicated account manager. Quote-only.",
+          "source": {
+            "url": "https://saleslayer.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": {
+            "url": "https://saleslayer.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 30,
+        "keyIntegrations": [
+          "Shopify",
+          "BigCommerce",
+          "WooCommerce",
+          "Magento",
+          "Amazon",
+          "Google Shopping",
+          "ChannelAdvisor",
+          "REST API"
+        ],
+        "limits": [
+          "Scale: 5 users, 10,000 SKUs",
+          "Premium: 10 users, 50,000 SKUs, 5 languages",
+          "Enterprise: 35 users, 200,000 SKUs, 10 languages"
+        ],
+        "keyFeatures": [
+          "AI Suite with autonomous agentic product enrichment (launched Dec 11, 2025)",
+          "Translation engine supporting 50+ languages",
+          "MCP Server for Claude/ChatGPT/Gemini AI platform integration",
+          "Transformation engine for channel-specific data formatting"
+        ],
+        "bestFor": [
+          "mid-market multichannel retailers",
+          "teams needing multilingual PIM",
+          "B2B catalog distribution"
+        ],
+        "sources": [
+          {
+            "url": "https://saleslayer.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://www.saleslayer.com/ai-pim/mcp",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Fetched saleslayer.com/pricing (quote-only, ISO 27001 stated). AI Suite + MCP Server launch (Dec 11, 2025) verified via vendor press release and saleslayer.com/ai-pim/mcp. soc2/gdpr left null — not explicitly claimed on the pricing page."
+      }
+    },
+    {
+      "slug": "catsy",
+      "name": "Catsy",
+      "domain": "catsy.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Shopify",
+        "Amazon",
+        "Salesforce",
+        "REST API"
+      ],
+      "provenance": "Fetched catsy.com/pricing 2026-06-18: confirmed quote-only — all three tiers (Essential, Multi-Store, Enterprise) use 'Request Free Trial'/'Book a Demo'/'Give Us A Call', no published amounts. Third-party aggregators cite ~$599/month starting, but that is not published officially, so monthlyUsd is null.",
+      "plans": [
+        {
+          "name": "Essential",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "For small teams on a single Shopify store. Up to 5 outputs, 3 Shopify store API connections, combined DAM + PIM features. Quote-only.",
+          "source": {
+            "url": "https://catsy.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Multi-Store",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "For mid-sized teams expanding to multiple Shopify stores. Up to 10 outputs, advanced marketplace channel access. Quote-only.",
+          "source": {
+            "url": "https://catsy.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "For large catalogs with multi-channel Shopify projects. Unlimited outputs, enterprise marketplace channels, custom onboarding. Quote-only.",
+          "source": {
+            "url": "https://catsy.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Shopify",
+          "Amazon",
+          "Salesforce",
+          "REST API"
+        ],
+        "limits": [
+          "Essential: 5 outputs, 3 Shopify store connections",
+          "Multi-Store: 10 outputs",
+          "Enterprise: unlimited outputs"
+        ],
+        "keyFeatures": [
+          "Combined PIM + DAM platform",
+          "Shopify-native multi-store management",
+          "Native Amazon and marketplace syndication",
+          "Guided onboarding support"
+        ],
+        "bestFor": [
+          "Shopify merchants scaling to multi-store",
+          "small-to-mid ecommerce teams",
+          "combined PIM/DAM needs"
+        ],
+        "sources": [
+          {
+            "url": "https://catsy.com/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Fetched catsy.com/pricing; no prices published. Plan structure and output/store limits taken from the official comparison table (Essential = 5 outputs + 3 Shopify stores; Multi-Store = 10 outputs; Enterprise = unlimited). The ~$599/month seen on aggregators is not published officially and is excluded as a verified price."
+      }
+    },
+    {
+      "slug": "akeneo",
+      "name": "Akeneo",
+      "domain": "akeneo.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Shopify",
+        "Magento",
+        "SAP",
+        "Salesforce",
+        "BigCommerce",
+        "WooCommerce",
+        "REST API",
+        "Events API"
+      ],
+      "provenance": "akeneo.com/pricing returns HTTP 404 (confirmed). Fetched akeneo.com/akeneo-pim-community-edition: Community Edition confirmed free/open-source (trusted by 500+ customers, 80,000+ downloads, actively promoted — NO deprecation or wind-down language on the page). Growth Edition is quote-based, starting ~$25K/year per third-party sources (G2, StrikeTru). Enterprise is quote-only.",
+      "plans": [
+        {
+          "name": "Community Edition",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free, open-source, self-hosted PIM. Standard PIM functions, REST and Events APIs, community connectors. Community support only — no dedicated support. Actively promoted by Akeneo (500+ customers, 80,000+ downloads).",
+          "source": {
+            "url": "https://www.akeneo.com/akeneo-pim-community-edition/",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Growth Edition",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "SaaS PIM for fast-growing companies. Quote-based; third-party sources (G2, StrikeTru) cite a starting price around $25,000/year, but no amount is published officially. Includes advanced enrichment and connector ecosystem.",
+          "source": {
+            "url": "https://www.akeneo.com/akeneo-pim-community-edition/",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Enterprise Edition",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Full enterprise SaaS (Serenity). Advanced governance, multi-store, Digital Shelf Analytics, dedicated CSM. Quote-only.",
+          "source": {
+            "url": "https://www.akeneo.com/akeneo-pim-community-edition/",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Shopify",
+          "Magento",
+          "SAP",
+          "Salesforce",
+          "BigCommerce",
+          "REST API",
+          "Events API"
+        ],
+        "limits": [
+          "Community Edition: self-hosted only, no dedicated support",
+          "Growth Edition: SKU limits vary by contract",
+          "Enterprise Edition: quote-only, scales by catalog/users/channels"
+        ],
+        "keyFeatures": [
+          "Free open-source Community Edition for self-hosting",
+          "SaaS Growth Edition for SMBs and mid-market",
+          "Large partner/connector ecosystem",
+          "Serenity SaaS platform with continuous automatic updates"
+        ],
+        "bestFor": [
+          "developers wanting open-source PIM",
+          "fast-growing ecommerce brands on Growth Edition",
+          "large enterprises needing full PIM governance"
+        ],
+        "sources": [
+          {
+            "url": "https://www.akeneo.com/akeneo-pim-community-edition/",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://www.g2.com/products/akeneo-pim/pricing",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "akeneo.com/pricing 404 confirmed; Community Edition page fetched (free/open-source, actively promoted, no deprecation language — fabricated 'winding down'/'PaaS v7 support until Sept 2026' claims removed). Growth ~$25K/year corroborated by G2/StrikeTru as a third-party estimate, kept as null monthlyUsd."
+      }
+    },
+    {
+      "slug": "pimberly",
+      "name": "Pimberly",
+      "domain": "pimberly.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Shopify",
+        "Magento",
+        "WooCommerce",
+        "Amazon",
+        "eBay",
+        "Google Shopping",
+        "SAP",
+        "REST API"
+      ],
+      "provenance": "Fetched pimberly.com/pricing 2026-06-18: prices published as annual contracts in USD, GBP, and EUR. USD: Regular $36,000/yr, Pro $60,000/yr, Corporate $90,000/yr, Enterprise quote. Monthly equivalents derived ($3,000 / $5,000 / $7,500). Add-on prices confirmed.",
+      "plans": [
+        {
+          "name": "Regular",
+          "monthlyUsd": 3000,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Billed annually at $36,000/year (monthly-equivalent $3,000; annual billing only). 50,000 SKUs, 20 users, 3TB storage, unlimited import/export channels, DAM included, multi-brand support.",
+          "source": {
+            "url": "https://pimberly.com/pricing/",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 5000,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Billed annually at $60,000/year (monthly-equivalent $5,000; annual billing only). 100,000 SKUs, 50 users, 10TB storage, unlimited import/export channels, DAM included.",
+          "source": {
+            "url": "https://pimberly.com/pricing/",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Corporate",
+          "monthlyUsd": 7500,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Billed annually at $90,000/year (monthly-equivalent $7,500; annual billing only). 250,000 SKUs, 100 users, 20TB storage, unlimited channels, onsite support included.",
+          "source": {
+            "url": "https://pimberly.com/pricing/",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Unlimited SKUs, users, and storage. Onsite support included. Custom pricing — contact sales. Add-ons: Product Data Sheets from $15,000/yr, Customer Connect from $15,000/yr, Pimberly AI from $7,500/yr, Pimberly Catalog from $30,000/yr.",
+          "source": {
+            "url": "https://pimberly.com/pricing/",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Shopify",
+          "Magento",
+          "WooCommerce",
+          "Amazon",
+          "eBay",
+          "Google Shopping",
+          "SAP",
+          "REST API"
+        ],
+        "limits": [
+          "Regular: 50,000 SKUs, 20 users, 3TB",
+          "Pro: 100,000 SKUs, 50 users, 10TB",
+          "Corporate: 250,000 SKUs, 100 users, 20TB",
+          "Annual billing only (no monthly option)"
+        ],
+        "keyFeatures": [
+          "Transparent published pricing (rare in enterprise PIM)",
+          "DAM included in all plans",
+          "Unlimited import and export channels on all plans",
+          "AI add-on available (Pimberly AI from $7,500/yr)"
+        ],
+        "bestFor": [
+          "mid-market to enterprise retailers",
+          "teams needing transparent PIM pricing",
+          "high-SKU catalogs with DAM requirements"
+        ],
+        "sources": [
+          {
+            "url": "https://pimberly.com/pricing/",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Fetched pimberly.com/pricing: annual USD/GBP/EUR amounts confirmed. Monthly-equivalents computed from published annual totals and labeled as annual-billing-only. No free trial on the page. Compliance not stated on the pricing page; left null."
+      }
+    },
+    {
+      "slug": "inriver",
+      "name": "inriver",
+      "domain": "inriver.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Shopify",
+        "Magento",
+        "SAP",
+        "Salesforce",
+        "Microsoft Azure",
+        "Amazon",
+        "BigCommerce",
+        "REST API"
+      ],
+      "provenance": "Fetched inriver.com/product/plans 2026-06-18: four tiers (Foundation, Core, Professional, Enterprise), all quote-only, no published amounts. inriver.com/about/data-security states SOC 2 Type II (since 2021) + ISO/IEC 27001:2022 + ISO/IEC 27701:2019; it does NOT explicitly claim GDPR compliance, so gdpr is set to null.",
+      "plans": [
+        {
+          "name": "Foundation",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "For small and growing businesses. Entry-level PIM, single source of truth, user workflows. Quote-only.",
+          "source": {
+            "url": "https://www.inriver.com/product/plans/",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Core",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "For mid-market businesses. Scaled capabilities, single-click syndication, digital storefront. Quote-only.",
+          "source": {
+            "url": "https://www.inriver.com/product/plans/",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Professional",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "For larger businesses. Greater connectivity, product relations mapping, Digital Shelf Analytics. Quote-only.",
+          "source": {
+            "url": "https://www.inriver.com/product/plans/",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "For large multi-national organizations. Full PIM flexibility, multiple endpoint connections, global control. Quote-only.",
+          "source": {
+            "url": "https://www.inriver.com/product/plans/",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://www.inriver.com/about/data-security/",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Shopify",
+          "Magento",
+          "SAP",
+          "Salesforce",
+          "Microsoft Azure",
+          "Amazon",
+          "REST API"
+        ],
+        "limits": [
+          "All plans quote-only; SKU, user, and channel limits set per contract",
+          "No published pricing brackets"
+        ],
+        "keyFeatures": [
+          "Digital Shelf Analytics included in Professional+ tiers",
+          "SOC 2 Type II + ISO/IEC 27001:2022 + ISO/IEC 27701:2019 certified",
+          "Single-click channel syndication",
+          "Product relations mapping"
+        ],
+        "bestFor": [
+          "mid-market to enterprise manufacturers",
+          "companies needing Digital Shelf Analytics",
+          "companies requiring ISO 27001 / SOC 2 vendors"
+        ],
+        "sources": [
+          {
+            "url": "https://www.inriver.com/product/plans/",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://www.inriver.com/about/data-security/",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Fetched inriver.com/product/plans (tier names, all quote-only) and inriver.com/about/data-security. SOC 2 Type II (since 2021), ISO 27001:2022, and ISO 27701:2019 explicitly stated. GDPR not explicitly claimed on the page — gdpr corrected from true to null."
+      }
+    },
+    {
+      "slug": "bluestone-pim",
+      "name": "Bluestone PIM",
+      "domain": "bluestonepim.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Shopify",
+        "Magento",
+        "SAP",
+        "Salesforce",
+        "AWS",
+        "REST API",
+        "GraphQL API"
+      ],
+      "provenance": "Fetched bluestonepim.com/security 2026-06-18: ISO/IEC 27001:2022, SOC 2 Type II, and GDPR compliance all explicitly stated. Pricing page publishes no tiers/amounts — usage-based, customized quotes only.",
+      "plans": [
+        {
+          "name": "Custom",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Usage-based pricing. Factors include number of users, SKUs, and languages. Contract typically 3–12 months but fully customizable. Dedicated customer success manager included. No published tiers or amounts.",
+          "source": {
+            "url": "https://bluestonepim.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.bluestonepim.com/security",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Shopify",
+          "Magento",
+          "SAP",
+          "Salesforce",
+          "AWS",
+          "REST API",
+          "GraphQL API"
+        ],
+        "limits": [
+          "No published SKU or user limits — set per contract",
+          "Usage-based model: pay for what you use"
+        ],
+        "keyFeatures": [
+          "Composable PIM architecture (MACH-certified)",
+          "ISO 27001:2022 + SOC 2 Type II + GDPR compliant",
+          "AWS-hosted with OAuth2/OpenID Connect and JWT authentication",
+          "Flexible contract terms (3–12 months, fully adjustable)"
+        ],
+        "bestFor": [
+          "enterprises needing composable/headless PIM",
+          "MACH architecture adopters",
+          "organizations with strict compliance requirements"
+        ],
+        "sources": [
+          {
+            "url": "https://bluestonepim.com/pricing",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://www.bluestonepim.com/security",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Fetched bluestonepim.com/pricing (usage-based, no published tiers) and bluestonepim.com/security. ISO 27001:2022, SOC 2 Type II, and GDPR all explicitly stated on the security page."
+      }
+    },
+    {
+      "slug": "productsup",
+      "name": "Productsup",
+      "domain": "productsup.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Shopify",
+        "Google Shopping",
+        "Amazon",
+        "Meta",
+        "TikTok Shop",
+        "Walmart",
+        "Criteo",
+        "REST API"
+      ],
+      "provenance": "Fetched productsup.com/pricing 2026-06-18: no tiers/amounts published — all quote-only, priced by SKUs, feeds, modules, sync frequency, seats, countries. Security docs: Productsup is ISO 27001 certified directly; SOC2 is held by its cloud hosting provider, NOT Productsup — so soc2 is null. GDPR compliance explicitly stated.",
+      "plans": [
+        {
+          "name": "Custom",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Pricing depends on number of SKUs, feeds, platform modules, data sync frequency, seats, and countries. No published tiers. Contact sales for a customized quote.",
+          "source": {
+            "url": "https://www.productsup.com/pricing/",
+            "accessedAt": "2026-06-18"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://help.productsup.com/en/29407-29412-information-security-and-data-protection.html",
+            "accessedAt": "2026-06-18"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Google Shopping",
+          "Amazon",
+          "Meta",
+          "TikTok Shop",
+          "Walmart",
+          "Criteo",
+          "Shopify",
+          "REST API"
+        ],
+        "limits": [
+          "No published SKU or feed limits — set per contract",
+          "Pricing scales with number of products, feeds, and countries"
+        ],
+        "keyFeatures": [
+          "Product-to-Consumer (P2C) platform combining PIM and feed management",
+          "Direct integrations with major paid media and retail channels",
+          "ISO 27001 certified (SOC 2 held by cloud host, not Productsup)",
+          "GDPR compliant with data processing agreements in place"
+        ],
+        "bestFor": [
+          "brands managing paid media and retail channel feeds",
+          "enterprises with high-volume product syndication",
+          "D2C and omnichannel retailers"
+        ],
+        "sources": [
+          {
+            "url": "https://www.productsup.com/pricing/",
+            "accessedAt": "2026-06-18"
+          },
+          {
+            "url": "https://help.productsup.com/en/29407-29412-information-security-and-data-protection.html",
+            "accessedAt": "2026-06-18"
+          }
+        ],
+        "provenance": "Fetched productsup.com/pricing (quote-only) and the security documentation. Productsup is ISO 27001 certified directly; SOC2/SOC1/SOC3 belong to its cloud hosting provider, so soc2 left null. GDPR compliance explicitly stated (DPAs in place)."
+      }
+    }
+  ]
+}
