@@ -1,0 +1,923 @@
+{
+  "vertical": "ap-automation",
+  "generatedAt": "2026-06-15",
+  "methodologyNotes": "Official pricing pages re-verified via WebFetch on 2026-06-15: BILL (bill.com/product/pricing), Melio (meliopayments.com/pricing), Ramp (ramp.com/pricing), Tipalti (tipalti.com/pricing), Routable (routable.com/pricing), Stampli (stampli.com/pricing), AvidXchange (avidxchange.com). Plooto's official pricing page (plooto.com/pricing) and help-center article are anti-bot 403-blocked; Go/Grow prices confirmed via multiple review sources and the CheckThat.ai mirror, and Pro was CORRECTED from a draft error of $99 to $499/month (corroborated by businessnewsdaily.com and business.com). Quote-only vendors (Stampli, AvidXchange) and quote-only tiers (BILL Enterprise, Ramp Enterprise, Melio Platinum, Tipalti custom, Stampli, Routable Scale/Enterprise) carry monthlyUsd null. Tipalti publishes starting-from prices ($99 AP, $249 Mass Payments). Annual discounts included only where stated. freeTrialDays set null for BILL and Melio (no published trial length; Melio's free plan is a forever tier, not a trial). accessedAt 2026-06-15.",
+  "vendors": [
+    {
+      "slug": "bill",
+      "name": "BILL",
+      "domain": "bill.com",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "QuickBooks Online",
+        "QuickBooks Desktop",
+        "Xero",
+        "Oracle NetSuite",
+        "Sage Intacct",
+        "Microsoft Dynamics",
+        "Oracle Fusion"
+      ],
+      "provenance": "Pricing re-fetched from bill.com/product/pricing on 2026-06-15: Essentials $49, Team $65, Corporate $89 per user/month confirmed exactly; Spend & Expense $0 forever-free; Enterprise custom. Transaction fees (ACH $0.59, check $1.99, intl wire $19.99) confirmed. Compliance from bill.com/product/security. freeTrialDays set null (no specific length published).",
+      "plans": [
+        {
+          "name": "Spend & Expense",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free forever ($0/user/month). Corporate cards, budgets, expense tracking, credit lines $1k-$5M, AI receipt capture, mobile app, rewards. No AP/AR invoice processing.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.bill.com/product/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Essentials",
+          "monthlyUsd": 49,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$49 per user/month. Manual CSV integration, bill entry, approval workflows, ACH/card/check payments, W-9 collection, AI invoice coding, 6 standard user roles. Transaction fees apply separately: ACH $0.59, check $1.99, international USD wire $19.99.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.bill.com/product/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Team",
+          "monthlyUsd": 65,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$65 per user/month. Adds automatic 2-way sync with QuickBooks/Xero, custom user roles. All Essentials features included.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.bill.com/product/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Corporate",
+          "monthlyUsd": 89,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$89 per user/month (most popular). Adds procurement (POs, purchase requests, 2-way matching), approver-only user discounts, custom policies.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.bill.com/product/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing. Multi-entity accounting, Oracle NetSuite/Sage Intacct/Microsoft Dynamics sync, dual control, API access, priority support.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.bill.com/product/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://www.bill.com/product/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "QuickBooks Online",
+          "QuickBooks Desktop",
+          "Xero",
+          "Oracle NetSuite",
+          "Sage Intacct",
+          "Microsoft Dynamics"
+        ],
+        "limits": [
+          "Essentials: manual CSV sync only, no auto ERP sync",
+          "Team/Corporate: 1 accounting system sync",
+          "Transaction fees charged per payment method on all plans"
+        ],
+        "keyFeatures": [
+          "AI invoice coding and line-item capture",
+          "Approval workflows with custom roles",
+          "Combined AP + AR in one platform",
+          "Spend & Expense corporate cards free add-on"
+        ],
+        "bestFor": [
+          "SMBs needing combined AP and AR",
+          "Teams already using QuickBooks or Xero",
+          "Companies wanting corporate cards + bill pay in one tool"
+        ],
+        "sources": [
+          {
+            "url": "https://www.bill.com/product/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.bill.com/product/security",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing and compliance details fetched directly from bill.com official pages on 2026-06-15."
+      }
+    },
+    {
+      "slug": "tipalti",
+      "name": "Tipalti",
+      "domain": "tipalti.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Oracle NetSuite",
+        "QuickBooks",
+        "Xero",
+        "Sage Intacct",
+        "Microsoft Dynamics",
+        "Workday"
+      ],
+      "provenance": "Pricing re-fetched from tipalti.com/pricing on 2026-06-15: starting prices confirmed ($99/mo AP, $249/mo Mass Payments); full pricing quote-based. Compliance from tipalti platform pages.",
+      "plans": [
+        {
+          "name": "Accounts Payable",
+          "monthlyUsd": 99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Plans starting at $99/month. Unlimited users, self-service supplier portal, core AP automation. Additional transaction fees per invoice and payment. Full quote required for custom configuration.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://tipalti.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Mass Payments",
+          "monthlyUsd": 249,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Plans starting at $249/month. Unlimited users, payee portal, core automation for high-volume outbound payments. Additional per-transaction fees apply. Full quote required.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://tipalti.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://tipalti.com/product/platform/cloud/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Oracle NetSuite",
+          "QuickBooks",
+          "Xero",
+          "Sage Intacct",
+          "Microsoft Dynamics",
+          "Workday"
+        ],
+        "limits": [
+          "Published prices are starting rates only; actual cost scales with payment volume and entities",
+          "Procurement, Expenses, Treasury modules priced separately",
+          "No free trial"
+        ],
+        "keyFeatures": [
+          "Global mass payments to 190+ countries",
+          "Supplier self-onboarding and tax compliance (W-9/W-8)",
+          "Multi-entity and multi-currency support",
+          "Regulatory compliance for 1099, VAT, withholding tax"
+        ],
+        "bestFor": [
+          "Mid-market and enterprise AP teams",
+          "Companies with high-volume global supplier payments",
+          "Healthcare and regulated industries needing BAA"
+        ],
+        "sources": [
+          {
+            "url": "https://tipalti.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://tipalti.com/product/platform/cloud/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Starting prices from tipalti.com/pricing; compliance certifications from tipalti platform pages confirming SOC 2 Type II, GDPR, and HIPAA BAA."
+      }
+    },
+    {
+      "slug": "stampli",
+      "name": "Stampli",
+      "domain": "stampli.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Oracle NetSuite",
+        "QuickBooks",
+        "Sage Intacct",
+        "Sage 100",
+        "Microsoft Dynamics 365",
+        "SAP S/4HANA",
+        "Acumatica",
+        "Oracle Fusion",
+        "Oracle JD Edwards",
+        "Workday",
+        "Yardi"
+      ],
+      "provenance": "Pricing page re-fetched from stampli.com/pricing on 2026-06-15; confirmed quote-only with no published dollar amounts. Integration list from stampli.com accounting-systems-erps.",
+      "plans": [
+        {
+          "name": "Stampli for Accounts Payable",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only. Includes unlimited entities, vendors, invoice capture, AI coding (Billy the Bot), 2-3 way PO matching, reports, dedicated Customer Success Manager. Priced on invoice volume and user count.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.stampli.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Stampli Beyond Accounts Payable",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only. Adds Procurement, Direct Pay, and Credit Card modules to core AP. Full procure-to-pay platform.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.stampli.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Oracle NetSuite",
+          "QuickBooks",
+          "Sage Intacct",
+          "Microsoft Dynamics 365",
+          "SAP S/4HANA",
+          "Acumatica",
+          "Workday",
+          "Yardi"
+        ],
+        "limits": [
+          "No published pricing — requires sales quote",
+          "No free trial or free tier"
+        ],
+        "keyFeatures": [
+          "70+ pre-built ERP integrations with field-level sync",
+          "Billy the Bot AI for invoice coding and approvals",
+          "Unlimited users and vendors on all plans",
+          "Full procure-to-pay with PO, procurement, and card modules"
+        ],
+        "bestFor": [
+          "Mid-market companies with complex ERP environments",
+          "Teams needing deep NetSuite or Dynamics integration",
+          "Organizations wanting unlimited users with no per-seat fees"
+        ],
+        "sources": [
+          {
+            "url": "https://www.stampli.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.stampli.com/accounting-systems-erps/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing page fetched directly on 2026-06-15; confirmed quote-only. Integration list from stampli.com/accounting-systems-erps."
+      }
+    },
+    {
+      "slug": "melio",
+      "name": "Melio",
+      "domain": "meliopayments.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "QuickBooks Online",
+        "QuickBooks Desktop",
+        "Xero",
+        "Oracle NetSuite",
+        "Amazon Business"
+      ],
+      "provenance": "Pricing re-fetched from meliopayments.com/pricing on 2026-06-15: Go $0 forever-free, Core $25 (+$10/user; $20+$8 annual), Boost $55 (+$10/user; $44+$8 annual), Unlimited $80 ($64 annual), Platinum custom — all confirmed exactly with 20% annual discount. freeTrialDays set null (Go is a forever tier, not a trial). Compliance from meliopayments.com/security.",
+      "plans": [
+        {
+          "name": "Go",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free forever. 1 user, 5 free ACH transfers/month, invoice creation, payment links, basic QuickBooks/Xero sync. No multi-user or approval workflows.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://meliopayments.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Core",
+          "monthlyUsd": 25,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "hybrid",
+          "notes": "Base $25/month + $10/user/month (annual: $20 + $8/user). 20 free ACH/month, multi-user, QuickBooks Online/Xero sync, batch payments, approval workflows. Credit card payments: 2.9% fee.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://meliopayments.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Boost",
+          "monthlyUsd": 55,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "hybrid",
+          "notes": "Base $55/month + $10/user/month (annual: $44 + $8/user). 50 free ACH/month, advanced user roles, QuickBooks Desktop sync, premium phone support.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://meliopayments.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Unlimited",
+          "monthlyUsd": 80,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "Flat $80/month (annual: $64). Unlimited users, unlimited ACH, NetSuite sync, all integrations. Annual billing saves 20%.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://meliopayments.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Platinum",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Invite-only/custom pricing for high-volume businesses. Custom transaction pricing, card-to-wire options, API access.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://meliopayments.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://meliopayments.com/security/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "QuickBooks Online",
+          "QuickBooks Desktop",
+          "Xero",
+          "Oracle NetSuite",
+          "Amazon Business"
+        ],
+        "limits": [
+          "Go plan: 1 user, 5 free ACH/month",
+          "Core: 20 free ACH/month",
+          "Boost: 50 free ACH/month",
+          "Credit card payments always incur 2.9% fee",
+          "NetSuite only on Unlimited plan"
+        ],
+        "keyFeatures": [
+          "Free forever Go plan for solo users",
+          "Pay vendors by ACH, check, wire, or credit card",
+          "Approval workflows and multi-user roles",
+          "Deep QuickBooks/Xero/NetSuite two-way sync"
+        ],
+        "bestFor": [
+          "Small businesses and freelancers needing free bill pay",
+          "SMBs wanting to pay vendors by credit card to earn rewards",
+          "QuickBooks Online users needing seamless AP sync"
+        ],
+        "sources": [
+          {
+            "url": "https://meliopayments.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://meliopayments.com/security/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing fetched directly from meliopayments.com/pricing on 2026-06-15; security certifications from meliopayments.com/security confirming SOC 2 Type II."
+      }
+    },
+    {
+      "slug": "ramp",
+      "name": "Ramp",
+      "domain": "ramp.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "QuickBooks Online",
+        "Xero",
+        "Oracle NetSuite",
+        "Sage Intacct",
+        "Microsoft Dynamics",
+        "Workday",
+        "Oracle Fusion Cloud"
+      ],
+      "provenance": "Pricing re-fetched from ramp.com/pricing on 2026-06-15: Free $0/user, Plus $15/user + platform fee (20% annual), Enterprise custom — confirmed. Bill-pay transaction fees referenced from Ramp support documentation.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free forever ($0/user/month). Includes corporate cards, basic bill pay (ACH $0.59/transaction, check $1.99/transaction), invoice capture with OCR, basic QuickBooks/Xero integrations, automated fraud checks. Fee waiver if paying from Ramp Checking Account.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://ramp.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Plus",
+          "monthlyUsd": 15,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "per_seat",
+          "notes": "$15/user/month + platform fee based on team size. Annual billing saves 20%. Adds AI AP agent (approval recommendations, auto-coded line items), batch payments, 3-way PO matching, advanced ERP integrations (NetSuite, Sage Intacct), budget tracking, custom roles.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://ramp.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing, annual billing only. Adds Workday/Oracle Fusion integrations, locally funded reimbursements, local currency card issuing (30+ countries), dedicated account manager, 24/7 support, white-glove onboarding.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://ramp.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://ramp.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "QuickBooks Online",
+          "Xero",
+          "Oracle NetSuite",
+          "Sage Intacct",
+          "Microsoft Dynamics",
+          "Workday"
+        ],
+        "limits": [
+          "Bill pay transaction fees on all plans: ACH $0.59, check $1.99 (waived with Ramp Checking Account)",
+          "Platform fee for Plus scales with team size (not published)"
+        ],
+        "keyFeatures": [
+          "Free corporate cards + bill pay combined platform",
+          "AI AP agent for approval recommendations and line-item coding",
+          "3-way PO matching on Plus and above",
+          "Bill pay fees waivable via Ramp Checking Account"
+        ],
+        "bestFor": [
+          "Startups and SMBs wanting free corporate cards + AP in one tool",
+          "Teams replacing separate expense and AP tools",
+          "Companies willing to bank with Ramp to eliminate transaction fees"
+        ],
+        "sources": [
+          {
+            "url": "https://ramp.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://support.ramp.com/hc/en-us/articles/34238671485715-Bill-Pay-fees",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing from ramp.com/pricing fetched 2026-06-15; bill pay fee schedule from Ramp support documentation. Same-day ACH fee removed as it was not confirmed on the live page."
+      }
+    },
+    {
+      "slug": "avidxchange",
+      "name": "AvidXchange",
+      "domain": "avidxchange.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Oracle NetSuite",
+        "QuickBooks",
+        "Microsoft Dynamics",
+        "Sage",
+        "Sage Intacct",
+        "Acumatica",
+        "Blackbaud",
+        "MRI Software",
+        "Yardi",
+        "Rent Manager"
+      ],
+      "provenance": "AvidXchange does not publish pricing; confirmed quote/demo-only via avidxchange.com on 2026-06-15. Integration list from avidxchange.com. SOC 2 referenced via Trust Center.",
+      "plans": [
+        {
+          "name": "Custom",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only. Modular pricing based on invoice volume, payment methods (ACH, check, virtual card), and selected modules. No published price tiers.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.avidxchange.com/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://www.avidxchange.com/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Oracle NetSuite",
+          "QuickBooks",
+          "Microsoft Dynamics",
+          "Sage Intacct",
+          "Acumatica",
+          "Yardi",
+          "MRI Software",
+          "Blackbaud"
+        ],
+        "limits": [
+          "No published pricing — requires demo and sales quote",
+          "Targeted at mid-market and enterprise (not SMB self-serve)"
+        ],
+        "keyFeatures": [
+          "200+ pre-built ERP and accounting integrations",
+          "AvidPay network for supplier e-payments",
+          "Specialized for real estate, construction, and healthcare verticals",
+          "Invoice automation with OCR and approval routing"
+        ],
+        "bestFor": [
+          "Mid-market companies in real estate, construction, or HOA management",
+          "Organizations using niche ERPs like MRI, Yardi, or Blackbaud",
+          "High-volume AP teams needing supplier payment network"
+        ],
+        "sources": [
+          {
+            "url": "https://www.avidxchange.com/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "No pricing published; confirmed by fetching avidxchange.com on 2026-06-15 (quote/demo-only). The avidxchange.com/integrations URL was removed as it was not independently re-verified; integration details are from the main site."
+      }
+    },
+    {
+      "slug": "plooto",
+      "name": "Plooto",
+      "domain": "plooto.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "QuickBooks Online",
+        "QuickBooks Desktop",
+        "Xero"
+      ],
+      "provenance": "Plooto's official pricing page (plooto.com/pricing) and help-center article are anti-bot 403-blocked. Go $9 and Grow $32 confirmed via review sources and CheckThat.ai mirror. Pro CORRECTED from draft $99 to $499/month, corroborated by businessnewsdaily.com and business.com (Pro = $499/mo with SSO, dual control, priority support). Compliance (SOC 2 Type II) per Plooto security page.",
+      "plans": [
+        {
+          "name": "Go",
+          "monthlyUsd": 9,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$9/month. Basic payment automation, 1 approver, 1 accountant/bookkeeper, basic approval workflow. 5 free domestic transactions/month, then $1/transaction. International payments $19/transaction.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.plooto.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Grow",
+          "monthlyUsd": 32,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$32/month. Unlimited approvers, advanced approval workflows. Domestic transactions $0.50 each (or add unlimited domestic for +$27/month = $59/mo Grow Unlimited). International payments $10/transaction. 30-day free trial.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.plooto.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 499,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$499/month. Everything in Grow plus user access management with SSO, dual control, and priority support. Designed for large businesses needing enterprise-grade AP controls.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.plooto.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://www.plooto.com/plooto-security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 30,
+        "keyIntegrations": [
+          "QuickBooks Online",
+          "QuickBooks Desktop",
+          "Xero"
+        ],
+        "limits": [
+          "Go: 5 free domestic transactions/month then $1 each",
+          "Grow: $0.50/domestic transaction (or $27/month for unlimited)",
+          "International payments $10 (Grow/Pro) or $19 (Go) per transfer",
+          "No NetSuite or ERP integrations beyond QBO/QBD/Xero"
+        ],
+        "keyFeatures": [
+          "Low-cost entry at $9/month for SMBs",
+          "Domestic and international (CAD/USD) payment automation",
+          "Approval workflows with unlimited approvers on Grow+",
+          "Dual control and SSO on Pro tier"
+        ],
+        "bestFor": [
+          "Canadian small businesses needing CAD payment automation",
+          "SMBs on QuickBooks or Xero with moderate payment volumes",
+          "Accounting firms managing multiple client payment accounts"
+        ],
+        "sources": [
+          {
+            "url": "https://www.plooto.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.plooto.com/plooto-security",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Go/Grow prices confirmed via CheckThat.ai mirror and review sources; Pro $499/month corroborated by businessnewsdaily.com and business.com (the draft's $99 was wrong). Official pricing page returns 403 to automated fetches. Compliance (SOC 2 Type II) per plooto.com/plooto-security."
+      }
+    },
+    {
+      "slug": "routable",
+      "name": "Routable",
+      "domain": "routable.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "QuickBooks",
+        "Xero",
+        "Oracle NetSuite",
+        "Sage Intacct"
+      ],
+      "provenance": "Pricing re-fetched from routable.com/pricing on 2026-06-15: Growth $1,250/month confirmed; Scale and Enterprise quote-only; 20% annual discount confirmed.",
+      "plans": [
+        {
+          "name": "Growth",
+          "monthlyUsd": 1250,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "$1,250/month billed monthly (save 20% billed annually). Unlimited user seats, accounting/ERP integrations, domestic and international payments, instant payments. No invoice automation — that requires Scale.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.routable.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Scale",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing. Adds trainable OCR invoice automation, PO matching, predictive coding, advanced approval workflows.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.routable.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing. All Scale features plus additional invoice automation capabilities for large-scale organizations.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.routable.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://blog.routable.com/soc2-type-2-certification",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "QuickBooks",
+          "Xero",
+          "Oracle NetSuite",
+          "Sage Intacct"
+        ],
+        "limits": [
+          "Invoice automation (OCR, PO matching) only on Scale and Enterprise",
+          "Growth tier at $1,250/month is high floor for SMBs",
+          "No free trial"
+        ],
+        "keyFeatures": [
+          "Transparent published pricing (Growth tier)",
+          "Unlimited user seats on all plans",
+          "Domestic and international payments with instant option",
+          "Trainable OCR for invoice automation on Scale+"
+        ],
+        "bestFor": [
+          "Mid-market companies needing mass payouts and AP in one platform",
+          "Teams wanting unlimited seats without per-user pricing",
+          "High-volume B2B payment operations"
+        ],
+        "sources": [
+          {
+            "url": "https://www.routable.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://blog.routable.com/soc2-type-2-certification",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing fetched directly from routable.com/pricing on 2026-06-15; SOC 2 Type II confirmed from Routable blog announcement."
+      }
+    }
+  ]
+}

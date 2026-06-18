@@ -1,0 +1,835 @@
+{
+  "vertical": "church-management",
+  "generatedAt": "2026-06-15",
+  "methodologyNotes": "Official pricing pages were fetched/verified for Planning Center (planningcenter.com/pricing, /security), Tithe.ly (get.tithe.ly/pricing), Breeze ChMS (breezechms.com/pricing), ChurchTrac (churchtrac.com/pricing, churchtrac.com homepage), Subsplash (subsplash.com/pricing), Servant Keeper (servantkeeper.com/pricing), and Realm by ACS Technologies (acstechnologies.com/realm/plans, buy.acst.com/realm-inform). Faithlife ChMS excluded (discontinued 2023). Planning Center uses an interactive calculator with NO static per-tier prices shown on the official page; aggregators disagree on the lowest paid tier ($14 G2 vs $15 costbench), so the Services entry tier monthlyUsd is set to null (a null beats a guess) with the calculator range noted. Tithe.ly publishes PCI DSS Level 1 and GDPR compliance in its security guide but does NOT claim SOC 2; Planning Center explicitly claims SOC 2 Type 2 and PCI Level 1. ChurchTrac has a genuine free-forever plan (unlimited names, basic people management) distinct from its 30-day trial — corrected from the draft. Where a plan has no published price (Tithe.ly Enterprise, Subsplash One/Enterprise, Realm Connect/Multiply), monthlyUsd is null. accessedAt 2026-06-15.",
+  "vendors": [
+    {
+      "slug": "planning-center",
+      "name": "Planning Center",
+      "domain": "planningcenter.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Mailchimp",
+        "Zapier",
+        "Clearstream",
+        "BoxCast",
+        "SongSelect",
+        "PraiseCharts",
+        "RehearsalMix",
+        "Checkr",
+        "MinistrySafe",
+        "Protect My Ministry",
+        "Text In Church",
+        "Verified First",
+        "ProPresenter",
+        "Subsplash"
+      ],
+      "provenance": "Pricing fetched from planningcenter.com/pricing (interactive calculator, no static per-tier amounts shown on official page). Lowest paid tier left null because aggregators disagree ($14 G2 vs $15 costbench) and the official page shows no fixed amount. SOC 2 Type 2 and PCI Level 1 confirmed at planningcenter.com/security and the company SOC 2 blog post.",
+      "plans": [
+        {
+          "name": "People (Free)",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free forever for unlimited users. Member database and reporting. All other modules (Services, Giving, Check-Ins, Groups, Calendar, Registrations) add on top of this free base. Church Center member app included free.",
+          "source": {
+            "url": "https://www.planningcenter.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Services (Entry, calculator)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Lowest paid Services tier. Official page is calculator-driven with no static amount; aggregators report a lowest tier around $14-$15/month scaling up roughly $14/$29/$59/$99/$149/$199 by team members. Set to null because the official page publishes no fixed price. Each module (Giving, Check-ins, Groups, Calendar, Registrations) priced separately by usage. Music Stand add-on $5/month; toll-free texting number $5/month; text credits $0.02 each.",
+          "source": {
+            "url": "https://www.planningcenter.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://costbench.com/software/church-management/planning-center/",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://www.planningcenter.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Mailchimp",
+          "Zapier",
+          "Clearstream",
+          "SongSelect",
+          "ProPresenter",
+          "BoxCast"
+        ],
+        "limits": [
+          "Free People module has unlimited contacts; paid modules limited by usage (donations/month, team members, check-ins/day, group members, rooms)",
+          "Text credits cost $0.02 each",
+          "Music Stand add-on is $5/month extra",
+          "Official pricing page shows no static per-tier amounts (calculator only)"
+        ],
+        "keyFeatures": [
+          "Modular a-la-carte pricing — only pay for modules you use",
+          "SOC 2 Type 2 and PCI Level 1 certified",
+          "Church Center free member-facing app and web platform included",
+          "No contracts, cancel anytime"
+        ],
+        "bestFor": [
+          "multi-product churches",
+          "worship teams",
+          "volunteer scheduling",
+          "online giving"
+        ],
+        "sources": [
+          {
+            "url": "https://www.planningcenter.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.planningcenter.com/security",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.planningcenter.com/integrations",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://costbench.com/software/church-management/planning-center/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing page fetched directly (calculator, no static amounts). SOC 2 Type 2 explicitly stated at planningcenter.com/security and confirmed via the company's SOC 2 compliance blog post. Lowest Services tier left null because the official page publishes no fixed price and aggregators conflict ($14 vs $15)."
+      }
+    },
+    {
+      "slug": "tithely",
+      "name": "Tithe.ly",
+      "domain": "tithe.ly",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "QuickBooks Online",
+        "Planning Center Online",
+        "Rock RMS",
+        "Church Community Builder",
+        "FellowshipOne",
+        "Elvanto",
+        "MinistryPlatform",
+        "Shelby Systems",
+        "Salesforce",
+        "Engiven",
+        "MinistrySafe"
+      ],
+      "provenance": "Pricing fetched from get.tithe.ly/pricing. Free Giving $0, Church Management $72, All Access $119 (reg. $228), Enterprise quote-only — all confirmed. Custom Church App $89/month and Custom Church Website $19/month also confirmed on the page. PCI DSS Level 1 and GDPR compliance confirmed in the Tithely Information Security Guide; SOC 2 not claimed.",
+      "plans": [
+        {
+          "name": "Free Giving",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "No monthly fee. Unlimited donations, iOS/Android app, pledge campaigns, recurring giving, tax statements, QuickBooks integration. Processing fees: 2.9% + $0.30 (credit/debit), 1% + $0.30 (ACH), 3.5% + $0.30 (AMEX).",
+          "source": {
+            "url": "https://get.tithe.ly/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Church Management + Giving",
+          "monthlyUsd": 72,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Everything in Free Giving plus unlimited admin users, volunteer coordination, admin mobile app, drag-and-drop email editor, member engagement via text (ChMS). Confirmed $72/month on official page.",
+          "source": {
+            "url": "https://get.tithe.ly/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "All Access",
+          "monthlyUsd": 119,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "All products in one plan: giving, church management, custom church app, church website, and worship planning tools. Listed as regularly $228/month value. Confirmed $119/month on official page.",
+          "source": {
+            "url": "https://get.tithe.ly/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "For larger churches; negotiated rates and dedicated support. Contact sales for quote. No published price.",
+          "source": {
+            "url": "https://get.tithe.ly/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://help.tithe.ly/hc/en-us/articles/7442518409879-Tithely-Information-Security-Guide",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "QuickBooks Online",
+          "Planning Center Online",
+          "Rock RMS",
+          "Church Community Builder",
+          "Salesforce",
+          "Shelby Systems"
+        ],
+        "limits": [
+          "Free plan limited to giving only, no ChMS features",
+          "Custom Church App sold separately at $89/month or included in All Access",
+          "Custom Church Website $19/month standalone or included in All Access"
+        ],
+        "keyFeatures": [
+          "Free online giving with no monthly subscription",
+          "All-in-one bundle at $119/month (giving + ChMS + app + website + worship tools)",
+          "Breeze ChMS owned by Tithe.ly, sold separately or as bundle",
+          "PCI DSS Level 1 and GDPR compliant"
+        ],
+        "bestFor": [
+          "small churches wanting free giving",
+          "churches wanting all-in-one bundle",
+          "mid-size congregations"
+        ],
+        "sources": [
+          {
+            "url": "https://get.tithe.ly/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://get.tithe.ly/integrations",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://help.tithe.ly/hc/en-us/articles/7442518409879-Tithely-Information-Security-Guide",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing fetched directly from get.tithe.ly/pricing; all plan prices confirmed. PCI DSS Level 1 and GDPR compliance explicitly stated in the Tithely Information Security Guide; SOC 2 is NOT claimed so soc2 stays null."
+      }
+    },
+    {
+      "slug": "breeze-chms",
+      "name": "Breeze ChMS",
+      "domain": "breezechms.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Mailchimp",
+        "QuickBooks Online",
+        "QuickBooks Desktop",
+        "Stripe",
+        "KidCheck",
+        "Intulse"
+      ],
+      "provenance": "Pricing fetched directly from breezechms.com/pricing confirming $72/month flat rate, $29/month Worship Tools add-on, 30-day free trial, 250 free texts/month then $10 per 500. No SOC2 or HIPAA claims found. Breeze is owned by Tithe.ly.",
+      "plans": [
+        {
+          "name": "Breeze ChMS",
+          "monthlyUsd": 72,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Single flat-rate plan, no tiers by church size. Unlimited admin users and people, volunteer tracking, service planning, calendar, groups, email, admin mobile app, automation. 250 free texts/month then $10 per 500. Free giving included. No setup fees, no contract. Confirmed $72/month.",
+          "source": {
+            "url": "https://www.breezechms.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Breeze + Worship Tools Add-on",
+          "monthlyUsd": 101,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Breeze ChMS ($72) plus Worship Tools add-on ($29/month) = $101/month. Worship tools includes chord charts, service planning, and worship team features. Add-on price confirmed on official page.",
+          "source": {
+            "url": "https://www.breezechms.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": {
+            "url": "https://www.breezechms.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 30,
+        "keyIntegrations": [
+          "Mailchimp",
+          "QuickBooks Online",
+          "QuickBooks Desktop",
+          "Stripe",
+          "KidCheck"
+        ],
+        "limits": [
+          "250 SMS texts free per month, then $10 per 500",
+          "No tiered limits on contacts or admins",
+          "Worship tools require $29/month add-on"
+        ],
+        "keyFeatures": [
+          "Single flat-rate pricing regardless of church size or contact count",
+          "30-day free trial, no credit card required",
+          "Built-in free online giving (powered by Tithe.ly)",
+          "Owned by Tithe.ly — tight integration with Tithely ecosystem"
+        ],
+        "bestFor": [
+          "small to mid-size churches",
+          "price-predictable budgets",
+          "churches migrating from spreadsheets"
+        ],
+        "sources": [
+          {
+            "url": "https://www.breezechms.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.breezechms.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing page fetched directly; $72/month flat rate, $29 Worship Tools add-on, and 30-day trial all confirmed. Security page shows no SOC2/HIPAA — only PCI/SSL and AWS hosting; compliance fields kept null."
+      }
+    },
+    {
+      "slug": "churchtrac",
+      "name": "ChurchTrac",
+      "domain": "churchtrac.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Constant Contact",
+        "Mailchimp",
+        "Zoom Meetings",
+        "Twilio",
+        "Microsoft Outlook"
+      ],
+      "provenance": "Pricing fetched from churchtrac.com/pricing and homepage. ChurchTrac has a genuine FREE-FOREVER plan (unlimited names, basic people management) distinct from the 30-day trial — corrected from the draft (was freeTier:false). Paid plans start at $9/month (scaling by database size); accounting add-on $15/month, messaging add-on $7/month (250 SMS) — all confirmed on the official homepage and pricing page.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free forever. Add as many names as needed; manage people and families, user accounts, free imports/backups, print reports and directories, send email/SMS/phone messages, tech support. Excludes attendance tracking, check-in, donation reporting, accounting (paid features).",
+          "source": {
+            "url": "https://www.churchtrac.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "All-In-One (Base)",
+          "monthlyUsd": 9,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "Paid plans start at $9/month, priced by number of tracked people (scales for larger databases). Includes people management, email/push notifications, website, church app, giving, check-in, attendance, groups, registrations, volunteer scheduling, worship planning, automations. 10% discount with annual billing.",
+          "source": {
+            "url": "https://www.churchtrac.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://www.capterra.com/p/125787/ChurchTrac/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Accounting Add-on",
+          "monthlyUsd": 15,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Optional fund accounting, bank syncing, budgeting, financial statements. '+$15/month more' on the official homepage. Available at any database tier.",
+          "source": {
+            "url": "https://www.churchtrac.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Messaging Add-on",
+          "monthlyUsd": 7,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Enhanced messaging: includes 250 SMS credits/month; additional 250-credit blocks $7 each. Available at any database tier.",
+          "source": {
+            "url": "https://www.churchtrac.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": 30,
+        "keyIntegrations": [
+          "Mailchimp",
+          "Constant Contact",
+          "Zoom Meetings",
+          "Twilio",
+          "Microsoft Outlook"
+        ],
+        "limits": [
+          "Database-size pricing for paid plans (e.g. 75, 125, 250, 500, 1000, unlimited names)",
+          "Free plan excludes attendance, check-in, donation reporting, accounting",
+          "Accounting and messaging are paid add-ons",
+          "250 SMS included in $7/month messaging add-on"
+        ],
+        "keyFeatures": [
+          "Genuine free-forever plan for basic people management",
+          "Usage-based paid pricing scales with church size",
+          "All-in-one platform replacing multiple tools",
+          "10% annual billing discount; 30-day free trial of paid features"
+        ],
+        "bestFor": [
+          "small churches on tight budgets",
+          "churches wanting one tool for everything",
+          "first-time ChMS buyers"
+        ],
+        "sources": [
+          {
+            "url": "https://www.churchtrac.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.churchtrac.com/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.capterra.com/p/125787/ChurchTrac/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing page and homepage fetched directly. Free-forever plan confirmed via churchtrac.com (distinct from the 30-day trial) — draft's freeTier:false corrected to true and a Free plan added. Paid base $9/month, accounting +$15/month, messaging +$7/month confirmed on the official homepage."
+      }
+    },
+    {
+      "slug": "subsplash",
+      "name": "Subsplash",
+      "domain": "subsplash.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Rock RMS",
+        "Planning Center Online",
+        "Breeze ChMS",
+        "MinistryPlatform",
+        "MortarStone",
+        "Zapier",
+        "Mailchimp"
+      ],
+      "provenance": "Pricing fetched from subsplash.com/pricing. Subsplash Giving confirmed $0/month (2.3% + 30c cards, 1% ACH; as low as 1.9% + 30c / 0.5% ACH with GrowCurve). Subsplash One and Enterprise are quote-only with no published price.",
+      "plans": [
+        {
+          "name": "Subsplash Giving",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "No monthly fee. Mobile, web, and text giving; donor management; recurring gifts; check scanning; real-time analytics. Processing: 2.3% + $0.30 (cards), 1% (ACH); as low as 1.9% + $0.30 / 0.5% ACH with GrowCurve volume program. Confirmed $0 on official page.",
+          "source": {
+            "url": "https://www.subsplash.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Subsplash One",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing based on church size and usage. Includes websites, media hosting, custom apps, live streaming, online giving, people management, event registration, group messaging, volunteer management, child check-in, service planning, email/SMS, podcasting. Contact sales for quote. No published price.",
+          "source": {
+            "url": "https://www.subsplash.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "All Subsplash One features plus custom API integrations, multi-campus app, and Rock RMS integration. Requires sales contact. No published price.",
+          "source": {
+            "url": "https://www.subsplash.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Rock RMS",
+          "Planning Center Online",
+          "Zapier",
+          "MinistryPlatform"
+        ],
+        "limits": [
+          "Subsplash One and Enterprise pricing not public — requires sales call",
+          "GrowCurve volume discounts on transaction fees require negotiation",
+          "Multi-campus and custom API only in Enterprise tier"
+        ],
+        "keyFeatures": [
+          "Free giving platform with competitive transaction rates",
+          "Comprehensive church app, media, and streaming platform",
+          "GrowCurve program reduces transaction fees at volume",
+          "Rock RMS native plugin for enterprise ChMS integration"
+        ],
+        "bestFor": [
+          "media-rich churches",
+          "multi-campus organizations",
+          "churches wanting branded mobile app"
+        ],
+        "sources": [
+          {
+            "url": "https://www.subsplash.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing page fetched directly; only Giving plan has a published price ($0), confirmed along with 2.3%+30c card / GrowCurve rates. Subsplash One and Enterprise require sales contact and have no public prices (null)."
+      }
+    },
+    {
+      "slug": "servant-keeper",
+      "name": "Servant Keeper",
+      "domain": "servantkeeper.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "QuickBooks Desktop",
+        "QuickBooks Enterprise",
+        "QuickBooks Online",
+        "Mailchimp",
+        "Vanco Faith",
+        "Proclaim by Logos",
+        "Sterling",
+        "Eventbrite"
+      ],
+      "provenance": "Pricing fetched directly from servantkeeper.com/pricing and corroborated via Capterra. Core $79.99/mo ($73.32/mo annual) and Complete $159.99/mo ($146.66/mo annual) confirmed exactly. Check-in $199 add-on on Core, included in Complete. No public compliance certifications.",
+      "plans": [
+        {
+          "name": "Core (Monthly)",
+          "monthlyUsd": 79.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Unlimited families and members, ~4 estimated users, full apps and reporting, standard payment processing rate. Check-in module optional at $199 add-on. Standard phone/email/chat support. Self-guided onboarding. Confirmed $79.99/month.",
+          "source": {
+            "url": "https://www.servantkeeper.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Core (Annual)",
+          "monthlyUsd": 73.32,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 8,
+          "billingModel": "flat",
+          "notes": "Billed as $879.89/year (monthly-equivalent $73.32). Same features as Core Monthly. Saves ~$80/year vs monthly. ~8% annual discount.",
+          "source": {
+            "url": "https://www.servantkeeper.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Complete (Monthly)",
+          "monthlyUsd": 159.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Unlimited families and members, ~8 estimated users, full apps and reporting, preferred payment processing rate, check-in included, premium support, kick-off call onboarding, white glove data transfer, unlimited email (SK Connect), 1,000 SMS/month, website and app, 50GB content library, 25 hours/month 720p HD livestreaming. 'Best value'. Confirmed $159.99/month.",
+          "source": {
+            "url": "https://www.servantkeeper.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Complete (Annual)",
+          "monthlyUsd": 146.66,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 8,
+          "billingModel": "flat",
+          "notes": "Billed as $1,759.89/year (monthly-equivalent $146.66). Same features as Complete Monthly. Saves ~$160/year vs monthly. ~8% annual discount.",
+          "source": {
+            "url": "https://www.servantkeeper.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "QuickBooks Desktop",
+          "QuickBooks Online",
+          "Mailchimp",
+          "Vanco Faith",
+          "Proclaim by Logos"
+        ],
+        "limits": [
+          "Core plan limited to ~4 users; Complete limited to ~8 users",
+          "Check-in module is $199 add-on on Core plan, included in Complete",
+          "1,000 SMS/month cap on Complete; overage pricing not stated"
+        ],
+        "keyFeatures": [
+          "Transparent two-plan pricing with monthly and annual options",
+          "Complete plan includes website, app, and 720p HD livestreaming",
+          "White-glove data migration included in Complete",
+          "QuickBooks automated integration (Desktop and Online)"
+        ],
+        "bestFor": [
+          "established congregations needing accounting integration",
+          "churches wanting bundled website and livestream",
+          "ministries migrating from legacy desktop software"
+        ],
+        "sources": [
+          {
+            "url": "https://www.servantkeeper.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.capterra.com/p/276838/Servant-Keeper/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing page fetched directly and corroborated via Capterra; Core $79.99/$73.32 and Complete $159.99/$146.66 confirmed exactly. No public compliance certifications found — compliance fields null."
+      }
+    },
+    {
+      "slug": "realm-acs",
+      "name": "Realm by ACS Technologies",
+      "domain": "acstechnologies.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "Plans page fetched from acstechnologies.com/realm/plans (three tiers, no public price for Connect/Multiply). Realm Inform $49/month confirmed directly at buy.acst.com/realm-inform ('after the 30-day free trial, billed at $49/month, no contract'). Connect and Multiply are quote-only.",
+      "plans": [
+        {
+          "name": "Realm Inform",
+          "monthlyUsd": 49,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Staff-only plan. Month-to-month, no contract. Data management, congregation insights, reporting, contribution acceptance. 30-day free trial then $49/month. Accounting add-on available separately. Confirmed $49/month at the direct purchase page.",
+          "source": {
+            "url": "https://buy.acst.com/realm-inform/",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Realm Connect",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Built for the entire congregation including member-facing features. Pricing based on typical weekly attendance. Quote required (contact 1-800-736-7425). No published price. Billing model set to custom (attendance-based, not a fixed per-seat rate).",
+          "source": {
+            "url": "https://www.acstechnologies.com/realm/plans/",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Realm Multiply",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "For multi-site churches. Everything in Inform and Connect plus multi-campus administration and outreach. Quote required. No published price.",
+          "source": {
+            "url": "https://www.acstechnologies.com/realm/plans/",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": 30,
+        "keyIntegrations": [],
+        "limits": [
+          "Inform plan is staff-only — no member-facing portal",
+          "Connect and Multiply pricing not published — requires sales contact",
+          "Accounting is a paid add-on on all plans"
+        ],
+        "keyFeatures": [
+          "30-day free trial on Inform plan",
+          "Three-tier architecture from staff-only to multi-campus",
+          "Long-established ACS Technologies platform",
+          "Background check integrations and outreach features in upper tiers"
+        ],
+        "bestFor": [
+          "larger congregations",
+          "multi-campus churches",
+          "churches already on ACS legacy platform"
+        ],
+        "sources": [
+          {
+            "url": "https://www.acstechnologies.com/realm/plans/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://buy.acst.com/realm-inform/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Plans page shows three tiers, no public prices for Connect/Multiply. Inform $49/month confirmed at buy.acst.com/realm-inform. Connect billing model corrected from per_seat to custom (attendance-based quote)."
+      }
+    }
+  ]
+}
