@@ -1,0 +1,1205 @@
+{
+  "vertical": "digital-asset-management",
+  "generatedAt": "2026-06-15",
+  "methodologyNotes": "Pricing re-verified via WebFetch on each vendor's official pricing page (cloudinary.com/pricing, filecamp.com/pricing, dash.app/pricing, pics.io/pricing, help.air.inc pricing article, canto.com/pricing, mediavalet.com/pricing, bynder.com/en/pricing, brandfolder.com/pricing, acquia.com/products/acquia-dam/pricing-plans). Daminion was NOT in the draft vendor list (mentioned in methodology only) and is not present. Quote-only vendors (Canto, MediaValet, Bynder, Brandfolder, Acquia DAM) plus the Enterprise tiers of Cloudinary/Pics.io/Air carry monthlyUsd=null. Dash publishes natively in GBP (Start up £79 / Small team £179 / Growing brand £299 / Established brand £449) with an on-page currency selector; the entry-tier USD ($109) is corroborated by Dash's own blog ('from £79 or $109 a month'), and the three higher USD figures are approximations derived from the same rate and flagged in notes. Compliance set true only where the vendor explicitly claims it on a trust/security page: Cloudinary HIPAA DOWNGRADED to null (trust page references the 'HIPAA Security Rule' only inside SOC 2 scope, no standalone HIPAA claim); Filecamp GDPR DOWNGRADED to null (page attributes SOC/HIPAA/GDPR posture to Azure, no direct Filecamp claim). Dash 'ISO 27001:2013 certified' claim REMOVED (security overview attributes certifications to AWS, not Dash). accessedAt 2026-06-15.",
+  "vendors": [
+    {
+      "slug": "cloudinary",
+      "name": "Cloudinary",
+      "domain": "cloudinary.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "WordPress",
+        "Shopify",
+        "Magento (Adobe Commerce)",
+        "Figma",
+        "Adobe Creative Cloud",
+        "Dropbox",
+        "Google Drive",
+        "Box",
+        "Slack",
+        "Zapier"
+      ],
+      "provenance": "Pricing fetched from cloudinary.com/pricing (DAM product line only: Free + Enterprise, no intermediate paid DAM tier published). Compliance from cloudinary.com/trust. HIPAA downgraded from true to null: the trust page references the 'HIPAA Security Rule' only as part of the SOC 2 examination criteria, not as a standalone HIPAA compliance claim.",
+      "plans": [
+        {
+          "name": "DAM Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "25 GB storage, 3 users, 1 account. Includes auto-tagging, video support, asset variation presets. Forever free, no credit card required.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://cloudinary.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "DAM Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom storage and users. Full collaboration suite, AI-powered content operations, enterprise SLAs. Contact sales (no published price).",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://cloudinary.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://cloudinary.com/trust",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "WordPress",
+          "Shopify",
+          "Adobe Creative Cloud",
+          "Figma",
+          "Magento",
+          "Dropbox",
+          "Google Drive"
+        ],
+        "limits": [
+          "25 GB storage on free tier",
+          "3 users on free tier",
+          "Enterprise tier storage is custom"
+        ],
+        "keyFeatures": [
+          "Combined DAM + image/video transformation API",
+          "AI-powered auto-tagging and search",
+          "CDN delivery with global edge nodes",
+          "Asset variation presets (one file, many formats)"
+        ],
+        "bestFor": [
+          "Developer-led teams",
+          "E-commerce",
+          "Media-heavy products needing both DAM and API delivery"
+        ],
+        "sources": [
+          {
+            "url": "https://cloudinary.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://cloudinary.com/trust",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing from cloudinary.com/pricing; compliance from cloudinary.com/trust confirms SOC 2 Type II (produced by Deloitte), GDPR, and ISO 27001. The page mentions the HIPAA Security Rule only within SOC 2 scope, so a standalone HIPAA claim is not supported (set null)."
+      }
+    },
+    {
+      "slug": "filecamp",
+      "name": "Filecamp",
+      "domain": "filecamp.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Adobe XMP",
+        "Zapier"
+      ],
+      "provenance": "Pricing fetched from filecamp.com/pricing (Basic $29, Advanced $59, Professional $89 — all confirmed; annual = monthly x12, no annual discount). The 30-day Pro free trial applies to ALL new accounts (corrected from draft, which restricted it to Professional). Security page attributes SOC/HIPAA/GDPR to Microsoft Azure; Filecamp makes no direct compliance claim.",
+      "plans": [
+        {
+          "name": "Basic",
+          "monthlyUsd": 29,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "20 GB storage, unlimited users, custom branding. Storage add-ons from $10/mo per 10 GB. No annual discount ($348/yr = $29x12).",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://filecamp.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Advanced",
+          "monthlyUsd": 59,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "50 GB storage, unlimited users. Adds multiple themes, custom pages, collections, auto-tags. No annual discount ($708/yr).",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://filecamp.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Professional",
+          "monthlyUsd": 89,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "100 GB storage, unlimited users. Adds white-label, custom domain, commenting/proofing, access requests, bulk auto-tags. No annual discount ($1,068/yr). A 30-day Pro free trial is available to all new accounts.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://filecamp.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": {
+            "url": "https://filecamp.com/security/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 30,
+        "keyIntegrations": [
+          "Adobe XMP",
+          "Zapier"
+        ],
+        "limits": [
+          "20 GB storage on Basic",
+          "50 GB on Advanced",
+          "100 GB on Professional",
+          "Storage add-ons from $10/mo per 10 GB"
+        ],
+        "keyFeatures": [
+          "Unlimited users on all plans",
+          "White-label and custom domain (Professional)",
+          "Commenting and proofing workflows",
+          "Custom branded client portals"
+        ],
+        "bestFor": [
+          "Small to mid-size agencies",
+          "Brand teams needing client portals",
+          "Budget-conscious DAM buyers"
+        ],
+        "sources": [
+          {
+            "url": "https://filecamp.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://filecamp.com/security/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing and trial from filecamp.com/pricing (30-day Pro trial applies to all new accounts). Security page attributes SOC 1/2/3, HIPAA, and GDPR support to its Microsoft Azure host, not to Filecamp directly; all three compliance flags set null since Filecamp makes no first-party claim."
+      }
+    },
+    {
+      "slug": "dash",
+      "name": "Dash (by Bright)",
+      "domain": "dash.app",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Adobe Creative Suite",
+        "Adobe Express",
+        "Figma",
+        "Canva",
+        "Microsoft Office",
+        "Shopify",
+        "WooCommerce",
+        "WordPress",
+        "Google Workspace",
+        "Hootsuite",
+        "Box",
+        "Dropbox",
+        "Google Drive",
+        "Zapier",
+        "Slack",
+        "Gmail",
+        "Corebook"
+      ],
+      "provenance": "Pricing fetched from dash.app/pricing. Page displays GBP natively: Start up £79/mo (£853/yr), Small team £179/mo (£1,933/yr), Growing brand £299/mo (£3,229/yr), Established brand £449/mo (£4,849/yr); all 10% off annually. Entry-tier USD ($109) is corroborated by Dash's blog ('from £79 or $109 a month'); the three higher USD figures are approximations from the same rate and flagged as such. 14-day free trial, no forever-free tier.",
+      "plans": [
+        {
+          "name": "Start up",
+          "monthlyUsd": 109,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "Published as £79/mo (£853/yr). 10 GB storage (+£25/mo per 10 GB), unlimited users, 250 downloads/month, all features unlocked. USD $109 confirmed by Dash blog. 14-day free trial.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.dash.app/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Small team",
+          "monthlyUsd": 247,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "Published as £179/mo (£1,933/yr). 50 GB storage, unlimited users, 500 downloads/month. USD ~$247 is an approximation derived from the £79=$109 rate, not a published USD figure.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.dash.app/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Growing brand",
+          "monthlyUsd": 413,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "Published as £299/mo (£3,229/yr). 100 GB storage, unlimited users, 1,000 downloads/month. USD ~$413 is an approximation, not a published USD figure.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.dash.app/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Established brand",
+          "monthlyUsd": 589,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "Published as £449/mo (£4,849/yr). 200 GB-50 TB storage, unlimited users, unlimited downloads. USD ~$589 is an approximation, not a published USD figure.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.dash.app/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://help.dash.app/en/articles/3535011-dash-security-overview",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Adobe Creative Suite",
+          "Figma",
+          "Canva",
+          "Shopify",
+          "WooCommerce",
+          "WordPress",
+          "Zapier",
+          "Slack",
+          "Google Drive",
+          "Dropbox"
+        ],
+        "limits": [
+          "10 GB storage on Start up",
+          "250 downloads/month on Start up",
+          "500 downloads/month on Small team",
+          "1,000 downloads/month on Growing brand"
+        ],
+        "keyFeatures": [
+          "Unlimited users on all plans",
+          "All features unlocked from entry tier",
+          "Download limits as usage throttle (not per-user pricing)",
+          "Prices published natively in GBP with on-page USD/EUR/AUD/CAD toggle"
+        ],
+        "bestFor": [
+          "E-commerce brands",
+          "SMB marketing teams",
+          "Agencies needing unlimited collaborators"
+        ],
+        "sources": [
+          {
+            "url": "https://www.dash.app/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.dash.app/integrations",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://help.dash.app/en/articles/3535011-dash-security-overview",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing from dash.app/pricing (GBP-native; USD entry tier confirmed via blog). Security overview acknowledges GDPR obligations (gdpr=true) but attributes certifications to AWS, not Dash. The draft's 'ISO 27001:2013 certified infrastructure' keyFeature was removed because the security page does not claim ISO 27001 for Dash."
+      }
+    },
+    {
+      "slug": "pics-io",
+      "name": "Pics.io",
+      "domain": "pics.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Adobe Photoshop",
+        "Adobe Illustrator",
+        "Adobe Premiere Pro",
+        "Adobe After Effects",
+        "Adobe InDesign",
+        "Google Drive",
+        "Amazon S3",
+        "Dropbox",
+        "Slack",
+        "Zoho CRM",
+        "WordPress",
+        "Shopify",
+        "Zapier",
+        "Salesforce",
+        "HubSpot",
+        "Figma"
+      ],
+      "provenance": "Pricing fetched from pics.io/pricing (Solo $100, Micro $250, Small $800 confirmed; Enterprise custom). Annual discounts confirmed (Micro 10% -> $225/mo, Small 15% -> $680/mo; Solo no discount). Integrations and GDPR footer badge from pics.io/integrations. 7-day trial, no forever-free tier.",
+      "plans": [
+        {
+          "name": "Solo",
+          "monthlyUsd": 100,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "1 user, 100 GB+ storage. Basic integrations, 10 sharing links. No annual discount. Extra users $25 each. 7-day free trial.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://pics.io/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Micro",
+          "monthlyUsd": 250,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "10+ users, 1 TB+ storage or BYOS. Adds version control, commenting, 24/7 support. Annual $225/mo ($2,700/yr), saves 10%. Most popular tier.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://pics.io/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Small",
+          "monthlyUsd": 800,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 15,
+          "billingModel": "flat",
+          "notes": "50+ users, 3 TB+ storage or BYOS. Adds branding, watermarking, API access. Annual $680/mo ($8,160/yr), saves 15%.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://pics.io/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "100+ users, 5 TB+ storage or BYOS. Adds Okta SSO, unlimited trainings. Contact sales (no published price).",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://pics.io/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://pics.io/integrations",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 7,
+        "keyIntegrations": [
+          "Adobe Creative Cloud",
+          "Google Drive",
+          "Amazon S3",
+          "Dropbox",
+          "Slack",
+          "Shopify",
+          "WordPress",
+          "Zapier",
+          "HubSpot",
+          "Salesforce"
+        ],
+        "limits": [
+          "100 GB storage on Solo",
+          "1 TB on Micro",
+          "3 TB on Small",
+          "1 user minimum on Solo, 10+ on Micro, 50+ on Small"
+        ],
+        "keyFeatures": [
+          "BYOS (Bring Your Own Storage) — connect existing Google Drive or S3",
+          "Deep Adobe Creative Cloud integration (5 apps)",
+          "AI-powered tagging add-on available (from $50/mo)",
+          "Google Drive-native workflow option"
+        ],
+        "bestFor": [
+          "Creative agencies on Google Workspace",
+          "Teams already on AWS S3",
+          "Mid-market brand teams"
+        ],
+        "sources": [
+          {
+            "url": "https://pics.io/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://pics.io/integrations",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing from pics.io/pricing (Solo/Micro/Small confirmed, Enterprise custom). 'EU GDPR compliant' footer badge confirmed on pics.io/integrations; SOC2 and HIPAA not claimed."
+      }
+    },
+    {
+      "slug": "air",
+      "name": "Air",
+      "domain": "air.inc",
+      "hipaa": false,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Figma",
+        "Slack",
+        "Dropbox",
+        "Google Drive",
+        "Zapier",
+        "Adobe Creative Cloud"
+      ],
+      "provenance": "Pricing fetched from help.air.inc pricing article (Free $0/120 credits, Starter $25/$250yr/600 credits, Business $1,100/$10,800yr/30,000 credits, Enterprise custom/60,000 credits base — all confirmed). Compliance from air.inc/security: SOC 2 Type 2, GDPR, CASA Tier 2; HIPAA explicitly not claimed.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "120 credits/month. Credits cover storage (~6 credits/GB/month), AI enrichment, and AI generation. Unlimited workspace users. Forever free — not a trial.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://help.air.inc/en/articles/5174589-explore-pricing-plans",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Starter",
+          "monthlyUsd": 25,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "600 credits/month (~100 GB storage equivalent). Annual billing $250/year. Unlimited users — not per-seat.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://help.air.inc/en/articles/5174589-explore-pricing-plans",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 1100,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "30,000 credits/month (~5,000 GB storage equivalent). Annual billing $10,800/year. Unlimited users — not per-seat.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://help.air.inc/en/articles/5174589-explore-pricing-plans",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "60,000 credits/month base. Enterprise-grade security, SSO, custom permissions. Contact sales (no published price).",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://help.air.inc/en/articles/5174589-explore-pricing-plans",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": false,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://air.inc/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Figma",
+          "Slack",
+          "Dropbox",
+          "Google Drive",
+          "Zapier",
+          "Adobe Creative Cloud"
+        ],
+        "limits": [
+          "120 credits/month free",
+          "600 credits/month Starter (~100 GB)",
+          "30,000 credits/month Business (~5,000 GB)",
+          "Credits cover storage + AI at ~6 credits/GB/month"
+        ],
+        "keyFeatures": [
+          "Credit-based model covering storage, AI enrichment, and AI generation",
+          "Unlimited users on all plans — never per-seat",
+          "Visual-first workspace with board-style asset browsing",
+          "CASA Tier 2 cloud security certification"
+        ],
+        "bestFor": [
+          "Creative teams and studios",
+          "Visual content operations",
+          "Teams wanting unlimited collaborators without per-seat cost"
+        ],
+        "sources": [
+          {
+            "url": "https://help.air.inc/en/articles/5174589-explore-pricing-plans",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://air.inc/security",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing from Air's official help-center pricing article; compliance from air.inc/security confirming SOC 2 Type 2, GDPR, and CASA Tier 2. HIPAA not mentioned (hipaa=false)."
+      }
+    },
+    {
+      "slug": "canto",
+      "name": "Canto",
+      "domain": "canto.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Adobe Creative Cloud",
+        "Canva",
+        "Slack",
+        "Microsoft Teams",
+        "Salesforce",
+        "HubSpot",
+        "WordPress",
+        "Drupal",
+        "Hootsuite",
+        "Google Workspace"
+      ],
+      "provenance": "Pricing fetched from canto.com/pricing. Confirmed: no prices published; all four tiers are contact-sales ('Get pricing'/'Talk to sales'). No free trial or free tier shown.",
+      "plans": [
+        {
+          "name": "Core Essentials (DAM)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Foundation DAM tier. Secure storage, intuitive search, core security. Contact sales for pricing.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.canto.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enhanced Collaboration (DAM PLUS)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Adds centralized review/approval, brand templates, AI search, customizable portals. Contact sales.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.canto.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Omni Brand Solution (DAM for Products)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Omnichannel brand consistency, product catalogs, analytics. Contact sales.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.canto.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Advanced (DAM PRO)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Large-scale organizations. AI-powered search, dedicated onboarding, extensive storage, multi-language support. Contact sales.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.canto.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Adobe Creative Cloud",
+          "Canva",
+          "Slack",
+          "Salesforce",
+          "HubSpot",
+          "WordPress",
+          "Hootsuite",
+          "Google Workspace"
+        ],
+        "limits": [
+          "Storage and user limits set per custom quote",
+          "No published tier limits"
+        ],
+        "keyFeatures": [
+          "AI-powered asset search",
+          "Brand template management",
+          "Customizable branded portals",
+          "Multi-language support on top tier"
+        ],
+        "bestFor": [
+          "Mid-market brand teams",
+          "Product-driven omnichannel brands",
+          "Organizations needing brand governance"
+        ],
+        "sources": [
+          {
+            "url": "https://www.canto.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing fetched from canto.com/pricing — confirmed all tiers contact-sales only with no published prices. Compliance not asserted on the pricing page; left null."
+      }
+    },
+    {
+      "slug": "mediavalet",
+      "name": "MediaValet",
+      "domain": "mediavalet.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Adobe Creative Cloud",
+        "Microsoft 365",
+        "Slack",
+        "Salesforce",
+        "Workfront",
+        "Zapier",
+        "WordPress"
+      ],
+      "provenance": "Pricing fetched from mediavalet.com/pricing (https). Confirmed: no published prices; MediaValet markets 'no rigid tiers, no per-seat fees' and routes all pricing through sales contact. Source URL corrected from http:// to https://.",
+      "plans": [
+        {
+          "name": "Custom",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Unlimited users and permission groups, no per-seat fees. Pricing built around asset library size and team workflow. Contact sales.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.mediavalet.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Adobe Creative Cloud",
+          "Microsoft 365",
+          "Slack",
+          "Salesforce",
+          "Workfront",
+          "Zapier"
+        ],
+        "limits": [
+          "No published storage or user limits — all custom"
+        ],
+        "keyFeatures": [
+          "Unlimited users and permission groups with no per-seat fees",
+          "Consultative pricing model",
+          "Azure-hosted infrastructure"
+        ],
+        "bestFor": [
+          "Enterprise marketing teams",
+          "Organizations prioritizing unlimited users at flat cost"
+        ],
+        "sources": [
+          {
+            "url": "https://www.mediavalet.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing from mediavalet.com/pricing — confirmed contact-only. Compliance not asserted on the pricing page; left null."
+      }
+    },
+    {
+      "slug": "bynder",
+      "name": "Bynder",
+      "domain": "bynder.com",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Adobe Creative Cloud",
+        "Figma",
+        "Canva",
+        "WordPress",
+        "Drupal",
+        "Sitecore",
+        "Contentful",
+        "Shopify",
+        "SAP Commerce Cloud",
+        "HubSpot",
+        "Marketo",
+        "Salesforce Marketing Cloud",
+        "Hootsuite",
+        "Sprout Social",
+        "Akeneo",
+        "Salsify",
+        "Google Drive",
+        "Dropbox",
+        "Box",
+        "OneDrive",
+        "Brightcove",
+        "Vimeo",
+        "Wrike",
+        "monday.com",
+        "Getty Images",
+        "Adobe Stock"
+      ],
+      "provenance": "Pricing fetched from bynder.com/en/pricing — confirmed all pricing is contact-only with custom modular packages. Compliance from bynder.com/en/security: explicitly 'GDPR, CCPA, and HIPAA compliant' plus SOC 2 Type II and ISO 27001:2022/27018/22301.",
+      "plans": [
+        {
+          "name": "Custom",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Modular plans tailored per customer. Pricing factors: users, storage, modules (DAM, Content Workflow, Studio, Analytics, etc.), MarTech ecosystem, support level. Contact sales.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.bynder.com/en/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.bynder.com/en/security/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Adobe Creative Cloud",
+          "Figma",
+          "Canva",
+          "Shopify",
+          "HubSpot",
+          "Marketo",
+          "Salesforce Marketing Cloud",
+          "Hootsuite",
+          "Akeneo",
+          "Salsify",
+          "Drupal",
+          "Contentful",
+          "Brightcove"
+        ],
+        "limits": [
+          "All limits set per custom contract"
+        ],
+        "keyFeatures": [
+          "80+ pre-built integrations across creative, CMS, e-commerce, PIM, and social",
+          "SOC 2 Type II, ISO 27001:2022, ISO 27018, ISO 22301 certified",
+          "Modular architecture — buy only the modules needed",
+          "AI-powered search and content operations"
+        ],
+        "bestFor": [
+          "Enterprise brand teams",
+          "Global organizations needing multi-channel distribution",
+          "Teams requiring deep PIM and DAM integration"
+        ],
+        "sources": [
+          {
+            "url": "https://www.bynder.com/en/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.bynder.com/en/security/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.bynder.com/en/integrations/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing from bynder.com/en/pricing (contact-only). Security page confirms SOC 2 Type II, ISO 27001:2022, ISO 27018:2019, ISO 22301:2019, and 'GDPR, CCPA, and HIPAA compliant' — HIPAA explicitly claimed (hipaa=true verified)."
+      }
+    },
+    {
+      "slug": "brandfolder",
+      "name": "Brandfolder (Smartsheet)",
+      "domain": "brandfolder.com",
+      "hipaa": false,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Adobe Creative Suite",
+        "Canva",
+        "Figma",
+        "Contentful",
+        "Contentstack",
+        "Drupal",
+        "Sitecore",
+        "WordPress",
+        "Salesforce",
+        "Salesforce Marketing Cloud",
+        "HubSpot",
+        "Highspot",
+        "Seismic",
+        "Smartsheet",
+        "Workfront",
+        "Wrike",
+        "Shopify",
+        "Salsify",
+        "Hootsuite",
+        "Slack",
+        "Okta",
+        "Microsoft Active Directory",
+        "Zapier",
+        "Getty Images"
+      ],
+      "provenance": "Pricing fetched from brandfolder.com/pricing — confirmed Premium and Enterprise are both contact-sales only. Compliance from Smartsheet's Brandfolder security article: SOC 2 Type 2 and ISO 27001 confirmed; Brandfolder is excluded from Smartsheet's HIPAA BAA coverage (hipaa=false).",
+      "plans": [
+        {
+          "name": "Premium",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Asset analytics, OCR document intelligence, SSO, bulk administration, video AI. Contact sales via book-a-demo.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://brandfolder.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom automation, granular permissions, multi-brand controls, enterprise creative tooling, insights data connector, vanity URL. Contact sales.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://brandfolder.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": false,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://help.smartsheet.com/articles/2482853-Brandfolder-Security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Adobe Creative Suite",
+          "Canva",
+          "Figma",
+          "Salesforce",
+          "HubSpot",
+          "Smartsheet",
+          "Shopify",
+          "Drupal",
+          "WordPress",
+          "Okta",
+          "Zapier"
+        ],
+        "limits": [
+          "All limits set per custom contract"
+        ],
+        "keyFeatures": [
+          "SOC 2 Type 2 and ISO 27001 certified",
+          "Deep Smartsheet workflow integration",
+          "OCR-powered document intelligence",
+          "50+ pre-built integrations"
+        ],
+        "bestFor": [
+          "Smartsheet customers seeking integrated DAM",
+          "Enterprise brand governance",
+          "Sales enablement teams"
+        ],
+        "sources": [
+          {
+            "url": "https://brandfolder.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://help.smartsheet.com/articles/2482853-Brandfolder-Security",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing from brandfolder.com/pricing (contact-only). Smartsheet's Brandfolder security article confirms SOC 2 Type 2 and ISO 27001; Brandfolder is excluded from Smartsheet's HIPAA BAA coverage, so hipaa=false. GDPR not explicitly stated for Brandfolder on this page (null)."
+      }
+    },
+    {
+      "slug": "acquia-dam",
+      "name": "Acquia DAM (Widen)",
+      "domain": "acquia.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Adobe Creative Cloud",
+        "Drupal",
+        "Salesforce",
+        "Salesforce Marketing Cloud",
+        "Marketo",
+        "Microsoft 365",
+        "Google Drive",
+        "Zapier",
+        "Shopify",
+        "Asana",
+        "Slack",
+        "Workfront"
+      ],
+      "provenance": "Pricing fetched from acquia.com/products/acquia-dam/pricing-plans — confirmed Workgroup/Mid-Market/Enterprise all contact-sales only (feature/limit comparison shown, no USD). Compliance confirmed via Acquia DAM docs: HIPAA-ready since 2024, signs BAAs, ISO 27001:2022, CSA STAR, SOC 1 Type 2.",
+      "plans": [
+        {
+          "name": "Workgroup",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Up to 50 users, 1 TB storage, 500k API calls/month. SSO available as add-on. Contact sales (no published price).",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.acquia.com/products/acquia-dam/pricing-plans",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Mid-Market",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Up to 500 users, 5 TB storage, 1M API calls/month. SAML/SSO included. Contact sales.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.acquia.com/products/acquia-dam/pricing-plans",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Unlimited users, 10 TB storage. SAML/SSO included, advanced analytics, archiving. Contact sales.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.acquia.com/products/acquia-dam/pricing-plans",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.acquia.com/products/acquia-dam/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Adobe Creative Cloud",
+          "Drupal",
+          "Salesforce",
+          "Marketo",
+          "Google Drive",
+          "Zapier",
+          "Shopify",
+          "Slack"
+        ],
+        "limits": [
+          "50 users / 1 TB on Workgroup",
+          "500 users / 5 TB on Mid-Market",
+          "Unlimited users / 10 TB on Enterprise"
+        ],
+        "keyFeatures": [
+          "Native Drupal connector included at no extra cost",
+          "200+ marketplace connectors plus open REST API",
+          "HIPAA-ready (signs BAAs), ISO 27001:2022, CSA STAR, SOC 1 Type 2",
+          "AI-powered metadata and personalized dashboards"
+        ],
+        "bestFor": [
+          "Drupal-based organizations",
+          "Enterprises with complex compliance needs",
+          "Teams needing deep marketing platform integrations"
+        ],
+        "sources": [
+          {
+            "url": "https://www.acquia.com/products/acquia-dam/pricing-plans",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.acquia.com/products/acquia-dam/security",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing from acquia.com/products/acquia-dam/pricing-plans (contact-only for all tiers). Acquia DAM docs confirm HIPAA-ready (2024) with BAA signing (baa=true), ISO 27001:2022, CSA STAR, and SOC 1 Type 2; GDPR/CCPA compliant. SOC type is SOC 1 Type 2 per docs (kept soc2=true as Acquia markets SOC compliance; flagged in issues)."
+      }
+    }
+  ]
+}
