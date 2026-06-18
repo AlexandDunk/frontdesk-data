@@ -1,0 +1,803 @@
+{
+  "vertical": "cap-table-management",
+  "generatedAt": "2026-06-15",
+  "methodologyNotes": "Pricing re-verified via WebFetch on each vendor's official pricing page (pulley.com/pricing, ledgy.com/company-pricing, cakeequity.com/pricing, eqvista.com/pricing/, vestd.com/pricing/, capboard.io/en/capboard-new-pricing-dec-2024) on 2026-06-15. Carta's official pricing page (carta.com/plans/equity-management/ and carta.com/equity-management/launch/) and security page both returned HTTP 403; Carta plan structure and free-tier limits corroborated via web search and justpricing.com. Carta's paid plans (Build/Grow/Scale) are per-stakeholder with a minimum annual fee but Carta publishes NO official numbers; third-party estimates conflict ($2,800/yr vs $5,988/yr for Build), so monthlyUsd is left null for all paid Carta plans (a null beats a guess). AngelList Equity excluded (standalone cap table gated to Roll Up Vehicle customers as of mid-2026). Vestd prices are GBP-only; USD equivalents not officially published and therefore omitted. Compliance claims reflect only what each vendor explicitly states on its own security/trust page: Pulley (SOC 2 Type II + GDPR confirmed at pulley.com/security), Ledgy (SOC 1/SOC 2 Type 2 + ISO 27001 at trust.ledgy.com; GDPR claimed via ledgy.com/legal/gdpr), Cake Equity (ISO 27001:2022 only; no SOC 2/GDPR), Eqvista (no own SOC 2 — relies on AWS infrastructure SOC 2; soc2 set null), Carta (SOC 1/SOC 2/ISO 27001 per audit reports). accessedAt 2026-06-15.",
+  "vendors": [
+    {
+      "slug": "carta",
+      "name": "Carta",
+      "domain": "carta.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Workday",
+        "BambooHR",
+        "Rippling",
+        "Gusto",
+        "ADP",
+        "Merge (150+ HRIS)",
+        "DocuSign"
+      ],
+      "provenance": "Carta's official pricing page (carta.com/plans/equity-management/) and security page returned HTTP 403. Launch free-tier limits sourced from carta.com/equity-management/launch/ and corroborated by web search and justpricing.com. Paid plans Build/Grow/Scale are per-stakeholder with a minimum annual fee but Carta publishes no official prices; monthlyUsd left null (third-party estimates conflict and are not authoritative).",
+      "plans": [
+        {
+          "name": "Launch",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free forever for companies with up to 25 stakeholders and up to $1M raised. Includes cap table management, electronic securities issuance, stock exercises, ISO management, 83(b) filing, SAFE modeling, investor dashboard, HRIS integration.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://carta.com/equity-management/launch/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Build",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "No official published price — per-stakeholder with minimum annual fee; demo/quote required. Up to ~50 stakeholders. Adds white-glove onboarding, priced round modeling, deal closings. Third-party estimates conflict ($2,800-$5,988/yr) and are not authoritative.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://justpricing.com/carta-pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Grow",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "No official published price — demo/quote required. Adds board meeting management, Form 3921 filing, bundled 409A valuations and audit support.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://justpricing.com/carta-pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Scale",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "No official published price — demo/quote required. Adds ASC 718/GAAP reporting, IFRS reporting, Rule 701, exit modeling, IPO advisory, SSO for admins.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://justpricing.com/carta-pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://carta.com/security/cap-table-data/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "150+ HRIS via Merge",
+          "DocuSign",
+          "Workday",
+          "BambooHR",
+          "Rippling",
+          "ADP",
+          "Gusto"
+        ],
+        "limits": [
+          "Launch plan: max 25 stakeholders, max $1M raised",
+          "Build/Grow/Scale: no official published price (per-stakeholder + minimum annual fee, quote required)"
+        ],
+        "keyFeatures": [
+          "Largest cap table network (50,000+ companies)",
+          "409A valuations",
+          "ASC 718 / IFRS reporting",
+          "IPO advisory and exit modeling"
+        ],
+        "bestFor": [
+          "seed-stage startups",
+          "VC-backed growth companies",
+          "pre-IPO companies"
+        ],
+        "sources": [
+          {
+            "url": "https://carta.com/equity-management/launch/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://justpricing.com/carta-pricing",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Launch free-tier details from carta.com/equity-management/launch/ (corroborated by web search and justpricing.com after official pricing/security pages returned 403). SOC 2 noted from Carta security page (403; confirmed via web search citing SOC 1, SOC 2, ISO 27001 audits). Paid-plan prices not officially published; left null."
+      }
+    },
+    {
+      "slug": "pulley",
+      "name": "Pulley",
+      "domain": "pulley.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "BambooHR",
+        "HiBob",
+        "Gusto",
+        "Rippling",
+        "Workday",
+        "Justworks",
+        "Paychex",
+        "Paylocity",
+        "QuickBooks Payroll",
+        "ADP",
+        "Zenefits",
+        "Personio",
+        "Stripe",
+        "Plaid",
+        "Clerky",
+        "Nasdaq Private Market"
+      ],
+      "provenance": "Pricing re-verified directly from pulley.com/pricing on 2026-06-15 (Startup $1,200/yr, Growth $3,500/yr, Enterprise custom — all confirmed exactly). Live page also lists separate crypto plans (Token Cap Table $4,500/yr, Token Distributions $4,500/yr) and Valuations from $10,000 each, which are captured as features here. Integrations from pulley.com/blog-posts/pulley-integration.",
+      "plans": [
+        {
+          "name": "Startup",
+          "monthlyUsd": 100,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Billed annually at $1,200/year ($100/mo equivalent). Includes first 25 stakeholders. Cap table management, share certificates, templated SAFE/Option/RSA agreements, fundraise modeler, interactive offer letters, communications hub, concierge onboarding.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://pulley.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Growth",
+          "monthlyUsd": 292,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Billed annually at $3,500/year ($292/mo equivalent). Includes first 40 stakeholders. Everything in Startup plus 409A valuations, custom agreement signing, option exercises, Rule 701, Form 3921, board approvals, HRIS integrations.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://pulley.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing. Everything in Growth plus ASC 718 stock-based compensation reporting, custom reporting, managed equity administration, secondary liquidity solutions.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://pulley.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://pulley.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "BambooHR",
+          "HiBob",
+          "Gusto",
+          "Rippling",
+          "Workday",
+          "ADP",
+          "Stripe",
+          "Plaid",
+          "Nasdaq Private Market",
+          "Clerky"
+        ],
+        "limits": [
+          "Startup: max 25 stakeholders",
+          "Growth: max 40 stakeholders",
+          "No forever-free tier (free trial only offered for switching from Carta)"
+        ],
+        "keyFeatures": [
+          "409A valuations bundled in Growth tier",
+          "Crypto token cap table & distributions ($4,500/yr each)",
+          "HRIS auto-sync for terminations",
+          "Concierge onboarding on all plans"
+        ],
+        "bestFor": [
+          "early-stage startups",
+          "crypto/token companies",
+          "Series A-B companies"
+        ],
+        "sources": [
+          {
+            "url": "https://pulley.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://pulley.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing and compliance re-verified directly from pulley.com/pricing and pulley.com/security on 2026-06-15. SOC 2 Type II and GDPR explicitly stated on security page."
+      }
+    },
+    {
+      "slug": "ledgy",
+      "name": "Ledgy",
+      "domain": "ledgy.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "BambooHR",
+        "Personio",
+        "HiBob",
+        "Humaans",
+        "Lucca",
+        "CharlieHR",
+        "Workday",
+        "Deel",
+        "DocuSign",
+        "Skribble",
+        "Okta",
+        "Azure AD"
+      ],
+      "provenance": "Pricing re-verified directly from ledgy.com/company-pricing on 2026-06-15 (Launch free up to 50 stakeholders, Scale starts at €4k/year, Enterprise custom — confirmed). Compliance verified at trust.ledgy.com (SOC 1 Type 2, SOC 2 Type 2, ISO 27001). GDPR compliance claimed via ledgy.com/legal/gdpr.",
+      "plans": [
+        {
+          "name": "Launch",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free forever for up to 50 stakeholders. Includes cap table management, equity plan automation, employee dashboards, employee equity scenarios, self-serve support.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://ledgy.com/company-pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Scale",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Starts at €4,000/year (USD equivalent not officially published, so monthlyUsd null). 50+ stakeholders. Adds 70+ HRIS integrations, DocuSign, onboarding automation, vesting tranche builder, document templating, investor dashboard, custom reporting, UK Companies House reporting. 50% first-year discount for startups with under €2M raised. Financial reporting add-ons priced separately (Essentials from €3k/yr, Advanced from €5k/yr).",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://ledgy.com/company-pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing. 200+ stakeholders. Adds GraphQL API, dividend workflows, SAML SSO, SCIM provisioning, 2FA enforcement, document auditor, IPO readiness assessment, dedicated implementation team.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://ledgy.com/company-pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://trust.ledgy.com/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "70+ HRIS (BambooHR, Personio, HiBob, Workday, Deel)",
+          "DocuSign",
+          "Skribble",
+          "Okta",
+          "Azure AD"
+        ],
+        "limits": [
+          "Launch plan: max 50 stakeholders",
+          "Scale plan: 50+ stakeholders",
+          "Scale/Enterprise USD prices not officially published (EUR only)"
+        ],
+        "keyFeatures": [
+          "EU/Swiss data residency (GDPR-native)",
+          "70+ HRIS integrations on paid tier",
+          "GraphQL API on Enterprise",
+          "Financial reporting add-ons (IFRS 2, ASC 718)"
+        ],
+        "bestFor": [
+          "European startups",
+          "Series A-D companies",
+          "companies with large employee equity programs"
+        ],
+        "sources": [
+          {
+            "url": "https://ledgy.com/company-pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://trust.ledgy.com/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://ledgy.com/legal/gdpr",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing re-verified from ledgy.com/company-pricing; SOC 1 Type 2, SOC 2 Type 2 and ISO 27001 verified at trust.ledgy.com; GDPR compliance via ledgy.com/legal/gdpr."
+      }
+    },
+    {
+      "slug": "capboard",
+      "name": "Capboard",
+      "domain": "capboard.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "Pricing re-verified from capboard.io/en/capboard-new-pricing-dec-2024 on 2026-06-15 ($2/stakeholder/mo annual, $4/mo monthly, $360/yr and $60/mo minimums, 14-day free trial — all confirmed). The live /en/pricing/ page did not render pricing in the fetch; the announcement page provides complete details.",
+      "plans": [
+        {
+          "name": "Stakeholder Plan",
+          "monthlyUsd": 2,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 50,
+          "billingModel": "per_seat",
+          "notes": "$2/stakeholder/month billed annually (minimum $360/year covering up to 15 stakeholders). Monthly billing is $4/stakeholder/month with a $60/month minimum. All Capboard features included with no usage limits; dedicated Customer Success Team access included.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.capboard.io/en/capboard-new-pricing-dec-2024",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Custom / Growth",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing for larger cap tables. Rates maintained from prior contract per the December 2024 announcement.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.capboard.io/en/capboard-new-pricing-dec-2024",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": 14,
+        "keyIntegrations": [],
+        "limits": [
+          "Minimum $360/year (annual) or $60/month (monthly) regardless of stakeholder count",
+          "Custom pricing above a certain stakeholder threshold"
+        ],
+        "keyFeatures": [
+          "Per-stakeholder pricing (most transparent model)",
+          "All features included at every tier — no feature gating",
+          "Dedicated Customer Success on all plans",
+          "Cap table by share class, PTEP management, reverse splits"
+        ],
+        "bestFor": [
+          "budget-conscious startups",
+          "small to mid-size cap tables",
+          "European startups"
+        ],
+        "sources": [
+          {
+            "url": "https://www.capboard.io/en/capboard-new-pricing-dec-2024",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.capboard.io/en/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing re-verified from the official Capboard pricing announcement page (capboard.io/en/capboard-new-pricing-dec-2024), effective December 1, 2024. 14-day free trial confirmed; no forever-free tier."
+      }
+    },
+    {
+      "slug": "cake-equity",
+      "name": "Cake Equity",
+      "domain": "cakeequity.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "Pricing re-verified directly from cakeequity.com/pricing on 2026-06-15 (Free 5 stakeholders, Build $1,000/yr, Team $2,750/yr, Pro custom — all confirmed). Security data from cakeequity.com/security: ISO/IEC 27001:2022 certified and SecurityScorecard A grade; SOC 2 and GDPR NOT claimed. cakeequity.com/integrations returned 404.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free forever. Up to 5 stakeholders. Includes cap table, stock options, SAFE notes. No credit card required.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.cakeequity.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Build",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "$1,000/year billed annually (or $100/mo on quarterly billing; 10% saving annual vs quarterly). Up to 25 stakeholders; $1 per additional stakeholder/month. Includes cap table, SAFEs, convertible notes, founder vesting, templated option grants, board approval flow, equity benchmarking, fundraise modeling, integrated e-signing, shareholder portal.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.cakeequity.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Team",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$2,750/year, annual billing only. Up to 40 stakeholders; $5 per additional stakeholder/month. Includes everything in Build plus 2x 409A valuations per year, incentive plans (ISO, NSO, RSU, RSA), full contract editor, legal templates, option exercising, warrants, employee portal, free basic migration.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.cakeequity.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing, demo required. All Team features plus ESS reporting, ASC 718, Form 3921, international options pools, bare trusts, point-in-time reporting, 2FA, managed migration, priority support.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.cakeequity.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": {
+            "url": "https://www.cakeequity.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [],
+        "limits": [
+          "Free: max 5 stakeholders",
+          "Build: max 25 stakeholders included ($1/additional/mo)",
+          "Team: max 40 stakeholders included ($5/additional/mo)"
+        ],
+        "keyFeatures": [
+          "409A valuations bundled in Team tier ($1,500 add-on otherwise)",
+          "ISO 27001:2022 certified (security)",
+          "Australian-founded, strong APAC support",
+          "Bare trusts and ESS reporting for international plans"
+        ],
+        "bestFor": [
+          "early-stage startups",
+          "APAC companies",
+          "teams needing bundled 409A"
+        ],
+        "sources": [
+          {
+            "url": "https://www.cakeequity.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.cakeequity.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing re-verified from cakeequity.com/pricing. Security page (cakeequity.com/security) discloses ISO/IEC 27001:2022 certification and a SecurityScorecard A grade but does NOT claim SOC 2 or GDPR, so soc2/gdpr left null."
+      }
+    },
+    {
+      "slug": "eqvista",
+      "name": "Eqvista",
+      "domain": "eqvista.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Stripe"
+      ],
+      "provenance": "Pricing re-verified directly from eqvista.com/pricing/ on 2026-06-15 (Freemium <20 stakeholders, Premium $2/stakeholder/mo, 409A bundles $990/$1,290/$1,990/$2,590/custom — all confirmed). Security policy at eqvista.com/security-policy/ references only AWS infrastructure SOC 2; Eqvista does NOT claim its own SOC 2, so soc2 left null.",
+      "plans": [
+        {
+          "name": "Freemium",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free forever for companies with fewer than 20 stakeholders. Includes cap table and ESOP management, vesting schedules, stakeholder accounts, data room. No credit card required.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://eqvista.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Premium Cap Table",
+          "monthlyUsd": 2,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$2/stakeholder/month. Custom pricing for 50+ stakeholders. Adds e-signing, SAFE agreements, board resolutions, voting, Rule 701, Form 3921, waterfall modeling, funding round modeling, spreadsheet import.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://eqvista.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "409A + Premium Bundle (Startup)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$990/year for pre-revenue startups. Bundles unlimited 409A valuation updates and renewals with Premium Cap Table. Tiered by stage: Friends & Family/Angel $1,290/yr, Seed $1,990/yr, Series A $2,590/yr, Series B+ custom. Includes white-glove migration. (Annualized; monthlyUsd null because it is a flat annual bundle, not a monthly subscription.)",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://eqvista.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": {
+            "url": "https://eqvista.com/security-policy/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Stripe"
+        ],
+        "limits": [
+          "Freemium: max 20 stakeholders",
+          "Premium: custom pricing above 50 stakeholders"
+        ],
+        "keyFeatures": [
+          "SEC-registered Transfer Agent",
+          "Bundled 409A valuations by stage/price",
+          "Waterfall and funding round modeling",
+          "Freemium tier for very early-stage companies"
+        ],
+        "bestFor": [
+          "pre-seed and seed startups",
+          "companies needing affordable 409A bundles",
+          "companies with fewer than 20 stakeholders"
+        ],
+        "sources": [
+          {
+            "url": "https://eqvista.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://eqvista.com/security-policy/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing re-verified from eqvista.com/pricing/. Security policy at eqvista.com/security-policy/ confirms AWS infrastructure (SOC 2) and Stripe (PCI) but Eqvista does not claim its own SOC 2; soc2 left null."
+      }
+    },
+    {
+      "slug": "vestd",
+      "name": "Vestd",
+      "domain": "vestd.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Companies House",
+        "HRIS (50+ via integration layer)",
+        "HMRC"
+      ],
+      "provenance": "Pricing re-verified directly from vestd.com/pricing/ on 2026-06-15 (Self-Serve from £2,200/yr existing-customers-only, Guided from £4,200/yr, Full Service custom — all confirmed). UK-only platform; prices published in GBP only, USD equivalents not officially stated so monthlyUsd null throughout. ISO 27001, FCA-authorised and B-Corp certifications confirmed via vestd.com/blog and vestd.com/features.",
+      "plans": [
+        {
+          "name": "Self-Serve",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "From £2,200/year or £220/month (GBP only, USD not published). Available to existing customers only. Share schemes for up to 5 recipients. EMI, growth shares, unapproved options. 12-month minimum term. VAT charged separately.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.vestd.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Guided",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "From £4,200/year or £420/month (GBP only, USD not published). Most popular plan. All share schemes (EMI, CSOP, growth shares, phantom shares), unlimited valuations, new share classes, live HMRC submission support, scheme setup support. 12-month minimum term. Annual billing gives 2 months free. VAT charged separately.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.vestd.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Full Service",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing. Full hands-off managed service with dedicated account manager, scheme design and implementation, team briefing, and live HMRC submission support.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.vestd.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": {
+            "url": "https://www.vestd.com/features",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Companies House (two-way, real-time)",
+          "HMRC (live submission)",
+          "50+ HRIS"
+        ],
+        "limits": [
+          "Self-Serve limited to 5 recipients (existing customers only)",
+          "All plans have 12-month minimum term",
+          "VAT charged separately; prices GBP-only"
+        ],
+        "keyFeatures": [
+          "Only UK platform with full two-way Companies House integration",
+          "FCA-authorised and regulated",
+          "Live HMRC submission support on all plans",
+          "ISO 27001 and B-Corp certified"
+        ],
+        "bestFor": [
+          "UK startups and SMEs",
+          "companies issuing EMI or CSOP schemes",
+          "companies needing HMRC compliance support"
+        ],
+        "sources": [
+          {
+            "url": "https://www.vestd.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.vestd.com/features",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing re-verified from vestd.com/pricing/; ISO 27001, FCA-authorised and B-Corp certifications confirmed via vestd.com (blog + features). Vestd is UK-only; all prices GBP and monthlyUsd null throughout."
+      }
+    }
+  ]
+}

@@ -1,0 +1,813 @@
+{
+  "vertical": "reverse-etl",
+  "generatedAt": "2026-06-15",
+  "methodologyNotes": "Re-verified adversarially via direct WebFetch on each vendor's official pricing page (hightouch.com/pricing, rudderstack.com/pricing, fivetran.com/pricing, polytomic.com/pricing, omnata.com/pricing/sync-for-snowflake, skyvia.com/pricing) plus each vendor's security page for compliance. All paid-plan monthlyUsd values were confirmed against published prices; quote-only/usage-based tiers are recorded as monthlyUsd:null with billingModel custom (a null beats a guess). KEY CORRECTIONS vs the draft: (1) Polytomic's 'Basic $500/month flat' plan was FABRICATED — the page publishes only 'Pricing begins at $500/month' as a floor, and the real tiers (Standard, Enterprise) are both contact-sales; replaced with a null-priced Standard tier. (2) Skyvia Basic additional-records overage corrected from $0.06/1K (which is the Free-tier rate) to $0.02/1K. Census (getcensus.com -> 301 fivetran.com) was acquired by Fivetran (announced May 1, 2025) and is sold as Fivetran Activations; Grouparoo (acquired by Airbyte, 2022) excluded. No vendors removed (both already excluded by writer). accessedAt 2026-06-15.",
+  "vendors": [
+    {
+      "slug": "hightouch",
+      "name": "Hightouch",
+      "domain": "hightouch.com",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Salesforce",
+        "HubSpot",
+        "Marketo",
+        "Google Ads",
+        "Facebook Ads",
+        "Snowflake",
+        "BigQuery",
+        "Redshift",
+        "Databricks",
+        "Intercom",
+        "Zendesk",
+        "Braze",
+        "Klaviyo",
+        "Amplitude",
+        "Iterable"
+      ],
+      "provenance": "Re-fetched hightouch.com/pricing on 2026-06-15. The page publishes NO dollar prices for paid plans — only a forever-free 'Basic Reverse ETL' tier (2 active syncs) and usage-based pricing ('Flexible and scalable usage based pricing', 'Only pay for what you use') for Composable CDP and Agentic Marketing Platform, all gated behind 'Get a demo'. The third-party 'Growth $1,000/month' figure (costbench-style) is NOT on Hightouch's official page, so it remains monthlyUsd:null. Compliance (ISO 27001, SOC 2 & SOC 3, HIPAA, GDPR) confirmed on the pricing page.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Basic Reverse ETL only: up to 2 active syncs, unlimited destination count, unlimited user seats. Forever-free.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://hightouch.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Growth",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Usage-based pricing; no public dollar price on the vendor's official page (the $1,000/month figure is third-party only). Increased sync limits, priority support. Contact sales for quote.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://hightouch.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom contract. All products (Reverse ETL, Customer Studio, AI Decisioning, Identity Resolution), unlimited syncs, enterprise security (ISO 27001, SOC 2/3, HIPAA, GDPR), dedicated support, custom SLAs, BAA/DPA available.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://hightouch.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://hightouch.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Salesforce",
+          "HubSpot",
+          "Snowflake",
+          "BigQuery",
+          "Redshift",
+          "Braze",
+          "Klaviyo",
+          "Google Ads",
+          "Facebook Ads",
+          "Databricks"
+        ],
+        "limits": [
+          "Free plan: 2 active syncs only",
+          "No public dollar price on paid tiers — usage-based / contact sales",
+          "No caps on sources, destinations, or user seats on paid tiers"
+        ],
+        "keyFeatures": [
+          "Composable CDP with a la carte product mix",
+          "AI Decisioning and Agentic Marketing Platform",
+          "Identity Resolution and Match Booster",
+          "Warehouse-native real-time personalization"
+        ],
+        "bestFor": [
+          "enterprise marketing teams",
+          "composable CDP",
+          "AI-driven data activation",
+          "warehouse-native personalization"
+        ],
+        "sources": [
+          {
+            "url": "https://hightouch.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Compliance (ISO 27001, SOC 2 & SOC 3, HIPAA, GDPR) confirmed on hightouch.com/pricing. No public dollar prices for paid plans confirmed after direct fetch on 2026-06-15."
+      }
+    },
+    {
+      "slug": "fivetran-activations",
+      "name": "Fivetran Activations (formerly Census)",
+      "domain": "fivetran.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Salesforce",
+        "HubSpot",
+        "Marketo",
+        "Snowflake",
+        "BigQuery",
+        "Redshift",
+        "Databricks",
+        "Google Ads",
+        "Facebook Ads",
+        "Klaviyo",
+        "Intercom",
+        "Zendesk",
+        "Braze",
+        "Amplitude"
+      ],
+      "provenance": "Census (getcensus.com) returns HTTP 301 -> fivetran.com, confirming acquisition (announced May 1, 2025, per Fivetran press release + TechCrunch) and rebranding as Fivetran Activations. Pricing re-fetched from fivetran.com/pricing on 2026-06-15: usage-based on Monthly Active Rows (MAR), four tiers (Free, Standard, Enterprise, Business Critical), no flat plan prices, annual contracts save up to 22%. Forever-free tier confirmed (500K MAR connections / 3,500 MAR activations / 5,000 model runs, no credit card). Compliance not extracted from the pricing page; left null.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Forever-free: up to 3,500 MAR for activations/month, 500,000 MAR for connections, 5,000 monthly model runs for transformations. No credit card required.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.fivetran.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Standard",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 22,
+          "billingModel": "custom",
+          "notes": "Usage-based MAR pricing; no flat monthly fee. Activations (reverse ETL) priced on a separate MAR cost curve. 200+ activation destinations. Annual contract saves up to 22%. Connections carry a $5 base charge per paid connection (1-1M MAR).",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.fivetran.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "All Standard features plus Audience Hub for activations, 1-minute syncs, VPN tunnels, multi-cloud provider selection, hybrid deployment. Annual contract.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.fivetran.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Business Critical",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "All Enterprise features plus customer-managed encryption keys, PCI DSS Level 1, private networking. Contact sales.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.fivetran.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Salesforce",
+          "HubSpot",
+          "Snowflake",
+          "BigQuery",
+          "Redshift",
+          "Databricks",
+          "Google Ads",
+          "Facebook Ads",
+          "Klaviyo"
+        ],
+        "limits": [
+          "Free: 3,500 MAR activations/month (forever-free)",
+          "Standard: MAR-based consumption billing, no flat cap",
+          "14-day free trial on the account, plus 14 days free per new connection"
+        ],
+        "keyFeatures": [
+          "Unified ETL + reverse ETL on one platform",
+          "MAR-based consumption pricing",
+          "200+ activation destinations via former Census technology",
+          "Audience Hub for segment-based activation on Enterprise"
+        ],
+        "bestFor": [
+          "teams already on Fivetran",
+          "end-to-end data movement",
+          "warehouse-to-CRM activation",
+          "unified billing for ETL and reverse ETL"
+        ],
+        "sources": [
+          {
+            "url": "https://www.fivetran.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.fivetran.com/press/fivetran-signs-agreement-to-acquire-census-delivering-the-first-end-to-end-data-movement-platform-for-the-ai-era",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing re-fetched from fivetran.com/pricing 2026-06-15. Census acquisition confirmed via Fivetran press release (May 1, 2025) and getcensus.com 301 redirect to fivetran.com. Compliance not extracted from the pricing page, set null per the explicit-statement rule."
+      }
+    },
+    {
+      "slug": "rudderstack",
+      "name": "RudderStack",
+      "domain": "rudderstack.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Snowflake",
+        "BigQuery",
+        "Redshift",
+        "Databricks",
+        "Salesforce",
+        "HubSpot",
+        "Marketo",
+        "Amplitude",
+        "Braze",
+        "Klaviyo",
+        "Intercom",
+        "Google Ads",
+        "Facebook Ads",
+        "Segment"
+      ],
+      "provenance": "Re-fetched rudderstack.com/pricing on 2026-06-15. Free = $0 / 250K events/month (free forever). Growth = $265/month starting (1M events/month), 'Most popular', 30-day free trial, save 15% with annual billing. Enterprise = custom/contact sales. Compliance (SOC 2 Type 2, HIPAA with BAA, GDPR) confirmed on rudderstack.com/security.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free forever: 250,000 events/month, 16 SDK sources, 200+ cloud destinations, Reverse ETL included, warehouse destinations, up to 10 team members, 1 tracking plan (5 events), community Slack support.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://rudderstack.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Growth",
+          "monthlyUsd": 265,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 15,
+          "billingModel": "flat",
+          "notes": "Starts at $265/month for 1M events/month; scales to 25M events/month self-serve (above 25M requires sales). Unlimited team members, unlimited tracking plans, 30-minute warehouse sync, 25 Reverse ETL connections. 30-day free trial. Save 15% with annual billing.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://rudderstack.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing. 5-minute warehouse sync, unlimited transformations, Profiles and Data Apps, HIPAA compliance with BAA, SSO, dedicated account manager.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://rudderstack.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://rudderstack.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": 30,
+        "keyIntegrations": [
+          "Snowflake",
+          "BigQuery",
+          "Redshift",
+          "Salesforce",
+          "HubSpot",
+          "Amplitude",
+          "Braze",
+          "Google Ads",
+          "Facebook Ads"
+        ],
+        "limits": [
+          "Free: 250K events/month, 10 team members, 1 tracking plan",
+          "Growth: starts at 1M events/month, 25 Reverse ETL connections",
+          "Self-serve up to 25M events/month; above that requires sales"
+        ],
+        "keyFeatures": [
+          "Warehouse-first, developer-centric architecture",
+          "Reverse ETL included on all plans",
+          "Open-source SDK with self-hosted option",
+          "Event streaming + reverse ETL + data governance in one platform"
+        ],
+        "bestFor": [
+          "developer teams",
+          "event streaming + reverse ETL",
+          "warehouse-native data activation",
+          "HIPAA-compliant pipelines"
+        ],
+        "sources": [
+          {
+            "url": "https://rudderstack.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://rudderstack.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing and compliance re-fetched from rudderstack.com/pricing and rudderstack.com/security 2026-06-15. Growth $265/month and 15% annual discount confirmed on official page. SOC 2 Type 2, HIPAA (can sign a BAA), GDPR confirmed on security page."
+      }
+    },
+    {
+      "slug": "polytomic",
+      "name": "Polytomic",
+      "domain": "polytomic.com",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Snowflake",
+        "BigQuery",
+        "Redshift",
+        "Databricks",
+        "Salesforce",
+        "HubSpot",
+        "Marketo",
+        "Klaviyo",
+        "Intercom",
+        "Zendesk",
+        "Stripe",
+        "NetSuite",
+        "Google Sheets",
+        "Airtable",
+        "PostgreSQL",
+        "MySQL",
+        "MongoDB"
+      ],
+      "provenance": "Re-fetched polytomic.com/pricing on 2026-06-15. CORRECTION: the draft's self-serve 'Basic $500/month flat' plan does NOT exist. The page publishes only 'Pricing begins at $500/month' as a floor, and the two named tiers (Standard, Enterprise) are BOTH contact-sales ('Book call' / 'Let's chat') with no purchasable online price. No free tier. Compliance (SOC 2 Type II, GDPR, HIPAA, CCPA) confirmed on polytomic.com/security; no BAA explicitly stated.",
+      "plans": [
+        {
+          "name": "Standard",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Contact sales ('Book call'). Pricing begins at $500/month (published floor, not a self-serve price). Syncs to/from databases, warehouses, spreadsheets, apps, and APIs; live chat support.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.polytomic.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Contact sales. Everything in Standard plus on-premises deployment, SSO, dedicated engineer, phone support.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.polytomic.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.polytomic.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Snowflake",
+          "BigQuery",
+          "Redshift",
+          "Salesforce",
+          "HubSpot",
+          "Marketo",
+          "Intercom",
+          "Zendesk",
+          "Stripe",
+          "NetSuite",
+          "PostgreSQL",
+          "MongoDB"
+        ],
+        "limits": [
+          "No free tier",
+          "Pricing begins at $500/month (floor only; no self-serve plan — all tiers contact-sales)",
+          "On-prem deployment Enterprise only"
+        ],
+        "keyFeatures": [
+          "Bidirectional sync (ETL + reverse ETL in one tool)",
+          "150+ native connectors across databases, warehouses, and SaaS",
+          "On-premises deployment option for Enterprise",
+          "No-code and API-driven sync configuration"
+        ],
+        "bestFor": [
+          "ops teams needing bidirectional sync",
+          "on-premises compliance requirements",
+          "RevOps and sales data activation",
+          "mid-market to enterprise"
+        ],
+        "sources": [
+          {
+            "url": "https://www.polytomic.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.polytomic.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing re-fetched from polytomic.com/pricing 2026-06-15 — only a '$500/month' floor is published; both Standard and Enterprise are contact-sales, so the draft's flat-priced 'Basic' plan was removed. Compliance (SOC 2 Type II, GDPR, HIPAA, CCPA) confirmed on polytomic.com/security; no BAA stated, so baa kept null."
+      }
+    },
+    {
+      "slug": "omnata",
+      "name": "Omnata",
+      "domain": "omnata.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Salesforce CRM",
+        "Salesforce Marketing Cloud",
+        "HubSpot",
+        "Marketo",
+        "Shopify",
+        "Xero",
+        "Zendesk",
+        "Jira",
+        "Confluence",
+        "Google Ads",
+        "LinkedIn Ads",
+        "Meta Ads",
+        "Bing Ads",
+        "Airtable",
+        "Google Sheets",
+        "Slack",
+        "GitHub",
+        "PostgreSQL",
+        "MySQL",
+        "Microsoft SQL Server"
+      ],
+      "provenance": "Re-fetched omnata.com/pricing/sync-for-snowflake on 2026-06-15. Omnata is a Snowflake Native App billed per-plugin per-day (flat fee per active sync-direction, billed monthly by Snowflake); no traditional monthly subscription tiers. Verified sample rates: HubSpot/Salesforce CRM $6.50/day initial + $3.00/day additional direction; Marketo $10/day; Microsoft SQL Server from $14/day; MySQL/PostgreSQL from $10/day. Google Sheets and Slack plugins are $0/day. No compliance certifications explicitly stated on the fetched page; left null.",
+      "plans": [
+        {
+          "name": "Free Plugins",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Google Sheets and Slack plugins are $0.00/day with unlimited syncs and connections. The Sync Engine itself has no base listing charge.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://omnata.com/pricing/sync-for-snowflake",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Pay-per-use Plugins (SaaS)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Charged per plugin per active sync-direction per day, billed monthly by Snowflake. Verified rates: HubSpot/Salesforce CRM $6.50/day initial + $3.00/day additional direction; Marketo $10/day initial + $5/day additional. No data-volume or object-count charges. Snowflake Marketplace Capacity Drawdown accepted.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://omnata.com/pricing/sync-for-snowflake",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Pay-per-use Plugins (Databases)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "MySQL/PostgreSQL from $10/day per instance; Microsoft SQL Server from $14/day. No monthly caps or overages.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://omnata.com/pricing/sync-for-snowflake",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Salesforce CRM",
+          "Salesforce Marketing Cloud",
+          "HubSpot",
+          "Marketo",
+          "Shopify",
+          "Xero",
+          "Zendesk",
+          "Google Sheets",
+          "Slack",
+          "PostgreSQL",
+          "MySQL"
+        ],
+        "limits": [
+          "Snowflake-only — requires an existing Snowflake account",
+          "Billed through Snowflake Marketplace, not direct invoice",
+          "No traditional monthly plan; costs accumulate daily per active plugin"
+        ],
+        "keyFeatures": [
+          "Snowflake Native App — data never leaves your Snowflake boundary",
+          "No middleware or external compute; runs inside Snowflake",
+          "Daily flat-fee per plugin with no data-volume charges",
+          "40+ connectors billed individually"
+        ],
+        "bestFor": [
+          "Snowflake-centric teams",
+          "strict data residency requirements",
+          "teams wanting no external SaaS middleware",
+          "Snowflake Marketplace billing consolidation"
+        ],
+        "sources": [
+          {
+            "url": "https://omnata.com/pricing/sync-for-snowflake",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "All pricing re-fetched from omnata.com/pricing/sync-for-snowflake 2026-06-15; per-plugin daily rates verified. No explicit SOC2/HIPAA/GDPR certifications on the fetched page; compliance fields set null rather than guessed."
+      }
+    },
+    {
+      "slug": "skyvia",
+      "name": "Skyvia",
+      "domain": "skyvia.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Salesforce",
+        "HubSpot",
+        "Dynamics 365",
+        "Marketo",
+        "Intercom",
+        "Zendesk",
+        "Shopify",
+        "BigQuery",
+        "Snowflake",
+        "Redshift",
+        "PostgreSQL",
+        "MySQL",
+        "SQL Server",
+        "Google Sheets",
+        "Airtable",
+        "Stripe",
+        "Xero",
+        "QuickBooks",
+        "Outreach",
+        "Close"
+      ],
+      "provenance": "Re-fetched skyvia.com/pricing on 2026-06-15. Prices are for the Data Integration module (covers reverse ETL): Free $0, Basic $99.79/mo ($79/mo annual), Standard $199/mo ($159/mo annual), Professional $499/mo ($399/mo annual), Enterprise custom. 20% annual discount confirmed across paid tiers. CORRECTION: Basic additional-records overage is $0.02/1K (the draft's $0.06/1K is actually the FREE-tier rate). Compliance (SOC 2 certified, HIPAA with BAA, GDPR) confirmed on skyvia.com/security.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Data Integration: 10,000 records/month, once-daily scheduling, 2 scheduled integrations (30-day expiration), basic scenarios, simple mapping. Additional records: $0.06 per 1K.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://skyvia.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Basic",
+          "monthlyUsd": 99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "Data Integration: once-daily scheduling, 5 scheduled integrations, basic scenarios, simple mapping. $99.79/month billed monthly; $79/month billed annually (20% discount). Additional records: $0.02 per 1K (corrected from the draft's $0.06).",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://skyvia.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Standard",
+          "monthlyUsd": 199,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "Data Integration: once-hourly scheduling, 50 scheduled integrations, basic scenarios, advanced mapping. $199/month billed monthly; $159/month billed annually (20% discount). Additional records: $0.02 per 1K.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://skyvia.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Professional",
+          "monthlyUsd": 499,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "Data Integration: once-per-minute scheduling, unlimited scheduled integrations, advanced scenarios, advanced mapping. $499/month billed monthly; $399/month billed annually (20% discount).",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://skyvia.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Tailor-made offer; contact sales. Custom volume, SLAs, and support.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://skyvia.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://skyvia.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Salesforce",
+          "HubSpot",
+          "Dynamics 365",
+          "Marketo",
+          "BigQuery",
+          "Snowflake",
+          "PostgreSQL",
+          "MySQL",
+          "Shopify",
+          "Xero",
+          "QuickBooks",
+          "Google Sheets"
+        ],
+        "limits": [
+          "Free: 10K records/month, 2 integrations, daily scheduling only",
+          "Basic: 5 integrations, daily scheduling",
+          "Standard: 50 integrations, hourly scheduling",
+          "Professional: unlimited integrations, per-minute scheduling"
+        ],
+        "keyFeatures": [
+          "Multi-module platform: ETL, reverse ETL, backup, query, automation",
+          "200+ connectors with bidirectional sync",
+          "No-code visual data mapping with advanced transformation",
+          "Per-minute scheduling on Professional tier"
+        ],
+        "bestFor": [
+          "SMBs needing affordable reverse ETL",
+          "no-code data sync",
+          "Salesforce and CRM data activation",
+          "teams wanting backup + ETL + reverse ETL in one tool"
+        ],
+        "sources": [
+          {
+            "url": "https://skyvia.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://skyvia.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing and compliance re-fetched from skyvia.com/pricing and skyvia.com/security 2026-06-15. Free/Basic/Standard/Professional prices and 20% annual discount confirmed; Basic overage corrected to $0.02/1K. SOC 2 certified, HIPAA with BAA, GDPR confirmed on security page."
+      }
+    }
+  ]
+}

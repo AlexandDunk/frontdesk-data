@@ -1,0 +1,1259 @@
+{
+  "vertical": "crypto-tax-software",
+  "generatedAt": "2026-06-15",
+  "methodologyNotes": "Re-verified 2026-06-15. Directly fetched and confirmed: coinledger.io/pricing, zenledger.io/pricing, blockpit.io/pricing. Koinly, CoinTracker, TokenTax, Summ, and Awaken official pricing pages return HTTP 403 to direct fetch, so pricing was corroborated across multiple independent 2026 review sources and vendor help centers (Koinly help center, milkroad, comparedge, findstack, cryptopotato, cryptoadventure, fortunly, finder, banksforcrypto, bitdegree) and official summ.com blog/snippets. Corrections vs draft: Koinly Trader is 3,000 tx (not 10,000); Koinly's $279 tier is named Pro for 10,000 tx (the draft's 'Oracle'/25,000-tx plan does not exist and was removed). CoinTracker Base is $59/yr (not $29); the draft's Base+ and Prime+ tiers could not be verified on current sources and were removed in favor of the structure shown by comparedge (Base/Prime/Ultra/Ultra+/Full Service). All crypto-tax plans are priced per tax year by transaction-count tier; monthlyUsd holds the published annual plan price as a flat number, billingModel 'flat'. Summ is the exception: limits are cumulative across ALL financial years and the subscription is per calendar year. Blockpit publishes EUR only, so monthlyUsd is null for its paid tiers. accessedAt 2026-06-15.",
+  "vendors": [
+    {
+      "slug": "koinly",
+      "name": "Koinly",
+      "domain": "koinly.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "TurboTax",
+        "TaxAct",
+        "Coinbase",
+        "Binance",
+        "Kraken",
+        "Gemini",
+        "Bybit",
+        "MetaMask",
+        "Ledger",
+        "Trezor"
+      ],
+      "provenance": "koinly.io/pricing direct fetch returned 403. Plan structure confirmed via Koinly help center (support.koinly.io) and multiple 2026 reviews (findstack, cryptoadventure, cryptopotato, innovatehubfinance, milkroad). Confirmed five tiers: Free, Newbie $49/100tx, Hodler $99/1000tx, Trader $179/3000tx, Pro $279/10000tx. The draft's 'Oracle $279/25000tx' plan does not exist (removed); the $279 tier is named Pro and covers 10,000 tx. Trader covers 3,000 tx, not 10,000.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Forever-free portfolio tracking and capital-gains preview; can import and calculate up to 10,000 transactions for preview, but cannot download official tax reports without a paid plan.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://koinly.io/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Newbie",
+          "monthlyUsd": 49,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Per tax year, up to 100 transactions. Includes Form 8949, Schedule D, international tax reports, audit report.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://koinly.io/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://findstack.com/products/koinly/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Hodler",
+          "monthlyUsd": 99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Per tax year, up to 1,000 transactions. All Newbie features included.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://koinly.io/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://findstack.com/products/koinly/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Trader",
+          "monthlyUsd": 179,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Per tax year, up to 3,000 transactions (corrected from draft's 10,000). Adds expert email support. Some 2026 review sources list $199 for this tier; findstack (mirroring the official page) shows $179.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://koinly.io/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://cryptoadventure.com/koinly-review-2026-pricing-transaction-limits-and-tax-report-exports/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 279,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Per tax year, up to 10,000 transactions (corrected: draft called this 'Oracle' at 25,000 tx, which does not exist). Highest self-serve tier; additional transactions purchasable above 10,000.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://koinly.io/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://innovatehubfinance.com/koinly-pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "TurboTax",
+          "TaxAct",
+          "Coinbase",
+          "Binance",
+          "Kraken",
+          "Gemini",
+          "MetaMask",
+          "Ledger",
+          "Trezor"
+        ],
+        "limits": [
+          "Free plan: portfolio + preview only, no downloadable tax reports",
+          "Newbie: 100 tx/tax year",
+          "Hodler: 1,000 tx/tax year",
+          "Trader: 3,000 tx/tax year",
+          "Pro: 10,000 tx/tax year (extras purchasable above)"
+        ],
+        "keyFeatures": [
+          "800+ exchange integrations and broad DeFi protocol coverage",
+          "Per-tax-year pricing by transaction-count tier",
+          "DeFi, NFT, staking, margin trading support across paid tiers",
+          "Five tiers total: Free, Newbie, Hodler, Trader, Pro"
+        ],
+        "bestFor": [
+          "individual crypto investors",
+          "international filers",
+          "DeFi traders",
+          "buy-and-hold investors needing prior-year reports"
+        ],
+        "sources": [
+          {
+            "url": "https://findstack.com/products/koinly/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://cryptoadventure.com/koinly-review-2026-pricing-transaction-limits-and-tax-report-exports/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://innovatehubfinance.com/koinly-pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Direct fetch 403; structure confirmed across help center and multiple 2026 reviews. Draft's 'Oracle' tier removed (fabricated); Trader tx limit corrected to 3,000; $279 tier is named Pro at 10,000 tx."
+      }
+    },
+    {
+      "slug": "cointracker",
+      "name": "CoinTracker",
+      "domain": "cointracker.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "TurboTax",
+        "H&R Block",
+        "Coinbase",
+        "Binance.US",
+        "Kraken",
+        "Gemini",
+        "Crypto.com",
+        "Robinhood",
+        "MetaMask"
+      ],
+      "provenance": "cointracker.io/plans and support articles return 403. Current 2026 structure confirmed via comparedge.com/pricing/cointracker-pricing: Free ($0, ~25 tx tracking), Base $59/100tx, Prime $199/1000tx, Ultra $599/10000tx, Ultra+ $1,999, Full Service $3,499. Draft's Base price of $29 and its Base+/Prime+ tiers reflect an older milkroad table and could not be confirmed on current sources; Base corrected to $59 and unverifiable +tiers removed. Transaction caps for Ultra+ and Full Service are not published consistently and are left unstated.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Portfolio tracking only (up to ~25 transactions); no downloadable tax reports.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.cointracker.io/plans",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Base",
+          "monthlyUsd": 59,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Per tax year, up to 100 transactions. Includes Form 8949, TurboTax export. Billed annually (~$2.42/mo equivalent). Corrected from draft's $29.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.cointracker.io/plans",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://comparedge.com/pricing/cointracker-pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Prime",
+          "monthlyUsd": 199,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Per tax year, up to 1,000 transactions. Includes DeFi support and tax-loss harvesting. Billed annually.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.cointracker.io/plans",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://comparedge.com/pricing/cointracker-pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Ultra",
+          "monthlyUsd": 599,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Per tax year, up to 10,000 transactions. Includes CPA review and margin support. Billed annually.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.cointracker.io/plans",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://comparedge.com/pricing/cointracker-pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Ultra+",
+          "monthlyUsd": 1999,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Per tax year, very high transaction volume. Billed annually. Published transaction cap not consistently stated across sources.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.cointracker.io/plans",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://comparedge.com/pricing/cointracker-pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Full Service",
+          "monthlyUsd": 3499,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Per tax year, full-service/expert-prepared tier. Billed annually. Replaces the structure the draft labeled 'Ultra+ at 250,000 tx'.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.cointracker.io/plans",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://comparedge.com/pricing/cointracker-pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "TurboTax",
+          "H&R Block",
+          "Coinbase",
+          "Binance.US",
+          "Kraken",
+          "Gemini",
+          "Crypto.com",
+          "Robinhood",
+          "MetaMask"
+        ],
+        "limits": [
+          "Free: portfolio tracking only (~25 tx), no tax reports",
+          "Base: 100 tx/tax year",
+          "Prime: 1,000 tx/tax year",
+          "Ultra: 10,000 tx/tax year",
+          "Ultra+ / Full Service: high volume / expert-prepared; caps not consistently published"
+        ],
+        "keyFeatures": [
+          "Official Coinbase partner",
+          "H&R Block and TurboTax direct integrations",
+          "One paid plan covers all prior tax years",
+          "1099-DA import support"
+        ],
+        "bestFor": [
+          "Coinbase users",
+          "US tax filers needing H&R Block integration",
+          "portfolio tracking alongside tax reporting"
+        ],
+        "sources": [
+          {
+            "url": "https://comparedge.com/pricing/cointracker-pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://milkroad.com/reviews/cointracker/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Direct fetch 403. Base corrected $29 to $59 per comparedge 2026; draft's Base+/Prime+ tiers removed as unverifiable on current sources. Medium confidence on exact high-tier transaction caps."
+      }
+    },
+    {
+      "slug": "coinledger",
+      "name": "CoinLedger",
+      "domain": "coinledger.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "TurboTax",
+        "TaxAct",
+        "TaxSlayer",
+        "H&R Block",
+        "Coinbase",
+        "Binance",
+        "Kraken",
+        "Gemini",
+        "MetaMask",
+        "Ledger",
+        "Trezor",
+        "OpenSea"
+      ],
+      "provenance": "Pricing fetched directly from coinledger.io/pricing on 2026-06-15 and confirmed: Free portfolio tracking, Hobbyist $49/100tx, Investor $99/1000tx, Pro $199/3000tx (extras purchasable in-app). One-time purchase per tax year, 14-day money-back guarantee. No SOC 2/GDPR/HIPAA certifications stated on the security page.",
+      "plans": [
+        {
+          "name": "Free (Portfolio Tracking)",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Unlimited portfolio tracking across exchanges and wallets; no tax report generation included. Reports available for tax years 2010-2025.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://coinledger.io/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Hobbyist",
+          "monthlyUsd": 49,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "One-time purchase per tax year (not a subscription), up to 100 transactions. Includes Form 8949, Schedule D, TurboTax export. 14-day money-back guarantee.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://coinledger.io/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Investor",
+          "monthlyUsd": 99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "One-time purchase per tax year, up to 1,000 transactions. All Hobbyist features included.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://coinledger.io/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 199,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "One-time purchase per tax year, up to 3,000 transactions. Additional transactions purchasable in-app. All lower-tier features included.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://coinledger.io/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": {
+            "url": "https://coinledger.io/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "TurboTax",
+          "TaxAct",
+          "TaxSlayer",
+          "H&R Block",
+          "Coinbase",
+          "Binance",
+          "Kraken",
+          "MetaMask",
+          "OpenSea"
+        ],
+        "limits": [
+          "Hobbyist: 100 tx/tax year",
+          "Investor: 1,000 tx/tax year",
+          "Pro: 3,000 tx/tax year (extras purchasable)"
+        ],
+        "keyFeatures": [
+          "One-time per-report pricing (no ongoing subscription)",
+          "1,000+ exchange/blockchain integrations",
+          "14-day money-back guarantee",
+          "DeFi and NFT support on all paid tiers"
+        ],
+        "bestFor": [
+          "occasional filers who don't want subscriptions",
+          "DeFi and NFT traders",
+          "US investors filing via TurboTax or H&R Block"
+        ],
+        "sources": [
+          {
+            "url": "https://coinledger.io/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://coinledger.io/security",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing fetched directly from coinledger.io/pricing on 2026-06-15 and confirmed accurate. No formal compliance certifications found on coinledger.io/security."
+      }
+    },
+    {
+      "slug": "tokentax",
+      "name": "TokenTax",
+      "domain": "tokentax.co",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "TurboTax",
+        "TaxAct",
+        "Coinbase",
+        "Binance",
+        "Kraken",
+        "BitMEX",
+        "MetaMask",
+        "Phantom",
+        "Aave",
+        "Compound"
+      ],
+      "provenance": "tokentax.co/pricing direct fetch returned 403; structure confirmed via milkroad.com/reviews/tokentax and 2026 search corroboration: Basic $65/500tx (Coinbase only), Premium $199/5000tx, Pro $799/20000tx, VIP $3499/30000tx, Enterprise custom. 10% multi-year discount and +20,000-tx add-on for $199 confirmed. Note: some sources (bitdegree) report a lower VIP price (~$2,999) and a VIP & Filing tier at $3,999; $3,499 retained per milkroad.",
+      "plans": [
+        {
+          "name": "Basic",
+          "monthlyUsd": 65,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "Per tax year, up to 500 transactions. Coinbase and Coinbase Pro only. Includes TurboTax and TaxAct export. 10% discount when paying multiple years upfront.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://tokentax.co/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://milkroad.com/reviews/tokentax/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": 199,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "Per tax year, up to 5,000 transactions. All CEX, DeFi, and NFT exchanges. Includes tax-loss harvesting and CSV imports.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://tokentax.co/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://milkroad.com/reviews/tokentax/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 799,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "Per tax year, up to 20,000 transactions. Adds margin/options tax calculations and FBAR reporting.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://tokentax.co/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://milkroad.com/reviews/tokentax/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "VIP",
+          "monthlyUsd": 3499,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "Per tax year, up to 30,000 transactions. Includes priority support and two 30-minute CPA consultations. Additional 20,000 transactions purchasable for $199. Some sources report a lower VIP price (~$2,999) and a separate VIP & Filing tier at $3,999.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://tokentax.co/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://milkroad.com/reviews/tokentax/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing; contact sales. Unlimited transactions; bespoke features built by the TokenTax team.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://tokentax.co/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "TurboTax",
+          "TaxAct",
+          "Coinbase",
+          "Binance",
+          "Kraken",
+          "BitMEX",
+          "MetaMask",
+          "Phantom",
+          "Aave",
+          "Compound"
+        ],
+        "limits": [
+          "Basic: 500 tx/tax year, Coinbase only",
+          "Premium: 5,000 tx/tax year, all exchanges",
+          "Pro: 20,000 tx/tax year",
+          "VIP: 30,000 tx/tax year; +20k tx add-on for $199"
+        ],
+        "keyFeatures": [
+          "Built-in CPA access from the VIP tier",
+          "Handles margin, options, and FBAR reporting",
+          "Multi-year discount (10% off when paying multiple years)",
+          "DeFi and NFT support from Premium tier",
+          "No free tier — must purchase a plan to import data"
+        ],
+        "bestFor": [
+          "high-volume traders",
+          "US investors needing CPA support",
+          "margin and options traders",
+          "investors with complex DeFi history"
+        ],
+        "sources": [
+          {
+            "url": "https://milkroad.com/reviews/tokentax/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.bitdegree.org/crypto/tokentax-review",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Direct fetch 403; pricing confirmed by milkroad and search corroboration. VIP price has source variance ($3,499 vs ~$2,999); $3,499 retained per primary source. No free tier."
+      }
+    },
+    {
+      "slug": "zenledger",
+      "name": "ZenLedger",
+      "domain": "zenledger.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "TurboTax",
+        "TaxAct",
+        "Coinbase",
+        "Binance",
+        "Kraken",
+        "Uniswap",
+        "Crypto.com"
+      ],
+      "provenance": "Pricing fetched directly from zenledger.io/pricing on 2026-06-15 and confirmed: Silver $49/100tx, Gold $199/5000tx, Platinum $399/15000tx, Unlimited add-on +$600 on Platinum ($999 total). No free tier (all DIY plans paid). Optional human-prepared filing $2,800 single-year / $5,200 multi-year; 60-min consult $275; tax filing $30/yr. 30-day money-back guarantee.",
+      "plans": [
+        {
+          "name": "Silver",
+          "monthlyUsd": 49,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Per tax year, up to 100 transactions. Includes DeFi, staking, NFT support, all detailed reports, HIFO/FIFO/LIFO cost basis, TurboTax integration, audit report.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://zenledger.io/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Gold",
+          "monthlyUsd": 199,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Per tax year, up to 5,000 transactions. Most popular plan. All Silver features included.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://zenledger.io/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Platinum",
+          "monthlyUsd": 399,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Per tax year, up to 15,000 transactions. Unlimited-transaction add-on available for +$600 (Unlimited = $999 total). All Gold features included.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://zenledger.io/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "TurboTax",
+          "TaxAct",
+          "Coinbase",
+          "Binance",
+          "Kraken",
+          "Uniswap",
+          "Crypto.com"
+        ],
+        "limits": [
+          "Silver: 100 tx/tax year",
+          "Gold: 5,000 tx/tax year",
+          "Platinum: 15,000 tx/tax year",
+          "Unlimited add-on: +$600 on Platinum ($999 total)"
+        ],
+        "keyFeatures": [
+          "Tax-loss harvesting on all plans",
+          "FinCEN/FBAR alerts",
+          "Optional human-prepared filing service ($2,800 single-year / $5,200 multi-year)",
+          "Save 10% when purchasing multiple years"
+        ],
+        "bestFor": [
+          "investors wanting optional CPA filing upgrade",
+          "DeFi and staking earners",
+          "users needing FBAR/FinCEN reporting"
+        ],
+        "sources": [
+          {
+            "url": "https://zenledger.io/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://milkroad.com/reviews/zenledger/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing fetched directly from zenledger.io/pricing on 2026-06-15; Silver/Gold/Platinum and +$600 unlimited add-on confirmed accurate. No free tier."
+      }
+    },
+    {
+      "slug": "summ",
+      "name": "Summ (formerly Crypto Tax Calculator)",
+      "domain": "summ.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "TurboTax",
+        "Coinbase",
+        "Binance",
+        "Kraken",
+        "MetaMask",
+        "Ledger"
+      ],
+      "provenance": "Rebrand confirmed: cryptotaxcalculator.io 301-redirects to summ.com (rebranded from Crypto Tax Calculator in 2025; founded 2018, Australian). summ.com/us/pricing/personal direct fetch returned 403; pricing confirmed via fortunly.com, finder.com, and summ.com official snippets. Free tier, Rookie $49/100tx, Hobbyist $99/1000tx, Investor $249/10000tx, Trader $499/100000tx. Investor confirmed at $249 (fortunly and summ.com snippet; finder's $299 appears stale). Transaction limits are cumulative across ALL financial years (confirmed by official Summ documentation), not per tax year; subscription is per calendar year.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Portfolio tracking, transaction import, auto-categorization, DeFi and NFT support. Tax reports require a paid plan.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://summ.com/us/pricing/personal",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Rookie",
+          "monthlyUsd": 49,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Per-year subscription. Up to 100 cumulative all-financial-years transactions. Includes integrations across 3,500+ platforms; tax reports for prior years.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://summ.com/us/pricing/personal",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://fortunly.com/reviews/summ-review/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Hobbyist",
+          "monthlyUsd": 99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Per-year subscription. Up to 1,000 cumulative all-financial-years transactions.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://summ.com/us/pricing/personal",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://fortunly.com/reviews/summ-review/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Investor",
+          "monthlyUsd": 249,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Per-year subscription. Up to 10,000 cumulative all-financial-years transactions. Includes advanced tax reports, tax-loss harvesting, audit report. Confirmed $249 (not $299).",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://summ.com/us/pricing/personal",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://fortunly.com/reviews/summ-review/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Trader",
+          "monthlyUsd": 499,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Per-year subscription. Up to 100,000 cumulative all-financial-years transactions. Custom plans available above 100,000 (up to 10M).",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://summ.com/us/pricing/personal",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://fortunly.com/reviews/summ-review/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "TurboTax",
+          "Coinbase",
+          "Binance",
+          "Kraken",
+          "MetaMask",
+          "Ledger"
+        ],
+        "limits": [
+          "Rookie: 100 cumulative all-years tx",
+          "Hobbyist: 1,000 cumulative all-years tx",
+          "Investor: 10,000 cumulative all-years tx",
+          "Trader: 100,000 cumulative all-years tx",
+          "Note: limits are cumulative across ALL financial years, not per year — key differentiator from competitors"
+        ],
+        "keyFeatures": [
+          "Transaction limits are cumulative across all financial years (not per tax year)",
+          "Subscription billed per calendar year; can calculate taxes back to 2013",
+          "3,500+ platform integrations",
+          "Auto-categorization engine with DeFi and NFT support",
+          "Rebranded from Crypto Tax Calculator in 2025; founded 2018"
+        ],
+        "bestFor": [
+          "active traders with high historical volume",
+          "DeFi and NFT users needing automated categorization",
+          "users who want to calculate taxes across all historical years at once"
+        ],
+        "sources": [
+          {
+            "url": "https://fortunly.com/reviews/summ-review/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.finder.com/crypto-banking/summ-review",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://summ.com/us/blog/crypto-tax-calculator-summ-rebrand",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Rebrand confirmed via 301 redirect cryptotaxcalculator.io to summ.com. Direct fetch 403; Investor $249 confirmed (finder's $299 stale). Cumulative-all-years transaction model confirmed by official Summ documentation."
+      }
+    },
+    {
+      "slug": "blockpit",
+      "name": "Blockpit",
+      "domain": "blockpit.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Binance",
+        "Coinbase",
+        "Kraken",
+        "KuCoin",
+        "MetaMask",
+        "Ledger",
+        "Trezor"
+      ],
+      "provenance": "Pricing fetched directly from blockpit.io/pricing on 2026-06-15 and confirmed. Prices are EUR-only; no USD published, so monthlyUsd is null for paid tiers. Tax report tiers are one-time purchases per tax year: Small €49/50tx, Medium €99/1000tx, Large €149/3000tx, X-Large €229/10000tx, XX-Large €549/10000+tx. Blockpit Plus is a separate optional portfolio add-on (€3.99/mo, €47.90/yr) and is not a tax-report plan.",
+      "plans": [
+        {
+          "name": "Free (Portfolio Tracking)",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free portfolio tracking; 160+ exchanges, 190+ blockchains, 2,500+ dApps; iOS and Android apps. Tax reports require a separate one-time purchase.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.blockpit.io/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Tax Report Small",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "One-time purchase per tax year, up to 50 transactions. Priced at €49; no USD price published. Transaction limit applies only to the selected tax year, not all-time.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.blockpit.io/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Tax Report Medium",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "One-time purchase per tax year, up to 1,000 transactions. Priced at €99. No USD price published.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.blockpit.io/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Tax Report Large",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "One-time purchase per tax year, up to 3,000 transactions. Priced at €149. No USD price published.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.blockpit.io/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Tax Report X-Large",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "One-time purchase per tax year, up to 10,000 transactions. Priced at €229. No USD price published.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.blockpit.io/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Tax Report XX-Large",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "One-time purchase per tax year, 10,000+ transactions. Priced at €549. No USD price published.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.blockpit.io/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Binance",
+          "Coinbase",
+          "Kraken",
+          "KuCoin",
+          "MetaMask",
+          "Ledger",
+          "Trezor",
+          "Crypto.com DeFi Wallet"
+        ],
+        "limits": [
+          "Small: 50 tx/tax year",
+          "Medium: 1,000 tx/tax year",
+          "Large: 3,000 tx/tax year",
+          "X-Large: 10,000 tx/tax year",
+          "XX-Large: 10,000+ tx/tax year",
+          "Transaction limits apply to current tax year only (not all-time)"
+        ],
+        "keyFeatures": [
+          "Transaction limits apply per tax year only (not cumulative)",
+          "160+ exchanges, 190+ blockchains, 2,500+ dApps",
+          "EUR-denominated pricing (European-focused)",
+          "Source of Funds compliance reports available (€19.99-€79.99)"
+        ],
+        "bestFor": [
+          "European crypto investors",
+          "investors needing per-year-only transaction counting",
+          "portfolio tracking without immediate tax report need"
+        ],
+        "sources": [
+          {
+            "url": "https://www.blockpit.io/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://cryptoticker.io/en/blockpit/reviews/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Prices fetched directly from blockpit.io/pricing on 2026-06-15; EUR-only, confirmed accurate. monthlyUsd null for paid plans as USD prices are not officially published."
+      }
+    },
+    {
+      "slug": "awaken-tax",
+      "name": "Awaken Tax",
+      "domain": "awaken.tax",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Coinbase",
+        "Kraken",
+        "Binance",
+        "Gemini",
+        "KuCoin",
+        "MetaMask",
+        "Phantom"
+      ],
+      "provenance": "awaken.tax/pricing direct fetch returned 403; pricing confirmed via banksforcrypto.com 2026 review and search corroboration: Free up to 100 tx, Entry $99/500tx, Unlimited $599. Awaken charges an annual subscription by current-tax-year transaction count and does not auto-renew. Awaken's help center states pricing changes frequently; mid-tier names/limits vary by source.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Up to 100 transactions per tax year. Full feature access to evaluate the platform before purchasing.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://awaken.tax/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://banksforcrypto.com/tax-software/awaken-tax/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Entry",
+          "monthlyUsd": 99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Per tax year, up to 500 transactions. Awaken states pricing changes frequently; verify current tier names and limits at awaken.tax/pricing.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://awaken.tax/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://banksforcrypto.com/tax-software/awaken-tax/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Unlimited",
+          "monthlyUsd": 599,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Per tax year, unlimited transactions. Top published self-serve tier per banksforcrypto.com. Exact tier names and prices change per Awaken help center.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://awaken.tax/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://banksforcrypto.com/tax-software/awaken-tax/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Coinbase",
+          "Kraken",
+          "Binance",
+          "Gemini",
+          "KuCoin",
+          "MetaMask",
+          "Phantom"
+        ],
+        "limits": [
+          "Free: 100 tx/tax year",
+          "Entry: ~500 tx/tax year",
+          "Unlimited: unlimited tx/tax year",
+          "Paid tiers by current-tax-year transaction count; exact limits change frequently per awaken.tax/pricing"
+        ],
+        "keyFeatures": [
+          "Protocol-level DeFi accuracy across 80+ blockchains",
+          "1,500+ DeFi protocol support",
+          "Pricing based on current-tax-year transactions only (not all-time)",
+          "Annual subscription with no auto-renew charge"
+        ],
+        "bestFor": [
+          "DeFi-heavy portfolios requiring protocol-level accuracy",
+          "Solana and multi-chain users",
+          "users prioritizing per-year-only transaction counting"
+        ],
+        "sources": [
+          {
+            "url": "https://banksforcrypto.com/tax-software/awaken-tax/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://comparecryptotaxes.com/blog/awaken-tax-review/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://help.awaken.tax/en/articles/10453908-what-is-your-pricing",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Direct fetch 403; pricing from third-party reviews. Entry tier refined to $99/500tx (draft said '300-500'); Free 100tx and Unlimited $599 confirmed. Help center confirms pricing changes frequently."
+      }
+    }
+  ]
+}

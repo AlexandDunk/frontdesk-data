@@ -1,0 +1,1007 @@
+{
+  "vertical": "employee-recognition",
+  "generatedAt": "2026-06-15",
+  "methodologyNotes": "Re-verified 2026-06-15 (adversarial pass) by direct WebFetch of each official pricing page: bonusly.com/pricing, guusto.com/pricing, matterapp.com/pricing, joinassembly.com/pricing, awardco.com/pricing, nectarhr.com/pricing, plus kudos.com/pricing (HTTP 404 -> quote-only) and workhuman.com (quote-only). Published per-user prices confirmed for Bonusly ($5/user/mo monthly, $50/user/yr annual), Matter ($1/$3 per user/mo billed annually, save 25%), Assembly Empower ($3/user/mo billed yearly), and Guusto (Lite $150/mo flat; Essential $4.00 sender + $0.70 recipient annual / $6.72 both monthly; Premium $5.00 sender + $1.00 recipient annual). Quote-only vendors (Awardco, Nectar, Kudos, Workhuman) have monthlyUsd=null. Compliance set true only where explicitly stated on official security/trust pages: Bonusly SOC2; Awardco SOC2+HIPAA+GDPR; Matter SOC2+GDPR; Nectar SOC2(Nov 30 2024)+GDPR (HIPAA explicitly excluded); Kudos SOC2+ISO27001+CSA-STAR+GDPR. Workhuman's official security page returned no substantive cert text on fetch, so its compliance is set null (prior ISO/PCI/GDPR claims came only from unverified third-party search). accessedAt 2026-06-15.",
+  "vendors": [
+    {
+      "slug": "bonusly",
+      "name": "Bonusly",
+      "domain": "bonusly.com",
+      "hipaa": false,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Slack",
+        "Microsoft Teams",
+        "Google Chat",
+        "ADP",
+        "Workday",
+        "UKG Ready",
+        "UKG Pro",
+        "Rippling",
+        "BambooHR",
+        "Paylocity",
+        "Paycom",
+        "Gusto",
+        "HiBob",
+        "Paycor",
+        "Paychex",
+        "SAP",
+        "Okta",
+        "OneLogin",
+        "Google Workspace",
+        "Office 365",
+        "Azure AD",
+        "Zapier",
+        "SharePoint",
+        "ScreenCloud",
+        "AXOMO"
+      ],
+      "provenance": "Pricing fetched from bonusly.com/pricing on 2026-06-15 and re-verified (Free up to 8 users; Team + Bizy AI $5/user/mo or $50/user/yr; Organization custom). SOC 2 Type II confirmed via official Bonusly announcement post (live). HIPAA explicitly excluded per Bonusly ToS (no PHI).",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Up to 8 users, peer recognition, Slack/Teams integrations, mobile apps. Forever free, no credit card required.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://bonusly.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Team + Bizy AI",
+          "monthlyUsd": 5,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "per_seat",
+          "notes": "$5/user/mo billed monthly or $50/user/year (~$4.17/mo) billed annually (~2 months free). Unlimited seats. Includes advanced analytics, HRIS integrations, 24/7 support, Bizy AI. 30-day free trial. Rewards billed at face value separately. (A Team plan without Bizy AI is also offered at $3/user/mo monthly / $30/user/yr per the pricing FAQ.)",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://bonusly.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Organization + Bizy AI",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing, contact sales. Adds company announcements, awards/incentives programs, company-wide analytics, SAML SSO, dedicated account manager, training library, onboarding assistance.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://bonusly.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": false,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://bonusly.com/post/bonusly-is-officially-soc-2-compliant",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": 30,
+        "keyIntegrations": [
+          "Slack",
+          "Microsoft Teams",
+          "ADP",
+          "Workday",
+          "BambooHR",
+          "Rippling",
+          "Okta",
+          "Zapier"
+        ],
+        "limits": [
+          "Free plan capped at 8 users",
+          "Rewards budget separate from subscription fee"
+        ],
+        "keyFeatures": [
+          "Bizy AI recognition guidance and performance recaps",
+          "Peer-to-peer micro-bonus system with real monetary rewards",
+          "30+ HRIS integrations with automatic sync",
+          "Variable reward redemption at face value — no markups"
+        ],
+        "bestFor": [
+          "SMBs wanting instant peer recognition with real rewards",
+          "Teams already in Slack or Teams",
+          "Companies wanting a free tier to pilot before scaling"
+        ],
+        "sources": [
+          {
+            "url": "https://bonusly.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://bonusly.com/features/integrations",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Plans and integrations fetched directly from bonusly.com/pricing and bonusly.com/features/integrations. SOC 2 Type II confirmed via official Bonusly SOC 2 announcement post (live)."
+      }
+    },
+    {
+      "slug": "nectar",
+      "name": "Nectar",
+      "domain": "nectarhr.com",
+      "hipaa": false,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Slack",
+        "Microsoft Teams",
+        "Google Chat",
+        "Outlook",
+        "ADP",
+        "BambooHR",
+        "Gusto",
+        "Namely",
+        "Netsuite",
+        "Paycor",
+        "Paylocity",
+        "Rippling",
+        "Workday",
+        "Zenefits",
+        "Okta",
+        "Azure AD",
+        "G Suite",
+        "OneLogin",
+        "Ping Identity",
+        "SAML",
+        "ADFS"
+      ],
+      "provenance": "nectarhr.com/pricing fetched 2026-06-15 — fully quote-only (Recognize, Engage, Comms, Culture Suite); no per-user prices published. Security/compliance from nectarhr.com/security: SOC 2 Type II as of Nov 30 2024; GDPR/CCPA processor-compliant; HIPAA explicitly not supported (no PHI stored).",
+      "plans": [
+        {
+          "name": "Nectar Recognize",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Recognition and rewards module. Per-user pricing via sales quote only. No public price listed as of 2026-06-15.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://nectarhr.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Nectar Engage",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Employee listening and surveys module (bundled with Recognize). Pricing via sales quote only.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://nectarhr.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Nectar Comms",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Internal communications module (bundled with Recognize). Pricing via sales quote only.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://nectarhr.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Culture Suite",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "All-in-one bundle (Recognize + Engage + Comms). Labeled 'Best Value'. Pricing via sales quote only.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://nectarhr.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": false,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.nectarhr.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": null,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Slack",
+          "Microsoft Teams",
+          "ADP",
+          "BambooHR",
+          "Workday",
+          "Rippling",
+          "Okta",
+          "Azure AD"
+        ],
+        "limits": [
+          "No public pricing — all tiers require sales engagement",
+          "HIPAA not supported; no PHI storage"
+        ],
+        "keyFeatures": [
+          "Modular platform (recognition, comms, surveys sold separately or bundled)",
+          "Industry-specific bundles (Healthcare, Remote/Hybrid, Manufacturing, etc.)",
+          "SOC 2 Type II certified as of Nov 30 2024",
+          "Automated milestone recognition for birthdays and anniversaries"
+        ],
+        "bestFor": [
+          "Mid-market HR teams wanting modular recognition + comms",
+          "Organizations needing internal communications alongside recognition",
+          "Healthcare and manufacturing verticals with specialized bundles"
+        ],
+        "sources": [
+          {
+            "url": "https://nectarhr.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.nectarhr.com/security",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://nectarhr.com/integration",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing confirmed quote-only by direct fetch of nectarhr.com/pricing (HTTP 200, no prices). Compliance confirmed via nectarhr.com/security whitepaper (SOC 2 Type II Nov 30 2024, GDPR; HIPAA excluded). Integrations from nectarhr.com/integration."
+      }
+    },
+    {
+      "slug": "guusto",
+      "name": "Guusto",
+      "domain": "guusto.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Slack",
+        "Microsoft Teams",
+        "Microsoft Outlook",
+        "BambooHR",
+        "Workday",
+        "ADP",
+        "Rippling",
+        "Dayforce",
+        "Paycor",
+        "Personio",
+        "Justworks",
+        "Zenefits",
+        "Namely",
+        "Lattice",
+        "15Five",
+        "HiBob",
+        "Deel",
+        "Gusto"
+      ],
+      "provenance": "Pricing fetched and re-verified from guusto.com/pricing 2026-06-15: Free forever; Lite $150/mo flat (1 sender + 250 recipients); Essential $4.00 sender + $0.70 recipient/mo billed annually ($6.72 both monthly), min $200/mo; Premium $5.00 sender + $1.00 recipient/mo billed annually ($6.72 both monthly), min $500/mo. SOC 2 badge on integrations page; GDPR/HIPAA not stated.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free forever. Basic send rewards, 100+ merchants, mobile app, offline print, multiple languages. No automation or HRIS integration.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://guusto.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Lite",
+          "monthlyUsd": 150,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Flat $150/month includes 1 sender seat and 250 recipient seats. Automate small milestone programs. 30-day free trial available.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://guusto.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Essential",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$4.00/sender seat/month + $0.70/recipient seat/month billed annually (monthly billing is $6.72/seat for both). Minimum $200/month contract. Includes social feeds, leaderboards, HRIS integration, analytics. 30-day trial available.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://guusto.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$5.00/sender seat/month + $1.00/recipient seat/month billed annually (monthly billing is $6.72/seat for both). Minimum $500/month contract. Adds unlimited workspaces, SSO, Teams/SharePoint/Outlook integration, API access, custom rewards, swag programs.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://guusto.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://guusto.com/integrations",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": 30,
+        "keyIntegrations": [
+          "Slack",
+          "Microsoft Teams",
+          "BambooHR",
+          "Workday",
+          "ADP",
+          "Rippling",
+          "Dayforce"
+        ],
+        "limits": [
+          "Lite plan capped at 1 sender seat and 250 recipients",
+          "Essential plan minimum $200/month contract",
+          "Premium plan minimum $500/month contract",
+          "No markup on gift card face value — merchants pay Guusto"
+        ],
+        "keyFeatures": [
+          "No markups on rewards — merchants subsidize costs instead of buyers",
+          "Offline print-and-redeem option for deskless workers",
+          "Flat-fee Lite plan ideal for small programs",
+          "Dual seat model (senders vs. recipients) enables cost control"
+        ],
+        "bestFor": [
+          "Organizations with deskless or frontline workers",
+          "Small HR teams wanting flat-fee simplicity",
+          "Companies prioritizing reward cost transparency"
+        ],
+        "sources": [
+          {
+            "url": "https://guusto.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://guusto.com/integrations",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "All plan details fetched and re-verified from guusto.com/pricing. SOC 2 badge confirmed on guusto.com/integrations; HIPAA and GDPR status not stated on fetched pages (set null)."
+      }
+    },
+    {
+      "slug": "awardco",
+      "name": "Awardco",
+      "domain": "awardco.com",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Slack",
+        "Microsoft Teams",
+        "Microsoft Outlook",
+        "ADP",
+        "Workday",
+        "UKG",
+        "BambooHR",
+        "Gusto",
+        "Paychex Flex",
+        "Paycom",
+        "Paycor",
+        "Paylocity",
+        "Namely",
+        "Deel",
+        "HiBob",
+        "Justworks",
+        "Salesforce",
+        "Lattice",
+        "15Five",
+        "Greenhouse",
+        "Qualtrics",
+        "Zendesk",
+        "Amazon Business",
+        "Workplace by Meta",
+        "Twilio",
+        "FirstUp"
+      ],
+      "provenance": "awardco.com/pricing fetched 2026-06-15 — quote-only; live tier names are 'Awardco Recognize - Standard/Scale/Enterprise' plus 'Service Awards Only', 'Automated + 2', and 'Awardco Engage'. Only published dollar figure: startup/small-business packages starting at $3,000 (≤100 employees). Compliance (SOC 2 Type II, HIPAA, GDPR, ISO 27001, CCPA) confirmed on awardco.com/security-compliance.",
+      "plans": [
+        {
+          "name": "Awardco Recognize - Standard",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Unlimited access to any two program types; bulk recognition, approval flows, surveys, earn incentive creator. Quote-only. Startups/small businesses (≤100 employees) can get flexible packages starting at $3,000 (total, not per month).",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.awardco.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Awardco Recognize - Scale",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Unlimited access to any four program types. Quote-only.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.awardco.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Awardco Recognize - Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Unlimited access across all program types including newly released features. Quote-only.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.awardco.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.awardco.com/security-compliance",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Slack",
+          "Microsoft Teams",
+          "ADP",
+          "Workday",
+          "UKG",
+          "BambooHR",
+          "Salesforce",
+          "Amazon Business"
+        ],
+        "limits": [
+          "No public per-user pricing — all tiers are quote-only",
+          "Startup package starts at $3,000 for ≤100 employees",
+          "40+ total integrations across HRIS, comms, and rewards networks"
+        ],
+        "keyFeatures": [
+          "Amazon Business rewards catalog integrated natively",
+          "SOC 2 Type II + HIPAA + GDPR + ISO 27001 certified",
+          "Program-type based tier model (not user-count based)",
+          "A-Pay and Company Store available as premium add-ons"
+        ],
+        "bestFor": [
+          "Mid-to-large enterprises needing HIPAA compliance",
+          "Organizations wanting Amazon catalog for rewards",
+          "Companies with complex multi-program recognition needs"
+        ],
+        "sources": [
+          {
+            "url": "https://www.awardco.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.awardco.com/security-compliance",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.awardco.com/integrations",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Plan names aligned to live awardco.com/pricing (Standard/Scale/Enterprise). Compliance (SOC 2 Type II, HIPAA, GDPR, ISO 27001) confirmed from awardco.com/security-compliance. BAA availability not explicitly stated (null)."
+      }
+    },
+    {
+      "slug": "matter",
+      "name": "Matter",
+      "domain": "matterapp.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Slack",
+        "Microsoft Teams",
+        "BambooHR",
+        "Rippling",
+        "Workday",
+        "ADP Workforce Now",
+        "UKG Pro",
+        "Gusto",
+        "Paylocity",
+        "HiBob",
+        "Deel",
+        "Paycom",
+        "Personio",
+        "Namely",
+        "Insperity"
+      ],
+      "provenance": "Pricing fetched and re-verified from matterapp.com/pricing 2026-06-15: Free $0 forever; Basic $1/user/mo billed annually; Pro $3/user/mo billed annually (most popular); Enterprise custom. 'Yearly (Save 25%)' and 14-day free trial confirmed. SOC 2 Type II and GDPR confirmed on integrations page; HIPAA not mentioned.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Forever free. Includes Kudos recognition, template library, Feedback Friday. 14-day free trial of paid features also available.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://matterapp.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Basic",
+          "monthlyUsd": 1,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 25,
+          "billingModel": "per_seat",
+          "notes": "$1/user/month billed annually (monthly-equivalent; monthly-billing rate not published). Adds celebrations, custom kudos, analytics and reporting. Annual billing saves 25% vs monthly.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://matterapp.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 3,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 25,
+          "billingModel": "per_seat",
+          "notes": "$3/user/month billed annually (monthly-equivalent; monthly-billing rate not published). Most popular. Adds 10,000+ eGift cards across 200+ countries, branded rewards, challenges and incentives. Annual billing saves 25% vs monthly.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://matterapp.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing. Adds multi-channel setup, manager dashboards, HRIS integration, dedicated support. Contact sales.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://matterapp.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://matterapp.com/integrations",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Slack",
+          "Microsoft Teams",
+          "BambooHR",
+          "Workday",
+          "Rippling",
+          "ADP Workforce Now",
+          "UKG Pro"
+        ],
+        "limits": [
+          "Free plan is Slack/Teams-only (no HRIS integration)",
+          "HRIS integration only on Enterprise plan",
+          "Rewards billed separately when approved"
+        ],
+        "keyFeatures": [
+          "Feedback Friday — structured weekly peer feedback ritual",
+          "10,000+ global eGift cards on Pro plan",
+          "SOC 2 Type II and GDPR compliant",
+          "Volume and nonprofit discounts available"
+        ],
+        "bestFor": [
+          "Slack-first teams wanting free peer recognition",
+          "SMBs needing affordable per-user pricing with global rewards",
+          "Teams wanting structured feedback cadences alongside recognition"
+        ],
+        "sources": [
+          {
+            "url": "https://matterapp.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://matterapp.com/integrations",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "All plan prices re-verified directly from matterapp.com/pricing. Compliance (SOC 2 Type II, GDPR) and integrations confirmed from matterapp.com/integrations; HIPAA not stated (null)."
+      }
+    },
+    {
+      "slug": "kudos",
+      "name": "Kudos",
+      "domain": "kudos.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Microsoft Teams",
+        "Microsoft Outlook",
+        "Slack",
+        "SharePoint",
+        "Okta",
+        "OneLogin",
+        "Ping Identity",
+        "SaaSPass",
+        "Google Workspace",
+        "Paycor",
+        "ADP",
+        "UKG",
+        "Workday",
+        "SAP SuccessFactors",
+        "Paylocity",
+        "BambooHR"
+      ],
+      "provenance": "kudos.com/pricing returns HTTP 404 — confirmed quote-only/demo-only. Integrations from kudos.com/platform/integrations. Compliance (SOC 2 Type II, ISO 27001, CSA STAR Level I, GDPR) confirmed on kudos.com/trust-assurance; HIPAA not mentioned.",
+      "plans": [
+        {
+          "name": "Kudos (quote-only)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "No public pricing (kudos.com/pricing 404s). All plans require a demo and sales quote. Per-user/month subscription; contact sales for tiers and pricing.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.kudos.com/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.kudos.com/trust-assurance",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Slack",
+          "Microsoft Teams",
+          "Workday",
+          "SAP SuccessFactors",
+          "ADP",
+          "BambooHR",
+          "Okta"
+        ],
+        "limits": [
+          "No public pricing — requires demo to obtain quote",
+          "No free trial or free plan publicly stated"
+        ],
+        "keyFeatures": [
+          "SOC 2 Type II + ISO 27001 + CSA STAR Level I certified",
+          "Values-aligned recognition with peer and top-down programs",
+          "Deep Microsoft 365 suite integration (Teams, Outlook, SharePoint)",
+          "No markup on rewards points"
+        ],
+        "bestFor": [
+          "Mid-market and enterprise teams prioritizing ISO 27001 security posture",
+          "Microsoft-centric organizations",
+          "Companies wanting values-aligned recognition analytics"
+        ],
+        "sources": [
+          {
+            "url": "https://www.kudos.com/platform/integrations",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.kudos.com/trust-assurance",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "kudos.com/pricing returns HTTP 404; quote-only confirmed. Compliance (SOC 2 Type II, ISO 27001, CSA STAR Level I, GDPR) and integrations confirmed from official kudos.com pages."
+      }
+    },
+    {
+      "slug": "workhuman",
+      "name": "Workhuman",
+      "domain": "workhuman.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Workday",
+        "SAP SuccessFactors",
+        "Oracle HCM",
+        "UKG",
+        "Slack",
+        "Microsoft Teams",
+        "Microsoft Viva",
+        "Microsoft Outlook"
+      ],
+      "provenance": "No public pricing on workhuman.com — quote-only/enterprise-only, no free trial (corroborated by G2, Capterra, SelectHub). Official security page (workhuman.com/why-workhuman/security-and-privacy/) returned no substantive certification text on fetch 2026-06-15, so all compliance fields are set null (prior ISO 27001 / ISO 27701 / PCI-DSS / GDPR claims came only from unverified third-party search and could not be corroborated on an official page).",
+      "plans": [
+        {
+          "name": "Social Recognition (quote-only)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "No public pricing. Enterprise-focused; all pricing via sales engagement. No free trial, no free plan.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.workhuman.com/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": {
+            "url": "https://www.workhuman.com/why-workhuman/security-and-privacy/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Workday",
+          "SAP SuccessFactors",
+          "Oracle HCM",
+          "Slack",
+          "Microsoft Teams",
+          "Microsoft Viva"
+        ],
+        "limits": [
+          "Enterprise-only; no self-serve or SMB tier",
+          "No public pricing — full sales process required",
+          "No free trial"
+        ],
+        "keyFeatures": [
+          "Certified prebuilt bidirectional Workday integration",
+          "AI-powered Human Intelligence insights for culture analytics",
+          "Multi-currency, multi-language global reward delivery",
+          "Enterprise-scale social recognition program management"
+        ],
+        "bestFor": [
+          "Large enterprises with Workday or SAP SuccessFactors deployments",
+          "Global organizations needing multi-currency, multi-language recognition",
+          "HR teams running enterprise-wide social recognition programs"
+        ],
+        "sources": [
+          {
+            "url": "https://www.workhuman.com/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.workhuman.com/why-workhuman/security-and-privacy/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing confirmed quote-only; no public prices on workhuman.com (corroborated by G2/Capterra/SelectHub). Official security page returned no substantive cert content on fetch, so compliance set null pending an explicit official statement."
+      }
+    },
+    {
+      "slug": "assembly",
+      "name": "Assembly",
+      "domain": "joinassembly.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Slack",
+        "Microsoft Teams",
+        "ADP",
+        "BambooHR",
+        "Gusto",
+        "Workday",
+        "Oracle Cloud HCM",
+        "SAP SuccessFactors",
+        "Rippling",
+        "Deel",
+        "Personio",
+        "Okta",
+        "Microsoft Entra ID",
+        "JumpCloud",
+        "Axomo"
+      ],
+      "provenance": "Pricing fetched and re-verified from joinassembly.com/pricing 2026-06-15: Empower $3/user/month billed yearly (most popular); Enterprise custom. No priced free recognition tier or free trial listed on the official pricing page (Assembly separately markets a free gifting plan and an upcoming free recognition plan, but neither is a priced recognition tier on the pricing page). Integrations/compliance (SOC 2 Type II, GDPR) from joinassembly.com/integrations.",
+      "plans": [
+        {
+          "name": "Empower",
+          "monthlyUsd": 3,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$3/user/month billed yearly. Most popular plan. Includes milestone celebrations, announcements, awards and challenges, global reward catalog, peer-to-peer recognition, points and budget controls, Dora AI Hub (insights, nudges, trends), advanced people analytics. Monthly billing rate not published.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://joinassembly.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing. Advanced security and compliance, custom integrations, enterprise-grade support, tailored implementation.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://joinassembly.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.joinassembly.com/integrations",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Slack",
+          "Microsoft Teams",
+          "ADP",
+          "BambooHR",
+          "Workday",
+          "Okta",
+          "Axomo"
+        ],
+        "limits": [
+          "Only one self-serve paid tier publicly priced (Empower)",
+          "Annual billing only for Empower — no monthly option published",
+          "80 total integrations across SSO/HRIS and communications"
+        ],
+        "keyFeatures": [
+          "Dora AI Hub for recognition trends, nudges, and insights",
+          "SOC 2 Type II and GDPR certified",
+          "Global reward catalog with peer-to-peer points",
+          "80+ HRIS and SSO integrations including Oracle HCM and SAP"
+        ],
+        "bestFor": [
+          "SMB to mid-market teams wanting simple flat per-user pricing",
+          "Teams wanting AI-driven recognition insights",
+          "Organizations needing broad HRIS compatibility"
+        ],
+        "sources": [
+          {
+            "url": "https://joinassembly.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.joinassembly.com/integrations",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Empower plan price ($3/user/month billed yearly) re-verified from joinassembly.com/pricing. SOC 2 and GDPR badges confirmed from joinassembly.com/integrations."
+      }
+    }
+  ]
+}
