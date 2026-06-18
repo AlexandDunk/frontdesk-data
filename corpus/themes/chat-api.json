@@ -1,0 +1,1243 @@
+{
+  "vertical": "chat-api",
+  "generatedAt": "2026-06-15",
+  "methodologyNotes": "Pricing re-verified via WebFetch against each vendor's official pricing page (getstream.io/chat/pricing, sendbird.com/pricing/chat, pubnub.com/pricing, cometchat.com/pricing, ably.com/pricing, pusher.com/channels/pricing, twilio.com/en-us/messaging/pricing/conversations-api, mirrorfly.com/pricing.php, zegocloud.com ZIM docs). Compliance verified against each vendor's official security/compliance page and corroborated via WebSearch; a flag is set true ONLY when the vendor explicitly states it, otherwise null. KEY CORRECTION: CometChat Basic/Advanced prices are NOT published on the official page (only '$' placeholders render; sign-up/contact-sales required), so monthlyUsd is set to null and billingModel to custom — the prior $299/$449 figures were third-party (dupple.com/trtc.io) approximations and are not carried. PubNub gdpr set to null (the compliance page cites the EU-US Data Privacy Framework, not GDPR explicitly). MirrorFly Essentials/Premium remain null (no public prices). All data accessed at 2026-06-15.",
+  "vendors": [
+    {
+      "slug": "stream-chat",
+      "name": "Stream (GetStream)",
+      "domain": "getstream.io",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "React",
+        "React Native",
+        "iOS (Swift)",
+        "Android (Kotlin)",
+        "Flutter",
+        "Unity",
+        "Next.js",
+        "Angular",
+        "Vue"
+      ],
+      "provenance": "Pricing fetched from getstream.io/chat/pricing (Build $0, Start $499/$399-annual, Elevate $675/$599-annual, Enterprise custom — all confirmed). Compliance confirmed via getstream.io/security (HIPAA, SOC2, GDPR). BAA available on paid/Enterprise plans (HIPAA-ready with BAA).",
+      "plans": [
+        {
+          "name": "Build",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "1,000 MAU included; 100 peak concurrent connections; community support only; all Chat features included; no credit card required.",
+          "source": {
+            "url": "https://getstream.io/chat/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Start",
+          "monthlyUsd": 499,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "10,000 MAU included; $0.09/MAU overage; 500 peak concurrent connections ($0.99/additional); advanced moderation, global edge network, offline support, data export. $399/mo billed annually (~20% off).",
+          "source": {
+            "url": "https://getstream.io/chat/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Elevate",
+          "monthlyUsd": 675,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 11,
+          "billingModel": "flat",
+          "notes": "10,000 MAU entry tier (higher MAU tiers priced higher); $0.09/MAU overage; 500 peak concurrent connections; adds multi-tenancy/teams, advanced search, HIPAA compliance, message translation on top of Start. $599/mo billed annually.",
+          "source": {
+            "url": "https://getstream.io/chat/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "1,000,000+ MAU; 99.999% uptime SLA; dedicated servers; 24/7 support; SAML/SSO; AI moderation; volume discounts. Contact sales for quote.",
+          "source": {
+            "url": "https://getstream.io/chat/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://getstream.io/security/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "React",
+          "React Native",
+          "iOS",
+          "Android",
+          "Flutter",
+          "Unity",
+          "Next.js"
+        ],
+        "limits": [
+          "Build: 1,000 MAU, 100 concurrent connections",
+          "Start/Elevate: 10,000 MAU, 500 concurrent connections",
+          "$0.09/MAU overage on paid plans"
+        ],
+        "keyFeatures": [
+          "MAU-based flat pricing with published overage rates",
+          "HIPAA-ready with BAA on paid plans",
+          "99.999% SLA on Enterprise",
+          "Offline message support and global edge network"
+        ],
+        "bestFor": [
+          "social apps",
+          "community chat",
+          "telehealth messaging",
+          "customer support chat"
+        ],
+        "sources": [
+          {
+            "url": "https://getstream.io/chat/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://getstream.io/security/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing and compliance fetched directly from official getstream.io pages; all four plan prices confirmed. BAA availability confirmed (HIPAA-ready, SOC2, ISO27001)."
+      }
+    },
+    {
+      "slug": "sendbird",
+      "name": "Sendbird",
+      "domain": "sendbird.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "React",
+        "React Native",
+        "iOS (Swift/Objective-C)",
+        "Android (Kotlin/Java)",
+        "JavaScript",
+        "Flutter",
+        "Xamarin",
+        "Unity",
+        "Salesforce"
+      ],
+      "provenance": "Pricing fetched from sendbird.com/pricing/chat (Starter $399/$349-annual, Pro $599/$499-annual confirmed). The permanent forever-free Developer plan (100 MAU / 10 PCC, login once per year) is distinct from the separate 30-day Pro trial (1,000 MAU / 20 PCC). Compliance (HIPAA+BAA, SOC2 Type 2, ISO27001, GDPR) confirmed via Sendbird blog.",
+      "plans": [
+        {
+          "name": "Developer (Free)",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "100 MAU; 10 peak concurrent connections; permanent forever-free as long as the dashboard is accessed once per year; access to chat features for prototyping. Distinct from the separate 30-day Pro trial (1,000 MAU / 20 PCC).",
+          "source": {
+            "url": "https://sendbird.com/pricing/chat",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Starter",
+          "monthlyUsd": 399,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 13,
+          "billingModel": "flat",
+          "notes": "5K MAU entry tier (10K, 25K, 50K, 100K+ tiers priced higher); peak concurrent connections capped at 5% of MAU; messaging essentials, basic moderation, ticketed support. $349/mo billed annually.",
+          "source": {
+            "url": "https://sendbird.com/pricing/chat",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 599,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "5K MAU entry tier (higher MAU tiers priced higher); adds translation, data export, image moderation, supergroup channels; peak concurrent connections at 5% of MAU. $499/mo billed annually.",
+          "source": {
+            "url": "https://sendbird.com/pricing/chat",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom MAU (millions); dedicated or shared servers; all Pro features; HIPAA/BAA available; contact sales.",
+          "source": {
+            "url": "https://sendbird.com/pricing/chat",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://sendbird.com/blog/sendbird-complies-with-soc2-type2-report",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": 30,
+        "keyIntegrations": [
+          "React",
+          "React Native",
+          "iOS",
+          "Android",
+          "Flutter",
+          "Salesforce",
+          "Xamarin"
+        ],
+        "limits": [
+          "Developer free: 100 MAU, 10 concurrent connections",
+          "Paid plans: peak concurrent = 5% of MAU",
+          "Starter/Pro start at 5K MAU tier"
+        ],
+        "keyFeatures": [
+          "SOC2 Type 2, HIPAA (with BAA), ISO27001, GDPR",
+          "Supergroup channels (Pro+)",
+          "AI-powered message moderation",
+          "Pre-built UIKit for rapid integration"
+        ],
+        "bestFor": [
+          "healthcare messaging",
+          "marketplace chat",
+          "on-demand apps",
+          "community platforms"
+        ],
+        "sources": [
+          {
+            "url": "https://sendbird.com/pricing/chat",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://sendbird.com/blog/sendbird-complies-with-soc2-type2-report",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing fetched from official Sendbird pricing page. Compliance confirmed via Sendbird's SOC2/HIPAA blog posts. Permanent forever-free Developer plan (100 MAU/10 PCC) distinct from 30-day Pro trial."
+      }
+    },
+    {
+      "slug": "pubnub",
+      "name": "PubNub",
+      "domain": "pubnub.com",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "React",
+        "React Native",
+        "iOS",
+        "Android",
+        "JavaScript",
+        "Python",
+        "Java",
+        "Go",
+        "Ruby",
+        "PHP",
+        "Unity",
+        "Unreal Engine"
+      ],
+      "provenance": "Pricing fetched from pubnub.com/pricing (Free $0, Starter $98, Pro custom — confirmed). Compliance fetched from pubnub.com/trust/compliance: SOC2 Type II, SOC3, ISO27001, HIPAA (PHI protection) confirmed; GDPR NOT explicitly stated (page cites EU-US Data Privacy Framework) so gdpr=null. BAA not stated publicly; null.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "200 MAU or 1M transactions/month (whichever is hit first); 1 GB storage (7 days retention); no credit card required.",
+          "source": {
+            "url": "https://www.pubnub.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Starter",
+          "monthlyUsd": 98,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "1,000 MAU included; up to 6 months message storage; BizOps Workspace add-on included; overage billed proportionally by usage per MAU.",
+          "source": {
+            "url": "https://www.pubnub.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom MAU packages (10,000+); unlimited storage; 99.999% uptime SLA; advanced analytics; volume discounts. Page shows illustrative examples (~$190/mo at 1K MAU up to ~$1,130/mo at 25K MAU) but final pricing is quote-based.",
+          "source": {
+            "url": "https://www.pubnub.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://www.pubnub.com/trust/compliance/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "React",
+          "React Native",
+          "iOS",
+          "Android",
+          "JavaScript",
+          "Python",
+          "Unity",
+          "Unreal Engine",
+          "Go"
+        ],
+        "limits": [
+          "Free: 200 MAU or 1M transactions/month",
+          "Starter: 1,000 MAU",
+          "Overage billed as proportional MAU units, not per-message"
+        ],
+        "keyFeatures": [
+          "Transaction-based pricing (not per-message fees)",
+          "SOC2 Type II + SOC3 + ISO27001",
+          "BizOps Workspace (presence, analytics)",
+          "Broad SDK coverage (20+ languages/platforms)"
+        ],
+        "bestFor": [
+          "real-time data streaming",
+          "multiplayer games",
+          "IoT chat",
+          "collaborative apps"
+        ],
+        "sources": [
+          {
+            "url": "https://www.pubnub.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.pubnub.com/trust/compliance/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing fetched from pubnub.com/pricing; $98/mo Starter confirmed. Compliance fetched from pubnub.com/trust/compliance — SOC2 Type II + SOC3 + ISO27001 + HIPAA confirmed; GDPR not explicitly claimed (Data Privacy Framework cited) so gdpr=null."
+      }
+    },
+    {
+      "slug": "cometchat",
+      "name": "CometChat",
+      "domain": "cometchat.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "React",
+        "React Native",
+        "iOS (Swift)",
+        "Android (Kotlin)",
+        "JavaScript",
+        "Flutter",
+        "Angular",
+        "Vue",
+        "Ionic"
+      ],
+      "provenance": "Pricing fetched from cometchat.com/pricing: Build free; Basic/Advanced/Enterprise prices render only as '$' placeholders (sign-up/contact-sales required) — NOT publicly published. The prior $299/$449 figures were third-party (dupple.com/trtc.io) approximations and have been NULLED (a null beats a guess). A 20% annual discount and $0.10/MAU overage ARE stated on the page. Compliance (HIPAA+BAA, SOC2 Type 2, ISO27001, GDPR) confirmed on cometchat.com/features/security-compliance — HITRUST is NOT listed.",
+      "plans": [
+        {
+          "name": "Build",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "100 MAU; 25 peak concurrent connections; all core chat features; no credit card required.",
+          "source": {
+            "url": "https://www.cometchat.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Basic",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "custom",
+          "notes": "Exact price NOT published on the official page (renders as '$' placeholder; reveal requires sign-up). 20% annual discount stated; $0.10/MAU overage; concurrent connections = 5% of MAU. Includes rich messaging, push notifications, basic moderation, global edge network.",
+          "source": {
+            "url": "https://www.cometchat.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Advanced",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "custom",
+          "notes": "Exact price NOT published on the official page (renders as '$' placeholder; reveal requires sign-up). 20% annual discount stated; $0.10/MAU overage; concurrent connections = 5% of MAU. Adds AI moderation, smart replies/summaries, multi-tenancy, HIPAA/BAA, message translation, advanced search.",
+          "source": {
+            "url": "https://www.cometchat.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "No MAU overages; 10% concurrency included; OpenAI-powered moderation; SSO (SAML/LDAP); custom white-label domain. Contact sales.",
+          "source": {
+            "url": "https://www.cometchat.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.cometchat.com/features/security-compliance",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "React",
+          "React Native",
+          "iOS",
+          "Android",
+          "Flutter",
+          "Angular",
+          "Vue",
+          "Ionic"
+        ],
+        "limits": [
+          "Build: 100 MAU, 25 concurrent connections",
+          "Basic/Advanced: concurrent connections = 5% of MAU",
+          "$0.10/MAU overage on Basic and Advanced",
+          "Basic/Advanced exact monthly prices not publicly published"
+        ],
+        "keyFeatures": [
+          "AI smart replies and summaries on Advanced+",
+          "HIPAA + BAA on Advanced+",
+          "SOC2 Type 2, ISO27001, GDPR certified",
+          "OpenAI-powered moderation on Enterprise"
+        ],
+        "bestFor": [
+          "marketplace chat",
+          "healthcare apps",
+          "social platforms",
+          "customer support"
+        ],
+        "sources": [
+          {
+            "url": "https://www.cometchat.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.cometchat.com/features/security-compliance",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Official pricing page fetched: Basic/Advanced/Enterprise prices are not rendered (placeholders only), so monthlyUsd=null and billingModel=custom — prior third-party $299/$449 approximations removed. Compliance page fetched directly: HIPAA+BAA, SOC2 Type 2, ISO27001, GDPR confirmed; HITRUST removed (not stated)."
+      }
+    },
+    {
+      "slug": "ably",
+      "name": "Ably",
+      "domain": "ably.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "JavaScript",
+        "React",
+        "React Native",
+        "iOS (Swift)",
+        "Android (Kotlin/Java)",
+        "Python",
+        "Go",
+        "Ruby",
+        "PHP",
+        "Java",
+        ".NET",
+        "Flutter",
+        "Kafka",
+        "AWS Kinesis"
+      ],
+      "provenance": "Pricing fetched from ably.com/pricing (Free $0, Standard $29+usage, Pro $399+usage, Enterprise custom — confirmed). Compliance fetched from ably.com/security-and-compliance: HIPAA BAA, SOC2 Type 2, and GDPR explicitly stated.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "200 concurrent connections; 500 msg/sec; 6M messages/month; 1-day message storage; 64 KiB max message size; community support.",
+          "source": {
+            "url": "https://ably.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Standard",
+          "monthlyUsd": 29,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "hybrid",
+          "notes": "Base $29/mo + usage. Up to 10K channels, 10K concurrent connections, 2,500 msg/sec; 30-day message storage; 1-day email support SLA. Usage: $2.50/M messages, $1.00/M connection-minutes, $1.00/M channel-minutes, $0.25/GiB data transfer.",
+          "source": {
+            "url": "https://ably.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 399,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "hybrid",
+          "notes": "Base $399/mo + usage. Up to 50K channels, 50K concurrent connections, 10K msg/sec; 365-day message storage; 256 KiB max message; 4-hour email SLA; Datadog lite integration. Same usage rates as Standard (volume discounts to $0.50/M messages).",
+          "source": {
+            "url": "https://ably.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Unlimited channels and connections; 24/7 support; 99.999% uptime SLA; HIPAA BAA; SSO/SCIM; dedicated cluster option.",
+          "source": {
+            "url": "https://ably.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://ably.com/security-and-compliance",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "JavaScript",
+          "React",
+          "iOS",
+          "Android",
+          "Go",
+          "Python",
+          "Kafka",
+          "AWS Kinesis",
+          "Datadog"
+        ],
+        "limits": [
+          "Free: 200 concurrent connections, 6M messages/month",
+          "Standard: 10K connections, 10K channels",
+          "Pro: 50K connections, 50K channels",
+          "Usage billed per million messages/connection-minutes on top of base"
+        ],
+        "keyFeatures": [
+          "Connection + channel-minute consumption billing model",
+          "HIPAA BAA on Enterprise",
+          "SOC2 Type 2 certified",
+          "Data residency options (EU, US, Australia)"
+        ],
+        "bestFor": [
+          "real-time data pipelines",
+          "live collaboration",
+          "pub/sub at scale",
+          "event-driven architectures"
+        ],
+        "sources": [
+          {
+            "url": "https://ably.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://ably.com/security-and-compliance",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Both pricing and compliance pages fetched directly from ably.com. Base prices confirmed; HIPAA BAA, SOC2 Type 2, GDPR explicitly confirmed. Standard/Pro reclassified billingModel base+usage as 'hybrid'."
+      }
+    },
+    {
+      "slug": "twilio-conversations",
+      "name": "Twilio Conversations",
+      "domain": "twilio.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "JavaScript",
+        "iOS (Swift)",
+        "Android (Java/Kotlin)",
+        "React Native",
+        "SMS",
+        "WhatsApp",
+        "MMS"
+      ],
+      "provenance": "Pricing fetched from twilio.com/en-us/messaging/pricing/conversations-api. First 200 active users/month free; tiered per-active-user rates confirmed. HIPAA/BAA not confirmed from the pages fetched; left null.",
+      "plans": [
+        {
+          "name": "Free Tier",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "First 200 active users/month are free; no subscription required.",
+          "source": {
+            "url": "https://www.twilio.com/en-us/messaging/pricing/conversations-api",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Pay-as-you-go",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "No subscription. Tiered per-active-user pricing: 201-5,000 = $0.05/user/mo; 5,001-10,000 = $0.0475/user/mo; 10,001-20,000 = $0.045/user/mo; 20,000+ = contact sales. Media storage = $0.25/GB/mo. Standard SMS/WhatsApp channel rates apply separately.",
+          "source": {
+            "url": "https://www.twilio.com/en-us/messaging/pricing/conversations-api",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "SMS",
+          "WhatsApp",
+          "MMS",
+          "iOS SDK",
+          "Android SDK",
+          "JavaScript SDK",
+          "React Native"
+        ],
+        "limits": [
+          "First 200 active users free",
+          "Active user = any user who logs in, joins a conversation, or is modified via API in the month",
+          "Media storage billed separately at $0.25/GB"
+        ],
+        "keyFeatures": [
+          "No subscription commitment — purely pay-per-active-user",
+          "Native SMS and WhatsApp channel support",
+          "Volume discount tiers built into published pricing",
+          "Programmable multi-channel conversations (SMS + chat + WhatsApp in one thread)"
+        ],
+        "bestFor": [
+          "multi-channel customer messaging",
+          "SMS-first apps",
+          "contact center integrations",
+          "low-MAU or bursty workloads"
+        ],
+        "sources": [
+          {
+            "url": "https://www.twilio.com/en-us/messaging/pricing/conversations-api",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing page fetched directly from Twilio's official conversations API pricing URL. Tier rates and 200-free-user tier confirmed from page content; compliance left null (not confirmed on the pricing page)."
+      }
+    },
+    {
+      "slug": "pusher-channels",
+      "name": "Pusher Channels",
+      "domain": "pusher.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "JavaScript",
+        "React",
+        "iOS (Swift/Objective-C)",
+        "Android (Java/Kotlin)",
+        "Python",
+        "Ruby",
+        "PHP",
+        "Go",
+        "Java",
+        ".NET",
+        "Laravel",
+        "Django"
+      ],
+      "provenance": "Full pricing table fetched from pusher.com/channels/pricing (Sandbox $0 through Growth Plus $1,199 + Enterprise — all confirmed). Compliance from pusher.com/security: ISO27001:2013 + GDPR confirmed; SOC2 not listed; HIPAA guidance-only (not certified). HIPAA and SOC2 set to null.",
+      "plans": [
+        {
+          "name": "Sandbox",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "200,000 messages/day; 100 concurrent connections; standard support.",
+          "source": {
+            "url": "https://pusher.com/channels/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Startup",
+          "monthlyUsd": 49,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "1M messages/day; 500 concurrent connections; standard support; prorated billing.",
+          "source": {
+            "url": "https://pusher.com/channels/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "4M messages/day; 2,000 concurrent connections; standard support.",
+          "source": {
+            "url": "https://pusher.com/channels/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 299,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "10M messages/day; 5,000 concurrent connections; premium support.",
+          "source": {
+            "url": "https://pusher.com/channels/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": 499,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "20M messages/day; 10,000 concurrent connections; premium support.",
+          "source": {
+            "url": "https://pusher.com/channels/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Growth",
+          "monthlyUsd": 699,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "40M messages/day; 15,000 concurrent connections; premium support.",
+          "source": {
+            "url": "https://pusher.com/channels/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Plus",
+          "monthlyUsd": 899,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "60M messages/day; 20,000 concurrent connections; premium support.",
+          "source": {
+            "url": "https://pusher.com/channels/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Growth Plus",
+          "monthlyUsd": 1199,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "90M messages/day; 30,000 concurrent connections; premium support.",
+          "source": {
+            "url": "https://pusher.com/channels/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom connections and message volumes; negotiated per customer.",
+          "source": {
+            "url": "https://pusher.com/channels/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://pusher.com/security/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "JavaScript",
+          "React",
+          "iOS",
+          "Android",
+          "Python",
+          "Ruby",
+          "PHP",
+          "Laravel",
+          "Django",
+          "Go"
+        ],
+        "limits": [
+          "Sandbox: 200K messages/day, 100 connections",
+          "Pricing is per-day message and connection count, not MAU",
+          "Prorated billing — pay for days used"
+        ],
+        "keyFeatures": [
+          "Per-day message + connection pricing (not MAU-based)",
+          "ISO27001:2013 certified",
+          "8 published self-serve tiers with transparent flat rates",
+          "Prorated billing on plan changes"
+        ],
+        "bestFor": [
+          "real-time notifications",
+          "live dashboards",
+          "collaborative tools",
+          "event-driven UIs"
+        ],
+        "sources": [
+          {
+            "url": "https://pusher.com/channels/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://pusher.com/security/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Full pricing table fetched from Pusher's official channels pricing page (all eight self-serve tiers + Enterprise confirmed). Security: ISO27001:2013 + GDPR confirmed; SOC2 not listed; HIPAA guidance-only — both set to null."
+      }
+    },
+    {
+      "slug": "zegocloud",
+      "name": "ZEGOCLOUD",
+      "domain": "zegocloud.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "iOS (Swift/Objective-C)",
+        "Android (Java/Kotlin)",
+        "JavaScript",
+        "React Native",
+        "Flutter",
+        "Unity 3D",
+        "Web"
+      ],
+      "provenance": "Pricing fetched from ZEGOCLOUD official ZIM SDK docs (Free $0, Signaling $99, Pro $369, Enterprise $999 — confirmed). Compliance fetched from zegocloud.com/security: ISO27001/27018/27701 + CMMI L3 + GDPR confirmed; SOC2 and formal HIPAA certification not stated (HIPAA 'compatibility' mentioned but not certified) so both null.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "100 MAU; 20 concurrent users; group size max 20 members; no credit card required.",
+          "source": {
+            "url": "https://www.zegocloud.com/docs/zim-android/introduction/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Signaling",
+          "monthlyUsd": 99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "10,000 MAU included free quota; unlimited MAU capacity; $0.0099/MAU overage beyond included quota; prepayment required at activation.",
+          "source": {
+            "url": "https://www.zegocloud.com/docs/zim-android/introduction/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 369,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "10,000 MAU included free quota; unlimited MAU capacity; $0.015/MAU overage; higher feature set than Signaling.",
+          "source": {
+            "url": "https://www.zegocloud.com/docs/zim-android/introduction/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": 999,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "10,000 MAU included free quota; unlimited MAU capacity; $0.015/MAU overage; full feature set; contact sales for custom quotation if needed.",
+          "source": {
+            "url": "https://www.zegocloud.com/docs/zim-android/introduction/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.zegocloud.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "iOS",
+          "Android",
+          "JavaScript",
+          "React Native",
+          "Flutter",
+          "Unity 3D"
+        ],
+        "limits": [
+          "Free: 100 MAU, group max 20 members",
+          "Signaling/Pro/Enterprise: 10,000 MAU free quota then per-MAU overage",
+          "Prepayment required at activation"
+        ],
+        "keyFeatures": [
+          "Published per-MAU overage rates across all paid tiers",
+          "SDK covers iOS, Android, Web, Flutter, Unity",
+          "ISO27001 + ISO27701 + ISO27018 + GDPR certified",
+          "Bundled with voice/video RTC stack"
+        ],
+        "bestFor": [
+          "gaming chat",
+          "live streaming apps",
+          "video-first social apps",
+          "Asia-Pacific market"
+        ],
+        "sources": [
+          {
+            "url": "https://www.zegocloud.com/docs/zim-android/introduction/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.zegocloud.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing fetched from ZEGOCLOUD's official ZIM SDK docs (all four plan prices confirmed). Security: ISO27001/27018/27701 + GDPR confirmed; SOC2 and formal HIPAA certification not stated, both null."
+      }
+    },
+    {
+      "slug": "mirrorfly",
+      "name": "MirrorFly",
+      "domain": "mirrorfly.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "iOS (Swift/Objective-C)",
+        "Android (Java/Kotlin)",
+        "JavaScript",
+        "React Native",
+        "Flutter"
+      ],
+      "provenance": "Pricing fetched from mirrorfly.com/pricing.php. Easy plan confirmed lifetime-free. Essentials and Premium prices not published (contact sales); monthlyUsd=null, billingModel=custom. 21-day free trial confirmed for paid plans. Compliance not verifiable on public pages; null.",
+      "plans": [
+        {
+          "name": "Easy",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Lifetime free; scalable MAU (5K-100K+); basic messaging only; no voice/video calls; 10% peak concurrent connections of MAU.",
+          "source": {
+            "url": "https://www.mirrorfly.com/pricing.php",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Essentials",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Price not published; contact sales. Includes advanced chat (search, media, group, file sharing, location, voice notes, moderation, translation); 25% peak concurrent connections; 21-day free trial available.",
+          "source": {
+            "url": "https://www.mirrorfly.com/pricing.php",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Price not published; contact sales. Adds 1-to-1 and group audio/video calls (up to 7,500 min/mo included); $0.0010/min overage for 1-to-1 calls; $0.0015/min for group calls; 50%+ peak concurrent connections; 24/7 support; 21-day free trial.",
+          "source": {
+            "url": "https://www.mirrorfly.com/pricing.php",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": 21,
+        "keyIntegrations": [
+          "iOS",
+          "Android",
+          "React Native",
+          "Flutter",
+          "JavaScript"
+        ],
+        "limits": [
+          "Easy: free, messaging only, 10% concurrent connections of MAU",
+          "Premium: 7,500 voice/video minutes/mo included; overage at $0.0010-$0.0015/min",
+          "MAU scales from 5K to 100K+"
+        ],
+        "keyFeatures": [
+          "Lifetime free messaging tier",
+          "Self-hosted deployment option (SDK license model)",
+          "Voice/video included in Premium tier",
+          "White-label branding available"
+        ],
+        "bestFor": [
+          "white-label chat apps",
+          "self-hosted deployments",
+          "messaging-only use cases",
+          "startups wanting free-forever baseline"
+        ],
+        "sources": [
+          {
+            "url": "https://www.mirrorfly.com/pricing.php",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing page fetched from mirrorfly.com/pricing.php. Easy lifetime-free confirmed; Essentials/Premium prices not disclosed publicly (null, custom); 21-day trial confirmed. Compliance not verifiable from public pages; null."
+      }
+    }
+  ]
+}

@@ -1,0 +1,1253 @@
+{
+  "vertical": "api-documentation-tools",
+  "generatedAt": "2026-06-15",
+  "methodologyNotes": "Pricing re-verified via WebFetch on each vendor's official pricing page (readme.com/pricing, stoplight.io/pricing, redocly.com/pricing, bump.sh/pricing, theneo.io/pricing, mintlify.com/pricing, gitbook.com/pricing, scalar.com/pricing) on 2026-06-15. Apidog (apidog.com/pricing) and Document360 (document360.com/pricing) render pricing client-side and returned no extractable price data; Apidog plan prices corroborated via plans.apis.io and g2/trustradius; Document360 confirmed quote-only since late 2024 via g2, checkthat.ai, and happysupport.ai (all monthlyUsd left null — no number invented). Compliance re-checked on official security/trust pages: theneo.io/security explicitly lists SOC2+ISO27001+ISO9001+GDPR (completed, annual audits); redocly.com/security confirms SOC2 Type II + CSA STAR + GDPR DPA; bump.sh/security explicitly states NO SOC2/ISO27001 but maintains GDPR DPA; gitbook blog confirms SOC2 Type II + ISO27001; mintlify SOC2 confirmed (GDPR in progress→null); stoplight names no certifications publicly (all null); ReadMe SOC2 report + GDPR DPA confirmed, HIPAA on gated portal left null. All pages accessed 2026-06-15.",
+  "vendors": [
+    {
+      "slug": "readme",
+      "name": "ReadMe",
+      "domain": "readme.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "GitHub",
+        "Swagger/OpenAPI",
+        "Postman",
+        "Zapier",
+        "Segment",
+        "Intercom",
+        "Salesforce"
+      ],
+      "provenance": "Pricing re-fetched from readme.com/pricing on 2026-06-15: Pro $250/mo (annual), Enterprise $3,000+/mo. SOC2 report and GDPR DPA confirmed via trust.readme.com/docs.readme.com security FAQ; HIPAA referenced only on gated trust portal, left null.",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "1 project, custom domain, interactive API reference, usage metrics, AI features included. Forever free.",
+          "source": {
+            "url": "https://readme.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 250,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Billed annually at $250/month. Unlimited projects, 5 admins included ($20/month per additional admin). Private docs, changelog, branching, custom MDX. Ask AI add-on available for $150/month.",
+          "source": {
+            "url": "https://readme.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": 3000,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Starts at $3,000/month, billed annually. Multiple combined projects, SSO/OAuth, audit logs, no ReadMe branding, dedicated support. Contact sales for exact quote.",
+          "source": {
+            "url": "https://readme.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://trust.readme.com/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "GitHub",
+          "Swagger/OpenAPI",
+          "Postman",
+          "Segment",
+          "Zapier",
+          "Intercom"
+        ],
+        "limits": [
+          "Starter: 1 project only",
+          "Pro: 5 admins included, $20/month each additional",
+          "Pro: annual billing required"
+        ],
+        "keyFeatures": [
+          "Interactive API Reference (Try It)",
+          "Bi-directional OpenAPI sync",
+          "Usage metrics and developer analytics",
+          "Ask AI add-on for in-docs AI chat"
+        ],
+        "bestFor": [
+          "developer-portals",
+          "API-documentation",
+          "SaaS-platforms",
+          "developer-experience"
+        ],
+        "sources": [
+          {
+            "url": "https://readme.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://trust.readme.com/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing fetched directly from readme.com/pricing. Compliance: SOC2 report and GDPR DPA confirmed via trust.readme.com; HIPAA only referenced on gated SafeBase portal and not directly verifiable, so left null."
+      }
+    },
+    {
+      "slug": "stoplight",
+      "name": "Stoplight",
+      "domain": "stoplight.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "GitHub",
+        "GitLab",
+        "Bitbucket",
+        "Slack",
+        "Azure DevOps",
+        "LDAP",
+        "SAML SSO"
+      ],
+      "provenance": "Pricing re-fetched from stoplight.io/pricing on 2026-06-15 (Basic $56, Startup $147, Pro Team $453 monthly). stoplight.io/security-practices exists but names no specific certifications; all compliance left null.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "1 user, 1 project. API editor, documentation editor, local mock servers, interactive docs.",
+          "source": {
+            "url": "https://stoplight.io/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Basic",
+          "monthlyUsd": 56,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 21,
+          "billingModel": "flat",
+          "notes": "3 users included. $44/month billed annually, $56/month billed monthly. Additional users $11/month (annual) or $14/month (monthly). Unlimited projects. 14-day free trial.",
+          "source": {
+            "url": "https://stoplight.io/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Startup",
+          "monthlyUsd": 147,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 23,
+          "billingModel": "flat",
+          "notes": "8 users included. $113/month billed annually, $147/month billed monthly. Additional users $11/month (annual). Private projects, multi-branch, custom domains, theming, Google Analytics. 14-day free trial.",
+          "source": {
+            "url": "https://stoplight.io/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Pro Team",
+          "monthlyUsd": 453,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "15 users included. $362/month billed annually, $453/month billed monthly. Additional users $22/month (annual) or $27/month (monthly). Shared style guides, LDAP & SAML SSO, activity logs, component libraries. 14-day free trial.",
+          "source": {
+            "url": "https://stoplight.io/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing. Unlimited users, projects, and teams. Custom payment terms, invoicing, priority support. Contact sales.",
+          "source": {
+            "url": "https://stoplight.io/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": {
+            "url": "https://stoplight.io/security-practices",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "GitHub",
+          "GitLab",
+          "Bitbucket",
+          "Azure DevOps",
+          "Slack",
+          "SAML SSO",
+          "LDAP"
+        ],
+        "limits": [
+          "Free: 1 user, 1 project",
+          "Basic: 3 users included",
+          "Startup: 8 users included",
+          "Pro Team: 15 users included"
+        ],
+        "keyFeatures": [
+          "Visual OpenAPI/JSON Schema designer",
+          "Instant mock servers",
+          "Style guide enforcement across teams",
+          "Collaborative API design with branching"
+        ],
+        "bestFor": [
+          "API-design",
+          "API-documentation",
+          "enterprise-teams",
+          "design-first-API-development"
+        ],
+        "sources": [
+          {
+            "url": "https://stoplight.io/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://stoplight.io/security-practices",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing re-fetched from stoplight.io/pricing (all paid-tier monthly prices confirmed exact). Public security-practices page names no certifications; though parent SmartBear holds SOC2, Stoplight does not itself claim it, so compliance fields kept null."
+      }
+    },
+    {
+      "slug": "redocly",
+      "name": "Redocly",
+      "domain": "redocly.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "GitHub",
+        "GitLab",
+        "Bitbucket",
+        "Stripe",
+        "Typesense",
+        "Algolia",
+        "SAML SSO"
+      ],
+      "provenance": "Pricing re-fetched from redocly.com/pricing on 2026-06-15 (Pro $10/seat, Enterprise $24/seat monthly). redocly.com/security confirms SOC2 Type II + CSA STAR + GDPR DPA; no HIPAA.",
+      "plans": [
+        {
+          "name": "Pro",
+          "monthlyUsd": 10,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "per_seat",
+          "notes": "$10/seat/month billed monthly. Annual billing saves approximately one month (~17%). Includes Reunite, custom domain hosting, 1 project, 100 pages. 30-day free trial.",
+          "source": {
+            "url": "https://redocly.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": 24,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "per_seat",
+          "notes": "$24/seat/month billed monthly. Annual billing saves approximately one month (~17%). Adds 500 pages, SSO, Guest SSO, RBAC, remote content, AI search, Typesense, analytics, MCP servers. 30-day free trial.",
+          "source": {
+            "url": "https://redocly.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Enterprise+",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing, billed annually only. Adds data residency, single-tenant hosting, premium support, procurement/legal assistance, pay-by-invoice. Contact sales.",
+          "source": {
+            "url": "https://redocly.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://redocly.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 30,
+        "keyIntegrations": [
+          "GitHub",
+          "GitLab",
+          "Bitbucket",
+          "Typesense",
+          "Algolia",
+          "SAML SSO",
+          "MCP servers"
+        ],
+        "limits": [
+          "Pro: 1 project, 100 pages",
+          "Enterprise: 500 pages",
+          "No free tier — trial only"
+        ],
+        "keyFeatures": [
+          "Per-seat pricing with modular add-ons (Revel, Reef, Realm)",
+          "AI search and Typesense integration on Enterprise",
+          "MCP server hosting for Enterprise",
+          "CSA STAR and SOC 2 Type II certified"
+        ],
+        "bestFor": [
+          "API-documentation",
+          "developer-portals",
+          "enterprise-API-governance",
+          "OpenAPI-publishing"
+        ],
+        "sources": [
+          {
+            "url": "https://redocly.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://redocly.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing re-fetched from redocly.com/pricing; per-seat prices confirmed exact. Security page explicitly confirms 'SOC 2, Type II audit' completed, CSA STAR, and GDPR/CCPA DPA; HIPAA not mentioned."
+      }
+    },
+    {
+      "slug": "bump-sh",
+      "name": "Bump.sh",
+      "domain": "bump.sh",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "GitHub",
+        "GitLab",
+        "CLI",
+        "CI/CD pipelines",
+        "OpenAPI",
+        "AsyncAPI",
+        "Arazzo"
+      ],
+      "provenance": "Pricing re-fetched from bump.sh/pricing on 2026-06-15 (Basic $50, Pro $250; no annual discount shown). bump.sh/security explicitly states no SOC2/ISO27001; GDPR via DPA.",
+      "plans": [
+        {
+          "name": "Basic",
+          "monthlyUsd": 50,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "10 API docs, 3 internal users, 20 external users, 5 MCP tools. Custom domain and logo. OpenAPI, AsyncAPI, and Arazzo support. No free tier; open-source projects get Pro for free. No trial on Basic.",
+          "source": {
+            "url": "https://bump.sh/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 250,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "30 API docs, 5 internal users, 40 external users, 50 MCP tools. Adds branches management, API Explorer, private MCP servers, CI integration, release rollback, automatic changelog. 14-day free trial.",
+          "source": {
+            "url": "https://bump.sh/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Custom",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Unlimited internal users, unlimited external users, custom API docs and MCP tools. Adds SSO, reverse proxy/embed mode, on-premise MCP dataplane, custom reports, 99.99% SLA. Contact sales.",
+          "source": {
+            "url": "https://bump.sh/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": false,
+          "gdpr": true,
+          "source": {
+            "url": "https://bump.sh/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "GitHub",
+          "GitLab",
+          "CLI",
+          "CI/CD pipelines",
+          "OpenAPI",
+          "AsyncAPI",
+          "Arazzo"
+        ],
+        "limits": [
+          "Basic: 10 API docs, 3 internal users",
+          "Pro: 30 API docs, 5 internal users",
+          "No free tier (open-source projects get Pro free)"
+        ],
+        "keyFeatures": [
+          "AsyncAPI and Arazzo spec support alongside OpenAPI",
+          "Automatic changelog from spec diffs",
+          "MCP server hosting (private on Pro)",
+          "API Explorer with live try-it"
+        ],
+        "bestFor": [
+          "API-changelog",
+          "AsyncAPI-documentation",
+          "developer-portals",
+          "MCP-server-hosting"
+        ],
+        "sources": [
+          {
+            "url": "https://bump.sh/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://bump.sh/security",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing re-fetched from bump.sh/pricing; Basic $50 and Pro $250 confirmed exact, no annual discount shown. Security page explicitly states 'No SOC 2, ISO 27001, or similar certifications at this time'; GDPR compliance via Privacy Policy and DPA."
+      }
+    },
+    {
+      "slug": "theneo",
+      "name": "Theneo",
+      "domain": "theneo.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "GitHub",
+        "GitLab",
+        "Postman",
+        "Slack",
+        "Microsoft Teams",
+        "Zapier"
+      ],
+      "provenance": "Pricing re-fetched from theneo.io/pricing on 2026-06-15 (Business $150/$120, Growth $450/$400). theneo.io/security explicitly lists SOC2 (completed, annual audits), ISO 27001, ISO 9001, GDPR; no HIPAA. Corrected soc2 null→true.",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Forever free. 1 public project, up to 2 private projects, up to 20 team members, 100 AI search results, 2,000 TheneoAI uses/month. Includes automatic changelog and API explorer.",
+          "source": {
+            "url": "https://www.theneo.io/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 150,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "$150/month billed monthly, $120/month billed annually (per workspace). Up to 7 projects, 50 team members, unlimited AI search and TheneoAI, custom domain, one developer hub page.",
+          "source": {
+            "url": "https://www.theneo.io/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Growth",
+          "monthlyUsd": 450,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 11,
+          "billingModel": "flat",
+          "notes": "$450/month billed monthly, $400/month billed annually (per workspace). Unlimited developer hubs (up to 20), 100 team members, custom CSS, IP whitelisting, custom analytics, Slack & Teams 1:1 support.",
+          "source": {
+            "url": "https://www.theneo.io/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing. Self-hosting available, SAML SSO, OAuth 2.0, custom user roles, custom automations, dedicated customer success manager. Contact sales.",
+          "source": {
+            "url": "https://www.theneo.io/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.theneo.io/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "GitHub",
+          "GitLab",
+          "Postman",
+          "Slack",
+          "Microsoft Teams"
+        ],
+        "limits": [
+          "Starter: 1 public + 2 private projects, 20 members",
+          "Business: 7 projects, 50 members",
+          "Growth: up to 20 developer hubs, 100 members"
+        ],
+        "keyFeatures": [
+          "AI-generated API documentation from spec upload",
+          "Per-workspace flat billing (not per-seat)",
+          "IP whitelisting on Growth tier",
+          "Self-hosting available on Enterprise"
+        ],
+        "bestFor": [
+          "AI-assisted-API-docs",
+          "small-teams",
+          "developer-portals",
+          "API-documentation"
+        ],
+        "sources": [
+          {
+            "url": "https://www.theneo.io/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.theneo.io/security",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing re-fetched from theneo.io/pricing; Business and Growth monthly/annual prices confirmed exact. Security page explicitly states 'We proudly uphold certifications and compliance with the following industry standards: GDPR, SOC2, ISO 27001, ISO 9001' with annual SOC2 audits — SOC2 corrected to true (draft incorrectly said 'audit underway'/null). HIPAA not mentioned."
+      }
+    },
+    {
+      "slug": "mintlify",
+      "name": "Mintlify",
+      "domain": "mintlify.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "GitHub",
+        "GitLab",
+        "Slack",
+        "Intercom",
+        "Segment",
+        "MCP servers",
+        "Stripe"
+      ],
+      "provenance": "Pricing re-fetched from mintlify.com/pricing on 2026-06-15: only two tiers — free Starter and quote-only Enterprise. SOC2 confirmed via security.mintlify.com (Drata); GDPR in-progress (null). Starter is forever-free, not a trial — freeTrialDays corrected to null.",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Forever free. Full platform access including custom domain, web editor, authentication (Mintlify Auth), AI assistant, writing agent, workflows, MCP server. 5,000 AI credits included; overages at $0.01/credit.",
+          "source": {
+            "url": "https://mintlify.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing. Adds role-based permissions, performance SLA, SSO (dashboard + docs), agent analytics, advanced insights, enterprise security review, legal review, 24/7 incident monitoring, dedicated customer success.",
+          "source": {
+            "url": "https://mintlify.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://security.mintlify.com/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "GitHub",
+          "GitLab",
+          "Slack",
+          "Intercom",
+          "Segment",
+          "MCP servers"
+        ],
+        "limits": [
+          "Starter: 5,000 AI credits/month, overages $0.01 each",
+          "SSO only on Enterprise",
+          "RBAC only on Enterprise"
+        ],
+        "keyFeatures": [
+          "MDX-based docs with full platform on free tier",
+          "AI writing agent and assistant",
+          "Built-in MCP server hosting",
+          "Native authentication without third-party IdP on Starter"
+        ],
+        "bestFor": [
+          "developer-documentation",
+          "API-documentation",
+          "AI-powered-docs",
+          "open-source-projects"
+        ],
+        "sources": [
+          {
+            "url": "https://mintlify.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://security.mintlify.com/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing re-fetched from mintlify.com/pricing: confirmed two tiers only (free Starter, quote-only Enterprise) — no published Pro/Growth price. SOC2 confirmed via security.mintlify.com (Drata-powered); GDPR/ISO27001 noted as in-progress so gdpr left null. Starter is a forever-free plan (not a 14-day rebill trial); freeTrialDays corrected from 14 to null."
+      }
+    },
+    {
+      "slug": "gitbook",
+      "name": "GitBook",
+      "domain": "gitbook.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "GitHub",
+        "GitLab",
+        "Slack",
+        "Jira",
+        "Linear",
+        "Figma",
+        "Intercom",
+        "Google Analytics"
+      ],
+      "provenance": "Pricing re-fetched from gitbook.com/pricing on 2026-06-15 (Premium $65/site + $12/user, Ultimate $249/site + $12/user). SOC2 Type II + ISO 27001 confirmed via official blog; GDPR via security FAQ.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "1 user, 1 site. Block-based editor, GitHub/GitLab sync, API playgrounds, preview deployments, LLM optimizations. Forever free.",
+          "source": {
+            "url": "https://www.gitbook.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": 65,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "$65/site/month + $12/user/month. Annual billing gives 2 months free (~17% discount). Team collaboration, AI search, custom domain, advanced branding, analytics, site redirects.",
+          "source": {
+            "url": "https://www.gitbook.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Ultimate",
+          "monthlyUsd": 249,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "$249/site/month + $12/user/month. Annual billing gives 2 months free (~17% discount). Adds AI Assistant (500 answers/month), AI insights, GitBook Agent, adaptive content, authenticated access, channels.",
+          "source": {
+            "url": "https://www.gitbook.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing. Adds SAML SSO, white-glove migration, custom integrations, dedicated support, user training, custom contracts, unlimited adaptive content, Git Sync IP allowlisting.",
+          "source": {
+            "url": "https://www.gitbook.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.gitbook.com/blog/gitbook-security-soc2-iso27001",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "GitHub",
+          "GitLab",
+          "Slack",
+          "Jira",
+          "Linear",
+          "Figma",
+          "Intercom",
+          "Google Analytics"
+        ],
+        "limits": [
+          "Free: 1 user, 1 site",
+          "Premium/Ultimate: $12/month per additional user",
+          "AI Assistant: 500 answers/month on Ultimate"
+        ],
+        "keyFeatures": [
+          "Per-site pricing model (not per-seat only)",
+          "GitBook Agent for AI-powered content",
+          "Adaptive content (personalized docs)",
+          "SOC2 Type II and ISO 27001 certified"
+        ],
+        "bestFor": [
+          "knowledge-base",
+          "internal-docs",
+          "API-documentation",
+          "developer-portals"
+        ],
+        "sources": [
+          {
+            "url": "https://www.gitbook.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.gitbook.com/blog/gitbook-security-soc2-iso27001",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing re-fetched from gitbook.com/pricing; Premium $65/site and Ultimate $249/site (both + $12/user) confirmed exact. SOC2 Type II + ISO 27001 confirmed via official blog; GDPR via security FAQ. Free tier (1 user, 1 site) is forever-free; freeTrialDays=14 reflects the paid-tier trial."
+      }
+    },
+    {
+      "slug": "document360",
+      "name": "Document360",
+      "domain": "document360.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Zendesk",
+        "Freshdesk",
+        "Slack",
+        "Intercom",
+        "Salesforce",
+        "HubSpot",
+        "Zapier",
+        "Google Analytics"
+      ],
+      "provenance": "document360.com/pricing renders client-side and exposes no prices; confirmed quote-only since late 2024 via g2, checkthat.ai, and happysupport.ai. All monthlyUsd left null — no price invented. 2026 third-party quote ranges noted in plan notes for context only.",
+      "plans": [
+        {
+          "name": "Professional",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Quote-only since late 2024 (no published price). Historical list price was ~$149/project/month; 2026 third-party quote estimates ~$199–$249/project/month (not vendor-published). Unlimited articles, custom domain, basic analytics, 24/5 support. 14-day free trial.",
+          "source": {
+            "url": "https://document360.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Quote-only (no published price). Historical list price was ~$299/project/month; 2026 third-party quote estimates ~$399–$499/project/month (not vendor-published). Adds approval workflows, AI search (Ask Eddy), multilingual support, Zendesk/Freshdesk/Slack integrations. 14-day free trial.",
+          "source": {
+            "url": "https://document360.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only (no published price). 2026 third-party estimates put Enterprise around $799+/project/month annually; a stale upgrade-doc reference of $5,988/year exists but is not a current published list price. Adds SSO/SCIM, audit logs, sandbox, interactive decision trees, dedicated CSM. 14-day free trial.",
+          "source": {
+            "url": "https://document360.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://checkthat.ai/brands/document360/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Zendesk",
+          "Freshdesk",
+          "Slack",
+          "Intercom",
+          "Salesforce",
+          "HubSpot",
+          "Zapier"
+        ],
+        "limits": [
+          "All plans billed per project per month",
+          "No free tier — 14-day trial only",
+          "Reader accounts separately licensed on Enterprise",
+          "All plan prices quote-only since late 2024"
+        ],
+        "keyFeatures": [
+          "Per-project billing model (not per-seat)",
+          "Ask Eddy AI search on Business+",
+          "Decision-tree guides on Enterprise",
+          "Knowledge base focused (not API-doc first)"
+        ],
+        "bestFor": [
+          "knowledge-base",
+          "customer-support-docs",
+          "enterprise-documentation",
+          "SaaS-help-centers"
+        ],
+        "sources": [
+          {
+            "url": "https://document360.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://checkthat.ai/brands/document360/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing page renders client-side with no extractable prices; quote-only status confirmed via g2.com, checkthat.ai, and happysupport.ai. All monthlyUsd null (no number invented). SOC2 noted in third-party reviews; not independently verified from a Document360 security page, so treated as low-confidence true. The stale $5,988/year upgrade-doc figure was removed from being presented as a current price."
+      }
+    },
+    {
+      "slug": "apidog",
+      "name": "Apidog",
+      "domain": "apidog.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "GitHub",
+        "GitLab",
+        "Swagger/OpenAPI",
+        "Postman",
+        "CI/CD pipelines",
+        "SAML SSO",
+        "Microsoft AD",
+        "SCIM"
+      ],
+      "provenance": "apidog.com/pricing renders client-side (empty fetch); plan prices corroborated via plans.apis.io, g2, and trustradius on 2026-06-15: Basic $12/mo ($9 annual), Professional $18/mo annual, Enterprise $27/mo annual — all per user. Enterprise compliance (SOC2, GDPR, ISO 27001) stated on plans page.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Up to 4 users. API design, debugging, mocking, documentation publishing, unlimited collection runs, 1 sprint branch per project. Community support.",
+          "source": {
+            "url": "https://apidog.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Basic",
+          "monthlyUsd": 12,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 25,
+          "billingModel": "per_seat",
+          "notes": "$12/user/month billed monthly, $9/user/month billed annually. API versioning, expanded sprint branches, scheduled imports, 90-day request history, up to 20 team projects, standard support.",
+          "source": {
+            "url": "https://plans.apis.io/plans/apidog/apidog-plans-pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Professional",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$18/user/month billed annually (monthly price not published). Unlimited projects, team-level shared variables, white-label documentation, faster scheduled imports (every 10 minutes), priority support.",
+          "source": {
+            "url": "https://plans.apis.io/plans/apidog/apidog-plans-pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$27/user/month billed annually (monthly price not published). Enterprise SSO (SAML 2.0, Microsoft AD, OIDC, SCIM), multiple documentation sites, unlimited scheduled tasks, 24/7 support. On-premises deployment at custom pricing.",
+          "source": {
+            "url": "https://plans.apis.io/plans/apidog/apidog-plans-pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://plans.apis.io/plans/apidog/apidog-plans-pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "GitHub",
+          "GitLab",
+          "Postman import",
+          "CI/CD pipelines",
+          "SAML SSO",
+          "SCIM",
+          "OpenAPI"
+        ],
+        "limits": [
+          "Free: 4 users max",
+          "Basic: up to 20 team projects",
+          "Professional and Enterprise: annual per-user pricing; monthly equivalents not published"
+        ],
+        "keyFeatures": [
+          "All-in-one API design, debug, test, mock, and document platform",
+          "White-label documentation on Professional+",
+          "On-premises deployment available on Enterprise",
+          "SOC2, GDPR, ISO 27001 compliance on Enterprise"
+        ],
+        "bestFor": [
+          "API-design",
+          "API-testing",
+          "API-documentation",
+          "full-API-lifecycle"
+        ],
+        "sources": [
+          {
+            "url": "https://apidog.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://plans.apis.io/plans/apidog/apidog-plans-pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Official apidog.com/pricing returned empty content (client-side render). Plan prices corroborated via plans.apis.io and cross-checked against g2.com and trustradius: Basic $12/mo ($9 annual), Professional $18/mo annual, Enterprise $27/mo annual, all per user. Professional/Enterprise monthly equivalents not published, so monthlyUsd left null for those two."
+      }
+    },
+    {
+      "slug": "scalar",
+      "name": "Scalar",
+      "domain": "scalar.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "GitHub",
+        "GitLab",
+        "OpenAPI",
+        "MCP servers",
+        "TypeScript SDK",
+        "Python SDK",
+        "Go SDK",
+        "Java SDK"
+      ],
+      "provenance": "Pricing re-fetched from scalar.com/pricing on 2026-06-15 (Pro $72/mo; SDK add-ons +$100/language). SOC1 + SOC2 Type II confirmed via trust.scalar.com; GDPR per trust center.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Hosted OpenAPI docs, built-in API client, 50 Agent Scalar credits, unlimited viewer seats, 1 editor seat. Max 3 APIs. No custom domains or subdomains. Open-source core on GitHub.",
+          "source": {
+            "url": "https://scalar.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 72,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$72/month. Custom domains/subdomains, Git Sync, Markdown/MDX support, hosted MCP servers, automated GitHub workflows, unlimited editor and viewer seats, 500 Agent Scalar credits. SDKs in multiple languages available as add-ons (+$100 each per language).",
+          "source": {
+            "url": "https://scalar.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing. Full developer portals, SSO/SAML, RBAC, priority support with SLAs, SDK/MCP migration services, dedicated Slack/Teams channel, custom Agent Scalar credits.",
+          "source": {
+            "url": "https://scalar.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://trust.scalar.com",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "GitHub",
+          "GitLab",
+          "OpenAPI",
+          "MCP servers",
+          "TypeScript SDK",
+          "Python SDK",
+          "Go SDK"
+        ],
+        "limits": [
+          "Free: 3 APIs max, 1 editor seat, no custom domain",
+          "Pro: SDK add-ons $100 each per language",
+          "SSO/RBAC only on Enterprise"
+        ],
+        "keyFeatures": [
+          "Open-source core freely self-hostable on GitHub",
+          "Hosted MCP server support on Pro",
+          "Multi-language SDK generation as add-on",
+          "Built-in API client (Scalar Client)"
+        ],
+        "bestFor": [
+          "open-source-API-docs",
+          "API-documentation",
+          "developer-portals",
+          "MCP-server-hosting"
+        ],
+        "sources": [
+          {
+            "url": "https://scalar.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://trust.scalar.com",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing re-fetched from scalar.com/pricing; Pro $72/mo and SDK add-on +$100/language confirmed exact. SOC1 Type II + SOC2 Type II (annual audits) confirmed via trust.scalar.com trust center; GDPR per trust center. HIPAA not mentioned."
+      }
+    }
+  ]
+}

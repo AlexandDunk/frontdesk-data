@@ -1,0 +1,1103 @@
+{
+  "vertical": "sales-tax-automation",
+  "generatedAt": "2026-06-15",
+  "methodologyNotes": "Official pricing pages were re-fetched and verified via WebFetch on 2026-06-15: taxjar.com/pricing, quaderno.io/pricing, stripe.com/tax/pricing plus the US support article support.stripe.com/questions/understanding-stripe-tax-pricing, anrok.com/pricing, numeral.com/pricing, vatcompliance.co/prices/sales-tax/, avalara.com/us/en/products/pricing.html, sovos.com, and vertexinc.com/integrations. Stripe Tax Complete USD tiers ($90/$430/$1000/$1500) and the $0.50 Transaction-API / $0.05 Calculation-API rates were confirmed against the US Stripe support article; the public stripe.com/tax/pricing page geolocates to EUR (€80/€400/€930/€1400, €0.45/€0.04), so USD figures are retained from the US article. LOVAT officially rebranded to Lappa effective 2026-03-20 (confirmed: vatcompliance.co/blog/lovat-is-now-lappa and lappa.org); vatcompliance.co remains the active pricing domain, so plan slug retained. Avalara, Sovos, and Vertex do not publish self-serve software prices and are listed with monthlyUsd:null; speculative third-party annual-price RANGES were removed from notes (never published by the vendor). All EUR-denominated plans (LOVAT/Lappa) and all per-filing/per-transaction models are captured in plan notes with monthlyUsd:null rather than converted/guessed. accessedAt 2026-06-15.",
+  "vendors": [
+    {
+      "slug": "taxjar",
+      "name": "TaxJar",
+      "domain": "taxjar.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Shopify",
+        "WooCommerce",
+        "BigCommerce",
+        "Amazon",
+        "eBay",
+        "Etsy",
+        "Walmart",
+        "Square",
+        "Squarespace",
+        "Magento",
+        "PayPal",
+        "Stripe",
+        "QuickBooks",
+        "Xero"
+      ],
+      "provenance": "Pricing fetched and verified from taxjar.com/pricing (Starter $39/mo, Professional $99/mo, 30-day trial, no forever-free). SOC 2 Type II and GDPR explicitly stated on taxjar.com/security.",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": 39,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "Starts at 200 orders/month; price scales up with order volume tiers. Up to 3 data-import integrations, 2 AutoFile credits/year ($50 each additional), email support, 10 team users. Annual plans save 10%+. Flex fees allow temporary tier upgrades. State registration $299 each.",
+          "source": {
+            "url": "https://www.taxjar.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Professional",
+          "monthlyUsd": 99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "Starts at 200 orders/month; price scales with volume. Up to 10 total integrations (data-import + API), real-time API calculations, 4 AutoFile credits/year ($55 each additional), phone + email support, dedicated onboarding and Customer Success Manager, 10 team users. Annual plans save 10%+.",
+          "source": {
+            "url": "https://www.taxjar.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.taxjar.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 30,
+        "keyIntegrations": [
+          "Shopify",
+          "WooCommerce",
+          "BigCommerce",
+          "Amazon",
+          "QuickBooks",
+          "Xero"
+        ],
+        "limits": [
+          "Starter: up to 3 integrations, 2 AutoFile credits/year",
+          "Professional: up to 10 integrations, 4 AutoFile credits/year",
+          "Order volume tiers scale from 200 orders/month upward"
+        ],
+        "keyFeatures": [
+          "AutoFile automated state return filing",
+          "Real-time sales tax API (Professional)",
+          "Nexus tracking across US states",
+          "Flex fees for temporary volume spikes"
+        ],
+        "bestFor": [
+          "ecommerce sellers",
+          "US sales tax",
+          "multi-channel retail",
+          "small to mid-market"
+        ],
+        "sources": [
+          {
+            "url": "https://www.taxjar.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.taxjar.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing verified on taxjar.com/pricing. SOC 2 Type II and GDPR explicitly stated on taxjar.com/security (also Cloud Security Alliance listed). No forever-free plan; 30-day trial."
+      }
+    },
+    {
+      "slug": "quaderno",
+      "name": "Quaderno",
+      "domain": "quaderno.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Stripe",
+        "PayPal",
+        "Braintree",
+        "GoCardless",
+        "WooCommerce",
+        "Shopify",
+        "Amazon FBA",
+        "Square",
+        "Easy Digital Downloads",
+        "Kajabi",
+        "Thinkific",
+        "Teachable",
+        "Zapier",
+        "Xero"
+      ],
+      "provenance": "Pricing verified on quaderno.io/pricing (Hobby $29, Startup $49, Business $99, Growth $149, Enterprise custom; 7-day trial, no forever-free). SOC 2 not stated on accessible pages; GDPR via privacy policy.",
+      "plans": [
+        {
+          "name": "Hobby",
+          "monthlyUsd": 29,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "25 transactions/month, 1 user, 1 jurisdiction, 1 integration. International tax calculations, nexus alerts, automatic invoicing, tax reports.",
+          "source": {
+            "url": "https://quaderno.io/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Startup",
+          "monthlyUsd": 49,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "250 transactions/month, unlimited users/jurisdictions/integrations. Auto-upgrade to next tier if limit exceeded.",
+          "source": {
+            "url": "https://quaderno.io/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "1,000 transactions/month, unlimited users/jurisdictions/integrations. Most popular plan.",
+          "source": {
+            "url": "https://quaderno.io/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Growth",
+          "monthlyUsd": 149,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "2,500 transactions/month, unlimited users/jurisdictions/integrations.",
+          "source": {
+            "url": "https://quaderno.io/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "For businesses exceeding 2,500 transactions/month. Custom pricing via sales.",
+          "source": {
+            "url": "https://quaderno.io/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://quaderno.io/legal/privacy/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 7,
+        "keyIntegrations": [
+          "Stripe",
+          "PayPal",
+          "Shopify",
+          "WooCommerce",
+          "Xero",
+          "Zapier"
+        ],
+        "limits": [
+          "Hobby: 25 tx/month, 1 user, 1 jurisdiction, 1 integration",
+          "Startup: 250 tx/month",
+          "Business: 1,000 tx/month",
+          "Growth: 2,500 tx/month"
+        ],
+        "keyFeatures": [
+          "Global VAT/GST/sales tax calculation",
+          "Automated tax invoicing",
+          "Nexus monitoring and alerts",
+          "Quaderno Checkout for embedded compliance"
+        ],
+        "bestFor": [
+          "SaaS",
+          "digital products",
+          "course creators",
+          "global VAT compliance"
+        ],
+        "sources": [
+          {
+            "url": "https://quaderno.io/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://quaderno.io/integrations/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://quaderno.io/legal/privacy/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "All plan prices verified on quaderno.io/pricing. 7-day trial, no forever-free. GDPR confirmed; SOC 2 not explicitly stated on accessible pages (null)."
+      }
+    },
+    {
+      "slug": "stripe-tax",
+      "name": "Stripe Tax",
+      "domain": "stripe.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Stripe Billing",
+        "Stripe Checkout",
+        "Stripe Invoicing",
+        "Stripe Payment Links",
+        "Stripe API"
+      ],
+      "provenance": "Tax Complete USD tiers ($90/$430/$1000/$1500) and API rates ($0.50 Transaction API, $0.05 Calculation API) confirmed on US support article support.stripe.com/questions/understanding-stripe-tax-pricing. Public stripe.com/tax/pricing geolocates to EUR (€80/€400/€930/€1400, €0.45/€0.04); USD retained from US article.",
+      "plans": [
+        {
+          "name": "Tax Basic – No-Code",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "0.5% of volume processed in jurisdictions where registered to collect tax. No monthly fee. Works with Stripe Billing, Checkout, Invoicing, Payment Links. Tax calculation in 100+ countries.",
+          "source": {
+            "url": "https://support.stripe.com/questions/understanding-stripe-tax-pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Tax Basic – API",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$0.50 per Transaction API call; $0.05 per Calculation API call (10 included per transaction). No monthly fee. USD figures from US support article; EUR market shows €0.45 / €0.04.",
+          "source": {
+            "url": "https://support.stripe.com/questions/understanding-stripe-tax-pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Tax Complete – Tier 1",
+          "monthlyUsd": 90,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Annual contract billed monthly. 2 registrations/year, 200 transactions ($0.50 overage), 2,000 calculation calls ($0.05 overage), 4 filings/year. (EU market price: €80/mo.)",
+          "source": {
+            "url": "https://support.stripe.com/questions/understanding-stripe-tax-pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Tax Complete – Tier 2",
+          "monthlyUsd": 430,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Annual contract billed monthly. 4 registrations/year, 1,000 transactions ($0.48 overage), 10,000 calculation calls ($0.05 overage), 12 filings/year. (EU market price: €400/mo.)",
+          "source": {
+            "url": "https://support.stripe.com/questions/understanding-stripe-tax-pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Tax Complete – Tier 3",
+          "monthlyUsd": 1000,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Annual contract billed monthly. 6 registrations/year, 2,500 transactions ($0.46 overage), 25,000 calculation calls ($0.05 overage), 20 filings/year. (EU market price: €930/mo.)",
+          "source": {
+            "url": "https://support.stripe.com/questions/understanding-stripe-tax-pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Tax Complete – Tier 4",
+          "monthlyUsd": 1500,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Annual contract billed monthly. 10 registrations/year, 5,000 transactions ($0.35 overage), 50,000 calculation calls ($0.04 overage), 32 filings/year. Custom pricing above this tier. (EU market price: €1,400/mo.)",
+          "source": {
+            "url": "https://support.stripe.com/questions/understanding-stripe-tax-pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://stripe.com/privacy",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Stripe Billing",
+          "Stripe Checkout",
+          "Stripe Invoicing",
+          "Stripe Payment Links"
+        ],
+        "limits": [
+          "Tax Basic: 0.5% of volume (no-code) or $0.50/transaction (API)",
+          "Tax Complete: tiered by registrations, transactions, calculation calls, filings/year",
+          "Public pricing page shows EUR; USD from US support article"
+        ],
+        "keyFeatures": [
+          "Zero-code setup for Stripe-native merchants",
+          "Real-time calculation in 100+ countries",
+          "Tax Complete includes automated filing",
+          "Usage-based Tax Basic with no monthly commitment"
+        ],
+        "bestFor": [
+          "Stripe-native businesses",
+          "SaaS",
+          "ecommerce",
+          "global digital goods sellers"
+        ],
+        "sources": [
+          {
+            "url": "https://stripe.com/tax/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://support.stripe.com/questions/understanding-stripe-tax-pricing",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Tax Basic (0.5% no-code, $0.50/$0.05 API) and Tax Complete USD tiers confirmed from US Stripe support article. Note: public pricing page geolocates to EUR; USD figures are the US-market equivalents."
+      }
+    },
+    {
+      "slug": "anrok",
+      "name": "Anrok",
+      "domain": "anrok.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Stripe",
+        "Chargebee",
+        "Zuora",
+        "Recurly",
+        "Maxio",
+        "Shopify",
+        "WooCommerce",
+        "QuickBooks",
+        "Xero",
+        "Salesforce",
+        "Sage Intacct",
+        "Oracle NetSuite",
+        "Orb",
+        "Lago",
+        "Workday",
+        "ADP",
+        "Rippling"
+      ],
+      "provenance": "Pricing verified on anrok.com/pricing: core plans Starter $100/mo per market and Custom $400/mo per market; add-on packages Physical Nexus Monitoring $300/mo, Pro $500/mo, Enterprise $1,000/mo (all billed annually). Prior draft omitted the $300/mo Physical Nexus Monitoring add-on; added here. SOC 2 Type II per anrok.com/security.",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": 100,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$100/month per market (flat). Global exposure monitoring, real-time tax calculation, filing and remittance, exemption certificate management, physical nexus tracking. Additional fees may apply at high transaction volumes. Best for founders needing compliance handled.",
+          "source": {
+            "url": "https://www.anrok.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Custom",
+          "monthlyUsd": 400,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$400/month per market (Anrok cites ~0.25% per transaction where compliance enabled). Everything in Starter plus advanced integrations, multi-billing/multi-entity support, audit-ready reporting, reconciliation, priority support, global tax consults, SSO, MSA, Anrok Atlas AI assistant (beta). Best for teams at 10+ markets or enterprise scale.",
+          "source": {
+            "url": "https://www.anrok.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Physical Nexus Monitoring (Add-On)",
+          "monthlyUsd": 300,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$300/month (billed annually). Add-on package. Tracks how remote employees impact compliance and physical nexus exposure in real time.",
+          "source": {
+            "url": "https://www.anrok.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Pro (Add-On)",
+          "monthlyUsd": 500,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$500/month (billed annually). Add-on for companies with $1M-$10M ARR. Exposure modeling, nexus/exposure expert review, ongoing tax support, unlimited historical US filings, API consultations.",
+          "source": {
+            "url": "https://www.anrok.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise (Add-On)",
+          "monthlyUsd": 1000,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$1,000/month (billed annually). Add-on for late-stage private or public companies. Custom integrations, dedicated onboarding manager, global tax expert access, SSO, MSA.",
+          "source": {
+            "url": "https://www.anrok.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.anrok.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Stripe",
+          "Chargebee",
+          "Zuora",
+          "QuickBooks",
+          "Xero",
+          "Salesforce",
+          "Oracle NetSuite"
+        ],
+        "limits": [
+          "Starter/Custom priced per market per month",
+          "Add-on packages (Physical Nexus, Pro, Enterprise) billed annually",
+          "Additional fees at high transaction volumes"
+        ],
+        "keyFeatures": [
+          "Built for SaaS subscription and usage-based billing",
+          "No-code integrations with 30+ finance tools",
+          "Anrok Atlas AI tax assistant (beta)",
+          "Physical and economic nexus tracking across US and global markets"
+        ],
+        "bestFor": [
+          "SaaS companies",
+          "subscription businesses",
+          "usage-based billing",
+          "global compliance"
+        ],
+        "sources": [
+          {
+            "url": "https://www.anrok.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.anrok.com/security",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.anrok.com/integrations",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "All prices verified on anrok.com/pricing including the previously-omitted $300/mo Physical Nexus Monitoring add-on. SOC 2 confirmed on anrok.com/security; GDPR DPA available on request."
+      }
+    },
+    {
+      "slug": "numeral",
+      "name": "Numeral",
+      "domain": "numeral.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Stripe",
+        "Shopify",
+        "Amazon",
+        "Walmart",
+        "eBay",
+        "WooCommerce",
+        "QuickBooks",
+        "NetSuite",
+        "Chargebee",
+        "Orb",
+        "Tabs",
+        "Sequence",
+        "Rippling",
+        "Google Drive"
+      ],
+      "provenance": "Pricing verified on numeral.com/pricing: free Monitoring tier, Standard $75/filing + $150/registration (no monthly subscription), Pro custom. SOC 2 (Non-CPA) badge confirmed on numeral.com homepage.",
+      "plans": [
+        {
+          "name": "Monitoring",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Forever free. Nexus audit, physical and economic nexus monitoring, state alerting when thresholds crossed, integrations with Shopify, Stripe, Amazon, Walmart and others. No filing or registration included.",
+          "source": {
+            "url": "https://www.numeral.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Standard",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_call",
+          "notes": "$75 per state filing; $150 per state registration. No monthly subscription, no long-term contract; pay month-to-month when Numeral files/registers. Includes filing and remittance, Autofile, Autoregister, all US states, virtual mailbox, automatic tax code classification, CSV import, white-glove support, on-time filing penalty guarantee.",
+          "source": {
+            "url": "https://www.numeral.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing via sales. Everything in Standard plus exemption certificate management, API access, voluntary disclosure agreements, sales tax expert access, global VAT coverage in 80+ countries.",
+          "source": {
+            "url": "https://www.numeral.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://www.numeral.com/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Stripe",
+          "Shopify",
+          "Amazon",
+          "QuickBooks",
+          "NetSuite",
+          "Chargebee"
+        ],
+        "limits": [
+          "Standard: pay-per-filing ($75) and per-registration ($150)",
+          "Free Monitoring: nexus tracking only, no filing"
+        ],
+        "keyFeatures": [
+          "Per-filing pricing with no monthly subscription",
+          "On-time filing guarantee (pays penalties if late)",
+          "Virtual mailbox for government correspondence",
+          "Global VAT in 80+ countries (Pro tier)"
+        ],
+        "bestFor": [
+          "ecommerce",
+          "SaaS",
+          "businesses wanting pay-per-use model",
+          "US sales tax compliance"
+        ],
+        "sources": [
+          {
+            "url": "https://www.numeral.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.numeral.com/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "$75/filing and $150/registration verified on numeral.com/pricing. Free Monitoring tier confirmed (genuine forever-free). SOC 2 (Non-CPA) badge confirmed on homepage; GDPR not stated (null)."
+      }
+    },
+    {
+      "slug": "lappa-lovat",
+      "name": "Lappa (formerly LOVAT)",
+      "domain": "vatcompliance.co",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Shopify",
+        "WooCommerce",
+        "BigCommerce",
+        "Amazon",
+        "eBay",
+        "Etsy",
+        "PayPal",
+        "Zoho",
+        "Oracle NetSuite"
+      ],
+      "provenance": "Sales tax pricing verified on vatcompliance.co/prices/sales-tax/ (Free €0; Start-up €27; Standard €50; Premium €344). LOVAT officially rebranded to Lappa effective 2026-03-20 (confirmed: vatcompliance.co/blog/lovat-is-now-lappa and lappa.org); page still carries LOVAT branding during transition. Prices published in EUR, so monthlyUsd:null on all paid plans.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "€0/month forever. Nexus tracking, 1 data-import integration, sales tax calculation. Forever-free tier confirmed on page.",
+          "source": {
+            "url": "https://vatcompliance.co/prices/sales-tax/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Start-up",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "€27/month (published in EUR; no USD figure on page). Up to 100 transactions/month and €1,000 value/month. 1 data-import integration, 4 auto-submits/year. Sales tax calculation, product tax categories, exemption certificate generator, CSV imports, real-time tax API, detailed reporting. Add-ons: €23/extra return, €18/5,000 extra transactions.",
+          "source": {
+            "url": "https://vatcompliance.co/prices/sales-tax/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Standard",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "€50/month (most popular; EUR, no USD on page). Up to 1,000 transactions/month and €100,000 value/month. 2 data-import integrations, 4 auto-submits/year, multi-user roles.",
+          "source": {
+            "url": "https://vatcompliance.co/prices/sales-tax/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "€344/month (EUR, no USD on page). Up to 20,000 transactions/month and €1,200,000 value/month. 5 data-import integrations, 16 auto-submits/year. Adds invoice storage, sandbox, exemption certificate storage, dedicated account support, AI transaction insights.",
+          "source": {
+            "url": "https://vatcompliance.co/prices/sales-tax/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Shopify",
+          "WooCommerce",
+          "Amazon",
+          "eBay",
+          "Etsy",
+          "PayPal"
+        ],
+        "limits": [
+          "Start-up: 100 tx/month, €1,000 value, 4 auto-submits/year",
+          "Standard: 1,000 tx/month, €100K value, 4 auto-submits/year",
+          "Premium: 20,000 tx/month, €1.2M value, 16 auto-submits/year",
+          "Paid plans priced in EUR; no USD published"
+        ],
+        "keyFeatures": [
+          "Coverage for 100+ countries",
+          "Automated return filing for US states and 100+ countries",
+          "EPR reporting across European countries",
+          "AI transaction insights (Premium tier)"
+        ],
+        "bestFor": [
+          "e-commerce sellers",
+          "marketplaces",
+          "global VAT compliance",
+          "European sellers"
+        ],
+        "sources": [
+          {
+            "url": "https://vatcompliance.co/prices/sales-tax/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://vatcompliance.co/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://vatcompliance.co/blog/lovat-is-now-lappa/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "EUR sales tax pricing verified on vatcompliance.co/prices/sales-tax/. LOVAT-to-Lappa rebrand (2026-03-20) confirmed. Forever-free tier confirmed; specific free-trial day count not stated on page (freeTrialDays:null). No SOC 2/GDPR certification found on accessible pages."
+      }
+    },
+    {
+      "slug": "avalara",
+      "name": "Avalara",
+      "domain": "avalara.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "NetSuite",
+        "SAP",
+        "Microsoft Dynamics",
+        "Oracle",
+        "Sage",
+        "Shopify",
+        "Adobe Commerce",
+        "BigCommerce",
+        "WooCommerce",
+        "QuickBooks",
+        "Salesforce",
+        "Stripe",
+        "Zuora"
+      ],
+      "provenance": "avalara.com/us/en/products/pricing.html confirms AvaTax is quote-based; only two self-serve prices are published (Business Licenses from $119, Sales Tax Registration $403/location), both verified.",
+      "plans": [
+        {
+          "name": "AvaTax (Quote-Based)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Volume-based quote pricing. Factors: products selected, integrated applications, monthly transaction volume, states/jurisdictions, SST enrollment. Two published self-serve prices: Business Licenses – License Guidance from $119; Sales Tax Registration $403/location. AvaTax calculation/returns require a sales quote.",
+          "source": {
+            "url": "https://www.avalara.com/us/en/products/pricing.html",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.avalara.com/us/en/about/trust.html",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "NetSuite",
+          "SAP",
+          "Microsoft Dynamics",
+          "Shopify",
+          "Salesforce",
+          "Oracle"
+        ],
+        "limits": [
+          "AvaTax is quote-based; no self-serve software tiers published",
+          "Only Business Licenses ($119) and Sales Tax Registration ($403/location) have published prices",
+          "SST program may cover costs for qualified sellers"
+        ],
+        "keyFeatures": [
+          "1,000+ pre-built integrations",
+          "Global tax calculation across US, VAT, GST, customs duties",
+          "Automated returns filing and exemption certificate management",
+          "Streamlined Sales Tax (SST) program eligibility"
+        ],
+        "bestFor": [
+          "mid-market",
+          "enterprise",
+          "complex multi-jurisdiction ERP environments",
+          "high-volume ecommerce"
+        ],
+        "sources": [
+          {
+            "url": "https://www.avalara.com/us/en/products/pricing.html",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.avalara.com/us/en/products/integrations.html",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Quote-only AvaTax confirmed; the two published self-serve prices ($119 license guidance, $403/location registration) verified on the official pricing page. SOC 2 and GDPR widely reported for Avalara."
+      }
+    },
+    {
+      "slug": "sovos",
+      "name": "Sovos",
+      "domain": "sovos.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "SAP",
+        "Oracle NetSuite",
+        "Microsoft Dynamics",
+        "QuickBooks Online",
+        "Shopify",
+        "Magento",
+        "Adobe Commerce"
+      ],
+      "provenance": "Sovos is quote-only; no self-serve pricing is published on sovos.com. Removed the unpublished third-party annual price RANGE ($15K-$250K+) previously stated as fact in notes. SOC 2 / ISO 27001 referenced via trustcenter.sovos.com.",
+      "plans": [
+        {
+          "name": "Enterprise (Quote-Based)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "All pricing is custom-scoped; no self-serve tiers published. Pricing depends on transaction volume, jurisdictions, compliance modules and implementation complexity. Contact sales for a quote. (No official price published; third-party estimate removed.)",
+          "source": {
+            "url": "https://sovos.com/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://trustcenter.sovos.com/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "SAP",
+          "Oracle NetSuite",
+          "Microsoft Dynamics",
+          "QuickBooks Online",
+          "Shopify"
+        ],
+        "limits": [
+          "All pricing is quote-based",
+          "No officially published price; estimates are third-party only",
+          "Engineered primarily for enterprise-scale multinational tax complexity"
+        ],
+        "keyFeatures": [
+          "Always-on compliance cloud for multinational indirect tax",
+          "SAP, Oracle, and Microsoft Dynamics native integrations",
+          "ISO 27001 and SOC 2 certified infrastructure",
+          "Covers e-invoicing mandates, VAT reporting, and global sales tax filing"
+        ],
+        "bestFor": [
+          "enterprise",
+          "Fortune 500",
+          "multinational corporations",
+          "SAP/Oracle environments"
+        ],
+        "sources": [
+          {
+            "url": "https://sovos.com/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://trustcenter.sovos.com/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://sovos.com/technology/integrations-api/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Quote-only confirmed; vendor publishes no price. Unpublished third-party annual price range removed from notes. SOC 2 and ISO 27001 referenced via trustcenter.sovos.com."
+      }
+    },
+    {
+      "slug": "vertex",
+      "name": "Vertex",
+      "domain": "vertexinc.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "SAP",
+        "Oracle",
+        "Microsoft Dynamics",
+        "Salesforce",
+        "Workday",
+        "NetSuite",
+        "Adobe Commerce",
+        "Shopify",
+        "Acumatica"
+      ],
+      "provenance": "Vertex is quote-only; vertexinc.com/integrations shows no pricing and lists 292 partners. Removed the unpublished third-party annual price RANGE ($40K-$400K+) previously stated as fact in notes. SOC 2 Type II confirmed via official Vertex news; ISO 27001 NOT verifiable and removed from feature claims.",
+      "plans": [
+        {
+          "name": "Enterprise (Quote-Based)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "All pricing is quote-based; no self-serve tiers published. Covers 20,000+ tax jurisdictions across 190+ countries. Contact sales for a quote. (No official price published; third-party annual-cost estimates removed.)",
+          "source": {
+            "url": "https://www.vertexinc.com/integrations",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://trust.vertexinc.com/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "SAP",
+          "Oracle",
+          "Microsoft Dynamics",
+          "Salesforce",
+          "Workday",
+          "NetSuite"
+        ],
+        "limits": [
+          "All pricing is quote-based",
+          "292 partner integrations",
+          "No officially published price; estimates are third-party only"
+        ],
+        "keyFeatures": [
+          "Covers 20,000+ tax jurisdictions across 190+ countries",
+          "Deep SAP S/4HANA and Oracle Cloud native integration",
+          "Vertex Copilot AI-powered tax assistant",
+          "SOC 2 Type II certified (Vertex Cloud Indirect Tax)"
+        ],
+        "bestFor": [
+          "enterprise",
+          "multinational corporations",
+          "SAP/Oracle ERP environments",
+          "complex indirect tax"
+        ],
+        "sources": [
+          {
+            "url": "https://www.vertexinc.com/integrations",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.vertexinc.com/company/news/latest-news/vertex-cloud-indirect-tax-announces-soc-2-type-2-completion",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://trust.vertexinc.com/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Quote-only confirmed; 292 partner count from vertexinc.com/integrations. SOC 2 Type II completion confirmed via official Vertex announcement. ISO 27001 claim removed (not verifiable). Unpublished third-party annual price range removed from notes."
+      }
+    }
+  ]
+}

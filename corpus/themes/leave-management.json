@@ -1,0 +1,978 @@
+{
+  "vertical": "leave-management",
+  "generatedAt": "2026-06-15",
+  "methodologyNotes": "Official pricing pages re-verified via WebFetch on 2026-06-15: timetastic.co.uk/pricing/, www.leavedates.com/pricing-plans, vacationtracker.io/pricing/ (+ /security), calamari.io/pricing (+ /security), www.absence.io/en/packages-pricing/, leaveboard.com/pricing/, timeoff.management/pricing, flamingoapp.com/pricing/ (+ billing FAQ support.flamingoapp.com/article/50-billing-faq), and www.getpause.com/. Corrections applied: Timetastic base plan renamed 'Standard'->'Timetastic' (official label); Calamari gained the omitted 'Performance Review' module ($3/$2.50); Leave Dates Plus had guessed GBP per-user figures (from search results, not the official dynamic page) removed; Flamingo's $3/user/month confirmed via FAQ example '20 x $3 = $60' despite a '$30' display label on the marketing page. GBP-only (Timetastic, Leave Dates) and EUR-only (absence.io) plans keep monthlyUsd=null to avoid currency-conversion guesses. PurelyHR remains quote-only (page renders '-- USD' placeholders). Telephony fields are null throughout (these are leave-management SaaS, not call products). A NULL BEATS A GUESS was applied to all enterprise/contact-sales tiers and undisclosed currency conversions. accessedAt 2026-06-15.",
+  "vendors": [
+    {
+      "slug": "timetastic",
+      "name": "Timetastic",
+      "domain": "timetastic.co.uk",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Slack",
+        "Microsoft Teams",
+        "Google Calendar",
+        "Outlook",
+        "Apple iCal",
+        "Google Workspace"
+      ],
+      "provenance": "Re-fetched timetastic.co.uk/pricing/ on 2026-06-15. Two GBP plans: 'Timetastic' (£1.20/user/mo) and 'Timetastic Pro' (£2.00/user/mo). Base plan was mislabeled 'Standard' in the draft and renamed to the official 'Timetastic'. No USD pricing published; monthlyUsd=null. Month-to-month via Stripe, 30-day trial, no free tier. 50% discount for charities/B-Corps/NHS noted on page.",
+      "plans": [
+        {
+          "name": "Timetastic",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "£1.20 per user/month, month-to-month via Stripe, no long-term contract. 30-day free trial, no credit card required. Unlimited users and departments, shared calendar, holiday allowance, approvals, mobile and desktop apps. GBP-only; no USD published. (Official base-plan name is 'Timetastic', not 'Standard'.)",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://timetastic.co.uk/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "£2.00 per user/month. Adds booking limits, absence trend insights, reports, enhanced profiles, Slack/Teams integration, SSO, accrued leave, capped leave types. 30-day free trial. GBP-only; no USD published.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://timetastic.co.uk/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": {
+            "url": "https://timetastic.co.uk/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 30,
+        "keyIntegrations": [
+          "Slack",
+          "Microsoft Teams",
+          "Google Calendar",
+          "Outlook"
+        ],
+        "limits": [
+          "No seat minimum stated",
+          "Prices in GBP only; no USD published"
+        ],
+        "keyFeatures": [
+          "Simple holiday/leave tracking per user",
+          "Shared who-is-off calendar",
+          "Mobile and desktop apps",
+          "Pro adds SSO, accruals, and deeper reporting"
+        ],
+        "bestFor": [
+          "SMBs in the UK",
+          "Teams wanting simple leave visibility",
+          "Microsoft Teams or Slack users"
+        ],
+        "sources": [
+          {
+            "url": "https://timetastic.co.uk/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched timetastic.co.uk/pricing/ directly. GDPR/SOC2/HIPAA not mentioned on the pricing page; compliance status could not be confirmed -> all null."
+      }
+    },
+    {
+      "slug": "leavedates",
+      "name": "Leave Dates",
+      "domain": "leavedates.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Slack",
+        "Google Calendar",
+        "Outlook",
+        "Apple iCal",
+        "Zapier",
+        "API/Webhooks"
+      ],
+      "provenance": "Re-fetched www.leavedates.com/pricing-plans on 2026-06-15. The page is a dynamic configurator that renders £0.00 placeholders until user count is entered; only a 'Starting at £0.75 per user/month' figure and a 25% annual saving are shown as static text. Per-plan static prices for Essential and Plus are NOT published, so monthlyUsd=null for all tiers. The draft's Plus figures (£1.88/£2.50) came from third-party search results, not the official page, and were removed. Page supports GBP/USD/EUR display but publishes no fixed USD per-plan rate.",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 25,
+          "billingModel": "per_seat",
+          "notes": "From £0.75 per user/month (annual). Unlimited employees, basic leave tracking. No calendar sync or Slack integration. 25% saving when billed annually. 30-day free trial, no credit card required. Dynamic pricing; no fixed USD figure published.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.leavedates.com/pricing-plans",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Essential",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 25,
+          "billingModel": "per_seat",
+          "notes": "Mid-tier ('Most Popular'). Adds calendar sync and Slack integration. Per-user price not displayed as a static figure on the configurator page. 25% annual saving.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.leavedates.com/pricing-plans",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Plus",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 25,
+          "billingModel": "per_seat",
+          "notes": "Top tier. Adds API, Webhooks, Zapier, and SSO. Per-user price not displayed as a static figure on the official configurator page (the draft's £1.88/£2.50 estimate from search results was removed as unverifiable). 25% annual saving.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.leavedates.com/pricing-plans",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.leavedates.com/pricing-plans",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 30,
+        "keyIntegrations": [
+          "Slack",
+          "Zapier",
+          "Google Calendar",
+          "Outlook",
+          "Apple iCal"
+        ],
+        "limits": [
+          "Per-plan prices rendered dynamically; only 'starting at £0.75/user/mo' is static",
+          "No fixed USD per-plan price published",
+          "No seat minimum stated"
+        ],
+        "keyFeatures": [
+          "Unlimited employees on all plans",
+          "Slack integration on Essential/Plus",
+          "API and Zapier on Plus",
+          "Cyber Essentials certified; Stripe PCI L1 processing"
+        ],
+        "bestFor": [
+          "UK-based SMBs",
+          "Teams wanting Slack-connected leave",
+          "Companies needing API/Zapier automation"
+        ],
+        "sources": [
+          {
+            "url": "https://www.leavedates.com/pricing-plans",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched www.leavedates.com/pricing-plans. GDPR compliance, Cyber Essentials certification, and Stripe PCI Level 1 confirmed on page. HIPAA and SOC2 not mentioned -> null."
+      }
+    },
+    {
+      "slug": "vacation-tracker",
+      "name": "Vacation Tracker",
+      "domain": "vacationtracker.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Slack",
+        "Microsoft Teams",
+        "Google Workspace",
+        "ADP Workforce Now",
+        "Zapier",
+        "OpenAPI"
+      ],
+      "provenance": "Re-fetched vacationtracker.io/pricing/ and vacationtracker.io/security on 2026-06-15. Free tier, Core ($2 monthly / $1 annual, min $50/$25), and Complete ($4 monthly / $3 annual, min $100/$75) confirmed. Per-seat annual reductions compute to 50% (Core) and 25% (Complete); the page's '~10%' wording reflects blended tier-based savings. SOC 2 Type II and GDPR explicitly claimed on /security.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Forever free. Unlimited users but limited to 1 approver, 1 location, 1 department, 1 leave type. Basic notifications and core integrations only.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://vacationtracker.io/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Core",
+          "monthlyUsd": 2,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 50,
+          "billingModel": "per_seat",
+          "notes": "$2/user/month billed monthly (min $50/month); $1/user/month billed annually (min $25/month). Per-seat annual reduction = 50% (page describes blended saving as '~10%'). 7-day free trial. Includes 3 locations, 10 departments, leave reports, ADP/Zapier integrations.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://vacationtracker.io/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Complete",
+          "monthlyUsd": 4,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 25,
+          "billingModel": "per_seat",
+          "notes": "$4/user/month billed monthly (min $100/month); $3/user/month billed annually (min $75/month). Per-seat annual reduction = 25% (page describes blended saving as '~10%'). 7-day free trial. Unlimited locations/departments, all automations, accruals, hourly tracking, TOIL, multi-level approvals, priority support.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://vacationtracker.io/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://vacationtracker.io/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": 7,
+        "keyIntegrations": [
+          "Slack",
+          "Microsoft Teams",
+          "Google Workspace",
+          "ADP Workforce Now",
+          "Zapier"
+        ],
+        "limits": [
+          "Core plan min $50/month (monthly) or $25/month (annual)",
+          "Complete plan min $100/month (monthly) or $75/month (annual)",
+          "Free plan: 1 leave type, 1 department, 1 location, 1 approver"
+        ],
+        "keyFeatures": [
+          "Forever free tier for small teams",
+          "Native Slack and Teams bots",
+          "ADP Workforce Now integration",
+          "SOC 2 Type II certified"
+        ],
+        "bestFor": [
+          "Slack-first or Teams-first teams",
+          "SMBs wanting a free tier",
+          "Companies needing ADP integration"
+        ],
+        "sources": [
+          {
+            "url": "https://vacationtracker.io/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://vacationtracker.io/security",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing fetched from vacationtracker.io/pricing/. SOC 2 Type II and GDPR explicitly claimed on vacationtracker.io/security. HIPAA not mentioned -> null."
+      }
+    },
+    {
+      "slug": "calamari",
+      "name": "Calamari",
+      "domain": "calamari.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Slack",
+        "Google Workspace",
+        "Microsoft 365",
+        "Microsoft Teams",
+        "Jira",
+        "Asana",
+        "Basecamp",
+        "Okta",
+        "Azure AD",
+        "Google SSO",
+        "OneLogin"
+      ],
+      "provenance": "Re-fetched calamari.io/pricing and calamari.io/security on 2026-06-15. Official page lists FOUR modules: Time Off ($2.50/$2.00), Time & Attendance ($3.00/$2.50), Core HR ($2.50/$2.00), and Performance Review ($3.00/$2.50) — the draft omitted Performance Review, now added. 10-seat / $20/month minimum and SAML SSO add-on ($1.00 monthly / $0.80 annual) confirmed. GDPR claimed; ISO 27001 only 'preparing for'; SOC2/ISO are AWS-provider certs, not Calamari's own.",
+      "plans": [
+        {
+          "name": "Time Off",
+          "monthlyUsd": 2.5,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "per_seat",
+          "notes": "$2.50/employee/month billed monthly; $2.00/employee/month billed annually. 10-seat minimum ($20/month minimum). 14-day free trial, no credit card required. Leave/absence tracking module.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://calamari.io/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Time & Attendance",
+          "monthlyUsd": 3,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "per_seat",
+          "notes": "$3.00/employee/month billed monthly; $2.50/employee/month billed annually. 10-seat minimum. Clock-in/out tracking module. Can be combined with Time Off.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://calamari.io/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Core HR",
+          "monthlyUsd": 2.5,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "per_seat",
+          "notes": "$2.50/employee/month billed monthly; $2.00/employee/month billed annually. 10-seat minimum. Employee profiles, org chart, document storage.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://calamari.io/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Performance Review",
+          "monthlyUsd": 3,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "per_seat",
+          "notes": "$3.00/employee/month billed monthly; $2.50/employee/month billed annually. 10-seat minimum. Performance review module (added — was omitted from the draft). Can be combined with other modules.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://calamari.io/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://calamari.io/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Slack",
+          "Microsoft 365",
+          "Google Workspace",
+          "Jira",
+          "Asana"
+        ],
+        "limits": [
+          "10-seat minimum ($20/month minimum)",
+          "SAML SSO is a paid add-on ($1/user/month monthly, $0.80 annually)"
+        ],
+        "keyFeatures": [
+          "Modular pricing — buy only the modules you need",
+          "Deep project-tool integrations (Jira, Asana, Basecamp)",
+          "SAML SSO add-on for enterprise",
+          "Preparing for ISO 27001 certification (not yet held)"
+        ],
+        "bestFor": [
+          "Dev and product teams using Jira/Asana",
+          "Companies wanting modular HR add-ons",
+          "European SMBs"
+        ],
+        "sources": [
+          {
+            "url": "https://calamari.io/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://calamari.io/security",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched calamari.io/pricing and calamari.io/security. GDPR explicitly claimed. ISO 27001 only 'preparing for this year'; SOC 2/ISO referenced belong to the AWS hosting provider, not Calamari itself -> soc2 and hipaa null."
+      }
+    },
+    {
+      "slug": "absence-io",
+      "name": "absence.io",
+      "domain": "absence.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Microsoft 365",
+        "Google Workspace",
+        "Slack",
+        "DATEV",
+        "Open API"
+      ],
+      "provenance": "Re-fetched www.absence.io/en/packages-pricing/ on 2026-06-15. Three EUR plans confirmed: Starter €2.99, Pro €4.99, Complete €7.99 per user/month, each with a 10% annual discount. No USD published -> monthlyUsd=null. GDPR and ISO-certified German servers confirmed; SOC2 not claimed.",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "per_seat",
+          "notes": "€2.99/user/month (monthly); 10% discount when billed annually. Includes absence/leave management, reports, Microsoft/Google/Slack integrations, standard support. 14-day free trial, no credit card. EUR-only; no USD published.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.absence.io/en/packages-pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "per_seat",
+          "notes": "€4.99/user/month (monthly); 10% annual discount. Adds time tracking, digital employee file, SSO, premium support. EUR-only.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.absence.io/en/packages-pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Complete",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "per_seat",
+          "notes": "€7.99/user/month (monthly); 10% annual discount. Adds travel expenses, expense management, API access. DATEV integration included. EUR-only.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.absence.io/en/packages-pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.absence.io/en/packages-pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Microsoft 365",
+          "Google Workspace",
+          "Slack",
+          "DATEV"
+        ],
+        "limits": [
+          "Prices in EUR only — no USD pricing published",
+          "No seat minimum stated"
+        ],
+        "keyFeatures": [
+          "German-hosted servers (ISO-certified)",
+          "GDPR-native, built for European compliance",
+          "Expense management in Complete tier",
+          "SSO included in Pro and Complete"
+        ],
+        "bestFor": [
+          "European companies (especially DACH region)",
+          "Teams needing GDPR-native tooling",
+          "Companies wanting absence + expenses in one tool"
+        ],
+        "sources": [
+          {
+            "url": "https://www.absence.io/en/packages-pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched absence.io/en/packages-pricing/. GDPR and ISO-certified German servers confirmed on-page. SOC2/HIPAA not mentioned -> null."
+      }
+    },
+    {
+      "slug": "leaveboard",
+      "name": "LeaveBoard",
+      "domain": "leaveboard.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Microsoft Office 365",
+        "Google Calendar",
+        "Slack",
+        "Apple iCal"
+      ],
+      "provenance": "Re-fetched leaveboard.com/pricing/ on 2026-06-15. Free tier capped at 9 employees; PRO at $1.35/employee/month with ~17% annual saving; Enterprise for 81+ employees is contact-sales (monthlyUsd=null). 14-day trial confirmed. EU VAT excluded. No compliance certs disclosed on page.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Forever free for up to 9 employees. Includes HR dashboard, time off tracking, employee directory, HR reports, absence calendar, leave policies.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://leaveboard.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "PRO",
+          "monthlyUsd": 1.35,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "per_seat",
+          "notes": "$1.35/employee/month billed monthly; ~17% savings when billed annually. Unlimited users. All Free features plus priority support and advanced leave policies. EU VAT excluded. 14-day free trial.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://leaveboard.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing for companies larger than 81 employees. Includes dedicated account manager and priority support. Contact sales — no published price.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://leaveboard.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Microsoft Office 365",
+          "Google Calendar",
+          "Slack",
+          "Apple iCal"
+        ],
+        "limits": [
+          "Free tier capped at 9 employees",
+          "Enterprise tier recommended for 81+ employees",
+          "EU VAT excluded from listed prices"
+        ],
+        "keyFeatures": [
+          "Generous free tier (up to 9 employees)",
+          "Very low PRO price at $1.35/seat",
+          "Auto-adjusting billing based on headcount",
+          "No long-term contracts"
+        ],
+        "bestFor": [
+          "Micro and small businesses",
+          "Teams under 9 wanting a permanent free tool",
+          "Budget-conscious SMBs"
+        ],
+        "sources": [
+          {
+            "url": "https://leaveboard.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched leaveboard.com/pricing/. Compliance certifications not disclosed on pricing page; security details not confirmed -> all null."
+      }
+    },
+    {
+      "slug": "timeoff-management",
+      "name": "TimeOff.Management",
+      "domain": "timeoff.management",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Google Calendar",
+        "Outlook Calendar",
+        "Apple iCal",
+        "Google SSO",
+        "Microsoft SSO",
+        "REST API"
+      ],
+      "provenance": "Re-fetched timeoff.management/pricing on 2026-06-15. Single flat $1/user/month plan confirmed (available in GBP/EUR too). 30-day trial, no free tier. GDPR + UK data hosting + DPA on request confirmed on page.",
+      "plans": [
+        {
+          "name": "Standard",
+          "monthlyUsd": 1,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$1/user/month (also offered in GBP/EUR). Single all-inclusive plan, billed on active employees at end of each billing month. Scales from 5 to 1,000+ employees. Annual billing available on request. All features included: unlimited leave types, departments, schedules, TOIL, reports, SSO. 30-day free trial, no credit card.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://timeoff.management/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://timeoff.management/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 30,
+        "keyIntegrations": [
+          "Google Calendar",
+          "Outlook Calendar",
+          "Apple iCal",
+          "Google SSO",
+          "Microsoft SSO"
+        ],
+        "limits": [
+          "No seat minimum stated (works from 5+ employees)",
+          "Annual billing only via manual request to support"
+        ],
+        "keyFeatures": [
+          "Single low-price plan — all features included",
+          "UK-hosted data (GDPR + DPA available)",
+          "No per-feature upsell or module system",
+          "Custom leave types, schedules, TOIL all included"
+        ],
+        "bestFor": [
+          "UK SMBs wanting simple, cheap all-in-one leave tracking",
+          "Teams that want no decision fatigue on plan tiers",
+          "GDPR-sensitive companies wanting UK data residency"
+        ],
+        "sources": [
+          {
+            "url": "https://timeoff.management/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched timeoff.management/pricing. GDPR compliance and UK data hosting explicitly stated. SOC2/HIPAA not mentioned -> null."
+      }
+    },
+    {
+      "slug": "flamingo",
+      "name": "Flamingo",
+      "domain": "flamingoapp.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Slack",
+        "Google Calendar",
+        "Outlook Calendar",
+        "Apple Calendar"
+      ],
+      "provenance": "Re-fetched flamingoapp.com/pricing/ and support.flamingoapp.com/article/50-billing-faq on 2026-06-15. The marketing page shows a '$30 per month' label, but the billing FAQ's worked example '20 x $3 = $60 a month' confirms the true per-user rate is $3/user/month. Used $3. Enterprise (100+ users) is contact-sales -> monthlyUsd=null. 7-day trial, no free tier.",
+      "plans": [
+        {
+          "name": "Business",
+          "monthlyUsd": 3,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$3/user/month (up to 99 users), confirmed via billing FAQ example '20 x $3 = $60 a month' (the pricing page's '$30' label is a display artifact, not the per-user rate). Charged only for users added; prorated for mid-cycle additions. Includes Slack integration, unlimited leave types/policies, multiple teams/locations, calendar sync, automated reports, leave accruals. 7-day free trial.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://flamingoapp.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          "corroboration": {
+            "url": "https://support.flamingoapp.com/article/50-billing-faq",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing for 100+ users. Contact Flamingo for a quote — no published price.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://flamingoapp.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": 7,
+        "keyIntegrations": [
+          "Slack",
+          "Google Calendar",
+          "Outlook Calendar"
+        ],
+        "limits": [
+          "Enterprise pricing required at 100+ users",
+          "No annual billing discount published"
+        ],
+        "keyFeatures": [
+          "Slack-native leave requests and approvals",
+          "Per-user billing — no seat minimums below 100",
+          "Leave accruals and custom policies",
+          "Simple onboarding via Slack workspace"
+        ],
+        "bestFor": [
+          "Slack-first companies",
+          "Teams that want leave management entirely inside Slack",
+          "SMBs under 100 people"
+        ],
+        "sources": [
+          {
+            "url": "https://flamingoapp.com/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://support.flamingoapp.com/article/50-billing-faq",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched flamingoapp.com/pricing/ and billing FAQ. $3/user/month confirmed from the billing FAQ worked example, overriding the '$30' marketing-page label. No compliance certifications stated -> all null."
+      }
+    },
+    {
+      "slug": "pause",
+      "name": "Pause",
+      "domain": "getpause.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Slack",
+        "Google Calendar"
+      ],
+      "provenance": "Re-fetched www.getpause.com/ on 2026-06-15. Single plan at '$1 Per user. Per month.' confirmed with a 30-day free trial. No free tier. No compliance certs stated.",
+      "plans": [
+        {
+          "name": "Standard",
+          "monthlyUsd": 1,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$1/user/month. Single all-inclusive plan. Includes Slack integration, Google Calendar sync, custom leave policies, multiple teams, and geographic leave policy support. 30-day free trial.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.getpause.com/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": 30,
+        "keyIntegrations": [
+          "Slack",
+          "Google Calendar"
+        ],
+        "limits": [
+          "No seat minimum stated",
+          "Annual billing discount not published"
+        ],
+        "keyFeatures": [
+          "Extremely low price at $1/user/month",
+          "Slack-native leave requests",
+          "Google Calendar auto-sync",
+          "Built for startups and remote teams"
+        ],
+        "bestFor": [
+          "Startups and early-stage teams",
+          "Slack-first SMBs wanting minimal cost",
+          "Remote-first companies"
+        ],
+        "sources": [
+          {
+            "url": "https://www.getpause.com/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched www.getpause.com/. Pricing of $1/user/month confirmed from homepage. No compliance certifications mentioned -> all null."
+      }
+    },
+    {
+      "slug": "purelyhr",
+      "name": "PurelyHR",
+      "domain": "purelyhr.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Google Calendar",
+        "Outlook Calendar",
+        "Apple Calendar"
+      ],
+      "provenance": "Re-fetched purelyhr.com/pricing/ on 2026-06-15. The page renders placeholder values ('-- USD / -- per employee') instead of actual prices; a modular per-employee model with a 10% annual discount and nonprofit pricing is stated, but no public per-seat rate is displayed. Kept quote-only with monthlyUsd=null.",
+      "plans": [
+        {
+          "name": "Modular (quote-only)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "per_seat",
+          "notes": "Modular pricing: Staff module is required; Time-Off, Warnings, Time-Clock, Time-Sheet, Performance, and Talent are optional add-ons. Pricing is calculated via an on-page configurator but no public per-employee rate is shown ('-- USD' placeholders). 10% discount for annual billing. Nonprofit discount available (contact sales). Free trial available (length not stated on page).",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.purelyhr.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": {
+            "url": "https://www.purelyhr.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Google Calendar",
+          "Outlook Calendar",
+          "Apple Calendar"
+        ],
+        "limits": [
+          "No public per-seat pricing — page renders '-- USD' placeholders; requires configuration or quote",
+          "Annual discount 10%; nonprofit discount via sales"
+        ],
+        "keyFeatures": [
+          "Modular design — pay only for modules you need",
+          "Covers full HR lifecycle (performance, talent, warnings, timesheets)",
+          "Nonprofit-friendly pricing program",
+          "10% annual billing discount"
+        ],
+        "bestFor": [
+          "SMBs wanting modular HR beyond just leave",
+          "Nonprofits needing cost-effective HR suite",
+          "Companies wanting time-off bundled with performance reviews"
+        ],
+        "sources": [
+          {
+            "url": "https://www.purelyhr.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Fetched purelyhr.com/pricing/. Official page renders a dynamic configurator with '-- USD' placeholders and no static public prices. Marked quote-only per schema convention; monthlyUsd=null."
+      }
+    }
+  ]
+}

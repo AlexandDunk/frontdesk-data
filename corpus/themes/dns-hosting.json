@@ -1,0 +1,1150 @@
+{
+  "vertical": "dns-hosting",
+  "generatedAt": "2026-06-15",
+  "methodologyNotes": "Pricing re-verified 2026-06-15 by fetching each vendor's official pricing page via WebFetch (dnsimple.com/pricing, digicert.com/digicert-dns, cloudns.net premium/ddos-protected-plans/geodns pages, cloudflare.com/plans/, aws.amazon.com/route53/pricing/, bunny.net/pricing/dns/, dnsfilter.com/pricing). Google Cloud DNS pricing page returned truncated WebFetch output; figures corroborated via WebSearch citing cloud.google.com/dns/pricing. NS1/IBM pricing page confirmed HTTP 403; structure confirmed via WebSearch (free Developer tier exists, all paid tiers contact-sales). Constellix.com/pricing 301-redirects to constellix.digicert.com/pricing which 404s; pay-as-you-go figures corroborated via WebSearch citing assets.constellix.com/pricing and constellix.com/pricing/faq. CORRECTIONS vs draft: (1) Google Cloud DNS HIPAA/BAA set to null — Cloud DNS is not explicitly named in Google's public HIPAA covered-products list, so the 'explicitly covered' claim is unverifiable. (2) Constellix billingModel changed flat->custom: $5 is a usage-based minimum, not a flat subscription. (3) DNSimple Solo freeTier clarified to false — Solo has no base fee but charges $0.50/zone/month, so it is not forever-free. (4) Constellix provenance corrected: redirect host is constellix.digicert.com (not vercara). All vendors verified to exist; none removed. accessedAt 2026-06-15.",
+  "vendors": [
+    {
+      "slug": "dnsimple",
+      "name": "DNSimple",
+      "domain": "dnsimple.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Let's Encrypt",
+        "Okta",
+        "Google SSO",
+        "Microsoft Entra ID",
+        "Sectigo",
+        "Heroku",
+        "GitHub"
+      ],
+      "provenance": "Fetched dnsimple.com/pricing on 2026-06-15. Pricing is per-zone ($0.50/zone/month + $0.10/million queries/zone/month) on all plans, plus a $29/month base for Teams; Solo has no base fee but is NOT forever-free because per-zone/per-query usage charges always apply. The 30-day free trial applies to paid (Teams) signup. Enterprise is custom/contact-sales.",
+      "plans": [
+        {
+          "name": "Solo",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "No base subscription fee, but NOT forever-free: pay-as-you-go $0.50 per hosted zone/month + $0.10 per million queries/zone/month always applies. 1 user, 100 DNS records per zone, no SLA, Anycast DNS + DNSSEC included.",
+          "source": {
+            "url": "https://dnsimple.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Teams",
+          "monthlyUsd": 29,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "$29/month base includes 1 seat; additional seats $29/seat/month. Plus $0.50 per hosted zone/month + $0.10 per million queries/zone/month. 1,000 DNS records per zone, 99% SLA, wildcard SSL, SSO (Okta/Google), secondary DNS. 30-day free trial.",
+          "source": {
+            "url": "https://dnsimple.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "Custom subscription fee, volume discounts on zones and queries, 100% SLA, vanity nameservers, SSO with Microsoft Entra, dedicated account manager. Contact sales.",
+          "source": {
+            "url": "https://dnsimple.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": {
+            "url": "https://dnsimple.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 30,
+        "keyIntegrations": [
+          "Let's Encrypt",
+          "Sectigo",
+          "Okta",
+          "Google SSO",
+          "Microsoft Entra ID"
+        ],
+        "limits": [
+          "100 DNS records/zone on Solo",
+          "1,000 DNS records/zone on Teams",
+          "$0.50/zone/month on all plans (no forever-free tier)",
+          "$0.10/million queries on all plans"
+        ],
+        "keyFeatures": [
+          "Per-zone pay-as-you-go pricing",
+          "Anycast DNS + DNSSEC on all plans",
+          "Domain registration and management in one platform",
+          "API-first with full automation support"
+        ],
+        "bestFor": [
+          "startups",
+          "small engineering teams",
+          "domain management + DNS combined"
+        ],
+        "sources": [
+          {
+            "url": "https://dnsimple.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://support.dnsimple.com/articles/dnsimple-plans/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Plan details confirmed from dnsimple.com/pricing and corroborated via WebSearch; Solo is not forever-free because per-zone/per-query usage fees always apply. Accessed 2026-06-15."
+      }
+    },
+    {
+      "slug": "digicert-dns",
+      "name": "DigiCert DNS (formerly DNS Made Easy)",
+      "domain": "digicert.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Global Traffic Director",
+        "DNSSEC",
+        "Anycast"
+      ],
+      "provenance": "DNS Made Easy redirects to digicert.com/digicert-dns as of 2026. Fetched digicert.com/digicert-dns on 2026-06-15. Essentials is billed $300/year (12-month auto-renewing); '$0/month' is a display teaser requiring an annual commitment, so monthlyUsd is recorded as the $25 monthly-equivalent. SOC 2 Type II confirmed via DigiCert compliance blog.",
+      "plans": [
+        {
+          "name": "Essentials",
+          "monthlyUsd": 25,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "$25/month is the monthly-equivalent of a $300/year (12-month auto-renewing) subscription. Displayed as '$0/month' on site but requires annual commitment. Includes 10M DNS queries/month, 20+ domains, 6,000+ records, 2 users, Global Traffic Director, 100% uptime SLA, Anycast network. Overage: $5 per 1M additional queries.",
+          "source": {
+            "url": "https://www.digicert.com/digicert-dns",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "UltraDNS",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "Enterprise plan. Custom pricing via contact sales. Includes DDoS-protected global anycast, dual DNS redundancy, DNSSEC, geo and ASN routing, multi-cloud traffic steering, real-time analytics, SSO and RBAC, 24x7x365 support.",
+          "source": {
+            "url": "https://www.digicert.com/digicert-dns",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://www.digicert.com/blog/digital-trust-with-soc-2-compliant-dns",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Global Traffic Director",
+          "DNSSEC",
+          "Anycast"
+        ],
+        "limits": [
+          "10M queries/month on Essentials",
+          "20+ domains on Essentials",
+          "$5/million overage queries on Essentials",
+          "Annual commitment required (no monthly option on entry plan)"
+        ],
+        "keyFeatures": [
+          "SOC 2 Type II assessed DNS platform",
+          "100% uptime SLA on Essentials",
+          "Global Traffic Director for traffic steering",
+          "Annual commitment required for entry plan"
+        ],
+        "bestFor": [
+          "enterprises needing SLA-backed DNS",
+          "teams requiring compliance-backed authoritative DNS"
+        ],
+        "sources": [
+          {
+            "url": "https://www.digicert.com/digicert-dns",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.digicert.com/blog/digital-trust-with-soc-2-compliant-dns",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing fetched directly from digicert.com/digicert-dns; Essentials confirmed as annual-only $300/yr; SOC 2 status confirmed from DigiCert compliance blog, both accessed 2026-06-15."
+      }
+    },
+    {
+      "slug": "cloudns",
+      "name": "ClouDNS",
+      "domain": "cloudns.net",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "DNSSEC",
+        "DNS Failover",
+        "Let's Encrypt SSL"
+      ],
+      "provenance": "Fetched cloudns.net/premium/, cloudns.net/ddos-protected-plans/, and cloudns.net/geodns/ on 2026-06-15. All plan prices confirmed exactly. SLA values are published literally as '1000%' (Premium) and '10000%' (DDoS/GeoDNS) — i.e. 10x/100x downtime credit, not a literal uptime percentage. GDPR/ISO 27001 confirmed via cloudns.net about-us page.",
+      "plans": [
+        {
+          "name": "Free DNS",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Forever free. 1 zone, 50 DNS records, 500K queries/month, 4 unicast servers, 1 mail forward, 1 Dynamic DNS hostname.",
+          "source": {
+            "url": "https://www.cloudns.net/premium-dns/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Premium S",
+          "monthlyUsd": 2.95,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "5 zones, 200 DNS records, 5M queries/month, 4 Anycast Premium servers, DNS Failover, DNSSEC, published '1000%' Uptime SLA (10x downtime credit).",
+          "source": {
+            "url": "https://www.cloudns.net/premium/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Premium M",
+          "monthlyUsd": 4.95,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "50 zones, 2,000 DNS records, 150M queries/month, 4 Anycast Premium servers, DNS Failover, DNSSEC, free SSL, '1000%' Uptime SLA. Most popular Premium tier.",
+          "source": {
+            "url": "https://www.cloudns.net/premium/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Premium L",
+          "monthlyUsd": 14.95,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "400 zones, 20,000 DNS records, 500M queries/month, 4 Anycast Premium servers, DNS Failover, DNSSEC, free SSL, '1000%' Uptime SLA.",
+          "source": {
+            "url": "https://www.cloudns.net/premium/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "DDoS Protected S",
+          "monthlyUsd": 5.95,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "5 zones, 200 DNS records, 5M queries/month, 4 Anycast Protected servers, DDoS protection, DNS Failover, DNSSEC, '10000%' Uptime SLA.",
+          "source": {
+            "url": "https://www.cloudns.net/ddos-protected-plans/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "DDoS Protected M",
+          "monthlyUsd": 11.95,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "50 zones, 2,000 DNS records, 150M queries/month, 4 Anycast Protected servers, DDoS protection, DNS Failover, DNSSEC, '10000%' Uptime SLA. Most popular DDoS tier.",
+          "source": {
+            "url": "https://www.cloudns.net/ddos-protected-plans/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "DDoS Protected L",
+          "monthlyUsd": 39.95,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "400 zones, 20,000 DNS records, 1B queries/month, 4 Anycast Protected servers, DDoS protection, DNS Failover, DNSSEC, '10000%' Uptime SLA.",
+          "source": {
+            "url": "https://www.cloudns.net/ddos-protected-plans/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "GeoDNS Start",
+          "monthlyUsd": 9.95,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "1 zone, 1,000 DNS records, 100M queries/month, geolocation routing, EDNS-client-subnet, DDoS protection, DNS Failover, DNSSEC, free SSL, '10000%' Uptime SLA.",
+          "source": {
+            "url": "https://www.cloudns.net/geodns/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "GeoDNS Professional",
+          "monthlyUsd": 44.95,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "5 zones, 5,000 DNS records, 500M queries/month, full GeoDNS feature set.",
+          "source": {
+            "url": "https://www.cloudns.net/geodns/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "GeoDNS Business",
+          "monthlyUsd": 79.95,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "10 zones, 10,000 DNS records, 1B queries/month, full GeoDNS feature set.",
+          "source": {
+            "url": "https://www.cloudns.net/geodns/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.cloudns.net/about-us/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "DNSSEC",
+          "DNS Failover",
+          "Let's Encrypt SSL",
+          "Dynamic DNS"
+        ],
+        "limits": [
+          "Free tier: 1 zone, 50 records, 500K queries/month",
+          "Premium S: 5 zones, 5M queries/month",
+          "SLA values published as 1000%/10000% are downtime-credit multipliers, not literal uptime %",
+          "No published overage rates — plan upgrade required"
+        ],
+        "keyFeatures": [
+          "ISO 27001 certified",
+          "Multiple product lines: Premium, DDoS-Protected, GeoDNS",
+          "High downtime-credit SLA on DDoS-Protected plans",
+          "Permanent free tier with unicast servers"
+        ],
+        "bestFor": [
+          "budget-conscious operators",
+          "multi-zone hosting",
+          "geolocation DNS routing"
+        ],
+        "sources": [
+          {
+            "url": "https://www.cloudns.net/premium/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.cloudns.net/ddos-protected-plans/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.cloudns.net/geodns/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "All plan pricing fetched and confirmed exactly from three ClouDNS product pages on 2026-06-15; ISO 27001 / GDPR confirmed from about-us page."
+      }
+    },
+    {
+      "slug": "constellix",
+      "name": "Constellix",
+      "domain": "constellix.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Global Traffic Director (GTD)",
+        "DNSSEC",
+        "DNS Failover",
+        "IP Filter",
+        "GeoProximity"
+      ],
+      "provenance": "Constellix is now a DigiCert brand: constellix.com/pricing 301-redirects to constellix.digicert.com/pricing, which returns 404; the standalone pricing pages at assets.constellix.com/pricing and constellix.com/pricing/faq carry the usage-based figures, corroborated via WebSearch 2026-06-15. (Draft's claim of a 'vercara.digicert.com' redirect is incorrect — the redirect host is constellix.digicert.com.) Usage-based pay-as-you-go model; the $5 figure is the effective minimum, not a flat subscription, so billingModel is custom.",
+      "plans": [
+        {
+          "name": "Pay-As-You-Go",
+          "monthlyUsd": 5,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "Usage-based, no flat monthly base. $5.00 represents the minimum effective cost (1 domain, no queries). Domain pricing: $5.00/month first domain, $0.50/month domains 2-25, $0.095/month 26+. GTD-enabled domains: +$5.00 first, +$1.00 domains 2-100, +$0.10 for 101+. Standard queries: $0.395/million (0-1B), $0.195/million (over 1B). IP Filter queries: $0.70/million. GeoProximity queries: $0.60/million. Volume discounts above 500M units / $1,000 spend.",
+          "source": {
+            "url": "https://constellix.com/pricing/faq",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Global Traffic Director",
+          "DNSSEC",
+          "DNS Failover",
+          "IP Filter routing",
+          "GeoProximity routing"
+        ],
+        "limits": [
+          "No free tier",
+          "$5/month effective minimum (1 domain, no queries)",
+          "Pricing scales with domain count and query volume",
+          "GTD billed as add-on per domain"
+        ],
+        "keyFeatures": [
+          "Usage-based pay-as-you-go with a low per-domain minimum",
+          "Volume discounts at >1B queries/month and high spend",
+          "Advanced traffic steering: GeoDNS, GeoProximity, IP Filter",
+          "Global anycast network"
+        ],
+        "bestFor": [
+          "high query volume operators",
+          "advanced traffic steering use cases",
+          "predictable low-domain-count workloads"
+        ],
+        "sources": [
+          {
+            "url": "https://constellix.com/pricing/faq",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "http://assets.constellix.com/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing model corroborated via WebSearch citing constellix.com/pricing/faq and assets.constellix.com/pricing; direct fetch of constellix.com/pricing 301-redirects to constellix.digicert.com which returns 404 as of 2026-06-15."
+      }
+    },
+    {
+      "slug": "ns1-ibm",
+      "name": "NS1 Connect (IBM)",
+      "domain": "ns1.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "AWS",
+        "Terraform",
+        "Pulumi",
+        "Datadog",
+        "Grafana",
+        "PagerDuty"
+      ],
+      "provenance": "ns1.com redirects to ibm.com/products/ns1-connect. The IBM pricing page (ibm.com/products/ns1-connect/pricing) returned HTTP 403 on 2026-06-15. Plan structure confirmed via WebSearch (G2/TrustRadius/IBM store): a free Developer tier exists; Essentials/Premium/Enterprise are query-volume priced with no public list price — all require IBM sales engagement.",
+      "plans": [
+        {
+          "name": "Developer (Free)",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Free developer account with limited traffic scale. Full API available. Can be used in production as primary or secondary DNS at limited scale.",
+          "source": {
+            "url": "https://www.ibm.com/products/ns1-connect/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Essentials",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "Scaled for growing businesses. Priced based on query volume and DNS records. Available on IBM.com or AWS Marketplace. No public list price — contact sales.",
+          "source": {
+            "url": "https://www.ibm.com/products/ns1-connect/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "Scalable authoritative DNS priced on query volume and DNS records. Additional services also priced through query volume. Contact sales.",
+          "source": {
+            "url": "https://www.ibm.com/products/ns1-connect/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "Customizable support and professional services. All pricing via IBM sales negotiation.",
+          "source": {
+            "url": "https://www.ibm.com/products/ns1-connect/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "AWS Marketplace",
+          "Terraform",
+          "Pulumi",
+          "Datadog",
+          "Grafana",
+          "PagerDuty"
+        ],
+        "limits": [
+          "Free tier has limited traffic scale",
+          "Paid plan pricing not publicly disclosed",
+          "Requires IBM sales engagement for all paid tiers"
+        ],
+        "keyFeatures": [
+          "Filter chains for advanced traffic steering",
+          "Real-time monitoring and failover",
+          "Data-driven DNS with external data sources",
+          "Multi-cloud traffic management"
+        ],
+        "bestFor": [
+          "enterprises needing advanced traffic steering",
+          "large-scale authoritative DNS",
+          "AWS-integrated workloads"
+        ],
+        "sources": [
+          {
+            "url": "https://www.ibm.com/products/ns1-connect/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://aws.amazon.com/marketplace/pp/prodview-mbjt4bsdjr5gg",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "IBM pricing page returned 403 on 2026-06-15; free Developer tier and contact-sales structure for paid tiers confirmed via WebSearch (G2, TrustRadius, IBM store listings)."
+      }
+    },
+    {
+      "slug": "cloudflare-dns",
+      "name": "Cloudflare DNS",
+      "domain": "cloudflare.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Terraform",
+        "Pulumi",
+        "GitHub Actions",
+        "Kubernetes",
+        "AWS",
+        "Google Cloud",
+        "Azure",
+        "Datadog"
+      ],
+      "provenance": "Fetched cloudflare.com/plans/ on 2026-06-15; all plan prices confirmed exactly (Free $0, Pro $25/mo or $20/mo annual, Business $250/mo or $200/mo annual, Enterprise custom). DNS is included at no extra charge on all plans. Cloudflare signs a HIPAA BAA only with Enterprise customers; note that DNS purchased alone may fall outside BAA scope — HIPAA applies only to covered services in an executed Enterprise BAA. SOC 2 Type II confirmed.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Authoritative DNS included free forever. Unlimited DNS queries, unmetered DDoS protection, DNSSEC, API access. No query volume limits or overage charges on DNS.",
+          "source": {
+            "url": "https://www.cloudflare.com/plans/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 25,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "$20/month billed annually, $25/month billed monthly. DNS features same as Free; plan adds WAF, image optimization, and enhanced analytics. Annual discount is 20%.",
+          "source": {
+            "url": "https://www.cloudflare.com/plans/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 250,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "$200/month billed annually, $250/month billed monthly. Adds custom SSL, 100% uptime SLA, advanced WAF. DNS features same as Free.",
+          "source": {
+            "url": "https://www.cloudflare.com/plans/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "Custom contract pricing billed annually. HIPAA BAA available to Enterprise customers (covered services per executed BAA only; DNS alone may be out of scope). Dedicated support, advanced DNS features (load balancing, secondary DNS). Contact sales.",
+          "source": {
+            "url": "https://www.cloudflare.com/plans/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.cloudflare.com/trust-hub/compliance-resources/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Terraform",
+          "Pulumi",
+          "GitHub Actions",
+          "Kubernetes",
+          "AWS",
+          "Google Cloud",
+          "Azure",
+          "Datadog"
+        ],
+        "limits": [
+          "No query volume limits on DNS across all plans",
+          "Load balancing and secondary DNS on Enterprise only",
+          "HIPAA BAA requires Enterprise contract; DNS alone may be out of BAA scope"
+        ],
+        "keyFeatures": [
+          "Free authoritative DNS with no query limits",
+          "Largest anycast network globally",
+          "SOC 2 Type II + ISO 27001 + ISO 27701 certified",
+          "Unmetered DDoS protection on all plans"
+        ],
+        "bestFor": [
+          "any scale needing free DNS",
+          "CDN + DNS combined",
+          "HIPAA-covered entities at Enterprise tier (with executed BAA)"
+        ],
+        "sources": [
+          {
+            "url": "https://www.cloudflare.com/plans/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.cloudflare.com/trust-hub/compliance-resources/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Plan pricing fetched from cloudflare.com/plans/ and confirmed exactly; HIPAA BAA confirmed as Enterprise-only via WebSearch, with DNS-alone potentially out of BAA scope; compliance certifications from cloudflare.com/trust-hub, accessed 2026-06-15."
+      }
+    },
+    {
+      "slug": "bunny-dns",
+      "name": "Bunny DNS",
+      "domain": "bunny.net",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Bunny CDN",
+        "Terraform",
+        "API"
+      ],
+      "provenance": "Fetched bunny.net/pricing/dns/ on 2026-06-15; figures confirmed exactly. Pay-as-you-go with first 20M standard queries free/month and first 1M smart queries free/month, $1/month minimum charge, 14-day free trial. ISO 27001 and SOC 2 confirmed via bunny.net blog; GDPR via bunny.net/gdpr/.",
+      "plans": [
+        {
+          "name": "Pay-As-You-Go",
+          "monthlyUsd": 1,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Minimum charge $1/month. First 20M standard queries/month FREE, then $0.10/million. First 1M smart queries/month FREE, then $0.30/million. All features included: scriptable DNS records, built-in monitoring, GeoDNS. 14-day free trial, no credit card required.",
+          "source": {
+            "url": "https://bunny.net/pricing/dns/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://bunny.net/gdpr/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Bunny CDN",
+          "API",
+          "Terraform"
+        ],
+        "limits": [
+          "$1/month minimum charge",
+          "20M standard queries free then $0.10/million",
+          "1M smart queries free then $0.30/million"
+        ],
+        "keyFeatures": [
+          "All features included at $1/month minimum",
+          "Scriptable DNS records (edge scripting)",
+          "ISO 27001 + SOC 2 certified",
+          "14-day free trial, no credit card required"
+        ],
+        "bestFor": [
+          "developers needing scriptable DNS",
+          "low-budget high-volume deployments",
+          "Bunny CDN customers"
+        ],
+        "sources": [
+          {
+            "url": "https://bunny.net/pricing/dns/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://bunny.net/gdpr/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing fetched and confirmed exactly from bunny.net/pricing/dns/; GDPR from bunny.net/gdpr/; SOC 2 and ISO 27001 confirmed via WebSearch citing official bunny.net blog posts, all accessed 2026-06-15."
+      }
+    },
+    {
+      "slug": "amazon-route-53",
+      "name": "Amazon Route 53",
+      "domain": "aws.amazon.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "AWS ELB",
+        "AWS CloudFront",
+        "AWS API Gateway",
+        "AWS S3",
+        "AWS EC2",
+        "Terraform",
+        "CloudFormation",
+        "AWS Health"
+      ],
+      "provenance": "Fetched aws.amazon.com/route53/pricing/ on 2026-06-15; all figures confirmed exactly. Route 53 is listed on the AWS HIPAA-eligible services reference (covered under the AWS BAA), confirmed via WebSearch. Usage-based — no flat monthly base.",
+      "plans": [
+        {
+          "name": "Usage-Based",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "No base fee. Hosted zones: $0.50/zone/month for first 25 zones; $0.10/zone/month for 26+. Standard queries: $0.40/million (first 1B/month), $0.20/million (over 1B). Latency-based routing: $0.60/million (first 1B), $0.30/million (over 1B). Geolocation/Geoproximity: $0.70/million (first 1B), $0.35/million (over 1B). IP-Based Routing: $0.80/million (first 1B), $0.40/million (over 1B). Alias queries to AWS services are free. Traffic Flow: $50/policy record/month. Health checks: $0.50/check/month (AWS endpoints), $0.75/check/month (non-AWS).",
+          "source": {
+            "url": "https://aws.amazon.com/route53/pricing/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://aws.amazon.com/compliance/hipaa-eligible-services-reference/",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "AWS ELB",
+          "AWS CloudFront",
+          "AWS API Gateway",
+          "AWS S3",
+          "AWS EC2",
+          "Terraform",
+          "CloudFormation"
+        ],
+        "limits": [
+          "$0.50/hosted zone/month minimum charge",
+          "No free tier for hosted zones",
+          "Traffic Flow policy records: $50/policy record/month"
+        ],
+        "keyFeatures": [
+          "HIPAA-eligible service covered under AWS BAA",
+          "Deep AWS service integration (alias records free to AWS targets)",
+          "Health checks with automatic failover",
+          "Latency, geolocation, weighted, and IP-based routing"
+        ],
+        "bestFor": [
+          "AWS-native architectures",
+          "HIPAA-covered workloads on AWS",
+          "high-availability multi-region routing"
+        ],
+        "sources": [
+          {
+            "url": "https://aws.amazon.com/route53/pricing/",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://aws.amazon.com/compliance/hipaa-eligible-services-reference/",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing fetched and confirmed exactly from aws.amazon.com/route53/pricing/; HIPAA eligibility confirmed on the AWS HIPAA-eligible services reference, both accessed 2026-06-15."
+      }
+    },
+    {
+      "slug": "google-cloud-dns",
+      "name": "Google Cloud DNS",
+      "domain": "cloud.google.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Google Cloud Load Balancing",
+        "GKE",
+        "Google Cloud Armor",
+        "Terraform",
+        "Google Cloud CDN",
+        "Firebase"
+      ],
+      "provenance": "cloud.google.com/dns/pricing returned truncated WebFetch output on 2026-06-15; per-zone and per-query figures corroborated via WebSearch citing the official pricing page. HIPAA: the draft claimed Cloud DNS is 'explicitly listed' as a HIPAA-covered product — this is NOT verifiable; Cloud DNS is not explicitly named in Google's public HIPAA covered-products list, so hipaa/baa set to null (null beats a guess).",
+      "plans": [
+        {
+          "name": "Usage-Based",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "No base fee. Managed zones: $0.20/zone/month (first 25 zones), $0.10/zone/month (26-10,000 zones), $0.03/zone/month (over 10,000 zones). DNS queries: $0.40/million (0-1B/month), $0.20/million (over 1B/month). No data transfer charges for DNS queries. DNSSEC available.",
+          "source": {
+            "url": "https://cloud.google.com/dns/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://cloud.google.com/security/compliance/hipaa",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Google Kubernetes Engine",
+          "Google Cloud Load Balancing",
+          "Google Cloud CDN",
+          "Terraform",
+          "Firebase",
+          "Google Cloud Armor"
+        ],
+        "limits": [
+          "$0.20/zone/month minimum charge",
+          "No free tier for managed zones",
+          "Queries billed regardless of zone type",
+          "HIPAA coverage of Cloud DNS not explicitly confirmed"
+        ],
+        "keyFeatures": [
+          "Tiered per-zone pricing with volume discounts at 10,000+ zones ($0.03/zone)",
+          "SOC 2 and ISO 27001 certified infrastructure",
+          "No data transfer out charges for DNS",
+          "DNSSEC support"
+        ],
+        "bestFor": [
+          "GCP-native architectures",
+          "large zone-count deployments",
+          "teams already standardized on Google Cloud"
+        ],
+        "sources": [
+          {
+            "url": "https://cloud.google.com/dns/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://cloud.google.com/security/compliance/hipaa",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing corroborated via WebSearch citing the official Google Cloud DNS pricing page (WebFetch truncated). HIPAA coverage of Cloud DNS specifically could not be confirmed in Google's public covered-products list, so hipaa/baa set to null; SOC 2 / ISO 27001 infrastructure certification retained. Accessed 2026-06-15."
+      }
+    },
+    {
+      "slug": "dnsfilter",
+      "name": "DNSFilter",
+      "domain": "dnsfilter.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Active Directory",
+        "Zapier",
+        "API",
+        "Windows roaming client",
+        "macOS roaming client",
+        "iOS",
+        "Android"
+      ],
+      "provenance": "Fetched dnsfilter.com/pricing on 2026-06-15; all per-user prices confirmed exactly. NOTE: DNSFilter is a protective DNS / content-filtering service, not a general-purpose authoritative DNS host; included because it appears in the requested vendor list. SOC 2 Type II confirmed via DNSFilter blog.",
+      "plans": [
+        {
+          "name": "Basic",
+          "monthlyUsd": 1.15,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 13,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "$1.15/user/month (monthly billing); $1.00/user/month (annual billing). Minimum $23/month (monthly) or $240/year (annual). Includes real-time threat detection, content filtering, malicious domain protection, scheduled reporting.",
+          "source": {
+            "url": "https://www.dnsfilter.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 2.3,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 9,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "$2.30/user/month (monthly billing); $2.10/user/month (annual billing). Minimum $57.50/month (monthly) or $630/year (annual). Adds AppAware, Windows and macOS roaming clients, Active Directory support, Zapier integration, API access. Most popular plan.",
+          "source": {
+            "url": "https://www.dnsfilter.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": 3,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "$3.00/user/month (monthly billing); $2.70/user/month (annual billing). Minimum $100/month (monthly) or $1,080/year (annual). Adds iOS and Android roaming clients, 90-day report retention, 9-day query log retention. 14-day free trial available.",
+          "source": {
+            "url": "https://www.dnsfilter.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://www.dnsfilter.com/blog/dnsfilter-achieves-soc-2-type-ii-compliance",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Active Directory",
+          "Zapier",
+          "Windows roaming client",
+          "macOS roaming client",
+          "iOS",
+          "Android",
+          "API"
+        ],
+        "limits": [
+          "Minimum $23/month on Basic",
+          "Minimum $100/month on Enterprise",
+          "Query log retention: 9 days on Enterprise only",
+          "Protective/filtering DNS, not authoritative DNS hosting"
+        ],
+        "keyFeatures": [
+          "SOC 2 Type II certified",
+          "AI-driven real-time threat detection",
+          "Roaming client support for remote users",
+          "Content filtering by category"
+        ],
+        "bestFor": [
+          "SMB security filtering",
+          "MSPs managing DNS security",
+          "remote workforce DNS protection"
+        ],
+        "sources": [
+          {
+            "url": "https://www.dnsfilter.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://www.dnsfilter.com/blog/dnsfilter-achieves-soc-2-type-ii-compliance",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Pricing fetched and confirmed exactly from dnsfilter.com/pricing; SOC 2 Type II confirmed from the official DNSFilter blog, both accessed 2026-06-15."
+      }
+    }
+  ]
+}
