@@ -1,0 +1,353 @@
+{
+  "category": "external-hard-drives",
+  "generatedAt": "2026-06-19",
+  "methodologyNotes": "Adversarially re-verified roster of 12 external HDD models (portable and desktop) across Seagate, WD, Toshiba, and LaCie. Re-checked against manufacturer pages (Seagate.com, WesternDigital.com, storage.toshiba.com), major retailers (Best Buy, Staples, Newegg, Walmart, B&H Photo, CDW, Dell), and WD's encryption compatibility matrix. Key correction theme: Seagate One Touch ships in two distinct lines — standard 'One Touch HDD' (STKC/STKB suffix, NO hardware encryption) and 'One Touch with Password' (STKZ/STKY suffix, AES-256). The draft conflated them; encryption is now false for the standard STKC/STKB models that are actually named. RPM is set null for portable One Touch and desktop Expansion/Elements/easystore enclosures because the manufacturer does not publicly disclose RPM for those retail enclosures (a null beats a 5400/7200 guess). capacity_tb and rpm are unitless numbers; dimensions_in is a string with units; boolean fields reflect confirmed yes/no as sourced. accessedAt 2026-06-19.",
+  "specKeys": [
+    "capacity_tb",
+    "form_factor",
+    "interface",
+    "rpm",
+    "power",
+    "hardware_encryption",
+    "dimensions_in",
+    "release"
+  ],
+  "products": [
+    {
+      "slug": "seagate-one-touch-5tb",
+      "name": "Seagate One Touch 5TB (STKC5000400)",
+      "brand": "Seagate",
+      "category": "external-hard-drives",
+      "releaseDate": "2020",
+      "priceUsd": 154.99,
+      "priceNote": "Standard (non-password) STKC5000400 at Walmart ~$155; Best Buy lists it as no longer in new-condition stock. The separately-named STKZ5000400 'One Touch with Password' variant retails higher (~$199.99) and is a different SKU.",
+      "specs": {
+        "capacity_tb": 5,
+        "form_factor": "portable",
+        "interface": "usb_3_2_gen1",
+        "rpm": null,
+        "power": "bus_powered",
+        "hardware_encryption": false,
+        "dimensions_in": "4.54 x 3.15 x 0.82 in",
+        "release": "2020"
+      },
+      "source": {
+        "url": "https://www.amazon.com/Seagate-External-Recovery-Services-STKC5000400/dp/B08HMK4F26",
+        "accessedAt": "2026-06-19"
+      },
+      "corroboration": {
+        "url": "https://www.seagate.com/products/external-hard-drives/one-touch-external-drives/",
+        "accessedAt": "2026-06-19"
+      },
+      "provenance": "CORRECTED. hardware_encryption true->false: STKC5000400 is the standard One Touch HDD with no hardware encryption; only the 'One Touch with Password' STKZ5000400 (separate Best Buy SKU) carries AES-256. priceUsd 199.99->154.99: $199.99 was the STKZ password variant; the named STKC model is ~$155 at Walmart. rpm 5400->null: Seagate does not publish RPM for the One Touch portable enclosure. Interface USB 3.2 Gen 1 confirmed via Dell listing. Dimensions retained per Staples/retail listings."
+    },
+    {
+      "slug": "wd-my-passport-5tb",
+      "name": "WD My Passport 5TB (WDBPKJ0050BBK-WESN)",
+      "brand": "WD",
+      "category": "external-hard-drives",
+      "releaseDate": "2019",
+      "priceUsd": 159.95,
+      "priceNote": "~$159.95 at B&H; Dell/CDW list this exact SKU as encrypted USB 3.2 Gen 1; street price varies $140-$160",
+      "specs": {
+        "capacity_tb": 5,
+        "form_factor": "portable",
+        "interface": "usb_3_2_gen1",
+        "rpm": 5400,
+        "power": "bus_powered",
+        "hardware_encryption": true,
+        "dimensions_in": "4.22 x 2.95 x 0.75 in",
+        "release": "2019"
+      },
+      "source": {
+        "url": "https://www.cdw.com/product/wd-my-passport-wdbpkj0050bbk-hard-drive-5-tb-usb-3.2-gen-1/5845053",
+        "accessedAt": "2026-06-19"
+      },
+      "corroboration": {
+        "url": "https://www.dell.com/en-us/shop/wd-my-passport-wdbpkj0050bbk-hard-drive-encrypted-5-tb-external-portable-usb-32-gen-1-256-bit-aes-black/apd/aa895845/storage-drives-media",
+        "accessedAt": "2026-06-19"
+      },
+      "provenance": "CORRECTED price 139.99->159.95 to match the exact SKU street price (B&H/Dell). 256-bit AES hardware encryption confirmed on Dell and CDW listings for this exact SKU. Dimensions 4.22 x 2.95 x 0.75 in / 0.46 lb confirmed. RPM 5400 retained per consistent third-party aggregator data (WD does not officially publish; widely corroborated)."
+    },
+    {
+      "slug": "wd-elements-portable-5tb",
+      "name": "WD Elements Portable 5TB (WDBU6Y0050BBK-WESN)",
+      "brand": "WD",
+      "category": "external-hard-drives",
+      "releaseDate": "2019",
+      "priceUsd": 129.99,
+      "priceNote": "$129.99 at B&H (sale from $139.99); Amazon/Newegg vary $130-$215",
+      "specs": {
+        "capacity_tb": 5,
+        "form_factor": "portable",
+        "interface": "usb_3_2_gen1",
+        "rpm": 5400,
+        "power": "bus_powered",
+        "hardware_encryption": false,
+        "dimensions_in": "4.35 x 3.23 x 0.82 in",
+        "release": "2019"
+      },
+      "source": {
+        "url": "https://www.bhphotovideo.com/c/product/1527251-REG/wd_wdbu6y0050bbk_wesn_5tb_elements_portable_hd.html",
+        "accessedAt": "2026-06-19"
+      },
+      "corroboration": {
+        "url": "https://support-en.wd.com/app/answers/detailweb/a_id/1837/~/wd-external-drive-hardware-encryption-compatibility-matrix",
+        "accessedAt": "2026-06-19"
+      },
+      "provenance": "VERIFIED. Price $129.99 confirmed at B&H. Hardware encryption None/false per WD compatibility matrix (Elements Portable = No). Dimensions retained. RPM 5400 per aggregator data (WD does not officially publish). Source URL changed from mobilespecs aggregator to B&H retailer for a topical primary-retail source."
+    },
+    {
+      "slug": "seagate-expansion-desktop-8tb",
+      "name": "Seagate Expansion Desktop 8TB (STKP8000400)",
+      "brand": "Seagate",
+      "category": "external-hard-drives",
+      "releaseDate": "2021",
+      "priceUsd": 219.99,
+      "priceNote": "$219.99 at Staples; varies $215-$280 by retailer",
+      "specs": {
+        "capacity_tb": 8,
+        "form_factor": "desktop",
+        "interface": "usb_3_0",
+        "rpm": null,
+        "power": "external_psu",
+        "hardware_encryption": false,
+        "dimensions_in": "7.04 x 4.92 x 1.65 in",
+        "release": "2021"
+      },
+      "source": {
+        "url": "https://www.staples.com/seagate-expansion-8tb-usb-3-0-external-hard-drive-black-stkp8000400/product_24493060",
+        "accessedAt": "2026-06-19"
+      },
+      "corroboration": {
+        "url": "https://www.dell.com/en-us/shop/seagate-expansion-stkp8000400-8-tb-desktop-hard-drive-35-external-black/apd/ab654625/storage-drives-media",
+        "accessedAt": "2026-06-19"
+      },
+      "provenance": "CORRECTED rpm 7200->null. Seagate does not publish RPM for the Expansion Desktop enclosure; sources conflict (one aggregator claims 7200, the official datasheet states none) so null beats a guess. Price $219.99 and dimensions 7.04 x 4.92 x 1.65 in / 2.59 lb confirmed at Staples. Interface USB 3.0, external 18W PSU. Expansion line does not advertise hardware encryption."
+    },
+    {
+      "slug": "wd-easystore-14tb",
+      "name": "WD Easystore 14TB (WDBAMA0140HBK-NESN)",
+      "brand": "WD",
+      "category": "external-hard-drives",
+      "releaseDate": "2020",
+      "priceUsd": 199.99,
+      "priceNote": "$199.99 at Best Buy (Best Buy house brand / exclusive); limited new-condition stock",
+      "specs": {
+        "capacity_tb": 14,
+        "form_factor": "desktop",
+        "interface": "usb_3_0",
+        "rpm": null,
+        "power": "external_psu",
+        "hardware_encryption": false,
+        "dimensions_in": "6.7 x 5.5 x 1.97 in",
+        "release": "2020"
+      },
+      "source": {
+        "url": "https://www.bestbuy.com/site/wd-easystore-14tb-external-usb-3-0-hard-drive-black/6425303.p",
+        "accessedAt": "2026-06-19"
+      },
+      "corroboration": {
+        "url": "https://support-en.wd.com/app/answers/detailweb/a_id/1837/~/wd-external-drive-hardware-encryption-compatibility-matrix",
+        "accessedAt": "2026-06-19"
+      },
+      "provenance": "CORRECTED source URL: easystore is a Best Buy house brand; replaced the Amazon URL with the canonical Best Buy product page. Price $199.99 confirmed at Best Buy. Dimensions 6.7 x 5.5 x 1.97 in confirmed at Best Buy. Hardware encryption No per WD matrix. RPM null (WD does not publish; batches vary 5400/7200)."
+    },
+    {
+      "slug": "toshiba-canvio-basics-4tb",
+      "name": "Toshiba Canvio Basics 4TB (HDTB540XK3CA)",
+      "brand": "Toshiba",
+      "category": "external-hard-drives",
+      "releaseDate": "2022",
+      "priceUsd": 89.99,
+      "priceNote": "Typical retail ~$85-$100; varies by seller; older third-party listings show inflated prices",
+      "specs": {
+        "capacity_tb": 4,
+        "form_factor": "portable",
+        "interface": "usb_3_2_gen1",
+        "rpm": null,
+        "power": "bus_powered",
+        "hardware_encryption": false,
+        "dimensions_in": "3.07 x 4.29 x 0.77 in",
+        "release": "2022"
+      },
+      "source": {
+        "url": "https://www.amazon.com/Toshiba-Canvio-Basics-Portable-External/dp/B0BQX82Q17",
+        "accessedAt": "2026-06-19"
+      },
+      "corroboration": {
+        "url": "https://www.newegg.com/toshiba-model-hdtb540xk3aa-4tb-usb-3-0/p/N82E16822149820",
+        "accessedAt": "2026-06-19"
+      },
+      "provenance": "CORRECTED priceUsd 79.99->89.99 to reflect typical current retail for the exact HDTB540XK3CA SKU. Source URL changed to the matching HDTB540XK3CA Amazon listing. Dimensions 78 x 109 x 19.5 mm (~3.07 x 4.29 x 0.77 in), weight 217.5g per Toshiba. Interface USB 3.0 / USB 3.2 Gen 1 (5Gbps, equivalent). RPM not published by Toshiba -> null. No hardware encryption."
+    },
+    {
+      "slug": "seagate-backup-plus-hub-8tb",
+      "name": "Seagate Backup Plus Hub 8TB (STEL8000100)",
+      "brand": "Seagate",
+      "category": "external-hard-drives",
+      "releaseDate": "2016",
+      "priceUsd": 254.99,
+      "priceNote": "$254.99 at Staples; aged product, limited availability; launched ~$299",
+      "specs": {
+        "capacity_tb": 8,
+        "form_factor": "desktop",
+        "interface": "usb_3_0",
+        "rpm": 5400,
+        "power": "external_psu",
+        "hardware_encryption": false,
+        "dimensions_in": "7.8 x 4.65 x 1.61 in",
+        "release": "2016"
+      },
+      "source": {
+        "url": "https://www.staples.com/seagate-backup-plus-hub-8tb-external-hard-drive-desktop-hdd-usb-3-0-with-2-usb-ports-black-stel8000100/product_2431915",
+        "accessedAt": "2026-06-19"
+      },
+      "corroboration": {
+        "url": "https://pcpartpicker.com/product/G3rcCJ/seagate-backup-plus-hub-8-tb-external-hard-drive-stel8000100",
+        "accessedAt": "2026-06-19"
+      },
+      "provenance": "VERIFIED. RPM 5400 confirmed at PCPartPicker (one eBay listing erroneously says 7200/2.5in; the desktop Hub is a 3.5in 5400-class drive). Price $254.99 and dimensions confirmed at Staples. No hardware encryption (software/BitLocker only). Two front USB hub ports."
+    },
+    {
+      "slug": "lacie-rugged-mini-4tb",
+      "name": "LaCie Rugged Mini 4TB (LAC9000633)",
+      "brand": "LaCie",
+      "category": "external-hard-drives",
+      "releaseDate": "2016",
+      "priceUsd": 169.99,
+      "priceNote": "~$169.99 retail; aged product, limited new availability at major retailers",
+      "specs": {
+        "capacity_tb": 4,
+        "form_factor": "portable",
+        "interface": "usb_3_0",
+        "rpm": 5400,
+        "power": "bus_powered",
+        "hardware_encryption": false,
+        "dimensions_in": "5.3 x 3.4 x 0.8 in",
+        "release": "2016"
+      },
+      "source": {
+        "url": "https://www.bhphotovideo.com/c/product/1188743-REG/lacie_lac9000633_4tb_rugged_mini_portable.html",
+        "accessedAt": "2026-06-19"
+      },
+      "corroboration": {
+        "url": "https://www.cdw.com/product/lacie-rugged-mini-hard-drive-4-tb-usb-3.0/3954362",
+        "accessedAt": "2026-06-19"
+      },
+      "provenance": "VERIFIED. RPM 5400 confirmed at Walmart/B&H. Dimensions 0.8 x 3.4 x 5.3 in, ~8.5 oz, USB 3.0, shock/crush resistant. No hardware encryption advertised by LaCie (software password only). Source URL changed from Seagate marketing page to B&H retail listing for the exact SKU."
+    },
+    {
+      "slug": "wd-my-book-8tb",
+      "name": "WD My Book 8TB (WDBBGB0080HBK-NESN)",
+      "brand": "WD",
+      "category": "external-hard-drives",
+      "releaseDate": "2017",
+      "priceUsd": 204.99,
+      "priceNote": "Volatile: ~$205 (Pangoly low) up to ~$251-$306 at CompSource/Walmart; Best Buy higher",
+      "specs": {
+        "capacity_tb": 8,
+        "form_factor": "desktop",
+        "interface": "usb_3_2_gen1",
+        "rpm": 5400,
+        "power": "external_psu",
+        "hardware_encryption": true,
+        "dimensions_in": "6.72 x 5.48 x 1.93 in",
+        "release": "2017"
+      },
+      "source": {
+        "url": "https://www.westerndigital.com/products/external-drives/wd-my-book-usb-3-0-hdd?sku=WDBBGB0080HBK-NESN",
+        "accessedAt": "2026-06-19"
+      },
+      "corroboration": {
+        "url": "https://www.newegg.com/black-wd-my-book-8tb/p/N82E16822235160",
+        "accessedAt": "2026-06-19"
+      },
+      "provenance": "VERIFIED. 256-bit AES hardware encryption confirmed (Newegg, CompSource, WD). Dimensions 6.72 x 1.93 x 5.48 in (reordered to consistent HxWxD presentation). Interface USB 3.0 / USB 3.2 Gen 1 Micro-B (equivalent 5Gbps). External 12V AC PSU. Price $204.99 retained as the low tracked point (Pangoly); note recent sightings run $251-$306, so price is volatile."
+    },
+    {
+      "slug": "seagate-one-touch-2tb",
+      "name": "Seagate One Touch 2TB (STKB2000400)",
+      "brand": "Seagate",
+      "category": "external-hard-drives",
+      "releaseDate": "2020",
+      "priceUsd": 102.05,
+      "priceNote": "$102.05 at Newegg for STKB2000400 (standard, no encryption). The separately-named STKY2000400 'with Password' variant has AES-256 and retails higher.",
+      "specs": {
+        "capacity_tb": 2,
+        "form_factor": "portable",
+        "interface": "usb_3_2_gen1",
+        "rpm": null,
+        "power": "bus_powered",
+        "hardware_encryption": false,
+        "dimensions_in": "4.52 x 3.07 x 0.46 in",
+        "release": "2020"
+      },
+      "source": {
+        "url": "https://www.newegg.com/seagate-model-stkb2000400-2tb/p/N82E16822184877",
+        "accessedAt": "2026-06-19"
+      },
+      "corroboration": {
+        "url": "https://www.seagate.com/support/external-hard-drives/portable-hard-drives/one-touch-hdd/",
+        "accessedAt": "2026-06-19"
+      },
+      "provenance": "CORRECTED. hardware_encryption true->false: STKB2000400 is the standard One Touch HDD with no hardware encryption (Newegg specs list none); only the separate STKY2000400 'One Touch with Password' SKU carries AES-256. Name trimmed to the actual named SKU. rpm 5400->null: Seagate does not publish RPM for the One Touch portable enclosure. Price $102.05 and dimensions confirmed at Newegg. Interface USB 3.2 Gen 1 (Type-A) confirmed via Micro Center."
+    },
+    {
+      "slug": "wd-elements-desktop-12tb",
+      "name": "WD Elements Desktop 12TB (WDBWLG0120HBK-NESN)",
+      "brand": "WD",
+      "category": "external-hard-drives",
+      "releaseDate": "2019",
+      "priceUsd": 199.99,
+      "priceNote": "~$199.99 (Newegg historical low) up to ~$270+; varies widely",
+      "specs": {
+        "capacity_tb": 12,
+        "form_factor": "desktop",
+        "interface": "usb_3_2_gen1",
+        "rpm": null,
+        "power": "external_psu",
+        "hardware_encryption": false,
+        "dimensions_in": "6.53 x 5.31 x 1.89 in",
+        "release": "2019"
+      },
+      "source": {
+        "url": "https://www.bhphotovideo.com/c/product/1532285-REG/wd_wdbwlg0120hbk_nesn_12tb_elements_desktop_hd.html",
+        "accessedAt": "2026-06-19"
+      },
+      "corroboration": {
+        "url": "https://support-en.wd.com/app/answers/detailweb/a_id/1837/~/wd-external-drive-hardware-encryption-compatibility-matrix",
+        "accessedAt": "2026-06-19"
+      },
+      "provenance": "VERIFIED. priceUsd adjusted 219.99->199.99 toward the documented in-stock retail point (Newegg). Hardware encryption No per WD matrix. RPM null: WD does not publish RPM for the Elements Desktop enclosure (some listings claim 7200 but it varies by batch) -> null beats a guess. Interface USB 3.2 Gen 1 (USB 3.0), external AC PSU. Source URL changed to B&H for a topical retail listing."
+    },
+    {
+      "slug": "toshiba-canvio-flex-4tb",
+      "name": "Toshiba Canvio Flex 4TB (HDTX140XSCCA)",
+      "brand": "Toshiba",
+      "category": "external-hard-drives",
+      "releaseDate": "2021",
+      "priceUsd": 155,
+      "priceNote": "~$155 at Adorama; CompSource ~$130, Newegg ~$197, Best Buy ~$215",
+      "specs": {
+        "capacity_tb": 4,
+        "form_factor": "portable",
+        "interface": "usb_3_2_gen1",
+        "rpm": null,
+        "power": "bus_powered",
+        "hardware_encryption": false,
+        "dimensions_in": "3.15 x 4.37 x 0.77 in",
+        "release": "2021"
+      },
+      "source": {
+        "url": "https://www.bhphotovideo.com/c/product/1759571-REG/toshiba_hdtx140xscca_canvio_flex_4tb.html",
+        "accessedAt": "2026-06-19"
+      },
+      "corroboration": {
+        "url": "https://www.cdw.com/product/toshiba-canvio-flex-hard-drive-4-tb-usb-3.2-gen-1/7350380",
+        "accessedAt": "2026-06-19"
+      },
+      "provenance": "CORRECTED interface usb_c->usb_3_2_gen1. The Canvio Flex is a USB 3.2 Gen 1 drive (5Gbps) with a Micro-B port that ships with BOTH USB-A and USB-C cables; labeling it purely 'usb_c' is misleading (B&H/CDW/Micro Center all list it as USB 3.2 Gen 1). Source URL changed from a Newegg /amp/ link to the canonical B&H product page. Price ~$155 (Adorama) retained. Dimensions 0.77 x 3.15 x 4.37 in. RPM not published by Toshiba -> null. No hardware encryption."
+    }
+  ]
+}
