@@ -1,0 +1,815 @@
+{
+  "vertical": "notification-infrastructure",
+  "generatedAt": "2026-06-19",
+  "methodologyNotes": "Official pricing pages were re-verified via WebFetch on 2026-06-19 for knock.app/pricing, novu.co/pricing, magicbell.com/pricing, suprsend.com/pricing, and engagespot.co/pricing; all returned 200 and corroborated the prices below. Compliance pages fetched: docs.knock.app/developer-tools/security (SOC 2 Type 2 + GDPR + HIPAA stated), novu.co/security (SOC 2 Type II + ISO 27001 + GDPR + HIPAA stated), magicbell.com/security (GDPR explicitly stated; SOC 2 confirmed via secondary sources, NOT on /security; HIPAA absent). courier.com/pricing and the Courier blog returned HTTP 403 on every attempt; Courier plan data is secondary/indicative only and monthlyUsd is null for non-free tiers to avoid fabrication; Courier SOC 2 Type 2 is verifiable via its own live blog post (2022). 'starting from' prices (Novu Pro/Team) are noted as floors. Engagespot Enterprise 'starts from $2500 / custom volume' is treated as a contact-sales tier (monthlyUsd null, custom). All notification volumes are monthly; units differ by vendor (Novu = workflow runs, Engagespot = event triggers, MagicBell = per-channel deliveries). accessedAt 2026-06-19.",
+  "vendors": [
+    {
+      "slug": "knock",
+      "name": "Knock",
+      "domain": "knock.app",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Segment",
+        "RudderStack",
+        "Hightouch",
+        "Census",
+        "Datadog",
+        "New Relic",
+        "Okta",
+        "Active Directory",
+        "Stripe",
+        "Clerk",
+        "WorkOS",
+        "PostHog",
+        "Supabase",
+        "Slack",
+        "Microsoft Teams",
+        "Discord",
+        "WhatsApp",
+        "Twilio",
+        "SendGrid",
+        "Mailgun",
+        "Postmark",
+        "Amazon SES",
+        "FCM",
+        "APNs",
+        "Expo",
+        "OneSignal",
+        "Amazon SNS"
+      ],
+      "provenance": "Pricing re-verified directly from knock.app/pricing on 2026-06-19 (Developer $0, Starter $250, Enterprise 'Contact us'). Compliance from docs.knock.app/developer-tools/security: 'Knock is SOC 2 Type 2 compliant, GDPR certified, CCPA, and HIPAA compliant.' That page does NOT explicitly confirm a BAA (directs to security@knock.app), so baa set to null.",
+      "plans": [
+        {
+          "name": "Developer",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "10,000 messages/month, 500 guide active users, 500 AI agent credits, unlimited workflows/broadcasts/channels/team members, batch and delay notifications, multi-tenancy, Google SSO. Overage on AI credits at $0.01/credit.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://knock.app/pricing",
+            "accessedAt": "2026-06-19"
+          }
+        },
+        {
+          "name": "Starter",
+          "monthlyUsd": 250,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "50,000 messages/month ($0.005 per additional message), 2,500 guide active users ($0.05 each additional), 2,000 AI credits ($0.01 each additional). Includes everything in Developer plus Knock branding removal.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://knock.app/pricing",
+            "accessedAt": "2026-06-19"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "'Contact us' on the pricing page. Flexible volume-based or monthly notified-user pricing with annual commit discounts. Adds per-customer branding, i18n, analytics/data warehouse integration, SCIM, SAML 2.0 SSO, HIPAA/BAA, enterprise SLAs, priority support.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://knock.app/pricing",
+            "accessedAt": "2026-06-19"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://docs.knock.app/developer-tools/security",
+            "accessedAt": "2026-06-19"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Segment",
+          "RudderStack",
+          "Datadog",
+          "Slack",
+          "Twilio",
+          "SendGrid",
+          "FCM",
+          "APNs",
+          "Stripe",
+          "Supabase"
+        ],
+        "limits": [
+          "10,000 messages/month on free tier",
+          "500 guide active users on free tier",
+          "$0.005 per message overage on Starter",
+          "50,000 messages/month on Starter"
+        ],
+        "keyFeatures": [
+          "Multi-tenant notification infrastructure with per-customer branding on Enterprise",
+          "In-app notification feed + guide banners/modals with pre-built UI components",
+          "Batch, delay, and digest workflows with visual builder",
+          "Preference management API with granular channel-level control"
+        ],
+        "bestFor": [
+          "product-notification-infrastructure",
+          "saas-in-app-notifications",
+          "enterprise-multi-tenant",
+          "healthcare-hipaa"
+        ],
+        "sources": [
+          {
+            "url": "https://knock.app/pricing",
+            "accessedAt": "2026-06-19"
+          },
+          {
+            "url": "https://docs.knock.app/developer-tools/security",
+            "accessedAt": "2026-06-19"
+          },
+          {
+            "url": "https://docs.knock.app/integrations/overview",
+            "accessedAt": "2026-06-19"
+          }
+        ],
+        "provenance": "Pricing confirmed directly from knock.app/pricing; integrations from docs.knock.app/integrations/overview; compliance from docs.knock.app/developer-tools/security (SOC 2 Type 2, GDPR, HIPAA; BAA not explicitly confirmed on page)."
+      }
+    },
+    {
+      "slug": "courier",
+      "name": "Courier",
+      "domain": "courier.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Twilio",
+        "SendGrid",
+        "Mailgun",
+        "FCM",
+        "APNs",
+        "Slack",
+        "Microsoft Teams",
+        "WhatsApp",
+        "Segment",
+        "Firebase"
+      ],
+      "provenance": "courier.com/pricing returned HTTP 403 on every direct fetch attempt on 2026-06-19, as did the Courier blog. Plan data is secondary/indicative only (G2, GetApp, dub.co, Courier blog excerpts via search); aggregators disagree on paid-tier prices ($19-$99/mo range cited), so monthlyUsd is null for paid tiers to avoid fabrication. SOC 2 Type 2 IS verifiable via Courier's own live blog post (courier.com/blog/how-courier-became-soc-2-type-2-compliant, 2022). HIPAA/GDPR not vendor-confirmed on an accessible page, so both null.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "~10,000 notifications/month across all channels (corroborated by multiple secondary sources; official courier.com/pricing returns HTTP 403 and could not be vendor-verified). Indicative.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.courier.com/pricing",
+            "accessedAt": "2026-06-19"
+          }
+        },
+        {
+          "name": "Pro (usage-based)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_message",
+          "notes": "Usage-based pay-per-notification model above the free tier. Exact per-notification rate could NOT be vendor-confirmed (official page 403; secondary sources conflict on both monthly entry price and per-message rate), so all price fields are null. Removed the unverifiable '~$0.005/notification' figure that appeared in the draft.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.courier.com/pricing",
+            "accessedAt": "2026-06-19"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing (contact sales). Reported to include SOC 2, RBAC, dedicated support, data residency, 99.9% SLA. Annual contract ranges cited by procurement aggregators are indicative only and not vendor-published.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.courier.com/pricing",
+            "accessedAt": "2026-06-19"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://www.courier.com/blog/how-courier-became-soc-2-type-2-compliant",
+            "accessedAt": "2026-06-19"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Twilio",
+          "SendGrid",
+          "Mailgun",
+          "Slack",
+          "Microsoft Teams",
+          "Segment",
+          "FCM",
+          "APNs",
+          "WhatsApp"
+        ],
+        "limits": [
+          "~10,000 notifications/month on free tier (secondary-sourced; official page blocked)",
+          "Paid-tier prices not vendor-confirmed (courier.com/pricing HTTP 403)"
+        ],
+        "keyFeatures": [
+          "Single API routing to many providers across email, SMS, push, chat, in-app",
+          "Visual notification template designer with multi-channel preview",
+          "User preference management with channel-level controls",
+          "Routing rules and fallback logic without code changes"
+        ],
+        "bestFor": [
+          "multi-channel-orchestration",
+          "developer-notification-api",
+          "startups-scaling-notifications"
+        ],
+        "sources": [
+          {
+            "url": "https://www.courier.com/pricing",
+            "accessedAt": "2026-06-19"
+          },
+          {
+            "url": "https://www.courier.com/blog/how-courier-became-soc-2-type-2-compliant",
+            "accessedAt": "2026-06-19"
+          },
+          {
+            "url": "https://dub.co/blog/best-notification-infrastructure-services",
+            "accessedAt": "2026-06-19"
+          }
+        ],
+        "provenance": "Pricing page blocked (HTTP 403) on 2026-06-19; pricing is secondary/indicative. SOC 2 Type 2 confirmed via Courier's own live blog post. HIPAA and GDPR not vendor-confirmed on an accessible page, set to null."
+      }
+    },
+    {
+      "slug": "novu",
+      "name": "Novu",
+      "domain": "novu.co",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "SendGrid",
+        "Mailgun",
+        "Amazon SES",
+        "Postmark",
+        "Twilio",
+        "FCM",
+        "APNs",
+        "Expo",
+        "Slack",
+        "Microsoft Teams",
+        "Discord",
+        "WhatsApp",
+        "Resend"
+      ],
+      "provenance": "Pricing re-verified directly from novu.co/pricing on 2026-06-19 (Free $0, Pro from $30, Team from $250, Enterprise custom). Compliance from novu.co/security: 'Novu Cloud is compliant with GDPR, SOC 2 Type II, and ISO 27001 standards' plus HIPAA listed. BAA specifics not stated on the page, so baa null.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "10,000 workflow runs/month, 2 environments, 3 team members, all channels enabled, inbox and user preferences. Self-hosted (open-source) is free with unlimited runs.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://novu.co/pricing",
+            "accessedAt": "2026-06-19"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 30,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "'Starting from $30/month'. 30,000 workflow runs/month, unlimited team members, 2 environments, 7-day activity feed, Novu branding removed. Overage at $1.20 per 1,000 additional runs. Annual pricing available (discount % not disclosed).",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://novu.co/pricing",
+            "accessedAt": "2026-06-19"
+          }
+        },
+        {
+          "name": "Team",
+          "monthlyUsd": 250,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "'Starting from $250/month'. 250,000 workflow runs/month, up to 10 environments, 90-day activity feed, RBAC, unlimited team members. Overage at $1.20 per 1,000 additional runs. Annual pricing available.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://novu.co/pricing",
+            "accessedAt": "2026-06-19"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom. 10M+ workflow runs/month (custom volume tiers), unlimited environments, custom SSO/OIDC, SCIM directory sync, HIPAA BAA, SOC 2/ISO 27001 reports, data residency, 99.99% SLA, dedicated support.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://novu.co/pricing",
+            "accessedAt": "2026-06-19"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://novu.co/security",
+            "accessedAt": "2026-06-19"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "SendGrid",
+          "Mailgun",
+          "Twilio",
+          "FCM",
+          "APNs",
+          "Slack",
+          "Microsoft Teams",
+          "Discord",
+          "WhatsApp",
+          "Resend"
+        ],
+        "limits": [
+          "10,000 workflow runs/month on free cloud tier",
+          "3 team members on Free",
+          "2 environments on Free and Pro",
+          "$1.20 per 1,000 overage runs on Pro and Team"
+        ],
+        "keyFeatures": [
+          "Open-source self-hostable notification infrastructure with full feature parity",
+          "Workflow-based multi-channel orchestration with visual builder",
+          "Inbox UI component with real-time in-app notifications",
+          "Global data residency options on Enterprise"
+        ],
+        "bestFor": [
+          "open-source-self-host",
+          "developer-notification-api",
+          "multi-channel-orchestration",
+          "enterprise-compliance"
+        ],
+        "sources": [
+          {
+            "url": "https://novu.co/pricing",
+            "accessedAt": "2026-06-19"
+          },
+          {
+            "url": "https://novu.co/security",
+            "accessedAt": "2026-06-19"
+          }
+        ],
+        "provenance": "Pricing confirmed directly from novu.co/pricing (Pro/Team are 'starting from' floors); security page confirms SOC 2 Type II, ISO 27001, GDPR, HIPAA."
+      }
+    },
+    {
+      "slug": "magicbell",
+      "name": "MagicBell",
+      "domain": "magicbell.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Amazon SES",
+        "SendGrid",
+        "Mailgun",
+        "SMTP",
+        "FCM",
+        "APNs",
+        "Expo",
+        "Twilio",
+        "Slack",
+        "Microsoft Teams",
+        "Amazon SNS",
+        "Stripe",
+        "GitHub",
+        "Web Push"
+      ],
+      "provenance": "Pricing re-verified directly from magicbell.com/pricing on 2026-06-19 (Builder $0, Startup $249, Enterprise 'Custom'). The magicbell.com/security page explicitly states GDPR only; SOC 2 Type II is NOT on that page but is confirmed via secondary sources (Nudge Security profile, MagicBell marketing) — soc2 kept true with corrected provenance. HIPAA is not stated on any accessible page, left null.",
+      "plans": [
+        {
+          "name": "Builder",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "1,000 deliveries/month, 1 project, all integrations, smart delivery, unlimited team members and users. A delivery counts per channel per recipient.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.magicbell.com/pricing",
+            "accessedAt": "2026-06-19"
+          }
+        },
+        {
+          "name": "Startup",
+          "monthlyUsd": 249,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "50,000 deliveries/month, 5 projects ($99 each additional). Overage at $0.0025 per delivery beyond included volume. No annual discount published.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.magicbell.com/pricing",
+            "accessedAt": "2026-06-19"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "'Custom' (contact sales). Unlimited deliveries and projects, integration support, invoice billing, security review, dedicated support.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://www.magicbell.com/pricing",
+            "accessedAt": "2026-06-19"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.magicbell.com/security",
+            "accessedAt": "2026-06-19"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Amazon SES",
+          "SendGrid",
+          "Mailgun",
+          "FCM",
+          "APNs",
+          "Twilio",
+          "Slack",
+          "Microsoft Teams",
+          "Web Push"
+        ],
+        "limits": [
+          "1,000 deliveries/month on Builder (free) tier",
+          "50,000 deliveries/month on Startup",
+          "$0.0025 per delivery overage on Startup",
+          "1 project on Builder tier"
+        ],
+        "keyFeatures": [
+          "Per-channel delivery counting model (transparent multi-channel cost visibility)",
+          "Smart delivery routing — chooses best channel per user",
+          "Pre-built notification inbox UI embeddable in any app",
+          "Unlimited users and team members on all plans"
+        ],
+        "bestFor": [
+          "in-app-notification-inbox",
+          "startups-multi-channel",
+          "product-teams"
+        ],
+        "sources": [
+          {
+            "url": "https://www.magicbell.com/pricing",
+            "accessedAt": "2026-06-19"
+          },
+          {
+            "url": "https://www.magicbell.com/security",
+            "accessedAt": "2026-06-19"
+          },
+          {
+            "url": "https://www.magicbell.com/integrations",
+            "accessedAt": "2026-06-19"
+          }
+        ],
+        "provenance": "Pricing confirmed directly from magicbell.com/pricing; magicbell.com/security explicitly states GDPR (the cited source for GDPR). SOC 2 Type II is NOT on /security but is confirmed via secondary sources; HIPAA not stated anywhere and left null."
+      }
+    },
+    {
+      "slug": "suprsend",
+      "name": "SuprSend",
+      "domain": "suprsend.com",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "SendGrid",
+        "Mailgun",
+        "Amazon SES",
+        "Twilio",
+        "FCM",
+        "APNs",
+        "Slack",
+        "WhatsApp",
+        "Microsoft Teams",
+        "Segment",
+        "Expo"
+      ],
+      "provenance": "Pricing re-verified directly from suprsend.com/pricing on 2026-06-19 (Free $0 forever, Essentials $110/mo or $100/mo annual, Business $275/mo or $250/mo annual, Enterprise custom). SOC 2 Type 2 (passed 25 Feb 2024), HIPAA, and GDPR confirmed via suprsend.com blog post and trust center.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Forever-free: 10,000 notifications/month, unlimited channels, basic workflows, no credit card. (A separate 30-day premium-feature trial unlocks paid features then downgrades to Free.)",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://suprsend.com/pricing",
+            "accessedAt": "2026-06-19"
+          }
+        },
+        {
+          "name": "Essentials",
+          "monthlyUsd": 110,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 9,
+          "billingModel": "flat",
+          "notes": "50,000 notifications/month, overage at $2 per 1,000 additional. Includes branding removal, i18n, timezone-aware sending. Annual billing: $100/month (billed $1,200/year, ~9% saving).",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://suprsend.com/pricing",
+            "accessedAt": "2026-06-19"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 275,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 9,
+          "billingModel": "flat",
+          "notes": "50,000 notifications/month (same base as Essentials), overage at $5 per 1,000 additional. Adds batching/digest, user preferences API, object data modeling. Annual billing: $250/month (billed $3,000/year, ~9% saving).",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://suprsend.com/pricing",
+            "accessedAt": "2026-06-19"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom. Flexible volume allocation, multi-tenant data modeling, audit trails, SAML 2.0 SSO, dedicated infrastructure, multi-region, self-hosted (BYOC) option, HIPAA/BAA available.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://suprsend.com/pricing",
+            "accessedAt": "2026-06-19"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.suprsend.com/post/announcing-our-soc-2-compliance-certification-suprsend",
+            "accessedAt": "2026-06-19"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": 30,
+        "keyIntegrations": [
+          "SendGrid",
+          "Twilio",
+          "FCM",
+          "APNs",
+          "Slack",
+          "WhatsApp",
+          "Amazon SES",
+          "Segment"
+        ],
+        "limits": [
+          "10,000 notifications/month on Free (forever)",
+          "50,000 notifications/month base on Essentials and Business",
+          "$2/1,000 overage on Essentials",
+          "$5/1,000 overage on Business",
+          "30-day premium-feature trial (separate from forever-free plan)"
+        ],
+        "keyFeatures": [
+          "Unified notification API with user preference center and per-channel opt-outs",
+          "Batch and digest workflows with configurable time windows",
+          "Object-level data modeling for entity-based notifications (Business+)",
+          "Multi-region and self-hosted deployment on Enterprise"
+        ],
+        "bestFor": [
+          "product-notification-infrastructure",
+          "multi-channel-orchestration",
+          "user-preference-management",
+          "enterprise-self-host"
+        ],
+        "sources": [
+          {
+            "url": "https://suprsend.com/pricing",
+            "accessedAt": "2026-06-19"
+          },
+          {
+            "url": "https://www.suprsend.com/post/announcing-our-soc-2-compliance-certification-suprsend",
+            "accessedAt": "2026-06-19"
+          }
+        ],
+        "provenance": "Pricing confirmed directly from suprsend.com/pricing (Free is forever-free; 30-day trial is a separate premium-feature trial); SOC 2 Type 2 (25 Feb 2024), HIPAA, GDPR from official blog post and trust center."
+      }
+    },
+    {
+      "slug": "engagespot",
+      "name": "Engagespot",
+      "domain": "engagespot.co",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "SendGrid",
+        "Twilio",
+        "FCM",
+        "APNs",
+        "Slack",
+        "Discord",
+        "WhatsApp",
+        "Webhooks",
+        "Amazon SES"
+      ],
+      "provenance": "Pricing re-verified directly from engagespot.co/pricing on 2026-06-19 (Launch $0 free-forever, Growth $250, Enterprise 'starts from $2500 / Custom Volume Based Pricing'). Enterprise is a contact-sales tier, so monthlyUsd set to null and billingModel custom (was incorrectly $2500 flat in the draft). SOC 2 and HIPAA listed as Enterprise compliance features on the pricing page; GDPR not named, left null.",
+      "plans": [
+        {
+          "name": "Launch",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free forever: 10,000 event triggers/month, unlimited channels and workflows, 2-way notifications, US/EU regions, 2 environments, multi-tenancy, email support.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://engagespot.co/pricing",
+            "accessedAt": "2026-06-19"
+          }
+        },
+        {
+          "name": "Growth",
+          "monthlyUsd": 250,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "250,000 event triggers/month. Overage at $1.50 per 1,000 additional triggers (capped pricing). Branded templates, multi-lingual support, unlimited environments, priority support (email and chat).",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://engagespot.co/pricing",
+            "accessedAt": "2026-06-19"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Page states 'starts from $2500' with 'Custom Volume Based Pricing' = contact-sales tier, so monthlyUsd is null (the floor is not a published flat price). Includes SOC 2, HIPAA, SSO/SAML, custom SLA, 24/7 priority support with dedicated solutions architect, private cloud or on-premise deployment.",
+          "setupFeeUsd": 0,
+          "source": {
+            "url": "https://engagespot.co/pricing",
+            "accessedAt": "2026-06-19"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://engagespot.co/pricing",
+            "accessedAt": "2026-06-19"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "SendGrid",
+          "Twilio",
+          "FCM",
+          "APNs",
+          "Slack",
+          "Discord",
+          "WhatsApp"
+        ],
+        "limits": [
+          "10,000 event triggers/month on Launch (free) tier",
+          "250,000 event triggers/month on Growth",
+          "$1.50 per 1,000 overage triggers on Growth (capped pricing applies)",
+          "Enterprise floor '$2500' is a starts-from/contact-sales figure, not a published flat price"
+        ],
+        "keyFeatures": [
+          "Provider-agnostic multi-channel notification infrastructure with zero vendor lock-in",
+          "Advanced fallback routing and channel orchestration builder",
+          "2-way notification support (reply/interaction tracking)",
+          "Private cloud and on-premise deployment options on Enterprise"
+        ],
+        "bestFor": [
+          "multi-channel-orchestration",
+          "developer-notification-api",
+          "enterprise-private-cloud",
+          "in-app-notifications"
+        ],
+        "sources": [
+          {
+            "url": "https://engagespot.co/pricing",
+            "accessedAt": "2026-06-19"
+          },
+          {
+            "url": "https://engagespot.co/",
+            "accessedAt": "2026-06-19"
+          }
+        ],
+        "provenance": "Pricing confirmed directly from engagespot.co/pricing; Enterprise corrected from flat $2500 to custom/null (contact-sales floor). SOC 2 and HIPAA listed as Enterprise compliance features; GDPR not explicitly named, left null."
+      }
+    }
+  ]
+}

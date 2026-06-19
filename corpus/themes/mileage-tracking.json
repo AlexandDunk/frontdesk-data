@@ -1,0 +1,829 @@
+{
+  "vertical": "mileage-tracking",
+  "generatedAt": "2026-06-19",
+  "methodologyNotes": "Official pricing pages were fetched and re-verified for each vendor on 2026-06-19: mileiq.com/pricing, mileiq.com/pricing-for-business, everlance.com/pricing, triplog.net/pricing, triplog.net/pricing-multi-user, driversnote.com/pricing, hurdlr.com/pricing (the live page shows no dollar figures, so Premium/Pro prices were confirmed via Hurdlr University official help articles + Capterra), stridehealth.com/tax, and zoho.com/us/expense/pricing/. Zoho's official US page publishes per-month-billed-monthly ($43 Standard / $65 Premium) and the billed-annually per-month equivalents ($3 Standard / $5 Premium); the dataset uses the billed-annually equivalents and notes the monthly figures. monthlyUsd for annual-only plans is the effective per-month equivalent; annualDiscountPct is computed or sourced from published savings claims. Quote-only/enterprise tiers with no published price have monthlyUsd=null. accessedAt 2026-06-19.",
+  "vendors": [
+    {
+      "slug": "mileiq",
+      "name": "MileIQ",
+      "domain": "mileiq.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Microsoft 365",
+        "SAP Concur",
+        "Excel (CSV export)"
+      ],
+      "provenance": "Re-fetched mileiq.com/pricing and mileiq.com/pricing-for-business directly. Individual Unlimited confirmed at $13.99/month (monthly) and $11.66/month billed annually (~$139.92/year). Teams confirmed at $8 (Teams Lite), $9 (Teams), $10 (Teams Pro) per user/month, with $80/$90/$100 per user/year annual options. 30-day no-credit-card free trial applies to Teams Pro only.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "40 free drives per month (forever free, not a trial); automatic mileage tracking and auto-generated reports included.",
+          "source": {
+            "url": "https://mileiq.com/pricing",
+            "accessedAt": "2026-06-19"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Unlimited (Monthly)",
+          "monthlyUsd": 13.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Unlimited drives; automatic tracking and reports. Billed monthly. No free trial on individual plans.",
+          "source": {
+            "url": "https://mileiq.com/pricing",
+            "accessedAt": "2026-06-19"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Unlimited (Annual)",
+          "monthlyUsd": 11.66,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "Displayed as '$11.66/month billed annually' (~$139.92/year). Saves ~17% vs $13.99 monthly. Unlimited drives.",
+          "source": {
+            "url": "https://mileiq.com/pricing",
+            "accessedAt": "2026-06-19"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Teams Lite",
+          "monthlyUsd": 8,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$8/user/month (monthly) or $80/user/year (annual). Automatic tracking, add/remove drivers, streamlined billing. No reporting dashboard or drive approvals.",
+          "source": {
+            "url": "https://mileiq.com/pricing-for-business",
+            "accessedAt": "2026-06-19"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Teams",
+          "monthlyUsd": 9,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$9/user/month or $90/user/year. Adds reporting dashboard over Teams Lite.",
+          "source": {
+            "url": "https://mileiq.com/pricing-for-business",
+            "accessedAt": "2026-06-19"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Teams Pro",
+          "monthlyUsd": 10,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$10/user/month or $100/user/year. Full feature set: drive approval/rejection, commute exclusion, Team Locations, report reminders, multiple admin access, custom mileage rates. 30-day free trial, no credit card (Teams Pro only).",
+          "source": {
+            "url": "https://mileiq.com/pricing-for-business",
+            "accessedAt": "2026-06-19"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": 30,
+        "keyIntegrations": [
+          "Microsoft 365",
+          "SAP Concur",
+          "Excel/CSV export"
+        ],
+        "limits": [
+          "Free plan capped at 40 drives/month",
+          "30-day free trial applies only to the Teams Pro business plan; individual plans have no trial"
+        ],
+        "keyFeatures": [
+          "Automatic GPS drive detection via phone motion sensors",
+          "One-swipe drive classification (business/personal)",
+          "Bundled with Microsoft 365 Business Standard/Premium subscriptions",
+          "IRS-compliant mileage reports"
+        ],
+        "bestFor": [
+          "Microsoft 365 shops",
+          "Solo drivers needing simple classification",
+          "SMB fleet reimbursement"
+        ],
+        "sources": [
+          {
+            "url": "https://mileiq.com/pricing",
+            "accessedAt": "2026-06-19"
+          },
+          {
+            "url": "https://mileiq.com/pricing-for-business",
+            "accessedAt": "2026-06-19"
+          }
+        ],
+        "provenance": "Pricing re-verified directly on mileiq.com/pricing and mileiq.com/pricing-for-business. Compliance certifications not stated on public pricing pages, so left null."
+      }
+    },
+    {
+      "slug": "everlance",
+      "name": "Everlance",
+      "domain": "everlance.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Credit card feeds",
+        "Bank account sync",
+        "HR integrations (undisclosed partners)"
+      ],
+      "provenance": "Re-fetched everlance.com/pricing directly. Basic free (30 auto trips/month), Starter $8.99/month or $69.99/year, Professional $99.99/year (annual only). SOC 2 badge confirmed on the pricing page. The 7-day trial requires a credit card and auto-renews into the listed recurring prices (verified via help center); the dataset uses the real recurring prices, not the trial.",
+      "plans": [
+        {
+          "name": "Basic",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "30 automatically detected trips/month, unlimited manual trips. Digital mileage log. No credit card required.",
+          "source": {
+            "url": "https://www.everlance.com/pricing",
+            "accessedAt": "2026-06-19"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Starter (Monthly)",
+          "monthlyUsd": 8.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Unlimited automatic mileage tracking. Expense tracking with receipt uploads, IRS-compliant reporting, customizable exports. Billed monthly. 7-day trial requires card and auto-renews to this price.",
+          "source": {
+            "url": "https://www.everlance.com/pricing",
+            "accessedAt": "2026-06-19"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Starter (Annual)",
+          "monthlyUsd": 5.83,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 35,
+          "billingModel": "flat",
+          "notes": "$69.99/year billed annually (~$5.83/month effective; ~35% vs $107.88/year at monthly rate). Unlimited automatic mileage tracking, expense tracking, IRS-compliant reports.",
+          "source": {
+            "url": "https://www.everlance.com/pricing",
+            "accessedAt": "2026-06-19"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Professional (Annual)",
+          "monthlyUsd": 8.33,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$99.99/year billed annually only (~$8.33/month effective; no monthly option). Adds automatic expense tracking, AI deduction finder, 1099 tax filing, $1M audit defense, live 1:1 training, priority support.",
+          "source": {
+            "url": "https://www.everlance.com/pricing",
+            "accessedAt": "2026-06-19"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://www.everlance.com/pricing",
+            "accessedAt": "2026-06-19"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": 7,
+        "keyIntegrations": [
+          "Bank account sync",
+          "Credit card feeds",
+          "HR integrations"
+        ],
+        "limits": [
+          "Free plan limited to 30 auto-detected trips/month",
+          "Professional plan annual-only (no monthly billing)",
+          "7-day trial requires a credit card and auto-renews into the paid plan"
+        ],
+        "keyFeatures": [
+          "AI deduction finder (Professional)",
+          "$1 million IRS audit defense (Professional)",
+          "1099 tax filing included in Professional",
+          "SOC 2 certified, PCI compliant"
+        ],
+        "bestFor": [
+          "Gig workers and freelancers",
+          "Self-employed filing 1099s",
+          "Drivers wanting built-in tax filing"
+        ],
+        "sources": [
+          {
+            "url": "https://www.everlance.com/pricing",
+            "accessedAt": "2026-06-19"
+          },
+          {
+            "url": "https://help.everlance.com/hc/en-us/articles/45326316863003-What-is-the-Difference-Between-the-Basic-Starter-and-Professional-Plans",
+            "accessedAt": "2026-06-19"
+          }
+        ],
+        "provenance": "Re-fetched everlance.com/pricing directly. SOC 2 badge verified on pricing page. Professional confirmed annual-only at $99.99/year. 7-day trial confirmed to require a card and auto-renew (help center); recurring prices used, not trial teaser."
+      }
+    },
+    {
+      "slug": "triplog",
+      "name": "TripLog",
+      "domain": "triplog.net",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "QuickBooks Online",
+        "SAP Concur",
+        "Xero",
+        "ADP",
+        "Paychex",
+        "ADP Workforce Now"
+      ],
+      "provenance": "Re-fetched triplog.net/pricing and triplog.net/pricing-multi-user directly. Single-user Premium confirmed at $4.99/month billed annually ($59.99/year). Multi-user mileage plans are genuinely published (not quote-only): Mileage Teams $8/user/month, Mileage Enterprise $12/user/month — corroborated by G2 and SpotSaaS.",
+      "plans": [
+        {
+          "name": "Basic (Free)",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Unlimited automatic GPS mileage tracking, basic expense management, IRS-compliant reports, income/expense tracking, parking/tolls, fuel tracking, international support, cloud backup. No trip cap stated.",
+          "source": {
+            "url": "https://www.triplog.net/pricing",
+            "accessedAt": "2026-06-19"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": 4.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$4.99/month billed annually ($59.99/year). Adds unlimited reporting, OCR receipt capture, web app, auto-classification rules, bank/credit card integration, SAP Concur & QuickBooks Online connections, custom business activities. Includes one free 7-day Premium pass/year. Monthly-only billing not shown.",
+          "source": {
+            "url": "https://www.triplog.net/pricing",
+            "accessedAt": "2026-06-19"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Mileage Teams",
+          "monthlyUsd": 8,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$8/user/month (published on pricing-multi-user). Unlimited automatic tracking, approval management, real-time fleet tracking, integrations with SAP Concur, QuickBooks Online, Xero, ADP, Paychex.",
+          "source": {
+            "url": "https://www.triplog.net/pricing-multi-user",
+            "accessedAt": "2026-06-19"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Mileage Enterprise",
+          "monthlyUsd": 12,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$12/user/month (published on pricing-multi-user). All Teams features plus advanced enterprise controls.",
+          "source": {
+            "url": "https://www.triplog.net/pricing-multi-user",
+            "accessedAt": "2026-06-19"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": 7,
+        "keyIntegrations": [
+          "QuickBooks Online",
+          "SAP Concur",
+          "Xero",
+          "ADP",
+          "Paychex"
+        ],
+        "limits": [
+          "Premium plan billed annually; standalone monthly option not published",
+          "Flex plan (per submitted report) pricing requires contacting support"
+        ],
+        "keyFeatures": [
+          "Unlimited GPS mileage tracking on free plan",
+          "OCR receipt capture (Premium)",
+          "Real-time fleet tracking (Teams)",
+          "Multiple tracking methods: phone GPS, Bluetooth beacon, OBD device"
+        ],
+        "bestFor": [
+          "SMBs needing fleet mileage reimbursement",
+          "Companies integrating with payroll (ADP/Paychex)",
+          "Solo freelancers wanting a free unlimited tracker"
+        ],
+        "sources": [
+          {
+            "url": "https://www.triplog.net/pricing",
+            "accessedAt": "2026-06-19"
+          },
+          {
+            "url": "https://www.triplog.net/pricing-multi-user",
+            "accessedAt": "2026-06-19"
+          }
+        ],
+        "provenance": "Re-fetched both pricing pages directly. Free plan confirmed as unlimited GPS tracking (no trip cap). Premium confirmed at $59.99/year annual billing. Multi-user mileage prices ($8/$12 per user/month) confirmed published on pricing-multi-user and corroborated by aggregators (G2, SpotSaaS); the 7-day Premium pass is a once-per-year sample, not a standard trial."
+      }
+    },
+    {
+      "slug": "driversnote",
+      "name": "Driversnote",
+      "domain": "driversnote.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Dinero",
+        "Microsoft Excel (export)",
+        "Public API"
+      ],
+      "provenance": "Re-fetched driversnote.com/pricing directly. Free plan confirmed at 15 trips/month. Pro confirmed at $11/month per driver. Teams confirmed at $11/license/month for 2-10 users. Teams+ (11+ users) is custom-quote (monthlyUsd null). No annual discount percentage; annual subscribers receive a free iBeacon ($40 value) instead of a price reduction.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "15 trips/month. Automatic tracking on iOS, Android, and web. Manual start/stop. Basic reporting.",
+          "source": {
+            "url": "https://www.driversnote.com/pricing",
+            "accessedAt": "2026-06-19"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 11,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$11/month per driver. Unlimited trips, unlimited reporting, edit log, public API. Annual subscribers receive a free iBeacon ($40 value). One license = one driver regardless of vehicle count.",
+          "source": {
+            "url": "https://www.driversnote.com/pricing",
+            "accessedAt": "2026-06-19"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Teams",
+          "monthlyUsd": 11,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$11/license/month for 2-10 drivers. All Pro features plus web admin tools, report collection, and validation. Annual subscribers receive a free iBeacon per license.",
+          "source": {
+            "url": "https://www.driversnote.com/pricing",
+            "accessedAt": "2026-06-19"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Teams+",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "11+ employees. Custom pricing (contact sales). All Teams features plus SSO, personalized onboarding, dedicated customer success manager.",
+          "source": {
+            "url": "https://www.driversnote.com/pricing",
+            "accessedAt": "2026-06-19"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Dinero",
+          "Microsoft Excel",
+          "Public API"
+        ],
+        "limits": [
+          "Free plan capped at 15 trips/month",
+          "Teams plan covers 2-10 users only; 11+ requires custom quote",
+          "Prices exclude local taxes"
+        ],
+        "keyFeatures": [
+          "iBeacon for automatic trip detection without phone GPS drain",
+          "Web admin dashboard for team report collection and validation",
+          "One license per driver (multi-vehicle support)",
+          "IRS, HMRC, ATO, and CRA compliant log formats"
+        ],
+        "bestFor": [
+          "European SMBs needing multi-country compliance",
+          "Small teams (2-10 drivers)",
+          "Drivers wanting hardware-assisted automatic detection (iBeacon)"
+        ],
+        "sources": [
+          {
+            "url": "https://www.driversnote.com/pricing",
+            "accessedAt": "2026-06-19"
+          }
+        ],
+        "provenance": "Re-fetched driversnote.com/pricing directly. No explicit annual discount percentage published; annual benefit is a free iBeacon device, not a price reduction. Teams+ is genuinely quote-only (monthlyUsd null)."
+      }
+    },
+    {
+      "slug": "hurdlr",
+      "name": "Hurdlr",
+      "domain": "hurdlr.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Bank account sync",
+        "Credit card sync"
+      ],
+      "provenance": "hurdlr.com/pricing live page shows no dollar amounts (verified). Premium confirmed at $9.99/month or $100/year ($8.34/mo) via Hurdlr University Premium help article and Capterra. Pro confirmed at $200/year, annual only, via Hurdlr University Pro article. No official source states a free trial, so freeTrialDays set to null. Free plan includes unlimited semi-automatic mileage tracking; fully automatic tracking is Premium-only.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Unlimited semi-automatic mileage tracking (fully automatic tracking is Premium-only). Manual income and expense tracking. Real-time tax estimates. No bank sync.",
+          "source": {
+            "url": "https://www.hurdlr.com/pricing",
+            "accessedAt": "2026-06-19"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": 9.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "$9.99/month (monthly) or $100/year billed annually (~$8.34/month; ~17% vs $119.88). Adds automatic mileage tracking, automatic bank/card expense tracking, advanced reporting, real-time tax estimates.",
+          "source": {
+            "url": "https://university.hurdlr.com/en/articles/1072143-what-are-the-premium-features-and-how-much-do-they-cost",
+            "accessedAt": "2026-06-19"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$200/year billed annually only (no monthly option; ~$16.67/month equivalent). All Premium features plus annual federal + 1 state tax filing, invoicing, payment collection, advanced accounting, home office deduction tracking. Not available to enterprise/employer-provided accounts.",
+          "source": {
+            "url": "https://university.hurdlr.com/en/articles/3703110-what-are-the-pro-features-and-how-much-does-it-cost-pro",
+            "accessedAt": "2026-06-19"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Bank account sync",
+          "Credit card sync"
+        ],
+        "limits": [
+          "Free plan: semi-automatic mileage only (no fully automatic tracking), no bank sync",
+          "Pro plan: annual billing only, not available on employer-provided accounts",
+          "Pro $200/year is annual-only; expressed as monthlyUsd null because no monthly price is published"
+        ],
+        "keyFeatures": [
+          "Real-time tax estimates based on income and expenses",
+          "Quarterly estimated tax reminders",
+          "Invoicing and payment collection (Pro)",
+          "Designed for self-employed / gig economy workers"
+        ],
+        "bestFor": [
+          "Freelancers tracking income, expenses, mileage, and taxes in one app",
+          "Self-employed needing integrated tax filing",
+          "Gig workers wanting quarterly tax estimates"
+        ],
+        "sources": [
+          {
+            "url": "https://www.hurdlr.com/pricing",
+            "accessedAt": "2026-06-19"
+          },
+          {
+            "url": "https://university.hurdlr.com/en/articles/1072143-what-are-the-premium-features-and-how-much-do-they-cost",
+            "accessedAt": "2026-06-19"
+          },
+          {
+            "url": "https://university.hurdlr.com/en/articles/3703110-what-are-the-pro-features-and-how-much-does-it-cost-pro",
+            "accessedAt": "2026-06-19"
+          },
+          {
+            "url": "https://www.capterra.com/p/204042/Hurdlr/",
+            "accessedAt": "2026-06-19"
+          }
+        ],
+        "provenance": "Live hurdlr.com/pricing confirmed to show no dollar figures. Premium $9.99/mo and $100/yr verified via Hurdlr University Premium article; Pro $200/yr annual-only via Hurdlr University Pro article. Draft's claimed 7-day free trial removed (no official source confirms it). Free plan corrected to semi-automatic mileage tracking."
+      }
+    },
+    {
+      "slug": "stride",
+      "name": "Stride",
+      "domain": "stridehealth.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "Re-fetched stridehealth.com/tax directly. The page states the app is free with no paid tiers. Mileage tracking, expense logging, tax deduction reports, and the health insurance marketplace are all included at no cost; revenue comes from insurance enrollment commissions.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Completely free, no paid tiers. Automatic mileage tracking with work-trip reminders, IRS-ready expense and mileage reports, deduction discovery, and health/dental/vision/life insurance marketplace. Revenue model is insurance referrals, not subscriptions.",
+          "source": {
+            "url": "https://www.stridehealth.com/tax",
+            "accessedAt": "2026-06-19"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [],
+        "limits": [
+          "No published trip or feature caps; all features free"
+        ],
+        "keyFeatures": [
+          "Completely free — no paid plan",
+          "Automatic mileage tracking with work-trip reminders",
+          "IRS-compliant expense and mileage reports",
+          "Health/dental/vision insurance marketplace (revenue source)"
+        ],
+        "bestFor": [
+          "Gig economy workers (rideshare, delivery) wanting zero-cost mileage tracking",
+          "Freelancers needing combined mileage + health insurance in one app",
+          "Cost-sensitive self-employed drivers"
+        ],
+        "sources": [
+          {
+            "url": "https://www.stridehealth.com/tax",
+            "accessedAt": "2026-06-19"
+          }
+        ],
+        "provenance": "Re-fetched stridehealth.com/tax directly. Confirmed fully free with no paid subscription tiers. Business model relies on insurance enrollment commissions."
+      }
+    },
+    {
+      "slug": "zoho-expense",
+      "name": "Zoho Expense",
+      "domain": "zoho.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Zoho Books",
+        "QuickBooks Online",
+        "Xero",
+        "SAP Concur",
+        "ADP",
+        "Paychex",
+        "Slack",
+        "Microsoft 365"
+      ],
+      "provenance": "Re-fetched the official US page zoho.com/us/expense/pricing/. It publishes month-to-month prices ($43 Standard / $65 Premium per user) and billed-annually per-month equivalents ($3 Standard / $5 Premium per user). The dataset uses the billed-annually equivalents (the headline prices Zoho markets). The draft's $4/$7 were incorrect annual figures and have been corrected to $3/$5. Free plan (3 users, GPS mileage) and 14-day trial confirmed.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Up to 3 users. Expense reports, GPS mileage tracking, multi-currency, 5 GB receipt storage, 20 receipt autoscans/month, integrations with Zoho Books, QuickBooks Online, Xero.",
+          "source": {
+            "url": "https://www.zoho.com/us/expense/pricing/",
+            "accessedAt": "2026-06-19"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Standard",
+          "monthlyUsd": 3,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 25,
+          "billingModel": "per_seat",
+          "notes": "$3/user/month billed annually ($43/user/month billed monthly). Minimum 3 users. Adds corporate card management, direct card feeds, multi-level approvals, split expenses, custom roles, cash advance, ACH reimbursements.",
+          "source": {
+            "url": "https://www.zoho.com/us/expense/pricing/",
+            "accessedAt": "2026-06-19"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": 5,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 25,
+          "billingModel": "per_seat",
+          "notes": "$5/user/month billed annually ($65/user/month billed monthly). Minimum 3 users. Adds online travel booking, travel desk management, GSA-compliant per diem, live mileage tracking, live budget tracking, itemized receipt autoscan, multi-entity/country management.",
+          "source": {
+            "url": "https://www.zoho.com/us/expense/pricing/",
+            "accessedAt": "2026-06-19"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Custom",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Large organizations / 100+ users. Quote-only. Dedicated account manager, 24/7 priority support, custom integrations, SFTP exports, advanced SSO, IP whitelisting.",
+          "source": {
+            "url": "https://www.zoho.com/us/expense/pricing/",
+            "accessedAt": "2026-06-19"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Zoho Books",
+          "QuickBooks Online",
+          "Xero",
+          "SAP Concur",
+          "ADP",
+          "Paychex",
+          "Slack",
+          "Microsoft 365"
+        ],
+        "limits": [
+          "Free plan limited to 3 users and 20 receipt autoscans/month",
+          "Standard and Premium require minimum 3 users",
+          "Custom plan requires large organizations / 100+ users (quote-only)"
+        ],
+        "keyFeatures": [
+          "GPS live mileage tracking (Premium)",
+          "GSA-compliant automated per diem (Premium)",
+          "Multi-entity and multi-country expense management",
+          "14-day free trial, no credit card required"
+        ],
+        "bestFor": [
+          "Mid-market businesses needing full expense + mileage + travel",
+          "Companies already in the Zoho ecosystem",
+          "Global teams needing multi-currency and multi-country support"
+        ],
+        "sources": [
+          {
+            "url": "https://www.zoho.com/us/expense/pricing/",
+            "accessedAt": "2026-06-19"
+          }
+        ],
+        "provenance": "USD pricing re-verified directly on the official US page zoho.com/us/expense/pricing/: Standard $3/user/month (annual) / $43 (monthly); Premium $5/user/month (annual) / $65 (monthly). Draft's $4/$7 annual figures corrected to $3/$5. 'Save up to 25%' annual claim from the official page. Free plan 3 users and 14-day trial confirmed."
+      }
+    }
+  ]
+}

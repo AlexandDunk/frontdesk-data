@@ -1,0 +1,950 @@
+{
+  "vertical": "backend-as-a-service",
+  "generatedAt": "2026-06-19",
+  "methodologyNotes": "Official pricing pages were fetched directly for each vendor: supabase.com/pricing, firebase.google.com/pricing, appwrite.io/pricing, nhost.io/pricing, back4app.com/pricing/backend-as-a-service, convex.dev/pricing, xano.com/pricing, and pocketbase.io. Security/compliance pages were fetched for each (supabase.com/security, appwrite.io/docs/advanced/security, convex.dev/security, nhost.io/pricing); supplemental WebSearch corroborated Appwrite SOC 2 (Type I only), Firebase HIPAA-eligible services via the Google Cloud BAA, and Back4App HIPAA being Dedicated-plan-only. Xano publishes annual-billing prices only; Essential ($85/mo) and Pro ($224/mo) are the billed-annually monthly-equivalents (noted per plan). Convex Professional is per-developer ($25/dev/mo). PocketBase is open-source self-hosted software with no official commercial SaaS pricing; monthlyUsd is 0. Enterprise/Custom tiers with no published price have monthlyUsd=null. accessedAt 2026-06-19.",
+  "vendors": [
+    {
+      "slug": "supabase",
+      "name": "Supabase",
+      "domain": "supabase.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "PostgreSQL",
+        "PostgREST",
+        "Auth",
+        "Storage",
+        "Edge Functions",
+        "Realtime",
+        "pgvector",
+        "Stripe"
+      ],
+      "provenance": "Pricing fetched from supabase.com/pricing ($0 Free, $25 Pro, $599 Team, custom Enterprise — all confirmed). Compliance fetched from supabase.com/security: SOC 2 Type II and ISO 27001 certified; HIPAA compliant with a BAA available to Team and Enterprise customers (requested on the dashboard).",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "500 MB database, 50K MAUs, 5 GB egress, 1 GB file storage, 500K edge function invocations. Max 2 projects; projects pause after 1 week inactivity.",
+          "source": {
+            "url": "https://supabase.com/pricing",
+            "accessedAt": "2026-06-19"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 25,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "8 GB database, 100K MAUs, 250 GB egress, 100 GB file storage, 2M edge function invocations, 7-day backups, $10/mo included compute credit (covers one Micro instance). Overages: $0.125/GB database, $0.09/GB egress, $0.021/GB storage, $0.00325/MAU.",
+          "source": {
+            "url": "https://supabase.com/pricing",
+            "accessedAt": "2026-06-19"
+          }
+        },
+        {
+          "name": "Team",
+          "monthlyUsd": 599,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Everything in Pro plus SOC 2 Type II & ISO 27001, 14-day backups, longer log retention, HIPAA available as paid add-on with BAA requestable on the dashboard, priority support.",
+          "source": {
+            "url": "https://supabase.com/pricing",
+            "accessedAt": "2026-06-19"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "Custom pricing; designated support manager, 24x7 support, uptime SLAs, all compliance features including HIPAA/BAA.",
+          "source": {
+            "url": "https://supabase.com/pricing",
+            "accessedAt": "2026-06-19"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://supabase.com/security",
+            "accessedAt": "2026-06-19"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "PostgreSQL",
+          "pgvector (AI/vector search)",
+          "PostgREST (auto REST API)",
+          "Realtime subscriptions",
+          "S3-compatible storage",
+          "Deno Edge Functions"
+        ],
+        "limits": [
+          "Free: 500 MB DB, 50K MAUs, 5 GB egress, 1 GB storage",
+          "Free: pauses after 1 week inactivity, max 2 projects",
+          "Pro: 8 GB DB, 100K MAUs, 250 GB egress, 100 GB storage",
+          "Pro: $10/mo included compute credit (covers 1 Micro instance)"
+        ],
+        "keyFeatures": [
+          "Postgres-native with auto-generated REST API (PostgREST)",
+          "Built-in pgvector for AI/embedding workloads",
+          "Row-level security enforced at the database layer",
+          "SOC 2 Type II + ISO 27001 certified; HIPAA with BAA on Team/Enterprise"
+        ],
+        "bestFor": [
+          "startups",
+          "postgres-native apps",
+          "AI/vector search",
+          "open-source teams"
+        ],
+        "sources": [
+          {
+            "url": "https://supabase.com/pricing",
+            "accessedAt": "2026-06-19"
+          },
+          {
+            "url": "https://supabase.com/security",
+            "accessedAt": "2026-06-19"
+          }
+        ],
+        "provenance": "Pricing and compliance verified directly from supabase.com/pricing and supabase.com/security."
+      }
+    },
+    {
+      "slug": "firebase",
+      "name": "Firebase (Google)",
+      "domain": "firebase.google.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Google Cloud",
+        "BigQuery",
+        "Google Analytics",
+        "AdMob",
+        "Crashlytics",
+        "Cloud Run",
+        "Identity Platform"
+      ],
+      "provenance": "Pricing fetched from firebase.google.com/pricing (Spark $0; Blaze pay-as-you-go). HIPAA/BAA verified via Google Cloud compliance docs and WebSearch: Firebase uses the Google Cloud BAA; HIPAA-eligible services include Cloud Firestore, Firebase Auth, Cloud Functions, Cloud Storage, Hosting, Realtime Database — Analytics, Crashlytics, Performance Monitoring and several others are NOT covered.",
+      "plans": [
+        {
+          "name": "Spark (No-Cost)",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Firestore: 1 GiB storage, 50K reads/day, 20K writes/day, 10 GiB/mo egress. Auth: 50K MAUs. Cloud Storage: 5 GB. Functions: 2M invocations/mo, 400K GB-seconds/mo. Hosting: 10 GB storage, 360 MB/day transfer. Realtime DB: 1 GB stored. No payment method required; cannot use paid services.",
+          "source": {
+            "url": "https://firebase.google.com/pricing",
+            "accessedAt": "2026-06-19"
+          }
+        },
+        {
+          "name": "Blaze (Pay as you go)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "Includes all Spark free quotas then pay-as-you-go; no fixed monthly fee. Functions: $0.40/million invocations above 2M free. Cloud Storage: $0.026/GB storage, $0.12/GB downloads. Hosting: $0.026/GB storage, $0.15/GB transfer. Realtime DB: $5/GB stored, $1/GB downloaded. Firestore and Auth (beyond 50K MAUs) follow Google Cloud pricing. Eligible users receive $300 free credit.",
+          "source": {
+            "url": "https://firebase.google.com/pricing",
+            "accessedAt": "2026-06-19"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://cloud.google.com/security/compliance/hipaa",
+            "accessedAt": "2026-06-19"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Google Cloud Platform",
+          "BigQuery",
+          "Google Analytics 4",
+          "AdMob",
+          "Crashlytics",
+          "Cloud Run",
+          "Cloud Functions"
+        ],
+        "limits": [
+          "Spark: 50K Auth MAUs, 1 GiB Firestore, 5 GB Cloud Storage, 2M Functions invocations/mo",
+          "Spark: no payment method required, cannot use paid services",
+          "Blaze: no hard limits — pay-as-you-go; $0.40/million Functions invocations"
+        ],
+        "keyFeatures": [
+          "Tightly integrated with the Google Cloud ecosystem",
+          "Realtime Database + Firestore dual NoSQL offerings",
+          "Built-in A/B testing, Remote Config, and Crashlytics",
+          "Blaze unlocks Cloud Functions and all GCP services; HIPAA only via Google Cloud BAA on eligible services"
+        ],
+        "bestFor": [
+          "mobile apps",
+          "Google ecosystem",
+          "real-time sync",
+          "analytics-heavy apps"
+        ],
+        "sources": [
+          {
+            "url": "https://firebase.google.com/pricing",
+            "accessedAt": "2026-06-19"
+          },
+          {
+            "url": "https://cloud.google.com/security/compliance/hipaa",
+            "accessedAt": "2026-06-19"
+          }
+        ],
+        "provenance": "Pricing fetched directly from firebase.google.com/pricing; HIPAA/BAA status verified via Google Cloud compliance documentation and WebSearch."
+      }
+    },
+    {
+      "slug": "appwrite",
+      "name": "Appwrite",
+      "domain": "appwrite.io",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "GitHub",
+        "GitLab",
+        "Bitbucket",
+        "Twilio",
+        "Mailgun",
+        "SMTP",
+        "OAuth2 providers (30+)"
+      ],
+      "provenance": "Pricing fetched from appwrite.io/pricing ($0 Free, from $25 Pro, custom Enterprise). Compliance from appwrite.io/docs/advanced/security and WebSearch: Appwrite is SOC 2 Type I (NOT Type II), GDPR compliant, and HIPAA compliant; HIPAA/BAA are listed on the Enterprise tier only.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "5 GB bandwidth, 2 GB storage, 750K function executions/mo, 75K MAUs. Projects pause after 1 week inactivity. No add-ons.",
+          "source": {
+            "url": "https://appwrite.io/pricing",
+            "accessedAt": "2026-06-19"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 25,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "From $25/mo. 2 TB bandwidth, 150 GB storage, 3.5M function executions/mo, 200K MAUs. Overages: $15/100 GB bandwidth, $2.80/100 GB storage, $3/1K MAUs, $2/1M function executions. Add-ons available.",
+          "source": {
+            "url": "https://appwrite.io/pricing",
+            "accessedAt": "2026-06-19"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "Custom limits, SOC 2, HIPAA, BAA, longer log retention, custom backup policies, uptime SLAs.",
+          "source": {
+            "url": "https://appwrite.io/pricing",
+            "accessedAt": "2026-06-19"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://appwrite.io/docs/advanced/security",
+            "accessedAt": "2026-06-19"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "30+ OAuth2 providers",
+          "GitHub/GitLab/Bitbucket (deploy)",
+          "Twilio (SMS)",
+          "Mailgun/SMTP (email)",
+          "S3-compatible storage"
+        ],
+        "limits": [
+          "Free: 5 GB bandwidth, 2 GB storage, 750K function executions/mo, 75K MAUs",
+          "Free: projects pause after 1 week inactivity",
+          "Pro: 2 TB bandwidth, 150 GB storage, 3.5M executions/mo, 200K MAUs"
+        ],
+        "keyFeatures": [
+          "Self-hostable (Docker) with full feature parity to cloud",
+          "Built-in auth with 30+ OAuth2 providers",
+          "Serverless functions across multiple runtimes (Node, Python, PHP, Ruby, etc.)",
+          "SOC 2 Type I + GDPR; HIPAA/BAA on Enterprise only"
+        ],
+        "bestFor": [
+          "self-hosted deployments",
+          "multi-runtime functions",
+          "auth-heavy apps",
+          "open-source projects"
+        ],
+        "sources": [
+          {
+            "url": "https://appwrite.io/pricing",
+            "accessedAt": "2026-06-19"
+          },
+          {
+            "url": "https://appwrite.io/docs/advanced/security",
+            "accessedAt": "2026-06-19"
+          }
+        ],
+        "provenance": "Pricing verified from appwrite.io/pricing; SOC 2 Type I, GDPR, and HIPAA confirmed from appwrite.io/docs/advanced/security and WebSearch (corrected: SOC 2 is Type I, not Type II; sources URL corrected from the dead /security/soc2 path)."
+      }
+    },
+    {
+      "slug": "nhost",
+      "name": "Nhost",
+      "domain": "nhost.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "PostgreSQL",
+        "Hasura GraphQL",
+        "GitHub (deploy)",
+        "S3-compatible storage",
+        "OAuth2 providers"
+      ],
+      "provenance": "Pricing fetched from nhost.io/pricing ($0 Starter, from $25 Pro, from $599 Team, custom Enterprise — confirmed). SOC 2 Type II included on Team; HIPAA listed as 'coming soon', so hipaa/baa left null.",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "1 active project (pauses after 1 week inactivity), 1 GB database, 1 GB storage, 5 GB egress, unlimited users, serverless functions, realtime APIs. No compute credits.",
+          "source": {
+            "url": "https://nhost.io/pricing",
+            "accessedAt": "2026-06-19"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 25,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "From $25/mo ($15 compute credits included). 10 GB database, 50 GB storage, 50 GB egress, automated backups, point-in-time recovery, unlimited users. Overages: $0.20/GB DB, $0.05/GB storage, $0.10/GB egress.",
+          "source": {
+            "url": "https://nhost.io/pricing",
+            "accessedAt": "2026-06-19"
+          }
+        },
+        {
+          "name": "Team",
+          "monthlyUsd": 599,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "From $599/mo ($15 compute credits included). Everything in Pro plus SOC 2 Type II, email SLA, dedicated Discord channel, external DB connections, advanced GraphQL features.",
+          "source": {
+            "url": "https://nhost.io/pricing",
+            "accessedAt": "2026-06-19"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "Custom pricing; SLAs, dedicated technical account manager, dedicated clusters (add-on).",
+          "source": {
+            "url": "https://nhost.io/pricing",
+            "accessedAt": "2026-06-19"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://nhost.io/pricing",
+            "accessedAt": "2026-06-19"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "PostgreSQL (managed)",
+          "Hasura GraphQL Engine",
+          "GitHub (git-based deploys)",
+          "Global CDN storage",
+          "Social OAuth providers",
+          "Magic Link auth"
+        ],
+        "limits": [
+          "Starter: 1 GB DB, 1 GB storage, 5 GB egress, 1 project (pauses after inactivity)",
+          "Pro: 10 GB DB, 50 GB storage, 50 GB egress, $15 compute credit",
+          "Team: SOC 2 Type II, email SLA, external DB connections"
+        ],
+        "keyFeatures": [
+          "Hasura GraphQL Engine built-in for instant GraphQL API over Postgres",
+          "Git-based deployments via GitHub integration",
+          "SOC 2 Type II on Team plan",
+          "Infrastructure as Code via Nhost CLI"
+        ],
+        "bestFor": [
+          "GraphQL-first apps",
+          "Postgres + Hasura stacks",
+          "startups",
+          "git-driven workflows"
+        ],
+        "sources": [
+          {
+            "url": "https://nhost.io/pricing",
+            "accessedAt": "2026-06-19"
+          }
+        ],
+        "provenance": "Pricing verified from nhost.io/pricing; SOC 2 Type II confirmed on Team; HIPAA listed as coming soon (hipaa/baa left null)."
+      }
+    },
+    {
+      "slug": "back4app",
+      "name": "Back4App",
+      "domain": "back4app.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Parse SDK (iOS, Android, JS, .NET)",
+        "REST API",
+        "GraphQL API",
+        "GitHub",
+        "Twilio",
+        "SendGrid"
+      ],
+      "provenance": "Pricing fetched from back4app.com/pricing/backend-as-a-service ($0 Free, $15 MVP, $80 Pay As You Go, $400 Dedicated — confirmed). CORRECTED: HIPAA + BAA are available ONLY on the Dedicated plan (ready-to-sign BAA bundled with every Dedicated cluster); the draft's claim that Pay As You Go includes HIPAA/BAA is false and was removed.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "25K API requests/mo, 250 MB data storage, 1 GB data transfer, 1 GB file storage. GDPR only; no HIPAA.",
+          "source": {
+            "url": "https://www.back4app.com/pricing/backend-as-a-service",
+            "accessedAt": "2026-06-19"
+          }
+        },
+        {
+          "name": "MVP",
+          "monthlyUsd": 15,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 40,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Per app. 500K API requests/mo, 1 GB data storage, 250 GB data transfer, 50 GB file storage, 3 cloud code jobs, up to 3 collaborators. SOC 2, ISO 27001. No HIPAA. Overage: $5/100K requests, $15/GB storage, $0.10/GB transfer, $1/10 GB file storage. Save 40% billed annually.",
+          "source": {
+            "url": "https://www.back4app.com/pricing/backend-as-a-service",
+            "accessedAt": "2026-06-19"
+          }
+        },
+        {
+          "name": "Pay As You Go",
+          "monthlyUsd": 80,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Per app. 5M API requests/mo, 3 GB data storage, 1 TB data transfer, 250 GB file storage, 7 cloud code jobs, up to 7 collaborators. SOC 2, ISO 27001. HIPAA/BAA NOT available on this plan (Dedicated only). Overage: $2/100K requests, $15/GB storage, $0.10/GB transfer. Save 20% annually.",
+          "source": {
+            "url": "https://www.back4app.com/pricing/backend-as-a-service",
+            "accessedAt": "2026-06-19"
+          }
+        },
+        {
+          "name": "Dedicated",
+          "monthlyUsd": 400,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Per app. Unlimited requests (hardware-bound, ~10 CPUs / 14 GB cluster), 8 GB data storage, 2 TB transfer, 1 TB file storage, unlimited cloud code jobs, up to 20 collaborators. SOC 2, ISO 27001, HIPAA with ready-to-sign BAA, custom security. Save 20% annually.",
+          "source": {
+            "url": "https://www.back4app.com/pricing/backend-as-a-service",
+            "accessedAt": "2026-06-19"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.back4app.com/pricing/backend-as-a-service",
+            "accessedAt": "2026-06-19"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Parse SDK (iOS/Android/JS/.NET)",
+          "REST API",
+          "GraphQL API",
+          "GitHub",
+          "Twilio",
+          "SendGrid",
+          "Push Notifications"
+        ],
+        "limits": [
+          "Free: 25K API requests/mo, 250 MB DB storage, 1 GB transfer, 1 GB file storage",
+          "MVP: 500K requests, 1 GB DB, 250 GB transfer, 50 GB files",
+          "Pay As You Go: 5M requests, 3 GB DB, 1 TB transfer, 250 GB files",
+          "HIPAA/BAA: Dedicated plan only"
+        ],
+        "keyFeatures": [
+          "Parse-compatible backend (migrate existing Parse apps)",
+          "HIPAA + BAA available on the Dedicated plan only",
+          "Push notifications built-in",
+          "Multiple collaborators and cloud code jobs per app"
+        ],
+        "bestFor": [
+          "Parse migrations",
+          "mobile backends",
+          "HIPAA apps (Dedicated)",
+          "multi-collaborator teams"
+        ],
+        "sources": [
+          {
+            "url": "https://www.back4app.com/pricing/backend-as-a-service",
+            "accessedAt": "2026-06-19"
+          },
+          {
+            "url": "https://blog.back4app.com/back4app-is-hipaa-compliant/",
+            "accessedAt": "2026-06-19"
+          }
+        ],
+        "provenance": "Pricing verified from back4app.com/pricing/backend-as-a-service; HIPAA/BAA scope corrected to Dedicated-only via Back4App's own HIPAA announcement and WebSearch."
+      }
+    },
+    {
+      "slug": "pocketbase",
+      "name": "PocketBase",
+      "domain": "pocketbase.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "SQLite",
+        "S3-compatible storage",
+        "OAuth2 (Google, GitHub, Facebook, GitLab)",
+        "SMTP"
+      ],
+      "provenance": "Fetched pocketbase.io directly — PocketBase is open-source software distributed as a single binary; the project offers no commercial managed cloud SaaS. Self-host on any VPS. No published compliance certifications.",
+      "plans": [
+        {
+          "name": "Open Source (Self-Hosted)",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Free, open-source, self-hosted. Single binary bundles an embedded SQLite database, realtime subscriptions, auth (email/password + OAuth2), file storage (local or S3), and an admin dashboard. No official managed cloud — users pay only for their own hosting (typically $5-$10/mo VPS).",
+          "source": {
+            "url": "https://pocketbase.io/",
+            "accessedAt": "2026-06-19"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "SQLite (embedded)",
+          "S3-compatible storage (local or remote)",
+          "OAuth2 (Google, GitHub, Facebook, GitLab)",
+          "SMTP email",
+          "Go/JavaScript hooks for extensibility"
+        ],
+        "limits": [
+          "No official limits — bounded only by the server you self-host on",
+          "SQLite single-writer concurrency model (vertical scale only)",
+          "No official managed cloud hosting from the PocketBase project"
+        ],
+        "keyFeatures": [
+          "Single binary deployment — no Docker or external DB required",
+          "Extensible via Go or JavaScript hooks",
+          "Built-in admin dashboard included",
+          "Fully open source — no vendor lock-in"
+        ],
+        "bestFor": [
+          "solo developers",
+          "lightweight self-hosted backends",
+          "edge deployments",
+          "prototypes"
+        ],
+        "sources": [
+          {
+            "url": "https://pocketbase.io/",
+            "accessedAt": "2026-06-19"
+          },
+          {
+            "url": "https://pocketbase.io/faq/",
+            "accessedAt": "2026-06-19"
+          }
+        ],
+        "provenance": "Verified from pocketbase.io — free open-source software with no official commercial SaaS pricing and no published compliance certifications."
+      }
+    },
+    {
+      "slug": "convex",
+      "name": "Convex",
+      "domain": "convex.dev",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "React",
+        "Next.js",
+        "Clerk (auth)",
+        "Auth0",
+        "Stripe",
+        "Resend",
+        "Inngest",
+        "Vercel"
+      ],
+      "provenance": "Pricing fetched from convex.dev/pricing ($0 Free/Starter, $25/developer/mo Professional, $2,500 monthly minimum Business & Enterprise — confirmed). Compliance from convex.dev/security: SOC 2 Type II, HIPAA with BAA (sign Convex's BAA to process PHI), and GDPR confirmed.",
+      "plans": [
+        {
+          "name": "Free & Starter",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Pay-as-you-go after free quotas. 1M function calls/mo, 0.5 GB DB storage, 1 GB file storage. Overage: $2.20/M function calls, $0.22/GB DB storage, $0.033/GB file storage. For personal projects, 1-6 developers.",
+          "source": {
+            "url": "https://www.convex.dev/pricing",
+            "accessedAt": "2026-06-19"
+          }
+        },
+        {
+          "name": "Professional",
+          "monthlyUsd": 25,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "setupFeeUsd": 0,
+          "notes": "$25 per developer/month. 25M function calls included, 50 GB DB storage, 100 GB file storage. Overage: $2/M calls, $0.20/GB DB, $0.03/GB file. HIPAA/SOC 2 reports and BAA included. 1-20 developers.",
+          "source": {
+            "url": "https://www.convex.dev/pricing",
+            "accessedAt": "2026-06-19"
+          }
+        },
+        {
+          "name": "Business & Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "$2,500 monthly minimum. Custom resource limits, volume pricing, SAML/SSO, custom deployments, custom MSA, SLAs, 50+ developers.",
+          "source": {
+            "url": "https://www.convex.dev/pricing",
+            "accessedAt": "2026-06-19"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://www.convex.dev/security",
+            "accessedAt": "2026-06-19"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "React/Next.js (first-class)",
+          "Clerk auth",
+          "Auth0",
+          "Stripe",
+          "Resend",
+          "Inngest (background jobs)",
+          "Vercel"
+        ],
+        "limits": [
+          "Free: 1M function calls/mo, 0.5 GB DB, 1 GB files",
+          "Professional: 25M function calls, 50 GB DB, 100 GB files per seat",
+          "Professional: per-developer seat pricing ($25/dev/mo)"
+        ],
+        "keyFeatures": [
+          "TypeScript-native reactive backend with automatic query caching",
+          "ACID-compliant database with real-time subscriptions",
+          "SOC 2 Type II + HIPAA with BAA (reports/BAA included on Professional+)",
+          "Built-in scheduling, cron jobs, and file storage"
+        ],
+        "bestFor": [
+          "TypeScript-first teams",
+          "reactive real-time apps",
+          "Next.js projects",
+          "HIPAA startups"
+        ],
+        "sources": [
+          {
+            "url": "https://www.convex.dev/pricing",
+            "accessedAt": "2026-06-19"
+          },
+          {
+            "url": "https://www.convex.dev/security",
+            "accessedAt": "2026-06-19"
+          }
+        ],
+        "provenance": "Pricing verified from convex.dev/pricing; SOC 2 Type II, HIPAA, GDPR, and BAA confirmed from convex.dev/security."
+      }
+    },
+    {
+      "slug": "xano",
+      "name": "Xano",
+      "domain": "xano.com",
+      "hipaa": true,
+      "baa": true,
+      "bilingual": null,
+      "integrations": [
+        "Bubble",
+        "Webflow",
+        "FlutterFlow",
+        "Adalo",
+        "Stripe",
+        "Twilio",
+        "Zapier",
+        "Make"
+      ],
+      "provenance": "Pricing fetched from xano.com/pricing — page displays billed-annually prices only; Essential $85/mo and Pro $224/mo are the monthly-equivalent figures when billed annually (confirmed). HIPAA + BAA available as a paid add-on ($500/mo) on Pro; SOC 2/SOC 3, GDPR, ISO 27001 included on paid plans.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "1 workspace, 1 seat, 100K database records, 1 GB DB storage, 1 GB file storage (watermarked images), 10 req/20s rate limit, background tasks.",
+          "source": {
+            "url": "https://xano.com/pricing",
+            "accessedAt": "2026-06-19"
+          }
+        },
+        {
+          "name": "Essential",
+          "monthlyUsd": 85,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Billed annually ($85/mo equivalent). 3 workspaces, 5 team seats, unlimited DB records, 10 GB DB storage, no API rate limit, rolling backups, uptime SLA. SOC 2, SOC 3, GDPR, ISO 27001.",
+          "source": {
+            "url": "https://xano.com/pricing",
+            "accessedAt": "2026-06-19"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 224,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Billed annually ($224/mo equivalent). 5 workspaces, 10 team seats, unlimited DB records, 25 GB DB storage, 99.99% uptime SLA. HIPAA add-on available ($500/mo for HIPAA + BAA). CPU & Autoscale boost add-on $180/mo. ISO 27001, SOC 2 & 3, GDPR.",
+          "source": {
+            "url": "https://xano.com/pricing",
+            "accessedAt": "2026-06-19"
+          }
+        },
+        {
+          "name": "Custom",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "setupFeeUsd": 0,
+          "notes": "Contact sales. Enterprise-grade security, custom workspaces/seats/storage, HIPAA, enhanced SLAs.",
+          "source": {
+            "url": "https://xano.com/pricing",
+            "accessedAt": "2026-06-19"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://xano.com/pricing",
+            "accessedAt": "2026-06-19"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Bubble (no-code)",
+          "Webflow",
+          "FlutterFlow",
+          "Adalo",
+          "Stripe",
+          "Twilio",
+          "Zapier",
+          "Make (Integromat)"
+        ],
+        "limits": [
+          "Free: 100K DB records, 1 GB DB storage, 1 GB files, 10 req/20s rate limit",
+          "Essential: 10 GB DB, 3 workspaces, 5 seats — billed annually",
+          "Pro: 25 GB DB, 5 workspaces, 10 seats — billed annually only"
+        ],
+        "keyFeatures": [
+          "No-code backend builder with visual API and function designer",
+          "First-class integrations with Bubble, Webflow, FlutterFlow",
+          "SOC 2/SOC 3, ISO 27001, and GDPR on paid tiers",
+          "HIPAA + BAA available as a $500/mo add-on on Pro"
+        ],
+        "bestFor": [
+          "no-code/low-code builders",
+          "Bubble/Webflow apps",
+          "non-technical founders",
+          "HIPAA no-code apps"
+        ],
+        "sources": [
+          {
+            "url": "https://xano.com/pricing",
+            "accessedAt": "2026-06-19"
+          }
+        ],
+        "provenance": "Pricing verified from xano.com/pricing — billed-annually monthly-equivalents ($85 Essential, $224 Pro); HIPAA add-on ($500/mo) and compliance from the pricing page."
+      }
+    }
+  ]
+}
