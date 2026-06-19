@@ -10,7 +10,7 @@ Built for price-transparency research and reproducibility: every figure is trace
 - `index.json` — schema.org DataCatalog manifest (categories, counts, provenance method).
 - `themes/<category>.json` — the full per-category dataset (vendors, plans, sources, enrichment).
 - `all-products.jsonl` — one row per physical product with flattened specs (spec_*) + price.
-- `products/<category>.json` — the full product-spec dataset (phones, laptops, GPUs, ...; 1173 products across 101 categories).
+- `products/<category>.json` — the full product-spec dataset (phones, laptops, GPUs, ...; 1292 products across 111 categories).
 
 ## Provenance & method
 Each record carries `source.url` + `source.accessedAt`. Counts and date ranges are derived from those captures. No figure is invented; unpriceable/quote-only tiers are null. Compliance facts are confirmed from each vendor's own trust/security page where possible.
