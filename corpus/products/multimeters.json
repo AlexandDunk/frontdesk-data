@@ -1,0 +1,353 @@
+{
+  "category": "multimeters",
+  "generatedAt": "2026-06-20",
+  "methodologyNotes": "Dataset covers 12 handheld digital multimeters (DMMs) across professional, DIY, HVAC, and automotive segments. Specs re-verified against manufacturer product pages (Fluke, Klein Tools, AstroAI, Extech, Fieldpiece, Innova, Amprobe), the official Fluke 114/115/116/117 detailed-specifications PDF, and corroborating distributor/retail listings (ToolNut, Test Equipment Depot, trutechtools.com, AutoZone). Prices reflect published US MSRP or, where the manufacturer publishes no USD MSRP (regionally priced/budget models), a corroborated current US retail price; where no published USD price could be confirmed, priceUsd is null. Booleans indicate presence (true)/absence (false) of a feature as documented by the manufacturer; count_resolution is the maximum display count as an integer; low_impedance_loz refers to the dedicated voltage-measurement LoZ mode for eliminating ghost/stray voltages. Adversarial corrections this pass: Fluke 117 temperature removed (the 116, not the 117, has the K-type thermocouple per Fluke detailed specs); Fluke 101 corrected to non-True-RMS (average-responding per teardown) with price nulled (no published USD MSRP); Innova 3340 price corrected to AutoZone street price. accessedAt 2026-06-20.",
+  "specKeys": [
+    "type",
+    "true_rms",
+    "max_voltage_dc_v",
+    "count_resolution",
+    "auto_ranging",
+    "cat_safety_rating",
+    "temperature_measurement",
+    "low_impedance_loz"
+  ],
+  "products": [
+    {
+      "slug": "fluke-117",
+      "name": "Fluke 117",
+      "brand": "Fluke",
+      "category": "multimeters",
+      "releaseDate": null,
+      "priceUsd": 304.99,
+      "priceNote": "MSRP from fluke.com",
+      "specs": {
+        "type": "digital handheld",
+        "true_rms": true,
+        "max_voltage_dc_v": 600,
+        "count_resolution": 6000,
+        "auto_ranging": true,
+        "cat_safety_rating": "CAT III 600 V",
+        "temperature_measurement": false,
+        "low_impedance_loz": true
+      },
+      "source": {
+        "url": "https://www.fluke.com/en-us/product/electrical-testing/digital-multimeters/fluke-117",
+        "accessedAt": "2026-06-20"
+      },
+      "corroboration": {
+        "url": "https://www.instrumart.com/assets/fluke117_datasheet.pdf",
+        "accessedAt": "2026-06-20"
+      },
+      "provenance": "Fluke.com confirms MSRP $304.99, True RMS, 6000-count display, CAT III 600 V, AutoVolt auto-ranging, and selectable low-impedance (LoZ) mode. CORRECTED temperature_measurement true->false: the official Fluke 114/115/116/117 detailed-specifications PDF lists the K-type thermocouple temperature function for the 116 ONLY; the 117 does not measure temperature (multiple sources confirm the 116 is the HVAC temp model, the 117 is the electrician's model)."
+    },
+    {
+      "slug": "fluke-87v",
+      "name": "Fluke 87V",
+      "brand": "Fluke",
+      "category": "multimeters",
+      "releaseDate": null,
+      "priceUsd": 561.99,
+      "priceNote": "MSRP from fluke.com",
+      "specs": {
+        "type": "digital handheld",
+        "true_rms": true,
+        "max_voltage_dc_v": 1000,
+        "count_resolution": 6000,
+        "auto_ranging": true,
+        "cat_safety_rating": "CAT IV 600 V / CAT III 1000 V",
+        "temperature_measurement": true,
+        "low_impedance_loz": false
+      },
+      "source": {
+        "url": "https://www.fluke.com/en-us/product/electrical-testing/digital-multimeters/fluke-87v",
+        "accessedAt": "2026-06-20"
+      },
+      "corroboration": {
+        "url": "https://www.myflukestore.com/product/fluke-87-5-industrial-multimeter",
+        "accessedAt": "2026-06-20"
+      },
+      "provenance": "Fluke.com confirms MSRP $561.99, True RMS, 6000-count display (19,999 in high-resolution mode), CAT IV 600 V / CAT III 1000 V, auto and manual ranging, and built-in thermometer (-200 C to +1090 C with probe). No dedicated voltage-mode LoZ feature documented; all fields re-verified against fluke.com."
+    },
+    {
+      "slug": "fluke-115",
+      "name": "Fluke 115",
+      "brand": "Fluke",
+      "category": "multimeters",
+      "releaseDate": null,
+      "priceUsd": 279.99,
+      "priceNote": "MSRP from fluke.com",
+      "specs": {
+        "type": "digital handheld",
+        "true_rms": true,
+        "max_voltage_dc_v": 600,
+        "count_resolution": 6000,
+        "auto_ranging": true,
+        "cat_safety_rating": "CAT III 600 V",
+        "temperature_measurement": false,
+        "low_impedance_loz": false
+      },
+      "source": {
+        "url": "https://www.fluke.com/en-us/product/electrical-testing/digital-multimeters/fluke-115",
+        "accessedAt": "2026-06-20"
+      },
+      "corroboration": {
+        "url": "https://media.fluke.com/ce54d963-3be9-4e70-8a3e-b1060070fdfd_original%20file.pdf",
+        "accessedAt": "2026-06-20"
+      },
+      "provenance": "Fluke.com confirms MSRP $279.99, True RMS, 6000-count, CAT III 600 V, auto-ranging. Fluke 114/115/116/117 detailed-specifications PDF confirms the 115 has NO temperature function (116 only) and NO Auto-V LoZ mode (114/116/117 only). temperature_measurement false and low_impedance_loz false both verified correct."
+    },
+    {
+      "slug": "klein-tools-mm600",
+      "name": "Klein Tools MM600",
+      "brand": "Klein Tools",
+      "category": "multimeters",
+      "releaseDate": null,
+      "priceUsd": 86.49,
+      "priceNote": "Street price (discontinued; Klein now recommends MM720)",
+      "specs": {
+        "type": "digital handheld",
+        "true_rms": false,
+        "max_voltage_dc_v": 1000,
+        "count_resolution": 4000,
+        "auto_ranging": true,
+        "cat_safety_rating": "CAT IV 600 V / CAT III 1000 V",
+        "temperature_measurement": true,
+        "low_impedance_loz": false
+      },
+      "source": {
+        "url": "https://www.kleintools.com/catalog/multimeters/digital-multimeter-auto-ranging-1000v",
+        "accessedAt": "2026-06-20"
+      },
+      "corroboration": {
+        "url": "https://www.globaltestsupply.com/product/klein-tools-mm600-digital-multimeter",
+        "accessedAt": "2026-06-20"
+      },
+      "provenance": "Klein Tools product page confirms non-TRMS (the TRMS replacement is the MM720), 4000-count LCD, 1000 V DC, CAT IV 600 V / CAT III 1000 V, auto-ranging, and temperature 0-1000 F. Page states 'no longer in production' and recommends MM720. Street price ~$86.49 per current retail listings."
+    },
+    {
+      "slug": "klein-tools-mm700",
+      "name": "Klein Tools MM700",
+      "brand": "Klein Tools",
+      "category": "multimeters",
+      "releaseDate": null,
+      "priceUsd": 99.97,
+      "priceNote": "Retail price at ToolNut",
+      "specs": {
+        "type": "digital handheld",
+        "true_rms": true,
+        "max_voltage_dc_v": 1000,
+        "count_resolution": 4000,
+        "auto_ranging": true,
+        "cat_safety_rating": "CAT IV 600 V / CAT III 1000 V",
+        "temperature_measurement": true,
+        "low_impedance_loz": true
+      },
+      "source": {
+        "url": "https://www.kleintools.com/catalog/multimeters/digital-multimeter-trmslow-impedance-1000v",
+        "accessedAt": "2026-06-20"
+      },
+      "corroboration": {
+        "url": "https://www.toolnut.com/products/klein-mm700-1000v-trms-low-impedance-digital-multimeter",
+        "accessedAt": "2026-06-20"
+      },
+      "provenance": "Klein Tools product page confirms TRMS, LoZ mode, auto-ranging, 1000 V DC, temperature, 4000-count LCD, and CAT IV 600 V / CAT III 1000 V. ToolNut lists at $99.97 and confirms all features. Discontinued (newer model MM720) but still widely sold."
+    },
+    {
+      "slug": "klein-tools-mm400",
+      "name": "Klein Tools MM400",
+      "brand": "Klein Tools",
+      "category": "multimeters",
+      "releaseDate": null,
+      "priceUsd": 54.97,
+      "priceNote": "Street price (discontinued; replaced by MM420)",
+      "specs": {
+        "type": "digital handheld",
+        "true_rms": false,
+        "max_voltage_dc_v": 600,
+        "count_resolution": 4000,
+        "auto_ranging": true,
+        "cat_safety_rating": "CAT III 600 V",
+        "temperature_measurement": true,
+        "low_impedance_loz": false
+      },
+      "source": {
+        "url": "https://www.kleintools.com/catalog/multimeters/digital-multimeter-auto-ranging-600v",
+        "accessedAt": "2026-06-20"
+      },
+      "corroboration": {
+        "url": "https://data.kleintools.com/sites/all/product_assets/documents/brochures/klein/kleintools_datasheet_mm400.pdf",
+        "accessedAt": "2026-06-20"
+      },
+      "provenance": "Klein Tools product page (now showing 'no longer in production', recommends MM420) confirms non-TRMS, 4000-count LCD, 600 V DC, CAT III 600 V, auto-ranging, and temperature measurement. Street price ~$54.97 from distributors."
+    },
+    {
+      "slug": "astroai-dm6000ar",
+      "name": "AstroAI DM6000AR",
+      "brand": "AstroAI",
+      "category": "multimeters",
+      "releaseDate": null,
+      "priceUsd": 39.99,
+      "priceNote": "Price from astroai.com US product page",
+      "specs": {
+        "type": "digital handheld",
+        "true_rms": true,
+        "max_voltage_dc_v": 1000,
+        "count_resolution": 6000,
+        "auto_ranging": true,
+        "cat_safety_rating": "CAT III 600 V / CAT II 1000 V",
+        "temperature_measurement": true,
+        "low_impedance_loz": false
+      },
+      "source": {
+        "url": "https://www.astroai.com/digital-multimeter-6000-counts-dm6000ar/ap/100019",
+        "accessedAt": "2026-06-20"
+      },
+      "corroboration": {
+        "url": "https://www.manualslib.com/manual/4046101/Astroai-Dm6000ar.html",
+        "accessedAt": "2026-06-20"
+      },
+      "provenance": "AstroAI US product page shows $39.99 and confirms True RMS, 6000 counts, DC range to 1000 V, auto and manual ranging, and K-type temperature. Manual confirms EN61010-1 CAT III 600 V / CAT II 1000 V. No LoZ ghost-voltage mode."
+    },
+    {
+      "slug": "innova-3340",
+      "name": "Innova 3340",
+      "brand": "Innova",
+      "category": "multimeters",
+      "releaseDate": null,
+      "priceUsd": 69.99,
+      "priceNote": "Current price at AutoZone (manufacturer MSRP on innova.com is $129)",
+      "specs": {
+        "type": "digital handheld",
+        "true_rms": false,
+        "max_voltage_dc_v": 600,
+        "count_resolution": 4000,
+        "auto_ranging": true,
+        "cat_safety_rating": "CAT II",
+        "temperature_measurement": true,
+        "low_impedance_loz": false
+      },
+      "source": {
+        "url": "https://www.innova.com/products/automotive-dmm-3340",
+        "accessedAt": "2026-06-20"
+      },
+      "corroboration": {
+        "url": "https://www.autozone.com/p/innova-electrical-multi-tester-3340/94874",
+        "accessedAt": "2026-06-20"
+      },
+      "provenance": "Innova.com confirms 600 V max, auto-ranging, and temperature via K-type probe; not True RMS (no TRMS claim in manual or product page). CORRECTED priceUsd 79.99->69.99: AutoZone (the named retail source) currently lists $69.99; innova.com MSRP is $129. The draft's $79.99 matched neither. 4000-count (3-3/4 digit) and CAT II per the IEC measuring-circuit category in the manual."
+    },
+    {
+      "slug": "fieldpiece-hs33",
+      "name": "Fieldpiece HS33",
+      "brand": "Fieldpiece",
+      "category": "multimeters",
+      "releaseDate": null,
+      "priceUsd": 245,
+      "priceNote": "MSRP per trutechtools.com",
+      "specs": {
+        "type": "digital handheld",
+        "true_rms": false,
+        "max_voltage_dc_v": 600,
+        "count_resolution": 2000,
+        "auto_ranging": false,
+        "cat_safety_rating": "CAT III 600 V",
+        "temperature_measurement": true,
+        "low_impedance_loz": false
+      },
+      "source": {
+        "url": "https://trutechtools.com/HS33",
+        "accessedAt": "2026-06-20"
+      },
+      "corroboration": {
+        "url": "https://resources.fieldpiece.com/wp-content/uploads/2020/12/Opman_HS32_33_v16.pdf",
+        "accessedAt": "2026-06-20"
+      },
+      "provenance": "Trutechtools.com confirms MSRP $245.00 (sale ~$208), manual ranging (not auto), 3.5-digit LCD with maximum reading 1999 (2000-count class), CAT III 600 V, and temperature via K-type thermocouple. Average AC conversion, not True RMS (the TRMS stick is the HS36). No LoZ mode."
+    },
+    {
+      "slug": "amprobe-am-510",
+      "name": "Amprobe AM-510",
+      "brand": "Amprobe",
+      "category": "multimeters",
+      "releaseDate": null,
+      "priceUsd": 47.95,
+      "priceNote": "Current price at Test Equipment Depot",
+      "specs": {
+        "type": "digital handheld",
+        "true_rms": false,
+        "max_voltage_dc_v": 600,
+        "count_resolution": 4000,
+        "auto_ranging": true,
+        "cat_safety_rating": "CAT III 600 V",
+        "temperature_measurement": true,
+        "low_impedance_loz": false
+      },
+      "source": {
+        "url": "https://amprobe.com/product/am-510/",
+        "accessedAt": "2026-06-20"
+      },
+      "corroboration": {
+        "url": "https://www.testequipmentdepot.com/amprobe-am-510-automanual-ranging-commercialresidential-digital-multimeter-w-voltect-ncv-detector.html",
+        "accessedAt": "2026-06-20"
+      },
+      "provenance": "Amprobe page confirms 4000-count LCD, 600 V, CAT III 600 V, auto and manual ranging, temperature (-40 F to 1832 F), and NCV. Average-responding, not True RMS (TRMS starts at AM-530). Test Equipment Depot lists $47.95; amprobe.com publishes no USD price."
+    },
+    {
+      "slug": "extech-ex330",
+      "name": "Extech EX330",
+      "brand": "Extech",
+      "category": "multimeters",
+      "releaseDate": null,
+      "priceUsd": 74.99,
+      "priceNote": "Price from extech.com / Test Equipment Depot",
+      "specs": {
+        "type": "digital handheld",
+        "true_rms": false,
+        "max_voltage_dc_v": 600,
+        "count_resolution": 4000,
+        "auto_ranging": true,
+        "cat_safety_rating": "CAT II 1000 V / CAT III 600 V",
+        "temperature_measurement": true,
+        "low_impedance_loz": false
+      },
+      "source": {
+        "url": "https://www.extech.com/products/EX330",
+        "accessedAt": "2026-06-20"
+      },
+      "corroboration": {
+        "url": "https://www.testequipmentdepot.com/extech-ex330-12-function-mini-multimeter-and-non-contact-voltage-detector-600v-10a.html",
+        "accessedAt": "2026-06-20"
+      },
+      "provenance": "Extech.com confirms $74.99, 4000-count LCD, 600 V max, CAT II 1000 V / CAT III 600 V, autoranging, Type K temperature probe, and NCV. Not True RMS (the EX430 adds TRMS). No LoZ mode."
+    },
+    {
+      "slug": "fluke-101",
+      "name": "Fluke 101",
+      "brand": "Fluke",
+      "category": "multimeters",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "Fluke publishes no USD MSRP for this model (a non-US-market budget pocket meter); US street prices vary widely (~$48-90) with no single corroborable published price, so priceUsd is null",
+      "specs": {
+        "type": "digital handheld",
+        "true_rms": false,
+        "max_voltage_dc_v": 600,
+        "count_resolution": 6000,
+        "auto_ranging": true,
+        "cat_safety_rating": "CAT III 600 V",
+        "temperature_measurement": false,
+        "low_impedance_loz": false
+      },
+      "source": {
+        "url": "https://www.fluke.com/en-in/product/electrical-testing/digital-multimeters/fluke-101",
+        "accessedAt": "2026-06-20"
+      },
+      "corroboration": {
+        "url": "https://www.markhennessy.co.uk/budget_multimeters/fluke_101.htm",
+        "accessedAt": "2026-06-20"
+      },
+      "provenance": "Fluke.com confirms CAT III 600 V and 600 V max; 6000-count display confirmed by reviews. CORRECTED true_rms true->false: Mark Hennessy's detailed teardown and multiple reviews confirm the Fluke 101 is AVERAGE-RESPONDING, not True RMS. Temperature absent (not in function list). CORRECTED source URL from fluke.com/en-us (model not listed in the US store) to fluke.com/en-in (the regional page that actually exists). CORRECTED priceUsd 48.5->null: no published USD MSRP and the draft's $48.50 (stale CamelCamelCamel Nov 2024 figure) could not be corroborated to a current published listing."
+    }
+  ]
+}
