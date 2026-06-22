@@ -664,14 +664,14 @@
           "monthlyUsd": 39,
           "minutesIncluded": 133,
           "callsIncluded": null,
-          "overagePerMin": 0.15,
+          "overagePerMin": null,
           "overagePerCall": null,
           "annualDiscountPct": 20,
           "billingModel": "flat",
-          "notes": "2,000 credits/mo; voice = 15 credits/min @ $0.01 = $0.15/min, so ~133 voice min if all credits go to voice. Credits also fund SMS/ads. Annual 20% off.",
+          "notes": "2,000 credits/mo; voice = 15 credits/min. The pricing page states credits cost $0.02-$0.04 each, i.e. ~$0.30-$0.60 per voice-minute (larger bundles trend to the low end; Core is $39/2,000 = ~$0.02/credit). ~133 voice min if all credits go to voice. No flat per-minute overage is published; exceeding the bundle means buying more credits. Credits also fund SMS/ad features. Annual 20% off.",
           "source": {
             "url": "https://serviceagent.ai/pricing",
-            "accessedAt": "2026-06-10"
+            "accessedAt": "2026-06-22"
           }
         },
         {
@@ -679,14 +679,14 @@
           "monthlyUsd": 95,
           "minutesIncluded": 400,
           "callsIncluded": null,
-          "overagePerMin": 0.15,
+          "overagePerMin": null,
           "overagePerCall": null,
           "annualDiscountPct": 20,
           "billingModel": "flat",
-          "notes": "6,000 credits/mo (~400 voice min). Annual 20% off.",
+          "notes": "6,000 credits/mo (~400 voice min at 15 credits/min). Credits cost $0.02-$0.04 each (~$0.30-$0.60/voice-min). No flat per-minute overage published. Annual 20% off.",
           "source": {
             "url": "https://serviceagent.ai/pricing",
-            "accessedAt": "2026-06-10"
+            "accessedAt": "2026-06-22"
           }
         },
         {
@@ -694,23 +694,26 @@
           "monthlyUsd": 279,
           "minutesIncluded": 1333,
           "callsIncluded": null,
-          "overagePerMin": 0.15,
+          "overagePerMin": null,
           "overagePerCall": null,
           "annualDiscountPct": 20,
           "billingModel": "flat",
-          "notes": "20,000 credits/mo (~1,333 voice min). Annual 20% off.",
+          "notes": "20,000 credits/mo (~1,333 voice min at 15 credits/min). Credits cost $0.02-$0.04 each (~$0.30-$0.60/voice-min). No flat per-minute overage published. Annual 20% off.",
           "source": {
             "url": "https://serviceagent.ai/pricing",
-            "accessedAt": "2026-06-10"
+            "accessedAt": "2026-06-22"
           }
         }
       ],
       "hipaa": null,
       "baa": null,
-      "integrations": [],
+      "integrations": [
+        "Jobber",
+        "Calendar Sync"
+      ],
       "bilingual": null,
       "demoPhone": null,
-      "provenance": "Home-services credit-based plans from serviceagent.ai/pricing. minutesIncluded is derived as credits / 15 (15 credits = 1 voice min), an upper bound since credits are shared with SMS/ad-creative/review features; flagged. ServiceTitan/Jobber/Housecall integrations, bilingual, HIPAA/BAA not published."
+      "provenance": "Home-services credit-based plans from serviceagent.ai/pricing (re-verified 2026-06-22). minutesIncluded is derived as credits / 15 (15 credits = 1 voice min), an upper bound since credits are shared with SMS/ad-creative/review features; flagged. The page publishes a per-credit cost of $0.02-$0.04 (~$0.30-$0.60/voice-min); no flat per-minute overage is published, so overagePerMin is null. A free Launch ($0) tier and a Jobber integration are now listed; ServiceTitan/Housecall hooks, bilingual, HIPAA/BAA still not published."
     },
     {
       "slug": "loman",
