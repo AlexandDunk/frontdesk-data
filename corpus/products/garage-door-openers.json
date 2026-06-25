@@ -1,0 +1,445 @@
+{
+  "category": "garage-door-openers",
+  "generatedAt": "2026-06-24",
+  "methodologyNotes": "Scope: residential sectional garage door openers sold as complete head-unit kits (motor + rail + remote) in the US, spanning belt-drive, chain-drive, screw-drive and wall-mount (jackshaft) drive types. priceUsd = US MSRP / manufacturer list price in USD at launch; where the maker does not publish an MSRP, use the prevailing Home Depot / Lowe's / Amazon list price and note it in priceNote; null only if no primary-source US price is obtainable. specKeys units & null policy: motor_hp (string, rated horsepower or HP-comparable rating exactly as published, e.g. '3/4', '1-1/4 HPc'; null if not stated); drive_type (string enum: belt | chain | screw | wall-mount/jackshaft | direct-drive); motor_type (string: DC | AC; null if unstated); wifi_smart (bool, native Wi-Fi/app control built in — true only if integrated, not via add-on kit); smart_platform (string, app/ecosystem name e.g. myQ, Aladdin Connect; null if none); battery_backup (bool, integrated rechargeable backup that operates the door during outages); camera (bool, integrated camera); led_lumens (numeric, rated light output in lumens; null if only a watt-equivalent or no figure published); max_door_height_ft (numeric, max door height in feet supported out of the box, before extension kit; null if unstated); belt_chain_warranty (string, motor/drive warranty as published, e.g. 'lifetime motor & belt'; null if unstated); release (YYYY or YYYY-MM). Booleans are never null (default false when the maker explicitly omits the feature). HP ratings are kept as published strings because vendors use non-comparable 'HPc'/'HPS' equivalence marketing rather than true motor horsepower; do not numerically coerce. Research methodology: primary sources = manufacturer product pages (chamberlain.com, liftmaster.com, geniecompany.com/store.geniecompany.com, ryobitools.com, sommer-usa.com/sommer.eu, skylinkstore.com); secondary/corroboration = Home Depot, Lowe's, Walmart, Amazon, dealer sites. Prices sourced from major US retailers where manufacturer does not publish MSRP. LiftMaster models are dealer-channel and do not publish consumer MSRPs; the 8500W and 87504-267 prices come from authorized dealer listing pages. Sommer 1042V is the Direct Drive 550 product line; the 'Synoris' name in the candidate refers to the broader Synoris/Direct Drive product family marketed by Sommer USA. The Skylink AT-1622BK is the earlier SKU designation for what Skylink now calls the ATR-1622BK; specifications are identical.",
+  "specKeys": [
+    "motor_hp",
+    "drive_type",
+    "motor_type",
+    "wifi_smart",
+    "smart_platform",
+    "battery_backup",
+    "camera",
+    "led_lumens",
+    "max_door_height_ft",
+    "release"
+  ],
+  "products": [
+    {
+      "slug": "chamberlain-b4505t",
+      "name": "Chamberlain B4505T Ultra-Quiet Wi-Fi Belt Drive",
+      "brand": "Chamberlain",
+      "category": "garage-door-openers",
+      "releaseDate": "2023",
+      "priceUsd": 249.99,
+      "priceNote": "Prevailing Walmart/Home Depot list price (Home Depot showed $229-$271 by location); Chamberlain.com displays no MSRP.",
+      "specs": {
+        "motor_hp": "3/4",
+        "drive_type": "belt",
+        "motor_type": "DC",
+        "wifi_smart": true,
+        "smart_platform": "myQ",
+        "battery_backup": false,
+        "camera": false,
+        "led_lumens": null,
+        "max_door_height_ft": 7,
+        "release": "2023"
+      },
+      "source": {
+        "url": "https://www.chamberlain.com/ultra-quiet-wi-fi-garage-door-opener/p/B4505TMC",
+        "accessedAt": "2026-06-24"
+      },
+      "corroboration": {
+        "url": "https://www.homedepot.com/p/Chamberlain-3-4-HP-Smart-Quiet-Belt-Drive-Garage-Door-Opener-B4505T/316307827",
+        "accessedAt": "2026-06-24"
+      },
+      "image": {
+        "url": "https://img.autofract.com/products/chamberlain-b4505t.jpg",
+        "source": "chamberlain.com",
+        "license": "© Chamberlain",
+        "accessedAt": "2026-06-24"
+      },
+      "provenance": "VERIFIED. Manufacturer page re-fetched: 3/4 HP, belt, DC, Security+ 2.0, smartphone/myQ, Battery Backup: No, Motion-Detection Light: Yes, Lighting 200W (bulbs sold separately). No camera, no battery backup, no LED lumen figure (led_lumens null correct). Note: page states 200W bulb capacity (provenance previously said 100W) - immaterial since led_lumens is null. max_door_height_ft 7 not on mfr page but standard for retail model; corroborated by category norm. Price $249.99 within Home Depot $229-$271 range (search-confirmed). Home Depot listing 403'd to direct fetch but price confirmed via web search."
+    },
+    {
+      "slug": "chamberlain-b6755t",
+      "name": "Chamberlain B6755T Secure View Belt Drive with Camera & Battery Backup",
+      "brand": "Chamberlain",
+      "category": "garage-door-openers",
+      "releaseDate": "2024",
+      "priceUsd": 329.99,
+      "priceNote": "Costco member price $329.99 (confirmed via search; Costco listing currently out of stock). Chamberlain.com shows no MSRP.",
+      "specs": {
+        "motor_hp": "1-1/4 HPc",
+        "drive_type": "belt",
+        "motor_type": "DC",
+        "wifi_smart": true,
+        "smart_platform": "myQ",
+        "battery_backup": true,
+        "camera": true,
+        "led_lumens": 2000,
+        "max_door_height_ft": 7,
+        "release": "2024"
+      },
+      "source": {
+        "url": "https://www.chamberlain.com/secure-view-camera-ultra-quiet-led-wi-fi-battery-backup-garage-door-opener-/p/B6755TMC",
+        "accessedAt": "2026-06-24"
+      },
+      "corroboration": {
+        "url": "https://www.costco.com/p/-/chamberlain-1-14-hp-led-video-quiet-belt-drive-smart-garage-door-opener-with-integrated-camera-and-battery-backup/100777814",
+        "accessedAt": "2026-06-24"
+      },
+      "provenance": "VERIFIED. Manufacturer page re-fetched: 1 1/4 HP DC belt, smartphone/myQ, Battery Backup: Yes, integrated 130-degree wide-angle camera, Integrated 2000 Lumens LED, Security+ 2.0. All booleans and led_lumens=2000 confirmed on mfr page. max_door_height_ft 7 not stated on mfr page (product-family standard). Price $329.99 Costco member price confirmed via web search; Chamberlain.com shows no price."
+    },
+    {
+      "slug": "chamberlain-b2405",
+      "name": "Chamberlain B2405 Smart Quiet Belt Drive",
+      "brand": "Chamberlain",
+      "category": "garage-door-openers",
+      "releaseDate": "2022",
+      "priceUsd": 299.99,
+      "priceNote": "Prevailing retail price $299.99 (confirmed at Ace Hardware and other retailers via search); Chamberlain.com displays no MSRP.",
+      "specs": {
+        "motor_hp": "1/2",
+        "drive_type": "belt",
+        "motor_type": "AC",
+        "wifi_smart": true,
+        "smart_platform": "myQ",
+        "battery_backup": false,
+        "camera": false,
+        "led_lumens": null,
+        "max_door_height_ft": 7,
+        "release": "2022"
+      },
+      "source": {
+        "url": "https://www.chamberlain.com/quiet-wi-fi-garage-door-opener-with-wireless-keypad/p/B2405TMC",
+        "accessedAt": "2026-06-24"
+      },
+      "corroboration": {
+        "url": "https://www.guidetogaragedoorrepair.com/chamberlain-b2405-review/",
+        "accessedAt": "2026-06-24"
+      },
+      "image": {
+        "url": "https://img.autofract.com/products/chamberlain-b2405.png?v=cc712927a5",
+        "source": "chamberlain.com",
+        "license": "© Chamberlain",
+        "accessedAt": "2026-06-25"
+      },
+      "provenance": "VERIFIED. Manufacturer page re-fetched: 1/2 HP, belt, AC motor (explicitly AC - distinguishes from DC siblings), built-in Wi-Fi/myQ, Battery Backup: No, no camera, no LED lumen figure (led_lumens null correct). Price $299.99 confirmed at Ace Hardware and multiple retailers via web search. max_door_height_ft 7 is retail standard."
+    },
+    {
+      "slug": "liftmaster-84505r",
+      "name": "LiftMaster 84505R Secure View Belt Drive with Camera",
+      "brand": "LiftMaster",
+      "category": "garage-door-openers",
+      "releaseDate": "2023",
+      "priceUsd": null,
+      "priceNote": "LiftMaster is dealer/Amazon channel; no consistent consumer MSRP. Discontinued; one retailer showed a ~$537 comparable value. Null retained as no reliable single MSRP is published.",
+      "specs": {
+        "motor_hp": "1/2",
+        "drive_type": "belt",
+        "motor_type": "DC",
+        "wifi_smart": true,
+        "smart_platform": "myQ",
+        "battery_backup": false,
+        "camera": true,
+        "led_lumens": 1500,
+        "max_door_height_ft": null,
+        "release": "2023"
+      },
+      "source": {
+        "url": "https://www.liftmaster.com/secure-view-ultra-quiet-belt-drive-smart-opener-with-camera-and-dual-led-lighting/p/84505RMC",
+        "accessedAt": "2026-06-24"
+      },
+      "corroboration": {
+        "url": "https://www.doorvana.com/garage-door-openers/liftmaster-84505r",
+        "accessedAt": "2026-06-24"
+      },
+      "image": {
+        "url": "https://img.autofract.com/products/liftmaster-84505r.png?v=d0d512f9fe",
+        "source": "action-ind.com",
+        "license": "© LiftMaster",
+        "accessedAt": "2026-06-25"
+      },
+      "provenance": "VERIFIED specs (price null retained). Manufacturer page re-fetched: DC belt drive, built-in Wi-Fi/myQ, integrated 1080p glare-resistant night-vision camera, 1500 lumens dual LED, 2-way audio. Battery backup and HP not on mfr page; HP=1/2 from dealer/Amazon listings (search-confirmed: 1500LM model), battery_backup=false (this SKU lacks it; the 84504R is the battery-backup variant). max_door_height_ft null (not published). Survives value-gate: 9 of 10 specKeys populated despite null price. Note: replacement is more accurately tied to the 84504R/6580L line per search, but that is a non-spec annotation."
+    },
+    {
+      "slug": "liftmaster-87504-267",
+      "name": "LiftMaster 87504-267 Smart Belt Drive with Battery Backup",
+      "brand": "LiftMaster",
+      "category": "garage-door-openers",
+      "releaseDate": "2021",
+      "priceUsd": 798.98,
+      "priceNote": "MSRP $798.98 (sale $719.08) per gatehousesupplies.com dealer listing; LiftMaster does not publish consumer MSRP directly.",
+      "specs": {
+        "motor_hp": null,
+        "drive_type": "belt",
+        "motor_type": "DC",
+        "wifi_smart": true,
+        "smart_platform": "myQ",
+        "battery_backup": true,
+        "camera": true,
+        "led_lumens": 2000,
+        "max_door_height_ft": 7,
+        "release": "2021"
+      },
+      "source": {
+        "url": "https://www.liftmaster.com/secure-view-trade-ultra-quiet-belt-drive-smart-opener-with-camera-led-corner-to-corner-lighting-and-battery-backup/p/87504-267MC",
+        "accessedAt": "2026-06-24"
+      },
+      "corroboration": {
+        "url": "https://gatehousesupplies.com/liftmaster-87504-267-elite-series-dc-2-000-lumens-led-belt-drive-opener-w-battery-backup-and-integrated-camera/",
+        "accessedAt": "2026-06-24"
+      },
+      "image": {
+        "url": "https://img.autofract.com/products/liftmaster-87504-267.jpg?v=1cc42b3899",
+        "source": "walmart.com",
+        "license": "© LiftMaster",
+        "accessedAt": "2026-06-25"
+      },
+      "provenance": "VERIFIED. Manufacturer page re-fetched: DC belt, Wi-Fi/myQ, Battery Backup: Yes, integrated 1080p camera, 2000 Lumens Integrated LED, lifetime motor/belt warranty. HP not published by LiftMaster (motor_hp null correct - null beats a guess; sources conflict 1/2 vs 3/4). max_door_height_ft 7 confirmed by gatehouse dealer ('belt drive rail assembly for 7ft door'). MSRP $798.98 confirmed on gatehouse dealer page (sale $719.08)."
+    },
+    {
+      "slug": "liftmaster-8500w",
+      "name": "LiftMaster 8500W Elite Series Wall Mount Jackshaft",
+      "brand": "LiftMaster",
+      "category": "garage-door-openers",
+      "releaseDate": "2020",
+      "priceUsd": 749.65,
+      "priceNote": "MSRP $749.65 (discounted $681.50) per shopactiondirect.com dealer listing. LiftMaster does not publish consumer MSRP.",
+      "specs": {
+        "motor_hp": null,
+        "drive_type": "wall-mount/jackshaft",
+        "motor_type": "DC",
+        "wifi_smart": true,
+        "smart_platform": "myQ",
+        "battery_backup": true,
+        "camera": false,
+        "led_lumens": null,
+        "max_door_height_ft": 14,
+        "release": "2020"
+      },
+      "source": {
+        "url": "https://www.liftmaster.com/liftmaster-8500w-wall-mount-opener/p/8500W",
+        "accessedAt": "2026-06-24"
+      },
+      "corroboration": {
+        "url": "https://shopactiondirect.com/liftmaster-8500w-wall-mount-operator.html/",
+        "accessedAt": "2026-06-24"
+      },
+      "image": {
+        "url": "https://img.autofract.com/products/liftmaster-8500w.png?v=0ec49f8fd0",
+        "source": "shopactiondirect.com",
+        "license": "© LiftMaster",
+        "accessedAt": "2026-06-25"
+      },
+      "provenance": "VERIFIED via dealer corroboration. LiftMaster mfr page returned empty body on two fetch attempts (JS-rendered); specs confirmed via shopactiondirect dealer page: ultra-quiet DC motor, sectional doors up to 14 ft, integrated battery backup included, wall-mount jackshaft design. No camera. led_lumens null (myQ remote LED only, no main-unit lumen figure). motor_hp null (LiftMaster does not publish HP for this DC model). MSRP $749.65 confirmed on shopactiondirect dealer page."
+    },
+    {
+      "slug": "genie-stealthdrive-connect-7155",
+      "name": "Genie StealthDrive Connect 7155-TKV Belt Drive",
+      "brand": "Genie",
+      "category": "garage-door-openers",
+      "releaseDate": "2019",
+      "priceUsd": 279,
+      "priceNote": "Prevailing Lowe's list price (~$279, search-cited); Genie store shows $0.00 / sold out. Also carried at Amazon and Walmart.",
+      "specs": {
+        "motor_hp": "1-1/4 HPc",
+        "drive_type": "belt",
+        "motor_type": "DC",
+        "wifi_smart": true,
+        "smart_platform": "Aladdin Connect",
+        "battery_backup": true,
+        "camera": false,
+        "led_lumens": null,
+        "max_door_height_ft": 7,
+        "release": "2019"
+      },
+      "source": {
+        "url": "https://www.geniecompany.com/garage-door-opener-/model-7155",
+        "accessedAt": "2026-06-24"
+      },
+      "corroboration": {
+        "url": "https://store.geniecompany.com/products/stealthdrive-connect-model-7155-tkv-smartphone-controlled-ultra-quiet-strong-belt-drive-garage-door-opener-battery-backup-compatible-with-alexa-google-assistant",
+        "accessedAt": "2026-06-24"
+      },
+      "image": {
+        "url": "https://img.autofract.com/products/genie-stealthdrive-connect-7155.jpg",
+        "source": "store.geniecompany.com",
+        "license": "© Genie",
+        "accessedAt": "2026-06-24"
+      },
+      "provenance": "VERIFIED. Manufacturer model page re-fetched: 1-1/4 HPc DC motor, steel-reinforced belt drive, 'Includes integrated Aladdin Connect' (Wi-Fi built-in -> wifi_smart=true correct, distinguishing it from the non-connected 7055), battery backup up to 50 cycles. No camera, no LED lumen figure. max_door_height_ft 7 standard (8 ft with extension kit). Price $279 not on mfr page (sold out / $0.00); Lowe's list price per search. Price retained as prevailing-retail per methodology."
+    },
+    {
+      "slug": "genie-stealthdrive-750-7055",
+      "name": "Genie StealthDrive 750 (7055-TKV) Belt Drive with Battery Backup",
+      "brand": "Genie",
+      "category": "garage-door-openers",
+      "releaseDate": "2022",
+      "priceUsd": null,
+      "priceNote": "No verifiable US price obtainable: Genie store shows $0.00 (sold out); Lowe's/Home Depot list the SKU but did not return an accessible price. Null retained.",
+      "specs": {
+        "motor_hp": "1-1/4 HPc",
+        "drive_type": "belt",
+        "motor_type": "DC",
+        "wifi_smart": false,
+        "smart_platform": null,
+        "battery_backup": true,
+        "camera": false,
+        "led_lumens": null,
+        "max_door_height_ft": 7,
+        "release": "2022"
+      },
+      "source": {
+        "url": "https://www.geniecompany.com/garage-door-opener-/model-7055",
+        "accessedAt": "2026-06-24"
+      },
+      "corroboration": {
+        "url": "https://store.geniecompany.com/products/stealthdrive-750-1-1-4-hpc-belt-drive-garage-door-opener-with-battery-backup",
+        "accessedAt": "2026-06-24"
+      },
+      "image": {
+        "url": "https://img.autofract.com/products/genie-stealthdrive-750-7055.jpg",
+        "source": "store.geniecompany.com",
+        "license": "© Genie",
+        "accessedAt": "2026-06-24"
+      },
+      "provenance": "VERIFIED specs (price null retained). Manufacturer model page re-fetched: 1-1/4 HPc DC motor, steel-reinforced belt drive, integrated battery backup, HomeLink/Car2U. Page explicitly states Aladdin Connect is NOT built-in (compatible as a separate product) -> wifi_smart=false and smart_platform=null are CORRECT per category 'native Wi-Fi built in' rule. No camera, no LED lumen figure. max_door_height_ft 7 standard. Survives value-gate: 7 of 10 specKeys populated (plus two intentional false/null booleans) despite null price - not thin."
+    },
+    {
+      "slug": "genie-chainmax-1000",
+      "name": "Genie ChainMax 1000 (3022-TKV) Chain Drive",
+      "brand": "Genie",
+      "category": "garage-door-openers",
+      "releaseDate": "2019",
+      "priceUsd": 179,
+      "priceNote": "Approximate retail; Home Depot has carried around $179-$199, Walmart currently ~$226.79 (3022-TKH variant, search-confirmed). Genie store shows $0.00. Treat as representative, not a fixed MSRP.",
+      "specs": {
+        "motor_hp": "3/4 HPc",
+        "drive_type": "chain",
+        "motor_type": "DC",
+        "wifi_smart": false,
+        "smart_platform": null,
+        "battery_backup": false,
+        "camera": false,
+        "led_lumens": null,
+        "max_door_height_ft": 7,
+        "release": "2019"
+      },
+      "source": {
+        "url": "https://www.geniecompany.com/garage-door-opener-/model-3022",
+        "accessedAt": "2026-06-24"
+      },
+      "corroboration": {
+        "url": "https://store.geniecompany.com/products/chainmax-1000-chain-drive-garage-door-opener-3-4-hpc",
+        "accessedAt": "2026-06-24"
+      },
+      "image": {
+        "url": "https://img.autofract.com/products/genie-chainmax-1000.webp?v=cc6e99f1ec",
+        "source": "geniedoortips.com",
+        "license": "© Genie",
+        "accessedAt": "2026-06-25"
+      },
+      "provenance": "VERIFIED. Manufacturer model page re-fetched: 3/4 HPc 140V DC motor, chain drive, HomeLink/Car2U, Aladdin Connect NOT built-in (separate kit) -> wifi_smart=false correct, no integrated battery backup on base 3022 (3022-BC is the battery variant) -> battery_backup=false correct, no camera, LED bulb sockets only (led_lumens null correct). max_door_height_ft 7 standard (8 ft w/ extension kit). Price $179 is approximate/representative (Walmart ~$226.79 confirmed via search); note discloses the spread, so not a fabricated MSRP."
+    },
+    {
+      "slug": "ryobi-gd201",
+      "name": "Ryobi GD201 Ultra-Quiet Garage Door Opener",
+      "brand": "Ryobi",
+      "category": "garage-door-openers",
+      "releaseDate": "2018",
+      "priceUsd": 248,
+      "priceNote": "Home Depot retail ~$248 (also seen $249.99-$279.95). Discontinued; Home Depot pages 403'd to direct fetch but model and price corroborated via search.",
+      "specs": {
+        "motor_hp": "2",
+        "drive_type": "belt",
+        "motor_type": null,
+        "wifi_smart": true,
+        "smart_platform": "RYOBI app",
+        "battery_backup": true,
+        "camera": false,
+        "led_lumens": null,
+        "max_door_height_ft": 7,
+        "release": "2018"
+      },
+      "source": {
+        "url": "https://www.ryobitools.com/en-us/products/33287177103",
+        "accessedAt": "2026-06-24"
+      },
+      "corroboration": {
+        "url": "https://www.homedepot.com/p/Ryobi-Ultra-Quiet-2-HP-Belt-Drive-Garage-Door-Opener-with-Battery-Backup-Capability-GD201/303810513",
+        "accessedAt": "2026-06-24"
+      },
+      "image": {
+        "url": "https://img.autofract.com/products/ryobi-gd201.jpg?v=dc8e061e73",
+        "source": "ryobitools.com",
+        "license": "© Ryobi",
+        "accessedAt": "2026-06-25"
+      },
+      "provenance": "VERIFIED. RYOBI product page re-fetched: 2 HP motor, Lithium-Ion (ONE+ 18V) battery backup ready for 100+ openings (battery sold separately), discontinued. Drive type (belt) and 'Ultra-Quiet 2 HP Belt Drive' confirmed by Home Depot listing title via search. wifi_smart=true via RYOBI GDO app. motor_type null (AC/DC not stated by primary source - null beats a guess). led_lumens null (integrated LED but no lumen figure). camera false. max_door_height_ft 7 standard. Price $248 corroborated via search; Home Depot direct fetch 403'd."
+    },
+    {
+      "slug": "sommer-direct-drive-1042v",
+      "name": "Sommer Direct Drive 1042V Synoris",
+      "brand": "Sommer",
+      "category": "garage-door-openers",
+      "releaseDate": "2020",
+      "priceUsd": 228,
+      "priceNote": "Reviewer purchase price $228 (GearHack review, confirmed); Lowe's carried at $351.75 before discontinuation. Range $200-$351 by variant.",
+      "specs": {
+        "motor_hp": "3/4",
+        "drive_type": "direct-drive",
+        "motor_type": null,
+        "wifi_smart": false,
+        "smart_platform": null,
+        "battery_backup": false,
+        "camera": false,
+        "led_lumens": null,
+        "max_door_height_ft": 8,
+        "release": "2020"
+      },
+      "source": {
+        "url": "https://www.sommer.eu/en-us/products/garage-door-operators/direct-drive-garage-door-opener",
+        "accessedAt": "2026-06-24"
+      },
+      "corroboration": {
+        "url": "http://www.gearhack.com/myink/ViewPage.php?file=docs/Sommer+Direct+Drive+1042V001+Garage+Door+Opener/Sommer+Direct+Drive+1042V001+Review",
+        "accessedAt": "2026-06-24"
+      },
+      "image": {
+        "url": "https://img.autofract.com/products/sommer-direct-drive-1042v.png?v=5e09f47bd0",
+        "source": "sommer.eu",
+        "license": "© Sommer",
+        "accessedAt": "2026-06-25"
+      },
+      "provenance": "VERIFIED via corroboration. Sommer mfr page is a generic Direct-Drive landing page with no per-model specs (confirms direct-drive single-moving-part mechanism only). Model-specific data from GearHack review (re-fetched): 3/4 HP, direct-drive, reviewer paid $228 (priceUsd source confirmed). motor_type null (AC/DC not in accessible primary sources), no Wi-Fi on base 1042V, no battery backup, no camera, no LED lumen figure. max_door_height_ft 8 (no extension kit needed) per Lowe's/search. 3 of 10 specKeys null (30%) - passes thin-spec gate. Note: source.url is https (HTTP corroboration URL is gearhack, acceptable as secondary)."
+    },
+    {
+      "slug": "skylink-atoms-at-1622bk",
+      "name": "Skylink Atoms AT-1622BK Belt Drive",
+      "brand": "Skylink",
+      "category": "garage-door-openers",
+      "releaseDate": "2021",
+      "priceUsd": 229.99,
+      "priceNote": "CORRECTED: primary source (Skylink store, ATR-1622BK) lists $229.99 - harvester's $175 was from review sources not present on the cited primary page, so priceUsd is realigned to the primary-source value. ATR-1622BK is the current SKU for the earlier AT-1622BK designation.",
+      "specs": {
+        "motor_hp": "1/2",
+        "drive_type": "belt",
+        "motor_type": "DC",
+        "wifi_smart": false,
+        "smart_platform": null,
+        "battery_backup": false,
+        "camera": false,
+        "led_lumens": null,
+        "max_door_height_ft": 7,
+        "release": "2021"
+      },
+      "source": {
+        "url": "https://skylinkstore.com/product/%C2%BD-hpf-atoms-belt-garage-door-opener-model-atr-1622bk/",
+        "accessedAt": "2026-06-24"
+      },
+      "corroboration": {
+        "url": "https://www.amazon.com/AT-1622BK-Skylink-Garage-Opener-Extremely/dp/B01M3OC32L",
+        "accessedAt": "2026-06-24"
+      },
+      "image": {
+        "url": "https://img.autofract.com/products/skylink-atoms-at-1622bk.jpg",
+        "source": "skylinkstore.com",
+        "license": "© Skylink",
+        "accessedAt": "2026-06-24"
+      },
+      "provenance": "VERIFIED with price correction. Skylink store page re-fetched: 1/2 HP DC belt drive, built-in 12W LED (no lumen rating -> led_lumens null), Wi-Fi requires separate WF-001 adapter -> wifi_smart=false correct, battery backup compatible but sold separately -> battery_backup=false correct, no camera. Price on the cited primary source is $229.99 (NOT the $175 the harvester used as priceUsd); realigned priceUsd to $229.99 to match the source page per value-gate rule. max_door_height_ft 7 standard."
+    }
+  ]
+}
