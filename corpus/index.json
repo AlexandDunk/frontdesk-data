@@ -10,7 +10,7 @@
   },
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "url": "https://frontdeskreview.com/data/",
-  "dateModified": "2026-06-26",
+  "dateModified": "2026-06-28",
   "measurementTechnique": "Per-record provenance: each price/fact carries source.url + accessedAt; a second corroborating source where available; quote-only/enterprise tiers recorded as null rather than estimated.",
   "distribution": [
     {
@@ -36,6 +36,13 @@
       "name": "all-products.jsonl",
       "encodingFormat": "application/x-ndjson",
       "contentUrl": "all-products.jsonl"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "price-history.jsonl",
+      "encodingFormat": "application/x-ndjson",
+      "contentUrl": "price-history.jsonl",
+      "description": "Dated price change-log: one line per product price as-of a date, appended only when the price changes."
     }
   ],
   "variableMeasured": [
@@ -2751,8 +2758,8 @@
       "json": "themes/workflow-automation.json"
     }
   ],
-  "productCategoryCount": 213,
-  "totalProducts": 2474,
+  "productCategoryCount": 233,
+  "totalProducts": 2645,
   "productCategories": [
     {
       "slug": "3d-printers",
@@ -2922,6 +2929,25 @@
         "release_year"
       ],
       "json": "products/audio-interfaces.json"
+    },
+    {
+      "slug": "automatic-pet-feeders",
+      "category": "automatic-pet-feeders",
+      "productCount": 10,
+      "pricedCount": 10,
+      "specKeys": [
+        "capacityLiters",
+        "maxMealsPerDay",
+        "maxPortionsPerMeal",
+        "maxKibbleSizeMm",
+        "wifiBand",
+        "cameraResolution",
+        "powerBackup",
+        "weightGrams",
+        "bowlMaterial",
+        "appControl"
+      ],
+      "json": "products/automatic-pet-feeders.json"
     },
     {
       "slug": "av-receivers",
@@ -3100,6 +3126,27 @@
         "release"
       ],
       "json": "products/blood-pressure-monitors.json"
+    },
+    {
+      "slug": "bone-conduction-headphones",
+      "category": "bone-conduction-headphones",
+      "productCount": 8,
+      "pricedCount": 8,
+      "specKeys": [
+        "transducerType",
+        "bluetoothVersion",
+        "batteryLifeHours",
+        "chargingTimeHours",
+        "ipRating",
+        "weightGrams",
+        "frequencyResponseHz",
+        "onboardStorageGb",
+        "driverSizeMm",
+        "micType",
+        "multiPointPairing",
+        "noiseCancellingMic"
+      ],
+      "json": "products/bone-conduction-headphones.json"
     },
     {
       "slug": "bread-makers",
@@ -3626,6 +3673,28 @@
       "json": "products/e-readers.json"
     },
     {
+      "slug": "ebike-conversion-kits",
+      "category": "ebike-conversion-kits",
+      "productCount": 7,
+      "pricedCount": 5,
+      "specKeys": [
+        "motorType",
+        "motorPower",
+        "voltage",
+        "maxTorque",
+        "batteryIncluded",
+        "batteryCapacity",
+        "systemWeight",
+        "wheelSizeCompatibility",
+        "sensorType",
+        "maxSpeed",
+        "pedalAssistLevels",
+        "displayType",
+        "installTime"
+      ],
+      "json": "products/ebike-conversion-kits.json"
+    },
+    {
       "slug": "electric-bikes",
       "category": "electric-bikes",
       "productCount": 13,
@@ -3727,6 +3796,27 @@
         "release"
       ],
       "json": "products/electric-shavers.json"
+    },
+    {
+      "slug": "electric-skateboards",
+      "category": "electric-skateboards",
+      "productCount": 8,
+      "pricedCount": 8,
+      "specKeys": [
+        "price_usd",
+        "range_miles",
+        "top_speed_mph",
+        "battery_wh",
+        "motor_power_w",
+        "weight_lbs",
+        "charge_time_hrs",
+        "deck_length_in",
+        "wheel_size_mm",
+        "drive_type",
+        "hill_grade_pct",
+        "max_rider_weight_lbs"
+      ],
+      "json": "products/electric-skateboards.json"
     },
     {
       "slug": "electric-smokers",
@@ -4222,6 +4312,29 @@
       "json": "products/hard-coolers.json"
     },
     {
+      "slug": "heat-pump-dryers",
+      "category": "heat-pump-dryers",
+      "productCount": 7,
+      "pricedCount": 3,
+      "specKeys": [
+        "capacityCuFt",
+        "widthIn",
+        "depthIn",
+        "heightIn",
+        "weightLbs",
+        "volts",
+        "dryingCycles",
+        "energyStarCertified",
+        "combinedEnergyFactor",
+        "estAnnualEnergykWh",
+        "steamRefresh",
+        "wifiConnected",
+        "noiseDb",
+        "ventless"
+      ],
+      "json": "products/heat-pump-dryers.json"
+    },
+    {
       "slug": "hedge-trimmers",
       "category": "hedge-trimmers",
       "productCount": 12,
@@ -4256,6 +4369,45 @@
       "json": "products/high-chairs.json"
     },
     {
+      "slug": "home-energy-monitors",
+      "category": "home-energy-monitors",
+      "productCount": 8,
+      "pricedCount": 8,
+      "specKeys": [
+        "monitoringType",
+        "mainCircuitAmps",
+        "branchCircuitCount",
+        "connectivityProtocol",
+        "solarNetMetering",
+        "localApiSupport",
+        "subscriptionRequired",
+        "appPlatforms",
+        "accuracyPercent",
+        "installationType",
+        "smartHomeIntegrations",
+        "etlUlCertified"
+      ],
+      "json": "products/home-energy-monitors.json"
+    },
+    {
+      "slug": "home-freeze-dryers",
+      "category": "home-freeze-dryers",
+      "productCount": 11,
+      "pricedCount": 11,
+      "specKeys": [
+        "batchCapacityLbsFresh",
+        "trayAreaSqIn",
+        "trayCount",
+        "peakWatts",
+        "pumpType",
+        "condenser",
+        "dimensions",
+        "weightLbs",
+        "msrpUsd"
+      ],
+      "json": "products/home-freeze-dryers.json"
+    },
+    {
       "slug": "home-printers",
       "category": "home-printers",
       "productCount": 13,
@@ -4271,6 +4423,48 @@
         "release"
       ],
       "json": "products/home-printers.json"
+    },
+    {
+      "slug": "home-saunas",
+      "category": "home-saunas",
+      "productCount": 8,
+      "pricedCount": 8,
+      "specKeys": [
+        "heatType",
+        "capacityPersons",
+        "interiorDimensionsInches",
+        "heaterWatts",
+        "maxTempF",
+        "woodSpecies",
+        "emfRating",
+        "redLightTherapy",
+        "appConnectivity",
+        "warrantyYears",
+        "weightLbs",
+        "msrpUSD"
+      ],
+      "json": "products/home-saunas.json"
+    },
+    {
+      "slug": "home-weather-stations",
+      "category": "home-weather-stations",
+      "productCount": 8,
+      "pricedCount": 8,
+      "specKeys": [
+        "sensorCount",
+        "tempAccuracyF",
+        "windSpeedMaxMph",
+        "rainfallGaugeType",
+        "connectivityWifi",
+        "dataUpdateIntervalSec",
+        "displayType",
+        "solarPoweredSensor",
+        "cloudPlatformIntegration",
+        "wirelessRangeFt",
+        "batteryBackup",
+        "uvSolarRadiationSensor"
+      ],
+      "json": "products/home-weather-stations.json"
     },
     {
       "slug": "humidifiers",
@@ -4355,6 +4549,46 @@
         "weight_lb"
       ],
       "json": "products/impact-drivers.json"
+    },
+    {
+      "slug": "induction-ranges",
+      "category": "induction-ranges",
+      "productCount": 10,
+      "pricedCount": 9,
+      "specKeys": [
+        "installationType",
+        "width_in",
+        "ovenCapacity_cuft",
+        "inductionElementCount",
+        "maxElementPower_W",
+        "convectionType",
+        "airFry",
+        "selfClean",
+        "wifiConnected",
+        "msrp_usd"
+      ],
+      "json": "products/induction-ranges.json"
+    },
+    {
+      "slug": "infrared-sauna-blankets",
+      "category": "infrared-sauna-blankets",
+      "productCount": 10,
+      "pricedCount": 10,
+      "specKeys": [
+        "msrpUsd",
+        "infraredType",
+        "maxTempF",
+        "heatUpTimeMin",
+        "wattage",
+        "emfUT",
+        "innerLengthIn",
+        "innerWidthIn",
+        "weightLbs",
+        "heatLevels",
+        "sessionTimerMin",
+        "innerMaterial"
+      ],
+      "json": "products/infrared-sauna-blankets.json"
     },
     {
       "slug": "instant-cameras",
@@ -4691,6 +4925,27 @@
       "json": "products/mesh-wifi-systems.json"
     },
     {
+      "slug": "metal-detectors",
+      "category": "metal-detectors",
+      "productCount": 10,
+      "pricedCount": 10,
+      "specKeys": [
+        "operatingFrequency",
+        "maxDepthInches",
+        "weightLbs",
+        "waterproofRating",
+        "batteryLifeHours",
+        "batteryType",
+        "groundBalance",
+        "displayType",
+        "coilSizeInches",
+        "numSearchModes",
+        "audioOutput",
+        "shaftAdjustable"
+      ],
+      "json": "products/metal-detectors.json"
+    },
+    {
       "slug": "microphones",
       "category": "microphones",
       "productCount": 13,
@@ -4930,6 +5185,44 @@
         "release_year"
       ],
       "json": "products/office-chairs.json"
+    },
+    {
+      "slug": "open-ear-earbuds",
+      "category": "open-ear-earbuds",
+      "productCount": 9,
+      "pricedCount": 9,
+      "specKeys": [
+        "msrp_usd",
+        "fit_style",
+        "driver_size_mm",
+        "battery_buds_hours",
+        "battery_total_hours",
+        "bluetooth_version",
+        "ip_rating",
+        "weight_per_bud_grams",
+        "wireless_charging",
+        "multipoint_connect"
+      ],
+      "json": "products/open-ear-earbuds.json"
+    },
+    {
+      "slug": "oscillating-multi-tools",
+      "category": "oscillating-multi-tools",
+      "productCount": 9,
+      "pricedCount": 8,
+      "specKeys": [
+        "powerSource",
+        "voltage",
+        "motorType",
+        "opmRange",
+        "strokeAngle",
+        "accessoryInterface",
+        "weightLbs",
+        "noLoadSpeed",
+        "variableSpeed",
+        "toolFreeBladeChange"
+      ],
+      "json": "products/oscillating-multi-tools.json"
     },
     {
       "slug": "outdoor-pizza-ovens",
@@ -5242,6 +5535,27 @@
       "json": "products/projectors.json"
     },
     {
+      "slug": "radar-detectors",
+      "category": "radar-detectors",
+      "productCount": 11,
+      "pricedCount": 11,
+      "specKeys": [
+        "radarBands",
+        "lidarDetection",
+        "gpsBuiltIn",
+        "directionalAlerts",
+        "rangeRating",
+        "displayType",
+        "bluetoothApp",
+        "autoLearnFiltering",
+        "mountType",
+        "warrantyYears",
+        "weightOz",
+        "dimensions"
+      ],
+      "json": "products/radar-detectors.json"
+    },
+    {
       "slug": "reciprocating-saws",
       "category": "reciprocating-saws",
       "productCount": 11,
@@ -5447,6 +5761,26 @@
       "json": "products/self-cleaning-litter-boxes.json"
     },
     {
+      "slug": "sewing-machines",
+      "category": "sewing-machines",
+      "productCount": 10,
+      "pricedCount": 10,
+      "specKeys": [
+        "builtInStitches",
+        "maxSpeedSpm",
+        "maxStitchWidthMm",
+        "maxStitchLengthMm",
+        "weightLbs",
+        "presserFeetIncluded",
+        "buttonholeStyles",
+        "bobbinType",
+        "automaticNeedleThreader",
+        "lcdScreen",
+        "freeArm"
+      ],
+      "json": "products/sewing-machines.json"
+    },
+    {
       "slug": "shop-vacuums",
       "category": "shop-vacuums",
       "productCount": 12,
@@ -5517,6 +5851,27 @@
       "json": "products/smart-bike-trainers.json"
     },
     {
+      "slug": "smart-bird-feeders",
+      "category": "smart-bird-feeders",
+      "productCount": 8,
+      "pricedCount": 8,
+      "specKeys": [
+        "cameraResolution",
+        "videoQuality",
+        "aiSpeciesCount",
+        "solarPanelWattage",
+        "batteryCapacityMah",
+        "seedCapacityLiters",
+        "fieldOfViewDegrees",
+        "weatherproofRating",
+        "storageType",
+        "nightVision",
+        "connectivityType",
+        "aiSubscriptionRequired"
+      ],
+      "json": "products/smart-bird-feeders.json"
+    },
+    {
       "slug": "smart-bulbs",
       "category": "smart-bulbs",
       "productCount": 13,
@@ -5532,6 +5887,44 @@
         "release"
       ],
       "json": "products/smart-bulbs.json"
+    },
+    {
+      "slug": "smart-displays",
+      "category": "smart-displays",
+      "productCount": 7,
+      "pricedCount": 7,
+      "specKeys": [
+        "screenSizeIn",
+        "resolutionPx",
+        "cameraMp",
+        "audioWatts",
+        "builtInAssistant",
+        "smartHomeHub",
+        "protocols",
+        "releaseYear"
+      ],
+      "json": "products/smart-displays.json"
+    },
+    {
+      "slug": "smart-fitness-mirrors",
+      "category": "smart-fitness-mirrors",
+      "productCount": 7,
+      "pricedCount": 7,
+      "specKeys": [
+        "screenSizeIn",
+        "resolutionPx",
+        "builtInResistanceLbs",
+        "aiFormTracking",
+        "cameraIncluded",
+        "subscriptionRequiredMonthlyUSD",
+        "mountType",
+        "displayDimensionsHWDIn",
+        "weightLbs",
+        "connectivityWifi",
+        "bluetoothVersion",
+        "audioWatts"
+      ],
+      "json": "products/smart-fitness-mirrors.json"
     },
     {
       "slug": "smart-glasses",
@@ -6005,6 +6398,25 @@
         "release_year"
       ],
       "json": "products/telescopes.json"
+    },
+    {
+      "slug": "thermal-cameras",
+      "category": "thermal-cameras",
+      "productCount": 5,
+      "pricedCount": 5,
+      "specKeys": [
+        "thermalResolution",
+        "visualResolution",
+        "refreshRateHz",
+        "netdMk",
+        "tempRangeCelsius",
+        "fieldOfViewDeg",
+        "displaySizeIn",
+        "batteryLifeHrs",
+        "focusType",
+        "weightGrams"
+      ],
+      "json": "products/thermal-cameras.json"
     },
     {
       "slug": "tire-inflators",
