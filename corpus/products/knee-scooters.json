@@ -1,0 +1,389 @@
+{
+  "category": "knee-scooters",
+  "generatedAt": "2026-08-01",
+  "methodologyNotes": "Seed list corrected/expanded after verification. 'Nova Star Knee Walker' does not exist as a distinct product from NOVA Medical Products (parent site novajoy.com/novamedicalproducts.com show a 'Star' rollator/Star DX line and a separate 'Knee Walker' line, model TKW-12) — corrected to NOVA Knee Walker TKW-12. 'Goodwheel All-Terrain' and 'Wheelable Compact' brands could not be found under any spelling on manufacturer sites, retailer catalogs, or product indexes and were dropped rather than guessed; replaced with two real, verifiable all-terrain/compact competitors buyers actually compare: Zipr Pathfinder Knee Walker (Zip'r Mobility) and KneeRover GO (KneeRover's compact folding line, used in place of the unconfirmed 'KneeRover Economy' naming — KneeRover's own site groups this tier under GO/Ultra). ELENKER Deluxe Knee Walker (YF-9002A/YF-9003C) was researched and specs were located (300 lb capacity, 8 in PVC wheels, dual hand + rear brakes, ~23 lb, ~$80-170 street price) but the manufacturer site (elenkerwalker.com) returned persistent HTTP 429 rate-limiting across many retry attempts and every alternate retailer checked (Walmart, eBay, Tedonic, Amazon, manuals.plus) was unreachable or CAPTCHA-blocked during this research session, so it was left out of the dataset rather than sourced from an unverified secondary synthesis. Drive Medical is represented by three real, distinct SKUs the brand actually sells (DV8 standard steerable model 790, Economy Folding Knee Walker RTL799, and 990X All-Terrain), mirroring how the brand is actually presented to buyers. Specs were pulled directly from manufacturer sites where reachable (tkwcinc.com for Swivelmate, shop.drivemedical.com for the Economy model, vevor.fr for VEVOR — vevor.com auto-redirected to the .fr storefront for this session's network egress, so VEVOR pricing is EUR-only and priceUsd is left null rather than converted/guessed) and from authorized-dealer product pages when the manufacturer's own page blocked automated access (mnmobilitysupply.com, shop.baronmedical.com, cvimedical.com, rehabmart.com, ritewaymed.com, allstarmedicalllc.com, home-med-equip.com, allterrainmedical.com — all independent DME retailers republishing manufacturer spec sheets, not marketplaces with user-generated listings). priceUsd = the retailer/manufacturer's current advertised starting price in USD at access time; sale prices are used where no separate MSRP is published, and noted in priceNote. weight_capacity_lb and weight_lb are manufacturer-stated. wheel_size_in reflects the wheel diameter used in the product's own marketing copy; left null where the only located figures were ambiguous caster-width numbers rather than diameter. all_terrain = true only for models explicitly marketed as all-terrain/off-road (typically 12 in pneumatic or rugged tires), false for standard 7-8 in indoor/outdoor models. Every image is a real product photo pulled directly from the sourced manufacturer or authorized-dealer page (verified byte-for-byte as valid JPEG/WebP after fetch); the 'image' key is omitted entirely (not null) for the 3 products (KneeRover GO, Drive Medical Economy RTL799, Drive Medical 990X) where no usable image URL could be located in the fetched page markup. No Wikimedia Commons image in the 'Knee scooters' category depicts any of the 13 branded products in this dataset (they show a generic/unbranded Essential Medical Supply device and vector icons), so none were used to avoid misattributing a photo to the wrong brand. All sources accessed 2026-08-01. A null beats any guess.",
+  "specKeys": [
+    "weight_capacity_lb",
+    "wheel_size_in",
+    "steerable",
+    "foldable",
+    "knee_pad_adjustable",
+    "brake_type",
+    "all_terrain",
+    "weight_lb"
+  ],
+  "products": [
+    {
+      "slug": "kneerover-steerable",
+      "name": "KneeRover Steerable Knee Scooter",
+      "brand": "KneeRover",
+      "category": "knee-scooters",
+      "releaseDate": null,
+      "priceUsd": 169.99,
+      "priceNote": "Price per mnmobilitysupply.com authorized-dealer listing accessed 2026-08-01; other retailers (Amazon, CSA Medical Supply) list the same model between $164.99 and $189.99.",
+      "specs": {
+        "weight_capacity_lb": 300,
+        "wheel_size_in": 7.5,
+        "steerable": true,
+        "foldable": true,
+        "knee_pad_adjustable": true,
+        "brake_type": "Rear disc brakes with locking handbrake",
+        "all_terrain": false,
+        "weight_lb": 22
+      },
+      "source": {
+        "url": "https://mnmobilitysupply.com/shop/knee-scooters-walkers/kneerover-steerable-knee-scooter/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/kneerover-steerable.jpg?v=1c53f12ffa",
+        "source": "mnmobilitysupply.com",
+        "license": "© KneeRover",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "mnmobilitysupply.com (authorized KneeRover dealer): $169.99, 300 lb capacity, 22 lb device weight, 7.5 in non-marking rubber wheels, knee pad adjustable 17\"-22.5\", handlebar 33\"-43\", rear disc brakes with locking handbrake, thumb-release fold mechanism, detachable basket. kneerover.com (manufacturer) itself could not be fetched directly this session — every request returned HTTP 429 — so the dealer republication of the manufacturer spec sheet was used instead."
+    },
+    {
+      "slug": "kneerover-go",
+      "name": "KneeRover GO Knee Walker",
+      "brand": "KneeRover",
+      "category": "knee-scooters",
+      "releaseDate": null,
+      "priceUsd": 214.95,
+      "priceNote": "Sale price per ezwalkerrollators.com accessed 2026-08-01; listed regular price $309.95.",
+      "specs": {
+        "weight_capacity_lb": 300,
+        "wheel_size_in": 7.5,
+        "steerable": true,
+        "foldable": true,
+        "knee_pad_adjustable": true,
+        "brake_type": "Adjustable rear-drum hand brake",
+        "all_terrain": false,
+        "weight_lb": 20.4
+      },
+      "source": {
+        "url": "https://www.ezwalkerrollators.com/indoor-scooters-wkw-krg",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "ezwalkerrollators.com: model GO (WKW-KRG), $214.95 sale / $309.95 regular, 300 lb capacity, 20.4 lb device weight, 7.5 in wheels, adjustable rear-drum hand brake, unique 2-axis fold mechanism collapsing to ~18x16x14 in for travel/storage. Used in place of the unverifiable 'KneeRover Economy' seed name — KneeRover's own catalog markets this compact tier as 'GO'. No usable product-image URL could be extracted from the fetched page (images load via a dynamic gallery script); image key omitted rather than guessed."
+    },
+    {
+      "slug": "drive-medical-dv8",
+      "name": "Drive Medical DV8 Aluminum Steerable Knee Walker",
+      "brand": "Drive Medical",
+      "category": "knee-scooters",
+      "releaseDate": null,
+      "priceUsd": 284.98,
+      "priceNote": "Price per shop.baronmedical.com (authorized dealer) accessed 2026-08-01; other retailers (Walmart, Lowe's) list similar but not identical current prices for this model, and some resellers advertise a lower ~$129.99-$189.99 for a related 'Dual Pad Steerable Knee Walker' variant under the same DV8 name.",
+      "specs": {
+        "weight_capacity_lb": 300,
+        "wheel_size_in": 8,
+        "steerable": true,
+        "foldable": true,
+        "knee_pad_adjustable": true,
+        "brake_type": "Deluxe dual-braking system",
+        "all_terrain": false,
+        "weight_lb": 19
+      },
+      "source": {
+        "url": "https://shop.baronmedical.com/drive-medical-dv8-steerable-aluminum-knee-walker/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/drive-medical-dv8.jpg?v=77ee21ca21",
+        "source": "shop.baronmedical.com",
+        "license": "© Drive Medical",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "shop.baronmedical.com (authorized Drive Medical dealer): model 790, $284.98, 300 lb weight capacity, 8 in casters, 19 lb device weight, foldable steering column, tool-free height adjustment, deluxe dual-braking system, leg pad with stabilizing channel. drivemedical.com's own product pages redirected to a JS-rendered category shell that would not yield individual specs via fetch, so the authorized-dealer republication was used."
+    },
+    {
+      "slug": "drive-medical-economy-rtl799",
+      "name": "Drive Medical Economy Folding Knee Walker",
+      "brand": "Drive Medical",
+      "category": "knee-scooters",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "Manufacturer product page requires dealer sign-in to view price ('SIGN IN TO VIEW PRICE'); no public retail listing for this exact SKU (RTL799) was reachable this session.",
+      "specs": {
+        "weight_capacity_lb": 350,
+        "wheel_size_in": 8,
+        "steerable": true,
+        "foldable": true,
+        "knee_pad_adjustable": true,
+        "brake_type": "Dual rear on-wheel braking system with push-button parking brake",
+        "all_terrain": false,
+        "weight_lb": 19.5
+      },
+      "source": {
+        "url": "https://shop.drivemedical.com/us/en/products/mobility/walkers/knee-walkers/economy-folding-knee-walker/p/RTL799",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "shop.drivemedical.com (manufacturer, US site): model RTL799, 350 lb weight capacity, 8 in wheels, 19.5 lb device weight, handle height 31.5\"-41\", knee pad height 16.75\"-23.25\", dual rear on-wheel braking with push-button parking brake, foldable, HCPCS E0118. Price gated behind dealer sign-in on the manufacturer's own storefront; the manufacturer's asset-CDN image URL returned HTTP 404, and no working substitute image was found, so the image key is omitted."
+    },
+    {
+      "slug": "drive-medical-990x-all-terrain",
+      "name": "Drive Medical 990X All-Terrain Knee Walker",
+      "brand": "Drive Medical",
+      "category": "knee-scooters",
+      "releaseDate": "2017-11",
+      "priceUsd": null,
+      "priceNote": "No current retail price could be located; multiple retailer pages for this model returned CAPTCHA/403 blocks this session.",
+      "specs": {
+        "weight_capacity_lb": 350,
+        "wheel_size_in": null,
+        "steerable": true,
+        "foldable": true,
+        "knee_pad_adjustable": true,
+        "brake_type": "Locking hand brake lever with heavy-duty disc brake",
+        "all_terrain": true,
+        "weight_lb": null
+      },
+      "source": {
+        "url": "https://www.drivemedical.com/news-article/drive-devilbiss-healthcare-introduces-990x-all-terrain-knee-walker",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "drivemedical.com (manufacturer press release, dated 2017-11-07): model 990X, 350 lb weight capacity, steerable with fold-down steering column, height-adjustable knee platform, locking hand brake with heavy-duty disc brake, marketed for gravel/dirt/grass/mulch/uneven pavement. Wheel size, device weight, and current price are not stated in the only reachable source and were left null rather than estimated; the press release contains only a generic stock-photo placeholder image, not an actual product photo, so the image key is omitted."
+    },
+    {
+      "slug": "swivelmate-pk360",
+      "name": "TKWC Inc Swivelmate Knee Walker",
+      "brand": "TKWC Inc",
+      "category": "knee-scooters",
+      "releaseDate": null,
+      "priceUsd": 599.99,
+      "priceNote": "Manufacturer MSRP per tkwcinc.com accessed 2026-08-01.",
+      "specs": {
+        "weight_capacity_lb": 500,
+        "wheel_size_in": 7,
+        "steerable": true,
+        "foldable": true,
+        "knee_pad_adjustable": true,
+        "brake_type": "Disc brake with dual-sided hand brakes and parking brakes",
+        "all_terrain": false,
+        "weight_lb": 24
+      },
+      "source": {
+        "url": "https://www.tkwcinc.com/product/Swivelmate-Knee-Walker",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/swivelmate-pk360.jpg?v=8d99a89d66",
+        "source": "tkwcinc.com",
+        "license": "© TKWC Inc",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "tkwcinc.com (manufacturer): model PK360, $599.99 MSRP, 500 lb weight capacity — highest in this dataset, 24 lb device weight, 7 in wheels, patented BeltDrive steering with 90-degree turning radius, disc brake plus dual-sided hand brakes and parking brakes, thick padded knee rest fits users 4'8\"-6'8\", folds for storage/transport."
+    },
+    {
+      "slug": "nova-knee-walker-tkw-12",
+      "name": "NOVA Knee Walker",
+      "brand": "NOVA Medical Products",
+      "category": "knee-scooters",
+      "releaseDate": null,
+      "priceUsd": 379.95,
+      "priceNote": "Price per cvimedical.com accessed 2026-08-01; other dealers (hmemedicalshop.com, mobilityonwheels.com) list $399.95 MSRP for the same TKW-12 model.",
+      "specs": {
+        "weight_capacity_lb": 300,
+        "wheel_size_in": 8,
+        "steerable": true,
+        "foldable": true,
+        "knee_pad_adjustable": null,
+        "brake_type": "Patented locking hand brakes",
+        "all_terrain": false,
+        "weight_lb": 26.5
+      },
+      "source": {
+        "url": "https://cvimedical.com/knee-walker/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/nova-knee-walker-tkw-12.jpg?v=1acd6b3926",
+        "source": "cvimedical.com",
+        "license": "© NOVA Medical Products",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "cvimedical.com (authorized NOVA dealer republishing manufacturer spec sheet): model TKW-12, 300 lb weight capacity, 8 in rugged wheels, 26.5 lb device weight, patented locking hand brakes, steering column folds for transport/storage, contoured padded knee platform adjusts for left/right leg. Seed name 'Nova Star Knee Walker' does not correspond to any real NOVA product — NOVA's 'Star'-branded line (Star DX, Star Rollator) is rollators, not knee walkers — corrected to the brand's actual Knee Walker line (TKW-12, with heavier-duty TKW-13/TKW-14 tall variants also existing but not included to avoid near-duplicate SKUs of the same base design)."
+    },
+    {
+      "slug": "medline-atknee-all-terrain",
+      "name": "Medline All Terrain Knee Walker",
+      "brand": "Medline Industries",
+      "category": "knee-scooters",
+      "releaseDate": null,
+      "priceUsd": 281.71,
+      "priceNote": "Sale price per rehabmart.com accessed 2026-08-01; listed regular price $402.85.",
+      "specs": {
+        "weight_capacity_lb": 350,
+        "wheel_size_in": 12,
+        "steerable": true,
+        "foldable": null,
+        "knee_pad_adjustable": true,
+        "brake_type": null,
+        "all_terrain": true,
+        "weight_lb": 20
+      },
+      "source": {
+        "url": "https://www.rehabmart.com/product/medline-all-terrain-knee-walker-scooter-50483.html",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/medline-atknee-all-terrain.jpg?v=b3e6921127",
+        "source": "rehabmart.com",
+        "license": "© Medline Industries",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "rehabmart.com: model ATKNEE (SKU ML-ATKNEE), $281.71 sale / $402.85 regular, 350 lb weight capacity, 20 lb device weight, knee pad height-adjustable 20\"-26\", handle height 36.5\"-42.5\", 4 all-terrain rubber wheels for indoor/outdoor use. Wheel size taken as 12 in per the model's Amazon listing title ('12-Inch Wheels'); the rehabmart spec table itself gave ambiguous front/rear caster-width figures (1.13 in / 1.77 in) rather than a clear diameter. Brake type and foldability were not stated on the fetched page and are left null."
+    },
+    {
+      "slug": "vive-health-knee-walker-mob1007",
+      "name": "Vive Health Knee Walker",
+      "brand": "Vive Health",
+      "category": "knee-scooters",
+      "releaseDate": null,
+      "priceUsd": 164.99,
+      "priceNote": "Sale price per ritewaymed.com accessed 2026-08-01; listed regular price $249.99.",
+      "specs": {
+        "weight_capacity_lb": 300,
+        "wheel_size_in": 8,
+        "steerable": true,
+        "foldable": true,
+        "knee_pad_adjustable": true,
+        "brake_type": "Dual-wheel braking system",
+        "all_terrain": false,
+        "weight_lb": 25.5
+      },
+      "source": {
+        "url": "https://ritewaymed.com/product/vive-health-knee-walker/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/vive-health-knee-walker-mob1007.jpg?v=7005369eba",
+        "source": "ritewaymed.com",
+        "license": "© Vive Health",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "ritewaymed.com (authorized Vive Health dealer): model MOB1007BLK/PNK, $164.99 sale / $249.99 regular, 300 lb weight capacity, 25.5 lb device weight, 8 in polyurethane wheels, dual-wheel braking system, knee pad height 18\"-23\", handlebar 33\"-41\", fits 5'3\"-6'8\", two fold points plus removable platform for transport. This is Vive's standard indoor/outdoor tier, distinct from the All Terrain MOB1019 model listed separately in this dataset."
+    },
+    {
+      "slug": "vive-health-all-terrain-mob1019",
+      "name": "Vive Health All Terrain Knee Walker",
+      "brand": "Vive Health",
+      "category": "knee-scooters",
+      "releaseDate": null,
+      "priceUsd": 279.99,
+      "priceNote": "Sale price per allstarmedicalllc.com accessed 2026-08-01; listed original price $315.00.",
+      "specs": {
+        "weight_capacity_lb": 300,
+        "wheel_size_in": 12,
+        "steerable": true,
+        "foldable": null,
+        "knee_pad_adjustable": true,
+        "brake_type": "Hand brakes",
+        "all_terrain": true,
+        "weight_lb": 25
+      },
+      "source": {
+        "url": "https://www.allstarmedicalllc.com/product/all-terrain-knee-walker",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/vive-health-all-terrain-mob1019.jpg?v=209be263f7",
+        "source": "allstarmedicalllc.com",
+        "license": "© Vive Health",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "allstarmedicalllc.com: model MOB1019BLK, $279.99 sale / $315.00 original, 300 lb weight capacity, 25 lb device weight, 12 in wheels for gravel/dirt/grass, knee pad height 20\"-26\", steering handle height 38\"-46\", removable storage bag, ergonomic contoured knee pad."
+    },
+    {
+      "slug": "roscoe-deluxe-ros-ks",
+      "name": "Roscoe Deluxe Knee Walker Scooter",
+      "brand": "Roscoe Medical",
+      "category": "knee-scooters",
+      "releaseDate": null,
+      "priceUsd": 219.99,
+      "priceNote": "Price per home-med-equip.com accessed 2026-08-01; other Roscoe knee scooter SKUs (Economy grade, 250 lb capacity) sell for as little as $113.04.",
+      "specs": {
+        "weight_capacity_lb": 350,
+        "wheel_size_in": 8,
+        "steerable": true,
+        "foldable": true,
+        "knee_pad_adjustable": true,
+        "brake_type": "Shielded rear drum braking mechanism, dual rear braking",
+        "all_terrain": false,
+        "weight_lb": 22.8
+      },
+      "source": {
+        "url": "https://www.home-med-equip.com/catalog/roscoe-deluxe-knee-walker-scooter-ros-ks.html",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/roscoe-deluxe-ros-ks.jpg?v=959e14b242",
+        "source": "home-med-equip.com",
+        "license": "© Roscoe Medical",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "home-med-equip.com (authorized Roscoe Medical/Compass Health Brands dealer): model ROS-KS, $219.99, 350 lb weight capacity, 22.8 lb device weight, 8 in precision-bearing wheels, knee pad adjustable 17.5\"-22\", handle 31\"-41\" for users 4'11\"-6'6\", shielded rear drum dual braking, removable basket, limited lifetime frame warranty."
+    },
+    {
+      "slug": "zipr-pathfinder",
+      "name": "Zip'r Mobility Zipr Pathfinder Knee Walker",
+      "brand": "Zip'r Mobility",
+      "category": "knee-scooters",
+      "releaseDate": null,
+      "priceUsd": 141,
+      "priceNote": "Price per allterrainmedical.com accessed 2026-08-01.",
+      "specs": {
+        "weight_capacity_lb": 300,
+        "wheel_size_in": 8,
+        "steerable": true,
+        "foldable": true,
+        "knee_pad_adjustable": true,
+        "brake_type": "Dual rear on-wheel brakes with adjustable locking handbrake",
+        "all_terrain": false,
+        "weight_lb": 23
+      },
+      "source": {
+        "url": "https://www.allterrainmedical.com/zipr-mobility-zipr-pathfinder-knee-walker/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/zipr-pathfinder.jpg?v=fe3b791307",
+        "source": "allterrainmedical.com",
+        "license": "© Zip'r Mobility",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "allterrainmedical.com (authorized Zip'r Mobility dealer): model ZIP25RED, $141.00, 300 lb weight capacity, 23 lb device weight, 8 in flat-free smooth-glide tires (explicitly not all-terrain), height-adjustable knee rest, dual rear on-wheel brakes with adjustable locking handbrake, quick-release fold. Used as the Zip'r Mobility representative product in place of the seed's 'Goodwheel All-Terrain,' a brand name that could not be located anywhere in manufacturer, retailer, or product-index sources checked; zipr.com's own product pages returned persistent HTTP 429 rate-limiting throughout this session."
+    },
+    {
+      "slug": "vevor-aluminum-steerable-knee-walker",
+      "name": "VEVOR Aluminum Steerable Knee Walker",
+      "brand": "VEVOR",
+      "category": "knee-scooters",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "Only a EUR list price (€199.90) could be confirmed, via vevor.fr — vevor.com auto-redirected to the French storefront for this session's network egress and a US-priced page could not be reached, so priceUsd is left null rather than converted or guessed. VEVOR also sells this model on Amazon US and its own US site under normal circumstances.",
+      "specs": {
+        "weight_capacity_lb": 350,
+        "wheel_size_in": 12,
+        "steerable": true,
+        "foldable": true,
+        "knee_pad_adjustable": true,
+        "brake_type": "Dual rear hand brakes",
+        "all_terrain": true,
+        "weight_lb": 27.1
+      },
+      "source": {
+        "url": "https://www.vevor.fr/walkers-rollators-c_12624/vevor-knee-scooter-aluminum-steerable-knee-walker-folding-recovery-scooter-350lb-p_010162051303",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/vevor-aluminum-steerable-knee-walker.webp?v=2794424d6d",
+        "source": "vevor.com (product-asset CDN)",
+        "license": "© VEVOR",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "vevor.fr (manufacturer, French storefront — vevor.com redirected here automatically): model HFK-9277KD, 350 lb / 160 kg weight capacity, 12 in air-filled pneumatic wheels with textured tread, aluminum alloy frame, 27.1 lb device weight, knee pad height 18.9-23.8 in, handlebar 36.4-44.7 in, dual rear hand brakes, foldable/detachable design, €199.90 list price (no confirmed USD price)."
+    }
+  ]
+}

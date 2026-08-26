@@ -1,0 +1,413 @@
+{
+  "category": "forehead-thermometers",
+  "generatedAt": "2026-08-09T00:00:00.000Z",
+  "methodologyNotes": "Roster covers twelve non-contact and dual-mode (forehead + ear) infrared thermometers spanning drugstore-tier (Chooseen, Aluratek, Berrcom) to clinical/hospital-grade (Amplim W3A) and connected/smart (Withings Thermo) devices, verified 2026-08-09 against manufacturer product pages (Braun/Kaz, iHealth Labs, Withings, iProven, Berrcom, Femometer, Metene, Aluratek, Innovo Medical, Amplim, Elepho, Chooseen/goodontop) and corroborated by major retailers (Target, Best Buy, Amazon, Walmart, eBay, gosupps.com); one adversarial correction was made to the seed list — \"Vava VA-IH006\" is not a thermometer at all (it is VAVA's baby-monitor parent-unit model, confirmed via its own ManualsLib manual, which documents an IPS display, 2.4GHz camera pairing, and pan-tilt camera specs with zero temperature-measurement hardware); VAVA's only thermometer, the VA-IH008, is a wearable continuous armpit patch, not an IR forehead/ear device, so it does not fit this category either — the seed was replaced with the Aluratek ADIT01F non-contact infrared forehead thermometer, a real, actively sold product matching the category's spec set. A second near-miss was corrected quietly: the seed \"Metene TH-05\" does not correspond to any current Metene SKU findable on metene.com, Amazon, or Walmart; the closest matching, currently-sold Metene forehead+ear model (product page titled for fast reading, fever alarm, and memory recall) carries no visible on-page model code, so it is listed under Metene's own product title rather than an invented SKU. Accuracy, measuring-distance, and stored-reading-memory fields are left null wherever no fetched manufacturer or retailer page stated a number, rather than assumed by analogy to similarly designed competitors (e.g. iHealth PT3's accuracy tolerance and Amplim W3A's measuring distance are not published on any page reviewed). Innovo's INV-EF100 is now marked \"Sold Out\" directly on innovo-medical.com and third-party Amazon/Walmart listing prices for it varied too widely ($20.96-$49.99 across resellers with no single canonical figure) to report a non-guessed priceUsd, so priceUsd is null with the range noted in priceNote. accessedAt 2026-08-09 throughout.",
+  "specKeys": [
+    "measurement_type",
+    "accuracy",
+    "measurement_time_sec",
+    "stored_readings_memory",
+    "fever_alarm",
+    "measuring_distance",
+    "cf_switch",
+    "battery"
+  ],
+  "products": [
+    {
+      "slug": "braun-bnt400",
+      "name": "Braun No Touch + Forehead Thermometer with Age Precision BNT400",
+      "brand": "Braun",
+      "category": "forehead-thermometers",
+      "releaseDate": null,
+      "priceUsd": 43.49,
+      "priceNote": "Current Target retail (model BNT400US); Braun does not display a fixed list price on its own healthcare site, and street prices seen elsewhere range roughly $30-$77 by retailer/condition",
+      "specs": {
+        "measurement_type": "IR forehead (no-touch, up to 1 in.) or touch mode; also reads food/bath temperature",
+        "accuracy": "±0.4°F (±0.2°C)",
+        "measurement_time_sec": 2,
+        "stored_readings_memory": null,
+        "fever_alarm": true,
+        "measuring_distance": "up to 1 in. (2.5 cm), no-touch mode",
+        "cf_switch": true,
+        "battery": "2x AAA (included)"
+      },
+      "source": {
+        "url": "https://www.target.com/p/braun-no-touch-thermometer/-/A-80234591",
+        "accessedAt": "2026-08-09"
+      },
+      "corroboration": {
+        "url": "https://ap.braunhealthcare.com/product/no-touch-forehead-thermometer-bnt400/",
+        "accessedAt": "2026-08-09"
+      },
+      "provenance": "Target's listing (model BNT400US) confirms ±0.4°F/±0.2°C accuracy, <2 second reading, up to 1 in. no-touch distance, color-coded (green/yellow/red) fever display with audible alert, Age Precision settings for three age bands, and a physical °F/°C switch inside the battery compartment. Braun's own regional healthcare site corroborates the 3-in-1 (forehead/food/bath) design and 2-year guarantee. No stored-reading memory count is published on any fetched source, so it is left null. No verifiable manufacturer-hosted image URL was captured during this pass, so the image field is omitted.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/braun-bnt400.jpg?v=216ef0db46",
+        "source": "www.target.com",
+        "license": "© Braun",
+        "accessedAt": "2026-08-09"
+      }
+    },
+    {
+      "slug": "ihealth-pt3",
+      "name": "iHealth No-Touch Forehead Thermometer PT3",
+      "brand": "iHealth",
+      "category": "forehead-thermometers",
+      "releaseDate": null,
+      "priceUsd": 30.95,
+      "priceNote": "Current iHealth Labs direct-store sale price (list $32.98); Amazon/Walmart list similarly in the high-$20s to low-$30s range",
+      "specs": {
+        "measurement_type": "IR forehead, no-touch",
+        "accuracy": null,
+        "measurement_time_sec": 1,
+        "stored_readings_memory": null,
+        "fever_alarm": false,
+        "measuring_distance": "1.18 in. (3 cm) from forehead center",
+        "cf_switch": null,
+        "battery": "2x AAA (included)"
+      },
+      "source": {
+        "url": "https://ihealthlabs.com/products/no-touch-infrared-forehead-thermometer",
+        "accessedAt": "2026-08-09"
+      },
+      "corroboration": {
+        "url": "https://www.amazon.com/iHealth-Thermometer-Non-Contact-Ultra-Sensitive-Vibration/dp/B0C8JGQSGN",
+        "accessedAt": "2026-08-09"
+      },
+      "provenance": "iHealth's own product page confirms 1-second no-touch readings from 1.18 in., an IR sensor sampling 100+ data points/sec plus distance and ambient-temperature sensors, a large LED display, and silent vibration feedback in place of a beep (won an iF Design Award). No numeric accuracy tolerance, stored-reading memory count, or C/F-switch mechanism is published on iHealth's own page or the corroborating Amazon listing, so those three fields are left null rather than assumed. Because the PT3 gives haptic feedback instead of a color-coded or audible fever alert, fever_alarm is recorded false.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/ihealth-pt3.png?v=28ee30ed44",
+        "source": "ihealthlabs.com",
+        "license": "© iHealth",
+        "accessedAt": "2026-08-09"
+      }
+    },
+    {
+      "slug": "withings-thermo",
+      "name": "Withings Thermo Smart Temporal Thermometer",
+      "brand": "Withings",
+      "category": "forehead-thermometers",
+      "releaseDate": null,
+      "priceUsd": 99.95,
+      "priceNote": "Original launch MSRP (Best Buy/Amazon listing history); the product is largely phased out in favor of Withings' newer BeamO multi-sensor device, so current street availability and pricing are inconsistent across retailers",
+      "specs": {
+        "measurement_type": "IR temporal artery scan (forehead), no-touch",
+        "accuracy": null,
+        "measurement_time_sec": 2,
+        "stored_readings_memory": "unlimited (synced via Wi-Fi to the Health Mate app, up to 8 user profiles)",
+        "fever_alarm": null,
+        "measuring_distance": "up to 1 cm (0.4 in.) from forehead",
+        "cf_switch": true,
+        "battery": "2x AAA (up to 2 years)"
+      },
+      "source": {
+        "url": "https://www.bestbuy.com/site/withings-thermo-smart-temporal-thermometer/5400600.p?skuId=5400600",
+        "accessedAt": "2026-08-09"
+      },
+      "corroboration": {
+        "url": "https://www.amazon.com/Withings-Nokia-Thermo-Temporal-Thermometer/dp/B072LQFK3R",
+        "accessedAt": "2026-08-09"
+      },
+      "provenance": "Withings/retailer listing copy confirms 16 internal infrared sensors taking 4,000+ measurements per scan, a 2-second no-touch reading from up to 1 cm, Wi-Fi sync of every reading (plus health advice) to the Health Mate app for up to 8 user profiles, and roughly 2 years of runtime on 2 AAA batteries. No numeric clinical accuracy tolerance or a device-side (non-app) fever-alarm behavior is documented on the fetched pages, so both are left null. C/F unit selection is handled in the companion app rather than a physical switch, recorded true. This SKU (5400600 / SCT01) is Withings' original Thermo; the company's current flagship contactless thermometer is the newer multi-sensor BeamO, not covered here since the seed specifically named Thermo."
+    },
+    {
+      "slug": "iproven-dmt-489",
+      "name": "iProven DMT-489 Digital Ear and Forehead Thermometer",
+      "brand": "iProven",
+      "category": "forehead-thermometers",
+      "releaseDate": null,
+      "priceUsd": 29.97,
+      "priceNote": "Current iproven.com sale price",
+      "specs": {
+        "measurement_type": "IR ear (tympanic) or forehead (temporal), dual mode with contact",
+        "accuracy": null,
+        "measurement_time_sec": 1,
+        "stored_readings_memory": 20,
+        "fever_alarm": true,
+        "measuring_distance": null,
+        "cf_switch": true,
+        "battery": "2x AAA (rated ~3,000 measurements)"
+      },
+      "source": {
+        "url": "https://iproven.com/products/ear-temporal-thermometer-dmt-489",
+        "accessedAt": "2026-08-09"
+      },
+      "corroboration": {
+        "url": "https://iproven.com/pages/manual-for-iproven-dmt-489-series",
+        "accessedAt": "2026-08-09"
+      },
+      "provenance": "iProven's own product page confirms a two-button, dual-mode (ear + forehead) design with a 1-2 second reading, 20-reading memory recall, a backlit display, and a red-backlight-plus-beep fever alarm for readings over 99.5°F/37.5°C. Ear mode is recommended for ages 6 months+, forehead mode for younger infants. No numeric accuracy tolerance or a stated no-touch measuring distance is published (the forehead mode is contact-based per the manual), so both are left null rather than assumed from similar dual-mode devices.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/iproven-dmt-489.jpg?v=30521a5334",
+        "source": "iproven.com",
+        "license": "© iProven",
+        "accessedAt": "2026-08-09"
+      }
+    },
+    {
+      "slug": "berrcom-jxb-178",
+      "name": "Berrcom Non-Contact Infrared Forehead Thermometer JXB-178",
+      "brand": "Berrcom",
+      "category": "forehead-thermometers",
+      "releaseDate": null,
+      "priceUsd": 19.99,
+      "priceNote": "Current berrcomonline.com sale price (list $21.99)",
+      "specs": {
+        "measurement_type": "IR forehead, no-touch (also has surface/object and room modes)",
+        "accuracy": "±0.2°C (±0.4°F)",
+        "measurement_time_sec": 1,
+        "stored_readings_memory": 32,
+        "fever_alarm": true,
+        "measuring_distance": "1.2-2 in. (3-5 cm)",
+        "cf_switch": true,
+        "battery": "2x AA"
+      },
+      "source": {
+        "url": "https://www.berrcomonline.com/products/forehead-thermometer-jxb-178",
+        "accessedAt": "2026-08-09"
+      },
+      "corroboration": {
+        "url": "https://www.bhphotovideo.com/c/product/1560921-REG/berrcom_jxb_178_non_contact_infrared_thermometer.html",
+        "accessedAt": "2026-08-09"
+      },
+      "provenance": "Berrcom's own product page confirms ±0.2°C/±0.4°F accuracy, 1-second readings from 3-5 cm, 32-reading memory recall, and an audible+red-backlight fever alarm above 38°C/100.4°F, matching the independently hosted user-guide datasheet found on manuals.plus/B&H. Device also supports SURFACE (0-60°C) and ROOM (10-40°C) modes and auto-off after 30 seconds. Body/surface/room mode ranges corroborated by the FDA-facing NCHA datasheet PDF.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/berrcom-jxb-178.jpg?v=55a4ff43a5",
+        "source": "www.berrcomonline.com",
+        "license": "© Berrcom",
+        "accessedAt": "2026-08-09"
+      }
+    },
+    {
+      "slug": "femometer-forehead-thermometer",
+      "name": "Femometer Forehead Thermometer FI016",
+      "brand": "Femometer",
+      "category": "forehead-thermometers",
+      "releaseDate": null,
+      "priceUsd": 34.99,
+      "priceNote": "Current femometer.com direct price",
+      "specs": {
+        "measurement_type": "IR forehead, no-touch",
+        "accuracy": "±0.4°F (±0.2°C)",
+        "measurement_time_sec": 1,
+        "stored_readings_memory": 10,
+        "fever_alarm": true,
+        "measuring_distance": "1-3 cm from forehead",
+        "cf_switch": true,
+        "battery": "2x AAA"
+      },
+      "source": {
+        "url": "https://www.femometer.com/Products/Femometer-Forehead-Thermometer",
+        "accessedAt": "2026-08-09"
+      },
+      "corroboration": {
+        "url": "https://device.report/manual/16908624",
+        "accessedAt": "2026-08-09"
+      },
+      "provenance": "Femometer's own product page confirms ±0.4°F/±0.2°C accuracy, 1-second reading from 1-3 cm, a three-color (green/yellow/red) backlit fever display, and a °C/°F toggle with 0.1° resolution. Femometer's site does not display an on-page alphanumeric SKU for this single-variant listing (the FI016 model code from the seed list matches the same product family sold under this name on Amazon), so the entry is kept under the seed model code with the manufacturer's own listing as the primary source. Stored-reading memory (10) is drawn from Femometer's general forehead-thermometer product literature, which was consistent across the fetched page and independently hosted manuals for this product family."
+    },
+    {
+      "slug": "metene-forehead-ear-thermometer",
+      "name": "Metene Forehead and Ear Thermometer (Fast Reading, Fever Alarm, Memory Recall)",
+      "brand": "Metene",
+      "category": "forehead-thermometers",
+      "releaseDate": null,
+      "priceUsd": 28.99,
+      "priceNote": "Current metene.com direct price; product shown as out of stock at time of access, so this is the last-listed price rather than confirmed live availability",
+      "specs": {
+        "measurement_type": "IR forehead or ear (tympanic), dual mode",
+        "accuracy": "±0.4°F",
+        "measurement_time_sec": 1,
+        "stored_readings_memory": 20,
+        "fever_alarm": true,
+        "measuring_distance": null,
+        "cf_switch": true,
+        "battery": "2x AAA"
+      },
+      "source": {
+        "url": "https://metene.com/products/metene-forehead-and-ear-thermometer-for-baby-fast-reading-with-fever-alarm-memories-recall",
+        "accessedAt": "2026-08-09"
+      },
+      "corroboration": {
+        "url": "https://www.walmart.com/ip/Metene-Forehead-and-Ear-Thermometer-for-Baby-Fast-Reading-with-Fever-Alarm-Memories-Recall/434107682",
+        "accessedAt": "2026-08-09"
+      },
+      "provenance": "CORRECTED FROM SEED: the seed model code \"Metene TH-05\" does not match any SKU findable on metene.com, Amazon, or Walmart listings for the brand (a related no-touch model on metene.com carries the code JPD-FR401, but its product page lacks the fever-alarm and memory-recall specs the category calls for). The entry was instead built from Metene's own currently listed forehead-and-ear model with the fullest matching spec set, confirmed identically on metene.com and Walmart: ±0.4°F precision via dual-chip measurement, 1-second reading, 20-reading memory recall, and a 7-beep (~50dB) fever alarm switchable between °C/°F via a dedicated Ear-mode button. No no-touch measuring distance is published (forehead mode on this model is contact-based per site copy), so that field is left null.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/metene-forehead-ear-thermometer.jpg?v=0446a28599",
+        "source": "metene.com",
+        "license": "© Metene",
+        "accessedAt": "2026-08-09"
+      }
+    },
+    {
+      "slug": "aluratek-adit01f",
+      "name": "Aluratek Non-Contact Digital Infrared Forehead Thermometer ADIT01F",
+      "brand": "Aluratek",
+      "category": "forehead-thermometers",
+      "releaseDate": null,
+      "priceUsd": 59.99,
+      "priceNote": "Aluratek list price (aluratek.com), frequently discounted to around $9.99-$20 at retail",
+      "specs": {
+        "measurement_type": "IR forehead, no-touch (also has object/surface mode)",
+        "accuracy": "±0.2°C (±0.4°F)",
+        "measurement_time_sec": 2,
+        "stored_readings_memory": 10,
+        "fever_alarm": true,
+        "measuring_distance": "2-4 in. (5-8 cm)",
+        "cf_switch": true,
+        "battery": "2x AAA"
+      },
+      "source": {
+        "url": "https://aluratek.com/products/non-contact-digital-infrared-forehead-thermometer",
+        "accessedAt": "2026-08-09"
+      },
+      "corroboration": {
+        "url": "https://www.amazon.com/Infrared-Forehead-Thermometer-Non-Contact-Accurate/dp/B088TLH2GK",
+        "accessedAt": "2026-08-09"
+      },
+      "provenance": "SUBSTITUTED FOR SEED: the seed product \"Vava VA-IH006\" is not a thermometer — its own ManualsLib-hosted manual documents it as VAVA's baby-monitor parent-unit (IPS display, 2.4GHz camera link, pan/tilt camera control), with zero temperature-sensing hardware. VAVA's actual thermometer product, the VA-IH008, is a wearable continuous-monitoring armpit patch (contact, not IR forehead/ear), which does not fit this category's IR-forehead/ear spec set either. Replaced with the Aluratek ADIT01F, a real, currently sold non-contact IR forehead thermometer: Aluratek's own page confirms ±0.2°C accuracy, a 2-second reading from 2-4 in., 10-reading memory, a green/yellow/red color-coded fever display, a 93.2-109.4°F (34-43°C) body-mode range, and FDA Class II clearance, corroborated by the Amazon listing.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/aluratek-adit01f.jpg?v=697bdd8236",
+        "source": "aluratek.com",
+        "license": "© Aluratek",
+        "accessedAt": "2026-08-09"
+      }
+    },
+    {
+      "slug": "innovo-inv-ef100",
+      "name": "Innovo Medical Forehead and Ear Thermometer INV-EF100 (2020 Upgraded)",
+      "brand": "Innovo Medical",
+      "category": "forehead-thermometers",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "Currently listed as Sold Out on innovo-medical.com with no price shown; third-party Amazon/Walmart resellers show inconsistent prices spanning roughly $20.96-$49.99 across sibling SKUs (FR201, 2017 Model, EF100), so no single figure could be confirmed without guessing",
+      "specs": {
+        "measurement_type": "IR ear (tympanic) or forehead (temporal), dual mode",
+        "accuracy": null,
+        "measurement_time_sec": null,
+        "stored_readings_memory": 20,
+        "fever_alarm": true,
+        "measuring_distance": null,
+        "cf_switch": true,
+        "battery": "2x AAA"
+      },
+      "source": {
+        "url": "https://innovo-medical.com/products/innovo-medical-thermometer",
+        "accessedAt": "2026-08-09"
+      },
+      "corroboration": {
+        "url": "https://www.amazon.com/Innovo-Medical-Forehead-Ear-Thermometer/dp/B07VP66N4N",
+        "accessedAt": "2026-08-09"
+      },
+      "provenance": "Innovo's own product page confirms the dual-mode Head/Ear button design, 20-reading memory recall, switchable °F/°C display, and a quiet (non-disturbing) audible fever alert; CE and FDA clearance stated on both manufacturer and Amazon copy. No numeric accuracy tolerance, reading time, or no-touch measuring distance is published on any fetched source (ear mode is contact-based), so those fields are left null. Price is null per the priceNote rather than picking an arbitrary figure from the wide reseller spread.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/innovo-inv-ef100.png?v=57de6819ee",
+        "source": "innovo-medical.com",
+        "license": "© Innovo Medical",
+        "accessedAt": "2026-08-09"
+      }
+    },
+    {
+      "slug": "amplim-w3a",
+      "name": "Amplim Hospital Medical Grade Non-Contact Forehead Thermometer W3A",
+      "brand": "Amplim",
+      "category": "forehead-thermometers",
+      "releaseDate": null,
+      "priceUsd": 54.99,
+      "priceNote": "Special/sale price at gosupps.com (regular list $64.99); other retailers (Amazon, eBay) list single units around $50-$70",
+      "specs": {
+        "measurement_type": "IR forehead, no-touch (also has object/surface/liquid mode)",
+        "accuracy": null,
+        "measurement_time_sec": 1,
+        "stored_readings_memory": 32,
+        "fever_alarm": true,
+        "measuring_distance": null,
+        "cf_switch": true,
+        "battery": "2x AAA (included)"
+      },
+      "source": {
+        "url": "https://www.gosupps.com/amplim-hospital-medical-grade-non-contact-digital-clinical-forehead-thermometer-for-adults-kids-toddlers-infants-and-babies-fsa-hsa-w3a-white.html",
+        "accessedAt": "2026-08-09"
+      },
+      "corroboration": {
+        "url": "https://www.amazon.com/Hospital-Thermometer-Amplim-Temperature-Termometro/dp/B077ZTJWVT",
+        "accessedAt": "2026-08-09"
+      },
+      "provenance": "Gosupps' listing (model W3A) confirms a color-coded (green normal / red elevated) large LCD, an audible fever alarm above 100.4°F, and 32-reading memory; the general Amazon Amplim listing corroborates 1-second no-contact readings and FSA/HSA eligibility. No numeric accuracy tolerance or a stated no-touch measuring distance is published on either fetched page, so both are left null rather than assumed from Amplim's other SKUs (some Amplim models state 60-reading memory or additional object-mode ranges not confirmed for W3A specifically).",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/amplim-w3a.jpg?v=4654cb54de",
+        "source": "www.gosupps.com",
+        "license": "© Amplim",
+        "accessedAt": "2026-08-09"
+      }
+    },
+    {
+      "slug": "elepho-etherm-v2",
+      "name": "Elepho eTherm V2 Non-Contact Ear and Forehead Thermometer",
+      "brand": "Elepho",
+      "category": "forehead-thermometers",
+      "releaseDate": null,
+      "priceUsd": 27.95,
+      "priceNote": "Current elepho.com direct price",
+      "specs": {
+        "measurement_type": "IR forehead or ear, no-touch dual mode",
+        "accuracy": "±0.4°F (±0.2°C)",
+        "measurement_time_sec": 1,
+        "stored_readings_memory": 32,
+        "fever_alarm": null,
+        "measuring_distance": null,
+        "cf_switch": true,
+        "battery": "2x AAA"
+      },
+      "source": {
+        "url": "https://elepho.com/products/etherm",
+        "accessedAt": "2026-08-09"
+      },
+      "corroboration": {
+        "url": "https://www.amazon.com/Elepho-Therm/dp/B09T779DJF",
+        "accessedAt": "2026-08-09"
+      },
+      "provenance": "Elepho's own product page for the eTherm V2 confirms ±0.4°F (0.2°C) accuracy, 1-second readings, 32-reading memory, switchable °F/°C units, and no-touch operation for both forehead and ear measurement, backed by Elepho's 12-month warranty. No-touch measuring distance is not stated on the fetched page. A red on-screen fever indicator is documented for Elepho's related eTherm Pro model but not explicitly confirmed for V2 on the page fetched, so fever_alarm is left null rather than assumed identical across the two SKUs.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/elepho-etherm-v2.jpg?v=401e57bd13",
+        "source": "elepho.com",
+        "license": "© Elepho",
+        "accessedAt": "2026-08-09"
+      }
+    },
+    {
+      "slug": "chooseen-forehead-ear-thermometer",
+      "name": "Chooseen Digital Forehead and Ear Thermometer (2020 Upgraded)",
+      "brand": "Chooseen",
+      "category": "forehead-thermometers",
+      "releaseDate": null,
+      "priceUsd": 31.12,
+      "priceNote": "Representative current retail price seen on eBay; a separate listing showed $9.99, likely a different variant/bundle or a promotional clearance price rather than the standard price",
+      "specs": {
+        "measurement_type": "IR forehead or ear (tympanic), dual mode; also reads room/object/liquid temperature",
+        "accuracy": null,
+        "measurement_time_sec": 1,
+        "stored_readings_memory": 35,
+        "fever_alarm": true,
+        "measuring_distance": null,
+        "cf_switch": true,
+        "battery": "2x AAA"
+      },
+      "source": {
+        "url": "https://www.ebay.com/itm/133540148729",
+        "accessedAt": "2026-08-09"
+      },
+      "corroboration": {
+        "url": "https://www.goodontop.com/thermometers/chooseen-digital-forehead-and-ear-thermometer-by-chooseen.html",
+        "accessedAt": "2026-08-09"
+      },
+      "provenance": "eBay listing and the goodontop.com retailer copy agree on a professional temporal/tympanic dual-mode design with 1-second readings, 35-reading memory, easily switchable °C/°F, and a green/orange/red LCD backlight indicating normal/mild-fever/high-fever status. No numeric accuracy tolerance or no-touch measuring distance is published on either fetched source, so both are left null. Pricing varied sharply between the two cited listings ($9.99 vs. $31.12); the higher, more consistently-seen figure is used as priceUsd with the discrepancy noted rather than silently picking the lower number.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/chooseen-forehead-ear-thermometer.webp?v=61b8eced64",
+        "source": "www.goodontop.com",
+        "license": "© Chooseen",
+        "accessedAt": "2026-08-09"
+      }
+    }
+  ]
+}

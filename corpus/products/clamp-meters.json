@@ -1,0 +1,445 @@
+{
+  "category": "clamp-meters",
+  "generatedAt": "2026-08-05T00:00:00.000Z",
+  "methodologyNotes": "Twelve clamp meters spanning pocket mini-clamps (Amprobe AMP-25), budget hobbyist units (UNI-T UT210E, Kaiweets HT206D), mainstream trade meters (Klein CL800/CL900, Southwire 21050T/21550T, Extech MA640, Mastech MS2108A), and professional/HVAC-focused instruments (Fluke 323/376 FC/902 FC, Fieldpiece SC260), verified 2026-08-05 primarily against manufacturer product pages and datasheets (fluke.com, kleintools.com, kaiweets.com, fieldpiece.com, southwire.com, amprobe.com) with retailer/distributor corroboration (DigiKey, TestEquity, GME Supply, Home Depot, Instrumart, GlobalTestSupply) where the manufacturer does not publish consumer pricing directly; unverifiable numeric fields (e.g. undocumented jaw sizes, display counts not stated on any fetched source) are left null rather than estimated, per product provenance notes below.",
+  "specKeys": [
+    "acCurrentRange",
+    "dcCurrentRange",
+    "jawOpening",
+    "acDcVoltageRange",
+    "trueRms",
+    "resistanceContinuity",
+    "capacitance",
+    "temperature",
+    "catSafetyRating",
+    "displayCount"
+  ],
+  "products": [
+    {
+      "slug": "fluke-323",
+      "name": "Fluke 323 True-RMS Clamp Meter",
+      "brand": "Fluke",
+      "category": "clamp-meters",
+      "releaseDate": null,
+      "priceUsd": 207.99,
+      "priceNote": "Price as displayed on fluke.com at time of access; Fluke does not publish a fixed MSRP separate from its own listed price.",
+      "specs": {
+        "acCurrentRange": "400.0 A, 2.0% ±5 digits (45-65 Hz) / 2.5% ±5 digits (65-400 Hz)",
+        "dcCurrentRange": null,
+        "jawOpening": "30 mm (600 MCM)",
+        "acDcVoltageRange": "600.0 V AC (1.5% accuracy) / 600.0 V DC (1.0% accuracy)",
+        "trueRms": true,
+        "resistanceContinuity": "400.0/4000 Ω, 1.0% accuracy; continuity beeper ≤70 Ω",
+        "capacitance": null,
+        "temperature": null,
+        "catSafetyRating": "CAT III 600V / CAT IV 300V",
+        "displayCount": null
+      },
+      "source": {
+        "url": "https://www.fluke.com/en-us/product/electrical-testing/clamp-meters/fluke-323",
+        "accessedAt": "2026-08-05"
+      },
+      "corroboration": {
+        "url": "https://media.fluke.com/8297e9a4-c59b-45fe-9370-b10800c191e7_original%20file.pdf",
+        "accessedAt": "2026-08-05"
+      },
+      "provenance": "Fluke's own 323/324/325 Users Manual (hosted on media.fluke.com) confirms the 323 has no DC current, capacitance, or temperature functions (those are reserved for the 324/325 siblings sharing the same manual) and gives the exact AC current, voltage, and resistance/continuity accuracy tables. Jaw opening and CAT rating confirmed on the fluke.com product page. Display digit/count was not stated on either the manual or the product page, so displayCount is left null rather than assumed.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/fluke-323.jpg?v=3424cdf081",
+        "source": "www.fluke.com",
+        "license": "© Fluke",
+        "accessedAt": "2026-08-09"
+      }
+    },
+    {
+      "slug": "fluke-376-fc",
+      "name": "Fluke 376 FC True-RMS AC/DC Clamp Meter with iFlex",
+      "brand": "Fluke",
+      "category": "clamp-meters",
+      "releaseDate": null,
+      "priceUsd": 699.99,
+      "priceNote": "Price as displayed on fluke.com at time of access.",
+      "specs": {
+        "acCurrentRange": "999.9 A via jaw; up to 2500 A AC with included iFlex flexible probe",
+        "dcCurrentRange": "999.9 A",
+        "jawOpening": "34 mm",
+        "acDcVoltageRange": "1000 V AC/DC",
+        "trueRms": true,
+        "resistanceContinuity": "60 kΩ, with continuity detection",
+        "capacitance": "1000 μF",
+        "temperature": null,
+        "catSafetyRating": "CAT III 1000V / CAT IV 600V",
+        "displayCount": null
+      },
+      "source": {
+        "url": "https://www.fluke.com/en-us/product/electrical-testing/clamp-meters/fluke-376-fc",
+        "accessedAt": "2026-08-05"
+      },
+      "corroboration": {
+        "url": "https://www.tequipment.net/Fluke/376-FC/Clamp-Meters/",
+        "accessedAt": "2026-08-05"
+      },
+      "provenance": "fluke.com product page confirms current/voltage/resistance/capacitance ranges, CAT rating, jaw opening (34 mm), the included 18 in iFlex probe extending AC current measurement to 2500 A, and the Fluke Connect/Bluetooth wireless logging feature (the 'FC' designation). Fluke's site did not state a temperature measurement function or an explicit display digit count for this model, so both are left null.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/fluke-376-fc.jpg?v=c911a9b52e",
+        "source": "www.fluke.com",
+        "license": "© Fluke",
+        "accessedAt": "2026-08-09"
+      }
+    },
+    {
+      "slug": "fluke-902-fc",
+      "name": "Fluke 902 FC True-RMS Wireless HVAC Clamp Meter",
+      "brand": "Fluke",
+      "category": "clamp-meters",
+      "releaseDate": null,
+      "priceUsd": 407.99,
+      "priceNote": "Price as displayed on fluke.com at time of access; Cole-Parmer independently lists $367.20.",
+      "specs": {
+        "acCurrentRange": "600.0 A",
+        "dcCurrentRange": "200 µA (dedicated HVAC pilot-light-sensor microamp mode; not a general-purpose DC amp range)",
+        "jawOpening": null,
+        "acDcVoltageRange": "600.0 V AC/DC",
+        "trueRms": true,
+        "resistanceContinuity": "600/6000/60.00 kΩ; continuity beeper ≤30 Ω",
+        "capacitance": "100.0/1000 µF",
+        "temperature": "-40 to 400 °C (-40 to 752 °F), contact via K-type thermocouple",
+        "catSafetyRating": "CAT III 600V / CAT IV 300V",
+        "displayCount": null
+      },
+      "source": {
+        "url": "https://www.fluke.com/en-us/product/electrical-testing/clamp-meters/fluke-902-fc",
+        "accessedAt": "2026-08-05"
+      },
+      "corroboration": {
+        "url": "https://www.coleparmer.com/i/fluke-902-fc-true-rms-hvac-clamp-meter/2000001",
+        "accessedAt": "2026-08-05"
+      },
+      "provenance": "fluke.com confirms this is an HVAC-specialist meter: the 'DC current' function is actually a 200 µA microamp range for pilot-light flame-sensor testing, not a general clamp DC-amps function, so it is documented as such rather than presented as a standard DC current range. Jaw opening and display count were not stated on the fetched product page, so both are left null rather than guessed.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/fluke-902-fc.jpg?v=f9ecba4980",
+        "source": "www.fluke.com",
+        "license": "© Fluke",
+        "accessedAt": "2026-08-09"
+      }
+    },
+    {
+      "slug": "klein-tools-cl800",
+      "name": "Klein Tools CL800 Digital Clamp Meter, AC Auto-Range TRMS, Low Impedance (LoZ)",
+      "brand": "Klein Tools",
+      "category": "clamp-meters",
+      "releaseDate": null,
+      "priceUsd": 152.54,
+      "priceNote": "DigiKey unit price at time of access. Klein Tools has discontinued the CL800 (recommends the CL810 as its replacement); DigiKey lists remaining stock (24 units) as obsolete/final sale, so this is the last confirmed sell price rather than an ongoing MSRP.",
+      "specs": {
+        "acCurrentRange": "600 A",
+        "dcCurrentRange": "600 A",
+        "jawOpening": "1.38 in (3.5 cm)",
+        "acDcVoltageRange": "1000 V AC/DC",
+        "trueRms": true,
+        "resistanceContinuity": "60 MΩ max, with continuity",
+        "capacitance": "6000 µF",
+        "temperature": "-14°F to 1000°F (-26°C to 538°C), via included thermocouple",
+        "catSafetyRating": "CAT IV 600V / CAT III 1000V",
+        "displayCount": 6000
+      },
+      "source": {
+        "url": "https://www.digikey.com/en/products/detail/klein-tools-inc/CL800/6597092",
+        "accessedAt": "2026-08-05"
+      },
+      "corroboration": {
+        "url": "https://www.kleintools.com/catalog/clamp-meters/digital-clamp-meter-ac-auto-range-trms-low-impedance-loz-auto",
+        "accessedAt": "2026-08-05"
+      },
+      "provenance": "kleintools.com's own CL800 catalog page (still live, now marked as discontinued with the CL810 recommended as replacement) confirms all electrical specs, jaw opening, CAT rating, and 6000-count display. DigiKey's authorized-distributor listing independently confirms the same specs and provides the last verifiable unit price ($152.54) since Klein's own site does not display consumer pricing.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/klein-tools-cl800.jpg?v=7eba3dbe58",
+        "source": "www.kleintools.com",
+        "license": "© Klein Tools",
+        "accessedAt": "2026-08-09"
+      }
+    },
+    {
+      "slug": "klein-tools-cl900",
+      "name": "Klein Tools CL900 Digital Clamp Meter, AC Auto-Range TRMS, Low Impedance (LoZ), 2000 Amp",
+      "brand": "Klein Tools",
+      "category": "clamp-meters",
+      "releaseDate": null,
+      "priceUsd": 213.7,
+      "priceNote": "Representative authorized-distributor price (DigiKey); other distributors range from $201.99 (GME Supply) to $236.50 (TestEquity). Klein Tools does not display consumer pricing on kleintools.com.",
+      "specs": {
+        "acCurrentRange": "2000 A",
+        "dcCurrentRange": "2000 A",
+        "jawOpening": "2 in (5.1 cm)",
+        "acDcVoltageRange": "1000 V AC/DC",
+        "trueRms": true,
+        "resistanceContinuity": "60 MΩ, with audible continuity",
+        "capacitance": "6000 µF",
+        "temperature": null,
+        "catSafetyRating": "CAT IV 600V / CAT III 1000V",
+        "displayCount": 6000
+      },
+      "source": {
+        "url": "https://www.kleintools.com/catalog/clamp-meters/digital-clamp-meter-ac-auto-range-trms-low-impedance-loz-2000-amp",
+        "accessedAt": "2026-08-05"
+      },
+      "corroboration": {
+        "url": "https://www.testequity.com/product/10034380-CL900",
+        "accessedAt": "2026-08-05"
+      },
+      "provenance": "kleintools.com's official CL900 catalog page confirms current/voltage/resistance/capacitance ranges, jaw opening, CAT rating, 6000-count LCD, IP40 rating, and 6.6 ft drop protection. The listed functions (audible continuity, capacitance, diode test, frequency/duty cycle, min/max, data hold, inrush current) do not include a thermocouple temperature mode, so temperature is left null rather than assumed by analogy to the CL800. Klein does not publish consumer pricing directly, so distributor pricing is used with the observed range noted.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/klein-tools-cl900.jpg?v=486b753d9f",
+        "source": "www.kleintools.com",
+        "license": "© Klein Tools",
+        "accessedAt": "2026-08-09"
+      }
+    },
+    {
+      "slug": "uni-t-ut210e",
+      "name": "UNI-T UT210E Mini Digital Clamp Meter",
+      "brand": "UNI-T",
+      "category": "clamp-meters",
+      "releaseDate": null,
+      "priceUsd": 62.18,
+      "priceNote": "Price from tameson.com (excl. VAT, USD-denominated); tameson is a European-based online retailer, not a US big-box store, and this is the clearest single confirmed sale price found — no consistent US-specific retail listing price could be verified via direct page access (Amazon/Walmart product pages returned bot-block/verification pages rather than price data).",
+      "specs": {
+        "acCurrentRange": "100.00 A (2.000 A / 20.00 A / 100.00 A subranges)",
+        "dcCurrentRange": "100.00 A",
+        "jawOpening": "17 mm",
+        "acDcVoltageRange": "600 V AC / 600 V DC",
+        "trueRms": true,
+        "resistanceContinuity": "20 MΩ, with continuity buzzer",
+        "capacitance": "20 mF",
+        "temperature": "-40°C to 1000°C (-40°F to 1832°F)",
+        "catSafetyRating": null,
+        "displayCount": 2000
+      },
+      "source": {
+        "url": "https://tameson.com/products/t23g4-uni-t-ut210e-clamp-meter",
+        "accessedAt": "2026-08-05"
+      },
+      "corroboration": {
+        "url": "https://meters.uni-trend.com/product/ut210-series/",
+        "accessedAt": "2026-08-05"
+      },
+      "provenance": "UNI-Trend's own UT210-series product page and the Tameson retailer listing agree on current/voltage/resistance/capacitance/temperature ranges, 17 mm jaw, and 2000-count display. No CAT safety rating was stated on either the manufacturer series page or the retailer spec sheet for this budget-tier model, so catSafetyRating is left null rather than assumed (this class of pocket clamp meter is commonly sold without a formal CAT rating).",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/uni-t-ut210e.jpg?v=52ae5ca926",
+        "source": "meters.uni-trend.com",
+        "license": "© UNI-T",
+        "accessedAt": "2026-08-09"
+      }
+    },
+    {
+      "slug": "amprobe-amp-25",
+      "name": "Amprobe AMP-25 AC/DC TRMS Mini-Clamp",
+      "brand": "Amprobe",
+      "category": "clamp-meters",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "Discontinued by Amprobe/Fluke Corporation; instrumart.com and globaltestsupply.com both list the AMP-25 as no-longer-available with no current sell price shown, so priceUsd is left null rather than guessed from stale/regional listings.",
+      "specs": {
+        "acCurrentRange": "60.00 / 300.0 A",
+        "dcCurrentRange": "60.00 / 300.0 A",
+        "jawOpening": "1.0 in (25 mm) max",
+        "acDcVoltageRange": null,
+        "trueRms": true,
+        "resistanceContinuity": null,
+        "capacitance": null,
+        "temperature": null,
+        "catSafetyRating": "CAT III 600V",
+        "displayCount": 6000
+      },
+      "source": {
+        "url": "https://www.amprobe.com/wp-content/uploads/2019/08/AMP-25-ds.pdf",
+        "accessedAt": "2026-08-05"
+      },
+      "corroboration": {
+        "url": "https://www.instrumart.com/products/41482/amprobe-amp-25-mini-clamp-meter",
+        "accessedAt": "2026-08-05"
+      },
+      "provenance": "Amprobe's own AMP-25-ds.pdf datasheet was fetched and read directly: the AMP-25 is a dedicated AC/DC current mini-clamp (current + non-contact-voltage detection + inrush current only) and its detailed specification table has no voltage-measurement, resistance, continuity, capacitance, or temperature function listed at all — this is not a full clamp multimeter, so those fields are null as genuinely not applicable rather than unknown. Display count (6000), jaw opening (25 mm), CAT III 600V rating, and the 60/300 A dual AC and DC current ranges are taken verbatim from the datasheet's General and Detailed Specifications tables. Product is discontinued; instrumart.com and globaltestsupply.com confirm no-longer-available status.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/amprobe-amp-25.jpg?v=2825e0507c",
+        "source": "www.instrumart.com",
+        "license": "© Amprobe",
+        "accessedAt": "2026-08-09"
+      }
+    },
+    {
+      "slug": "kaiweets-ht206d",
+      "name": "KAIWEETS HT206D Digital Clamp Meter",
+      "brand": "Kaiweets",
+      "category": "clamp-meters",
+      "releaseDate": null,
+      "priceUsd": 59.99,
+      "priceNote": "Regular price on kaiweets.com; frequently discounted to $47.99 during sales.",
+      "specs": {
+        "acCurrentRange": "60A / 600A",
+        "dcCurrentRange": "60A / 600A",
+        "jawOpening": null,
+        "acDcVoltageRange": "AC 6V/60V/600V; DC 600mV/6V/60V/600V",
+        "trueRms": true,
+        "resistanceContinuity": "600Ω/6kΩ/60kΩ/600kΩ/6MΩ/60MΩ, with continuity",
+        "capacitance": "4nF/40nF/400nF/4μF/40μF/400μF/4mF",
+        "temperature": "-40°C to 1000°C (-40°F to 1832°F), K-type thermocouple",
+        "catSafetyRating": "CAT III 600V (IEC 61010-1)",
+        "displayCount": 6000
+      },
+      "source": {
+        "url": "https://kaiweets.com/products/ht206d-digital-clamp-meter",
+        "accessedAt": "2026-08-05"
+      },
+      "corroboration": {
+        "url": "https://www.walmart.com/ip/KAIWEETS-HT206D-Digital-Clamp-Meter-T-RMS-6000-Counts-Multimeter-Voltage-Tester-Auto-ranging-Measures-Current-Temperature-Capacitance-Resistance-Diod/859840503",
+        "accessedAt": "2026-08-05"
+      },
+      "provenance": "Kaiweets' own product page confirms current/voltage/resistance/capacitance/temperature ranges, 6000-count display, and CAT III 600V / IEC 61010-1 compliance, plus NCV detection and a two-color backlit display that switches red above 80V or 3A. No jaw-opening dimension was published on the manufacturer page, so jawOpening is left null rather than estimated from the meter's overall size.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/kaiweets-ht206d.jpg?v=9523c81fc7",
+        "source": "kaiweets.com",
+        "license": "© Kaiweets",
+        "accessedAt": "2026-08-09"
+      }
+    },
+    {
+      "slug": "fieldpiece-sc260",
+      "name": "Fieldpiece SC260 Compact Clamp Meter with True RMS",
+      "brand": "Fieldpiece Instruments",
+      "category": "clamp-meters",
+      "releaseDate": null,
+      "priceUsd": 189,
+      "priceNote": "MSRP per authorized HVAC distributor TruTech Tools; commonly discounted to roughly $160-$165 across HVAC supply retailers. Fieldpiece's own site does not display consumer pricing.",
+      "specs": {
+        "acCurrentRange": "400 A",
+        "dcCurrentRange": null,
+        "jawOpening": "1.2 in (30 mm)",
+        "acDcVoltageRange": "600 V AC/DC (overload protected to 600 VDC/600 VAC rms)",
+        "trueRms": true,
+        "resistanceContinuity": "40 MΩ with 0.01 resolution, with continuity",
+        "capacitance": true,
+        "temperature": "F/C via included Type K wrap-tab thermocouple (numeric range not published)",
+        "catSafetyRating": "CAT III 600V",
+        "displayCount": 4000
+      },
+      "source": {
+        "url": "https://www.fieldpiece.com/product/sc260-compact-clamp-meter-with-true-rms/",
+        "accessedAt": "2026-08-05"
+      },
+      "corroboration": {
+        "url": "https://trutechtools.com/SC260",
+        "accessedAt": "2026-08-05"
+      },
+      "provenance": "fieldpiece.com's own product and specifications page confirms 400A AC current only (no DC current function on the SC260 — that is reserved for the SC220's microamp mode), 40 MΩ resistance, capacitance and temperature as supported functions, 4000-count display, and physical/environmental specs. The SC220/SC240/SC260 operator's manual (fetched directly from resources.fieldpiece.com) confirms CAT III 600V rating and the 1.2 in (30 mm) jaw opening, which are not stated on the marketing page itself. Fieldpiece does not publish consumer pricing on its own site, so distributor MSRP is used.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/fieldpiece-sc260.png?v=e91744d4e5",
+        "source": "www.fieldpiece.com",
+        "license": "© Fieldpiece Instruments",
+        "accessedAt": "2026-08-09"
+      }
+    },
+    {
+      "slug": "extech-ma640",
+      "name": "Extech MA640 True RMS AC/DC Clamp Meter with NCV",
+      "brand": "Extech (Teledyne FLIR)",
+      "category": "clamp-meters",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "Discontinued; Extech/FLIR's own product page lists the MA640 as replaced by the Extech EX655 and shows no current sell price, so priceUsd is left null rather than guessed from stale retailer caches.",
+      "specs": {
+        "acCurrentRange": "60.00 A / 600.0 A",
+        "dcCurrentRange": "60.00 A / 600.0 A",
+        "jawOpening": "1.5 in (40 mm), conductors up to 500 MCM",
+        "acDcVoltageRange": "AC 6.000V/60.00V/600.0V; DC 600.0mV/6.000V/60.00V/600.0V",
+        "trueRms": true,
+        "resistanceContinuity": "600.0Ω to 60.00MΩ, with continuity",
+        "capacitance": "40.00nF to 4000µF",
+        "temperature": "-4°F to 1400°F (-20°C to 760°C), Type K",
+        "catSafetyRating": "CAT III 600V",
+        "displayCount": 6000
+      },
+      "source": {
+        "url": "https://www.flir.com/products/ma640?vertical=condition+monitoring&segment=solutions",
+        "accessedAt": "2026-08-05"
+      },
+      "corroboration": {
+        "url": "https://www.testequipmentdepot.com/extech-ma640nist-true-rms-acdc-current-clamp-meter-600v-600a-non-contact-voltage-detector-wnist.html",
+        "accessedAt": "2026-08-05"
+      },
+      "provenance": "flir.com (Extech's parent brand) confirms the MA640 is discontinued with the EX655 listed as its replacement, and gives the full electrical spec table (current, voltage, resistance, capacitance, temperature ranges), 6000-count segment LCD with bargraph, built-in NCV detector, 9V battery power, and 1.5 in (40 mm) jaw. Because the product is discontinued and no current retailer price could be confirmed, priceUsd is null rather than an estimate.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/extech-ma640.jpg?v=979b8589d8",
+        "source": "www.testequipmentdepot.com",
+        "license": "© Extech (Teledyne FLIR)",
+        "accessedAt": "2026-08-09"
+      }
+    },
+    {
+      "slug": "southwire-21050t",
+      "name": "Southwire 21050T / 21550T 400A True RMS AC/DC Clamp Meter",
+      "brand": "Southwire",
+      "category": "clamp-meters",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "Southwire sells through distributors/retailers rather than displaying consumer pricing on southwire.com, and no reliably current US retail price could be confirmed for either SKU via direct page access during this research pass (Amazon, Home Depot, Grainger, and Zoro all blocked automated access); priceUsd is left null rather than guessed. A used unit was seen at $39.90 on eBay, which is not usable as a new-unit price reference.",
+      "specs": {
+        "acCurrentRange": "400 A",
+        "dcCurrentRange": "400 A (per user-facing marketing copy and verified purchaser reviews on southwire.com describing DC clamp-amp use; exact numeric DC accuracy table not published on the fetched product page)",
+        "jawOpening": null,
+        "acDcVoltageRange": null,
+        "trueRms": true,
+        "resistanceContinuity": null,
+        "capacitance": true,
+        "temperature": true,
+        "catSafetyRating": "CAT III 600V",
+        "displayCount": null
+      },
+      "source": {
+        "url": "https://www.southwire.com/tools-equipment/test-measurement/21550t-clamp-meter-400a-ac-dc/p/65031840",
+        "accessedAt": "2026-08-05"
+      },
+      "corroboration": {
+        "url": "https://www.amazon.com/Southwire-Equipment-21050T-Multimeter-Functions/dp/B00HFYKSMY",
+        "accessedAt": "2026-08-05"
+      },
+      "provenance": "CORRECTED / CLARIFIED FROM SEED: Southwire's own current site catalog no longer surfaces the seed model '21050T' — searching southwire.com for it resolves to model 21550T, '400A AC/DC Clamp Meter with True RMS, Built-In NCV, Worklight, and Third-Hand Test Probe Holder' (Southwire # 65031840), which Southwire's Features & Benefits and Specifications sections describe identically to how 21050T is marketed by third-party retailers (Amazon, Gordon Electric Supply, Alarmax) — 21550T appears to be the current-catalog successor SKU for the same 400A True-RMS AC/DC clamp meter design, similar to a running running-change part number. Southwire's own page confirms 400A AC/DC current range, CAT III 600V rating, True RMS accuracy, built-in NCV, and that the unit ships with a Type K temperature probe (implying temperature capability) and capacitance/frequency/duty-cycle functions per Amazon's reproduced feature copy — but Southwire's page (a JavaScript-rendered spec table) did not expose numeric voltage, resistance, jaw opening, or display-count figures to automated fetch, so those are left null rather than estimated. The listing is retained under the requested slug/name 21050T with the 21550T successor noted, consistent with how this dataset handles other renamed/successor SKUs."
+    },
+    {
+      "slug": "mastech-ms2108a",
+      "name": "Mastech MS2108A Auto-Range AC/DC Digital Clamp Meter",
+      "brand": "Mastech",
+      "category": "clamp-meters",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "No consistent current US retail price could be confirmed via direct page access during this research pass (Amazon and eBay listings blocked automated fetch; Mastech's own group site returned an access error); priceUsd is left null rather than guessed. The closely related sibling model MS2108 (6600-count display, a different/newer variant) was seen at $83.99 via an authorized reseller, but that figure is not used here since it is a different model number with a different display resolution.",
+      "specs": {
+        "acCurrentRange": null,
+        "dcCurrentRange": null,
+        "jawOpening": "26 mm max conductor diameter",
+        "acDcVoltageRange": "Max input 1000V DC / 750V AC between terminals and earth ground (overvoltage protection rating; discrete measurement subranges not confirmed from available sources)",
+        "trueRms": true,
+        "resistanceContinuity": true,
+        "capacitance": true,
+        "temperature": null,
+        "catSafetyRating": null,
+        "displayCount": 4000
+      },
+      "source": {
+        "url": "https://www.amazon.com/MASTECH-Professional-MS2108A-Current-Backlight/dp/B008NZ36SC",
+        "accessedAt": "2026-08-05"
+      },
+      "corroboration": {
+        "url": "https://www.ebay.com/p/1102311033",
+        "accessedAt": "2026-08-05"
+      },
+      "provenance": "Retailer listing copy (reproduced across Amazon, eBay, and device.report aggregations) consistently describes the MS2108A as a 4000-count auto-ranging clamp multimeter measuring AC/DC voltage and current, resistance, frequency, duty cycle, and capacitance, with continuity and diode test, a 26 mm max conductor diameter, and IEC1010-1 / IEC1010-1-032 compliance. Numeric AC/DC current and voltage measurement subranges and a specific CAT rating could not be confirmed from any source that was successfully fetched during this pass (Mastech's own mastech-group.com spec page and multiple PDF manual sources returned access errors), so those fields are left null rather than assumed by analogy to similarly-named Mastech clamp meters (e.g. the MS2108, which is a distinct 6600-count model).",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/mastech-ms2108a.jpg?v=f755707dea",
+        "source": "www.ebay.com",
+        "license": "© Mastech",
+        "accessedAt": "2026-08-09"
+      }
+    }
+  ]
+}

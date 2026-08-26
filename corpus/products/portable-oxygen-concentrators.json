@@ -1,0 +1,423 @@
+{
+  "category": "portable-oxygen-concentrators",
+  "generatedAt": "2026-08-01",
+  "methodologyNotes": "Covers 13 pulse-dose (plus one dual pulse/continuous-flow) portable oxygen concentrators (POCs) a US buyer cross-shops in 2026, spanning the market-leading Inogen line (One G5, One G3, Rove 6, Rove 4), Philips Respironics SimplyGo Mini, ResMed Mobi, CAIRE FreeStyle Comfort, GCE Zen-O lite, OxyGo NEXT, Belluscura X-PLOR, DeVilbiss iGo2, Precision Medical Live Active Five, and the larger continuous-flow-capable O2 Concepts Oxlife Independence. All ten seed products were verified and kept (one name corrected: the seed's 'Precision Medical Live Active Five' is the product's actual full name, model PM4155, confirmed via rehabmart.com/lptmedical.com/manualslib.com listings after the manufacturer's own precisionmedical.com and its PDF spec sheet both returned HTTP 403); Inogen One G3, Inogen Rove 4, and O2 Concepts Oxlife Independence were added to round out the 13-product set and give buyers a lightest-in-class (Belluscura X-PLOR, 3.75lb), smallest-battery-footprint (Rove 4), and continuous-flow (Oxlife Independence, up to 3 LPM / 16.7lb) comparison anchor. Manufacturer sites were largely unreachable for direct specs: inogen.com now 302-redirects entirely to a B2B-only provider.inogen.com portal with no per-product spec pages, resmed.com returned HTTP 403, and precisionmedical.com returned HTTP 403 on both its site and its hosted PDF — so specs for those brands were sourced from the authorized retailer oxygenconcentratorstore.com (whose Magento product pages reproduce manufacturer spec sheets verbatim, confirmed spot-check accurate against the one manufacturer page that did load, provider.inogen.com's flow-setting/battery-life summary) and from rehabmart.com/lptmedical.com for Precision Medical. Belluscura's own belluscurahealth.com loaded directly and is used as the primary source for the X-PLOR. oxygen_output_ml is each product's manufacturer-stated MAXIMUM pulse-dose output in ml/min (i.e. at its highest numbered flow setting), except O2 Concepts Oxlife Independence, whose 3000 reflects its separate continuous-flow mode (up to 3.0 LPM) rather than its much smaller pulse-bolus figures (8-96 mL/breath) — it is the only product here with a continuous-flow mode at all, so its number is not apples-to-apples with the other 12 and this is flagged per-product. oxygen_output_ml is null for the ResMed Mobi: its retailer spec page gives battery-life-per-setting but never states a per-setting or maximum ml/min figure, and ResMed's own PDF user guide returned HTTP 403 on every attempt. flow_settings is the manufacturer's advertised numbered range (or, for the Zen-O lite, the 0.5-increment range) as a string, since two products (Zen-O lite, Oxlife Independence) use half-settings that a bare integer range would misrepresent. weight_lb is the unit's lightest advertised battery configuration (smallest/standard battery installed); heavier extended/dual-battery weights are noted per-product in provenance rather than used as the primary figure, so a 'lightest realistic carry weight' comparison is apples-to-apples across the set. battery_life_hr is each manufacturer's own highest-advertised runtime figure — its LARGEST available battery, at its LOWEST (most efficient) flow setting — since that is the number every brand headlines in marketing; the specific battery tier and setting used is stated in each product's provenance so a reader can see it is not a single controlled test condition across brands. noise_db is the dB(A) figure each source ties to 'setting 2' where stated (the de facto industry-standard test point most of these manufacturers use); for the three sources that gave only a single '<X dB' ceiling figure not tied to a specific setting (Belluscura X-PLOR, Precision Medical Live Active Five, Inogen One G3) or a general (not setting-specific) figure (O2 Concepts Oxlife Independence), that ceiling/general figure is used and flagged as such in provenance. warranty_yr is the manufacturer's stated warranty on the concentrator UNIT itself; batteries, sieve beds, and accessories are conventionally warranted for a shorter 1 year across this entire category and that shorter figure is noted in provenance rather than used as the primary number. priceUsd is a US list-or-advertised transaction price actually shown on a source page; four products (Philips SimplyGo Mini, GCE Zen-O lite, OxyGo NEXT, Belluscura X-PLOR) had no price displayed at all — their retailer/manufacturer pages require calling or requesting an 'internet price' — and priceUsd is left null rather than estimated for those. The Philips SimplyGo Mini specifically: its retailer listing requires a phone call for availability with no price shown, which is consistent with (but not directly confirmed by the pages consulted to be caused by) Philips' April 2024 US consent decree halting new sales of sleep/respiratory-care devices following its CPAP/BiPAP recall — this context is noted in the product's priceNote as relevant background, not as a confirmed causal link, since no source consulted explicitly named oxygen concentrators in that settlement's product list. Release dates are official launch/FDA-clearance dates found via targeted searches (month granularity where a press release gave one, year-only where sources only agreed on a year, null where no source stated one at all — DeVilbiss iGo2 and Precision Medical Live Active Five). Images: none of these 13 products had a genuine, brand-matching photo on Wikimedia Commons (Commons media search returned zero results for every brand/model searched); all 13 images are therefore directly-fetched manufacturer or authorized-reseller product photos, each verified to be real image bytes (not an HTML error page) by fetching the file directly and confirming binary image content before use. All sources accessed 2026-08-01.",
+  "specKeys": [
+    "oxygen_output_ml",
+    "flow_settings",
+    "weight_lb",
+    "battery_life_hr",
+    "delivery_mode",
+    "noise_db",
+    "faa_approved",
+    "warranty_yr"
+  ],
+  "products": [
+    {
+      "slug": "inogen-one-g5",
+      "name": "Inogen One G5",
+      "brand": "Inogen",
+      "category": "portable-oxygen-concentrators",
+      "releaseDate": "2019-04",
+      "priceUsd": 2495,
+      "priceNote": "Advertised/MAP price at oxygenconcentratorstore.com against a $4,099.00 manufacturer list price for the standard-battery kit.",
+      "specs": {
+        "oxygen_output_ml": 1260,
+        "flow_settings": "1–6",
+        "weight_lb": 4.7,
+        "battery_life_hr": 13,
+        "delivery_mode": "pulse_dose",
+        "noise_db": 39,
+        "faa_approved": true,
+        "warranty_yr": 3
+      },
+      "source": {
+        "url": "https://www.oxygenconcentratorstore.com/inogen-one-g5/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://provider.inogen.com/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/inogen-one-g5.jpg?v=d7833efd24",
+        "source": "oxygenconcentratorstore.com",
+        "license": "© Inogen",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Weight is 4.7lb with the standard/single battery (5.7lb with the double/extended battery). Battery life: 6h30m average on the single battery at setting 1, 13h average on the double battery at setting 1 (13h figure also independently confirmed as Inogen's own headline claim on provider.inogen.com: 'Up to 13 hrs' with extended battery). Noise 39dB at setting 2, up to 58dB max. Max output 1260ml/min across 6 pulse settings; per-setting ml breakdown not published on the pages consulted. FAA-approved for all commercial US carriers. Warranty: 3yr unit, 1yr batteries/accessories. Launched to market April 2019 per Inogen's own press release ('release to market of its innovative Inogen One G5')."
+    },
+    {
+      "slug": "philips-simplygo-mini",
+      "name": "Philips Respironics SimplyGo Mini",
+      "brand": "Philips Respironics",
+      "category": "portable-oxygen-concentrators",
+      "releaseDate": "2015-12",
+      "priceUsd": null,
+      "priceNote": "No price is displayed on the oxygenconcentratorstore.com listing — the page reads 'Please call us about product availability' instead of showing list/sale pricing. This is at least contextually consistent with (though not directly confirmed by any page consulted to be specifically caused by) Philips' April 2024 US consent decree, under which Philips agreed to stop selling new sleep- and respiratory-care devices in the US following its CPAP/BiPAP foam recall; no source consulted named oxygen concentrators specifically within that settlement's product list, so this is noted as background context, not a confirmed cause.",
+      "specs": {
+        "oxygen_output_ml": 1000,
+        "flow_settings": "1–5",
+        "weight_lb": 5,
+        "battery_life_hr": 9,
+        "delivery_mode": "pulse_dose",
+        "noise_db": 43,
+        "faa_approved": true,
+        "warranty_yr": 3
+      },
+      "source": {
+        "url": "https://www.oxygenconcentratorstore.com/respironics-simplygo-mini/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/philips-simplygo-mini.jpg?v=eb739c34ee",
+        "source": "oxygenconcentratorstore.com",
+        "license": "© Philips Respironics",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "5 pulse settings with published per-setting output: 220/440/660/880/1000 ml/min (settings 1-5); 1000ml/min is the max. Weight 5lb standard battery, 6lb extended battery. Battery life 4.5h standard / 9h extended. Noise 43dB at setting 2, 46dB at setting 5. FAA-approved. Warranty 3yr unit, 1yr sieve beds. Released December 2015 per a manufacturer video description, corroborated by an FDA filing dated January 2015 suggesting regulatory clearance preceded the commercial release later that year. The retailer page requires a phone call for current availability rather than showing a price."
+    },
+    {
+      "slug": "resmed-mobi",
+      "name": "ResMed Mobi",
+      "brand": "ResMed",
+      "category": "portable-oxygen-concentrators",
+      "releaseDate": "2019-01",
+      "priceUsd": 2295,
+      "priceNote": "Minimum advertised price at oxygenconcentratorstore.com against a $2,995.00 manufacturer list price.",
+      "specs": {
+        "oxygen_output_ml": null,
+        "flow_settings": "1–4",
+        "weight_lb": 5.5,
+        "battery_life_hr": 8.6,
+        "delivery_mode": "pulse_dose",
+        "noise_db": 38.2,
+        "faa_approved": true,
+        "warranty_yr": 5
+      },
+      "source": {
+        "url": "https://www.oxygenconcentratorstore.com/resmed-mobi/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/resmed-mobi.jpg?v=995d3ceefa",
+        "source": "oxygenconcentratorstore.com",
+        "license": "© ResMed",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Weight 5.5lb with internal battery only, 6.6lb with the external/add-on battery attached. Battery life on internal battery: 8.6h/6h/3.8h/3.2h across settings 1-4; external battery adds a further 4.5h/3h/1.9h/1.6h. Noise 38.2dB at setting 2, 45.5dB at setting 4. Oxygen purity ~90%. FAA-approved. 5-year unit warranty, 1yr on batteries/sieve beds/accessories — the longest unit warranty of any product in this set. Per-setting or maximum ml/min output is not stated on the retailer page consulted, and ResMed's own hosted user-guide PDF (document.resmed.com) returned HTTP 403 on every attempt, so oxygen_output_ml is left null rather than estimated. ResMed announced Mobi (its first ResMed-branded POC) in January 2018 and announced it as 'now widely available in the United States' in January 2019; the later US-availability date is used as releaseDate."
+    },
+    {
+      "slug": "caire-freestyle-comfort",
+      "name": "CAIRE FreeStyle Comfort",
+      "brand": "CAIRE",
+      "category": "portable-oxygen-concentrators",
+      "releaseDate": "2018-08",
+      "priceUsd": 2395,
+      "priceNote": "Advertised/sale price at oxygenconcentratorstore.com against a $4,195.00 manufacturer list price.",
+      "specs": {
+        "oxygen_output_ml": 1050,
+        "flow_settings": "1–5",
+        "weight_lb": 5,
+        "battery_life_hr": 8,
+        "delivery_mode": "pulse_dose",
+        "noise_db": 39,
+        "faa_approved": true,
+        "warranty_yr": 3
+      },
+      "source": {
+        "url": "https://www.oxygenconcentratorstore.com/caire-freestyle-comfort/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/caire-freestyle-comfort.jpg?v=97345ebf68",
+        "source": "oxygenconcentratorstore.com",
+        "license": "© CAIRE Inc.",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Per-setting output published: 210/420/630/840/1050 ml/min across settings 1-5. Weight 5lb with the 8-cell battery, 6lb with the 16-cell battery. Battery life at setting 2: 4h average (8-cell), 8h average (16-cell) — 8h figure used as the headline runtime. Noise 39dB at setting 2. FAA-approved. Warranty 3yr unit/sieve beds, 1yr battery/accessories. CAIRE's own August 21, 2018 press release announced 'the official debut of the new portable oxygen concentrator, the FreeStyle Comfort', describing it as a 5lb device with an ergonomic contoured design."
+    },
+    {
+      "slug": "gce-zen-o-lite",
+      "name": "GCE Zen-O lite",
+      "brand": "GCE Healthcare",
+      "category": "portable-oxygen-concentrators",
+      "releaseDate": "2016",
+      "priceUsd": null,
+      "priceNote": "oxygenconcentratorstore.com displays 'Call Now for Sale Pricing' with no list or sale price shown on the page.",
+      "specs": {
+        "oxygen_output_ml": 1050,
+        "flow_settings": "1–5 (0.5 increments)",
+        "weight_lb": 5.5,
+        "battery_life_hr": 4,
+        "delivery_mode": "pulse_dose",
+        "noise_db": 37,
+        "faa_approved": true,
+        "warranty_yr": 3
+      },
+      "source": {
+        "url": "https://www.oxygenconcentratorstore.com/gce-zen-o-lite/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/gce-zen-o-lite.jpg?v=8b22632ffb",
+        "source": "oxygenconcentratorstore.com",
+        "license": "© GCE Healthcare",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Flow is user-adjustable in 0.5 increments from 1.0 to 5.0, with a maximum output of 1050ml per pulse at the top setting. Weight 5.5lb without the carry bag. Single-battery life 'up to 4 hours' at setting 2 (the only runtime figure the page states). Noise 37dB at setting 2, 48.7dB at setting 5. Oxygen purity 87-96% across the flow range. FAA-approved. 3-year manufacturer warranty on the unit (no separate accessory-warranty figure stated). GCE's Zen-O lite followed the original Zen-O (launched January 2016) as the company's second POC release that same year; the specific month of the lite variant's launch is not stated in the source consulted."
+    },
+    {
+      "slug": "inogen-rove-6",
+      "name": "Inogen Rove 6",
+      "brand": "Inogen",
+      "category": "portable-oxygen-concentrators",
+      "releaseDate": "2022-12",
+      "priceUsd": 2795,
+      "priceNote": "Advertised/sale price at oxygenconcentratorstore.com against a $4,495.00 manufacturer list price.",
+      "specs": {
+        "oxygen_output_ml": 1260,
+        "flow_settings": "1–6",
+        "weight_lb": 4.8,
+        "battery_life_hr": 12.75,
+        "delivery_mode": "pulse_dose",
+        "noise_db": 37,
+        "faa_approved": true,
+        "warranty_yr": 3
+      },
+      "source": {
+        "url": "https://www.oxygenconcentratorstore.com/inogen-one-rove-g6/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://provider.inogen.com/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/inogen-rove-6.jpg?v=c8da452aec",
+        "source": "oxygenconcentratorstore.com",
+        "license": "© Inogen",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Weight 4.8lb standard battery, 5.8lb extended battery. Battery life at setting 1: 6h15m standard, 12h45m (12.75h) extended — the 12h45m extended-battery figure is also Inogen's own headline claim on provider.inogen.com. Noise 37dB at a setting-2 pulse dose. Max output 1260ml/min across 6 settings (per-setting breakdown not published on the retailer page). Oxygen purity 90% ±3/±6%. FAA-approved. Warranty 3yr unit, 1yr accessories/sieve beds. Launched in Europe December 2022 per industry coverage, with US introduction following in 2023 (specific US-launch month not found in sources consulted); the confirmed December 2022 European launch is used as releaseDate."
+    },
+    {
+      "slug": "oxygo-next",
+      "name": "OxyGo NEXT",
+      "brand": "OxyGo",
+      "category": "portable-oxygen-concentrators",
+      "releaseDate": "2019-08",
+      "priceUsd": null,
+      "priceNote": "List/sale price is not displayed on the retailer page; it requires submitting a 'Get Internet Price' request instead.",
+      "specs": {
+        "oxygen_output_ml": 1260,
+        "flow_settings": "1–6",
+        "weight_lb": 4.74,
+        "battery_life_hr": 10,
+        "delivery_mode": "pulse_dose",
+        "noise_db": 38,
+        "faa_approved": true,
+        "warranty_yr": 3
+      },
+      "source": {
+        "url": "https://www.oxygenconcentratorstore.com/oxygo-next/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/oxygo-next.jpg?v=35985a9145",
+        "source": "oxygenconcentratorstore.com",
+        "license": "© OxyGo LLC",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Per-setting output published: 210/420/630/840/1050/1260 ml/min across settings 1-6, matching the Inogen Rove 6's figures dimension-for-dimension (weight, size, and output are near-identical to the Rove 6/G5 platform, consistent with OxyGo's POCs being built under license from Inogen's technology). Weight 4.74lb single battery, 5.73lb double battery. Battery life at setting 2: 5h single, 10h double. Noise ~38dB at setting 2. FAA-approved. 3-year warranty. OxyGo LLC's own August 12, 2019 press release announced the NEXT's launch as a 'six flow setting, Bluetooth enabled POC'; one retailer separately describes it as 'released in 2020', suggesting a gap between the 2019 announcement and wider 2020 market availability — the confirmed August 2019 press-release date is used as releaseDate."
+    },
+    {
+      "slug": "belluscura-x-plor",
+      "name": "Belluscura X-PLOR",
+      "brand": "Belluscura",
+      "category": "portable-oxygen-concentrators",
+      "releaseDate": "2021-09",
+      "priceUsd": null,
+      "priceNote": "No price is published on belluscurahealth.com's product page; three unpriced package tiers (Ascent, Peak, Summit) are offered varying by battery quantity, and pricing requires contacting Belluscura directly.",
+      "specs": {
+        "oxygen_output_ml": 900,
+        "flow_settings": "1–5",
+        "weight_lb": 3.75,
+        "battery_life_hr": 4.5,
+        "delivery_mode": "pulse_dose",
+        "noise_db": 39,
+        "faa_approved": true,
+        "warranty_yr": 3
+      },
+      "source": {
+        "url": "https://belluscurahealth.com/product/x-plor/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/belluscura-x-plor.png?v=5b811fe36b",
+        "source": "belluscurahealth.com",
+        "license": "© Belluscura",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "5 pulse settings delivering 215-900ml/min (900 is the max, at the highest setting), plus an Auto pulse/No-Breath-Detection mode at 15 breaths/min. At ≤3.75lb (1.7kg) this is the lightest unit in this dataset. Dimensions 7.3x2.9x7.6in. Noise '<39dB(A) at Level 2' (a ceiling figure, used as-is). Battery charge duration '≤4.5 hrs' (single battery tier; the page does not break this out per flow setting). Charge time ≤6h. Oxygen purity 82-92%. Described as 'FAA Compliant' for air travel. Standard 3-year warranty. Belluscura's X-PLOR received FDA 510(k) clearance in March 2021 and commercially launched in September 2021 per company statements; the commercial-launch date is used as releaseDate."
+    },
+    {
+      "slug": "devilbiss-igo2",
+      "name": "Drive DeVilbiss Healthcare DeVilbiss iGo2",
+      "brand": "Drive DeVilbiss Healthcare",
+      "category": "portable-oxygen-concentrators",
+      "releaseDate": null,
+      "priceUsd": 3399,
+      "priceNote": "Sale price at oxygenconcentratorstore.com against a $4,599.00 manufacturer list price.",
+      "specs": {
+        "oxygen_output_ml": 1014,
+        "flow_settings": "1–5",
+        "weight_lb": 5,
+        "battery_life_hr": 5,
+        "delivery_mode": "pulse_dose",
+        "noise_db": 41,
+        "faa_approved": true,
+        "warranty_yr": 5
+      },
+      "source": {
+        "url": "https://www.oxygenconcentratorstore.com/devilbiss-igo2/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/devilbiss-igo2.jpg?v=1db2fd2087",
+        "source": "oxygenconcentratorstore.com",
+        "license": "© Drive DeVilbiss Healthcare",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Per-setting output published: 260/440/725/880/1014 ml/min across settings 1-5 (max 1014). Weight 5lb; the page describes only one battery configuration (no separate standard/extended tiers as with the Inogen-family products). Battery life ranges from 5h at setting 1 down to 2h at setting 5 (the setting-1 figure used as headline runtime). Noise ~41dB at setting 2 — the highest noise figure in this set. FAA-approved. Warranty is tiered: 5yr on the unit itself, 3yr on the compressor, 1yr each on sieve beds/battery/accessories; the 5yr unit figure is used as warranty_yr. Drive DeVilbiss's own announcement confirms 'the release of the iGo2 Portable Oxygen Concentrator' but no source consulted gave a specific month or year for that release, so releaseDate is left null rather than guessed."
+    },
+    {
+      "slug": "precision-medical-live-active-five",
+      "name": "Precision Medical Live Active Five",
+      "brand": "Precision Medical",
+      "category": "portable-oxygen-concentrators",
+      "releaseDate": null,
+      "priceUsd": 2333.1,
+      "priceNote": "$2,333.10 is rehabmart.com's 'Full Starter Kit' price (a Power Bundle Kit with an extra battery lists at $2,587.62 on the same page). A separate reseller, lptmedical.com, lists this same model at $3,295.00 with no kit contents specified — the discrepancy likely reflects different bundle contents (single vs. multi-battery kits) rather than one figure being wrong, but this could not be fully reconciled from the pages consulted, so both figures are recorded here with rehabmart's itemized Starter Kit price used as priceUsd.",
+      "specs": {
+        "oxygen_output_ml": 1000,
+        "flow_settings": "1–5",
+        "weight_lb": 5,
+        "battery_life_hr": 6.5,
+        "delivery_mode": "pulse_dose",
+        "noise_db": 40,
+        "faa_approved": true,
+        "warranty_yr": 3
+      },
+      "source": {
+        "url": "https://www.rehabmart.com/product/live-active-five-oxygen-concentrator-49568.html",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://lptmedical.com/products/live-active-five-portable-oxygen-concentrator",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/precision-medical-live-active-five.webp?v=08910efd93",
+        "source": "rehabmart.com",
+        "license": "© Precision Medical",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Model number PM4155 (from the product image filename). Per-setting output per lptmedical.com: 220/440/660/880/1000 ml/min across settings 1-5 (max 1000; rehabmart's own page does not itemize per-setting ml). Weight 5lb with battery. Battery life 6.5h at setting 1 down to 1.5h at setting 5. Oxygen purity 87-95%. Noise '<40dBA at Setting 2' per rehabmart (a ceiling figure, used as-is; lptmedical's page did not state a noise figure). FAA-approved per lptmedical (rehabmart's page does not mention FAA status). 3-year unit warranty, 1yr batteries/sieve beds. precisionmedical.com and its hosted PDF spec sheet (508573_Rev5.pdf) both returned HTTP 403 on every attempt, and no source consulted gave a launch date, so releaseDate is left null."
+    },
+    {
+      "slug": "inogen-one-g3",
+      "name": "Inogen One G3",
+      "brand": "Inogen",
+      "category": "portable-oxygen-concentrators",
+      "releaseDate": "2012",
+      "priceUsd": 2640,
+      "priceNote": "Sale price at oxygenconcentratorstore.com against a $2,995.00 manufacturer list price.",
+      "specs": {
+        "oxygen_output_ml": 1050,
+        "flow_settings": "1–5",
+        "weight_lb": 4.9,
+        "battery_life_hr": 9.5,
+        "delivery_mode": "pulse_dose",
+        "noise_db": 39,
+        "faa_approved": true,
+        "warranty_yr": 3
+      },
+      "source": {
+        "url": "https://www.oxygenconcentratorstore.com/inogen-one-g3/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/inogen-one-g3.jpg?v=056ac58dc4",
+        "source": "oxygenconcentratorstore.com",
+        "license": "© Inogen",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Max output 1050ml/min across 5 pulse settings (per-setting ml breakdown not published on the retailer page). Weight 4.9lb with the 8-cell battery, 5.7lb with the 16-cell battery. Battery life on the 16-cell battery ranges from 9.5h at setting 1 to 3.3h at setting 5 (9.5h used as headline runtime); the 8-cell battery ranges 4.5h down to 1.7h. Noise 'less than 39 decibels' (not tied to a specific setting per this source). Oxygen purity ~90% on all settings. FAA-approved. Warranty 3yr unit, 1yr batteries, 90 days accessories. Still an active, currently-sold product per the retailer, though newer Inogen models (G4, G5, Rove line) have since launched. Released Fall 2012 per multiple retailer/review sources describing it as Inogen's smallest/lightest POC 'back in 2012'."
+    },
+    {
+      "slug": "o2-concepts-oxlife-independence",
+      "name": "O2 Concepts Oxlife Independence",
+      "brand": "O2 Concepts",
+      "category": "portable-oxygen-concentrators",
+      "releaseDate": "2018-12",
+      "priceUsd": 3195,
+      "priceNote": "Sale price at oxygenconcentratorstore.com against a $4,395.00 manufacturer list price.",
+      "specs": {
+        "oxygen_output_ml": 3000,
+        "flow_settings": "Pulse 0.5–6 (0.5 increments); Continuous 0.5–3 LPM (0.5 increments)",
+        "weight_lb": 16.7,
+        "battery_life_hr": 6,
+        "delivery_mode": "pulse_and_continuous_flow",
+        "noise_db": 40,
+        "faa_approved": true,
+        "warranty_yr": 5
+      },
+      "source": {
+        "url": "https://www.oxygenconcentratorstore.com/oxlife-independence/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/o2-concepts-oxlife-independence.jpg?v=715c8d8072",
+        "source": "oxygenconcentratorstore.com",
+        "license": "© O2 Concepts",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "The only product in this set with a true continuous-flow mode (0.5-3.0 LPM in 0.5 increments) alongside pulse dose (0.5-6, 8-96mL/breath in 0.5 increments); oxygen_output_ml here (3000) is the 3.0 LPM continuous-flow maximum, NOT comparable to the pulse-only ml/min figures used for the other 12 products in this set. At 16.7lb (10.9x8x20.2in) this is by far the heaviest/largest unit here — it trades portability for continuous-flow capability that higher-need patients require. Battery life spans 45min (single battery, 3.0 LPM continuous) up to 6h (dual battery, 1.0 pulse setting); 6h is used as the headline runtime figure. Noise 40dB (general figure, not tied to a specific setting per this source). Rated to 13,123ft (4,000m) altitude. FAA-approved. Warranty 5yr unit, 1yr batteries/accessories. FDA 510(k) clearance (K182454) was granted December 20, 2018; that clearance date is used as releaseDate in the absence of a separately-stated commercial-launch date."
+    },
+    {
+      "slug": "inogen-rove-4",
+      "name": "Inogen Rove 4",
+      "brand": "Inogen",
+      "category": "portable-oxygen-concentrators",
+      "releaseDate": "2024-10",
+      "priceUsd": 2775,
+      "priceNote": "Advertised/sale price at oxygenconcentratorstore.com against a $3,999.00 manufacturer list price.",
+      "specs": {
+        "oxygen_output_ml": 840,
+        "flow_settings": "1–4",
+        "weight_lb": 2.9,
+        "battery_life_hr": 5.82,
+        "delivery_mode": "pulse_dose",
+        "noise_db": 39,
+        "faa_approved": true,
+        "warranty_yr": 3
+      },
+      "source": {
+        "url": "https://www.oxygenconcentratorstore.com/inogen-one-rove-4/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://provider.inogen.com/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/inogen-rove-4.jpg?v=91a5b11038",
+        "source": "oxygenconcentratorstore.com",
+        "license": "© Inogen",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Smallest/lightest Inogen in this dataset: 2.9lb with the intermediate battery, 3.4lb with the extended battery (the retailer page gives three battery tiers — standard/intermediate/extended — for runtime, but only states weight for the intermediate and extended tiers, so the standard-battery weight could not be confirmed and 2.9lb, the lightest CONFIRMED figure, is used). Max output 840ml/min across 4 pulse settings (per-setting ml breakdown not published). Battery life at setting 1: 3h1m (standard) / 4h29m (intermediate) / 5h49m (5.82h, extended) — the extended-battery figure is used as headline runtime. Noise 39dB at a 2.0 pulse-dose setting. FAA-approved. Warranty 3yr unit, 1yr battery/accessories. Inogen's own October 8, 2024 BusinessWire release announced 'the U.S. market release of the Inogen Rove 4'; other sources reference earlier 2020 international/development-stage activity for this product line, but the confirmed 2024 US market-release date is used as releaseDate."
+    }
+  ]
+}

@@ -1,0 +1,411 @@
+{
+  "category": "marine-chartplotters",
+  "generatedAt": "2026-08-01",
+  "methodologyNotes": "Covers standalone marine multifunction display (MFD) chartplotter/fishfinder units sold at a published or dealer-listed US price, spanning the five brands a 2026 buyer actually cross-shops: Garmin, Simrad (Navico Group), Raymarine (Teledyne FLIR), Humminbird (Johnson Outdoors) and Furuno. Two of the ten seed models could not be verified as currently sold under their seeded name and were corrected to the real, current SKU after checking the manufacturer's own product-family selector: 'Garmin ECHOMAP UHD2 75sv' is now sold as the 74sv trim (GT54UHD-TM transducer bundle — no 75sv/GT56UHD-TM SKU exists in the live US catalog), and 'Garmin GPSMAP 943xsv' is now sold as the 923xsv (the current x23 generation replaced the older 9x3 naming). Lowrance and B&G (also Navico Group) seeds could not be included: their consumer sites (lowrance.com, bandg.com) returned a bot-verification wall on every fetch attempt, including through a third-party read-only proxy, so no product on those two domains could be verified — 'Simrad NSX 3012' and a second Raymarine/Humminbird/Garmin model were substituted instead to keep the set at 13 products. specKeys: display_size_in (diagonal screen size in inches). resolution_px is the panel's native pixel dimensions as 'WIDTHxHEIGHT', or null if the manufacturer did not publish it. sonar_builtin is a short free-text description of the sonar imaging built into the display itself (CHIRP/DownVü/SideVü/MEGA Imaging/etc.); units that need an external sonar module to get any fish-finding capability say so explicitly (e.g. Raymarine Axiom+, which is chart-plotter-only until a sonar module and transducer are added). chirp_frequencies_khz lists the documented operating frequency band(s) verbatim from the source, semicolon-separated by sonar mode, or null when the maker did not publish a number. gps_type is the GNSS constellations supported plus fix rate, as printed by the manufacturer. touchscreen is true/false only when the source explicitly confirms the control method; several Raymarine Element pages describe physical waypoint/programmable keys and never mention touch, so touchscreen is left null there rather than assumed from the wider product family. networking lists the documented connectivity (NMEA 2000, Wi-Fi, Bluetooth, Ethernet, etc.). preloaded_charts describes what cartography ships on the base SKU actually priced (several of these units ship with zero charts and require a separate chart card — that is stated, not omitted). priceUsd is the base US price of the specific SKU documented in 'source' — for Garmin/Raymarine that is the no-transducer, no-chart configuration where one exists; for Simrad NSX it is the no-transducer 'AMER' SKU; for Simrad GO9 XSE no display-only SKU/price was found, so priceUsd is a bundle price (transducer + radar included) flagged in priceNote. Furuno and both Humminbird HELIX units carry priceUsd: null — Furuno does not publish US MSRP on either furuno.com or furunousa.com (dealer/MAP pricing), and Humminbird's own product pages never show a price on any SKU checked; the HELIX 9 CHIRP MEGA SI+ GPS G4N page additionally states the model is discontinued. Most manufacturer storefronts (garmin.com, simrad-yachting.com, furuno.com, raymarine.com, johnsonoutdoors.com) blocked this project's automated fetcher outright; every spec attributed to those domains below was retrieved through a third-party read-only rendering proxy pointed at the manufacturer's own URL, and each 'source.url' is the manufacturer's real page (not the proxy) so it resolves normally in a browser.",
+  "specKeys": [
+    "display_size_in",
+    "resolution_px",
+    "sonar_builtin",
+    "chirp_frequencies_khz",
+    "gps_type",
+    "touchscreen",
+    "networking",
+    "preloaded_charts"
+  ],
+  "products": [
+    {
+      "slug": "garmin-echomap-uhd2-74sv",
+      "name": "Garmin ECHOMAP UHD2 74sv",
+      "brand": "Garmin",
+      "category": "marine-chartplotters",
+      "releaseDate": null,
+      "priceUsd": 1099.99,
+      "priceNote": "$1,099.99 for part number 010-02685-01 — the 7\" touchscreen model bundled with a GT54UHD-TM transducer and 1 year of Garmin Navionics+ U.S. Coastal & Great Lakes chart updates — as listed on Garmin's own US product page. The seed name '75sv' does not currently exist: Garmin's live ECHOMAP UHD2 7\" SideVü selector only offers a '74sv' trim (GT54UHD-TM transducer); there is no GT56UHD-TM-based '75sv' SKU in the active catalog, so the model name was corrected.",
+      "specs": {
+        "display_size_in": 7,
+        "resolution_px": "800x480",
+        "sonar_builtin": "Ultra High-Def SideVü, ClearVü, and Traditional CHIRP",
+        "chirp_frequencies_khz": "Traditional CHIRP 50/77/83/200; ClearVü/SideVü 260/455/800/1000/1200",
+        "gps_type": "Multi-band GPS, GLONASS, Galileo, BeiDou, 10 Hz",
+        "touchscreen": true,
+        "networking": "NMEA 2000, Wi-Fi (Garmin Marine Network), Bluetooth, ANT",
+        "preloaded_charts": "Garmin Navionics+ U.S. Coastal & Great Lakes Mapping (incl. 1-year chart-update subscription)"
+      },
+      "source": {
+        "url": "https://www.garmin.com/en-US/p/762374/pn/010-02685-01/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/garmin-echomap-uhd2-74sv.jpg?v=c53ae7cc0f",
+        "source": "garmin.com",
+        "license": "© Garmin",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Garmin's own family page for product 762374 (fetched via a read-only rendering proxy after www.garmin.com returned 403 to a direct fetch) lists a size/sonar/chart selector; the SideVü+touchscreen 7\" variant is part number 010-02685-01, named 'ECHOMAP UHD2 74sv with GT54UHD-TM Transducer' — not '75sv' as seeded. Its full spec sheet states: 800x480 WVGA touchscreen, 'Ultra High-Def SideVü, ClearVü and Traditional CHIRP' sonar, Traditional CHIRP at 50/77/83/200 kHz with ClearVü/SideVü at 260/455/800/1000/1200 kHz, a multi-band GPS/GLONASS/Galileo/BeiDou receiver at 10 Hz, NMEA 2000/Wi-Fi/Bluetooth/ANT connectivity, Garmin Navionics+ U.S. Coastal & Great Lakes preloaded charts with a 1-year update subscription, and a price of $1,099.99 with the GT54-TM transducer bundled. The main product photo (part number 010-02685-01, angle 'cf-xl') was confirmed to be a genuine 13KB JPEG of the front of the unit."
+    },
+    {
+      "slug": "garmin-gpsmap-923xsv",
+      "name": "Garmin GPSMAP 923xsv",
+      "brand": "Garmin",
+      "category": "marine-chartplotters",
+      "releaseDate": null,
+      "priceUsd": 1599.99,
+      "priceNote": "$1,599.99 for part number 010-02366-02 (9\" size, no transducer bundled), listed on Garmin's official US product page. The seed name '943xsv' does not exist in Garmin's current catalog: the live GPSMAP x23 family selector (7\"/9\"/12\"/15\"/16\") only offers a '923xsv' at the 9\" size, replacing the older '9x3' naming, so the model name was corrected.",
+      "specs": {
+        "display_size_in": 9,
+        "resolution_px": "1280x720",
+        "sonar_builtin": "SideVü, ClearVü, and Traditional CHIRP",
+        "chirp_frequencies_khz": "Traditional CHIRP 70/83/200; ClearVü/SideVü 260/455/800/1000/1200",
+        "gps_type": "GPS, GLONASS, Galileo, 10 Hz",
+        "touchscreen": true,
+        "networking": "NMEA 2000, NMEA 0183, Garmin Marine Network, ANT, Bluetooth, Wi-Fi, J1939, composite video input",
+        "preloaded_charts": "Worldwide Basemap (non-detailed reference map; detailed regional charts sold separately)"
+      },
+      "source": {
+        "url": "https://www.garmin.com/en-US/p/1872721/pn/010-02366-02/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/garmin-gpsmap-923xsv.jpg?v=bcb1bbe5c0",
+        "source": "garmin.com",
+        "license": "© Garmin",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Garmin's GPSMAP x23-family page (product ID 1872721) lists five sizes — 7\" (723xsv), 9\" (923xsv), 12\" (1223xsv), 15\" ultrawide (1523xsv) and 16\" (1623xsv) — with no '943xsv' variant anywhere in the selector, confirming the seed name needed correcting to '923xsv'. The 9\" variant page (part 010-02366-02) states verbatim: 9.0\" diagonal display at 1280x720 px, 'SideVü, ClearVü and Traditional CHIRP Sonar', single-channel CHIRP at 70/83/200 kHz plus ClearVü/SideVü at 260/455/800/1000/1200 kHz, GPS/GLONASS/Galileo at 10 Hz, touchscreen, NMEA 2000/NMEA 0183/Garmin Marine Network/ANT/Bluetooth/Wi-Fi/J1939/composite-video connectivity, a Worldwide (non-detailed) preloaded basemap, and a price of $1,599.99. Fetched through a read-only rendering proxy because www.garmin.com returned 403 to direct requests; the cited source URL is Garmin's own page. The 'cf-xl' product photo for this exact part number was confirmed as a genuine 16.9KB JPEG."
+    },
+    {
+      "slug": "garmin-echomap-ultra-2-106sv",
+      "name": "Garmin ECHOMAP Ultra 2 106sv",
+      "brand": "Garmin",
+      "category": "marine-chartplotters",
+      "releaseDate": null,
+      "priceUsd": 2099.99,
+      "priceNote": "$2,099.99 for part number 010-02880-00, the 10\" display-only SKU (no transducer), per Garmin's official US product page.",
+      "specs": {
+        "display_size_in": 10,
+        "resolution_px": "1280x800",
+        "sonar_builtin": "Traditional CHIRP, ClearVü, and SideVü (LiveScope-ready via separate transducer)",
+        "chirp_frequencies_khz": "Traditional CHIRP 70/83/200 (L/M/H); ClearVü/SideVü 260/455/800/1000/1200",
+        "gps_type": "Multi-band GPS, GLONASS, Galileo, BeiDou, 10 Hz, WAAS",
+        "touchscreen": true,
+        "networking": "NMEA 2000, two Garmin Marine Network ports, ANT, Garmin Wi-Fi (unit-to-unit)",
+        "preloaded_charts": "Garmin Navionics+ (integrated coastal/inland/lakes, incl. 1-year chart-update subscription)"
+      },
+      "source": {
+        "url": "https://www.garmin.com/en-US/p/1749161/pn/010-02880-00/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/garmin-echomap-ultra-2-106sv.jpg?v=7ce2aed34e",
+        "source": "garmin.com",
+        "license": "© Garmin",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Garmin's ECHOMAP Ultra 2 family page (product 1749161) confirms the '106sv' model name for the 10\" size and states verbatim: 10\" IPS touchscreen at 1280x800 (WXGA), single-channel CHIRP at 70/83/200 kHz (L/M/H) plus ClearVü/SideVü at 260/455/800/1000/1200 kHz with LiveScope support via a separately-sold transducer, multi-band GPS/GLONASS/Galileo/BeiDou at 10 Hz, NMEA 2000 plus two Garmin Marine Network ports, ANT and a local Garmin Wi-Fi network, Garmin Navionics+ preloaded charts with a 1-year update subscription, and a price of $2,099.99 for the no-transducer 010-02880-00 SKU. This matches the seeded model name exactly. Fetched via a read-only rendering proxy after www.garmin.com blocked direct requests with 403; the cited URL is Garmin's own page."
+    },
+    {
+      "slug": "simrad-nsx-3009",
+      "name": "Simrad NSX 3009",
+      "brand": "Simrad",
+      "category": "marine-chartplotters",
+      "releaseDate": null,
+      "priceUsd": 1449,
+      "priceNote": "$1,449 for SKU 000-15218-001, the 9\" display without a transducer (US/AMER SKU), per Simrad's official US product page.",
+      "specs": {
+        "display_size_in": 9,
+        "resolution_px": "1280x720",
+        "sonar_builtin": "Single-channel CHIRP sonar port supporting HDI and Active Imaging transducers (transducer sold separately)",
+        "chirp_frequencies_khz": "50/200 base CHIRP port rating (HDI/Active Imaging transducers add higher frequencies)",
+        "gps_type": "Internal GPS, 32-channel, 10 Hz, 3 m horizontal accuracy",
+        "touchscreen": true,
+        "networking": "Bluetooth 4.0, Wi-Fi 802.11b/g/n, 1 Ethernet port, NMEA 2000 (Micro-C), 1 USB, microSD",
+        "preloaded_charts": "C-MAP DISCOVER X"
+      },
+      "source": {
+        "url": "https://www.simrad-yachting.com/simrad/type/fishfinders-chartplotters/nsx-3009-no-xdcr-amer/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.simrad-yachting.com/nsx/specifications/",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Simrad's US product page for SKU 000-15218-001 ('NSX 3009', no transducer, AMER region) states verbatim: 9-inch SolarMAX IPS HD touchscreen at 1280x720 px (>1200 nits), internal 10 Hz/32-channel GPS with 3 m horizontal accuracy, Bluetooth 4.0, Wi-Fi 802.11b/g/n, one Ethernet port, one NMEA 2000 port, one 9-pin Xsonic sonar port compatible with CHIRP/HDI/Active Imaging, C-MAP DISCOVER X cartography included, and a price of $1,449. The separate NSX-series specifications page corroborates the exact same 1280x720 resolution, 'One 9 pin Xsonic Sonar port. Single channel CHIRP, 50/200 Khz, HDI, Active Imaging', internal 10 Hz GPS, and multi-touch screen across all NSX sizes. Both simrad-yachting.com pages returned 403 to a direct fetch and were retrieved through a read-only rendering proxy; the cited URLs are Simrad's own pages. Note: lowrance.com and bandg.com (same Navico Group parent) returned an unresolvable bot-verification wall on every attempt, including through the proxy, so no Lowrance or B&G model could be included in this dataset."
+    },
+    {
+      "slug": "simrad-nsx-3012",
+      "name": "Simrad NSX 3012",
+      "brand": "Simrad",
+      "category": "marine-chartplotters",
+      "releaseDate": null,
+      "priceUsd": 2749,
+      "priceNote": "$2,749 for SKU 000-15222-001, the 12\" display without a transducer (US/AMER SKU), per Simrad's official US product page.",
+      "specs": {
+        "display_size_in": 12,
+        "resolution_px": "1280x800",
+        "sonar_builtin": "Single-channel CHIRP sonar port supporting HDI and Active Imaging transducers (transducer sold separately)",
+        "chirp_frequencies_khz": "50/200 base CHIRP port rating (HDI/Active Imaging transducers add higher frequencies)",
+        "gps_type": "Internal GPS, 32-channel, 10 Hz, 3 m horizontal accuracy",
+        "touchscreen": true,
+        "networking": "Wi-Fi, Ethernet, USB, NMEA 2000",
+        "preloaded_charts": "C-MAP DISCOVER X"
+      },
+      "source": {
+        "url": "https://www.simrad-yachting.com/simrad/type/fishfinders-chartplotters/nsx-3012-no-xdcr-amer/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.simrad-yachting.com/nsx/specifications/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/simrad-nsx-3012.png?v=8571dac28f",
+        "source": "simrad-yachting.com",
+        "license": "© Navico Group (Simrad)",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Simrad's US product page for SKU 000-15222-001 ('NSX 3012', no transducer, AMER region) states verbatim: 12-inch SolarMAX IPS HD touchscreen at 1280x800 px (>1200 nits), internal 10 Hz/32-channel GPS, wireless plus full Ethernet/USB/NMEA 2000 networking, one 9-pin Xsonic sonar port supporting CHIRP/HDI/Active Imaging, C-MAP DISCOVER X charts included, and a price of $2,749. The NSX-series specifications page corroborates the 1280x800 resolution and identical GPS/sonar/connectivity spec for the 12-inch size. Added in place of a Lowrance seed model, since lowrance.com's bot-verification wall could not be bypassed with the tools available (see NSX 3009 provenance for detail); Simrad is the closest verifiable sibling brand under the same Navico Group parent and directly comparable technology. Fetched via a read-only rendering proxy after direct fetches to simrad-yachting.com returned 403."
+    },
+    {
+      "slug": "simrad-go9-xse",
+      "name": "Simrad GO9 XSE",
+      "brand": "Simrad",
+      "category": "marine-chartplotters",
+      "releaseDate": null,
+      "priceUsd": 1999,
+      "priceNote": "$1,999 is the price of SKU 000-16294-001, a specific bundle: 9\" display + 83/200 kHz HDI transom-mount transducer + HALO20 radar dome + C-MAP DISCOVER (North America) chart. Simrad's site did not present a display-only price or SKU for GO9 XSE, so this bundle figure is used as-is rather than an estimated bare-unit price.",
+      "specs": {
+        "display_size_in": 9,
+        "resolution_px": null,
+        "sonar_builtin": "Broadband/CHIRP echosounder with DownScan and SideScan Imaging plus ForwardScan (all require a separate transducer)",
+        "chirp_frequencies_khz": null,
+        "gps_type": "Internal GPS, 10 Hz",
+        "touchscreen": true,
+        "networking": "Wi-Fi (mobile mirroring/downloads), NMEA 2000, dual microSD",
+        "preloaded_charts": "C-MAP DISCOVER (North America, included in this bundle)"
+      },
+      "source": {
+        "url": "https://www.simrad-yachting.com/simrad/type/fishfinders-chartplotters/go9xse-83200-tm-xdcmap-discoverhalo20/",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Simrad's product page for SKU 000-16294-001 identifies it as the 'GO9 XSE' bundled with an 83/200 kHz HDI transducer and a HALO20 radar, describing a 9\" 'super-bright, multi-touch widescreen display', built-in Broadband/CHIRP echosounder with DownScan/SideScan/ForwardScan support (transducer required for all imaging modes), a built-in 10 Hz GPS antenna, Wi-Fi for mirroring/downloads, NMEA 2000 networking, dual microSD slots, C-MAP DISCOVER (North America) cartography, and the bundle price of $1,999. No exact screen resolution or CHIRP frequency figures were published on this or the general GO-series category page, so both are left null rather than estimated. A display-only SKU/price for GO9 XSE could not be located on simrad-yachting.com (the linked 'no-xdcr' style URL guessed from the NSX naming pattern returned a real 404). Fetched via a read-only rendering proxy after simrad-yachting.com returned 403 to direct requests."
+    },
+    {
+      "slug": "raymarine-axiom-plus-9",
+      "name": "Raymarine Axiom+ 9",
+      "brand": "Raymarine",
+      "category": "marine-chartplotters",
+      "releaseDate": null,
+      "priceUsd": 1299.99,
+      "priceNote": "$1,299.99 for SKU E70636, the base 9\" unit with no preloaded charts, per Raymarine's official US product page. A chart-inclusive variant (SKU E70636-00-102, preloaded LightHouse Charts North America) is $1,399.99.",
+      "specs": {
+        "display_size_in": 9,
+        "resolution_px": "1280x720",
+        "sonar_builtin": "None built-in — chartplotter only; adding fishfinding requires an external sonar module and transducer via the 25-pin RealVision-type connector",
+        "chirp_frequencies_khz": null,
+        "gps_type": "GPS, GLONASS, BeiDou, internal ceramic chip antenna, SBAS (WAAS in the US)",
+        "touchscreen": true,
+        "networking": "RayNet Ethernet (10/100 Mbps), NMEA 2000 (DeviceNet), Bluetooth 4.0, Wi-Fi 802.11 b/g/n, USB Micro-B, microSDXC",
+        "preloaded_charts": "None on base SKU E70636; LightHouse Charts North America on SKU E70636-00-102"
+      },
+      "source": {
+        "url": "https://www.raymarine.com/en-us/our-products/chartplotters/axiom/axiom-plus",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.raymarine.com/en-us/learning/online-guides/axiom-chartplotter-model-guide",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/raymarine-axiom-plus-9.webp?v=6d75b1355e",
+        "source": "raymarine.com",
+        "license": "© Raymarine (Teledyne FLIR)",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Raymarine's US Axiom+ page confirms the 9\" variant (SKU E70636) verbatim: 'Widescreen HD 1280 x 720' IPS touchscreen with 2-point multi-touch and HydroTough oleophobic coating, a 25-pin RealVision-type sonar connector (no sonar built in), GPS/GLONASS/BeiDou via an internal ceramic chip antenna with SBAS (WAAS noted for the US), RayNet Ethernet (10/100 Mbps), NMEA 2000 DeviceNet, Bluetooth 4.0, Wi-Fi 802.11 b/g/n, USB Micro-B and a microSDXC slot, no charts on the base E70636 SKU ($1,299.99) versus preloaded LightHouse Charts North America on E70636-00-102 ($1,399.99). Raymarine's own Axiom model-guide page independently corroborates that Axiom+ is 'Touchscreen only' (no keypad) across its 7/9/12\" sizes, matching the touchscreen:true value here. Fetched directly from raymarine.com (the en-us locale path was reachable, unlike www.garmin.com/lowrance.com/simrad-yachting.com's product catalogs on first attempt); the 9\"-specific product thumbnail image was confirmed as a genuine 11.1KB WebP photo of the front of the unit."
+    },
+    {
+      "slug": "raymarine-axiom-2-pro-s-9",
+      "name": "Raymarine Axiom 2 Pro-S 9",
+      "brand": "Raymarine",
+      "category": "marine-chartplotters",
+      "releaseDate": null,
+      "priceUsd": 3024.99,
+      "priceNote": "$3,024.99 for SKU E70653, the 9\" no-chart variant, per Raymarine's official US product page.",
+      "specs": {
+        "display_size_in": 9,
+        "resolution_px": "1280x720",
+        "sonar_builtin": "Built-in single-channel CHIRP conical sonar, 0.6 m to 274 m depth range",
+        "chirp_frequencies_khz": null,
+        "gps_type": "GPS, Galileo, GLONASS, BeiDou, internal ceramic chip antenna, up to 28 satellites tracked",
+        "touchscreen": true,
+        "networking": "2x RayNet Ethernet (10/100/1000 Mbps), NMEA 2000 (DeviceNet), Wi-Fi 802.11 b/g/n (2.4/5 GHz), Bluetooth 4.0, USB Micro-B, HDMI out, 2x microSDXC",
+        "preloaded_charts": "None on base SKU E70653; North America LightHouse Charts on the chart-inclusive SKU"
+      },
+      "source": {
+        "url": "https://www.raymarine.com/en-us/our-products/chartplotters/axiom/axiom-2-pro-s",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.raymarine.com/en-us/learning/online-guides/axiom-chartplotter-model-guide",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/raymarine-axiom-2-pro-s-9.webp?v=30927db03b",
+        "source": "raymarine.com",
+        "license": "© Raymarine (Teledyne FLIR)",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Raymarine's US Axiom 2 Pro-S page confirms the 9\" variant (SKU E70653) verbatim: 9.0\" diagonal 1280x720 HD IPS display at 1300 nits, built-in CHIRP conical sonar with a 0.6-274 m depth range, GPS/Galileo/GLONASS/BeiDou via an internal ceramic chip antenna tracking up to 28 satellites, HybridTouch control (touchscreen plus interchangeable physical keypad for autopilot or programmable soft keys), two RayNet Ethernet ports (10/100/1000 Mbps), NMEA 2000, dual-band Wi-Fi, Bluetooth 4.0, USB Micro-B, HDMI output, two microSDXC slots, no charts on the base SKU, and a price of $3,024.99. Raymarine's own Axiom model-guide page independently corroborates that Axiom 2 Pro uses 'HybridTouch (keypad + touch screen)' with a rotary dial and trackpad, distinguishing it from the touch-only Axiom+/Axiom 2. Added as an extra Raymarine tier (in place of an inaccessible Lowrance seed) to give the dataset a keypad-plus-touch control option alongside touch-only units. Fetched directly from raymarine.com; the labeled 'Axiom 2 Pro 9 with HydroTough' product photo was confirmed as a genuine 146.3KB WebP image showing the physical keypad and rotary dial."
+    },
+    {
+      "slug": "raymarine-element-12-hv",
+      "name": "Raymarine Element 12 HV",
+      "brand": "Raymarine",
+      "category": "marine-chartplotters",
+      "releaseDate": null,
+      "priceUsd": 1374.99,
+      "priceNote": "$1,374.99 for SKU E70536, the base 12\" unit with no preloaded charts, per Raymarine's official US product page.",
+      "specs": {
+        "display_size_in": 12.1,
+        "resolution_px": "1280x800",
+        "sonar_builtin": "HyperVision: RealVision 3D, SideVision, and DownVision",
+        "chirp_frequencies_khz": "1200 (1.2 MHz), 350, 200",
+        "gps_type": "GPS, GLONASS, BeiDou, SBAS-compatible",
+        "touchscreen": null,
+        "networking": "SeaTalkNG/NMEA 2000 (1 DeviceNet connector), 2.4 GHz Wi-Fi 802.11 b/g/n, 1x 15-pin HyperVision transducer connector",
+        "preloaded_charts": "None on base SKU E70536; LightHouse Charts North America on bundle SKUs (e.g. E70536-00-102)"
+      },
+      "source": {
+        "url": "https://www.raymarine.com/en-us/our-products/chartplotters/element/element-hv",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/raymarine-element-12-hv.webp?v=2c95373b69",
+        "source": "raymarine.com",
+        "license": "© Raymarine (Teledyne FLIR)",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Raymarine's US Element HV page confirms the 12\" variant (SKU E70536) verbatim: 12.1\" WXGA display at 1280x800, HyperVision sonar operating at 1.2 MHz, 350 kHz and 200 kHz CHIRP modes delivering 'RealVision 3D, SideVision, DownVision' imaging, GPS/GLONASS/BeiDou with SBAS compatibility, one SeaTalkNG/NMEA 2000 port, 2.4 GHz Wi-Fi, a 15-pin HyperVision transducer connector, no charts on the base SKU, and a price of $1,374.99. touchscreen is left null: two separate targeted searches of Raymarine's own Element pages found no mention of 'touch' anywhere, while the 'Intuitive Controls' section instead describes 'an oversized waypoint key' and 'three user-programmable keys' — evidence points at physical-key control but is not an explicit statement either way, so this is recorded as unconfirmed rather than assumed from the wider Raymarine lineup. Fetched directly from raymarine.com; the '12 HV'-labeled product image was confirmed as a genuine 61.4KB WebP photo."
+    },
+    {
+      "slug": "raymarine-element-7-s",
+      "name": "Raymarine Element 7 S",
+      "brand": "Raymarine",
+      "category": "marine-chartplotters",
+      "releaseDate": null,
+      "priceUsd": 494.99,
+      "priceNote": "$494.99 for SKU E70531, the base 7\" unit with no preloaded charts; $544.99 for the chart-inclusive bundle (LightHouse Charts North America + 1 free year of LightHouse Charts Premium), per Raymarine's official US product page.",
+      "specs": {
+        "display_size_in": 7,
+        "resolution_px": "800x480",
+        "sonar_builtin": "Single-channel High CHIRP for depth and bottom-contour imaging (no DownVision/SideVision — that requires the Element HV line)",
+        "chirp_frequencies_khz": null,
+        "gps_type": "GPS, GLONASS, BeiDou, 10 Hz, SBAS (WAAS, EGNOS, GAGAN, MSAS, QZSS)",
+        "touchscreen": null,
+        "networking": "SeaTalkNG/NMEA 2000 (1 port), 2.4 GHz Wi-Fi 802.11 b/g/n, 1x 15-pin transducer connector",
+        "preloaded_charts": "None on base SKU E70531; LightHouse Charts North America + 1-yr Premium subscription on SKU E70531-00-102"
+      },
+      "source": {
+        "url": "https://www.raymarine.com/en-us/our-products/chartplotters/element/element-s",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/raymarine-element-7-s.webp?v=56f5886661",
+        "source": "raymarine.com",
+        "license": "© Raymarine (Teledyne FLIR)",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Raymarine's US Element S page confirms the 7\" variant (SKU E70531) verbatim: WVGA 800x480 display on a 5:3 aspect ratio 7.0\" screen, 'High CHIRP sonar for depth and bottom contour imaging' (single-channel, no imaging sonar), a 10 Hz GPS/GNSS sensor tracking up to 28 satellites across GPS/GLONASS/BeiDou with WAAS/EGNOS/GAGAN/MSAS/QZSS SBAS, one SeaTalkNG/NMEA 2000 port, 2.4 GHz Wi-Fi, a 15-pin transducer connector, no charts on the base SKU, and prices of $494.99 (base) / $544.99 (with LightHouse Charts North America bundle plus a free year of LightHouse Charts Premium). touchscreen is left null for the same reason as the Element 12 HV entry — Raymarine's own page text describes physical waypoint/programmable keys and never states whether the screen itself is also touch-capable. Fetched directly from raymarine.com; the 7 S product thumbnail was confirmed as a genuine 10KB WebP image."
+    },
+    {
+      "slug": "humminbird-helix-9-chirp-mega-si-plus-gps-g4n",
+      "name": "Humminbird HELIX 9 CHIRP MEGA SI+ GPS G4N",
+      "brand": "Humminbird",
+      "category": "marine-chartplotters",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "Humminbird's own product page for this exact unit states it is discontinued and shows no price; no US MSRP appears anywhere on humminbird.johnsonoutdoors.com for any HELIX SKU checked (Humminbird uses dealer/MAP pricing, not a published storefront price). The seeded name 'HELIX 9 CHIRP MEGA SI' is missing the '+' and 'G4N' that Humminbird's own site uses for the exact model; corrected here to match the manufacturer's naming, though this generation is no longer an active catalog item (the current 9\" HELIX offering is sold only bundled, as the 'ICE HELIX 9 MSI+ GPS G4N MEGA 360 Bundle').",
+      "specs": {
+        "display_size_in": 9,
+        "resolution_px": "1024x600",
+        "sonar_builtin": "MEGA CHIRP + MEGA Side Imaging+ + MEGA Down Imaging+",
+        "chirp_frequencies_khz": "MEGA CHIRP: full 150-220, narrow 180-240, wide 140-200, optional 28-250; MEGA SI+ 1050-1175; MEGA DI+ 1100-1200; also supports 50/83/200/455/800",
+        "gps_type": "Internal GPS receiver with trackplotting; Humminbird Basemap preloaded (10,000+ lakes plus US coastal)",
+        "touchscreen": false,
+        "networking": "Ethernet (5-port switch compatible), NMEA 2000, Bluetooth, Wi-Fi, One-Boat Network",
+        "preloaded_charts": "Humminbird Basemap (10,000+ lakes plus continental US coastal coverage); LakeMaster/CoastMaster/Navionics compatible but sold separately"
+      },
+      "source": {
+        "url": "https://humminbird.johnsonoutdoors.com/us/shop/fish-finders/helix/helix-9-chirp-mega-si-gps-g4n",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/humminbird-helix-9-chirp-mega-si-plus-gps-g4n.webp?v=d49b0fdffc",
+        "source": "johnsonoutdoors.com",
+        "license": "© Johnson Outdoors (Humminbird)",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Humminbird's own product page for this SKU (accessed by guessing the URL slug after the model did not appear in the current 'shop/fish-finders/helix' catalog listing of 14 active results, which shows only 5\"/7\" units plus an 'ICE HELIX 9 MSI+ GPS G4N MEGA 360 Bundle') confirms the exact model 'HELIX 9 CHIRP MEGA SI+ GPS G4N' and states it is discontinued with no price shown. Its spec sheet gives, verbatim: 9\" color TFT display at 1024x600 (16-bit grayscale), MEGA CHIRP in Full (150-220 kHz)/Narrow (180-240 kHz)/Wide (140-200 kHz) modes plus an optional 28-250 kHz range, MEGA Side Imaging+ at 1050-1175 kHz, MEGA Down Imaging+ at 1100-1200 kHz, legacy 50/83/200/455/800 kHz support, a built-in GPS receiver with Humminbird Basemap (10,000+ lakes plus US coastal coverage) preloaded, Ethernet/NMEA 2000/Bluetooth/Wi-Fi networking, and One-Boat Network compatibility. A separate targeted text search of the same page for 'touch'/'keypad' returned: 'Keypad control: Master HELIX at the touch of a button... operated by soft key controls', confirming physical-button (not touchscreen) operation. Fetched directly from humminbird.johnsonoutdoors.com; the product photo was confirmed as a genuine 30.3KB WebP image of the unit's front panel."
+    },
+    {
+      "slug": "humminbird-helix-7-chirp-mega-di-gps-g4",
+      "name": "Humminbird HELIX 7 CHIRP MEGA DI GPS G4",
+      "brand": "Humminbird",
+      "category": "marine-chartplotters",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "No price is shown anywhere on Humminbird's own product page for this SKU (411610-1); Humminbird does not publish MSRP on humminbird.johnsonoutdoors.com and leaves pricing to dealers.",
+      "specs": {
+        "display_size_in": 7,
+        "resolution_px": "1024x600",
+        "sonar_builtin": "MEGA CHIRP + MEGA Down Imaging",
+        "chirp_frequencies_khz": "MEGA CHIRP: full 150-220, narrow 180-240, wide 140-200, optional 28-250; MEGA DI 1075-1150; also supports 50/83/200/455/800",
+        "gps_type": "Internal GPS receiver; Humminbird Basemap preloaded (10,000+ lakes plus US coastal)",
+        "touchscreen": false,
+        "networking": "No NMEA 2000; compatible with AIS, autopilot, and Minn Kota Built-In MEGA DI/US2 Sonar; single microSD slot",
+        "preloaded_charts": "Humminbird Basemap (10,000+ lakes plus US coastal coverage); LakeMaster/CoastMaster/Navionics compatible but sold separately"
+      },
+      "source": {
+        "url": "https://humminbird.johnsonoutdoors.com/us/shop/fish-finders/helix/helix-7-chirp-mega-di-gps-g4",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/humminbird-helix-7-chirp-mega-di-gps-g4.webp?v=8ff165aa09",
+        "source": "johnsonoutdoors.com",
+        "license": "© Johnson Outdoors (Humminbird)",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Humminbird's own product page (SKU 411610-1) for the 'HELIX 7 CHIRP MEGA DI GPS G4' — one of the 14 models listed in the live 'shop/fish-finders/helix' catalog — states verbatim: 7\" color TFT display at 1024x600 (16-bit grayscale), touchscreen not supported ('Touchscreen: Not supported'), MEGA CHIRP in Full (150-220 kHz)/Narrow (180-240 kHz)/Wide (140-200 kHz) modes plus optional 28-250 kHz, MEGA DI Imaging at 1075-1150 kHz, legacy 50/83/200/455/800 kHz support, an internal GPS receiver with Humminbird Basemap preloaded, no NMEA 2000 but AIS/autopilot/Minn Kota compatibility, and a single microSD slot. No price appears anywhere on the page. Added as a second, currently-active Humminbird model alongside the discontinued HELIX 9, to keep at least one fully-in-catalog Humminbird unit in the set. Fetched directly from humminbird.johnsonoutdoors.com; the product photo was confirmed as a genuine 115.3KB WebP image."
+    },
+    {
+      "slug": "furuno-gp-1871f",
+      "name": "Furuno GP-1871F",
+      "brand": "Furuno",
+      "category": "marine-chartplotters",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "No US MSRP is published on furuno.com; furunousa.com (Furuno's US consumer storefront) returned 403 on every fetch attempt so no US-retail price could be independently checked. Furuno sells recreational chartplotters through a dealer network with negotiated/MAP pricing rather than a fixed public list price.",
+      "specs": {
+        "display_size_in": 7,
+        "resolution_px": "800x480",
+        "sonar_builtin": "Built-in TruEcho CHIRP fish finder with RezBoost, ACCU-FISH and Bottom Discrimination",
+        "chirp_frequencies_khz": "40-225",
+        "gps_type": "Internal 72-channel GPS antenna, WAAS/EGNOS/MSAS SBAS",
+        "touchscreen": true,
+        "networking": "NMEA 2000 (CAN bus), NMEA 0183, wireless tablet/smartphone mirroring, compatible with DRS4W wireless radar and NAVpilot autopilot",
+        "preloaded_charts": "None confirmed preloaded; compatible with C-MAP 4D and Navionics chart cards (sold separately)"
+      },
+      "source": {
+        "url": "https://www.furuno.com/en/products/chartplotter/GP-1871F",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/furuno-gp-1871f.jpg?v=ecb95c46bf",
+        "source": "furuno.com",
+        "license": "© Furuno",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Furuno's global product page for the GP-1871F states verbatim: 7\" wide color TFT LCD at 800x480 px with a multi-touch interface and finger-gesture controls, 1000 cd/m² brightness with anti-reflective coating, a built-in TruEcho CHIRP fish finder operating 40-225 kHz (compatible with 300W/600W/1kW transducers, max depth range 1200 m) featuring RezBoost, ACCU-FISH and Bottom Discrimination, an internal 72-channel GPS antenna with WAAS/EGNOS/MSAS SBAS support, NMEA 2000 (CAN bus) and NMEA 0183 ports, wireless mirroring to tablets/smartphones, compatibility with the DRS4W wireless radar and NAVpilot autopilot, dual microSD card slots, IP56 water resistance, and compatibility with C-MAP 4D and Navionics charts. No price was listed on this page or found on furunousa.com, which blocked every direct fetch attempt with a 403 (unlike furuno.com's global site, which was directly reachable). The hero product photo (GP-1871F.jpg) was confirmed as a genuine 77KB JPEG of the unit."
+    }
+  ]
+}

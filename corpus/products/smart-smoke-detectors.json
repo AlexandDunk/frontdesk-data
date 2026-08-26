@@ -1,0 +1,361 @@
+{
+  "category": "smart-smoke-detectors",
+  "generatedAt": "2026-08-16",
+  "methodologyNotes": "Roster of 11 connected smoke/combo smoke+CO devices plus audio \"listener\" accessories, after adversarial re-verification. All checks were WebFetch against source pages (WebSearch was unavailable); several retailer/manufacturer pages (X-Sense, Amazon, Lowe's, Best Buy) block automated fetches, and the Google Store is geo-consent-gated, so a number of prices are set to null rather than guessed (a null beats a guess). One draft entry (X-Sense \"SC06-WX\") was REMOVED: its own cited review covers only the RF-interconnect SC06-W (sealed 10-yr battery, Link+ mesh, no Wi-Fi) and makes no mention of any Wi-Fi \"SC06-WX\" model, whose specs/price were extrapolated. sensor_life_yr is the manufacturer-stated sealed-battery/sensor rated life in years (null when only a warranty period, not a life rating, is stated; null for the audio-listener accessories, which have no smoke/CO sensor of their own). Confirmed live prices: X-Sense SC07-WX $44.99 (the-gadgeteer), Kidde P4010ACSCO-WF $89.97 (Consumer Reports), Ecolink FireFighter $39 (Home Controls); Nest Protect held at $119 (canonical, store page consent-gated). Discontinued First Alert/Onelink models and blocked X-Sense/Ring listings had unverifiable prices nulled. Kidde voice_location_alerts nulled (Kidde voice output not confirmed as location-announcing; that is a First Alert feature). All prices USD; generatedAt and every accessedAt = 2026-08-16.",
+  "specKeys": [
+    "sensor_type",
+    "detects_co",
+    "power",
+    "interconnect",
+    "app_alerts",
+    "voice_location_alerts",
+    "sensor_life_yr",
+    "self_test"
+  ],
+  "products": [
+    {
+      "slug": "google-nest-protect-2nd-gen-battery",
+      "name": "Google Nest Protect (2nd Gen, Battery)",
+      "brand": "Google",
+      "category": "smart-smoke-detectors",
+      "releaseDate": "2015",
+      "priceUsd": 119,
+      "priceNote": "Google Store MSRP (S3000BWES); $119 list price has held since the 2015 launch. Store spec page was consent-gated during verification, so price is the well-established canonical MSRP rather than a fresh fetch.",
+      "specs": {
+        "sensor_type": "split_spectrum",
+        "detects_co": true,
+        "power": "battery",
+        "interconnect": "wireless",
+        "app_alerts": true,
+        "voice_location_alerts": true,
+        "sensor_life_yr": 10,
+        "self_test": true
+      },
+      "source": {
+        "url": "https://support.google.com/googlenest/answer/9229922?hl=en",
+        "accessedAt": "2026-08-16"
+      },
+      "corroboration": {
+        "url": "https://store.google.com/us/product/nest_protect_2nd_gen_specs?hl=en-US",
+        "accessedAt": "2026-08-16"
+      },
+      "provenance": "Confirmed via Google's official spec support page: split-spectrum smoke sensor, 10-year electrochemical CO sensor, 6x AA (Energizer Ultimate Lithium L91) battery power, and 802.15.4 (2.4GHz) wireless interconnect. Voice/location alerts and monthly automatic self-test are documented Nest Protect features (not spelled out on the fetched page). Store price page redirected to a Google consent wall during fetch; $119 retained as the long-stable, currently-sold MSRP."
+    },
+    {
+      "slug": "google-nest-protect-2nd-gen-wired",
+      "name": "Google Nest Protect (2nd Gen, Wired)",
+      "brand": "Google",
+      "category": "smart-smoke-detectors",
+      "releaseDate": "2015",
+      "priceUsd": 119,
+      "priceNote": "Google Store MSRP (S3003LWES); same $119 list as the battery variant. Store spec page consent-gated during verification.",
+      "specs": {
+        "sensor_type": "split_spectrum",
+        "detects_co": true,
+        "power": "hardwired",
+        "interconnect": "wireless",
+        "app_alerts": true,
+        "voice_location_alerts": true,
+        "sensor_life_yr": 10,
+        "self_test": true
+      },
+      "source": {
+        "url": "https://support.google.com/googlenest/answer/9229922?hl=en",
+        "accessedAt": "2026-08-16"
+      },
+      "corroboration": {
+        "url": "https://store.google.com/config/nest_protect_2nd_gen?hl=en-US",
+        "accessedAt": "2026-08-16"
+      },
+      "provenance": "Same sensor platform as the battery model; runs on 120V AC with 3 AA backup batteries per Google's spec page (802.15.4 wireless interconnect, 10-year CO sensor). Price kept as canonical $119 (store page consent-gated).",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/google-nest-protect-2nd-gen-wired.jpg?v=2aee7e0ae5",
+        "source": "support.google.com",
+        "license": "© Google",
+        "accessedAt": "2026-08-16"
+      }
+    },
+    {
+      "slug": "first-alert-onelink-safe-and-sound",
+      "name": "First Alert Onelink Safe & Sound",
+      "brand": "First Alert",
+      "category": "smart-smoke-detectors",
+      "releaseDate": "2017",
+      "priceUsd": null,
+      "priceNote": "Discontinued by First Alert; manufacturer page shows no current price. Original launch MSRP was around $249 but could not be confirmed via an accessible live source, so price is null.",
+      "specs": {
+        "sensor_type": "photoelectric",
+        "detects_co": true,
+        "power": "hardwired",
+        "interconnect": "wireless",
+        "app_alerts": true,
+        "voice_location_alerts": true,
+        "sensor_life_yr": 10,
+        "self_test": true
+      },
+      "source": {
+        "url": "https://www.firstalertstore.com/store/products/onelink-smoke-and-carbon-monoxide-alarm-with-amazon-alexa-1039102.htm",
+        "accessedAt": "2026-08-16"
+      },
+      "corroboration": {
+        "url": "https://shopsavvy.com/products/first-alert-onelink-safe-and-sound",
+        "accessedAt": "2026-08-16"
+      },
+      "provenance": "First Alert's own (now-discontinued) product page confirms photoelectric+electrochemical sensors, hardwired power with a 10-year sealed-lithium backup battery, Wi-Fi/Bluetooth interconnect, and 85dB voice alerts that announce location and hazard type; built-in Alexa, UL 217/2034. Note the product warranty is 3 years (the 10-year figure is the sealed backup-battery rating, retained for sensor_life_yr). Price nulled: page lists no price and no live retail price was verifiable.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/first-alert-onelink-safe-and-sound.jpg?v=fa5bfd23a2",
+        "source": "firstalertstore.com",
+        "license": "© First Alert",
+        "accessedAt": "2026-08-16"
+      }
+    },
+    {
+      "slug": "x-sense-sc07-wx",
+      "name": "X-Sense SC07-WX",
+      "brand": "X-Sense",
+      "category": "smart-smoke-detectors",
+      "releaseDate": null,
+      "priceUsd": 44.99,
+      "priceNote": "X-Sense 1-pack list price ($44.99), confirmed via hands-on review; frequently discounted to ~$33 on Amazon (~$33.11/1-pack).",
+      "specs": {
+        "sensor_type": "photoelectric",
+        "detects_co": true,
+        "power": "battery",
+        "interconnect": "app_only",
+        "app_alerts": true,
+        "voice_location_alerts": false,
+        "sensor_life_yr": 10,
+        "self_test": true
+      },
+      "source": {
+        "url": "https://the-gadgeteer.com/2024/01/10/x-sense-sc07-wx-wi-fi-connected-smoke-and-carbon-monoxide-detector-review-know-whats-happening-even-when-youre-not-at-home/",
+        "accessedAt": "2026-08-16"
+      },
+      "corroboration": {
+        "url": "https://www.x-sense.com/products/smart-smoke-detector-carbon-monoxide-detector-combo-sc07-wx",
+        "accessedAt": "2026-08-16"
+      },
+      "provenance": "Photoelectric smoke + electrochemical CO sensing, replaceable CR123A battery, 2.4GHz Wi-Fi app connectivity (no unit-to-unit interconnect), 10-year unit operating life, button self-test — all confirmed in the-gadgeteer hands-on review, which also confirms the $44.99 X-Sense list price. releaseDate nulled: review is dated Jan 2024 and the exact release year (draft said 2023) was not corroborated.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/x-sense-sc07-wx.jpg?v=bbd25ef891",
+        "source": "the-gadgeteer.com",
+        "license": "© X-Sense",
+        "accessedAt": "2026-08-16"
+      }
+    },
+    {
+      "slug": "x-sense-xs01-wt",
+      "name": "X-Sense XS01-WT",
+      "brand": "X-Sense",
+      "category": "smart-smoke-detectors",
+      "releaseDate": "2021",
+      "priceUsd": null,
+      "priceNote": "Published US price could not be confirmed (x-sense.com blocked automated fetch; the review did not state a price). Set to null rather than guessed.",
+      "specs": {
+        "sensor_type": "photoelectric",
+        "detects_co": false,
+        "power": "battery",
+        "interconnect": "app_only",
+        "app_alerts": true,
+        "voice_location_alerts": false,
+        "sensor_life_yr": 10,
+        "self_test": true
+      },
+      "source": {
+        "url": "https://www.mbreviews.com/x-sense-xs01-wt-review/",
+        "accessedAt": "2026-08-16"
+      },
+      "corroboration": {
+        "url": "https://www.x-sense.com/products/xs01-standalone-smoke-alarm",
+        "accessedAt": "2026-08-16"
+      },
+      "provenance": "Smoke-only photoelectric alarm (no CO sensor) confirmed via hands-on review, CR123A battery (~1yr cell, ~10yr rated unit life), Wi-Fi via Tuya Smart app (up to 100 networked units through the app, not direct interconnect), Test/Mute self-check. releaseDate 2021 retained (review published Jul 2021, positioned as successor to XS01-WR). Price nulled — not stated in any accessible source.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/x-sense-xs01-wt.jpg?v=b7fdc528ad",
+        "source": "mbreviews.com",
+        "license": "© X-Sense",
+        "accessedAt": "2026-08-16"
+      }
+    },
+    {
+      "slug": "kidde-smart-smoke-co-aq",
+      "name": "Kidde Smart Smoke + CO Alarm with Indoor Air Quality Monitor (P4010ACSCOAQ-WF)",
+      "brand": "Kidde",
+      "category": "smart-smoke-detectors",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "Not listed on manufacturer page; major retailer pages blocked automated access. Price null.",
+      "specs": {
+        "sensor_type": "photoelectric",
+        "detects_co": true,
+        "power": "hardwired",
+        "interconnect": "wired",
+        "app_alerts": true,
+        "voice_location_alerts": null,
+        "sensor_life_yr": 10,
+        "self_test": true
+      },
+      "source": {
+        "url": "https://www.kidde.com/products/smart/smoke-carbon-monoxide-alarm-with-indoor-air-quality-monitor",
+        "accessedAt": "2026-08-16"
+      },
+      "provenance": "Kidde's product page confirms this model (P4010ACSCOAQ-WF) exists: Wi-Fi smart smoke+CO alarm adding indoor air-quality monitoring, hardwired AC interconnect with existing Kidde alarms, app alerts, Smart Hush, remote self-test, 10-year limited warranty. Sensor type carried as photoelectric (line standard, confirmed for the sibling P4010ACSCO-WF). voice_location_alerts nulled: Kidde voice output is not confirmed as location-announcing (that is a First Alert feature) and was not stated on the page. Price left null."
+    },
+    {
+      "slug": "first-alert-sco501cn-3st",
+      "name": "First Alert SCO501CN-3ST",
+      "brand": "First Alert",
+      "category": "smart-smoke-detectors",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "Discontinued by First Alert; manufacturer page shows no price and the third-party (Amazon) price could not be independently confirmed. Null rather than guessed.",
+      "specs": {
+        "sensor_type": "photoelectric",
+        "detects_co": true,
+        "power": "battery",
+        "interconnect": "wireless",
+        "app_alerts": false,
+        "voice_location_alerts": true,
+        "sensor_life_yr": null,
+        "self_test": true
+      },
+      "source": {
+        "url": "https://www.firstalertstore.com/store/products/sco501cn-3st-onelink-wireless-talking-battery-operated-smoke-and-co-alarm.htm",
+        "accessedAt": "2026-08-16"
+      },
+      "corroboration": {
+        "url": "https://us.amazon.com/First-Alert-SCO501CN-3ST-Battery-Extinguisher/dp/B07GBV6YRT",
+        "accessedAt": "2026-08-16"
+      },
+      "provenance": "First Alert's own (now-discontinued) page confirms photoelectric+electrochemical dual sensor, two-AA battery power, wireless mesh interconnect (up to 18 units), and voice-with-location alerts; no app connectivity. 7-year limited warranty; sensor_life_yr null (replaceable AA, no sealed-life rating). Price nulled: page is discontinued with no price and the Amazon figure was not verifiable.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/first-alert-sco501cn-3st.jpg?v=dde9b15efd",
+        "source": "firstalertstore.com",
+        "license": "© First Alert",
+        "accessedAt": "2026-08-16"
+      }
+    },
+    {
+      "slug": "ring-alarm-smoke-co-listener",
+      "name": "Ring Alarm Smoke & CO Listener",
+      "brand": "Ring",
+      "category": "smart-smoke-detectors",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "Draft's $129 was rejected: implausibly high for a microphone listener accessory (peer Ecolink FireFighter is $39; this Ring accessory retailed far lower) and unverifiable. Original ring.com product URL now 404s. Price set to null.",
+      "specs": {
+        "sensor_type": "audio_listener",
+        "detects_co": true,
+        "power": "battery",
+        "interconnect": "wireless",
+        "app_alerts": true,
+        "voice_location_alerts": false,
+        "sensor_life_yr": null,
+        "self_test": false
+      },
+      "source": {
+        "url": "https://www.lowes.com/pd/Ring-Ring-Alarm-Smoke-CO-Listener/5005536667",
+        "accessedAt": "2026-08-16"
+      },
+      "provenance": "Real, well-known Ring Alarm accessory — a microphone-based listener (3V lithium battery) that detects an existing UL-listed smoke or CO alarm's siren pattern and relays a phone alert via the Ring Alarm Base Station; it is not a smoke/CO sensor itself, hence sensor_type 'audio_listener', sensor_life_yr null, and self_test false. Corrections: the original ring.com/products/alarm-smoke-co-listener source returned HTTP 404 (dead) and was replaced with the Lowe's product listing (real, topical; Lowe's blocks automated fetches); the draft's $129 price was rejected and nulled; releaseDate nulled as no working source could confirm it."
+    },
+    {
+      "slug": "kidde-p4010acsco-wf",
+      "name": "Kidde P4010ACSCO-WF",
+      "brand": "Kidde",
+      "category": "smart-smoke-detectors",
+      "releaseDate": null,
+      "priceUsd": 89.97,
+      "priceNote": "Consumer Reports listed price ($89.97), confirmed on their lab-tested product page.",
+      "specs": {
+        "sensor_type": "photoelectric",
+        "detects_co": true,
+        "power": "hardwired",
+        "interconnect": "wired",
+        "app_alerts": true,
+        "voice_location_alerts": null,
+        "sensor_life_yr": 10,
+        "self_test": true
+      },
+      "source": {
+        "url": "https://www.consumerreports.org/home-garden/smoke-carbon-monoxide-detectors/kidde-p4010acsco-wf/m405453/",
+        "accessedAt": "2026-08-16"
+      },
+      "corroboration": {
+        "url": "https://www.kidde.com/products/smart/smoke-and-carbon-monoxide-alarm-with-smart-features",
+        "accessedAt": "2026-08-16"
+      },
+      "provenance": "Consumer Reports' lab-tested listing confirms $89.97, photoelectric sensor, and hardwired (120V AC) power. Kidde's product page confirms Wi-Fi app alerts, remote self-test, and hardwired interconnect with existing Kidde alarms; 10-year sealed-battery backup/alarm life. voice_location_alerts changed from true to null: neither Consumer Reports nor Kidde confirms location-announcing voice alerts.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/kidde-p4010acsco-wf.png?v=c82831692b",
+        "source": "consumerreports.org",
+        "license": "© Kidde",
+        "accessedAt": "2026-08-16"
+      }
+    },
+    {
+      "slug": "first-alert-prc710",
+      "name": "First Alert PRC710",
+      "brand": "First Alert",
+      "category": "smart-smoke-detectors",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "Discontinued by First Alert (replaced by SMCO210); no current price listed. Null.",
+      "specs": {
+        "sensor_type": "photoelectric",
+        "detects_co": true,
+        "power": "battery",
+        "interconnect": "none",
+        "app_alerts": false,
+        "voice_location_alerts": false,
+        "sensor_life_yr": 10,
+        "self_test": true
+      },
+      "source": {
+        "url": "https://www.firstalertstore.com/store/products/10-year-sealed-battery-combo-photoelectric-smoke-and-co-alarm-prc710.htm",
+        "accessedAt": "2026-08-16"
+      },
+      "provenance": "First Alert's own (discontinued) page confirms photoelectric+electrochemical combo sensor, built-in 10-year sealed lithium battery, slim design, single-button silence/test (self_test true), no interconnect, no app, and no voice alerts (distinguishing it from the PRC710V voice variant). 85dB siren, UL 217/2034. Basic app-free connected-adjacent device retained per the requested exact SKU; price null (discontinued).",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/first-alert-prc710.jpg?v=3ace65e6df",
+        "source": "firstalertstore.com",
+        "license": "© First Alert",
+        "accessedAt": "2026-08-16"
+      }
+    },
+    {
+      "slug": "ecolink-zwave-firefighter",
+      "name": "Ecolink Z-Wave Plus FireFighter (FF-ZWAVE5-ECO)",
+      "brand": "Ecolink",
+      "category": "smart-smoke-detectors",
+      "releaseDate": null,
+      "priceUsd": 39,
+      "priceNote": "List price at Home Controls ($39.00), confirmed on the product page.",
+      "specs": {
+        "sensor_type": "audio_listener",
+        "detects_co": true,
+        "power": "battery",
+        "interconnect": "wireless",
+        "app_alerts": true,
+        "voice_location_alerts": false,
+        "sensor_life_yr": null,
+        "self_test": false
+      },
+      "source": {
+        "url": "https://www.homecontrols.com/Ecolink-Z-Wave-Plus-FireFighter-Smoke-CO-Audio-Sensor-Gen5-ECFFZWAVE5ECO",
+        "accessedAt": "2026-08-16"
+      },
+      "corroboration": {
+        "url": "https://www.zwaveproducts.com/products/ff-zwave5-eco-ecolink-z-wave-plus-firefighter",
+        "accessedAt": "2026-08-16"
+      },
+      "provenance": "Home Controls' page confirms $39.00, a microphone-based Z-Wave Plus (Gen5/500-series, 908.42MHz) accessory with an included CR123A 3V lithium battery (~5-year life) that recognizes Temporal-3 smoke and 4-pattern CO alarm signals from an existing UL-listed alarm and relays them to a Z-Wave hub/app. No smoke/CO sensor of its own, hence sensor_type 'audio_listener' and sensor_life_yr null; self_test false (not described). All headline fields verified on the source page.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/ecolink-zwave-firefighter.jpg?v=09322ba947",
+        "source": "homecontrols.com",
+        "license": "© Ecolink",
+        "accessedAt": "2026-08-16"
+      }
+    }
+  ]
+}

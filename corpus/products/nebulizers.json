@@ -1,0 +1,443 @@
+{
+  "category": "nebulizers",
+  "generatedAt": "2026-08-01",
+  "methodologyNotes": "Roster covers 13 nebulizers spanning tabletop/portable jet-compressor and vibrating-mesh types that buyers commonly compare in 2026: Omron NE-C801, Philips InnoSpire Go, PARI Vios, Drive Medical Voyager Pro (18018), Omron NE-U100 MicroAir, Yuwell M102, Beurer IH60, Aerogen Solo, APOWUS Portable Mesh Nebulizer, Vega Ultrasonic Nebulizer, PARI Trek S, Philips InnoSpire Essence, and Beurer IH55. Primary sources were official manufacturer pages/spec sheets (omronhealthcare.com and its Zendesk spec tables, the Philips InnoSpire Go IFU manual, pari.com nebulizer-cup datasheets, aerogen.com, beurer.com, myapowus.com, veganebulizer.com) plus specialty respiratory retailers (confidencefms.com, exmed.net, vitalitymedical.com, cpapstoreusa.com, essentialaids.com) and MedGrade's device database when a manufacturer page was unreachable during verification. accessedAt 2026-08-01 for all entries. Adversarial corrections made to the seed list: (1) 'Medela Aerogen' does not exist as a product — Aerogen is an independent Ireland-based company, not a Medela line; corrected to Aerogen Solo, brand Aerogen. Note this is a single-patient-use hospital consumable requiring a separately purchased Aerogen USB or Pro-X controller and is sold in 10-packs (~$1,050/pack, ~$105/unit) — it is not a standalone consumer device like the rest of this roster and priceUsd reflects the per-unit disposable cost only. (2) 'Aponus Portable Mesh' could not be verified under that name; the closest real, currently-sold product is the APOWUS portable mesh nebulizer (myapowus.com, sold on Amazon) — substituted accordingly. (3) Philips InnoSpire Elegance is discontinued in the US (its manufacturer product URL now 404s and DirectHomeMedical lists it 'DISCONTINUED'); swapped for the current-production InnoSpire Essence compressor. (4) Beurer IH50 has been superseded — Beurer and multiple EU retailers confirm it was replaced by the Beurer IH55 — so the IH55 is listed instead. (5) Omron NE-U100's medication tank capacity is 10 ml per Omron's own support-site specification table, higher than some retail listings imply. The Vega and APOWUS listings appear to use visually near-identical rebranded hardware, a common pattern among low-cost Amazon mesh nebulizers sourced from the same Chinese OEM factories; specs reported are exactly as published on each brand's own listing. noise_level_db and particle_size_micron are reported as manufacturer-stated ceiling values (e.g. '<25 dB', '<5 µm') where no single point figure is published, rather than guessed midpoints. treatment_time_min captures the manufacturer-stated single-dose nebulization time only — it is deliberately left null where the only published duration figure is battery runtime/continuous operating time (a different quantity not captured by this schema), to avoid conflating the two. power_source lists every supported power input (battery/AC/USB) rather than a single value. PARI's LC Plus (Vios) and LC Sprint (Trek S) nebulizer-head specs (particle size, output rate, cup fill) are cited from PARI's own nebulizer-cup datasheets since PARI does not republish these numbers on the compressor product pages themselves. Several prices (Voyager Pro, Yuwell M102 US pricing, Aerogen Solo institutional pricing) could only be corroborated via cached/indexed retailer listings rather than a live re-fetch at verification time; this is flagged explicitly in the relevant priceNote fields.",
+  "specKeys": [
+    "particle_size_micron",
+    "nebulization_rate_ml_min",
+    "medication_cup_capacity_ml",
+    "noise_level_db",
+    "power_source",
+    "atomizer_type",
+    "weight_g",
+    "treatment_time_min"
+  ],
+  "products": [
+    {
+      "slug": "omron-ne-c801",
+      "name": "Omron NE-C801 CompAir",
+      "brand": "Omron",
+      "category": "nebulizers",
+      "releaseDate": null,
+      "priceUsd": 42.99,
+      "priceNote": "MSRP per Omron Healthcare's official product page",
+      "specs": {
+        "particle_size_micron": 3,
+        "nebulization_rate_ml_min": 0.3,
+        "medication_cup_capacity_ml": 7,
+        "noise_level_db": 52,
+        "power_source": "AC adapter, 100-240V 50/60Hz (multi-voltage)",
+        "atomizer_type": "compressor (piston/jet) with Omron Virtual Valve Technology",
+        "weight_g": 269,
+        "treatment_time_min": null
+      },
+      "source": {
+        "url": "https://omronhealthcare.com/products/compair-compressor-tabletop-nebulizer-system-ne-c801",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.vitalitymedical.com/omron-ne-c801-compair-compressor-nebulizer.html",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/omron-ne-c801.jpg?v=c3b810cbfd",
+        "source": "omronhealthcare.com",
+        "license": "© Omron",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Particle size 3µm MMAD, nebulization rate 0.30 mL/min, noise ~52 dBA, weight 9.5 oz (269 g), and $42.99 MSRP all confirmed directly on Omron Healthcare's official NE-C801 product page. Medication cup max fill of 7 mL corroborated via Vitality Medical's listing (manufacturer spec sheet not itself explicit on this figure on the page fetched). No release year is published by Omron for this long-running model; treatment time is not stated as a fixed figure (varies with medication/fill volume) so left null rather than guessed."
+    },
+    {
+      "slug": "philips-innospire-go",
+      "name": "Philips InnoSpire Go",
+      "brand": "Philips Respironics",
+      "category": "nebulizers",
+      "releaseDate": "2017",
+      "priceUsd": 189.99,
+      "priceNote": "Typical US retail price (The CPAP Shop); Philips' own healthstore.philips.com listing could not be reached during verification (site returned repeated server errors)",
+      "specs": {
+        "particle_size_micron": 3.99,
+        "nebulization_rate_ml_min": 0.29,
+        "medication_cup_capacity_ml": 8,
+        "noise_level_db": 35,
+        "power_source": "Rechargeable Li-ion battery or AC adapter, 100-240V 50/60Hz",
+        "atomizer_type": "vibrating mesh (Vibronic)",
+        "weight_g": 113,
+        "treatment_time_min": 4
+      },
+      "source": {
+        "url": "https://www.manualslib.com/manual/1557984/Philips-Innospire-Go.html",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.thecpapshop.com/blog/product-spotlight-philips-respironics-innospire-go-portable-mesh-nebulizer/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/philips-innospire-go.jpg?v=863b244e71",
+        "source": "usa.philips.com",
+        "license": "© Philips",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Particle size 3.99 µm MMAD, aerosol output 0.29 mL/min, noise 35 dB, and IP22 rating all confirmed via the official Philips Instructions-for-Use manual (mirrored on ManualsLib). Max fill 8 mL and weight ~113 g (quarter pound) and treatment time 'in 4 minutes' with 2.5 mL salbutamol per Philips' own InnoSpire Go pages and datasheet. A US FDA 510(k) filing dated November 2017 for this device is the basis for the 2017 release-year estimate; Philips does not publish an exact launch date. Price of $189.99 is a specialty-retailer's current listed price, used because Philips' own e-commerce page would not load during verification (repeated 5xx errors)."
+    },
+    {
+      "slug": "pari-vios",
+      "name": "PARI Vios (with LC Plus)",
+      "brand": "PARI",
+      "category": "nebulizers",
+      "releaseDate": null,
+      "priceUsd": 55.45,
+      "priceNote": "Typical current US street price (exmed.net); PARI does not publish a direct consumer list price and retailers cluster in the $55-$65 range",
+      "specs": {
+        "particle_size_micron": 3.8,
+        "nebulization_rate_ml_min": 0.44,
+        "medication_cup_capacity_ml": 8,
+        "noise_level_db": null,
+        "power_source": "AC mains, 120V 60Hz",
+        "atomizer_type": "compressor (piston) with PARI LC Plus reusable nebulizer",
+        "weight_g": 1361,
+        "treatment_time_min": 6.5
+      },
+      "source": {
+        "url": "https://www.lincare.com/en/services/dme-and-devices/pari-vios-compressor",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.pari.com/us/products/nebulizer-cups/lc-plus-reusable-nebulizer/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/pari-vios.jpg?v=3f9212b03b",
+        "source": "pari.com",
+        "license": "© PARI Respiratory Equipment",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Compressor specs (weight 3 lb/1,361 g, 120V/60Hz, 80 W, 4.5 LPM nominal / 8.5 LPM max flow, 5-year warranty) confirmed on Lincare's official PARI Vios distributor page (PARI's own compressor product page does not list a full spec table). Particle size (3.8 µm MMD), output rate (440 mg/min TOR, converted here as ~0.44 mL/min assuming aqueous-solution density), max cup fill (8 mL), and average treatment time (6-7 minutes, midpoint used) are PARI's own published figures for the bundled LC Plus reusable nebulizer head, taken from PARI's LC Plus datasheet since PARI does not restate them on the Vios page itself. Noise level not published by PARI for this compressor. Price varies significantly by retailer since PARI does not sell direct-to-consumer at a fixed MSRP; $55.45 was the lowest confirmed live listing at verification time."
+    },
+    {
+      "slug": "drive-medical-voyager-pro",
+      "name": "Drive Medical Voyager Pro (18018)",
+      "brand": "Drive Medical",
+      "category": "nebulizers",
+      "releaseDate": null,
+      "priceUsd": 97.92,
+      "priceNote": "Observed at mdsupplies.com per indexed listing; a live re-fetch of that exact page timed out/404'd during verification, so treat with slightly lower confidence — other US medical-supply retailers list the same model (18018) in a broadly similar $95-$120 band",
+      "specs": {
+        "particle_size_micron": null,
+        "nebulization_rate_ml_min": null,
+        "medication_cup_capacity_ml": 8,
+        "noise_level_db": null,
+        "power_source": "4x AAA batteries, AC adapter, or USB, 100-240V 50/60Hz",
+        "atomizer_type": "vibrating mesh",
+        "weight_g": 181,
+        "treatment_time_min": 10
+      },
+      "source": {
+        "url": "https://confidencefms.com/product/voyager-pro-vibrating-mesh-nebulizer/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.manualslib.com/manual/1031268/Drive-Voyager-Pro.html",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/drive-medical-voyager-pro.jpg?v=dcf830b16b",
+        "source": "confidencefms.com",
+        "license": "© Drive DeVilbiss Healthcare",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "8 mL max cup fill, 0.4 lb (181 g) weight, 4x AAA battery/AC/USB power options, and 'less than 10 minutes for most medications' treatment-time claim confirmed on the retailer product page and cross-checked against Drive Medical's own user manual (which additionally states the aerosol particle-size distribution as a 1.0-5.0 µm range rather than a single MMAD figure — left null here rather than guess a midpoint). Noise level and a single-point nebulization rate are not published by Drive Medical for this model. Treatment time recorded as 10 (the manufacturer's stated ceiling) since it is presented as a concrete upper bound, not a vague estimate."
+    },
+    {
+      "slug": "omron-ne-u100-microair",
+      "name": "Omron NE-U100 MicroAir",
+      "brand": "Omron",
+      "category": "nebulizers",
+      "releaseDate": null,
+      "priceUsd": 163.99,
+      "priceNote": "MSRP per Omron Healthcare's official product page",
+      "specs": {
+        "particle_size_micron": 5,
+        "nebulization_rate_ml_min": 0.25,
+        "medication_cup_capacity_ml": 10,
+        "noise_level_db": 23,
+        "power_source": "2x AA batteries or optional AC adapter, 100-240V 50/60Hz",
+        "atomizer_type": "vibrating mesh",
+        "weight_g": 120,
+        "treatment_time_min": null
+      },
+      "source": {
+        "url": "https://omronhealthcare.zendesk.com/hc/en-us/articles/360034264772-Specification-of-Omron-NE-U100",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://omronhealthcare.com/products/portable-microair-battery-operated-nebulizer-ne-u100",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/omron-ne-u100-microair.jpg?v=5d380d8b5f",
+        "source": "omronhealthcare.com",
+        "license": "© Omron",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Omron's own support-site specification table gives: nebulization rate >0.25 mL/min (by weight loss), particle size MMAD ~5 µm, medication tank capacity 10 mL maximum, weight ~120 g excluding batteries, and 100-240V~50-60Hz 0.12-0.05A rating for the optional AC adapter. Noise level '<23 dBA' and $163.99 MSRP confirmed on Omron Healthcare's consumer product page. Treatment time is not published as a fixed figure by Omron (depends on fill volume) so left null."
+    },
+    {
+      "slug": "yuwell-m102",
+      "name": "Yuwell M102 Mesh Nebulizer",
+      "brand": "Yuwell",
+      "category": "nebulizers",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "No confirmed US retail listing found; observed price outside the US is roughly ₹1,199 (~$14) on Amazon India — likely not representative of a US MSRP, so left null rather than guess a US price",
+      "specs": {
+        "particle_size_micron": 3.49,
+        "nebulization_rate_ml_min": 0.2,
+        "medication_cup_capacity_ml": 8,
+        "noise_level_db": 50,
+        "power_source": "2x AA batteries (DC 3.0V) or USB cable",
+        "atomizer_type": "vibrating mesh (laser-cut stainless steel mesh)",
+        "weight_g": 108,
+        "treatment_time_min": null
+      },
+      "source": {
+        "url": "https://www.hospitalstore.com/piston-m102-mesh-nebulizer/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/yuwell-m102.png?v=38554235b4",
+        "source": "store.manadr.com (authorized Yuwell distributor listing)",
+        "license": "© Yuwell",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Spec-sheet figures (max nebulizing rate ≥0.2 mL/min, MMD 3.49 µm, max medicine cup 8 mL, residual volume ≤0.25 mL, noise ≤50 dB(A), dimensions 6.2×4.8×12.5 cm, weight 108 g, DC 3.0V/2xAA or USB power) are consistent across multiple regional retailer listings (hospitalstore.com, pinkpharm.com, medzell.net) that all reproduce Yuwell's own printed spec table; none is Yuwell's own English-language global site, which does not list this SKU directly, so treat the exact source attribution with some caution even though the figures agree across independent listings. No US-market retailer or US-dollar MSRP was located, so priceUsd is null and 'operating time 20-30 minutes' (a continuous-use/battery-life figure, not a per-dose treatment time) was intentionally excluded from treatment_time_min to avoid conflating the two quantities."
+    },
+    {
+      "slug": "beurer-ih60",
+      "name": "Beurer IH60",
+      "brand": "Beurer",
+      "category": "nebulizers",
+      "releaseDate": null,
+      "priceUsd": 88,
+      "priceNote": "USD price from a currency-converted international reseller (glopalstore); Beurer has no native US retail listing found for the IH60, which appears to be sold primarily in EU/UK/international markets",
+      "specs": {
+        "particle_size_micron": 4.12,
+        "nebulization_rate_ml_min": 0.25,
+        "medication_cup_capacity_ml": null,
+        "noise_level_db": 45,
+        "power_source": "Rechargeable Li-ion battery or AC mains, 100-240V 50/60Hz",
+        "atomizer_type": "compressor (compressed-air technology, 0.25-0.5 bar)",
+        "weight_g": 222,
+        "treatment_time_min": null
+      },
+      "source": {
+        "url": "https://www.essentialaids.com/home-health/respiratory-aids/beurer-ih60-compression-technology-nebuliser.html",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/beurer-ih60.png?v=0f22109d3d",
+        "source": "essentialaids.com",
+        "license": "© Beurer",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Despite being grouped with mesh models by market convention, the IH60 is actually a small piston-compressor nebulizer with a conventional jet nebulizer cup and tubing (confirmed visually and in copy: 'Compressed-Air Technology', 0.25-0.5 bar). Specs (222 g weight, ~0.25 mL/min output, 4.12 µm particle size, up to 45 dB noise, ~40 min battery runtime, 5-year warranty) are consistent across UK/EU respiratory retailers (essentialaids.com, win-health.com, evergreen-nebulizers.co.uk). Medication cup capacity not found in any source consulted, left null. Treatment time not published as a discrete figure."
+    },
+    {
+      "slug": "aerogen-solo",
+      "name": "Aerogen Solo",
+      "brand": "Aerogen",
+      "category": "nebulizers",
+      "releaseDate": null,
+      "priceUsd": 105,
+      "priceNote": "Per-unit price derived from a $1,049.99 list price for a 10-pack (institutional/distributor pricing, e.g. McKesson); this is a single-patient-use hospital consumable, not a standalone retail device — it also requires a separately purchased Aerogen USB or Pro-X controller (not included in this price) to operate",
+      "specs": {
+        "particle_size_micron": 3.4,
+        "nebulization_rate_ml_min": 0.38,
+        "medication_cup_capacity_ml": 6,
+        "noise_level_db": 35,
+        "power_source": "Requires separate Aerogen USB Controller (intermittent use) or Pro-X Controller (continuous use); no onboard battery",
+        "atomizer_type": "vibrating mesh (OnQ aerosol generator)",
+        "weight_g": 13.5,
+        "treatment_time_min": 7
+      },
+      "source": {
+        "url": "https://www.aerogen.com/products/aerogen-solo",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://pdf.medicalexpo.com/pdf/aerogen/aerogen-solo/85303-243110.html",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/aerogen-solo.jpg?v=ffd680fa1e",
+        "source": "aerogen.com",
+        "license": "© Aerogen",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "CORRECTED FROM SEED: the seed listed this product as 'Medela Aerogen', but Aerogen is an independent Irish medical-device company (aerogen.com) with no Medela affiliation found in any source consulted — corrected to brand 'Aerogen'. Per Aerogen's own product page: 6 mL cup, flow rate >0.2 mL/min with an average of 0.38 mL/min, noise <35 dB at 1 m, ~7 minute treatment for a 3 mL dose, designed for 28 days intermittent or 7 days continuous single-patient use. MMAD 3.4 µm and weight 13.5 g corroborated via third-party datasheet mirrors. This is fundamentally a hospital/clinical consumable (used at the ventilator wye or with a T-piece) rather than a home-use device like the rest of this roster, and requires Aerogen's separately-sold controller hardware to function — flagged clearly so it is not mistaken for a complete standalone system in price comparisons."
+    },
+    {
+      "slug": "apowus-portable-mesh",
+      "name": "APOWUS Portable Mesh Nebulizer",
+      "brand": "APOWUS",
+      "category": "nebulizers",
+      "releaseDate": null,
+      "priceUsd": 39.99,
+      "priceNote": "Current price per a detailed product review (breathwellconsulting.com); multiple Amazon listings for this model were separately observed clustering between $35.99 and $44.99",
+      "specs": {
+        "particle_size_micron": 5,
+        "nebulization_rate_ml_min": 0.25,
+        "medication_cup_capacity_ml": null,
+        "noise_level_db": 25,
+        "power_source": "USB-C rechargeable battery",
+        "atomizer_type": "vibrating mesh (2,800-micropore membrane)",
+        "weight_g": 113,
+        "treatment_time_min": null
+      },
+      "source": {
+        "url": "https://myapowus.com/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://copdessentials.com/listings/apowus-portable-nebulizer/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/apowus-portable-mesh.jpg?v=3184d6ec71",
+        "source": "myapowus.com",
+        "license": "© APOWUS",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "CORRECTED FROM SEED: 'Aponus Portable Mesh' could not be verified under that name in any manufacturer, retailer, or review source consulted; the closest real, currently-sold product matching the seed's description (a budget Amazon-market handheld mesh nebulizer) is the APOWUS Portable Nebulizer (myapowus.com, sold on Amazon under model listings like B0D8BMHLYW/B0H25PVMPG) — substituted accordingly. Particle size 5 µm and 2,800-micropore mesh confirmed on the official APOWUS site; nebulization rate (0.25 mL/min strong mode / 0.15 mL/min mild mode), noise <25 dB, and weight 0.25 lb (113 g) confirmed via an independent COPD-focused product review. Medication cup capacity and exact treatment time are not published by APOWUS; a user-review estimate of '5-20 minutes' was not treated as a manufacturer spec and left null."
+    },
+    {
+      "slug": "vega-ultrasonic-nebulizer",
+      "name": "Vega Ultrasonic Nebulizer",
+      "brand": "Vega",
+      "category": "nebulizers",
+      "releaseDate": null,
+      "priceUsd": 69,
+      "priceNote": "Price per the brand's own official store (veganebulizer.com)",
+      "specs": {
+        "particle_size_micron": 5,
+        "nebulization_rate_ml_min": null,
+        "medication_cup_capacity_ml": null,
+        "noise_level_db": 25,
+        "power_source": "2x AA alkaline batteries or AC adapter, 100-240V",
+        "atomizer_type": "vibrating mesh (ultrasonic-driven, 2,800 micro-holes)",
+        "weight_g": 272,
+        "treatment_time_min": null
+      },
+      "source": {
+        "url": "https://www.veganebulizer.com/products/vega-ultrasonic-nebulizer-wtwj",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.amazon.com/Vega-Ultrasonic-Nebulizer-Replacement-Accessories/dp/B0DMDW7N9Z",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/vega-ultrasonic-nebulizer.jpg?v=6a133d3c8e",
+        "source": "veganebulizer.com",
+        "license": "© Vega (Beijing Choice Electronic Technology Co., Ltd.)",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Brand is marketed as 'Vega' by manufacturer Beijing Choice Electronic Technology Co., Ltd (FDA 510(k) K002831). Official brand site confirms $69 price, <25 dB noise, 2xAA/AC power, ultrasonic-driven mesh atomizer producing particles under 5 µm. Amazon listing (same underlying hardware) adds dimensions 3.94×1.97×1.97 in and weight 9.59 oz (272 g) and a 2,800-micro-hole mesh count. Neither source publishes a nebulization rate in mL/min or a cup capacity in mL, so both are left null rather than estimated. Note: this device appears visually near-identical to other budget Amazon mesh nebulizers (e.g. APOWUS in this same dataset), consistent with common OEM rebadging in this market segment."
+    },
+    {
+      "slug": "pari-trek-s",
+      "name": "PARI Trek S (with LC Sprint)",
+      "brand": "PARI",
+      "category": "nebulizers",
+      "releaseDate": null,
+      "priceUsd": 79.99,
+      "priceNote": "Standard-model price (without rechargeable battery pack) per Vitality Medical; the Deluxe kit with Li-ion battery lists separately around $259.99",
+      "specs": {
+        "particle_size_micron": 3.5,
+        "nebulization_rate_ml_min": 0.5,
+        "medication_cup_capacity_ml": 8,
+        "noise_level_db": null,
+        "power_source": "AC adapter, 12V DC car/boat adapter, or optional Li-ion rechargeable battery pack",
+        "atomizer_type": "compressor (piston) with PARI LC Sprint reusable nebulizer",
+        "weight_g": 363,
+        "treatment_time_min": 5.5
+      },
+      "source": {
+        "url": "https://www.vitalitymedical.com/pari-trek-s-portable-compressor-nebulizer-aerosol-system-device.html",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.pari.com/us/products/nebulizer-cups/lc-sprint-reusable-nebulizer/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/pari-trek-s.jpg?v=37969af9eb",
+        "source": "pariorder.com",
+        "license": "© PARI Respiratory Equipment",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Compressor weight 0.8 lb (363 g), 8 mL max cup fill line, 5-6 minute average treatment time (midpoint 5.5 used), and battery-pack runtime (~40 min / up to 8 treatments per charge for the optional Li-ion pack) confirmed via Vitality Medical's official listing, consistent with PARI's own Trek S compressor specs (nominal 14.5 PSI, 4 LPM nominal / 8.5 LPM max air flow). Particle size (3.5 µm MMD) and output rate (500 mg/min TOR, converted here as ~0.5 mL/min) are PARI's own published figures for the bundled LC Sprint nebulizer head, taken from PARI's LC Sprint datasheet. Noise level not published by PARI for this compressor."
+    },
+    {
+      "slug": "philips-innospire-essence",
+      "name": "Philips InnoSpire Essence",
+      "brand": "Philips Respironics",
+      "category": "nebulizers",
+      "releaseDate": null,
+      "priceUsd": 124.99,
+      "priceNote": "Price per CPAP Store USA, a specialty respiratory-equipment retailer; Philips' own healthstore.philips.com listing for this model could not be reached during verification (site returned repeated server errors)",
+      "specs": {
+        "particle_size_micron": null,
+        "nebulization_rate_ml_min": null,
+        "medication_cup_capacity_ml": 8,
+        "noise_level_db": 58,
+        "power_source": "AC mains, 120V 60Hz, 1.7A",
+        "atomizer_type": "compressor (piston) with SideStream reusable/disposable nebulizer",
+        "weight_g": 1497,
+        "treatment_time_min": 6
+      },
+      "source": {
+        "url": "https://www.cpapstoreusa.com/product/philips-respironics-innospire-essence-nebulizer-with-two-sidestreams/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/philips-innospire-essence.jpg?v=afc7daf0a0",
+        "source": "medgrade.org",
+        "license": "© Philips",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "SWAPPED FROM SEED: the seed's 'Philips InnoSpire Elegance' is discontinued in the US — Philips' own product URL for it now returns 404, and DirectHomeMedical explicitly lists the Elegance kit as 'DISCONTINUED' — so the current-production InnoSpire Essence compressor was substituted as the notable/comparable Philips compressor model for 2026. Specs (80% of particles <5 µm per the SideStream nebulizer's own literature — not a single MMAD point figure so left null, 8 mL nebulizer capacity, ~58 dBA ±3 dBA noise, 120V/60Hz/1.7A, 3.3 lb/1,497 g weight, 7 LPM operating / 9.4 LPM max flow, 5-7 minute treatment time) confirmed via CPAP Store USA's detailed product listing."
+    },
+    {
+      "slug": "beurer-ih55",
+      "name": "Beurer IH55",
+      "brand": "Beurer",
+      "category": "nebulizers",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "No reliable US-dollar price found; a price-aggregator (e-catalog.com) surfaced ~$546 but this figure could not be corroborated on Beurer's own site or any direct retailer and looks like a currency-conversion or data error, so left null rather than publish an unverified number",
+      "specs": {
+        "particle_size_micron": 4.89,
+        "nebulization_rate_ml_min": 0.25,
+        "medication_cup_capacity_ml": null,
+        "noise_level_db": 37,
+        "power_source": "4x AA batteries or AC mains adapter (Euro plug)",
+        "atomizer_type": "vibrating mesh (high-frequency micro-porous double membrane)",
+        "weight_g": 573,
+        "treatment_time_min": null
+      },
+      "source": {
+        "url": "https://www.beurer.com/global/p/60204/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/beurer-ih55.jpg?v=72f8288ad0",
+        "source": "beurer.com",
+        "license": "© Beurer",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "REPLACES SEED MODEL: the seed's 'Beurer IH50' has been discontinued and superseded by the IH55 per Beurer and multiple EU respiratory retailers — the IH55 is listed here as the current equivalent. All specs taken directly from Beurer's own global product/spec-table page: average particle size 4.89 µm, nebulization rate ≥0.25 mL/min, max noise 37 dB(A), operational runtime 180 minutes (battery life, not per-dose treatment time — intentionally not used to populate treatment_time_min, which is left null since no discrete single-dose duration is published), weight 573 g excluding packaging (856 g including packaging) — notably heavier than the IH50's simple handset spec because Beurer's figure appears to include the full accessory kit (masks, cable, storage bag), not the handset alone. Medication cup capacity not stated as a numeric mL figure on the page consulted. No credible US-dollar retail price could be confirmed."
+    }
+  ]
+}

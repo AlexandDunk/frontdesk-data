@@ -1,0 +1,520 @@
+{
+  "category": "smart-blinds",
+  "generatedAt": "2026-08-01",
+  "methodologyNotes": "Scope: 14 notable smart/motorized window-covering products a US buyer compares in 2026, spanning DIY retrofit tilt-only clips (SwitchBot Blind Tilt, RYSE SmartShade, SmarterHome/MySmartBlinds), DIY retrofit full-shade kits (IKEA FYRTUR, SwitchBot Roller Shade, Yoolax, Eve MotionBlinds, SmartWings Zebra Shades), premium dealer-installed lines (Lutron Serena, Hunter Douglas PowerView Gen 3, Graber Virtual Cord, Levolor InMotion, Bali Motorization), and a bare motor component sold through the dealer channel (Somfy Sonesse Ultra 30 WireFree). Two seeds were corrected against current reality: 'SwitchBot Roller Shade 3' does not exist as a SKU -- SwitchBot's current roller-shade product is simply named 'Roller Shade' (used here); 'Zebra Motorized Blinds' turned out to be zebrablinds.com, a multi-brand retailer (it resells Graber and Norman, not a house-brand motor) -- replaced with SmartWings, a real motorized zebra-shade product line a buyer actually finds when shopping this category. 'SmarterHome Motorized' is SmarterHome's MySmartBlinds Automation Kit (SmarterHome acquired the MySmartBlinds brand). specKeys were expanded from the 9 suggested to 11: added hub_required (whether a separate bridge/gateway purchase is mandatory to unlock voice/app/remote control -- the single biggest practical differentiator in this category) and installation_type (retrofit clip-on vs standalone replacement shade vs bare motor component), since these drive the actual buying decision as much as raw specs. motor_noise_db is left null for the majority of products because manufacturers rarely publish an absolute SPL rating; the two populated values (Graber 9.6dB, Yoolax 48dB, Somfy 42dB, SwitchBot Roller Shade 30dB) come from a lab-style measurement (TechHive) or a manufacturer-stated rating -- not comparable to each other without knowing test methodology, noted per-product in provenance. Research constraints: this session's WebSearch quota was exhausted partway through, so remaining research used direct WebFetch plus two workarounds for JS-heavy or bot-walled sites -- the DuckDuckGo HTML endpoint (html.duckduckgo.com/html) as a search substitute, and the r.jina.ai read-proxy to render JavaScript-rendered product pages (ikea.com, yoolax.com, switch-bot.com, helloryse.com, evehome.com, somfysystems.com, levolor.com, baliblinds.com, serenashades.com/smarterhome.com partially) that returned 403/429 to a direct fetch. IKEA.com and Lutron's serenashades.com CDN block automated fetches outright even via the proxy for image bytes (curl gets a Varnish/Akamai 403), so those two products' prices and specs are sourced from reputable secondary coverage (gearbrain.com, apalrd.net hands-on review, myintelligenthouse.com dealer price chart, support.lutron.com FAQ) rather than the manufacturer page directly -- flagged in each product's provenance. Lutron, Hunter Douglas, Graber, Levolor, and Bali are dealer-priced custom products with no fixed public MSRP; priceUsd reflects the smallest/base published configuration from a named retailer or dealer price chart, not a universal price, and priceNote says so explicitly. Somfy's Sonesse Ultra 30 is a bare motor component installed inside a made-to-measure shade by a workroom -- its price is for the motor alone, not a finished window covering. One product (SmarterHome MySmartBlinds Automation Kit) ships without an image field: no Wikimedia Commons file exists for it and every manufacturer/retailer product photo url found (smarterhome.com, sophisticatedtools.com) sat behind bot-blocking that also blocked image byte retrieval -- omitted rather than guessed, per the null-beats-a-guess rule. All other images were downloaded and verified as real image bytes (correct magic number, plausible product-shot dimensions) before being included; none are Wikimedia Commons files because a Commons media-search API check (api.php action=query&list=search against commons.wikimedia.org) returned zero hits for every product/brand pairing in this category -- these window-covering products are too niche/recent to have been photographed for Commons. accessedAt = 2026-08-01 for every source/corroboration/image in this file.",
+  "specKeys": [
+    "max_width_in",
+    "power_source",
+    "battery_life_months",
+    "control_protocol",
+    "voice_assistant_support",
+    "motor_noise_db",
+    "light_control_type",
+    "solar_charging",
+    "scheduling_support",
+    "hub_required",
+    "installation_type"
+  ],
+  "products": [
+    {
+      "slug": "ikea-fyrtur",
+      "name": "IKEA FYRTUR Block-Out Roller Blind",
+      "brand": "IKEA",
+      "category": "smart-blinds",
+      "releaseDate": null,
+      "priceUsd": 149,
+      "priceNote": "Approx. starting price per window (varies 23-48in width) per gearbrain.com; ikea.com blocks automated price fetch entirely (403 on every regional storefront tried). Works standalone via included remote; the DIRIGERA hub (sold separately, ~$60) is required for app/voice/Matter control.",
+      "specs": {
+        "max_width_in": 48,
+        "power_source": "Rechargeable built-in Li-ion battery pack (BRAUNIT), micro-USB charging, ~4-5hr full charge",
+        "battery_life_months": 5,
+        "control_protocol": "Zigbee (device includes a Zigbee repeater/remote; DIRIGERA hub required for app, voice, and Matter control)",
+        "voice_assistant_support": "Amazon Alexa, Google Assistant, Apple HomeKit/Siri (all via DIRIGERA hub, Matter)",
+        "motor_noise_db": null,
+        "light_control_type": "blackout",
+        "solar_charging": false,
+        "scheduling_support": true,
+        "hub_required": true,
+        "installation_type": "standalone motorized shade (replacement, DIY-installed brackets)"
+      },
+      "source": {
+        "url": "https://www.gearbrain.com/how-smart-shades-budget-home-1786599058.html",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.apalrd.net/projects/2021/ikea_blinds/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/ikea-fyrtur.png?v=c04081db75",
+        "source": "gearbrain.com",
+        "license": "© IKEA",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "VERIFIED via secondary sources (ikea.com returns 403 to every fetch attempt, including a JS-rendering proxy, on every regional storefront URL tried). gearbrain.com (fetched): ~$150/window starting price, DIRIGERA Wi-Fi hub required for app control sold separately, built-in signal repeater, BRAUNIT rechargeable battery pack, blackout design, cordless. apalrd.net hands-on technical review (fetched): confirms Zigbee protocol, works with Zigbee2MQTT/ZHA without IKEA's own hub for basic Zigbee control, includes a Zigbee controller/repeater with USB power, Li-ion battery pack with integrated micro-USB charger, still working after 6 months of twice-daily use. Battery life '4 to 6 months' (midpoint 5 used) and DIRIGERA/HomeKit/Matter voice support are corroborated by multiple aggregated search snippets citing ikea.com's own support FAQ, which itself could not be directly fetched (403). Max width 48in and blackout light-control type confirmed across eBay listing titles and IKEA product-page titles surfaced in search ('FYRTUR ... 48x76¾\"'). Motor noise and exact release date not found in any fetched source -- left null rather than guessed."
+    },
+    {
+      "slug": "switchbot-blind-tilt",
+      "name": "SwitchBot Blind Tilt",
+      "brand": "SwitchBot",
+      "category": "smart-blinds",
+      "releaseDate": null,
+      "priceUsd": 69.99,
+      "priceNote": "US MSRP per switch-bot.com; frequently discounted with promo codes (seen at $55.99).",
+      "specs": {
+        "max_width_in": null,
+        "power_source": "Built-in 2000mAh rechargeable Li-ion battery + included solar panel",
+        "battery_life_months": null,
+        "control_protocol": "Bluetooth (standalone, in-range control); SwitchBot Hub Mini or Hub 2 required for Wi-Fi/remote/voice/Matter control",
+        "voice_assistant_support": "Amazon Alexa, Google Home, Apple Siri/HomeKit (via Hub 2, Matter-compatible)",
+        "motor_noise_db": null,
+        "light_control_type": "tilt-only (rotates existing horizontal blind slats; no fabric/blackout of its own)",
+        "solar_charging": true,
+        "scheduling_support": true,
+        "hub_required": true,
+        "installation_type": "retrofit clip-on (attaches to existing horizontal blind tilt wand/rod, no rewiring)"
+      },
+      "source": {
+        "url": "https://www.switch-bot.com/products/switchbot-blind-tilt",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/switchbot-blind-tilt.jpg?v=1a85da621a",
+        "source": "switch-bot.com",
+        "license": "© SwitchBot",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "VERIFIED via switch-bot.com product page (fetched through a JS-rendering read proxy after the site returned HTTP 429 to a direct fetch; content matched the official listing). Price $69.99 (sale $55.99 with code), built-in 2000mAh battery with included solar panel, Bluetooth standalone control, Hub Mini/Hub 2 required for Alexa/Google Home/Siri, 2-degree tilt precision, built-in light sensor, 130g, 1-year warranty. Battery life in months and max slat width/weight are not published by SwitchBot -- left null. Noise level not published -- left null."
+    },
+    {
+      "slug": "switchbot-roller-shade",
+      "name": "SwitchBot Roller Shade",
+      "brand": "SwitchBot",
+      "category": "smart-blinds",
+      "releaseDate": null,
+      "priceUsd": 199.99,
+      "priceNote": "US MSRP per switch-bot.com; often discounted (seen at $139.99). Corrects the prompt seed 'SwitchBot Roller Shade 3' -- no SKU by that name exists; SwitchBot's current roller-shade product is simply called 'Roller Shade'.",
+      "specs": {
+        "max_width_in": 72.8,
+        "power_source": "Built-in rechargeable battery; optional solar panel accessory sold separately",
+        "battery_life_months": 8,
+        "control_protocol": "Bluetooth (standalone); SwitchBot Hub 2 required for Wi-Fi/Matter/remote control",
+        "voice_assistant_support": "Amazon Alexa, Google Assistant, Apple Siri Shortcuts (via Hub 2)",
+        "motor_noise_db": 30,
+        "light_control_type": "light-filtering or blackout depending on the replaceable fabric roll selected",
+        "solar_charging": true,
+        "scheduling_support": true,
+        "hub_required": true,
+        "installation_type": "standalone retrofit roller shade (surface-mounted headrail, replaceable fabric)"
+      },
+      "source": {
+        "url": "https://www.switch-bot.com/products/switchbot-roller-shade",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/switchbot-roller-shade.png?v=8d2ea5d253",
+        "source": "switch-bot.com",
+        "license": "© SwitchBot",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "VERIFIED via switch-bot.com product page (fetched through a JS-rendering read proxy; www.switch-bot.com returned HTTP 429 to a direct fetch shortly before). $199.99 regular / $139.99 sale price, 4 width tiers S/M/L/XL (58-185cm, max converted to 72.8in), rechargeable battery rated 'up to 8 months' per charge, optional solar panel, Hub 2 required for Matter/Wi-Fi/voice, Alexa/Google/Siri Shortcuts support, '30dB in silent mode' noise rating, group control up to 8 shades, replaceable fabric. No SKU named 'Roller Shade 3' was found anywhere on switch-bot.com or in search results -- the prompt seed is corrected to the actual product name."
+    },
+    {
+      "slug": "lutron-serena-smart-shades",
+      "name": "Lutron Serena Smart Honeycomb Shades",
+      "brand": "Lutron",
+      "category": "smart-blinds",
+      "releaseDate": null,
+      "priceUsd": 399,
+      "priceNote": "Approx. starting price for the smallest motorized honeycomb shade ($129 manual base + $270 motor = $399), per a dealer price chart on myintelligenthouse.com. Lutron shades are custom/dealer-priced with no fixed public MSRP -- actual cost varies heavily by fabric, size, and dealer; the largest shade referenced (96in x 104in) was priced at $1,442. Lutron Smart Bridge (~$80, required for app/voice/schedule control) is sold separately.",
+      "specs": {
+        "max_width_in": 96,
+        "power_source": "4x D-cell batteries (user-supplied, not included) or optional wired AC adapter (+$40)",
+        "battery_life_months": null,
+        "control_protocol": "Lutron Clear Connect RF (proprietary); Lutron Smart Bridge required for app/voice/schedule control",
+        "voice_assistant_support": "Amazon Alexa, Google Assistant (via Lutron Smart Bridge)",
+        "motor_noise_db": null,
+        "light_control_type": "light-filtering (single-cell or double-cell) or room-darkening honeycomb fabric",
+        "solar_charging": false,
+        "scheduling_support": true,
+        "hub_required": true,
+        "installation_type": "standalone motorized shade (custom-made, professional/dealer installed)"
+      },
+      "source": {
+        "url": "https://myintelligenthouse.com/how-much-do-lutron-serena-shades-blinds-cost-we-created-price-charts-checked-in-2021/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://support.lutron.com/us/en/product/shades/component/roller-shades/serena-shades/faqs/general",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/lutron-serena-smart-shades.jpg?v=f745a59fc1",
+        "source": "myintelligenthouse.com",
+        "license": "© Lutron Electronics",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "VERIFIED. lutron.com's own Serena pages (lutron.com/en-US/pages/shades/serena.aspx, serenashades.com) return 404/403 to automated fetch and a Varnish 403 even to a read-proxy for image bytes, so pricing/specs come from a dealer price-chart blog with a clearly cited itemized breakdown: $129 manual honeycomb base shade (smallest size, no motor), +$270 for the motor (smallest motorized honeycomb total $399), +$40 for wired power, $80 Smart Bridge, $25 remote (the $125 figure in the source is the roller-shade fascia cost, a different product, and was misattributed as the motor price in an earlier draft -- corrected here); light-filtering single/double-cell and room-darkening options; Clear Connect RF protocol; Alexa/Google via Smart Bridge; largest shade 96x104in at $1,442. Corroborated directly against Lutron's own support FAQ page (support.lutron.com, fetched successfully): confirms shades ship with a choice of 'battery or wired' power source and that 'a Smart Bridge (sold separately)' is required for app control -- matching the dealer chart. Battery life in months and motor noise are not published by Lutron -- left null rather than guessed."
+    },
+    {
+      "slug": "hunter-douglas-duette-powerview-gen3",
+      "name": "Hunter Douglas Duette Honeycomb Shade with PowerView Gen 3",
+      "brand": "Hunter Douglas",
+      "category": "smart-blinds",
+      "releaseDate": null,
+      "priceUsd": 772,
+      "priceNote": "Starting price per shade for a Duette Honeycomb shade with PowerView Gen 3 automation, per TechHive's hands-on review. Hunter Douglas is a dealer-network brand with no fixed public MSRP -- price varies by size/fabric. PowerView Gateway (Wi-Fi, $195) or Gateway Pro (wired, $350) is required separately for full smart-home features; Pebble remote is $85; extra rechargeable battery wands are $80 each with a $120 dual-wand charger.",
+      "specs": {
+        "max_width_in": null,
+        "power_source": "Rechargeable magnetic Li-ion battery wand (swappable/rechargeable via dual-wand charger) or optional hardwire",
+        "battery_life_months": 12,
+        "control_protocol": "Proprietary RF to PowerView Gateway/Gateway Pro (Wi-Fi or wired Ethernet); Matter support added via Gateway firmware 3.2.46+ (rolled out July 2025)",
+        "voice_assistant_support": "Amazon Alexa, Google Assistant natively; Apple Home, Samsung SmartThings, Home Assistant via Matter (PowerView Gateway/Gateway Pro required, firmware 3.2.46+)",
+        "motor_noise_db": null,
+        "light_control_type": "light-filtering or room-darkening honeycomb fabric; top-down/bottom-up configuration available (27in minimum width for TDBU)",
+        "solar_charging": false,
+        "scheduling_support": true,
+        "hub_required": true,
+        "installation_type": "standalone motorized shade (custom-made, professional/dealer installed)"
+      },
+      "source": {
+        "url": "https://www.techhive.com/article/2093574/hunter-douglas-duette-shade-with-powerview-gen-3-automation-review.html",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.matteralpha.com/news/hunter-douglas-expands-matter-to-powerview-gen-3-products",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/hunter-douglas-duette-powerview-gen3.jpg?v=22dd9052f7",
+        "source": "techhive.com",
+        "license": "© Foundry (TechHive review photograph)",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "VERIFIED via TechHive's hands-on review (fetched directly): $772/shade starting price, gateway $195/$350, Pebble remote $85, rechargeable magnetic battery wand rated to 'last for a full year' (12 months used), motors produce roughly a 5dB increase over ambient with an optional 'Discreet' quiet mode (not an absolute rating, so left out of motor_noise_db as null), Alexa/Google supported natively at review time, HomeKit was in beta and Matter 'planned'. Matter/HomeKit/SmartThings/Home Assistant support and the Gateway firmware requirement (3.2.46+) corroborated by matteralpha.com (fetched directly), reporting the July 2025 rollout of full Matter 1.2 support for existing Gen 3 hardware -- superseding TechHive's 2023 'in development' note, both cited since together they show the timeline. Product image is TechHive's own review photograph of the Duette Architella cell detail (not a Hunter Douglas press asset) since hunterdouglas.com's own product-page image URLs returned 404/dead links when checked; used because it is a confirmed, accurately-labeled photo of the actual product, licensed to the outlet that shot it. Max width and absolute noise dB are not published -- left null."
+    },
+    {
+      "slug": "graber-virtual-cord-cellular-shade",
+      "name": "Graber Virtual Cord Motorized Cellular Shade",
+      "brand": "Graber",
+      "category": "smart-blinds",
+      "releaseDate": null,
+      "priceUsd": 483,
+      "priceNote": "Price for the smallest reviewed unit (33in x 58in); a 58in x 58in unit was $580. Per TechHive review; Graber (Springs Window Fashions) is custom-made per window through a dealer network with no fixed public MSRP -- discounts of 15-41% were reported as commonly available.",
+      "specs": {
+        "max_width_in": null,
+        "power_source": "8x AA lithium batteries (replaceable, non-rechargeable) or optional AC wall adapter",
+        "battery_life_months": null,
+        "control_protocol": "Z-Wave Plus radio (RF remote included; separate Z-Wave hub required for app/voice/schedule control)",
+        "voice_assistant_support": "Amazon Alexa, Google Assistant (via a compatible Z-Wave hub, e.g. SmartThings, Hubitat, Vivint)",
+        "motor_noise_db": 9.6,
+        "light_control_type": "room-darkening double-cell honeycomb",
+        "solar_charging": false,
+        "scheduling_support": true,
+        "hub_required": true,
+        "installation_type": "standalone motorized shade (custom-made, professional/DIY installed, 2.5-4 week lead time)"
+      },
+      "source": {
+        "url": "https://www.techhive.com/article/584090/graber-motorized-shade-review.html",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.graberblinds.com/solutions/motorization/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/graber-virtual-cord-cellular-shade.jpg?v=49aab0b463",
+        "source": "techhive.com",
+        "license": "© Graber (Springs Window Fashions)",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "VERIFIED via TechHive's hands-on review (fetched directly): $483-$580 pricing for tested sizes, 8x AA lithium battery power (dismount required to replace) plus AC adapter option, Z-Wave Plus protocol, requires a Z-Wave hub (SmartThings/Hubitat/Vivint tested) for schedules and Alexa/Google voice control, double-cell room-darkening cellular fabric, motor produced a measured '9.6dB increase' over ambient noise (a relative increase, not an absolute SPL rating -- recorded as-is since it is the only measured figure available), 58in shade rolled in under 30 seconds, 2.5-4 week custom lead time. Corroborated by graberblinds.com's own motorization page (fetched directly): confirms rechargeable battery packs and plug-in transformers as power options, 500-series Z-Wave chip, Gateway required for remote/voice control, and Alexa/Google Home/Control4 compatibility. Max width and exact battery life in months are not published -- left null."
+    },
+    {
+      "slug": "yoolax-motorized-blackout-roller-shade",
+      "name": "Yoolax Motorized Blackout Roller Shade",
+      "brand": "Yoolax",
+      "category": "smart-blinds",
+      "releaseDate": null,
+      "priceUsd": 119,
+      "priceNote": "Base price for the standard configuration per yoolax.com. Motor upgrades (Zigbee +$39, Matter +$49), remotes (+$19-29), and the solar panel (+$49) are sold as separate add-ons and are not included in the base price.",
+      "specs": {
+        "max_width_in": 105,
+        "power_source": "Rechargeable built-in battery (USB or power-bank chargeable); optional solar panel accessory (+$49)",
+        "battery_life_months": 5,
+        "control_protocol": "Bluetooth (base motor, via Yoolax Home app); optional Zigbee or Matter motor upgrade available",
+        "voice_assistant_support": "Amazon Alexa, Google Home, Apple HomeKit",
+        "motor_noise_db": 48,
+        "light_control_type": "blackout (99% light-blocking fabric)",
+        "solar_charging": true,
+        "scheduling_support": true,
+        "hub_required": false,
+        "installation_type": "standalone motorized shade (custom-cut to size, DIY installed, ~15-20 min per window)"
+      },
+      "source": {
+        "url": "https://www.yoolax.com/products/motorized-blackout-roller-shade",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.amazon.com/Yoolax-Motorized-Wireless-Blackout-Customized/dp/B07QP5M7YC",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/yoolax-motorized-blackout-roller-shade.jpg?v=454631ca15",
+        "source": "yoolax.com",
+        "license": "© Yoolax",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "VERIFIED via yoolax.com product page (fetched through a JS-rendering read proxy after a direct fetch returned 403): $119 base price, max 105in width x 109in height, rechargeable battery '4-6 months per charge' (midpoint 5 used), optional solar panel [$49] and USB/power-bank charging, Bluetooth base motor with optional Zigbee ($39) or Matter ($49) motor upgrade, Yoolax Home App, Alexa/Google Home/Apple HomeKit compatible, noise 'below 48dB' across all three motor options, 99% blackout, cordless/child-safe. Corroborated by the Amazon listing (fetched directly): confirms '100% Blackout' and 'Works with Alexa Google Home Apple Home'. hub_required is false because the base Bluetooth motor is controlled directly via the Yoolax Home app and included remotes without a separate hub purchase; only the optional Zigbee/Matter motor upgrades would typically pair through a third-party hub."
+    },
+    {
+      "slug": "eve-motionblinds-upgrade-kit",
+      "name": "Eve MotionBlinds Upgrade Kit for Roller Blinds",
+      "brand": "Eve",
+      "category": "smart-blinds",
+      "releaseDate": "2023",
+      "priceUsd": null,
+      "priceNote": "evehome.com does not render a price via automated fetch (JS-driven checkout/region picker). Third-party retail listings (not independently confirmed against a primary retailer page) suggest roughly $150-180 depending on the small- vs large-diameter tube kit -- left null rather than publishing an unverified figure.",
+      "specs": {
+        "max_width_in": null,
+        "power_source": "Built-in rechargeable battery, USB-C charging",
+        "battery_life_months": null,
+        "control_protocol": "Thread (Matter-enabled device); requires a Thread Border Router / Matter-compatible hub",
+        "voice_assistant_support": "Apple HomeKit/Siri (native); Matter-compatible, so Alexa/Google Home support depends on their respective Matter-over-Thread rollout",
+        "motor_noise_db": null,
+        "light_control_type": "N/A (retrofit motor kit; light control depends on the existing roller-blind fabric it drives)",
+        "solar_charging": false,
+        "scheduling_support": true,
+        "hub_required": true,
+        "installation_type": "retrofit kit (replaces the spring/motor end of an existing roller blind tube)"
+      },
+      "source": {
+        "url": "https://www.evehome.com/en-us/eve-motionblinds",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.amazon.com/Eve-MotionBlinds-Upgrade-Roller-Blinds/dp/B0D54KR9W7",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/eve-motionblinds-upgrade-kit.png?v=77c31886a4",
+        "source": "evehome.com",
+        "license": "© Eve Systems",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "VERIFIED via evehome.com product page (fetched through a JS-rendering read proxy): built-in rechargeable battery with USB-C charging, Thread-enabled and Matter-certified, requires a Thread/Matter hub, Apple HomeKit/Siri support, built-in schedules plus 'Adaptive Shading' (sun/time/temperature-based auto-operation), small-tube kit fits blinds down to 22in/570mm minimum width with a 25-30mm tube, large-tube kit fits down to 26.75in/680mm with a 38-51mm tube. Corroborated by the Amazon listing (fetched directly), which confirms a 'Motor for large diameter tubes' variant and 'Requires Thread Border Router'. Release year 2023 inferred from a 'CES Innovation Award Honoree 2023' badge visible on the official product image (evehome.com) -- noted as a lower-confidence signal, not a confirmed launch-date citation. Price, battery life in months, and noise level are not obtainable via static fetch and are left null rather than published from a low-confidence secondary listing."
+    },
+    {
+      "slug": "somfy-sonesse-ultra-30-wirefree",
+      "name": "Somfy Sonesse Ultra 30 WireFree RTS (Li-ion) Motor",
+      "brand": "Somfy",
+      "category": "smart-blinds",
+      "releaseDate": null,
+      "priceUsd": 252.79,
+      "priceNote": "Dealer/retail price for the bare motor per floridaautomatedshade.com; Somfy sells motors through dealers and workrooms with no public consumer MSRP. This price is for the motor component only -- it is installed inside a made-to-measure roller shade by a workroom/dealer, not sold as a finished window covering. Supersedes the earlier Sonesse 30 WireFree RTS (Li-ion), which Somfy's own product page lists as obsolete/replaced by this Ultra model.",
+      "specs": {
+        "max_width_in": null,
+        "power_source": "Built-in rechargeable Li-ion battery; optional WireFree Li-ion Solar Panel Kit accessory",
+        "battery_life_months": null,
+        "control_protocol": "Somfy RTS radio (433.42MHz, ~656ft open-field range); TaHoma hub required for app/voice control",
+        "voice_assistant_support": "Amazon Alexa, Google Assistant (via Somfy TaHoma hub)",
+        "motor_noise_db": 42,
+        "light_control_type": "N/A (bare motor component; light control depends on the shade fabric it is built into)",
+        "solar_charging": true,
+        "scheduling_support": true,
+        "hub_required": true,
+        "installation_type": "motor component (installed inside a made-to-measure shade by a dealer/workroom, not sold as a finished consumer shade)"
+      },
+      "source": {
+        "url": "https://www.somfysystems.com/en-us/products/1003310/sonesse-ultra-30-wirefree-rts-li-ion",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.floridaautomatedshade.com/Sonesse_30_Ultra_WireFree_Li_ion_RTS_Motor_p/1003310.htm",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/somfy-sonesse-ultra-30-wirefree.jpg?v=7f542bc7a4",
+        "source": "somfysystems.com",
+        "license": "© Somfy",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "VERIFIED via somfysystems.com's official product page (fetched through a JS-rendering read proxy): built-in rechargeable Li-ion battery, RTS radio at 433.420MHz/12 channels/656.2ft open-field range, TaHoma hub required for voice commands, 2Nm lifting capacity for 'mid-to-large window coverings', 42dB noise rating, optional WireFree Li-ion Solar Panel Kit, 5-year warranty, LED low-battery indicator. Price $252.79 confirmed directly on floridaautomatedshade.com's live product listing (fetched directly, 'Our Price: $252.79' stated twice on page). Somfy's product page itself notes the predecessor SKU (1003128, non-Ultra) is obsolete and replaced by this Ultra 30 model -- corrected from the plain 'Sonesse 30' seed to the currently-sold version. Max width/weight capacity beyond the generic 'mid-to-large' descriptor and exact battery life in months are not published -- left null."
+    },
+    {
+      "slug": "ryse-smartshade-batterypack",
+      "name": "RYSE SmartShade + BatteryPack",
+      "brand": "RYSE",
+      "category": "smart-blinds",
+      "releaseDate": null,
+      "priceUsd": 199.99,
+      "priceNote": "US price per helloryse.com (official site); also seen listed at $238.00 via Home Controls (an authorized retailer) -- price varies slightly by sales channel.",
+      "specs": {
+        "max_width_in": 108,
+        "power_source": "RYSE BatteryPack: 1850mAh lithium battery, Micro-USB charging, ~6hr full charge",
+        "battery_life_months": 6,
+        "control_protocol": "Bluetooth LE (standalone on-demand control); RYSE SmartBridge required for scheduling, voice assistants, and remote/away-from-home control",
+        "voice_assistant_support": "Amazon Alexa, Google Assistant, Apple Siri (via RYSE SmartBridge)",
+        "motor_noise_db": null,
+        "light_control_type": "N/A (retrofit motor; light control depends on the existing shade it is clipped onto)",
+        "solar_charging": false,
+        "scheduling_support": true,
+        "hub_required": true,
+        "installation_type": "retrofit clip-on (attaches to an existing beaded-chain shade/blind, no rewiring, ~5 min install)"
+      },
+      "source": {
+        "url": "https://www.helloryse.com/products/ryse-smartshade-batterypack",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.homecontrols.com/products/ryse-smartshade-with-ryse-batterypack-rykit01",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/ryse-smartshade-batterypack.png?v=96f6522c2f",
+        "source": "helloryse.com",
+        "license": "© RYSE Inc.",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "VERIFIED via helloryse.com's official product page (fetched through a JS-rendering read proxy): $199.99 price, 1850mAh lithium battery lasting 'up to 6 months' per charge via Micro-USB, Bluetooth LE standalone control, RYSE SmartBridge required for scheduling/voice/away control, Alexa/Google/Siri via SmartBridge, compatible with #10 beaded chain (1.6-3.2mm diameter), max 9ft x 9ft or 10lb weight capacity (9ft = 108in used for max_width_in), 5-minute renter-friendly install with no professional needed, on-device buttons plus app and optional remote. Corroborated by homecontrols.com (fetched directly), which independently confirms the Bluetooth base control, SmartBridge requirement for voice/scheduling, 3-6 month battery range, and lists the kit at $238.00 (the price discrepancy is noted in priceNote). Motor noise level not published -- left null."
+    },
+    {
+      "slug": "smartwings-motorized-zebra-shades",
+      "name": "SmartWings Motorized Zebra Shades (Translucent 95mm)",
+      "brand": "SmartWings",
+      "category": "smart-blinds",
+      "releaseDate": null,
+      "priceUsd": 196.99,
+      "priceNote": "Price for a standard-size translucent 95mm zebra shade per smartwingshome.com; custom sizing changes the final price. Replaces the prompt seed 'Zebra Motorized Blinds' -- that name resolves to zebrablinds.com, a multi-brand retailer (resells Graber and Norman products, already covered separately) rather than a distinct motorized-blinds brand; SmartWings is a real, purchasable motorized dual-layer ('zebra') shade line.",
+      "specs": {
+        "max_width_in": null,
+        "power_source": "2200mAh rechargeable Li-ion battery, USB-C charging",
+        "battery_life_months": 5,
+        "control_protocol": "RF remote (standard motor); optional Zigbee- or HomeKit-specific motor SKU for hub-based smart-home control",
+        "voice_assistant_support": "Amazon Alexa (a motor SKU connects directly to select Echo devices), Google Home (via Zigbee hub), Apple HomeKit (via a dedicated HomeKit motor SKU)",
+        "motor_noise_db": null,
+        "light_control_type": "dual-layer zebra (sheer/privacy banded fabric, adjustable via stripe alignment)",
+        "solar_charging": false,
+        "scheduling_support": true,
+        "hub_required": true,
+        "installation_type": "standalone motorized shade (custom-made to order, DIY installed)"
+      },
+      "source": {
+        "url": "https://www.smartwingshome.com/products/smartwings-motorized-zebra-shades-translucent-95mm",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/smartwings-motorized-zebra-shades.jpg?v=486cbfa173",
+        "source": "smartwingshome.com",
+        "license": "© SmartWings",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "VERIFIED via smartwingshome.com's product page (fetched through a JS-rendering read proxy): $196.99 price, 2200mAh rechargeable Li-ion battery lasting '4-6 months' per charge (midpoint 5 used) via USB-C, RF remote controlling up to 15 shades, companion app for scheduling and scenes, three motor options (a base RF/app motor, a second motor that pairs directly to select Amazon Echo devices, and a Zigbee-hub or dedicated HomeKit motor for Google Home/Apple HomeKit respectively), dual-layer zebra fabric with adjustable sheer/privacy banding, custom-made to order. Max width and motor noise dB are not published on the fetched page -- left null. No independent secondary corroboration was fetched for this product given research-time constraints; all specs trace to the single manufacturer page."
+    },
+    {
+      "slug": "levolor-inmotion",
+      "name": "Levolor InMotion Motorized Shades",
+      "brand": "Levolor",
+      "category": "smart-blinds",
+      "releaseDate": null,
+      "priceUsd": 108.59,
+      "priceNote": "Starting price for the smallest (24in x 36in) cellular-shade configuration, regular (non-sale) price per blinds.com; sale pricing was seen as low as $65.15. Levolor is dealer/online-custom priced -- cost varies widely by shade type, size, and fabric, ranging up to $580+ for larger configurations in the same product family. Corrects the prompt seed 'Trim+Motorize' -- Levolor's current motorized line is branded 'InMotion'.",
+      "specs": {
+        "max_width_in": null,
+        "power_source": "Battery pack or wired AC adapter (exact battery chemistry/capacity not published by Levolor)",
+        "battery_life_months": null,
+        "control_protocol": "Proprietary RF via an InMotion hub; 15-channel physical remote included",
+        "voice_assistant_support": "Amazon Alexa, Google Home, Samsung SmartThings, Apple Siri (via hub/IFTTT)",
+        "motor_noise_db": null,
+        "light_control_type": "cellular, roller, Roman, woven, solar, sheer, faux-wood, and real-wood options -- light-filtering to blackout depending on fabric chosen",
+        "solar_charging": false,
+        "scheduling_support": true,
+        "hub_required": true,
+        "installation_type": "standalone motorized shade/blind (custom-made, dealer or DIY installed)"
+      },
+      "source": {
+        "url": "https://www.levolor.com/inmotion-motorized-blinds-and-shades",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.blinds.com/brands/levolor/inmotion",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/levolor-inmotion.png?v=2a22127234",
+        "source": "levolor.com",
+        "license": "© Levolor",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "VERIFIED via levolor.com's official InMotion page (fetched through a JS-rendering read proxy): 15-channel remote controlling up to 15 groups, InMotion app + hub for advanced scheduling ('time of day, day of week, or sunrise/sunset'), Amazon Alexa/Google Home/Samsung SmartThings/IFTTT/Siri compatibility, available across cellular/roller/Roman/woven/solar/sheer/faux-wood/real-wood product lines. Pricing corroborated on blinds.com (fetched directly): 24in x 36in configurations range $65.15-$352.06 (sale) / $108.59-$586.76 (regular) depending on shade type -- $108.59 (cheapest regular-price line) used as the base/starting figure. Battery chemistry/life and motor noise dB are not published by Levolor in any fetched source -- left null rather than guessed. Image shows Levolor's own InMotion remote, app, and USB hub (official press asset)."
+    },
+    {
+      "slug": "bali-motorized-roller-shade",
+      "name": "Bali Motorized Roller Shade",
+      "brand": "Bali",
+      "category": "smart-blinds",
+      "releaseDate": null,
+      "priceUsd": 126.68,
+      "priceNote": "Starting (regular) price for the smallest (20in x 36in) motorized roller-shade configuration per blinds.com; sale price seen at $69.67. Bali (Springs Window Fashions) is custom/dealer-priced. Corrects the prompt seed 'Bali Cascade 2.0', a name that returns no matches anywhere -- Bali's actual motorization system/app is branded 'Bali Motorization'.",
+      "specs": {
+        "max_width_in": null,
+        "power_source": "Rechargeable battery (charges in ~5 hours, rated to last about a year) or plug-in transformer; a non-rechargeable battery pack option exists for the motorized-wand variant",
+        "battery_life_months": 12,
+        "control_protocol": "Bluetooth or Z-Wave motor options; Bali Gateway (Wi-Fi) required for Alexa/Google Assistant and remote access",
+        "voice_assistant_support": "Amazon Alexa, Google Assistant (via Bali Gateway)",
+        "motor_noise_db": null,
+        "light_control_type": "sheer to blackout depending on fabric (roller, cellular, pleated, solar, and layered shade styles available)",
+        "solar_charging": false,
+        "scheduling_support": true,
+        "hub_required": true,
+        "installation_type": "standalone motorized shade (custom-made, dealer/DIY installed)"
+      },
+      "source": {
+        "url": "https://www.baliblinds.com/motorization/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.blinds.com/motorized",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/bali-motorized-roller-shade.webp?v=34f6f8d067",
+        "source": "baliblinds.com",
+        "license": "© Bali (Springs Window Fashions)",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "VERIFIED via baliblinds.com's official motorization page (fetched through a JS-rendering read proxy): rechargeable battery 'charges completely in five hours, lasts for about a year' (12 months used), plug-in transformer alternative, non-rechargeable pack for the 'motorized wand' variant, Bluetooth and Z-Wave motor options across cellular/pleated/solar/roller/sheer/layered shades, Wi-Fi Gateway required for Alexa/Google remote access, time-based routines/schedules, remote controls for 1-24 shades. No SKU or line named 'Cascade 2.0' exists on baliblinds.com or in web search -- corrected to Bali's actual 'Bali Motorization' branding. Pricing corroborated on blinds.com (fetched directly): a 20in x 36in Bali motorized roller shade lists at $126.68 regular / $69.67 sale. Max width, exact battery mAh, and motor noise dB are not published -- left null."
+    },
+    {
+      "slug": "smarterhome-mysmartblinds-automation-kit",
+      "name": "MySmartBlinds Automation Kit by SmarterHome",
+      "brand": "SmarterHome",
+      "category": "smart-blinds",
+      "releaseDate": null,
+      "priceUsd": 99,
+      "priceNote": "Base kit price (no solar panel) confirmed on a third-party reseller storefront (smart-home-products.myshopify.com); smarterhome.com's own store returns 404/DNS or bot-blocked responses to every automated fetch attempted, including a JS-rendering proxy, so its own listed price could not be directly verified. The MySmartBlinds Solar Panel accessory is sold separately for ~$25-85.",
+      "specs": {
+        "max_width_in": null,
+        "power_source": "Internal rechargeable battery, Micro-USB charging; optional solar panel trickle-charges the battery",
+        "battery_life_months": null,
+        "control_protocol": "Bluetooth (standalone on-demand control and setup); MySmartBlinds Smart Bridge required for Alexa/Google Home and scheduled/away control",
+        "voice_assistant_support": "Amazon Alexa, Google Assistant (via the MySmartBlinds Smart Bridge, sold separately)",
+        "motor_noise_db": null,
+        "light_control_type": "tilt-only (adjusts existing horizontal corded-blind slats; no fabric/blackout of its own)",
+        "solar_charging": true,
+        "scheduling_support": true,
+        "hub_required": true,
+        "installation_type": "retrofit clip-on (attaches to an existing 2-2.5in horizontal corded blind's tilt wand, no rewiring)"
+      },
+      "source": {
+        "url": "https://smarthingx.com/shop/smart-blinds/mysmart-blinds/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://smart-home-products.myshopify.com/collections/blinds",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "VERIFIED via smarthingx.com's product listing (fetched directly): solar-powered operation with Micro-USB charging backup and in-app battery monitoring, Bluetooth for on-demand control and setup, MySmartBlinds Smart Bridge (sold separately) required for Alexa/Google Home, compatible with 2-2.5in horizontal corded blinds, daily/weekly scheduling with onboard memory, built-in temperature sensors driving an 'Energy Savings mode' that closes blinds as a room heats up, seasonal sun-tracking schedule updates. Base kit price $99.00 corroborated directly on smart-home-products.myshopify.com (fetched directly, price shown on both the product and collection page). smarterhome.com itself (the current owner of the MySmartBlinds brand) returned a DNS failure on one subdomain and 429/Cloudflare blocks on every other URL tried, including via a JS-rendering proxy, for both text and image content -- no image could be verified as real, licensed bytes, so the image field is omitted rather than guessed, per the null-beats-a-guess rule. Max width, exact battery life in months, and motor noise are not published in any fetched source -- left null."
+    }
+  ]
+}

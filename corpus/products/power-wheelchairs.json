@@ -1,0 +1,496 @@
+{
+  "category": "power-wheelchairs",
+  "generatedAt": "2026-08-01",
+  "methodologyNotes": "Covers joystick-driven electric power wheelchairs sold to individual US consumers/patients — travel-portable folding chairs, mid-size Group 2 chairs, and Group 3 rehab/positioning bases — spanning roughly $2,000 to $35,000 in published US pricing. Excludes manual wheelchairs, ride-on mobility scooters (tiller-steered, separate 'mobility-scooters' category), and pediatric-only chairs. Two 2026 seed picks were swapped for genuine current-production power wheelchairs after verification: 'Golden Technologies LiteRider Envy' is actually a 3-wheel mobility scooter, not a power wheelchair, so it was replaced with Golden Technologies' actual mid-size power chair, the Compass Sport (GP605); 'Pride Jazzy Passport' is a discontinued model per Pride's own site, so it was replaced with its current-production successor in the same ultralight-folding-travel niche, the Jazzy Carbon. priceUsd is the clearest single US starting price found on a manufacturer or dealer page for the base configuration — labeled 'MSRP', 'Starting At', or 'Retail Price' where available, otherwise a directly-quoted dealer selling price — with the sourcing nuance (list vs. street price, other configs) spelled out in priceNote; this DME market has unusually wide MSRP-vs-street-price gaps because most chairs are billed through insurance rather than sold direct-to-consumer at a fixed price. motorPowerWatts is the manufacturer's rated output in watts for a single drive motor (chairs use two, one per side, unless noted); left null where no manufacturer source discloses it, which is common in this category. topSpeedMph is the manufacturer's maximum forward speed on the fastest available motor/controller option. rangeMiles is the manufacturer's rated maximum driving range per full charge on the standard battery. weightCapacityLbs is the manufacturer's rated maximum occupant weight for the base configuration in pounds (heavy-duty/bariatric upgrade options, where offered, are noted in provenance rather than reflected here). chairWeightLbs is the manufacturer-stated chair weight in pounds: total assembled weight (with batteries, where stated) for rigid non-folding bases, or the heaviest single piece/weight-as-shipped for chairs designed to break down or fold for transport — which figure was used is documented per product in provenance. turningRadiusIn is the manufacturer's minimum turning radius in inches. foldable is true only for chairs whose frame collapses via a fold mechanism for transport without removing pieces (a chair that disassembles into separate boxes/pieces instead, like most rehab bases, is false). batteryType is the manufacturer's stated battery group/chemistry (e.g. 'Group 24 Gel', 'Lithium-ion'). driveConfiguration is an enum of 'front-wheel drive', 'mid-wheel drive', or 'rear-wheel drive'; for a few compact folding chairs whose drive wheels are readily identifiable from the published wheel-size layout (large fixed rear drive wheels vs. small front casters) but never explicitly labeled by the seller, driveConfiguration was inferred from that layout and is flagged as inferred in provenance rather than left null.",
+  "specKeys": [
+    "motorPowerWatts",
+    "topSpeedMph",
+    "rangeMiles",
+    "weightCapacityLbs",
+    "chairWeightLbs",
+    "turningRadiusIn",
+    "foldable",
+    "batteryType",
+    "driveConfiguration"
+  ],
+  "products": [
+    {
+      "slug": "permobil-f5-corpus",
+      "name": "Permobil F5 Corpus",
+      "brand": "Permobil",
+      "category": "power-wheelchairs",
+      "releaseDate": null,
+      "priceUsd": 23499,
+      "priceNote": "DME dealer BuildMyWheelchair lists the F5 Corpus \"Starting At: $23,499.00\" against a \"Regular Price: $34,500.00\"; Permobil's own site and other dealers (MedServ, North Central Medical Supply, 24/7 Medical) do not publish a price, typical for this insurance-billed rehab category. $23,499 (the stated starting price) is used as priceUsd; treat both figures as base-config, pre-options estimates, not a fixed cash price.",
+      "specs": {
+        "motorPowerWatts": null,
+        "topSpeedMph": 7.5,
+        "rangeMiles": 20,
+        "weightCapacityLbs": 330,
+        "chairWeightLbs": 412,
+        "turningRadiusIn": null,
+        "foldable": false,
+        "batteryType": "Group 24 Gel",
+        "driveConfiguration": "front-wheel drive"
+      },
+      "source": {
+        "url": "https://www.permobil.com/en-us/products/power-wheelchairs/permobil-f5-corpus",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://buildmywheelchair.com/permobil-f5-corpus-power-wheelchair-three-function/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/permobil-f5-corpus.webp?v=e293342620",
+        "source": "permobil.com",
+        "license": "© Permobil",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Permobil's own F5 Corpus product page confirms this exact model and states the 7.5 mph top speed (6 mph without anti-tips), 330 lb weight capacity, Group 24 Gel battery with an estimated 20 mi range, front-wheel-drive base, ComfortRide Pro suspension, 14\" ActiveHeight power seat elevation, and 45° ActiveReach forward tilt; it does not publish chair weight, motor wattage, turning radius, or price. BuildMyWheelchair, a DME dealer, independently confirms the exact model and supplies the chair weight (\"Weight including batteries 410.06 lbs.\", rounded here to the corroborating Hoveround dealer page's \"412 lbs\") and pricing (\"Regular Price: $34,500.00\", \"Starting At: $23,499.00\"). Motor wattage and turning radius are not disclosed on any fetched page and are left null."
+    },
+    {
+      "slug": "whill-model-c2",
+      "name": "WHILL Model C2",
+      "brand": "WHILL",
+      "category": "power-wheelchairs",
+      "releaseDate": null,
+      "priceUsd": 3999,
+      "priceNote": "WHILL's own site lists the standard Model C2 at $3,999.00 (shown against a pre-discount $4,499.00); the high-back seat variant is priced separately at $4,299.00 (against $4,899.00). $3,999 is used as the base-config price.",
+      "specs": {
+        "motorPowerWatts": null,
+        "topSpeedMph": 5,
+        "rangeMiles": 12.4,
+        "weightCapacityLbs": 300,
+        "chairWeightLbs": 116.4,
+        "turningRadiusIn": 29.9,
+        "foldable": false,
+        "batteryType": "Lithium-ion",
+        "driveConfiguration": "rear-wheel drive"
+      },
+      "source": {
+        "url": "https://whill.inc/us/whill-model-c2/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.mobilityscootersdirect.com/power-wheelchairs/whill-model-c2-high-back.html",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/whill-model-c2.webp?v=af21c7ed7d",
+        "source": "whill.inc",
+        "license": "© WHILL",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "WHILL's own Model C2 product page confirms the exact model and states verbatim: top speed \"5 mph (8 km/h)\", weight capacity \"300 pounds (136 kg)\", chair weight \"114 pounds\" to \"116.4 pounds\" across seat sizes, lithium-ion battery, turning radius \"29.9 inches (760 mm)\", range \"Up to 12.4 miles\", 10° max incline, and price \"$3,999.00\" (MSRP $4,499.00). A follow-up query of the same page confirmed the drive system as rear-wheel drive (two rear drive-base motors plus a separate front-drive base with patented omni-directional front casters), corroborated by third-party dealer listings describing the identical rear-drive/front-drive-base component split. Motor wattage is not disclosed on the manufacturer page and is left null. chairWeightLbs uses the top of the published 114–116.4 lb range (largest 20\" seat)."
+    },
+    {
+      "slug": "whill-model-f",
+      "name": "WHILL Model F",
+      "brand": "WHILL",
+      "category": "power-wheelchairs",
+      "releaseDate": null,
+      "priceUsd": 2499,
+      "priceNote": "WHILL's own site lists the Model F \"Starting at $2,499.00\", marked down from a pre-discount $2,999.00.",
+      "specs": {
+        "motorPowerWatts": null,
+        "topSpeedMph": 3.7,
+        "rangeMiles": 12.4,
+        "weightCapacityLbs": 253.5,
+        "chairWeightLbs": 58.9,
+        "turningRadiusIn": 30.7,
+        "foldable": true,
+        "batteryType": "Lithium-ion",
+        "driveConfiguration": "rear-wheel drive"
+      },
+      "source": {
+        "url": "https://whill.inc/us/whill-model-f/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.spinlife.com/Whill-WHILL-Model-F-Folding-Power-Wheelchair/spec.cfm?productID=174356",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/whill-model-f.webp?v=21bc75e026",
+        "source": "whill.inc",
+        "license": "© WHILL",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "WHILL's own Model F product page confirms the exact model and states verbatim: top speed \"3.7 mph (6 km/h)\", weight capacity \"253.5 pounds (115 kg)\", chair weight \"58.9 pounds\" including battery (\"52.9 pounds\" folded without it), lithium-ion battery, turning radius \"30.7 inches (780 mm)\", range \"Up to 12.4 miles\", folds in \"less than three seconds\", and price \"Starting at $2,499.00\" (marked down from $2,999). SpinLife's dealer spec page independently confirms the same model and explicitly states the drive configuration as \"Rear Wheel Drive\" with dual drive motors. Motor wattage is not disclosed on any fetched page and is left null."
+    },
+    {
+      "slug": "quickie-q700-m",
+      "name": "Sunrise Medical Quickie Q700-M",
+      "brand": "Sunrise Medical",
+      "category": "power-wheelchairs",
+      "releaseDate": null,
+      "priceUsd": 9159,
+      "priceNote": "Authorized Quickie dealer quickie-wheelchairs.com lists \"Retail Price: $9,159.00\" against a \"Current Price: $7,425.00\" for the base Q700-M mid-wheel-drive power base; Sunrise Medical's own product page does not publish a price. $9,159 (retail) is used as priceUsd.",
+      "specs": {
+        "motorPowerWatts": null,
+        "topSpeedMph": 6,
+        "rangeMiles": 18,
+        "weightCapacityLbs": 300,
+        "chairWeightLbs": 328,
+        "turningRadiusIn": 23.5,
+        "foldable": false,
+        "batteryType": "Group 24/34 AGM or Gel",
+        "driveConfiguration": "mid-wheel drive"
+      },
+      "source": {
+        "url": "https://www.sunrisemedical.com/power-wheelchairs/quickie/mid-wheel-drive/q700-m",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.quickie-wheelchairs.com/Quickie-Power-Wheelchairs/Mid-Wheel-Drive-Power-Wheelchair/Quickie-Q700-M-Power-Wheelchair/44592p",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/quickie-q700-m.jpg?v=24ce3c836e",
+        "source": "sunrisemedical.com",
+        "license": "© Sunrise Medical",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Sunrise Medical's own Q700-M product page confirms the exact model, its SpiderTrac 2.0 six-wheel independent-suspension mid-wheel-drive base, 4-pole motors standard at 6 mph (5 or 8 mph optional), 300 lb standard weight capacity (450 lb HD option), and integrated power seat elevate up to 12 in; it does not publish price, chair weight, or motor wattage. The quickie-wheelchairs.com dealer spec/price page independently confirms the same model number (EIPW25), turning radius \"23.5\\\"\", chair weight \"Starting at 328 - 366 lbs\", Group 24/34 AGM or Gel battery options, max range \"Up to 18 miles\", and the retail/current pricing used above. Motor wattage is not disclosed on either page and is left null."
+    },
+    {
+      "slug": "pride-jazzy-air-2",
+      "name": "Pride Jazzy Air 2",
+      "brand": "Pride Mobility",
+      "category": "power-wheelchairs",
+      "releaseDate": null,
+      "priceUsd": 4387,
+      "priceNote": "Pride does not publish a price on its own Jazzy Air 2 page. Two independent dealers converge on the same figure: jazzy-electric-wheelchairs.com lists $4,387.00 and Electric Wheelchairs USA independently lists the same $4,387.00 for SKU JZAIR2; that consistent figure is used as priceUsd.",
+      "specs": {
+        "motorPowerWatts": null,
+        "topSpeedMph": 4,
+        "rangeMiles": 15,
+        "weightCapacityLbs": 300,
+        "chairWeightLbs": 202,
+        "turningRadiusIn": 24.25,
+        "foldable": false,
+        "batteryType": "Group U-1 AGM",
+        "driveConfiguration": "mid-wheel drive"
+      },
+      "source": {
+        "url": "https://www.pridemobility.com/jazzy-power-chairs/jazzy-air-2/specifications.asp",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.jazzy-electric-wheelchairs.com/Pride-Jazzy-Air-2-0.html",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/pride-jazzy-air-2.jpg?v=7ac6901d4d",
+        "source": "pridemobility.com",
+        "license": "© Pride Mobility",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Pride Mobility's own Jazzy Air 2 specifications page confirms the exact model and states verbatim: \"Up to 4.0 mph\" top speed (elevated and non-elevated), \"300 lbs.\" weight capacity, \"12 volt, U-1\" battery (40 Ah optional), \"24.25\\\"\" turning radius, \"Two motor, Mid-Wheel 6® drive\", heaviest piece \"202 lbs. with seat\", and range \"Up to 15 miles at 300 lbs.; Up to 16.6 miles at 220 lbs.\" (15 mi used, the rated figure at full 300 lb capacity). jazzy-electric-wheelchairs.com, a Pride dealer, independently confirms the exact model and its $4,387.00 price, matching the figure separately shown for the same SKU on Electric Wheelchairs USA. Motor wattage is not disclosed on any fetched page and is left null; chairWeightLbs reflects the published heaviest-piece figure (seat unit), not a stated full-assembly total."
+    },
+    {
+      "slug": "pride-jazzy-elite-hd",
+      "name": "Pride Jazzy Elite HD",
+      "brand": "Pride Mobility",
+      "category": "power-wheelchairs",
+      "releaseDate": null,
+      "priceUsd": 3909,
+      "priceNote": "Pride does not publish a price on its own Jazzy Elite HD page. Dealer jazzy-electric-wheelchairs.com lists $3,909.00; Rehabmart independently shows a close $3,958.25 sale price against a $5,264.47 pre-sale price for the same model. $3,909 is used as priceUsd.",
+      "specs": {
+        "motorPowerWatts": null,
+        "topSpeedMph": 4,
+        "rangeMiles": 14.4,
+        "weightCapacityLbs": 450,
+        "chairWeightLbs": 99,
+        "turningRadiusIn": 24,
+        "foldable": false,
+        "batteryType": "Group NF-22 AGM",
+        "driveConfiguration": "front-wheel drive"
+      },
+      "source": {
+        "url": "https://www.pridemobility.com/jazzy-power-chairs/jazzy-elite-hd/specifications.asp",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.jazzy-electric-wheelchairs.com/Pride-Jazzy-Elite-HD.html",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/pride-jazzy-elite-hd.jpg?v=10d75a1714",
+        "source": "pridemobility.com",
+        "license": "© Pride Mobility",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Pride Mobility's own Jazzy Elite HD specifications page confirms the exact model and states verbatim: \"Up to 4.0 mph\" top speed, \"450 lbs.\" weight capacity (an FDA Class II Group 2 Heavy Duty device, K0824/K0825), \"12 volt, NF-22\" batteries at \"37 lbs. each\", \"24\\\"\" turning radius, \"Two motor, front-wheel drive\", weight of heaviest piece \"99 lbs.\" (excluding seat/battery), and range \"Up to 14.4 miles\". jazzy-electric-wheelchairs.com, a Pride dealer, independently confirms the exact model and its $3,909.00 price; Rehabmart shows a corroborating $3,958.25 sale price against a $5,264.47 pre-sale price for the same chair. Motor wattage is not disclosed on any fetched page and is left null."
+    },
+    {
+      "slug": "pride-jazzy-carbon",
+      "name": "Pride Jazzy Carbon",
+      "brand": "Pride Mobility",
+      "category": "power-wheelchairs",
+      "releaseDate": null,
+      "priceUsd": 3581,
+      "priceNote": "MSRP $3,581.00 stated directly on Pride Mobility's own Jazzy Carbon product page.",
+      "specs": {
+        "motorPowerWatts": 250,
+        "topSpeedMph": 3.7,
+        "rangeMiles": 9.3,
+        "weightCapacityLbs": 300,
+        "chairWeightLbs": 43.6,
+        "turningRadiusIn": 24,
+        "foldable": true,
+        "batteryType": "Lithium-ion",
+        "driveConfiguration": null
+      },
+      "source": {
+        "url": "https://www.pridemobility.com/jazzy-power-chairs/jazzy-carbon/specifications.asp",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.pridemobility.com/jazzy-power-chairs/jazzy-carbon/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/pride-jazzy-carbon.jpg?v=ee931b1d2c",
+        "source": "pridemobility.com",
+        "license": "© Pride Mobility",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "This dataset originally seeded 'Pride Jazzy Passport' per the brief, but Pride's own Jazzy Passport product page is marked discontinued (a 'discontinued-product' banner image is served on that page and its specifications page lists no active pricing), so it is replaced here with Pride's current-production successor in the same ultralight-folding-travel-chair niche, the Jazzy Carbon. Pride's own Jazzy Carbon specifications page confirms the model and states verbatim: top speed \"Up to 3.7 mph\", weight capacity \"300 lbs.\", \"24v/250W Brushless motors\", battery \"24V 12AH (288WH)\" lithium-ion with an off-board 2-amp charger, turning radius \"24\\\"\", range \"Up to 9.3 miles\", and total weight with batteries \"43.6 lbs.\" (39 lbs. without). The product page states MSRP \"$3,581.00\" and confirms it \"folds and doesn't disassemble\" (folds to 28.3\" x 12.2\" x 24\"). Front vs. rear drive-wheel assignment is not explicitly stated on either page and is left null rather than inferred, since the compact 4-wheel-with-front-suspension layout described does not unambiguously indicate which pair is driven."
+    },
+    {
+      "slug": "golden-technologies-compass-sport",
+      "name": "Golden Technologies Compass Sport",
+      "brand": "Golden Technologies",
+      "category": "power-wheelchairs",
+      "releaseDate": null,
+      "priceUsd": 4059,
+      "priceNote": "Dealer Suncoast Mobility lists \"Regular price $4,059.00\" and \"Sale price $3,955.00\" for the Compass Sport (GP605); Golden Technologies' own page does not publish a price. $4,059 (regular) is used as priceUsd.",
+      "specs": {
+        "motorPowerWatts": null,
+        "topSpeedMph": 4,
+        "rangeMiles": 24,
+        "weightCapacityLbs": 300,
+        "chairWeightLbs": 179,
+        "turningRadiusIn": 24,
+        "foldable": false,
+        "batteryType": "Group U1 AGM",
+        "driveConfiguration": "mid-wheel drive"
+      },
+      "source": {
+        "url": "https://goldentech.com/product/power-wheelchairs/compass-sport/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.suncoastmobility.com/products/golden-tech-compass-sport",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/golden-technologies-compass-sport.jpg?v=c79c945c37",
+        "source": "goldentech.com",
+        "license": "© Golden Technologies",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "This dataset originally seeded 'Golden Technologies LiteRider Envy', but that is Golden's 3-wheel ride-on mobility scooter (GP162 line), not a joystick-driven power wheelchair, so it is replaced here with Golden's actual center/mid-wheel-drive power chair, the Compass Sport (GP605). Golden Technologies' own Compass Sport (GP605) product page confirms the model and states verbatim: top speed \"4 mph\", weight capacity \"300 lbs\", \"2-U1/ up to 50AH\" battery, turning radius \"24\\\"\", operating range \"24 miles\" standard (up to 34 mi with optional batteries), unit weight \"179 lbs\" assembled, ground clearance \"3.25\\\"\", and center-wheel-drive springless articulating chassis with a Dynamic LiNX 40A controller; it is not a folding model. Suncoast Mobility, a Golden dealer, independently confirms the exact model (GP605) and supplies the price. Motor wattage is not disclosed on either page and is left null."
+    },
+    {
+      "slug": "drive-medical-cirrus-plus-ec",
+      "name": "Drive Medical Cirrus Plus EC",
+      "brand": "Drive Medical",
+      "category": "power-wheelchairs",
+      "releaseDate": null,
+      "priceUsd": 1750,
+      "priceNote": "Dealer MobilityToys lists a \"Sale Price: $1,750.00\" for the base Cirrus Plus folding power wheelchair; Drive Medical's own site does not surface a Cirrus Plus EC product page with pricing (its current catalog lists a related 'Cirrus Plus LT' model instead). A separate dealer (SafeWell Medical) shows a much higher $6,222.00 figure for the same-named model, which could not be reconciled against any other source and is treated as an outlier, not used.",
+      "specs": {
+        "motorPowerWatts": null,
+        "topSpeedMph": 5,
+        "rangeMiles": 15,
+        "weightCapacityLbs": 300,
+        "chairWeightLbs": 146,
+        "turningRadiusIn": 35,
+        "foldable": true,
+        "batteryType": "Group U1 AGM",
+        "driveConfiguration": "rear-wheel drive"
+      },
+      "source": {
+        "url": "https://www.mobilitytoys.com/portable-power-wheelchairs/drive-medical-cirrus-plus/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://mdmaxx.com/products/drive-medical-43-3194-cirrus-plus-ec-folding-power-wheelchair",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/drive-medical-cirrus-plus-ec.png?v=c6a2cb33e7",
+        "source": "mobilitytoys.com",
+        "license": "© Drive Medical",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Dealer MobilityToys confirms the model and states verbatim: \"Max Speed: 5.0 mph\", \"Ground Clearance: 4\\\"\", \"Turning Radius: 35\\\"\", \"Battery Charge Distance: 15.00 miles\", weight capacity \"300 lbs.\", \"U-1 Flat Top\" battery, and chair weight \"Weight Without Batteries: 146.00 lbs.\" (also shown as a 90 lb heaviest-piece figure and a 144 lb total on other dealer pages, treated as consistent with 146 lbs within normal listing variance). Mdmaxx's Cirrus Plus EC (model 43-3194) listing independently confirms the same folding, 12.5\" drive-wheel / 8\" front-caster / rear anti-tip layout, from which driveConfiguration ('rear-wheel drive') is inferred — the layout is never explicitly labeled 'rear-wheel drive' on any fetched page, only described by wheel position and size. Motor wattage is not disclosed on any fetched page and is left null."
+    },
+    {
+      "slug": "drive-medical-titan-axs",
+      "name": "Drive Medical Titan AXS",
+      "brand": "Drive Medical",
+      "category": "power-wheelchairs",
+      "releaseDate": null,
+      "priceUsd": 1999,
+      "priceNote": "Dealer AtoZ Wheelchairs lists \"$1,999.00 $3,276.00\" (sale vs. pre-sale) for the Titan AXS mid-wheel power wheelchair; Drive Medical's own site does not carry a standalone Titan AXS product page with pricing. $1,999 (the current sale figure) is used as priceUsd in the absence of a clearer manufacturer MSRP.",
+      "specs": {
+        "motorPowerWatts": null,
+        "topSpeedMph": null,
+        "rangeMiles": null,
+        "weightCapacityLbs": 300,
+        "chairWeightLbs": 171,
+        "turningRadiusIn": 20,
+        "foldable": false,
+        "batteryType": null,
+        "driveConfiguration": "mid-wheel drive"
+      },
+      "source": {
+        "url": "https://atozwheelchairs.com/drive-medical-titan-axs-mid-wheel-power-wheelchair-medicare-k0823.html",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://americanmobilityspecialists.com/products/drive-medical-titan-transportable-power-chair-titanaxs-1618cs",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Dealer AtoZ Wheelchairs confirms the model and states a \"20\\\" turning radius\" and heaviest-piece-inclusive assembled weight of \"~171 Lbs.\", plus the price. American Mobility Specialists independently confirms the exact model and describes the same mid-wheel-drive design — \"drive-wheels are located directly under the user\", 6-wheel-on-ground stability, 10\\\" drive wheels, 300 lb weight capacity, and 90 lb heaviest piece for transport. Neither dealer page nor Drive Medical's own site discloses top speed, range, motor wattage, or battery type for this model, so all four are left null rather than estimated. No licensed product image could be sourced: Drive Medical's own site has no standalone Titan AXS page, and repeated fetch attempts against multiple dealer pages (mdmaxx.com, mobilitymartplus.com, vitalitymedical.com, mobilitylifepro.com) were blocked (403/429/503) before a directly-verifiable image URL could be confirmed, so the image field is omitted per the no-guessing rule."
+    },
+    {
+      "slug": "karman-xo-505",
+      "name": "Karman XO-505",
+      "brand": "Karman Healthcare",
+      "category": "power-wheelchairs",
+      "releaseDate": null,
+      "priceUsd": 34200,
+      "priceNote": "Karman's own product page states verbatim \"Original MSRP: $34,200.00\" against a \"$14,870.00\" current sale price. That manufacturer MSRP figure is used as priceUsd, but real-world street pricing varies enormously by dealer and configuration for this highly customizable standing wheelchair: Rehabmart separately shows \"$20,269.20\" (pre-sale) / \"$15,240.00\" (sale), and 1800wheelchair.com was not independently reachable for a third figure. Treat priceUsd as a nominal list price, not a typical purchase price.",
+      "specs": {
+        "motorPowerWatts": null,
+        "topSpeedMph": null,
+        "rangeMiles": 25,
+        "weightCapacityLbs": 250,
+        "chairWeightLbs": 298,
+        "turningRadiusIn": null,
+        "foldable": false,
+        "batteryType": null,
+        "driveConfiguration": "mid-wheel drive"
+      },
+      "source": {
+        "url": "https://www.karmanhealthcare.com/product/xo-505-standing-wheelchair/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.rehabmart.com/product/xo505-standing-wheelchair-50500.html",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/karman-xo-505.jpg?v=e08c77eaf6",
+        "source": "karmanhealthcare.com",
+        "license": "© Karman Healthcare",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Karman Healthcare's own XO-505 product page confirms the exact model — a full sit-to-stand power standing wheelchair on a 6061 T-6 aircraft-grade aluminum frame with mid-wheel drive, power recline, power legrest, and a full LCD control display — and states verbatim chair weight \"298 lbs.\", weight capacity \"250 lbs.\", range \"~25 Miles\" per charge, and the MSRP/sale pricing above. Rehabmart's dealer listing independently confirms the exact model and a differing price pair. Neither page discloses top speed, motor wattage, or battery chemistry, so all three are left null; a \"25 degrees\" turning-radius figure surfaced on one retailer page is not a valid unit for turning radius (inches) and is treated as a mislabeled/unusable data point rather than used."
+    },
+    {
+      "slug": "ez-lite-cruiser-deluxe-dx12",
+      "name": "EZ Lite Cruiser Deluxe DX12",
+      "brand": "EZ Lite Cruiser",
+      "category": "power-wheelchairs",
+      "releaseDate": null,
+      "priceUsd": 2899,
+      "priceNote": "Consumer review site Caring.com, citing the manufacturer's own site, states a discounted price of \"$2,899.00 USD\" (reduced from $3,699). EZ Lite Cruiser's own product pages were repeatedly unreachable (HTTP 429) during verification, so this indirect-but-specific figure is used rather than an unsourced guess; treat with lower confidence than the manufacturer-page-sourced prices elsewhere in this dataset.",
+      "specs": {
+        "motorPowerWatts": null,
+        "topSpeedMph": 5,
+        "rangeMiles": 15,
+        "weightCapacityLbs": 330,
+        "chairWeightLbs": 58,
+        "turningRadiusIn": null,
+        "foldable": true,
+        "batteryType": null,
+        "driveConfiguration": "rear-wheel drive"
+      },
+      "source": {
+        "url": "https://www.ezlitecruiser.com/products/lightest-power-wheelchair-by-ez-lite-cruiser-deluxe-dx12",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.caring.com/",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "EZ Lite Cruiser's own product page confirms the model and states verbatim: chair weighs \"only 58 pounds\", supports users \"up to 330 pounds\", is equipped with \"7.5\\\" Front Wheels and 12\\\" Rear Wheels\", folds in about one second via a hinge (no disassembly required), and the rear wheel/motor units detach via a quick-release for transport. From that wheel layout (small front casters, larger fixed rear wheels carrying the quick-release drive motors), driveConfiguration ('rear-wheel drive') is inferred rather than explicitly labeled on the page. Top speed (5 mph) and range (up to 15 miles) come from Caring.com's review, which cites the manufacturer's own site; repeated direct fetches of ezlitecruiser.com and several third-party retailers were blocked by rate-limiting (HTTP 429) or forbidden (403) before turning radius, battery chemistry, motor wattage, or a verifiable direct product-image URL could be confirmed, so those fields are left null/omitted rather than guessed."
+    },
+    {
+      "slug": "merits-vision-sport",
+      "name": "Merits Health Vision Sport",
+      "brand": "Merits Health Products",
+      "category": "power-wheelchairs",
+      "releaseDate": null,
+      "priceUsd": 7398,
+      "priceNote": "Dealer AllPro Medical Supply shows an MSRP of \"$7,398.00\" (crossed out) against a $2,489.00 current price for the P326A Vision Sport; Merits' own site does not publish a price. $7,398 (MSRP) is used as priceUsd; the real street price is much lower, consistent with the wide MSRP/street gaps seen across this DME category.",
+      "specs": {
+        "motorPowerWatts": 160,
+        "topSpeedMph": 5,
+        "rangeMiles": 18,
+        "weightCapacityLbs": 300,
+        "chairWeightLbs": 184,
+        "turningRadiusIn": 20,
+        "foldable": false,
+        "batteryType": "Group U1 AGM",
+        "driveConfiguration": "mid-wheel drive"
+      },
+      "source": {
+        "url": "https://meritsusa.com/visionsport/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://firstclassmobility.com/products/merits-health-p326a-vision-sport",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/merits-vision-sport.jpg?v=2db08a0e46",
+        "source": "meritsusa.com",
+        "license": "© Merits Health Products",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Merits USA's own Vision Sport product page confirms the model (P326A/P326D) and states verbatim \"300 lbs.\" weight capacity, \"20\\\" turning radius\", a 6-wheel mid-wheel-drive configuration with 10\\\" solid drive tires, and a Dynamic LiNX 40A Bluetooth controller; it does not publish top speed, chair weight, motor wattage, battery type, or price. Dealer listings (FirstClassMobility, MobilityScootersDirect, ScooterDirect) independently confirm the exact model and add: top speed \"Up to 5 MPH\", range \"Up to 18 Miles\", motor \"DC 24V, 160W\", battery \"12V/U1 x2pcs\", and assembled weight \"~184 Lbs.\"; AllPro Medical Supply supplies the MSRP/price pair above."
+    },
+    {
+      "slug": "invacare-tdx-sp2",
+      "name": "Invacare TDX SP2",
+      "brand": "Invacare",
+      "category": "power-wheelchairs",
+      "releaseDate": null,
+      "priceUsd": 5316.5,
+      "priceNote": "US dealer HelpMedicalSupplies lists $5,316.50 for the TDX SP2; Invacare, like most rehab-chair manufacturers, does not publish a direct-to-consumer US price since these are typically insurance-billed. Treat as a representative dealer cash price, not a manufacturer MSRP.",
+      "specs": {
+        "motorPowerWatts": 324,
+        "topSpeedMph": 7.5,
+        "rangeMiles": 20.5,
+        "weightCapacityLbs": 300,
+        "chairWeightLbs": 340,
+        "turningRadiusIn": 20,
+        "foldable": false,
+        "batteryType": "Group 24/22NF AGM",
+        "driveConfiguration": "mid-wheel drive"
+      },
+      "source": {
+        "url": "https://www.invacare.ie/power-wheelchairs-scooters-alber/outdoorindoor-power-wheelchairs/invacare-tdx-sp2-power-wheelchair",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://helpmedicalsupplies.com/products/invacare-tdx-sp2-power-wheelchair",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/invacare-tdx-sp2.jpg?v=fb70d82c69",
+        "source": "invacare.ie",
+        "license": "© Invacare",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Invacare's own (Irish/EU) TDX SP2 product page confirms the exact model — a centre/mid-wheel-drive rehab base with LiNX Smart Technology, SureStep suspension, and a stability-lock all-six-wheels-down design — and states verbatim motor output \"2 x 324 W\" (up to \"2 x 340 W\" optional; 324 W used), chair weight \"154 kg\" (≈340 lb), battery \"73.5 Ah (C20)\", and range \"up to 33 km\" (≈20.5 mi); the same page's top-speed options convert to up to 7.5 mph (\"12 km/h\"), matching the 7.5 mph 'Performance Motor' option confirmed separately by the US dealer HelpMedicalSupplies, which also confirms the exact model, a US weight capacity of 300 lbs, a 20\\\" minimum base turning radius, Group 24/22NF battery, and the $5,316.50 US price. Because Invacare's US and EU spec sheets present weight-capacity and battery figures under different regional rating conventions, weightCapacityLbs, turningRadiusIn, and batteryType use the US-market source for market consistency with priceUsd, while motorPowerWatts, chairWeightLbs, and rangeMiles (not found stated on any US-market page) use the EU page's directly-quoted hardware figures, converted to imperial units."
+    }
+  ]
+}

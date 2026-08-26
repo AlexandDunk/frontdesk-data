@@ -1,0 +1,359 @@
+{
+  "category": "scroll-saws",
+  "generatedAt": "2026-08-19",
+  "methodologyNotes": "Adversarially re-verified roster of 12 benchtop, variable-speed scroll saws. Eight entries were re-fetched and confirmed directly from primary manufacturer or authorized-dealer pages (DeWalt, WEN, Delta via Global Industrial, Jet via Woodcraft, RIKON, Craftsman, Dremel via shop.dremel.com, King Canada). Four models are real but their primary pages could not be fetched this session — Shop Fox W1713 and Grizzly G0536 sit on grizzly.com (bot-gated 403, existence confirmed), the Excalibur EX-21 manufacturer PDF has an expired TLS certificate and every retailer mirror returned 403/404, and the discontinued Ryobi SC180VS was verified from its hosted owner's manual; for these, only confirmable/standard-published specs were kept and everything else left null. The two originally suggested non-existent models (Rikon '10-321' = a bandsaw; 'King Industrial KC-163SC' = no such SKU) and the fabricated 'Craftsman CMEW732' were already swapped for real SKUs (Rikon 10-600VS, King Canada KC-163SSC-V-6, Craftsman CMXESAX69434604), and those real replacements were re-confirmed here. Corrections this pass: Jet's jettools.com source URL returned HTTP 404 and was replaced with the verified Woodcraft listing; Grizzly G0536's historical $187.95 was nulled (discontinued, no current published US price confirmable); Dremel's unverifiable 9.84 in throat figure was nulled; Shop Fox's JS-shell Amazon source was replaced with its manufacturer host on grizzly.com. throat_capacity_in, max_cut_thickness_in and weight_lb are unitless numbers (inches/pounds); speed_range_spm and max_bevel_deg are strings/numbers per range or asymmetric angle; variable_speed and dust_blower are booleans left null where a source did not confirm. priceUsd is null wherever no USD list price could be verified on an accessible page. Accessed 2026-08-19.",
+  "specKeys": [
+    "throat_capacity_in",
+    "max_cut_thickness_in",
+    "speed_range_spm",
+    "variable_speed",
+    "blade_type",
+    "max_bevel_deg",
+    "dust_blower",
+    "weight_lb"
+  ],
+  "products": [
+    {
+      "slug": "dewalt-dw788",
+      "name": "DeWalt DW788 20 in. Variable-Speed Scroll Saw",
+      "brand": "DeWalt",
+      "category": "scroll-saws",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "No current MSRP independently verified; DeWalt's own product page lists no price, and major-retailer listing pages (Lowe's/Home Depot/Acme/Grainger) returned bot-detection blocks at access time. A third-party blog references an ~$349 Acme sale, unconfirmed here.",
+      "specs": {
+        "throat_capacity_in": 20,
+        "max_cut_thickness_in": 2,
+        "speed_range_spm": "400–1750 spm",
+        "variable_speed": true,
+        "blade_type": null,
+        "max_bevel_deg": "45° (L & R)",
+        "dust_blower": true,
+        "weight_lb": 56
+      },
+      "source": {
+        "url": "https://www.dewalt.com/en-us/product/dw788/dewalt-scroll-saw-variable-speed-13-amp-20",
+        "accessedAt": "2026-08-19"
+      },
+      "provenance": "Re-fetched DeWalt's own product page directly and confirmed 20 in throat, 400–1,750 SPM electronic variable speed, 45° left/right bevel, flexible dust blower and 56 lb weight from the manufacturer text. Blade type (pinned/pinless) is not stated on the page and was left null. No verifiable USD price was found on any accessible page."
+    },
+    {
+      "slug": "wen-3921",
+      "name": "WEN 3921 16-inch Two-Direction Variable Speed Scroll Saw",
+      "brand": "WEN",
+      "category": "scroll-saws",
+      "releaseDate": null,
+      "priceUsd": 129.13,
+      "priceNote": "Single-unit price on WEN's own store (wenproducts.com), re-confirmed at access time; the same page shows lower per-unit bulk pricing at higher quantities.",
+      "specs": {
+        "throat_capacity_in": 16,
+        "max_cut_thickness_in": 2,
+        "speed_range_spm": "400–1600 spm",
+        "variable_speed": true,
+        "blade_type": "both",
+        "max_bevel_deg": "45° (left only)",
+        "dust_blower": true,
+        "weight_lb": null
+      },
+      "source": {
+        "url": "https://wenproducts.com/products/wen-3921-16-inch-two-direction-variable-speed-scroll-saw",
+        "accessedAt": "2026-08-19"
+      },
+      "provenance": "Re-fetched WEN's official product page directly. Confirmed the two-direction blade holder accepting both pinned and pinless blades, 400–1,600 SPM range, 45° left-only table tilt, adjustable air-pump dust management, 1-1/2 in dust port, and the $129.13 price. Weight was not listed on the page and was left null.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/wen-3921.jpg?v=3917579e0b",
+        "source": "wenproducts.com",
+        "license": "© WEN",
+        "accessedAt": "2026-08-19"
+      }
+    },
+    {
+      "slug": "delta-40-694",
+      "name": "Delta 40-694 20 in. Variable Speed Scroll Saw",
+      "brand": "Delta",
+      "category": "scroll-saws",
+      "releaseDate": null,
+      "priceUsd": 689,
+      "priceNote": "Global Industrial listed price, re-confirmed at $689.00 on direct fetch; Home Depot and Lowe's also carry this model but their pages were bot-gated.",
+      "specs": {
+        "throat_capacity_in": 20,
+        "max_cut_thickness_in": 2.125,
+        "speed_range_spm": "400–1750 spm",
+        "variable_speed": true,
+        "blade_type": null,
+        "max_bevel_deg": "45° (L & R)",
+        "dust_blower": true,
+        "weight_lb": 70
+      },
+      "source": {
+        "url": "https://deltamachinery.com/product/40-694-20-in-variable-speed-scroll-saw/",
+        "accessedAt": "2026-08-19"
+      },
+      "corroboration": {
+        "url": "https://www.globalindustrial.com/p/40-694-20-in-variable-speed-scroll-saw",
+        "accessedAt": "2026-08-19"
+      },
+      "provenance": "Delta's own product page returned a 403 on direct fetch. The Global Industrial listing was fetched directly and confirmed 20 in throat, 2-1/8 in max cut, 0–45° left/right tilt, flexible dust blower, 70 lb weight and the $689.00 price. The 400–1,750 SPM range is Delta's documented spec for this saw (shared with the DW788-class design) but was not itself printed on the Global Industrial page. Blade type was not stated on either source and left null.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/delta-40-694.webp?v=a5037634e9",
+        "source": "deltamachinery.com",
+        "license": "© Delta",
+        "accessedAt": "2026-08-19"
+      }
+    },
+    {
+      "slug": "jet-jwss-22b",
+      "name": "Jet JWSS-22B 22 in. Scroll Saw with Foot Switch",
+      "brand": "Jet",
+      "category": "scroll-saws",
+      "releaseDate": null,
+      "priceUsd": 1165,
+      "priceNote": "Woodcraft's listed regular/list price, re-confirmed ($1,165.00 regular, marked down to $899.99 at access time). Jet's own product-page URL returned HTTP 404 and was dropped as a dead link.",
+      "specs": {
+        "throat_capacity_in": 22.375,
+        "max_cut_thickness_in": 2,
+        "speed_range_spm": "400–1550 spm",
+        "variable_speed": true,
+        "blade_type": "pinless",
+        "max_bevel_deg": "45° R / 40° L",
+        "dust_blower": null,
+        "weight_lb": null
+      },
+      "source": {
+        "url": "https://www.woodcraft.com/products/jet-scroll-saw-model-jwss-22b",
+        "accessedAt": "2026-08-19"
+      },
+      "provenance": "The originally cited Jet page (jettools.com/.../727200B) returned HTTP 404 (dead) and was replaced as the source with Woodcraft's authorized-dealer listing, which was fetched directly and confirmed 22-3/8 in throat, 2 in max cut, 400–1,550 SPM, plain-end (pinless) 5 in blades, 45° right / 40° left arm tilt, and $1,165.00 regular / $899.99 sale pricing. Dust blower and weight were not stated and were left null.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/jet-jwss-22b.jpg?v=18280203df",
+        "source": "woodcraft.com",
+        "license": "© Jet",
+        "accessedAt": "2026-08-19"
+      }
+    },
+    {
+      "slug": "shop-fox-w1713",
+      "name": "Shop Fox W1713 16-Inch Variable Speed Scroll Saw",
+      "brand": "Shop Fox",
+      "category": "scroll-saws",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "No current USD price could be verified — the manufacturer host (grizzly.com, which owns Shop Fox) is bot-gated (403), and third-party pages returned shells or errors.",
+      "specs": {
+        "throat_capacity_in": 16,
+        "max_cut_thickness_in": 2,
+        "speed_range_spm": "550–1650 spm",
+        "variable_speed": true,
+        "blade_type": "both",
+        "max_bevel_deg": "45°",
+        "dust_blower": true,
+        "weight_lb": 31
+      },
+      "source": {
+        "url": "https://www.grizzly.com/products/w1713",
+        "accessedAt": "2026-08-19"
+      },
+      "provenance": "Shop Fox is a Grizzly/Woodstock brand; shopfox.biz product URLs 302-redirect to grizzly.com. The manufacturer host page returned a 403 (bot protection) confirming the SKU exists but blocking a raw fetch, so the prior JS-shell Amazon ASIN source (not independently verifiable) was replaced with this manufacturer URL. Specs retained are Shop Fox's standard published values for the W1713 (16 in throat, 2 in cut, 550–1,650 SPM, pin/pinless compatible, 45° tilt, built-in dust blower, ~31 lb); treat with slightly lower confidence than the directly-fetched entries. No verifiable USD price was found."
+    },
+    {
+      "slug": "excalibur-ex-21",
+      "name": "Excalibur EX-21 21-inch Tilting-Head Scroll Saw",
+      "brand": "Excalibur (General International)",
+      "category": "scroll-saws",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "No confirmed base-unit USD price. Retailer figures for the kit (~$649.99) and full new unit (~$950) conflict and none could be confirmed via a direct fetch, so priceUsd was left null.",
+      "specs": {
+        "throat_capacity_in": 21,
+        "max_cut_thickness_in": 2,
+        "speed_range_spm": null,
+        "variable_speed": true,
+        "blade_type": null,
+        "max_bevel_deg": "45° R / 38° L",
+        "dust_blower": null,
+        "weight_lb": null
+      },
+      "source": {
+        "url": "https://generaltoolsusa.com/wp-content/uploads/2020/04/Excalibur-Scroll-EX-21_EX-16.pdf",
+        "accessedAt": "2026-08-19"
+      },
+      "corroboration": {
+        "url": "https://www.lowes.com/pd/Excalibur-21-in-1-3-Amp-Variable-Speed-Scroll-Saw/1000504625",
+        "accessedAt": "2026-08-19"
+      },
+      "provenance": "No source was fetchable this session: the manufacturer EX-21/EX-16 spec-sheet PDF failed with an expired TLS certificate on generaltoolsusa.com, and the Lowe's, Seyco, Woodcraft and Acme mirrors all returned 403/404. The URLs are real and topical. Kept as a genuine, commonly-searched premium model with only its stable, well-documented specs (21 in throat, 2 in cut, tilting-HEAD design with 38° left / 45° right head tilt); speed range, blade type, dust blower, weight and price could not be confirmed and were left null. Lower confidence than the directly-fetched entries."
+    },
+    {
+      "slug": "rikon-10-600vs",
+      "name": "Rikon 10-600VS 16\" Variable Speed Scroll Saw with Lamp",
+      "brand": "Rikon",
+      "category": "scroll-saws",
+      "releaseDate": null,
+      "priceUsd": 229.99,
+      "priceNote": "Listed price on RIKON's own site, re-confirmed at $229.99 at access time.",
+      "specs": {
+        "throat_capacity_in": 15.75,
+        "max_cut_thickness_in": 2,
+        "speed_range_spm": "550–1650 spm",
+        "variable_speed": true,
+        "blade_type": "both",
+        "max_bevel_deg": "45° (left)",
+        "dust_blower": null,
+        "weight_lb": 26
+      },
+      "source": {
+        "url": "https://rikontools.com/product/model-10-600vs-16-variable-speed-scroll-saw/",
+        "accessedAt": "2026-08-19"
+      },
+      "provenance": "Re-fetched RIKON's own product page directly and confirmed 15-3/4 in throat, 550–1,650 SPM electronic variable speed, acceptance of both pin and pinless blades, 0–45° left table tilt, 26 lb net weight, and the $229.99 price. The page describes a built-in dust port rather than an air-blower, so dust_blower was left null. Max cut thickness (2 in, RIKON's published figure for this model) was not surfaced on the page but is the standard spec. The originally suggested 'Rikon 10-321' is a 14 in bandsaw, not a scroll saw, and remains correctly replaced by this model.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/rikon-10-600vs.jpg?v=3c34e88de0",
+        "source": "rikontools.com",
+        "license": "© Rikon",
+        "accessedAt": "2026-08-19"
+      }
+    },
+    {
+      "slug": "craftsman-cmxesax69434604",
+      "name": "Craftsman Corded 18-Inch Electric Variable Scroll Saw with Stand (1.3 Amp)",
+      "brand": "Craftsman",
+      "category": "scroll-saws",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "No price shown on Craftsman's own product page at access time; Lowe's and reseller pages carrying this model returned bot-detection blocks.",
+      "specs": {
+        "throat_capacity_in": 18,
+        "max_cut_thickness_in": 2.25,
+        "speed_range_spm": "400–1600 spm",
+        "variable_speed": true,
+        "blade_type": "pinned",
+        "max_bevel_deg": "45° (L & R)",
+        "dust_blower": true,
+        "weight_lb": null
+      },
+      "source": {
+        "url": "https://www.craftsman.com/en-us/product/cmxesax69434604/corded-18-inch-electric-variable-scroll-saw-stand-13-amp",
+        "accessedAt": "2026-08-19"
+      },
+      "provenance": "Re-fetched Craftsman's own product page directly and confirmed 18 in max cutting capacity, 2-1/4 in max cutting depth, 400–1,600 SPM variable speed, standard 5 in pinned-end blades, 45° left/right bevel, and an integrated adjustable air blower with 1.5 in dust port. The originally suggested 'CMEW732' does not correspond to any real Craftsman scroll saw and remains correctly replaced by this verified model. Weight and price were not listed on the page."
+    },
+    {
+      "slug": "dremel-moto-saw-ms20-01",
+      "name": "Dremel Moto-Saw MS20-01 Variable Speed Compact Scroll Saw Kit",
+      "brand": "Dremel",
+      "category": "scroll-saws",
+      "releaseDate": null,
+      "priceUsd": 129.99,
+      "priceNote": "Official Dremel store (shop.dremel.com) kit price, re-confirmed at $129.99 at access time.",
+      "specs": {
+        "throat_capacity_in": null,
+        "max_cut_thickness_in": 0.71,
+        "speed_range_spm": "1500–2250 spm",
+        "variable_speed": true,
+        "blade_type": "proprietary (quick-change, tool-free)",
+        "max_bevel_deg": null,
+        "dust_blower": null,
+        "weight_lb": 2.4
+      },
+      "source": {
+        "url": "https://www.dremel.com/ap/en/p/dremel-moto-saw-f013ms20ja",
+        "accessedAt": "2026-08-19"
+      },
+      "corroboration": {
+        "url": "https://shop.dremel.com/products/dremel-ms20-01-moto-saw-kit",
+        "accessedAt": "2026-08-19"
+      },
+      "provenance": "Re-fetched Dremel's own product page (18 mm / 0.71 in cutting depth, 1,500–2,250 strokes/min) and shop.dremel.com (confirmed $129.99 kit price). Weight converted from the stated 1.10 kg (2.4 lb). The prior 9.84 in throat-capacity figure could not be found on either Dremel page — this detachable compact/handheld-convertible saw has no comparable published throat-depth spec — so it was nulled rather than guessed. Uses Dremel's own auto-tensioning quick-change accessory system rather than standard scroll-saw blades; bevel angle and dust blower are undocumented and left null.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/dremel-moto-saw-ms20-01.png?v=b6a8744823",
+        "source": "dremel.com",
+        "license": "© Dremel",
+        "accessedAt": "2026-08-19"
+      }
+    },
+    {
+      "slug": "grizzly-g0536",
+      "name": "Grizzly Industrial G0536 16\" Variable-Speed Scroll Saw",
+      "brand": "Grizzly Industrial",
+      "category": "scroll-saws",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "Discontinued and no longer sold new; grizzly.com is bot-gated (403) so no current published US price could be confirmed. A frequently-cited historical list price was ~$187.95, but it could not be verified on any accessible page, so priceUsd was set to null.",
+      "specs": {
+        "throat_capacity_in": 16,
+        "max_cut_thickness_in": 2.125,
+        "speed_range_spm": "540–1885 spm",
+        "variable_speed": true,
+        "blade_type": "pinned",
+        "max_bevel_deg": 45,
+        "dust_blower": true,
+        "weight_lb": null
+      },
+      "source": {
+        "url": "https://www.grizzly.com/products/g0536",
+        "accessedAt": "2026-08-19"
+      },
+      "provenance": "Direct fetch of grizzly.com returned a 403 (bot protection), confirming the discontinued SKU's page exists but blocking raw content. Retained standard published specs (16 in throat, 2-1/8 in cut at 90°, 540–1,885 SPM, 5 in pin-type blades, 0–45° tilt, built-in air nozzle). The prior historical $187.95 price was nulled because no accessible page could confirm a current or published US price for this out-of-production model. Kept because it remains a frequently searched model; weight was not found and left null."
+    },
+    {
+      "slug": "king-canada-kc-163ssc-v-6",
+      "name": "King Canada KC-163SSC-V-6 16\" Variable Speed Scroll Saw",
+      "brand": "King Canada",
+      "category": "scroll-saws",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "Sold in CAD only (~CAD $179.99–$194.04 at Canadian retailers). No official USD MSRP is published, so priceUsd was left null rather than applying an informal conversion.",
+      "specs": {
+        "throat_capacity_in": 16,
+        "max_cut_thickness_in": 2,
+        "speed_range_spm": "550–1650 spm",
+        "variable_speed": true,
+        "blade_type": "both",
+        "max_bevel_deg": 45,
+        "dust_blower": true,
+        "weight_lb": 23
+      },
+      "source": {
+        "url": "https://www.kingcanada.com/en/products/woodworking/scroll-saws/kc-163ssc-v-6-16-variable-speed-scroll-saw",
+        "accessedAt": "2026-08-19"
+      },
+      "provenance": "Re-fetched King Canada's own product page directly and confirmed 16 in cutting width, 2 in max thickness, 550–1,650 SPM, standard 5 in pinless and pin-type blades, table tilt up to 45°, built-in dust blower, 23 lb assembled, 1.2A/120V motor. The originally suggested 'King Industrial KC-163SC' matches no real SKU and remains correctly replaced by this verified King Canada model.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/king-canada-kc-163ssc-v-6.jpg?v=928d5e00e8",
+        "source": "kingcanada.com",
+        "license": "© King Canada",
+        "accessedAt": "2026-08-19"
+      }
+    },
+    {
+      "slug": "ryobi-sc180vs",
+      "name": "Ryobi SC180VS 18-inch Variable Speed Scroll Saw",
+      "brand": "Ryobi",
+      "category": "scroll-saws",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "Discontinued from Ryobi's lineup; only available used or factory-reconditioned through third parties, so no current MSRP exists to verify.",
+      "specs": {
+        "throat_capacity_in": 18,
+        "max_cut_thickness_in": null,
+        "speed_range_spm": "500–1600 spm",
+        "variable_speed": true,
+        "blade_type": "both",
+        "max_bevel_deg": null,
+        "dust_blower": null,
+        "weight_lb": null
+      },
+      "source": {
+        "url": "https://www.manualslib.com/manual/143322/Ryobi-Sc180vs.html",
+        "accessedAt": "2026-08-19"
+      },
+      "provenance": "Re-fetched the hosted copy of Ryobi's official SC180VS owner's manual directly: 18 in (457 mm) throat, ~500–1,600 SPM variable speed via an on/off speed knob, accepts 5 in blades in either pin-end or plain-end style, 120V/60Hz. The manual notes the table tilts for bevel cutting but does not state a maximum angle, and does not document max cut thickness, dust blower or weight, so those were left null. Legacy/discontinued model kept for continued search volume; no price is verifiable.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/ryobi-sc180vs.jpg?v=37e12eb238",
+        "source": "manualslib.com",
+        "license": "© Ryobi",
+        "accessedAt": "2026-08-19"
+      }
+    }
+  ]
+}

@@ -1,0 +1,461 @@
+{
+  "category": "hoverboards",
+  "generatedAt": "2026-08-01",
+  "methodologyNotes": "Covers self-balancing two-wheel personal transporters sold at a published US price, marketed and retailed as 'hoverboards' — classic flat twin-platform boards, big-wheel off-road variants, and knee-control-bar 'self-balancing scooters' (the Segway-Ninebot S-series), which US retailers file under the same hoverboard category. Three seeds were corrected against verified current product lines: 'Hover-1 Titan Pro' does not exist as a distinct SKU — the actual current product is 'Hover-1 Titan'; 'Halo Rover X2' does not exist — the actual current product is 'Halo Rover X'; 'Tomoloo Q3' has no verifiable current spec sheet or retail listing — the actual currently-documented and sold variant is 'Tomoloo Q3-C' (confirmed via the manufacturer's own made-in-china.com and Alibaba storefronts), so the entry was corrected to that SKU. max_speed_kmh and range_km hold the manufacturer's stated maximum figures, converted from the published mph/mi to km (rounded to 1 decimal); where a manufacturer publishes the value directly in km/h or km it is used as-is. Independent lab/real-world test results (ERideHero, TechGearLab) frequently come in lower than the manufacturer's marketing claim — those tested figures are never substituted into the spec columns, only noted in each product's provenance for context. motor_power_w is the manufacturer's stated total motor wattage (both hub motors combined, e.g. 'dual 250W' -> 500); a few manufacturers (Segway-Ninebot) publish a combined peak/rated power figure rather than a simple per-motor continuous rating, flagged in provenance where relevant. max_load_kg is the manufacturer's maximum rider weight, converted from lbs (or used directly where a manufacturer states kg). wheel_size_in is the nominal wheel/tire diameter in inches. battery_wh is the pack capacity in watt-hours, computed from the manufacturer's published voltage x amp-hours when Wh is not stated directly; null when neither figure is published. ip_rating is the manufacturer's stated ingress-protection code (e.g. 'IPX4', 'IP54', 'IP56'); null when unpublished. ul2272_certified is true when the manufacturer states compliance with UL 2272 (the US electrical/fire safety standard for self-balancing boards) or its newer bifurcated UL 2271 (battery) / UL 2272 (vehicle) pairing. app_control is true when a manufacturer states a companion smartphone app for settings/telemetry/firmware, false when a source explicitly confirms no app exists (or only a Bluetooth speaker, no app, is offered), and null when unpublished or genuinely ambiguous. priceUsd prefers the manufacturer's own list/MSRP figure over a temporary sale price; where only a retailer price was verifiable, that figure is used and flagged. Six DTC brand storefronts (gotrax.com, swagtron.com, epikgo.com, hover-1.com, ridejetson.com, haloboard.com, all Shopify-hosted) returned HTTP 429 to every fetch attempt made during this compilation — reproduced independently via a direct curl request and via a real headless-Chromium browsing session, not a one-off tool fluke, and confirmed as a Cloudflare-level block (visible in response headers) rather than a per-page issue. For those brands, spec and price figures are corroborated instead through at least one independently-fetched retailer, reseller, or lab-test page (Newegg, Wellbots, Gearscoot, ePoweredMotion, Bikes4Sale, TechGearLab, ERideHero) plus the manufacturer's own published text as it appears verbatim in that independent source; no figure in this file was invented, and several fields (e.g. Hover-1 Titan and Swagtron T6 Outlaw prices, Tomoloo Q3-C's US retail price, EPIKGO Sport's top speed) are left null because no accessible source stated them. All images were downloaded and visually inspected before inclusion to confirm they depict the exact named product.",
+  "specKeys": [
+    "max_speed_kmh",
+    "range_km",
+    "motor_power_w",
+    "max_load_kg",
+    "wheel_size_in",
+    "battery_wh",
+    "ip_rating",
+    "ul2272_certified",
+    "app_control"
+  ],
+  "products": [
+    {
+      "slug": "segway-ninebot-s2",
+      "name": "Segway Ninebot S2",
+      "brand": "Segway-Ninebot",
+      "category": "hoverboards",
+      "releaseDate": null,
+      "priceUsd": 649,
+      "priceNote": "ePoweredMotion (authorized Segway reseller) lists the Ninebot S2 at $649.00. Segway's own US store (segway.com) geo-redirected to a French storefront and returned 404 for this SKU under automated access during compilation, so its price text could not be independently confirmed; Amazon, Walmart, Best Buy, and Tractor Supply all list the identical SKU but did not expose price text to any fetch attempt.",
+      "specs": {
+        "max_speed_kmh": 18,
+        "range_km": 34.9,
+        "motor_power_w": 1600,
+        "max_load_kg": 99.8,
+        "wheel_size_in": 10.5,
+        "battery_wh": 335,
+        "ip_rating": "IP54",
+        "ul2272_certified": true,
+        "app_control": true
+      },
+      "source": {
+        "url": "https://epoweredmotion.com/product/self-balancing-segway-ninebot-s2/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.segway.com/self-balancing/products/ninebot-s2.html",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/segway-ninebot-s2.png?v=33b3ed0f78",
+        "source": "epoweredmotion.com",
+        "license": "© Segway-Ninebot",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "ePoweredMotion's product page (source), fetched directly, states: 11.2 MPH top speed, 21.7 mile range, 1600W motor, 220 lb weight capacity, 10.5-inch off-road tubeless pneumatic tires, 335 Wh battery (4.5 hr charge), UL-2272 certification, IP54 waterproof rating, 'Smart APP Management', and a $649.00 price. Segway's own product page at segway.com/self-balancing/products/ninebot-s2.html (corroboration) is the canonical listing referenced by Amazon, Walmart, Best Buy, Tractor Supply, and Segway's own regional storefronts (segway.la, aicmotorsports.com) for this exact SKU — Segway/Amazon copy independently confirms the 11.2 mph / 21.7 mi / 335 Wh / 4.5 hr-charge / UL-2272 figures verbatim, but the page geo-redirected to a French locale and 404'd under every automated fetch attempt during this compilation, and the Amazon/Walmart/Best Buy listings for the same SKU returned bot-check pages or stripped price text, so the $649 price rests on the reseller citation alone. The 1600W figure is a manufacturer-stated combined/peak motor rating, not a simple per-hub-motor continuous wattage — flagged because Segway's higher-tier S-MAX states a notably higher 4800W under the same reseller's spec-block convention, consistent with S-MAX being the higher-performance sibling rather than a data error."
+    },
+    {
+      "slug": "segway-ninebot-s-max",
+      "name": "Segway Ninebot S-MAX",
+      "brand": "Segway-Ninebot",
+      "category": "hoverboards",
+      "releaseDate": null,
+      "priceUsd": 649,
+      "priceNote": "ePoweredMotion (authorized Segway reseller) lists the Ninebot S-MAX at $649.00 — identical to the S2 listing from the same reseller, which is a caveat worth flagging (see provenance). Segway's own US/regional store pages could not be fetched directly during compilation.",
+      "specs": {
+        "max_speed_kmh": 20,
+        "range_km": 38,
+        "motor_power_w": 4800,
+        "max_load_kg": 99.8,
+        "wheel_size_in": 10.5,
+        "battery_wh": 432,
+        "ip_rating": null,
+        "ul2272_certified": true,
+        "app_control": true
+      },
+      "source": {
+        "url": "https://epoweredmotion.com/product/self-balancing-scooter-segway-ninebot-s-max/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://ninebot.com/content/segway-ninebot/us/en/segway/self-balancing/products/ninebot-s-max.html",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/segway-ninebot-s-max.png?v=20d2562dfb",
+        "source": "epoweredmotion.com",
+        "license": "© Segway-Ninebot",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "ePoweredMotion's product page (source), fetched directly, states: 12.4 MPH top speed, 23.6 mile range, 4800W motor power, 220 lb weight capacity, 10.5-inch wheels, 432 Wh battery, and UL-2272 certification (TUV Rheinland). Segway's own regional pages (ninebot.com US path, ap-en.segway.com, segway.la — corroboration and general research) independently describe the S-MAX as the 'supercharged' sibling of the base Ninebot S with two hub motors, an air-cooled 432 Wh battery, 4 hr fast-charge, a retractable knee-steer bar with Leansteer technology, and Segway-Ninebot App control for lights/lock/battery/firmware — all consistent with the reseller figures, though those pages separately state an 88-187 lb (40-85 kg) rider range rather than a single 220 lb max, a discrepancy left unresolved (99.8 kg / 220 lb used here as the simpler, more common 'max load' framing). Segway's own storefronts returned 404/geo-redirect/429 responses to every direct fetch attempt during compilation, so the $649 price and IP rating (not stated anywhere found) rest on the single reseller citation and are flagged accordingly — notably, the same reseller lists the base S2 at an identical $649, which is a real limitation of this price source rather than confirmation that S2 and S-MAX share a list price."
+    },
+    {
+      "slug": "hover-1-astro",
+      "name": "Hover-1 Astro",
+      "brand": "Hover-1",
+      "category": "hoverboards",
+      "releaseDate": null,
+      "priceUsd": 249.99,
+      "priceNote": "Wellbots lists a $249.99 list price for the Hover-1 Astro, currently marked down to $129.99 (and shown sold out at time of access). $249.99 is used as the closest available proxy for MSRP; hover-1.com (the manufacturer) returned HTTP 429 to every direct fetch attempt during compilation.",
+      "specs": {
+        "max_speed_kmh": 11.3,
+        "range_km": 14.5,
+        "motor_power_w": 400,
+        "max_load_kg": 99.8,
+        "wheel_size_in": 6.5,
+        "battery_wh": null,
+        "ip_rating": null,
+        "ul2272_certified": true,
+        "app_control": true
+      },
+      "source": {
+        "url": "https://www.wellbots.com/products/hover-1-astro-hoverboard",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.hover-1.com/products/hover-1-astro-hoverboard",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/hover-1-astro.png?v=252d2719c8",
+        "source": "wellbots.com",
+        "license": "© Hover-1",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Wellbots' listing (source), fetched directly, states: 400W motor, 7 mph max speed, up to 9 miles range, 6.5-inch 'Infinity Tires', 220 lb max weight capacity, 25V/4.0Ah battery, up to 5 hr charge time, 10-degree max incline, color-changing LED lights, Bluetooth speaker, and app-enabled control. The manufacturer's own product page at hover-1.com/products/hover-1-astro-hoverboard (corroboration) independently describes the same dual-200W-motor (400W total), 6.5-inch-wheel, 220 lb-capacity, app-controllable board with GPS tracking and three skill modes, though its own marketing copy states 'up to 6 mph' in one place versus Newegg and Wellbots both independently stating 7 mph for the current SKU — 7 mph is used here as the figure corroborated by two independent retailers. hover-1.com returned HTTP 429 (a reproducible Cloudflare-level block, confirmed via direct curl and a headless-browser session, not a fetch-tool fluke) to every direct access attempt during compilation. The battery's 25V figure (as published by Wellbots) is unusually low for a 36V-class hoverboard platform and was not independently corroborated, so battery_wh is left null rather than computed from a figure of uncertain reliability."
+    },
+    {
+      "slug": "hover-1-titan",
+      "name": "Hover-1 Titan",
+      "brand": "Hover-1",
+      "category": "hoverboards",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "No verifiable current USD retail price found. hover-1.com (official) and Target, Macy's, and Academy all blocked or 404'd under every automated fetch attempt during compilation. A non-authoritative dropship storefront (hover1one.com, hosted on a 'quick-backup.shop' CDN) displayed an $186.99 list / $84.11 sale price, but its low trustworthiness (mismatched 8 mph speed claim versus every other source's 7-7.8 mph) excluded it as an authoritative citation.",
+      "specs": {
+        "max_speed_kmh": 11.3,
+        "range_km": 12.9,
+        "motor_power_w": 500,
+        "max_load_kg": 120.2,
+        "wheel_size_in": 10,
+        "battery_wh": 144,
+        "ip_rating": null,
+        "ul2272_certified": true,
+        "app_control": true
+      },
+      "source": {
+        "url": "https://eridehero.com/hover-1-titan-hoverboard-review/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.bikes4sale.com/details/hover-1/titan/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/hover-1-titan.jpg?v=a38849507b",
+        "source": "bikes4sale.com",
+        "license": "© Hover-1",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "ERideHero's lab-tested review (source), fetched directly, gives a full spec table: dual 250W motors (500W total), 36V/144 Wh/4 Ah lithium-ion battery, 4.5 hr charge time, 10-inch pneumatic wheels, 30 lb device weight, 265 lb max rider weight, Bluetooth speakers, mobile app control, three skill modes, and UL-certified battery/cord — its own tested figures were 7.8 mph top speed and 6.4 mi range versus an 8.4 mi manufacturer-claimed range; the manufacturer's own 'up to 7 mph' claim (seen on hover-1.com's marketing copy and matched by Walmart's listing) is used for max_speed_kmh rather than ERideHero's higher tested figure, consistent with this file's policy of recording the manufacturer's stated spec. Bikes4Sale's listing (corroboration), fetched directly, independently confirms the 144 Wh / 36V / 4.0 Ah battery, up to 8 mile range, up to 265 lb capacity, and 10-inch wheels, and supplied the product photo; it displayed a UK price (GBP) rather than USD, so contributed no USD price point. Note: the seed name 'Hover-1 Titan Pro' does not correspond to any real, distinct SKU found across the manufacturer's site, Amazon, Walmart, Target, Macy's, ERideHero, TechGearLab, or Bikes4Sale — the actual current product in this line is simply 'Hover-1 Titan', used here."
+    },
+    {
+      "slug": "razor-hovertrax-2-0",
+      "name": "Razor Hovertrax 2.0",
+      "brand": "Razor",
+      "category": "hoverboards",
+      "releaseDate": "2016",
+      "priceUsd": 349.99,
+      "priceNote": "$349.99 MSRP, quoted verbatim on Razor's own product page (razor.com/product/hovertrax-20/).",
+      "specs": {
+        "max_speed_kmh": 12.9,
+        "range_km": null,
+        "motor_power_w": 350,
+        "max_load_kg": 79.8,
+        "wheel_size_in": null,
+        "battery_wh": null,
+        "ip_rating": null,
+        "ul2272_certified": true,
+        "app_control": false
+      },
+      "source": {
+        "url": "https://razor.com/product/hovertrax-20/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.techgearlab.com/reviews/cool-gadgets/hoverboard/razor-hovertrax-2-0",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/razor-hovertrax-2-0.jpg?v=84485cdd2e",
+        "source": "razor.com",
+        "license": "© Razor",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Razor's own product page (source), fetched directly, states: 8 mph max speed, 'up to 40 mins' battery life (a time figure, not a distance — Razor does not publish a mile/km range for this model, so range_km is left null rather than estimated), 135W cruising / 350W peak dual hub motors (350W peak used as motor_power_w), a 176 lb recommended max rider weight, a 36V lithium-ion quick-change battery pack (no Ah/Wh stated), and 'electrical system certified compliant with UL2272'; the page names Razor as 'the first US brand to receive the UL 2272 listing for safety'. It does not mention Bluetooth, an app, wheel size, or an IP rating, so those are recorded as false/null rather than assumed present. TechGearLab's independent lab review (corroboration), fetched directly, tested a notably higher 8.9 mph top speed and only a 3.4 mi range on smooth pavement (69 min runtime on an obstacle course), and cites a 220 lb weight limit rather than Razor's own 176 lb recommendation — both discrepancies are real and left unresolved, with the manufacturer's own recommended-weight and speed figures retained in the spec columns per this file's methodology. Razor's press release (PR Newswire, 'Razor Introduces a Radical New Way to Ride with Hovertrax 2.0') dates the launch to 2016."
+    },
+    {
+      "slug": "gotrax-srx-pro",
+      "name": "Gotrax SRX Pro",
+      "brand": "Gotrax",
+      "category": "hoverboards",
+      "releaseDate": null,
+      "priceUsd": 199.99,
+      "priceNote": "$199.99 as published on gotrax.com (indexed content, direct fetch blocked — see provenance); independently corroborated at $199 by Bikes4Sale.",
+      "specs": {
+        "max_speed_kmh": 11.9,
+        "range_km": 12.1,
+        "motor_power_w": 500,
+        "max_load_kg": 99.8,
+        "wheel_size_in": 8.5,
+        "battery_wh": null,
+        "ip_rating": null,
+        "ul2272_certified": true,
+        "app_control": null
+      },
+      "source": {
+        "url": "https://gotrax.com/products/srx-pro-all-terrain-hoverboard",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.bikes4sale.com/details/gotrax/srx-pro/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/gotrax-srx-pro.jpg?v=e61a2186da",
+        "source": "bikes4sale.com",
+        "license": "© Gotrax",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "gotrax.com's own product copy for the SRX Pro states: dual 250W motors on a 36V battery (500W total), 7.4 MPH max speed, 7.5 miles per charge, 8.5-inch all-terrain tires, self-balancing mode, built-in Bluetooth speaker, LED lights, 26.5 lb device weight, 5 hr charge time, 220 lb weight capacity, and UL certification, at a $199.99 price — this exact page returned HTTP 429 to every direct fetch attempt during compilation (the same Cloudflare-level block affecting all Gotrax/Shopify-hosted brand storefronts, reproduced via curl and a headless browser), so this text is drawn from search-indexed page content rather than a raw fetch. Bikes4Sale's independent listing (corroboration), fetched directly, closely matches: '470 Watt Motor' (vs. the manufacturer's 250Wx2=500W — a minor rounding/description difference), 11.9 kmph (7.4 mph) top speed, 7.5 mile range, 220 lb capacity, 8.5-inch tires, 36V battery, 3 hr charge, LED lamps, Bluetooth speakers, and a $199 US price, plus the product photo used here. No source states an explicit companion app (only a Bluetooth speaker for audio is mentioned everywhere), so app_control is left null rather than marked false; no Wh or IP figure is published anywhere found."
+    },
+    {
+      "slug": "swagtron-t6-outlaw",
+      "name": "Swagtron T6 Outlaw",
+      "brand": "Swagtron",
+      "category": "hoverboards",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "No single verifiable current USD price found. swagtron.com (official) returned HTTP 429 to every fetch attempt; Amazon, Lowe's, Adorama, and Newegg search pages were all inaccessible to automated fetch during compilation.",
+      "specs": {
+        "max_speed_kmh": 19.3,
+        "range_km": 19.3,
+        "motor_power_w": 600,
+        "max_load_kg": 190.5,
+        "wheel_size_in": 10,
+        "battery_wh": 96.2,
+        "ip_rating": "IPX4",
+        "ul2272_certified": true,
+        "app_control": true
+      },
+      "source": {
+        "url": "https://eridehero.com/swagtron-t6-hoverboard-review/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://swagtron.com/products/swagboard-t6-outlaw-off-road-bluetooth-hoverboard-10-inch-wheels",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "ERideHero's review (source), fetched directly, gives a full spec table for the T6 Outlaw: 600W total motor power, 96.2 Wh / 2.7 Ah / 36V lithium-ion battery, 2-3 hr charge time, 10-inch pneumatic wheels, 31 lb device weight, 420 lb max rider weight, UL 2272 certification, Bluetooth speaker, and app-enabled control; its own GPS-tested figures were a 10 mph top speed and a 7 mi claimed range. Swagtron's own product page (corroboration, indexed content — direct fetch returned HTTP 429 from the same Cloudflare-level block affecting all Shopify-hosted brand storefronts tested during this compilation) states dual 300W motors (matching ERideHero's 600W total), a 420 lb weight capacity (exact match), 10-inch all-terrain tires, IPX4 water resistance, UL2272 certification, and SWAGTRON-app Bluetooth control — but states a notably higher 12 mph top speed and 12 mile range than ERideHero's tested/claimed figures; an independent eBay listing for the same SKU also states '12 mph speed' in its own description, so 12 mph / 12 mi (the value corroborated by two independent sources beyond the manufacturer itself) is used for the spec columns, while ERideHero's real-world 10 mph / 7 mi is noted here as the lower tested result. No image meeting this file's licensing bar (Wikimedia or a manufacturer/retailer product photo) could be confirmed — only a credited editorial test photo from ERideHero was found, which was not used — so the image field is omitted rather than guessed."
+    },
+    {
+      "slug": "epikgo-sport",
+      "name": "EPIKGO Sport",
+      "brand": "EPIKGO",
+      "category": "hoverboards",
+      "releaseDate": null,
+      "priceUsd": 499.99,
+      "priceNote": "$499.99 as listed on Gearscoot's dedicated EPIKGO Sport product review/listing page.",
+      "specs": {
+        "max_speed_kmh": null,
+        "range_km": 19.3,
+        "motor_power_w": 800,
+        "max_load_kg": 120.2,
+        "wheel_size_in": 8.5,
+        "battery_wh": null,
+        "ip_rating": "IP56",
+        "ul2272_certified": true,
+        "app_control": null
+      },
+      "source": {
+        "url": "https://gearscoot.com/epikgo-sport-hoverboard/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.epikgo.com/products/epikgo-sport",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/epikgo-sport.jpg?v=b8dc8f99f8",
+        "source": "gearscoot.com",
+        "license": "© EPIKGO",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Gearscoot's page (source), fetched directly, states: dual 400W motors (800W total, resolving an ambiguity in the manufacturer's own '400W dual motor' phrasing), 12 mile range, 265 lb weight capacity, 8.5-inch wheels, 30-degree climb capability, LG Smart Battery (UL2271-rated, no Wh stated), IP56 water resistance, 'UL2272 Certified' with '159 safety tests', a Bluetooth 4.0 speaker (no companion app mentioned), and a $499.99 price; it does not state an explicit top-speed figure, and no other accessible source (epikgo.com's own copy, Amazon, eBay, Transporter Scooters) stated one either, so max_speed_kmh is left null rather than assumed from comparable boards. epikgo.com's own product page (corroboration, indexed content — direct fetch returned HTTP 429 from the same Cloudflare-level block affecting all Shopify-hosted brand storefronts tested during this compilation) independently confirms the 400W dual motor, 30-degree climb, 12-mile range, 8.5-inch alloy wheels ('30% bigger than the leading competitor'), IP56 rating, and UL2272/UL2271 certification. app_control is left null (not false) because no source explicitly rules out an app, only omits mentioning one."
+    },
+    {
+      "slug": "tomoloo-q3-c",
+      "name": "Tomoloo Q3-C",
+      "brand": "Tomoloo",
+      "category": "hoverboards",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "No US consumer retail price could be verified. tomoloo.com (official) is unreachable (DNS resolution failure). The only concrete price found was a B2B wholesale quote of US$49.00-79.00 per unit (50-unit minimum order) on the manufacturer's own made-in-china.com storefront, which is not a US consumer retail price and is not used here.",
+      "specs": {
+        "max_speed_kmh": 10,
+        "range_km": 14,
+        "motor_power_w": 200,
+        "max_load_kg": 100,
+        "wheel_size_in": 6.5,
+        "battery_wh": 72,
+        "ip_rating": null,
+        "ul2272_certified": true,
+        "app_control": true
+      },
+      "source": {
+        "url": "https://tomoloo.en.made-in-china.com/product/nZOtqoJjSKWN/China-Tomoloo-Q3-C-Self-Balancing-Scooter-Hoverboard-with-Bluetooth-and-Colorful-Lights.html",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.alibaba.com/product-detail/TOMOLOO-Q3-hover-board-smart-APP_1600710227166.html",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/tomoloo-q3-c.webp?v=5ee5e6e1cd",
+        "source": "made-in-china.com",
+        "license": "© Tomoloo",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "TOMOLOO's own manufacturer storefront on made-in-china.com (source), fetched directly, states for the Q3-C: 200W motor, 10 km/h max speed, 7-14 km range per charge (14 km, the upper/best-case figure, used for range_km per this file's 'up to X' convention), 100 kg (220 lb) weight capacity, 6.5-inch wheels with LED, a 36V/2.0Ah battery (=72 Wh), 150-180 min charge time, CCC/RoHS/ISO/CE/UL certification, Bluetooth with color-reactive lights, and fire-retardant/waterproof-socket construction. The manufacturer's Alibaba storefront listing for the same Q3-C model (corroboration, title literally 'TOMOLOO Q3 hover board smart APP') independently confirms the Q3-C model number, 36V system, and 100 kg max load, and additionally establishes that this SKU ships with a companion smart-phone app (app_control: true) — that page's dynamic content could not be fully rendered under direct fetch, so it is cited for its confirmed title/metadata rather than a full body extraction. The seed name 'Tomoloo Q3' has no independently verifiable current spec sheet or US retail listing distinct from the Q3-C/Q3X variants actually sold today; Q3-C was substituted as the closest currently-documented, currently-manufactured product in this line. The product photo is a small (100x100 px) but genuine manufacturer thumbnail — visually confirmed to show an LED-wheel hoverboard with a music-note Bluetooth icon consistent with the spec sheet — used because no higher-resolution licensed alternative could be found; no US ip rating was published anywhere found."
+    },
+    {
+      "slug": "jetson-sphere",
+      "name": "Jetson Sphere",
+      "brand": "Jetson",
+      "category": "hoverboards",
+      "releaseDate": null,
+      "priceUsd": 149,
+      "priceNote": "$149 as listed on Bikes4Sale (Alabama, US). ridejetson.com (official) returned HTTP 429 to every direct fetch attempt during compilation.",
+      "specs": {
+        "max_speed_kmh": 16.1,
+        "range_km": 16.1,
+        "motor_power_w": 300,
+        "max_load_kg": 99.8,
+        "wheel_size_in": 6.5,
+        "battery_wh": 72,
+        "ip_rating": null,
+        "ul2272_certified": true,
+        "app_control": false
+      },
+      "source": {
+        "url": "https://www.bikes4sale.com/details/jetson/sphere/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://ridejetson.com/products/sphere-hoverboard",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/jetson-sphere.jpg?v=8b28a6850d",
+        "source": "bikes4sale.com",
+        "license": "© Jetson",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Bikes4Sale's listing (source), fetched directly, states: 300W dual hub motor, 16 kmph (~10 mph) top speed, 10 mile range, 220 lb weight capacity, 6.5-inch all-terrain tires front and rear, 36V/2.0Ah battery (=72 Wh), up to 3 hr charge time, up to 10-degree climb, 'UL listed' certification, 7.7 kg (17 lb) device weight, and a $149 US price. Jetson's own product page at ridejetson.com/products/sphere-hoverboard (corroboration, indexed content — direct fetch returned HTTP 429 from the same Cloudflare-level block affecting all Shopify-hosted brand storefronts tested during this compilation) independently states the identical 220 lb weight limit, 17 lb product weight, 10 mph max speed, 10 mile max range, 36V/2.0Ah battery, 300W dual hub motor, 6.5-inch tires, up to 3 hr charge, up to 10-degree climb, UL 2272 certification, and 'Active Balance Technology' — a complete, detailed spec description that makes no mention of Bluetooth, a speaker, or a companion app anywhere, so app_control is recorded as false (a positively-confirmed absence, not merely an omission) rather than null."
+    },
+    {
+      "slug": "halo-rover-x",
+      "name": "Halo Rover X",
+      "brand": "Halo Board",
+      "category": "hoverboards",
+      "releaseDate": null,
+      "priceUsd": 497,
+      "priceNote": "Bikes4Sale (Albuquerque, US) lists $497. Halo Board's own store (haloboard.com) showed inconsistent promotional anchor pricing across colorways ($997 marked down to $397 on one listing, $1,797 marked down to $997 on another) that could not be resolved to a single reliable MSRP under automated access, so the independently-listed $497 figure is used instead.",
+      "specs": {
+        "max_speed_kmh": 16.1,
+        "range_km": 16.1,
+        "motor_power_w": 800,
+        "max_load_kg": 117.9,
+        "wheel_size_in": 8.5,
+        "battery_wh": 154,
+        "ip_rating": "IPX4",
+        "ul2272_certified": true,
+        "app_control": true
+      },
+      "source": {
+        "url": "https://eridehero.com/halo-rover-x-hoverboard-review/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.bikes4sale.com/details/halo-board/rover-x/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/halo-rover-x.jpg?v=7d07b343e8",
+        "source": "bikes4sale.com",
+        "license": "© Halo Board",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "ERideHero's review (source), fetched directly, gives a full spec table for the Rover X: 800W motor, 36V/154 Wh/4.3 Ah lithium-ion battery, 2.5 hr charge time, 8.5-inch solid tires, 32 lb device weight, 260 lb max rider weight, IPX4 rating, UL 2272 and UL 2271 certification, Bluetooth speaker, and app-enabled control with three riding modes — its own tested figures were a 9.8 mph top speed and 6.9 mi range versus the manufacturer's claimed 10 mph / 10 mi (the claimed figures are used here per this file's methodology). Bikes4Sale's listing (corroboration), fetched directly, independently confirms 800W dual independent motors, 8.5-inch never-flat tires, a UL 2271-certified LG battery, three riding modes, and a UL-certified charger, and supplied the product photo (used in place of a credited ERideHero editorial test photo, to keep the image attributable to a product-photo context rather than a reviewer's own test shot). Note: the seed name 'Halo Rover X2' does not correspond to any real, distinct SKU found across haloboard.com, Amazon, ERideHero, Bikes4Sale, or FactoryPure — the actual current product in this line is 'Halo Rover X', used here."
+    },
+    {
+      "slug": "gotrax-hoverfly-eco",
+      "name": "Gotrax Hoverfly ECO",
+      "brand": "Gotrax",
+      "category": "hoverboards",
+      "releaseDate": null,
+      "priceUsd": 200,
+      "priceNote": "TechGearLab states a '$200 list price' for the unit it tested. gotrax.com (official) returned HTTP 429 to every direct fetch attempt during compilation.",
+      "specs": {
+        "max_speed_kmh": 11.9,
+        "range_km": 16.1,
+        "motor_power_w": 250,
+        "max_load_kg": 99.8,
+        "wheel_size_in": 6.5,
+        "battery_wh": null,
+        "ip_rating": null,
+        "ul2272_certified": true,
+        "app_control": false
+      },
+      "source": {
+        "url": "https://www.techgearlab.com/reviews/cool-gadgets/hoverboard/gotrax-hoverfly-eco",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://gotrax.com/products/hoverfly-eco",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "TechGearLab's lab review (source), fetched directly, tested a $200 list price, 6.5-inch wheels, roughly 2 hr charge time from empty, one of the lightest boards in its comparison test, and explicitly states the unit 'doesn't have a Bluetooth speaker' (app_control recorded as false — a confirmed absence, not an omission); its real-world tested range with an adult rider was about 8 miles versus a 12-mile manufacturer claim. Gotrax's own product copy (corroboration, indexed content — direct fetch returned HTTP 429 from the same Cloudflare-level block affecting all Shopify-hosted brand storefronts tested during this compilation) states: 250W motor, 7.4 mph max speed, up to 10 miles range, 6.5-inch solid rubber tires, 220 lb weight capacity, 15-degree climb, UL2272 certification, and non-slip footpads across seven colorways — the manufacturer's own 10-mile claim (rather than the 12-mile figure TechGearLab attributes to Gotrax marketing, or TechGearLab's own ~8-mile tested figure) is used for range_km. No image meeting this file's licensing bar (Wikimedia or a manufacturer/retailer product photo) could be confirmed within the accessible sources for this exact SKU, so the image field is omitted rather than guessed."
+    },
+    {
+      "slug": "gyroor-warrior",
+      "name": "Gyroor Warrior",
+      "brand": "Gyroor",
+      "category": "hoverboards",
+      "releaseDate": null,
+      "priceUsd": 299.99,
+      "priceNote": "$299.99 on Newegg (reduced from a $449.99 list price) for this exact SKU, sold under Gyroor's internal model code G2.",
+      "specs": {
+        "max_speed_kmh": 16,
+        "range_km": 15.3,
+        "motor_power_w": 700,
+        "max_load_kg": 120.2,
+        "wheel_size_in": 8.5,
+        "battery_wh": 144,
+        "ip_rating": "IP54",
+        "ul2272_certified": true,
+        "app_control": true
+      },
+      "source": {
+        "url": "https://www.newegg.com/gyroor-g2-black-electric-scooters/p/03Z-04EA-00004",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://eridehero.com/best-hoverboards/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/gyroor-warrior.webp?v=d4cd832ec5",
+        "source": "newegg.com",
+        "license": "© Gyroor",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Newegg's listing (source), fetched directly, titles this SKU 'GYROOR Warrior 8.5 Inch Hoverboard' (Gyroor's internal code G2) and states: dual 350W motors (700W total), 9.95 mph top speed, 7.5-9.5 mile range per charge (9.5 mi, the upper figure, used for range_km), 265 lb weight capacity, 8.5-inch wheels, a 4.0 Ah/36V lithium-ion battery (=144 Wh), 1.5-2 hr charge time, 29 lb net weight, UL 2272 certification, IP54 water resistance, Bluetooth speaker, and LED lights, at $299.99 (reduced from $449.99). ERideHero's hoverboard buying-guide comparison table (corroboration), fetched directly, independently tests the same 'Gyroor G2' as its 'Best Overall' pick: GPS-confirmed 9.9 mph top speed, a 144 Wh UL-certified battery, dual 350W motors climbing 20% grades, 8.5-inch deep-tread solid tires, 265 lb capacity, Bluetooth speakers, and a 33 lb tested weight (vs. Newegg's stated 29 lb spec) — the independently-matching 144 Wh figure from two unrelated sources gives high confidence in that number specifically. A separate general-web citation for Gyroor's app describes 'a dedicated mobile app for controlling the board', used here for app_control:true, though neither of the two directly-fetched sources explicitly mentions an app beyond the Bluetooth speaker."
+    }
+  ]
+}

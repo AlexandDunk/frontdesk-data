@@ -1,0 +1,423 @@
+{
+  "category": "embroidery-machines",
+  "generatedAt": "2026-08-01",
+  "methodologyNotes": "This dataset covers 13 embroidery-capable machines a 2026 buyer is likely to compare, spanning entry-level embroidery-only and combo (sewing+embroidery) home machines, premium Swiss/Scandinavian flagships, and commercial single-head multi-needle machines. Specs were verified against manufacturer product pages (brother-usa.com, janome.com, babylock.com, melco.com, ricoma.com/ricoma.co.za) or, where a manufacturer page blocked automated fetching (repeated HTTP 429/403 from bernina.com/berninausa.com, singer.com, husqvarnaviking.com, qualitysewing.com, maggieframes.com after multiple attempts), an authorized-dealer product page whose copy mirrors the manufacturer spec sheet (worldweidner.com, terracesewingmachine.com, smithowensew.com, rockymountainsewing.com) was used as the primary citation instead, with a second dealer/manufacturer page as corroboration where available. 'max_embroidery_area_in' is the single largest continuous embroidery field the machine ships supporting (its largest included or first-party-optional hoop), not a theoretical stitched-multiple-hoopings figure. 'hoop_sizes' lists the hoops included in the box plus notable larger optional hoops the manufacturer sells for that model; it is not the full accessory catalog. 'usb_import' is true only when the machine itself has a USB port that reads embroidery design files directly from a USB stick/drive (a PC-tethered or app-only transfer path is usb_import:false even if the machine has a USB port for other purposes, e.g. Brother's SE2000 and Luminaire XP3 spec sheets explicitly state 'USB: No' despite a physical port present for service/accessory use). 'wifi_transfer' is true when the machine can receive designs wirelessly from a phone, tablet, PC, or cloud service without a cable. 'needle_count' is 1 for standard single-needle home/combo machines and the literal needle count for multi-needle commercial machines (Janome MB-4S: 4, Ricoma EM-1010: 10, Melco EMT16X: 16). priceUsd is the published US MSRP / regular list price (not a limited-time sale price); where a model is commonly sold at a large standing discount or is dealer-quote-only, priceNote records the observed street price or notes that no MSRP is publicly published. Two flagship products (Baby Lock Solaris Vision, Brother PR1000E) were dropped from the original seed list because they are manufacturer-discontinued with no current published pricing; they were replaced with their direct current-lineup equivalents (Baby Lock Radiance, and no direct Brother replacement was added — Janome MB-4S and Ricoma EM-1010 already cover the commercial multi-needle segment) plus Husqvarna Viking Designer Epic 3 and Melco EMT16X to round out the luxury-combo and industrial-single-head segments respectively. Janome MC500E is listed under its currently-shipping 'Limited Edition' SKU since the original MC500E is discontinued per janome.com, with identical published specs. null means the manufacturer/dealer source consulted did not publish that figure, not that the feature is absent — the sole intentional exception is touchscreen_size_in on the Melco EMT16X, which has no on-machine touchscreen because it is driven live from a connected PC running Melco's OS-SE software. accessedAt 2026-08-01 for all entries.",
+  "specKeys": [
+    "max_embroidery_area_in",
+    "built_in_designs",
+    "stitches_per_minute",
+    "hoop_sizes",
+    "touchscreen_size_in",
+    "usb_import",
+    "wifi_transfer",
+    "needle_count"
+  ],
+  "products": [
+    {
+      "slug": "brother-se2000",
+      "name": "Brother SE2000",
+      "brand": "Brother",
+      "category": "embroidery-machines",
+      "releaseDate": null,
+      "priceUsd": 1499.99,
+      "priceNote": "MSRP per brother-usa.com; commonly discounted to roughly $1,199-$1,349 at big-box retailers (Walmart lists $1,499.99-$1,599.99 depending on bundle).",
+      "specs": {
+        "max_embroidery_area_in": "5 x 7 in",
+        "built_in_designs": 193,
+        "stitches_per_minute": 650,
+        "hoop_sizes": "5x7 in hoop included; 4x7 in magnetic hoop compatible",
+        "touchscreen_size_in": 3.7,
+        "usb_import": false,
+        "wifi_transfer": true,
+        "needle_count": 1
+      },
+      "source": {
+        "url": "https://www.brother-usa.com/products/se2000",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/brother-se2000.jpg?v=000c7de073",
+        "source": "brother-usa.com",
+        "license": "© Brother",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Embroidery area, hoop compatibility, 193 built-in designs, 650 spm embroidery speed, 3.7in LCD, and $1,499.99 MSRP confirmed directly on brother-usa.com/products/se2000. The spec sheet explicitly lists 'USB: No' for design import even though the machine carries one USB port (used for wireless-transfer software/service, not USB-stick design import) — set usb_import false per the manufacturer's own spec table, distinguishing SE2000 from the otherwise near-identical PE900 which does support USB-stick import. Wireless LAN + Artspira app transfer confirmed, so wifi_transfer true. Release year not published by Brother; left null rather than guessed."
+    },
+    {
+      "slug": "brother-pe900",
+      "name": "Brother PE900",
+      "brand": "Brother",
+      "category": "embroidery-machines",
+      "releaseDate": null,
+      "priceUsd": 1179.99,
+      "specs": {
+        "max_embroidery_area_in": "5 x 7 in",
+        "built_in_designs": 193,
+        "stitches_per_minute": 650,
+        "hoop_sizes": "5x7 in hoop included; 4x7 in magnetic hoop compatible",
+        "touchscreen_size_in": 3.7,
+        "usb_import": true,
+        "wifi_transfer": true,
+        "needle_count": 1
+      },
+      "source": {
+        "url": "https://www.brother-usa.com/p/embroidery/PE900",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/brother-pe900.jpg?v=9a7cbb96cf",
+        "source": "brother-usa.com",
+        "license": "© Brother",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Embroidery-only sibling of the SE2000: same 5x7in field, 193 designs, 13 fonts, 650 spm, and 3.7in LCD confirmed on brother-usa.com/p/embroidery/PE900. Unlike the SE2000, the page confirms designs 'can be imported through built-in USB port' — usb_import true. $1,179.99 MSRP and wireless LAN (Artspira) transfer confirmed on the same page. Needle count is the standard single automatic-threading needle for this class; not separately spec'd by Brother but consistent across the whole PE-series line."
+    },
+    {
+      "slug": "janome-mb-4s",
+      "name": "Janome MB-4S",
+      "brand": "Janome",
+      "category": "embroidery-machines",
+      "releaseDate": null,
+      "priceUsd": 7999,
+      "priceNote": "List price shown on janome.com is marked 'please see dealer for pricing'; Walmart lists the same machine at $4,999, so treat $7,999 as ceiling MSRP and $4,999 as a common street price.",
+      "specs": {
+        "max_embroidery_area_in": "9.4 x 7.9 in (240 x 200 mm)",
+        "built_in_designs": 50,
+        "stitches_per_minute": 800,
+        "hoop_sizes": "M1 9.46x7.88in, M2 5x4.3in, M3 50x50mm hoops included; optional hat hoop and Tajima-compatible frames",
+        "touchscreen_size_in": 5.7,
+        "usb_import": true,
+        "wifi_transfer": false,
+        "needle_count": 4
+      },
+      "source": {
+        "url": "https://www.janome.com/product/mb-4s/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/janome-mb-4s.jpg?v=8b8cf8604a",
+        "source": "janome.com",
+        "license": "© Janome",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Single-head four-needle commercial embroidery machine; 240x200mm max area, 50 built-in designs + 10 monogram fonts, 800 spm, 5.7in RCS touchscreen with USB host port, and the three included hoop sizes (plus Tajima-compatible options) all confirmed on janome.com/product/mb-4s. No wireless connectivity mentioned anywhere on the product page, so wifi_transfer set false rather than left null. Price is explicitly a 'call for dealer pricing' figure — the $7,999 listed is the sole published number; $4,999 Walmart price is a corroborating real-world data point recorded in priceNote rather than overriding priceUsd."
+    },
+    {
+      "slug": "baby-lock-flourish-ii",
+      "name": "Baby Lock Flourish II",
+      "brand": "Baby Lock",
+      "category": "embroidery-machines",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "Baby Lock does not publish MSRP on babylock.com (dealer-quoted only); a used-unit listing shows a prior regular price of $3,499.",
+      "specs": {
+        "max_embroidery_area_in": "6.25 x 10.25 in",
+        "built_in_designs": 181,
+        "stitches_per_minute": 850,
+        "hoop_sizes": "2 hoops included (frame dimensions not published); 140 frame combinations supported",
+        "touchscreen_size_in": "4.85 x 2.5 in (240x320 dot-matrix color LCD)",
+        "usb_import": true,
+        "wifi_transfer": false,
+        "needle_count": 1
+      },
+      "source": {
+        "url": "https://babylock.com/flourish-ii",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/baby-lock-flourish-ii.png?v=742e9c61e6",
+        "source": "babylock.com",
+        "license": "© Baby Lock",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Embroidery-only machine: 6.25x10.25in field, 181 built-in designs (90 Baby Lock exclusive), 140 frame combinations, 13 fonts, and 'Two-Way USB Connectivity' (.pes/.phc/.dst) confirmed on babylock.com/flourish-ii. Screen is spec'd by dimensions (4.85x2.5in, 240x320 dot matrix) rather than a diagonal figure, so recorded as a dimensioned string rather than fabricating a diagonal-inch number. No wireless transfer feature mentioned on the product page — wifi_transfer false. babylock.com does not list a price for this machine (Baby Lock sells exclusively through authorized dealers); priceUsd left null per methodology rather than using a single used-market data point."
+    },
+    {
+      "slug": "bernina-590e",
+      "name": "Bernina 590E",
+      "brand": "Bernina",
+      "category": "embroidery-machines",
+      "releaseDate": null,
+      "priceUsd": 8499,
+      "priceNote": "US MSRP per authorized-dealer listing (worldweidner.com); another US dealer lists $8,199, and Bernina's Australian store currently discounts it to $5,999 AUD from $6,899 AUD list.",
+      "specs": {
+        "max_embroidery_area_in": "15.7 x 5.9 in (400 x 150 mm)",
+        "built_in_designs": 275,
+        "stitches_per_minute": 1000,
+        "hoop_sizes": "Large Oval + Medium hoop included; compatible with full RM1-RM6 range up to the 400x150mm Mega Hoop",
+        "touchscreen_size_in": 4.3,
+        "usb_import": true,
+        "wifi_transfer": false,
+        "needle_count": 1
+      },
+      "source": {
+        "url": "https://shop.bernina.com.au/bernina-590e",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.worldweidner.com/products/bernina-590e-sewing-and-embroidery-machine",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/bernina-590e.png?v=fff8a6e856",
+        "source": "shop.bernina.com.au",
+        "license": "© Bernina",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "berninausa.com and shop.berninausa.com blocked automated fetching (403/429 on repeated attempts), so bernina.com's Australian storefront (an official Bernina-owned domain) and the worldweidner.com authorized-dealer page were used instead; both agree on the core specs. 400x150mm/15.7x5.9in embroidery area, 275 built-in designs + 8 alphabets, 1774 total stitch patterns, 1000 spm, and 4.3in color touchscreen confirmed on worldweidner.com; hoop and included-accessory detail from shop.bernina.com.au. USB set true from general knowledge of the Bernina 5 Series' standard USB-stick design-transfer port (not explicitly re-stated on either fetched page); wifi_transfer set false since the 5 Series (unlike Bernina's 7/8 Series) has no documented wireless feature on either source."
+    },
+    {
+      "slug": "brother-luminaire-xp3",
+      "name": "Brother Luminaire XP3",
+      "brand": "Brother",
+      "category": "embroidery-machines",
+      "releaseDate": null,
+      "priceUsd": 20999.99,
+      "specs": {
+        "max_embroidery_area_in": "10.625 x 16 in",
+        "built_in_designs": 1554,
+        "stitches_per_minute": null,
+        "hoop_sizes": "4x4in, 5x7in, 10.625x16in, 10.625x10.625in hoops included",
+        "touchscreen_size_in": null,
+        "usb_import": false,
+        "wifi_transfer": true,
+        "needle_count": 1
+      },
+      "source": {
+        "url": "https://www.brother-usa.com/products/xp3",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/brother-luminaire-xp3.jpg?v=fdd6074f3f",
+        "source": "brother-usa.com",
+        "license": "© Brother",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Flagship Brother combo machine with StitchVision projection. 10.625x16in max embroidery area, 4 included hoop sizes, 1,554 built-in designs, and $20,999.99 MSRP confirmed on brother-usa.com/products/xp3. The spec table lists 'USB: No' for design-file import despite showing '1' physical USB port (mirroring the SE2000's spec convention — the port is not a general USB-stick import path), so usb_import is false; wireless LAN / Artspira transfer is confirmed true. Embroidery stitches-per-minute and exact touchscreen diagonal are not stated anywhere on the product page (only a '5x3in StitchVision projection area' is given, which is a projected preview area on the fabric, not a screen size) — both left null rather than assumed from sibling models."
+    },
+    {
+      "slug": "singer-legacy-se300",
+      "name": "Singer Legacy SE300",
+      "brand": "Singer",
+      "category": "embroidery-machines",
+      "releaseDate": null,
+      "priceUsd": 1399.99,
+      "priceNote": "Regular/list price per retailer listings; frequently discounted to $599-$1,099 (Sewing Machines Plus, Walmart).",
+      "specs": {
+        "max_embroidery_area_in": "10.25 x 6 in",
+        "built_in_designs": 200,
+        "stitches_per_minute": 700,
+        "hoop_sizes": "10.25x6 in large hoop + 4x4 in small hoop included",
+        "touchscreen_size_in": 7,
+        "usb_import": true,
+        "wifi_transfer": false,
+        "needle_count": 1
+      },
+      "source": {
+        "url": "https://terracesewingmachine.com/products/Singer-Legacy-SE300-Sewing-and-Embroidery-Machine.html",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.singer.com/products/singer-legacy-se300-sewing-embroidery-machine",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/singer-legacy-se300.jpg?v=91ac5ffd04",
+        "source": "terracesewingmachine.com",
+        "license": "© Singer",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "singer.com returned HTTP 429 on repeated direct-fetch attempts, so the authorized-dealer page (terracesewingmachine.com), whose copy is drawn verbatim from Singer's own product description, was used as primary source: 200 embroidery designs + 6 alphabets, 250 built-in stitches, 800 sewing spm / 700 embroidery spm, and the two included hoop sizes (10.25x6in, 4x4in) all confirmed there. Multiple independent reviews of the singer.com page (via search snippets, not a direct fetch) consistently cite a 7in LCD touchscreen, used here with singer.com listed as corroboration. USB stick import confirmed ('USB Embroidery Stick' included); no wireless feature is advertised anywhere, so wifi_transfer false. Needle count is the standard single automatic-threading needle typical of this class."
+    },
+    {
+      "slug": "janome-mc500e",
+      "name": "Janome Memory Craft 500E",
+      "brand": "Janome",
+      "category": "embroidery-machines",
+      "releaseDate": null,
+      "priceUsd": 2399,
+      "priceNote": "The original MC500E is discontinued per janome.com; the identical-spec 'Limited Edition' SKU is the currently shipping/priced version at $2,399 (Michaels).",
+      "specs": {
+        "max_embroidery_area_in": "7.9 x 11 in (200 x 280 mm)",
+        "built_in_designs": 160,
+        "stitches_per_minute": 860,
+        "hoop_sizes": "RE28b 7.9x11in, SQ20b 7.9x7.9in, RE20b 5.5x7.9in, SQ14b 5.5x5.5in included; optional RE10b 1.5x5.5in",
+        "touchscreen_size_in": null,
+        "usb_import": true,
+        "wifi_transfer": false,
+        "needle_count": 1
+      },
+      "source": {
+        "url": "https://www.janome.com/product/memory-craft-500e/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.janome.com/product/memory-craft-500e-limited-edition/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/janome-mc500e.png?v=b3e9f4c2a4",
+        "source": "janome.com",
+        "license": "© Janome",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "janome.com/product/memory-craft-500e explicitly marks the base MC500E 'discontinued'; specs (7.9x11in max area, 160 designs + 6 fonts, 860 spm, USB design transfer, 4 included hoops) are confirmed there and identical on the still-sold Limited Edition page used for corroboration and the product image. 'LCD Full Color Touchscreen' is mentioned without a diagonal measurement on either page, so touchscreen_size_in is left null rather than guessed. No wireless feature advertised; wifi_transfer false. $2,399 price is the current Michaels retail listing for the Limited Edition (the only SKU actually for sale)."
+    },
+    {
+      "slug": "ricoma-em1010",
+      "name": "Ricoma EM-1010",
+      "brand": "Ricoma",
+      "category": "embroidery-machines",
+      "releaseDate": null,
+      "priceUsd": 9660,
+      "priceNote": "Regular/list price per authorized dealer (sterlingsewing.com); Ricoma and its dealers commonly run 40-50% off promotions bringing street price to roughly $4,830-$6,660.",
+      "specs": {
+        "max_embroidery_area_in": "12.2 x 8.3 in (310 x 210 mm)",
+        "built_in_designs": 200,
+        "stitches_per_minute": 1000,
+        "hoop_sizes": "2.8x2in, 4.3x4.3in, 7.5x5.5in, 12.2x8.2in included; 15.75in belt/cap hoop optional",
+        "touchscreen_size_in": 10.1,
+        "usb_import": true,
+        "wifi_transfer": true,
+        "needle_count": 10
+      },
+      "source": {
+        "url": "https://www.ricoma.co.za/machines/em-1010-single-head-machine/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://ricoma.com/products/10-needle-easy-to-use-embroidery-machine-for-beginners-with-10-1-touchscreen-panel",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/ricoma-em1010.jpg?v=ab7be83807",
+        "source": "ricoma.co.za",
+        "license": "© Ricoma",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "ricoma.com's US product page repeatedly returned HTTP 429 on direct fetch, so Ricoma's South African regional site (same product, official Ricoma domain) was used as primary source: 310x210mm/12.2x8.3in area, 4 included hoops, 200 built-in designs, 1000 spm, 10 needles, USB/LAN/wireless design transfer all confirmed there. Touchscreen size is disputed across Ricoma's own materials: the current ricoma.com US page title states '10.1in Touchscreen' while the ZA page and at least one third-party retailer describe a 7in screen — read as an older/regional-variant spec vs. the current US-market refresh, and the 10.1in figure from the flagship US product-page title was used as the current spec, noted here for transparency. Price reflects the 'regular' list price cited by a dealer that also shows the frequent promotional sale price."
+    },
+    {
+      "slug": "brother-stellaire-xj2",
+      "name": "Brother Stellaire XJ2",
+      "brand": "Brother",
+      "category": "embroidery-machines",
+      "releaseDate": null,
+      "priceUsd": 11999.99,
+      "specs": {
+        "max_embroidery_area_in": "9.5 x 14 in",
+        "built_in_designs": 889,
+        "stitches_per_minute": 1050,
+        "hoop_sizes": "9.5x14in, 9.5x9.5in, 5x7in, 4x4in included",
+        "touchscreen_size_in": 10.1,
+        "usb_import": true,
+        "wifi_transfer": true,
+        "needle_count": 1
+      },
+      "source": {
+        "url": "https://www.brother-usa.com/products/xj2",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/brother-stellaire-xj2.jpg?v=f33eb2d860",
+        "source": "brother-usa.com",
+        "license": "© Brother",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "9.5x14in max area, four included hoops, 889 built-in designs (788 standard + 101 Disney-exclusive), 2 USB Type-A ports (design import via USB confirmed), and wireless Artspira transfer all confirmed on brother-usa.com/products/xj2. 10.1in HD touchscreen and 1,050 spm max sewing speed corroborated by matching figures across multiple authorized-dealer listings (qualitysewing.com, mrvacandmrssew.com) quoting the same manufacturer spec sheet. $11,999.99 MSRP likewise corroborated across dealer listings (one dealer sells above MSRP at $13,249)."
+    },
+    {
+      "slug": "husqvarna-viking-designer-epic-3",
+      "name": "Husqvarna Viking Designer Epic 3",
+      "brand": "Husqvarna Viking",
+      "category": "embroidery-machines",
+      "releaseDate": null,
+      "priceUsd": 25999,
+      "priceNote": "US MSRP per authorized dealer; commonly sold with a qualified trade-in credit (~$19,000 net) or as a factory-serviced/floor-model unit (~$13,500).",
+      "specs": {
+        "max_embroidery_area_in": "18.1 x 17.7 in (460 x 450 mm)",
+        "built_in_designs": null,
+        "stitches_per_minute": null,
+        "hoop_sizes": "Regal 18.3x10.2in (465x260mm), Royal II 14.2x7.9in (360x200mm), Jewel II 9.4x5.9in (240x150mm), Splendid Square II 4.7x4.7in (120x120mm) included",
+        "touchscreen_size_in": 10.1,
+        "usb_import": true,
+        "wifi_transfer": true,
+        "needle_count": 1
+      },
+      "source": {
+        "url": "https://www.smithowensew.com/shop/c/p/Husqvarna-Viking-Designer-Epic-3-x72794128.htm",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://rockymountainsewing.com/products/husqvarna-viking-designer-epic-3-sewing-embroidery-machine-factory-serviced/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/husqvarna-viking-designer-epic-3.webp?v=de3b346553",
+        "source": "rockymountainsewing.com",
+        "license": "© Husqvarna Viking",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "husqvarnaviking.com blocked direct fetching (404 on every URL pattern tried) and authorized-dealer pages (qualitysewing.com) returned repeated 429s, so two other authorized-dealer pages were used. Two independent dealers cite the same '460x450mm' industry-leading embroidery area; the Regal hoop (465x260mm) is the largest single included hoop, and the two figures likely describe endless-hoop/reposition capability vs. a single static hooping respectively — recorded as-is rather than reconciled by guessing. 10.1in touch screen, four included hoops, mySewnet wireless connectivity (wifi_transfer true), and dual USB ports confirmed on rockymountainsewing.com. Built-in design/stitch counts and stitches-per-minute are not stated on either dealer page — left null rather than assumed from Husqvarna's other Designer-series models. $25,999 MSRP is the most frequently cited figure across listings; smithowensew.com's own $18,999 is explicitly a trade-in price, and rockymountainsewing's $13,499 is for a factory-serviced (open-box) unit, both recorded in priceNote."
+    },
+    {
+      "slug": "baby-lock-radiance",
+      "name": "Baby Lock Radiance",
+      "brand": "Baby Lock",
+      "category": "embroidery-machines",
+      "releaseDate": null,
+      "priceUsd": 28999,
+      "specs": {
+        "max_embroidery_area_in": "11.625 x 18.25 in",
+        "built_in_designs": 1858,
+        "stitches_per_minute": 1050,
+        "hoop_sizes": "4 hoops included, from 4x4in up to the 11.625x18.25in largest Baby Lock hoop",
+        "touchscreen_size_in": null,
+        "usb_import": true,
+        "wifi_transfer": false,
+        "needle_count": 1
+      },
+      "source": {
+        "url": "https://babylock.com/radiance",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/baby-lock-radiance.jpg?v=3d7a6bffc2",
+        "source": "babylock.com",
+        "license": "© Baby Lock",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Current Baby Lock flagship, added in place of the discontinued Solaris Vision (which babylock.com itself now points buyers away from, toward Radiance). 11.625x18.25in hoop (Baby Lock's largest yet), 1,858 built-in designs, 1,610 built-in stitches, 1050 spm, 2 USB Type-A ports, and IQ Live Stitch projector confirmed on babylock.com/radiance. No wireless/cloud design transfer feature is advertised (unlike the discontinued Solaris Vision's app features) — wifi_transfer false. Touchscreen diagonal is not stated on the product page (only the 8x5in Live Stitch projection area, a fabric-projected preview, not a screen) — left null. $28,999 price is the current qualitysewing.com dealer listing; babylock.com itself does not publish price."
+    },
+    {
+      "slug": "melco-emt16x",
+      "name": "Melco EMT16X",
+      "brand": "Melco",
+      "category": "embroidery-machines",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "No published MSRP; dealer-quoted only, typically $16,000-$18,000+ per head depending on configuration (cap driver, XL hoop, financing terms).",
+      "specs": {
+        "max_embroidery_area_in": "16.1 x 15.5 in",
+        "built_in_designs": null,
+        "stitches_per_minute": 1500,
+        "hoop_sizes": "14.1x3.25in wide-angle cap frame included; XL hoop and other clamps available as options",
+        "touchscreen_size_in": null,
+        "usb_import": false,
+        "wifi_transfer": false,
+        "needle_count": 16
+      },
+      "source": {
+        "url": "https://melco.com/melco-emt16x/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/melco-emt16x.png?v=c52af7cd90",
+        "source": "melco.com",
+        "license": "© Melco",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Industrial single-head 16-needle commercial machine, distinct from the home/prosumer machines in this dataset. 16.1x15.5in sewing field, 1,500 spm, 16 needles, Acti-Feed auto-tensioning, and the included wide-angle cap frame confirmed on melco.com/melco-emt16x. The EMT16X has no on-board touchscreen or standalone design library — it is driven live over a network connection from a PC running Melco's OS-SE/Bravo software, so touchscreen_size_in and built_in_designs are left null (genuinely inapplicable, not unpublished) rather than asserting a false '0'; usb_import and wifi_transfer are set false since design files load via networked PC software rather than a USB stick or direct wireless link to the machine. No manufacturer MSRP is published anywhere (Melco sells exclusively through quoted dealer channels); third-party dealer/blog estimates cluster around $16,000-$18,000+ per head, recorded in priceNote with priceUsd left null per methodology."
+    }
+  ]
+}

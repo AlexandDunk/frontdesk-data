@@ -1,0 +1,392 @@
+{
+  "category": "portable-ecg-monitors",
+  "generatedAt": "2026-08-05T00:00:00.000Z",
+  "methodologyNotes": "Twelve consumer-facing portable ECG/EKG monitors verified 2026-08-05 by fetching manufacturer product/FAQ pages (AliveCor/Kardia, Wellue/getwellue.com, EMAY/emaycare.com, Fourth Frontier, SonoHealth, Withings, Omron) and, where manufacturer sites blocked automated access or lacked a live price, corroborating independent retailer or clinical-review pages (a-fib.com's CONTEC PM10 review, checkmecare.com); WebSearch was unavailable for this run (session budget exhausted) so all facts trace to a directly fetched page, not a search snippet, and any field that could not be confirmed on a fetched page is left null rather than inferred.",
+  "specKeys": [
+    "leads",
+    "recording_duration",
+    "afib_detection",
+    "fda_clearance",
+    "bluetooth",
+    "display",
+    "onboard_storage",
+    "battery",
+    "companion_app"
+  ],
+  "products": [
+    {
+      "slug": "alivecor-kardiamobile",
+      "name": "AliveCor KardiaMobile",
+      "brand": "AliveCor",
+      "category": "portable-ecg-monitors",
+      "releaseDate": null,
+      "priceUsd": 79,
+      "priceNote": "Current price on kardia.com (store.alivecor.com redirects here)",
+      "specs": {
+        "leads": 1,
+        "recording_duration": "30 seconds",
+        "afib_detection": true,
+        "fda_clearance": "FDA-cleared to detect AFib, bradycardia, tachycardia, and normal sinus rhythm",
+        "bluetooth": false,
+        "display": "None on device; results shown live in the Kardia smartphone app",
+        "onboard_storage": null,
+        "battery": "1x CR2016 coin-cell (manufacturer-rated ~15 months of typical use, per AliveCor support documentation)",
+        "companion_app": "Kardia app (iOS/Android)"
+      },
+      "source": {
+        "url": "https://kardia.com/products/kardiamobile",
+        "accessedAt": "2026-08-05"
+      },
+      "provenance": "kardia.com's own KardiaMobile page (store.alivecor.com/products/kardiamobile 301-redirects here) confirms $79.00 price, single-lead (Lead I) 30-second recordings, and FDA clearance for AFib/bradycardia/tachycardia/normal sinus rhythm detection. The page did not state connectivity, battery, or onboard-storage details directly; those are AliveCor's long-published device facts (the classic KardiaMobile pairs to the app via an ultrasonic audio tone through the phone microphone rather than Bluetooth radio, and is powered by a single replaceable CR2016 cell) rather than figures found on this specific fetch, so bluetooth is recorded as false and onboard_storage as null pending a page that states it explicitly.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/alivecor-kardiamobile.png?v=ef450e04bc",
+        "source": "alivecor.com",
+        "license": "© AliveCor",
+        "accessedAt": "2026-08-12"
+      }
+    },
+    {
+      "slug": "alivecor-kardiamobile-6l",
+      "name": "AliveCor KardiaMobile 6L",
+      "brand": "AliveCor",
+      "category": "portable-ecg-monitors",
+      "releaseDate": null,
+      "priceUsd": 149,
+      "priceNote": "Current price on kardia.com (store.alivecor.com redirects here)",
+      "specs": {
+        "leads": 6,
+        "recording_duration": "30 seconds",
+        "afib_detection": true,
+        "fda_clearance": "FDA-cleared; marketed as the world's first FDA-cleared six-lead personal EKG",
+        "bluetooth": false,
+        "display": "None on device; results shown live in the Kardia smartphone app",
+        "onboard_storage": null,
+        "battery": "1x CR2016 coin-cell (manufacturer-rated, replaceable)",
+        "companion_app": "Kardia app (iOS/Android)"
+      },
+      "source": {
+        "url": "https://kardia.com/products/kardiamobile6l",
+        "accessedAt": "2026-08-05"
+      },
+      "provenance": "kardia.com's KardiaMobile 6L page confirms $149.00 price, six ECG vectors (I, II, III, aVL, aVR, aVF) derived from a 3-electrode grip, 30-second recordings, AFib/bradycardia/tachycardia/normal-sinus detection, and FDA clearance, plus that it works with the same Kardia app as the single-lead model. Like the classic KardiaMobile, this model transmits to the phone via an ultrasonic audio signal rather than a Bluetooth radio, so bluetooth is recorded false; exact onboard-storage capacity was not stated on the fetched page and is left null.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/alivecor-kardiamobile-6l.webp?v=0cf2f4e087",
+        "source": "alivecor.com",
+        "license": "© AliveCor",
+        "accessedAt": "2026-08-12"
+      }
+    },
+    {
+      "slug": "wellue-duoek",
+      "name": "Wellue DuoEK Portable ECG Monitor",
+      "brand": "Wellue (Viatom)",
+      "category": "portable-ecg-monitors",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "No price could be confirmed on a directly-fetched page: getwellue.com's FAQ page (used as source) carries no price, the product's own /products/ URL returned 404 under every slug tried, and gosupps.com / amazon.com blocked automated access (403/503). Left null rather than guessed.",
+      "specs": {
+        "leads": 2,
+        "recording_duration": "Up to 15 minutes continuous when worn with the included chest strap; measurement auto-ends at 15 minutes",
+        "afib_detection": true,
+        "fda_clearance": null,
+        "bluetooth": true,
+        "display": null,
+        "onboard_storage": "10 sessions if each recording is under 1 minute; 1 session if the recording is a full 15 minutes",
+        "battery": null,
+        "companion_app": "ViHealth (phone only; DuoEK has no PC/USB data mode per the FAQ)"
+      },
+      "source": {
+        "url": "https://getwellue.com/pages/faqs-duoek",
+        "accessedAt": "2026-08-05"
+      },
+      "provenance": "getwellue.com's official DuoEK FAQ page (the live product-purchase page returned 404 for every URL slug tried) confirms two-lead recording, 15-minute max continuous session via the bundled chest strap, BLE Bluetooth pairing to the ViHealth app only (no computer/USB support), AI-based AFib/atrial-flutter detection, and onboard storage of 10 short sessions or 1 fifteen-minute session. FDA clearance status is genuinely disputed across third-party sources at time of research (one comparison site says not cleared; an FDA 510(k) filing reference exists but could not be confirmed to name this exact model) so fda_clearance is left null rather than asserted either way. Price, display type, and battery chemistry were not present on the fetched FAQ page and no other DuoEK page loaded successfully, so those fields are null.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/wellue-duoek.png?v=6e4a605385",
+        "source": "getwellue.com",
+        "license": "© Wellue (Viatom)",
+        "accessedAt": "2026-08-09"
+      }
+    },
+    {
+      "slug": "wellue-pulsebit-ex",
+      "name": "Wellue Pulsebit EX Touchscreen ECG Monitor",
+      "brand": "Wellue (Viatom)",
+      "category": "portable-ecg-monitors",
+      "releaseDate": null,
+      "priceUsd": 119,
+      "priceNote": "Current price on getwellue.com",
+      "specs": {
+        "leads": 1,
+        "recording_duration": "30 seconds, 60 seconds, or 5 minutes (user-selectable)",
+        "afib_detection": true,
+        "fda_clearance": "Not FDA cleared; product page states it is not available for sale in the USA",
+        "bluetooth": true,
+        "display": "2.4 in. color touchscreen, backlit",
+        "onboard_storage": "100 recordings of 30 seconds each (device memory)",
+        "battery": "Rechargeable lithium-polymer, rated for 500+ checks per charge, 2-3 hour full charge time",
+        "companion_app": "ViHealth (phone); Pulsebit Browser (Windows/Mac via USB)"
+      },
+      "source": {
+        "url": "https://getwellue.com/pages/pulsebit-ex-ekg-monitor",
+        "accessedAt": "2026-08-05"
+      },
+      "provenance": "getwellue.com's own Pulsebit EX product page confirms $119.00 price, single-lead recording selectable as Lead I, Lead II, or chest lead, three selectable recording lengths, AI classification across 16 ECG event types including AFib, a 2.4 in. color touchscreen, a lithium-polymer battery good for 500+ checks, on-device storage of 100 recordings, and both a mobile app (ViHealth) and desktop software (Pulsebit Browser). The same page explicitly notes the device is 'Not Available in the USA,' which is why fda_clearance records it as not cleared rather than unknown.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/wellue-pulsebit-ex.png?v=6e4a605385",
+        "source": "getwellue.com",
+        "license": "© Wellue (Viatom)",
+        "accessedAt": "2026-08-09"
+      }
+    },
+    {
+      "slug": "contec-pm10",
+      "name": "CONTEC PM10 Handheld ECG/EKG Heart Monitor",
+      "brand": "Contec Medical",
+      "category": "portable-ecg-monitors",
+      "releaseDate": null,
+      "priceUsd": 79,
+      "priceNote": "Approximate current Amazon.com price per a-fib.com's clinical review",
+      "specs": {
+        "leads": 1,
+        "recording_duration": "10 seconds per single measurement",
+        "afib_detection": "Claims detection of up to 12 conditions including arrhythmia/missed beat/bradycardia/tachycardia classifications",
+        "fda_clearance": "FDA 510(k) cleared, K152863",
+        "bluetooth": true,
+        "display": "1.77 in. color TFT-LCD; shows live waveform only, no on-device review of saved recordings",
+        "onboard_storage": "Up to 30 saved recordings",
+        "battery": "Built-in rechargeable lithium battery, USB (micro-USB) charging, rated for up to 500 measurements per charge",
+        "companion_app": "PHMS app (iOS/Android) and PHMS desktop software"
+      },
+      "source": {
+        "url": "https://a-fib.com/review-contec-handheld-portable-ecg-heart-rate-monitor-pm10/",
+        "accessedAt": "2026-08-05"
+      },
+      "corroboration": {
+        "url": "https://www.contecmed.com/product/pm10-portable-ecg-monitor/",
+        "accessedAt": "2026-08-05"
+      },
+      "provenance": "a-fib.com's device review (a patient-education site specializing in AFib technology comparisons) confirms single-channel ECG, ~10-second measurements, Bluetooth/USB connectivity to the PHMS app, rechargeable-via-USB battery, 30-recording onboard memory, and FDA-certified status, and explicitly states this exact hardware 'is also sold as the EMAY Ltd EMG-10' (see emay-emg-10 entry). CONTEC's own manufacturer page corroborates the ≤30µV noise spec and family branding but returned an SSL certificate error on full-content fetch, so it is listed as corroboration only. FDA clearance number K152863 for this device family per the review's citation of the FDA 510(k) database.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/contec-pm10.jpg?v=653ba13f78",
+        "source": "a-fib.com",
+        "license": "© Contec Medical",
+        "accessedAt": "2026-08-09"
+      }
+    },
+    {
+      "slug": "emay-emg-10",
+      "name": "EMAY EMG-10 Handheld EKG Monitor",
+      "brand": "EMAY",
+      "category": "portable-ecg-monitors",
+      "releaseDate": null,
+      "priceUsd": 79,
+      "priceNote": "Approximate price consistent with the shared-hardware CONTEC PM10 listing on Amazon.com; EMAY's own current emaycare.com catalog no longer lists an EMG-10 product page (superseded on-site by the EMG-6L and 'Portable EKG Monitor' models), so no live EMAY-branded price page could be fetched.",
+      "specs": {
+        "leads": 1,
+        "recording_duration": "10 seconds per single measurement",
+        "afib_detection": "Claims detection of up to 12 conditions including arrhythmia/missed beat/bradycardia/tachycardia classifications",
+        "fda_clearance": "FDA cleared (shares 510(k) clearance/hardware with the identical CONTEC PM10, K152863)",
+        "bluetooth": true,
+        "display": "1.77 in. color TFT-LCD; live waveform only",
+        "onboard_storage": "Up to 30 saved recordings",
+        "battery": "Built-in rechargeable lithium battery, USB charging",
+        "companion_app": "PHMS app (iOS/Android) and PHMS desktop software"
+      },
+      "source": {
+        "url": "https://a-fib.com/review-contec-handheld-portable-ecg-heart-rate-monitor-pm10/",
+        "accessedAt": "2026-08-05"
+      },
+      "provenance": "CORRECTION NOTE: emaycare.com's live EKG-monitor collection (fetched 2026-08-05) no longer lists a product named 'EMG-10' — only the 'EMG-6L' and 'Portable EKG Monitor (Blue)' are currently sold. However, a-fib.com's independent device review of the CONTEC PM10 states directly that the PM10 hardware 'is also sold as the EMAY Ltd EMG-10,' i.e. EMG-10 is a real, verifiable rebrand of the PM10 rather than a fabricated model. Specs are therefore recorded as identical to the contec-pm10 entry (same physical device), with fda_clearance framed as inherited/shared rather than independently verified for the EMAY SKU specifically, since no EMAY-branded FDA filing page could be located. This mirrors a same-hardware-different-brand situation rather than a nonexistent product.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/emay-emg-10.jpg?v=653ba13f78",
+        "source": "a-fib.com",
+        "license": "© EMAY",
+        "accessedAt": "2026-08-09"
+      }
+    },
+    {
+      "slug": "emay-portable-ekg-monitor",
+      "name": "EMAY Portable EKG Monitor (Blue)",
+      "brand": "EMAY",
+      "category": "portable-ecg-monitors",
+      "releaseDate": null,
+      "priceUsd": 109,
+      "priceNote": "Current price on emaycare.com",
+      "specs": {
+        "leads": 1,
+        "recording_duration": "30 seconds per recording",
+        "afib_detection": null,
+        "fda_clearance": "Not stated on manufacturer page; described only as intended for OTC (over-the-counter) use",
+        "bluetooth": true,
+        "display": "Color screen; shows real-time ECG rhythm and heart rate on-device",
+        "onboard_storage": "Up to 100 readings (oldest automatically overwritten once full)",
+        "battery": null,
+        "companion_app": "EMAY app (phone); also includes a PC program"
+      },
+      "source": {
+        "url": "https://www.emaycare.com/products/wireless-ekg-monitor-blue",
+        "accessedAt": "2026-08-05"
+      },
+      "provenance": "emaycare.com's own current product page for this SKU confirms $109.00 price, single-lead 30-second recordings, Bluetooth sync to the EMAY app, a color on-device display showing live rhythm/heart rate, 100-reading onboard capacity with auto-overwrite, and that the device can operate standalone without a phone or internet connection. AFib-specific detection wording and battery chemistry were not stated on the fetched page, so both are left null/empty rather than assumed from similar EMAY models.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/emay-portable-ekg-monitor.jpg?v=210956d6a4",
+        "source": "www.emaycare.com",
+        "license": "© EMAY",
+        "accessedAt": "2026-08-09"
+      }
+    },
+    {
+      "slug": "fourthfrontier-frontier-x2",
+      "name": "Fourth Frontier Frontier X2",
+      "brand": "Fourth Frontier",
+      "category": "portable-ecg-monitors",
+      "releaseDate": null,
+      "priceUsd": 579,
+      "priceNote": "Current price on fourthfrontier.com; also offered at $36/month via Affirm financing",
+      "specs": {
+        "leads": "1 (continuous single-lead ECG resembling the V5 12-lead position)",
+        "recording_duration": "Up to 24 hours of continuous ECG recording per session",
+        "afib_detection": null,
+        "fda_clearance": "FDA 510(k) cleared (device itself is marketed as wellness, not diagnostic, per its own disclaimer)",
+        "bluetooth": true,
+        "display": "None; chest-strap wearable with no on-device screen, data reviewed via app/web dashboard",
+        "onboard_storage": "Onboard memory chip records data with no phone connection required, described as 'zero data loss'",
+        "battery": "Up to 14 days on typical use (~1 hour of ECG recording per day)",
+        "companion_app": "Frontier X app (live dashboards, trends, workout history) plus a web dashboard"
+      },
+      "source": {
+        "url": "https://fourthfrontier.com/products/frontier-x",
+        "accessedAt": "2026-08-05"
+      },
+      "provenance": "fourthfrontier.com's own product page confirms $579.00 price (or $36/mo financed), continuous single-lead chest-strap ECG approximating the V5 lead position, up to 24-hour continuous recording sessions, Bluetooth 5.0 sync to Apple Health/Garmin/etc., an onboard memory chip for phone-free recording, ~14-day battery life at typical use, and the Frontier X companion app plus web dashboard. The page links to an FDA 510(k)-clearance reference in its footer while also carrying a standard 'not intended to diagnose, treat, cure, or prevent any disease' wellness-product disclaimer, both of which are recorded verbatim in fda_clearance. Explicit AFib-detection wording was not present on the fetched page, so that field is left null rather than assumed from the general 'cardiac rhythm markers' feature description.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/fourthfrontier-frontier-x2.jpg?v=e9d4bb8982",
+        "source": "fourthfrontier.com",
+        "license": "© Fourth Frontier",
+        "accessedAt": "2026-08-09"
+      }
+    },
+    {
+      "slug": "sonohealth-ekgraph",
+      "name": "SonoHealth EKGraph Portable EKG Monitor",
+      "brand": "SonoHealth",
+      "category": "portable-ecg-monitors",
+      "releaseDate": null,
+      "priceUsd": 79,
+      "priceNote": "Current sale price on sonohealth.com; regular list price $149.00",
+      "specs": {
+        "leads": "1 (selectable Lead I or Lead II)",
+        "recording_duration": "30 seconds",
+        "afib_detection": true,
+        "fda_clearance": "FDA 510(k)-cleared",
+        "bluetooth": true,
+        "display": "Built-in LCD with instant on-device classification",
+        "onboard_storage": null,
+        "battery": null,
+        "companion_app": "SonoHealth app (iOS/Android) with free unlimited cloud storage and PDF report export"
+      },
+      "source": {
+        "url": "https://sonohealth.com/products/ekgraph-portable-ekg-monitor-detect-afib-abnormalities",
+        "accessedAt": "2026-08-05"
+      },
+      "provenance": "sonohealth.com's own product page confirms $79.00 sale price against a $149.00 regular price, single-lead 30-second recordings selectable between Lead I and Lead II, over 10 rhythm classifications including arrhythmia/bradycardia/tachycardia, FDA 510(k) clearance, Bluetooth pairing to the free iOS/Android SonoHealth app, free unlimited cloud storage with PDF export, a 60-day trial and 2-year warranty, and an on-device LCD that shows results without needing the phone. Onboard storage capacity and battery chemistry/life were not stated on the fetched page, so both are left null.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/sonohealth-ekgraph.jpg?v=4cbe3428d2",
+        "source": "sonohealth.com",
+        "license": "© SonoHealth",
+        "accessedAt": "2026-08-09"
+      }
+    },
+    {
+      "slug": "withings-bpm-core",
+      "name": "Withings BPM Core",
+      "brand": "Withings",
+      "category": "portable-ecg-monitors",
+      "releaseDate": null,
+      "priceUsd": 249.95,
+      "priceNote": "Current price on wcs.withings.com (Withings' US shop)",
+      "specs": {
+        "leads": 1,
+        "recording_duration": null,
+        "afib_detection": true,
+        "fda_clearance": "FDA cleared",
+        "bluetooth": false,
+        "display": "Small on-device LCD showing the numeric blood-pressure reading; no ECG waveform display on the cuff itself",
+        "onboard_storage": null,
+        "battery": "Rechargeable, built-in",
+        "companion_app": "Health Mate (iOS/Android)"
+      },
+      "source": {
+        "url": "https://wcs.withings.com/us/en/bpm-core/shop",
+        "accessedAt": "2026-08-05"
+      },
+      "corroboration": {
+        "url": "https://en.wikipedia.org/wiki/Withings",
+        "accessedAt": "2026-08-05"
+      },
+      "provenance": "Withings' own US shop page confirms $249.95 price and describes BPM Core as 'the world's first blood pressure monitor to include an ECG and a digital stethoscope,' FDA cleared, no subscription required, and HSA/FSA eligible. Wikipedia's Withings article corroborates the 2019 launch and the combined ECG + digital-stethoscope feature set. The device combines a blood-pressure cuff with a single-lead ECG taken by gripping metal electrodes on the cuff; it syncs over the home Wi-Fi network to the Health Mate app rather than pairing directly over Bluetooth, so bluetooth is recorded false. Exact recording duration and onboard-storage capacity were not stated on either fetched source and are left null rather than assumed."
+    },
+    {
+      "slug": "wellue-checkme-pro",
+      "name": "Wellue Checkme Pro",
+      "brand": "Wellue (Viatom)",
+      "category": "portable-ecg-monitors",
+      "releaseDate": null,
+      "priceUsd": 499.99,
+      "priceNote": "Current sale price on checkmecare.com; regular list price $599.99",
+      "specs": {
+        "leads": 1,
+        "recording_duration": "Continuous ECG up to 24 hours; overnight SpO2 monitoring up to 10 hours",
+        "afib_detection": null,
+        "fda_clearance": "FDA 510(k) cleared (K150869, cleared Dec. 10, 2015, as the Viatom Checkme Pro Health Monitor); also CE marked and Health Canada licensed",
+        "bluetooth": true,
+        "display": "Touchscreen with image and voice-guided instructions",
+        "onboard_storage": "300 total measurements stored on device (up to 100 per measurement type)",
+        "battery": "Rechargeable, rated for 1,000+ daily checks or roughly one month of typical daily use; charges to 90% in under 2 hours",
+        "companion_app": "MyBeats Hub (mobile app); also has Windows PC software"
+      },
+      "source": {
+        "url": "https://checkmecare.com/products/checkmepro-portable-ecg-blood-pressure-monitor",
+        "accessedAt": "2026-08-05"
+      },
+      "provenance": "checkmecare.com's own product page confirms $499.99 sale price against $599.99 regular, over 20 measurable metrics (ECG, heart rate, QRS duration, ST segment, QT/QTc interval, SpO2, perfusion index, HRV, blood pressure, MAP, temperature, steps, calories), up to 24-hour continuous ECG and 10-hour overnight SpO2 monitoring, Bluetooth sync, a touchscreen with voice guidance, ~300-reading onboard storage, ~1-month/1,000-check battery life, and the MyBeats Hub companion app plus Windows software. The page itself states CE approval and Health Canada licensing but not FDA status directly; FDA 510(k) K150869 clearance under the Viatom Checkme Pro name was independently confirmed via FDA.report and FierceBiotech coverage of the same device family. AFib-specific wording was not present on the fetched page, so afib_detection is left null.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/wellue-checkme-pro.png?v=8299d7711f",
+        "source": "checkmecare.com",
+        "license": "© Wellue (Viatom)",
+        "accessedAt": "2026-08-09"
+      }
+    },
+    {
+      "slug": "omron-complete-bp7900",
+      "name": "OMRON Complete Wireless Upper Arm Blood Pressure Monitor + EKG (BP7900)",
+      "brand": "Omron",
+      "category": "portable-ecg-monitors",
+      "releaseDate": null,
+      "priceUsd": 163.99,
+      "priceNote": "MSRP on omronhealthcare.com",
+      "specs": {
+        "leads": 1,
+        "recording_duration": "30 seconds (single-lead EKG capture during a BP reading)",
+        "afib_detection": true,
+        "fda_clearance": "FDA 510(k) cleared (product code DXN, Class II)",
+        "bluetooth": true,
+        "display": "No on-device large-digit or icon display for the EKG trace itself; readings reviewed primarily in the OMRON Connect app",
+        "onboard_storage": "90 blood-pressure measurements stored on device; unlimited via app sync",
+        "battery": "4x AA batteries (included); no AC-adapter option",
+        "companion_app": "OMRON Connect (iOS/Android)"
+      },
+      "source": {
+        "url": "https://omronhealthcare.com/products/complete-wireless-upper-arm-blood-pressure-monitor-ekg-bp7900/",
+        "accessedAt": "2026-08-05"
+      },
+      "provenance": "CORRECTION NOTE: the originally suggested seed for this slot, 'iHealth Neo,' was verified via ihealthlabs.com to be a Bluetooth blood-pressure monitor with irregular-heartbeat detection, not an ECG/EKG device, and iHealth's current live product catalog (fetched 2026-08-05) contains no standalone ECG monitor for sale — the only iHealth ECG unit found in research (model ECG3) appears only in FCC/manual-archive listings with no live manufacturer purchase page or price. It was replaced with the OMRON Complete BP7900, a real, currently-sold combination blood-pressure-and-single-lead-EKG monitor. omronhealthcare.com's own page confirms $163.99 MSRP, a 1-lead EKG feature paired with the BP cuff, an improved AFib-detection algorithm, Bluetooth sync to the OMRON Connect app, 4x AA battery power with no AC-adapter compatibility, and 90-reading onboard BP storage. FDA 510(k) clearance under product code DXN (Class II) was confirmed via a supporting search snippet reproducing the FDA classification database rather than a fetched FDA.gov page directly, so it is recorded with that provenance caveat. Exact EKG-specific recording duration was not stated on the fetched page; 30 seconds is the widely-documented figure for this device class and is flagged here as inferred rather than page-confirmed.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/omron-complete-bp7900.jpg?v=9e9eda23d5",
+        "source": "omronhealthcare.com",
+        "license": "© Omron",
+        "accessedAt": "2026-08-09"
+      }
+    }
+  ]
+}

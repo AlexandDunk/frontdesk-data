@@ -1,0 +1,413 @@
+{
+  "category": "balance-bikes",
+  "generatedAt": "2026-08-11T00:00:00.000Z",
+  "methodologyNotes": "Roster covers fourteen balance bikes from budget (KaZAM, Retrospec, Chillafish) through mid-range (Strider, Cruzee, Guardian, Banwood, Yedoo) to premium (Prevelo, woom) tiers, researched 2026-08-11 with a mix of live-fetched manufacturer/retailer pages and, where a fetch was blocked this session, established manufacturer spec-sheet knowledge flagged accordingly in each product's provenance. Six adversarial corrections/clarifications were made to the seed list: (1) woom rebranded its balance-bike sub-line from \"woom 1\"/\"woom 1 PLUS\" to \"woom GO 1\"/\"woom GO 1 PLUS\" — confirmed live on woom.com (DE locale; the en-us paths and us.woombikes.com redirected or 404'd this session) — seed names updated to the current retail names, entries retained as the direct successors. (2) Chillafish's currently-sold model is the \"BMXie2\", confirmed live on chillafish.com; its frame is molded \"reinforced plastics\", not steel/aluminum/wood as the suggested spec enum implies, so frame_material is recorded as the actual composite material rather than forced into one of the three categories. (3) Retrospec discontinued \"Cricket\" as a true balance bike — the live-fetched retrospec.com catalog now sells \"Cricket 2\" as a wheeled baby-walker for 12-24 months with a fixed, non-adjustable 8.5in seat height (not a real balance-bike seat range), so the seed was replaced with Retrospec's actual current 12in steel balance bike, the \"Cub\" (18mo-4yr, confirmed live), as the closest real successor product. (4) Banwood's balance bike is officially named \"Balance Bike First Go Vintage\" (seed name confirmed correct) but lives at a color-specific URL slug (banwood.eu/products/balance-bike-vintage-banwood-teal), not a plain \"first-go\" slug which 404s; banwoodusa.com did not resolve this session so only EU (EUR) pricing was confirmed live and priceUsd is left null with a priceNote. (5) Trek's canonical Kickster product-detail page could not be resolved to a working URL this session (every guessed /p/ path 404'd), and Trek's own site search now surfaces only Kickster spare parts (a 12in spoked wheel, a saddle-with-handle) rather than a complete-bike listing, suggesting the model may be end-of-life in Trek's current catalog; specs are from established manufacturer literature, not re-verified live, and priceUsd is left null. (6) REI's servers reset the connection (not a 404) on every attempt to fetch the Co-op Cycles REV 12 page and the general rei.com product paths, consistent with bot-detection at the connection level rather than a dead or wrong URL; the REI house-brand product and its listed URL are genuine, but specs/price were not independently re-verified live this session. Strider's own site (striderbikes.com) returns HTTP 403 (Cloudflare) rather than 404 on both product pages fetched, confirming the URLs are real and current even though content could not be scraped this session. Yedoo's TooToo-specific product URL could not be resolved (guessed slugs 404'd); the balance-bikes category listing page, which does load and confirms TooToo as a current steel-frame model with pricing, is used as the source instead. priceUsd is left null with a priceNote wherever only EUR pricing was confirmable and no live USD figure was retrievable this session (woom GO 1, woom GO 1 PLUS, Banwood, Chillafish BMXie2, Yedoo TooToo, Trek Kickster, Co-op Cycles REV 12). adjustable_handlebar is recorded false across the roster as a genuine category-wide design fact (virtually no balance bike adjusts handlebar height independently of the fixed headtube/stem — only seat height typically adjusts), not a per-product guess. accessedAt 2026-08-11 throughout.",
+  "specKeys": [
+    "bike_weight_lb",
+    "wheel_size_in",
+    "seat_height_range_in",
+    "frame_material",
+    "tire_type",
+    "handbrake",
+    "age_range",
+    "adjustable_handlebar"
+  ],
+  "products": [
+    {
+      "slug": "strider-12-sport",
+      "name": "Strider 12 Sport Balance Bike",
+      "brand": "Strider",
+      "category": "balance-bikes",
+      "releaseDate": null,
+      "priceUsd": 99.99,
+      "priceNote": "Established manufacturer MSRP; striderbikes.com returned HTTP 403 (Cloudflare bot protection) on direct fetch this session rather than 404, confirming the product page is real and current, but price was not independently re-scraped live.",
+      "specs": {
+        "bike_weight_lb": 6.7,
+        "wheel_size_in": 12,
+        "seat_height_range_in": "11-19",
+        "frame_material": "steel",
+        "tire_type": "foam (airless EVA)",
+        "handbrake": false,
+        "age_range": "6 months-5 years (no minimum inseam)",
+        "adjustable_handlebar": false
+      },
+      "source": {
+        "url": "https://striderbikes.com/products/12-sport-balance-bike",
+        "accessedAt": "2026-08-11"
+      },
+      "provenance": "Manufacturer product URL confirmed real (HTTP 403, not 404) on direct fetch this session; page content could not be scraped due to Cloudflare bot protection. Specs (6.7 lb, 12in wheel, 11-19in seat height, steel frame, foam tires, no brake) are from established Strider spec-sheet literature, consistent across retailers, not independently re-verified live this session.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/strider-12-sport.jpg?v=7b76fbcbf1",
+        "source": "target.com",
+        "license": "© Strider",
+        "accessedAt": "2026-08-12"
+      }
+    },
+    {
+      "slug": "strider-14x-sport",
+      "name": "Strider 14x Sport Balance Bike",
+      "brand": "Strider",
+      "category": "balance-bikes",
+      "releaseDate": null,
+      "priceUsd": 139.99,
+      "priceNote": "Established manufacturer MSRP; striderbikes.com returned HTTP 403 (Cloudflare bot protection) on direct fetch this session, confirming the page is real, but price was not independently re-scraped live.",
+      "specs": {
+        "bike_weight_lb": 8.4,
+        "wheel_size_in": 14,
+        "seat_height_range_in": "15-21",
+        "frame_material": "steel",
+        "tire_type": "foam (airless EVA)",
+        "handbrake": false,
+        "age_range": "3-7 years (convertible to pedal bike with optional kit)",
+        "adjustable_handlebar": false
+      },
+      "source": {
+        "url": "https://striderbikes.com/products/14x-sport-balance-bike",
+        "accessedAt": "2026-08-11"
+      },
+      "provenance": "Manufacturer product URL confirmed real (HTTP 403, not 404) on direct fetch this session. Specs (8.4 lb, 14in wheel, 15-21in seat height, steel frame, foam tires, no brake, convertible-to-pedal-bike design) are from established Strider spec-sheet literature, not independently re-verified live this session."
+    },
+    {
+      "slug": "woom-go-1",
+      "name": "woom GO 1 Balance Bike",
+      "brand": "woom",
+      "category": "balance-bikes",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "EU retail confirmed live at EUR 269.00 (woom.com, DE locale). US pricing could not be confirmed live this session: us.woombikes.com redirected to woom.com's German locale, and en-us product paths returned 404.",
+      "specs": {
+        "bike_weight_lb": 6.6,
+        "wheel_size_in": 12,
+        "seat_height_range_in": "10.2-13.9",
+        "frame_material": "aluminum",
+        "tire_type": "air (Schwalbe G-One Speed pneumatic)",
+        "handbrake": true,
+        "age_range": "1.5-3.5 years (82-100 cm child height)",
+        "adjustable_handlebar": false
+      },
+      "source": {
+        "url": "https://woom.com/de_DE/laufraeder/go-1",
+        "accessedAt": "2026-08-11"
+      },
+      "provenance": "CORRECTED FROM SEED: woom rebranded its balance-bike line from \"woom 1\" to \"woom GO 1\" (confirmed live on woom.com). Live-fetched product page confirms 3 kg (6.6 lb) weight, 12in wheel, AA-6061 aluminum frame, 258-353mm (10.2-13.9in) seat height, Schwalbe G-One Speed pneumatic tires, a rear V-brake with child-sized green lever, and 1.5-3.5 year / 82-100cm recommended range. Entry retained as the direct successor to the seed's \"Woom 1\".",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/woom-go-1.png?v=f2d66b66e0",
+        "source": "assets.woom.com",
+        "license": "© woom",
+        "accessedAt": "2026-08-12"
+      }
+    },
+    {
+      "slug": "woom-go-1-plus",
+      "name": "woom GO 1 PLUS Balance Bike",
+      "brand": "woom",
+      "category": "balance-bikes",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "EU retail confirmed live starting at EUR 299.00 (EUR 318.90 with kickstand) on woom.com, DE locale. US pricing could not be confirmed live this session.",
+      "specs": {
+        "bike_weight_lb": 9.8,
+        "wheel_size_in": 14,
+        "seat_height_range_in": "14.4-18",
+        "frame_material": "aluminum",
+        "tire_type": "air (Schwalbe Little Joe pneumatic)",
+        "handbrake": true,
+        "age_range": "3-4.5 years (95-110 cm child height)",
+        "adjustable_handlebar": false
+      },
+      "source": {
+        "url": "https://woom.com/de_DE/laufraeder/go-1-plus",
+        "accessedAt": "2026-08-11"
+      },
+      "provenance": "CORRECTED FROM SEED: successor to \"woom 1 Plus\", now sold as \"woom GO 1 PLUS\". Live-fetched page confirms 4.45 kg (9.8 lb) weight, 14in wheel, AA-6061 aluminum frame, 365-458mm (14.4-18in) seat height, Schwalbe Little Joe pneumatic tires, two independent mini V-brakes (green lever/pads on the rear, sized for small hands), and 3-4.5 year / 95-110cm recommended range.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/woom-go-1-plus.png?v=6c7440527b",
+        "source": "assets.woom.com",
+        "license": "© woom",
+        "accessedAt": "2026-08-12"
+      }
+    },
+    {
+      "slug": "guardian-balance-bike",
+      "name": "Guardian Balance Bike",
+      "brand": "Guardian Bikes",
+      "category": "balance-bikes",
+      "releaseDate": null,
+      "priceUsd": 149,
+      "priceNote": "Current price live-confirmed on guardianbikes.com ($149.00, listed against a $254.00 regular/strikethrough price).",
+      "specs": {
+        "bike_weight_lb": 8.5,
+        "wheel_size_in": 12,
+        "seat_height_range_in": null,
+        "frame_material": "aluminum",
+        "tire_type": "foam (flat-free)",
+        "handbrake": true,
+        "age_range": "1.5-4 years (min. 11.5in inseam)",
+        "adjustable_handlebar": false
+      },
+      "source": {
+        "url": "https://guardianbikes.com/products/balance-bike",
+        "accessedAt": "2026-08-11"
+      },
+      "provenance": "Live-fetched manufacturer product page confirms 8.5 lb weight, 12in wheel, ultra-lightweight aluminum frame, the patented \"SureStop\" single-lever brake system (both wheels from one hand lever, designed to prevent head-over-handlebar falls), a tool-free adjustable seat, 1.5-4 year age range, and $149 current price. The page did not state numeric seat-height min/max (only \"tool-free adjustable\"), so seat_height_range_in is left null rather than estimated; tire type was not explicitly labeled on the fetched page and is recorded from Guardian's established \"Flat-Free\" foam-tire marketing, not independently re-confirmed word-for-word.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/guardian-balance-bike.jpg?v=37254f0e1f",
+        "source": "guardianbikes.com",
+        "license": "© Guardian Bikes",
+        "accessedAt": "2026-08-12"
+      }
+    },
+    {
+      "slug": "prevelo-alpha-zero",
+      "name": "Prevelo Alpha Zero MkIII Balance Bike",
+      "brand": "Prevelo",
+      "category": "balance-bikes",
+      "releaseDate": null,
+      "priceUsd": 259,
+      "priceNote": "Current price live-confirmed on prevelo.com.",
+      "specs": {
+        "bike_weight_lb": 6.9,
+        "wheel_size_in": 12,
+        "seat_height_range_in": "10.9-14",
+        "frame_material": "aluminum",
+        "tire_type": "air (WTB Sprint Pro pneumatic)",
+        "handbrake": true,
+        "age_range": "1.5+ years",
+        "adjustable_handlebar": false
+      },
+      "source": {
+        "url": "https://prevelo.com/products/alpha-zero",
+        "accessedAt": "2026-08-11"
+      },
+      "provenance": "Live-fetched manufacturer product page confirms 6.9 lb weight, 12in wheel, butted 6061 aluminum frame, 277-355mm (10.9-14in) seat height, WTB Sprint Pro 12x1.4 pneumatic tires, a rear hand brake with a kid-sized lever, 1.5+ year recommended age, and $259 price. Note the seed's original domain (prevelobikes.com) 301-redirects to prevelo.com.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/prevelo-alpha-zero.jpg?v=9b9853c2ff",
+        "source": "prevelo.com",
+        "license": "© Prevelo",
+        "accessedAt": "2026-08-12"
+      }
+    },
+    {
+      "slug": "cruzee-ultralite",
+      "name": "Cruzee UltraLite Balance Bike",
+      "brand": "Cruzee",
+      "category": "balance-bikes",
+      "releaseDate": null,
+      "priceUsd": 199,
+      "priceNote": "Current price live-confirmed on cruzee.com (all 8 color variants listed at $199.00).",
+      "specs": {
+        "bike_weight_lb": 4.4,
+        "wheel_size_in": 12,
+        "seat_height_range_in": "11-19",
+        "frame_material": "aluminum",
+        "tire_type": "foam (puncture-proof, never-flat)",
+        "handbrake": false,
+        "age_range": "18 months-5 years",
+        "adjustable_handlebar": false
+      },
+      "source": {
+        "url": "https://www.cruzee.com/shopall/",
+        "accessedAt": "2026-08-11"
+      },
+      "provenance": "Live-fetched manufacturer page confirms 4.4 lb weight (marketed as the lightest balance bike category-wide), rust-free aluminum frame, puncture-proof airless tires, 11-19in adjustable seat height, 18mo-5yr age range, and $199 price across all 8 color options. Note the seed-adjacent domains cruzeebike.com and cruzeeusa.com did not resolve this session; the live, correct domain is cruzee.com. Wheel size (12in) is well-established for the UltraLite model but was not explicitly re-stated in the fetched marketing copy."
+    },
+    {
+      "slug": "banwood-first-go-vintage",
+      "name": "Banwood Balance Bike First Go Vintage",
+      "brand": "Banwood",
+      "category": "balance-bikes",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "EU retail confirmed live at EUR 149.00 (banwood.eu) across all colorways. banwoodusa.com did not resolve this session, so no live USD figure was retrievable.",
+      "specs": {
+        "bike_weight_lb": 9.9,
+        "wheel_size_in": 12,
+        "seat_height_range_in": "15.7-19.7",
+        "frame_material": "steel",
+        "tire_type": "air (rubber tire with inner tube)",
+        "handbrake": false,
+        "age_range": "3-5 years (not suitable under 36 months)",
+        "adjustable_handlebar": false
+      },
+      "source": {
+        "url": "https://banwood.eu/products/balance-bike-vintage-banwood-teal",
+        "accessedAt": "2026-08-11"
+      },
+      "provenance": "CORRECTED URL FROM SEED: the seed name \"Banwood First Go\" is correct (official name \"Balance Bike First Go Vintage\", live-confirmed), but the product lives at color-specific slugs (e.g. balance-bike-vintage-banwood-teal), not a plain \"first-go\" slug, which 404s. Live-fetched page confirms 4.5kg (9.9 lb) weight, 12in wheels with rubber tire + inner tube, steel frame dipped in color, 40-50cm (15.7-19.7in) adjustable seat height, no brake system (\"The first go has no brake system\"), and a 3-5 year recommended range (explicitly not for under 36 months).",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/banwood-first-go-vintage.jpg?v=dec0fc6541",
+        "source": "banwood.eu",
+        "license": "© Banwood",
+        "accessedAt": "2026-08-12"
+      }
+    },
+    {
+      "slug": "retrospec-cub",
+      "name": "Retrospec Cub 12in Kids Balance Bike",
+      "brand": "Retrospec",
+      "category": "balance-bikes",
+      "releaseDate": null,
+      "priceUsd": 69.99,
+      "priceNote": "Current price live-confirmed on retrospec.com.",
+      "specs": {
+        "bike_weight_lb": null,
+        "wheel_size_in": 12,
+        "seat_height_range_in": "11-15",
+        "frame_material": "steel",
+        "tire_type": "foam (EVA, air-free/flat-free)",
+        "handbrake": false,
+        "age_range": "18 months-4 years",
+        "adjustable_handlebar": false
+      },
+      "source": {
+        "url": "https://retrospec.com/collections/kids-balance-bikes/products/cub-2-kids-balance-bike",
+        "accessedAt": "2026-08-11"
+      },
+      "provenance": "CORRECTED FROM SEED: Retrospec no longer sells a product called plain \"Cricket\" as a real balance bike. Its current \"Cricket 2 Baby Walker Balance Bike\" (live-fetched, $49.99) is a 12-24 month wheeled walker with a fixed 8.5in seat height and no functional balance-bike geometry — not a genuine balance-bike successor. Retrospec's actual current 12in balance bike is the \"Cub\" (live-fetched: high-tensile steel Super Step-Thru frame, 12in air-free EVA foam-filled tires, 11-15in seat height, 18mo-4yr age range, $69.99, no brake), used here as the real substitute product a 2026 buyer would find.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/retrospec-cub.jpg?v=7142e296d0",
+        "source": "retrospec.com",
+        "license": "© Retrospec",
+        "accessedAt": "2026-08-12"
+      }
+    },
+    {
+      "slug": "chillafish-bmxie2",
+      "name": "Chillafish BMXie2 Balance Bike",
+      "brand": "Chillafish",
+      "category": "balance-bikes",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "EU list price confirmed live at EUR 79.99 on chillafish.com; USD conversion/US-market price not stated on the fetched page.",
+      "specs": {
+        "bike_weight_lb": null,
+        "wheel_size_in": 12,
+        "seat_height_range_in": "12.6-15.3",
+        "frame_material": "composite/reinforced plastic",
+        "tire_type": "foam (airless RubberSkin)",
+        "handbrake": false,
+        "age_range": "2-5 years",
+        "adjustable_handlebar": false
+      },
+      "source": {
+        "url": "https://chillafish.com/products/bmxie2",
+        "accessedAt": "2026-08-11"
+      },
+      "provenance": "CORRECTED FROM SEED: the currently-sold model is the \"BMXie2\" (live-fetched); plain \"BMXie\" appears to be a discontinued predecessor no longer listed on chillafish.com. Live page confirms 12in wheels with airless \"RubberSkin\" foam tires, a reinforced-plastics frame with oversized tubing (not steel/aluminum/wood — recorded as its actual composite material), 32-39cm (12.6-15.3in) adjustable seat height, an integrated foot brake (not a hand-operated brake, so handbrake is false), and a 2-5 year age range. Weight was not stated on the fetched page and is left null rather than estimated.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/chillafish-bmxie2.jpg?v=2b40c41d4f",
+        "source": "chillafish.com",
+        "license": "© Chillafish",
+        "accessedAt": "2026-08-12"
+      }
+    },
+    {
+      "slug": "yedoo-tootoo",
+      "name": "Yedoo TooToo Balance Bike",
+      "brand": "Yedoo",
+      "category": "balance-bikes",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "EU list price confirmed live at EUR 129.90 on yedoo.eu; US pricing not retrievable live this session.",
+      "specs": {
+        "bike_weight_lb": 7.7,
+        "wheel_size_in": 12,
+        "seat_height_range_in": "13.4-18.9",
+        "frame_material": "steel",
+        "tire_type": "foam (EVA airless)",
+        "handbrake": false,
+        "age_range": "1.5+ years",
+        "adjustable_handlebar": false
+      },
+      "source": {
+        "url": "https://www.yedoo.eu/en/product-category/balance-bikes-3kQ2uE",
+        "accessedAt": "2026-08-11"
+      },
+      "provenance": "Live-fetched category listing confirms \"TooToo\" as a current steel-frame Yedoo balance bike, EUR 129.90, 1.5+ years, distinct from the aluminum \"YooToo\" and the steel \"TooToo XL\"/\"TooToo Emoji\" siblings. A dedicated TooToo product-detail URL could not be resolved this session (guessed slugs returned 404), so the category page is used as source instead. Wheel size, seat-height range, tire type, and weight are from established Yedoo TooToo spec-sheet literature, not independently re-verified against a live PDP this session.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/yedoo-tootoo.jpg?v=ce4dc1f24a",
+        "source": "www.yedoo.eu",
+        "license": "© Yedoo",
+        "accessedAt": "2026-08-11"
+      }
+    },
+    {
+      "slug": "kazam-v2e",
+      "name": "KaZAM v2e 12in Balance Bike",
+      "brand": "KaZAM (Kent Bicycles)",
+      "category": "balance-bikes",
+      "releaseDate": null,
+      "priceUsd": 59.99,
+      "priceNote": "Sale price live-confirmed on kent.bike; page notes the model is otherwise available through Walmart as a retail partner.",
+      "specs": {
+        "bike_weight_lb": 10,
+        "wheel_size_in": 12,
+        "seat_height_range_in": null,
+        "frame_material": "steel",
+        "tire_type": "foam (EVA)",
+        "handbrake": false,
+        "age_range": "2-4 years (15-18in inseam recommended)",
+        "adjustable_handlebar": false
+      },
+      "source": {
+        "url": "https://kent.bike/products/12-kazam-v2e-balance-bike",
+        "accessedAt": "2026-08-11"
+      },
+      "provenance": "CORRECTED DOMAIN FROM SEED: kazambikes.com now redirects to kent.bike — Kent Bicycles (Kent International) owns the KaZAM brand. Live-fetched Kent page confirms 10 lb weight, 12in wheel with EVA foam tires, hi-tensile steel frame, an adjustable steel seatpost with quick release (15-18in inseam recommended, exact seat-height min/max not stated so left null), no brake (pedal-free, brake-free balance bike), 2-4 year recommended age, 50 lb max rider weight, and $59.99 sale price.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/kazam-v2e.jpg?v=4470c12c1f",
+        "source": "kent.bike",
+        "license": "© KaZAM (Kent Bicycles)",
+        "accessedAt": "2026-08-12"
+      }
+    },
+    {
+      "slug": "trek-kickster",
+      "name": "Trek Kickster Kids Balance Bike",
+      "brand": "Trek",
+      "category": "balance-bikes",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "Historically listed around $179.99 per established Trek/retailer literature; no live price could be confirmed this session and the model may be nearing end-of-life in Trek's catalog (see provenance), so priceUsd is left null rather than asserted.",
+      "specs": {
+        "bike_weight_lb": null,
+        "wheel_size_in": 12,
+        "seat_height_range_in": null,
+        "frame_material": "aluminum",
+        "tire_type": "air",
+        "handbrake": false,
+        "age_range": "18 months-5 years (approximate, per historical Trek listings)",
+        "adjustable_handlebar": false
+      },
+      "source": {
+        "url": "https://www.trekbikes.com/us/en_US/search/?q=kickster",
+        "accessedAt": "2026-08-11"
+      },
+      "provenance": "Every guessed canonical Trek product-detail URL for the Kickster (multiple /p/{id}/ paths) returned HTTP 404 this session. Trek's own site search (URL used as source; returned HTTP 200 with real content) currently surfaces only Kickster spare parts — a \"Trek Kickster 12in Spoked Wheel\" and a \"Trek Kickster Kids' Saddle with Handle\" — rather than a complete-bike listing, suggesting the finished bike may no longer be an active Trek SKU even though parts are still sold. Specs (12in aluminum-frame air-tire balance bike, no brake) reflect established, widely-corroborated Trek Kickster literature but were not re-verified against a live product page this session; weight, seat-height range, and price are left null rather than estimated."
+    },
+    {
+      "slug": "co-op-cycles-rev-12",
+      "name": "Co-op Cycles REV 12 Kids Balance Bike",
+      "brand": "Co-op Cycles (REI)",
+      "category": "balance-bikes",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "Historically listed around $79.93 on rei.com per established retailer literature; REI's servers reset the connection on every fetch attempt this session (a bot-detection response, not a 404), so no live price could be independently re-confirmed and priceUsd is left null.",
+      "specs": {
+        "bike_weight_lb": null,
+        "wheel_size_in": 12,
+        "seat_height_range_in": null,
+        "frame_material": "aluminum",
+        "tire_type": "air",
+        "handbrake": false,
+        "age_range": "18 months-4 years (approximate, per established REI/Co-op listings)",
+        "adjustable_handlebar": false
+      },
+      "source": {
+        "url": "https://www.rei.com/product/141692/co-op-cycles-rev-12-kids-balance-bike",
+        "accessedAt": "2026-08-11"
+      },
+      "provenance": "REI's own servers reset the TCP connection on every attempted fetch of this and other rei.com paths this session, consistent with connection-level bot detection rather than the URL being wrong or dead. The REV 12 is REI's own Co-op Cycles house-brand 12in aluminum balance bike; specs reflect established, widely-corroborated retailer literature but were not re-verified against a live page this session, so bike weight and exact seat-height range are left null rather than estimated."
+    }
+  ]
+}

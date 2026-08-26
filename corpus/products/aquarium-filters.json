@@ -1,0 +1,465 @@
+{
+  "category": "aquarium-filters",
+  "generatedAt": "2026-08-01",
+  "methodologyNotes": "Covers external canister filters and hang-on-back (HOB) power filters for freshwater aquariums that a buyer comparison-shops in 2026, spanning budget (SunSun) to premium (Fluval FX6, OASE BioMaster Thermo) tiers. type is an enum: canister (fully sealed external unit, gravity/siphon fed) or hang-on-back (HOB; clips onto the tank rim, impeller-driven intake tube). tank_size_gal is the manufacturer's maximum rated aquarium size in US gallons; when the manufacturer publishes a min-max range, this is the top of that range. flow_rate_gph is the manufacturer's rated pump output in US gallons per hour — the raw pump figure, not a derated \"in-tank filter circulation\" number, when a source publishes both. media_capacity_l is the media basket/tray/canister filter-volume in liters as explicitly stated by the manufacturer; null when no liter figure is disclosed (common for HOB filters, which are usually specified by included cartridge/insert count instead). media_stages counts the manufacturer's own explicitly stated filtration-stage number (e.g. \"4 STAGE FILTRATION\" printed on AquaClear/Magniflow packaging, \"5-stage\" for the SunSun HW-304B) or, when no explicit stage count is published but the manufacturer names discrete filtration categories (mechanical/chemical/biological), the count of those named categories; null when neither is stated. wattage is the filter pump's rated power draw in watts at the 120V/60Hz US spec (or the single spec given, where regional variants exist); for the OASE BioMaster Thermo 850 — the one model here with a built-in heater — this is the pump only, the separate 400W heater element is called out in the product's provenance/priceNote instead of blended into wattage. self_priming is true only where the manufacturer explicitly describes an automatic/self-starting pump that needs no manual siphon step (e.g. Fluval's \"Smart Pump\" auto-start, a stated \"self-priming pump\", or a push-button primer described as self-priming); it is false where the manufacturer instead describes a manual hand-operated primer bulb/handle (Fluval's 07-series \"Redesigned Primer\" requires the user to hand-pump it); null where the manufacturer's page does not address priming at all. dimensions_in is length x width x height in inches as published, converted from mm/cm where the manufacturer only gives metric; cylindrical canisters are given as diameter x diameter x height. priceUsd is a representative current US street price (a named US retailer or the manufacturer's own USD listing) since most of these manufacturers' own product pages do not publish MSRP; null when no verbatim US-dollar figure could be sourced from a fetched page — several long-running EU-market products (OASE, both EHEIM Classic sizes) and two Fluval 07-series filters had no fetchable USD price and are left null rather than guessed. releaseDate is left null across the board: none of the fetched manufacturer or retailer pages stated a verbatim launch year/month for these long-running, frequently-restocked product lines, and none was fabricated.",
+  "specKeys": [
+    "type",
+    "flow_rate_gph",
+    "tank_size_gal",
+    "media_capacity_l",
+    "media_stages",
+    "wattage",
+    "self_priming",
+    "dimensions_in"
+  ],
+  "products": [
+    {
+      "slug": "fluval-fx6",
+      "name": "Fluval FX6 Canister Filter",
+      "brand": "Fluval",
+      "category": "aquarium-filters",
+      "releaseDate": null,
+      "priceUsd": 369.99,
+      "priceNote": "Aquariums Direct USA (aquariumsdirectusa.com) lists the FX6 at $369.99 (shown as out of stock at the time fetched); no MSRP is published on Fluval's own product page. Aquarium Source's independent review cites a different retailer at $404.39, so street price visibly fluctuates; the lower, more MSRP-like figure was used.",
+      "specs": {
+        "type": "canister",
+        "flow_rate_gph": 925,
+        "tank_size_gal": 400,
+        "media_capacity_l": 5.9,
+        "media_stages": 3,
+        "wattage": 43,
+        "self_priming": true,
+        "dimensions_in": "15.75 x 15.75 x 20.8"
+      },
+      "source": {
+        "url": "https://www.fluvalaquatics.com/us/shop/product/fx6-canister-filter-up-to-400-us-gal-1500-l",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.aquariumsource.com/fluval-fx6-canister-filter-review/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/fluval-fx6.jpg?v=e6c0bc8284",
+        "source": "fluvalaquatics.com",
+        "license": "© Fluval",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Fluval's official US product page states verbatim: pump output \"925 US GPH / 3500 LPH\", filter circulation \"563 US GPH / 2130 LPH\", tank size \"up to 400 US gallons (1,500 L)\", media basket volume \"1.5 gallons (5.9 L)\", power \"43W (120V/60Hz)\", dimensions \"15.75in L x 15.75in W x 20.8in H\", and self-starting Smart Pump operation (\"just add water, plug in and Smart Pump will take over\") — used here for type, flow_rate_gph (pump output), tank_size_gal, media_capacity_l, media_stages (mechanical/chemical/biological named as the multi-stage system), wattage, self_priming, and dimensions_in. Aquarium Source's review independently corroborates the 925/563 GPH split, \"up to 400 gallons\", \"15 x 15 x 20 inches\", and \"5.9 liters\" media capacity, while noting the manufacturer's advertised 925 GPH is optimistic versus real-world 563 GPH — both figures are Fluval's own, so 925 (pump output) was kept for consistency with how flow_rate_gph is defined across this dataset. No verbatim USD MSRP appears on Fluval's page; priceUsd/priceNote draw on two retailers instead."
+    },
+    {
+      "slug": "fluval-fx4",
+      "name": "Fluval FX4 Canister Filter",
+      "brand": "Fluval",
+      "category": "aquarium-filters",
+      "releaseDate": null,
+      "priceUsd": 333.04,
+      "priceNote": "Aquarium Source's dedicated FX4 review cites $333.04 at the retailer it checked; a separate Aquarium Source \"best canister filter\" roundup cites $331.99 at another retailer around the same time. Fluval's own product page does not publish a price.",
+      "specs": {
+        "type": "canister",
+        "flow_rate_gph": 700,
+        "tank_size_gal": 250,
+        "media_capacity_l": 3.9,
+        "media_stages": 3,
+        "wattage": 30,
+        "self_priming": true,
+        "dimensions_in": "15.75 x 15.75 x 16.5"
+      },
+      "source": {
+        "url": "https://www.fluvalaquatics.com/us/shop/product/fx4-canister-filter-up-to-250-us-gal-1000-l",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://aquamarinepower.com/fluval-fx4-canister-filter-review/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/fluval-fx4.jpg?v=2d7a036a90",
+        "source": "fluvalaquatics.com",
+        "license": "© Fluval",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Fluval's official US product page states verbatim: pump output \"700 US GPH / 2650 LPH\", filter circulation \"450 US GPH / 1700 LPH\", tank size \"up to 250 US gallons (1000 L)\", media basket capacity \"1 gallon (3.9 L)\", multi-stage mechanical/chemical/biological media, power \"30W (120V/60Hz)\", Smart Pump self-starting operation, and dimensions \"15.75in L x 15.75in W x 16.5in H\" — used directly for every spec field. Aquamarine Power's independent review corroborates 700 GPH, \"up to 250 gallons\", \"30 watts\", \"1 gallon (3.9 liters)\" media capacity, self-priming (\"Yes (automatic)\"), and \"4 removable baskets\", plus measured 28dB noise and a $350-400 street-price range not used here since the two Aquarium Source figures are more specific. No verbatim USD MSRP appears on Fluval's own page."
+    },
+    {
+      "slug": "fluval-407",
+      "name": "Fluval 407 Performance Canister Filter",
+      "brand": "Fluval",
+      "category": "aquarium-filters",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "No verbatim USD price could be sourced from a fetched page: Fluval's own product page does not list one, Chewy/PetSmart/Amazon pages returned bot-verification or 429/503 responses when fetched, and no aquarium-review site with a dedicated 407 write-up and price could be reached (aquariumsource.com's 407 review page 404's).",
+      "specs": {
+        "type": "canister",
+        "flow_rate_gph": 383,
+        "tank_size_gal": 100,
+        "media_capacity_l": 4.2,
+        "media_stages": null,
+        "wattage": 23,
+        "self_priming": false,
+        "dimensions_in": "9.5 x 7 x 19.3"
+      },
+      "source": {
+        "url": "https://www.fluvalaquatics.com/us/shop/product/407-canister-filter-50-100-us-gal-150-500-l",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/fluval-407.jpg?v=41691b27c2",
+        "source": "fluvalaquatics.com",
+        "license": "© Fluval",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Fluval's official US product page states verbatim: pump output \"383 US GPH / 1450 LPH\", filter circulation \"245 US GPH / 930 LPH\" (flow_rate_gph uses the pump-output figure for consistency with the FX-series entries), recommended tank size \"50-100 US Gal / 150-500 L\" (top of range used), media basket capacity \"4.2 L\", power \"23W (120V/60Hz)\" / \"20W (230-240V/50Hz)\", and dimensions \"9.5in L x 7in W x 19.3in H\". The page explicitly describes a \"Redesigned Primer with larger easy-grip handle\" — a hand-operated primer, not an automatic self-starting pump like the FX-series' Smart Pump — so self_priming is false. The page names specific media components (Bio-Foam Max, Bio-Foam, Carbon, a vertical pre-filter cartridge) but never labels them with a stage count or the mechanical/chemical/biological framing used elsewhere on Fluval's own site, so media_stages is left null rather than guessed at 3-5."
+    },
+    {
+      "slug": "fluval-307",
+      "name": "Fluval 307 Performance Canister Filter",
+      "brand": "Fluval",
+      "category": "aquarium-filters",
+      "releaseDate": null,
+      "priceUsd": 199.99,
+      "priceNote": "Aquarium Source's canister-filter roundup shows the 307 on sale for $179.82 \"on sale from $199.99\" at the retailer it checked; $199.99 (the stated list price) is used as priceUsd. Fluval's own product page does not publish a price.",
+      "specs": {
+        "type": "canister",
+        "flow_rate_gph": 303,
+        "tank_size_gal": 70,
+        "media_capacity_l": 3.1,
+        "media_stages": null,
+        "wattage": 16,
+        "self_priming": false,
+        "dimensions_in": "9.5 x 7 x 16.5"
+      },
+      "source": {
+        "url": "https://www.fluvalaquatics.com/us/shop/product/307-canister-filter-40-70-us-gal-90-330-l",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.aquariumsource.com/best-canister-filter/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/fluval-307.jpg?v=4b44a53e27",
+        "source": "fluvalaquatics.com",
+        "license": "© Fluval",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Fluval's official US product page states verbatim: pump output \"303 US GPH / 1150 LPH\", filter circulation \"206 US GPH / 780 LPH\" (pump-output figure used for flow_rate_gph), tank size \"40-70 US gallons (90-330 L)\" (top of range used), basket volume \"3.1 L\" (of a 4.5 L total chamber / 7.3 L canister volume), power \"16W (120V/60Hz)\" / \"15W (230-240V/50Hz)\", dimensions \"9.5in L x 7in W x 16.5in H\", and the same hand-operated \"Redesigned Primer\" described for the 407 (not an automatic self-starting pump), so self_priming is false. Aquarium Source's roundup independently corroborates \"303 US gal/h\", \"40-70 gallons\", and the sale/list pricing. No explicit stage count or mechanical/chemical/biological labeling appears on the manufacturer page, so media_stages is null."
+    },
+    {
+      "slug": "eheim-classic-2217",
+      "name": "EHEIM Classic 2217 (600) External Canister Filter",
+      "brand": "EHEIM",
+      "category": "aquarium-filters",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "No verbatim USD price could be sourced from a fetched page — several US retailer product pages (AquaCave, That Fish Place, Amazon) returned 404s or blocked content when fetched. This is a long-running EU-manufactured product line typically sold in the US through smaller specialty importers.",
+      "specs": {
+        "type": "canister",
+        "flow_rate_gph": 264,
+        "tank_size_gal": 160,
+        "media_capacity_l": 6,
+        "media_stages": null,
+        "wattage": 20,
+        "self_priming": null,
+        "dimensions_in": "8.1 x 8.1 x 15.75"
+      },
+      "source": {
+        "url": "https://eheim.com/ersatzteil-shop/technik/aussenfilter/classic/classic-600",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/eheim-classic-2217.jpg?v=b9383635d2",
+        "source": "eheim.com",
+        "license": "© EHEIM",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "EHEIM's official parts/product page for the classic 600 (article 2217010) states verbatim: pump output \"ca. 1000 l\" per hour at 50Hz (≈264 US gal/h, the figure independently used by several US retailer listings for the same model, so it was kept as flow_rate_gph), \"für Aquarien bis ca. 600l\" (≈160 US gal max, rounding matches how US listings describe this model), \"Filtervolumen: 6l\" media volume, \"Leistungsaufnahme (50Hz): 20 Watt\", and dimensions \"Höhe 400mm, Durchmesser Ø 205mm\" (converted to 15.75in height x 8.1in diameter; given as diameter x diameter x height since the canister is cylindrical). The page does not state a specific filtration-stage count (it only describes compatibility with \"filter pads and loose filter media\"), and does not address whether the pump is self-priming (EHEIM Classic filters are widely known in the hobby to require a manual siphon-start rather than an integrated primer, but since no fetched EHEIM page states this explicitly, self_priming is left null rather than assumed)."
+    },
+    {
+      "slug": "eheim-classic-2213",
+      "name": "EHEIM Classic 2213 (250) External Canister Filter",
+      "brand": "EHEIM",
+      "category": "aquarium-filters",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "No verbatim USD price could be sourced from a fetched page for the same reasons as the 2217: US retailer product pages returned 404s or blocked content when fetched.",
+      "specs": {
+        "type": "canister",
+        "flow_rate_gph": 110,
+        "tank_size_gal": 66,
+        "media_capacity_l": 3,
+        "media_stages": null,
+        "wattage": 8,
+        "self_priming": null,
+        "dimensions_in": "6.3 x 6.3 x 14.0"
+      },
+      "source": {
+        "url": "https://eheim.com/ersatzteil-shop/technik/aussenfilter/classic/classic-250",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/eheim-classic-2213.jpg?v=92949954c8",
+        "source": "eheim.com",
+        "license": "© EHEIM",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "EHEIM's official parts/product page for the classic 250 (article 2213010) states verbatim: pump output \"ca. 440 l\" per hour at 50Hz, \"für Aquarien bis ca. 250l\", \"Filtervolumen: 3l\", \"Leistungsaufnahme (50Hz): 8 Watt\", and dimensions \"Höhe 355mm, Durchmesser Ø 160mm\" (converted to 14.0in height x 6.3in diameter). US retailer listings for this exact model independently describe it as \"110GPH\" for \"20-62 Gallons\" (up to 66 gallons at some retailers) with \"Power Consumption: 8W\" and \"Filter Volume: 3.0 Liters\", matching the EHEIM-stated wattage and media volume and used here for flow_rate_gph (the commonly-cited US-market GPH figure) and tank_size_gal. No stage count or self-priming statement appears on the fetched manufacturer page, so both are null."
+    },
+    {
+      "slug": "aquaclear-110",
+      "name": "AquaClear 110 Power Filter",
+      "brand": "AquaClear",
+      "category": "aquarium-filters",
+      "releaseDate": null,
+      "priceUsd": 99.99,
+      "priceNote": "Aquatic Warehouse (aquaticwarehouse.com) lists the AC110 at $99.99. Fluval's own AquaClear product page (Hagen/Fluval manufactures AquaClear) does not publish a price.",
+      "specs": {
+        "type": "hang-on-back",
+        "flow_rate_gph": 500,
+        "tank_size_gal": 110,
+        "media_capacity_l": null,
+        "media_stages": 4,
+        "wattage": 14,
+        "self_priming": null,
+        "dimensions_in": "13.6 x 6.9 x 9.2"
+      },
+      "source": {
+        "url": "https://www.fluvalaquatics.com/us/shop/product/aquaclear",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://aquaticwarehouse.com/aquaclear-110-filter",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/aquaclear-110.jpg?v=cbbd8d40b8",
+        "source": "fluvalaquatics.com",
+        "license": "© Fluval",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Fluval's official AquaClear product page states verbatim, for item 19620 (AC110): \"500 US GPH / 1892 LPH\" maximum flow, \"60-110 US Gal / 227-416 L\" tank capacity (top of range used), dimensions \"13.6in L x 6.9in W x 9.2in H\", power \"14W\" (same at 120V/60Hz and 230-240V/50Hz), and included media of 1 intake sponge, 2 carbon inserts, and 2 BIOMAX cartridges. The retail packaging (used as the image) explicitly prints \"SUPERIOR 4 STAGE FILTRATION\", \"FOR AQUARIUMS 60-110 US Gal\", and \"PUMP OUTPUT 500 US GPH\", confirming both media_stages=4 and the flow/tank figures. Aquatic Warehouse's listing independently corroborates \"500 GPH\", \"60 to 100 gallon\", the dimensions, and supplies the $99.99 US price absent from Fluval's own page. No fetched page states whether the AC110's pump is self-priming (Fluval's materials don't use that term for AquaClear, unlike its Tidal-competitor language for other brands), so self_priming and media_capacity_l (no basket volume in liters is given, only insert counts) are left null."
+    },
+    {
+      "slug": "aquaclear-70",
+      "name": "AquaClear 70 Power Filter",
+      "brand": "AquaClear",
+      "category": "aquarium-filters",
+      "releaseDate": null,
+      "priceUsd": 79.99,
+      "priceNote": "Aquatic Warehouse (aquaticwarehouse.com) lists the AC70 at $79.99. Fluval's own AquaClear product page does not publish a price.",
+      "specs": {
+        "type": "hang-on-back",
+        "flow_rate_gph": 300,
+        "tank_size_gal": 70,
+        "media_capacity_l": null,
+        "media_stages": 4,
+        "wattage": 7,
+        "self_priming": null,
+        "dimensions_in": "8.5 x 6.1 x 8.6"
+      },
+      "source": {
+        "url": "https://www.fluvalaquatics.com/us/shop/product/aquaclear",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://aquaticwarehouse.com/aquaclear-70-filter",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/aquaclear-70.jpg?v=e2062c6782",
+        "source": "fluvalaquatics.com",
+        "license": "© Fluval",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Fluval's official AquaClear product page states verbatim, for item 19615 (AC70): \"300 US GPH / 1136 LPH\" maximum flow, \"40-70 US Gal / 152-265 L\" tank capacity (top of range used), dimensions \"8.5in L x 6.1in W x 8.6in H\", power \"7W (120V/60Hz)\" / \"5W (230-240V/50Hz)\", and included media of one Bio-Foam, one Carbon, one BIOMAX, and one Intake Sponge insert. The retail packaging (used as the image) prints \"SUPERIOR 4 STAGE FILTRATION\", \"FOR AQUARIUMS 40-70 US Gal\", and \"PUMP OUTPUT 300 US GPH\", confirming media_stages=4 and the flow/tank figures. Aquatic Warehouse's listing independently confirms the $79.99 US price. media_capacity_l and self_priming are null for the same reasons given for the AC110 (no liter figure or priming statement on any fetched page)."
+    },
+    {
+      "slug": "penn-plax-cascade-1000",
+      "name": "Penn-Plax Cascade 1000 Canister Filter",
+      "brand": "Penn-Plax",
+      "category": "aquarium-filters",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "No verbatim USD price could be sourced from a fetched page: Penn-Plax's own storefront (eorder.pennplax.com) requires a trade login to view pricing, and Chewy/Walmart/Amazon pages returned bot-verification or rate-limit responses when fetched.",
+      "specs": {
+        "type": "canister",
+        "flow_rate_gph": 265,
+        "tank_size_gal": 100,
+        "media_capacity_l": null,
+        "media_stages": 3,
+        "wattage": 28.5,
+        "self_priming": true,
+        "dimensions_in": "11.5 x 10 x 17"
+      },
+      "source": {
+        "url": "https://eorder.pennplax.com/ccf3ul",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/penn-plax-cascade-1000.jpg?v=2ac3e9b44d",
+        "source": "pennplax.com",
+        "license": "© Penn-Plax",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Penn-Plax's own product listing (and matching retail packaging shown in the product image, which prints \"AQUARIUMS UP TO 100 GALLONS / 380 LITERS\" and \"PUMPS / POMPES 265 GPH / 1000 LPH\") states: flow rate \"265 gallons per hour\", suitable \"for aquariums up to 100 gallons\", power \"28.5 watts at 110 volts, 60Hz\", dimensions \"11.5in (width) x 10in (depth) x 17in (height)\", a \"push-button primer\" described as self-priming, and three media types (poly fiber floss, bio-sponge, activated carbon) across \"three large capacity media baskets\" supporting physical/biological/chemical filtration — used for media_stages=3. No basket volume in liters is given, so media_capacity_l is null, and no USD price is available from any fetched page."
+    },
+    {
+      "slug": "marineland-magniflow-360",
+      "name": "Marineland Magniflow 360 Canister Filter",
+      "brand": "Marineland",
+      "category": "aquarium-filters",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "No verbatim USD price could be sourced from a fetched page: Marineland's own product page does not list one, and retailer pages checked (CountryMax, Petco, Big Al's) returned 404s or blocked content when fetched.",
+      "specs": {
+        "type": "canister",
+        "flow_rate_gph": 360,
+        "tank_size_gal": 100,
+        "media_capacity_l": null,
+        "media_stages": 3,
+        "wattage": null,
+        "self_priming": true,
+        "dimensions_in": null
+      },
+      "source": {
+        "url": "https://www.marineland.com/products/filtration-and-water-circulation/magniflow-canister-filter",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/marineland-magniflow-360.png?v=b043fd7f5b",
+        "source": "marineland.com",
+        "license": "© Marineland",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Marineland's official product page describes the Magniflow line as \"multi-stage filtration\" via \"Stack N' Flo Filter Trays\" providing \"mechanical, chemical, and biological filtration\", with a \"Quick Prime Button\" that \"Fills filter chamber with water for self-priming system startup\" (self_priming=true). The retail packaging (used as the image) explicitly prints \"MAGNIFLOW 360 CANISTER FILTER\", \"Powerful, Complete 3 Stage Filtration for Fresh and Saltwater Aquariums\", \"FILTERS 360 gallons per hour\", and \"FOR UP TO 100 gallon aquarium\", confirming flow_rate_gph, tank_size_gal, and media_stages=3. No fetched page (manufacturer or retailer) discloses a wattage figure, media basket volume in liters, or physical dimensions in inches for this model, so those three fields are null rather than estimated; the same is true for a USD price."
+    },
+    {
+      "slug": "sunsun-hw-304b",
+      "name": "SunSun HW-304B Canister Filter with UV Sterilizer",
+      "brand": "SunSun",
+      "category": "aquarium-filters",
+      "releaseDate": null,
+      "priceUsd": 178.99,
+      "priceNote": "Walmart's US listing for the \"Sunsun Hw304B 525GPH Pro Canister Filter Kit with 9-watt UV Sterilizer\" shows \"Current price is USD $178.99\". SunSun has no dedicated US manufacturer storefront; pricing comes from US retailers/importers.",
+      "specs": {
+        "type": "canister",
+        "flow_rate_gph": 525,
+        "tank_size_gal": 150,
+        "media_capacity_l": null,
+        "media_stages": 5,
+        "wattage": 55,
+        "self_priming": true,
+        "dimensions_in": "11 x 11 x 17"
+      },
+      "source": {
+        "url": "https://mingllc.com/product/hw-304b/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.walmart.com/ip/Sunsun-Hw304B-525GPH-Pro-Canister-Filter-Kit-with-9-watt-UV-Sterilizer/610382318",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/sunsun-hw-304b.jpg?v=d19d5c9f40",
+        "source": "petloverscenter.com",
+        "license": "© SunSun",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Ming Trading LLC's US distributor product page for the HW-304B states: \"525 GPH (2000L/hr)\" flow rate, \"good for up to 150 gallon fish tanks\", pump power \"55W\" stated separately from the integrated \"9W\" UV sterilizer bulb (55W used for wattage — the pump, not the UV lamp), a \"5-stage system\" with \"4 media trays\", and dimensions \"11in L x 11in W x 17in H\". Aquatic Rig's listing independently confirms a \"Self-priming pump\" feature (self_priming=true). Walmart's US listing confirms the $178.99 price for this exact SKU (\"Pro Canister Filter Kit with 9-watt UV Sterilizer\", matching the HW-304B's built-in-UV model designation, distinguishing it from the plain HW-304 without UV). No media basket volume in liters is disclosed (media is specified only by weight/count — 1lb carbon, 1lb ceramic rings, 40 bio balls), so media_capacity_l is null."
+    },
+    {
+      "slug": "oase-biomaster-thermo-850",
+      "name": "OASE BioMaster Thermo 850 Canister Filter",
+      "brand": "OASE",
+      "category": "aquarium-filters",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "Only a EUR price could be sourced from a fetched page (aquaristikshop.com: €349.85, a German retailer), not a verbatim US-dollar figure, so priceUsd is left null rather than converted/guessed. This is a EU-manufactured product line with limited US retail presence.",
+      "specs": {
+        "type": "canister",
+        "flow_rate_gph": 400,
+        "tank_size_gal": 250,
+        "media_capacity_l": 8,
+        "media_stages": 4,
+        "wattage": 32,
+        "self_priming": true,
+        "dimensions_in": "9.4 x 9.4 x 21.1"
+      },
+      "source": {
+        "url": "https://www.aquaristikshop.com/aquaristik/OASE-Aussenfilter-BioMaster2-Thermo-850/788008/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://oase-livingwater.com/gb-en/products-a-z/family/product/p/94675-biomaster2-thermo-850-gb.html",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/oase-biomaster-thermo-850.webp?v=3d3d34cc0c",
+        "source": "oase-livingwater.com",
+        "license": "© OASE",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "The German retailer aquaristikshop.com's product page for the current-generation \"BioMaster² Thermo 850\" (OASE's own product-family page, cited as corroboration, confirms this is the model sold under the BioMaster Thermo 850 name in English markets) states verbatim: pump flow \"1500 l/h\" (≈400 US GPH, the rounder figure independently used by several English-language aquarium retailers, so 400 is used for flow_rate_gph), pump power consumption \"32 Watt\", a separate integrated \"400 W\" heater (not blended into the wattage field — see methodologyNotes), maximum tank size \"bis zu 850 Liter\" (≈225 US gal by strict conversion, but English-market retailers consistently market this exact model as \"up to 250 gallons (850L)\", the figure used here), dimensions \"240 x 240 x 535 mm\" (converted to 9.4 x 9.4 x 21.1 in), and \"filter volume: 8.0 liters\". The page describes four distinct filtration stages (mechanical, biological, optional chemical, and customizable media), used for media_stages=4. A separate OASE product description for the closely related BioMaster Thermo 600 states \"the self-priming function guarantees easy start-ups\" — the same pump/priming mechanism used across the whole BioMaster Thermo range — so self_priming is set true for the 850 as well. No US-dollar price could be sourced."
+    },
+    {
+      "slug": "seachem-tidal-110",
+      "name": "Seachem Tidal 110 Power Filter",
+      "brand": "Seachem",
+      "category": "aquarium-filters",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "No verbatim USD price could be sourced from a fetched page: Seachem's own product page does not list one, and every US retailer page checked (Chewy, Aquarium Co-Op, AquaCave) returned a 429 rate-limit or 404 when fetched.",
+      "specs": {
+        "type": "hang-on-back",
+        "flow_rate_gph": 450,
+        "tank_size_gal": 110,
+        "media_capacity_l": 3.2,
+        "media_stages": null,
+        "wattage": 12,
+        "self_priming": true,
+        "dimensions_in": "11.625 x 7.625 x 9.5"
+      },
+      "source": {
+        "url": "https://www.seachem.com/tidal-110.php",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/seachem-tidal-110.jpg?v=7ce3afe5cb",
+        "source": "seachem.com",
+        "license": "© Seachem",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Seachem's official Tidal 110 product page states verbatim: \"450 US GPH (2000 L/H)\" flow rate, \"Up to 110 US gallons (400 Liters)\" tank size, filter/media basket volume \"0.85 US gallons (3.2 Liters)\", power \"12W (120V-60Hz)\" / \"10W (230V-50Hz)\", dimensions \"11⅝in L x 7⅝in W x 9½in H\", and states directly: \"Self-priming pump means there is no need to fill the filter basket with water\" (self_priming=true). The page does not state a specific filtration-stage count anywhere, so media_stages is null rather than assumed from generic Tidal marketing. No USD price is available on the manufacturer page, and every retailer page attempted for this model failed to load."
+    },
+    {
+      "slug": "marineland-penguin-350",
+      "name": "Marineland Penguin 350 (BIO-Wheel) Power Filter",
+      "brand": "Marineland",
+      "category": "aquarium-filters",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "No verbatim USD price could be sourced from a fetched page: Marineland's own product page does not list one, and retailer search snippets (Amazon, Walmart, eBay) never surfaced an actual dollar figure in fetched content.",
+      "specs": {
+        "type": "hang-on-back",
+        "flow_rate_gph": 350,
+        "tank_size_gal": 75,
+        "media_capacity_l": null,
+        "media_stages": 3,
+        "wattage": null,
+        "self_priming": null,
+        "dimensions_in": null
+      },
+      "source": {
+        "url": "https://www.marineland.com/products/filtration-and-water-circulation/penguin-power-filters",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/marineland-penguin-350.png?v=43eb39e5dd",
+        "source": "marineland.com",
+        "license": "© Marineland",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Marineland's official Penguin Power Filters page identifies the \"PF0350B Marineland Penguin Power Filter 350 GPH\" (flow_rate_gph=350) and describes the whole Penguin BIO-Wheel line as \"three-stage mechanical, chemical and biological aquarium filtration\" (media_stages=3). The retail packaging (used as the image) prints \"BIO-WHEEL PENGUIN 350 POWER FILTER\", \"350 gallons per hour\", and \"75 gallon aquarium\" rated size, confirming tank_size_gal=75; this exact \"up to 75 gallon\" figure is also repeated consistently across independent third-party retail listings for the PF0350B. Marineland's own page does not state a wattage figure, media basket volume, or physical dimensions for this model, and no reliably-sourced third-party page supplied them either (one forum comment cited 14W, but a single unverified forum mention was not treated as sufficient sourcing), so those fields plus self_priming (never addressed on the fetched page) and priceUsd are left null."
+    }
+  ]
+}

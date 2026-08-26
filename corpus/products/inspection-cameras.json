@@ -1,0 +1,393 @@
+{
+  "category": "inspection-cameras",
+  "generatedAt": "2026-08-01",
+  "methodologyNotes": "Covers borescopes/inspection cameras (rigid or flexible probe cameras for seeing inside walls, pipes, engines, and machinery) that a US buyer cross-shops in 2026: budget-import handheld units (DEPSTECH, Teslong, Oiiwak, Vividia), tool-brand hybrids built for a jobsite (Klein Tools, General Tools, Milwaukee, RIDGID, Bosch Professional), and one professional/industrial videoscope (FLIR) anchoring the premium end. probe_diameter_mm is the camera head's own diameter as published (not the sheath/cable diameter, where the two differ). cable_length_ft is the manufacturer-stated probe/cable reach in feet; for Vividia's VA-400 - architecturally a short rigid articulating probe (16.5in / 0.42m) tethered to a PC/phone by a separate 200cm USB extension lead - only the insertable rigid-probe length is recorded (1.4ft), since folding the USB tether into the figure would misleadingly inflate it next to true snake-camera cable lengths; flagged in that product's provenance. resolution_px is the camera's headline still-photo capture resolution in WxH pixel format as published (not the screen's own, usually-lower display resolution). screen_size_in is a built-in display on the unit itself; recorded null (not a paired phone/PC's screen size) for the two products here with no built-in display - Klein's ET16 (streams over USB-C to a connected Android phone) and Vividia's VA-400 (USB-only, no display at all). waterproof_rating is the manufacturer's own free-text claim, since ingress-protection scope differs by product - several rate only the camera head/probe as waterproof, not the handheld display/console, and that distinction is kept inline wherever the source states it explicitly. led_lights is the manufacturer-published LED count; left null where marketing names adjustable brightness/lighting stages without ever stating a discrete count. articulating is true ONLY when the manufacturer documents a mechanically or motor-driven STEERABLE camera tip (e.g. a dial-controlled rotating head, or a locking bend-and-hold articulating joint) - a merely bendable/shapeable semi-rigid gooseneck cable, standard across nearly every product in this category regardless of price, does not by itself count, since treating plain flexibility as 'articulating' would make the field meaningless for comparison. wifi is true only for an onboard wireless transmitter to a phone/tablet app. Pricing/spec access was an unusually hard constraint in this category: depstech.com and oiiwak.com (the latter via an expired TLS certificate) were unreachable on every direct-fetch attempt across the entire research session; teslong.com succeeded twice before rate-limiting (HTTP 429) shut out every further attempt; amazon.com, walmart.com, and most eBay listings returned persistent 403/429/500/connection-reset failures throughout - a markedly worse blocking rate than other categories in this dataset. Where a manufacturer's own page could not be re-verified by direct fetch, the closest independently corroborated source (an authorized reseller, a hands-on review, or a distributor listing) was used instead, and any figure that could not be cleanly confirmed either way was left null rather than estimated. Seed corrections: Milwaukee's seeded 'M12 2317-21' (M-SPECTOR FLEX) is confirmed discontinued by milwaukeetool.com, which names its direct replacement as the 2323-21 (M-SPECTOR 360, 360-degree rotating head) - the current, in-catalog product is used here instead. FLIR was added at the professional/industrial end (not a seed) to give the set a true premium anchor; the obvious pick, FLIR's VS70, is also discontinued per flir.com, which names the VS80 as its replacement, so VS80 (specifically the base VS80-KIT-1 configuration - FLIR sells the same console across probe-diameter/length/resolution kit variants up to a 19mm IR-camera head and a 25m reel, noted in its provenance) is used instead. The seeded 'Oiiwak 4.3-inch', 'Teslong MS450' and 'DEPSTECH DS560' are generically-named product families sold across many near-identical SKUs differing mainly in cable length and probe diameter; the specific SKU used for each is named in its own provenance field. All sources accessed 2026-08-01.",
+  "specKeys": [
+    "probe_diameter_mm",
+    "cable_length_ft",
+    "resolution_px",
+    "screen_size_in",
+    "waterproof_rating",
+    "led_lights",
+    "articulating",
+    "wifi"
+  ],
+  "products": [
+    {
+      "slug": "depstech-ds560",
+      "name": "DEPSTECH DS560 Triple Lens Endoscope Camera",
+      "brand": "DEPSTECH",
+      "category": "inspection-cameras",
+      "releaseDate": null,
+      "priceUsd": 149.99,
+      "priceNote": "$149.99 is DEPSTECH's own listed regular price for the DS560TL-5M configuration; the same page shows a frequent sale price of $129.99 (13% off).",
+      "specs": {
+        "probe_diameter_mm": null,
+        "cable_length_ft": null,
+        "resolution_px": "1920x1080",
+        "screen_size_in": 5,
+        "waterproof_rating": null,
+        "led_lights": null,
+        "articulating": false,
+        "wifi": false
+      },
+      "source": {
+        "url": "https://depstech.com/products/ds560-triple-lens-endoscope-camera-with-audio-record",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "depstech.com's own DS560 page confirms: three interchangeable/toggleable camera views (straight, side, and a third angle) each a 2.0MP sensor outputting 1080p, a 5-inch IPS screen, 'Bluart 3.0' adjustable-brightness LED lighting around the lens, and audio recording capability - plus the $149.99/$129.99 pricing. Every direct WebFetch attempt at this exact URL in this research session returned either HTTP 429 (rate-limited) or 404, so the page's content here comes from a search-engine index of the live manufacturer page rather than a freshly re-fetched copy, and secondary numbers the summary didn't restate - probe diameter, cable/probe length, and any waterproof rating - could not be independently re-confirmed and are left null rather than inferred from sibling DEPSTECH models. No image could be sourced: depstech.com was unreachable on every attempt, and eBay/Amazon listings for this exact model returned connection resets, timeouts, or 500 errors rather than usable content."
+    },
+    {
+      "slug": "depstech-ds500",
+      "name": "DEPSTECH DS500 Dual Lens Inspection Camera",
+      "brand": "DEPSTECH",
+      "category": "inspection-cameras",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "No clean current US price could be confirmed: Digital Camera World's review explicitly notes no price is shown on either the product's Amazon or Best Buy listings, and depstech.com itself returned HTTP 429/404 on every direct-fetch attempt this session.",
+      "specs": {
+        "probe_diameter_mm": 7.9,
+        "cable_length_ft": 16.5,
+        "resolution_px": "1920x1088",
+        "screen_size_in": 5,
+        "waterproof_rating": "IP67 (camera head only)",
+        "led_lights": 7,
+        "articulating": false,
+        "wifi": false
+      },
+      "source": {
+        "url": "https://nerdtechy.com/depstech-ds500-review",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.digitalcameraworld.com/reviews/depstech-ds500-review",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/depstech-ds500.jpg?v=f23d40cabf",
+        "source": "nerdtechy.com",
+        "license": "© DEPSTECH",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Nerd Techy's hands-on review documents a 7.9mm/0.31in dual-lens probe (forward + 90-degree side view) on a 16.5ft/5m semi-rigid detachable cable, a 5-inch IPS screen, 2.0MP stills at 1080p, an IP67 rating explicitly scoped to the camera head only, seven total LEDs (six around the front lens, one on the side lens, three adjustable brightness settings), a 5000mAh battery rated for up to 7 hours, and a 32GB card/EVA case/hook/magnet kit. Digital Camera World's independent review corroborates the core figures and additionally states the still-image resolution precisely as 1920x1088px and confirms neither Amazon nor Best Buy displayed a price at the time of that review - matching this session's own experience of depstech.com being unreachable (429/404) on every attempt. Not articulating: the dual lenses are fixed-position (front-facing and 90-degree side-facing), not a steerable head. Image is Nerd Techy's own unboxing photograph, clearly showing the DEPSTECH-branded packaging and handheld unit; used editorially, credited to DEPSTECH as the depicted manufacturer/product."
+    },
+    {
+      "slug": "teslong-nts300",
+      "name": "Teslong NTS300 Triple-Lens Inspection Camera (5″ Screen)",
+      "brand": "Teslong",
+      "category": "inspection-cameras",
+      "releaseDate": null,
+      "priceUsd": 139.99,
+      "priceNote": "$139.99 is teslong.com's starting price for the shortest 3.2ft (1m) probe configuration; the 9.8ft (3m) and 16.4ft (5m) variants cost more, up to $169.99. B&H/authorized reseller trutechtools.com separately lists a 3ft/1m configuration at $159.99.",
+      "specs": {
+        "probe_diameter_mm": 7.9,
+        "cable_length_ft": 3.2,
+        "resolution_px": "1920x1080",
+        "screen_size_in": 5,
+        "waterproof_rating": "IP67 (1m depth, 30min max)",
+        "led_lights": 8,
+        "articulating": false,
+        "wifi": false
+      },
+      "source": {
+        "url": "https://teslong.com/products/nts300-triple-lens-endoscope-with-5-inch-hd-screen",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.bhphotovideo.com/c/product/1727980-REG/teslong_tsnts300d79tl5_nts300_triple_lens_inspection_camera.html/specs",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/teslong-nts300.jpg?v=911a58575e",
+        "source": "trutechtools.com",
+        "license": "© Teslong",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "teslong.com's own NTS300 (triple-lens) page states a 0.31in/7.9mm probe available in 1m/3m/5m lengths, a 5-inch 854x480 screen, 1920x1080 photo capture / 1280x720 video, a 78-degree field of view, 8 adjustable LEDs on the straight-viewing lens (1 each on the two side/short-focus lenses), IP67 to 1m for 30 minutes, a 5000mAh battery (4-5hr runtime), a 32GB card, no WiFi, and no articulating head - it is a fixed triple-lens design (straight + side + short-focus), distinct from Teslong's separate NTS300 dual-lens SKU, which does add a motorized 360-degree rotating probe. Authorized reseller trutechtools.com (BigCommerce storefront) corroborates the 7.9mm/3ft-probe configuration and lists it at $159.99, and B&H Photo carries the same line under this model number. Image is trutechtools.com's own studio product photo, clearly Teslong-branded on the handle and matching the triple-lens front-view probe described above."
+    },
+    {
+      "slug": "teslong-ms450",
+      "name": "Teslong MS450 Household Inspection Camera (4.5″ Screen)",
+      "brand": "Teslong",
+      "category": "inspection-cameras",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "No current US price could be confirmed - teslong.com returned HTTP 429 on every direct-fetch attempt in this session after an initial successful search-index read of the page.",
+      "specs": {
+        "probe_diameter_mm": 5.5,
+        "cable_length_ft": null,
+        "resolution_px": "1920x1080",
+        "screen_size_in": 4.5,
+        "waterproof_rating": "IP67",
+        "led_lights": 6,
+        "articulating": false,
+        "wifi": false
+      },
+      "source": {
+        "url": "https://teslong.com/products/ms450-dual-lens-household-inspection-camera-with-4-5-inch-screen",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "The MS450 line is Teslong's modular 'household' inspection camera: a 4.5-inch 854x480 HD display paired with an interchangeable 1.0MP probe (base 5.5mm diameter option) capturing 1920x1080 stills / 1280x720 video, a 70-degree field of view with a 30-100mm depth of field, 6 adjustable high-intensity LEDs, a 2500mAh battery (3-4hr runtime/charge), Type-C charging, a microSD slot, IP67 waterproofing, and an operating range of 0-45°C. Every direct WebFetch attempt at teslong.com in this session after the first successful read returned HTTP 429, so cable/probe length for the specific base SKU and current US pricing could not be independently re-confirmed and are left null; the MS450 family is sold across several interchangeable-probe kits (dual-lens, triple-lens, telescopic) whose lengths differ by configuration. No image could be sourced: teslong.com was blocked on every subsequent attempt, and no authorized reseller or review site carrying this exact model could be located and successfully fetched.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/teslong-ms450.jpg?v=8c67ef04e8",
+        "source": "teslong.com",
+        "license": "© Teslong",
+        "accessedAt": "2026-08-12"
+      }
+    },
+    {
+      "slug": "ridgid-micro-ca-350",
+      "name": "RIDGID micro CA-350 Inspection Camera (55898)",
+      "brand": "RIDGID",
+      "category": "inspection-cameras",
+      "releaseDate": null,
+      "priceUsd": 866,
+      "priceNote": "$866.00 per distributor amazingmachinery.com. US pricing varies noticeably by reseller - Test Equipment Depot separately lists $841.60 and another retailer $736.58 - and RIDGID does not publish a direct-to-consumer price on ridgid.com, whose product page returned HTTP 403 on every direct-fetch attempt this session.",
+      "specs": {
+        "probe_diameter_mm": 17,
+        "cable_length_ft": 3,
+        "resolution_px": "640x480",
+        "screen_size_in": 3.5,
+        "waterproof_rating": "Camera head & cable waterproof to 10ft/3m; handheld display unit itself is not waterproof",
+        "led_lights": 4,
+        "articulating": false,
+        "wifi": false
+      },
+      "source": {
+        "url": "https://www.amazingmachinery.com/RIDGID-55898.html",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.testequipmentdepot.com/ridgid-micro-ca-350-55898-handheld-inspection-camera-with-17mm-imager-3-12-in-color-display-rechargeable-12v-battery.html",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/ridgid-micro-ca-350.png?v=9f3d69e63f",
+        "source": "amazingmachinery.com",
+        "license": "© RIDGID",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "The micro CA-350 (part 55898) is RIDGID's standalone handheld inspection-camera console: a 17mm imager head on a 3ft cable (extendable to 30ft total reach using RIDGID's small-diameter SeeSnake reels), a 3.5-inch color TFT display at 640x480, four bright LEDs on the waterproof aluminum camera head, a 12V rechargeable Li-ion battery, digital zoom/image rotation, up to 32GB of photo/video storage, and RCA TV-out. RIDGID's own site states the imager head and cable are waterproof to 10ft/3m while the handheld display unit is not. ridgid.com returned HTTP 403 on every direct-fetch attempt this session, so pricing and final confirmation were drawn from distributor amazingmachinery.com ($866.00, with a matching product photo) and corroborated by Test Equipment Depot's listing (specs match; price $841.60, illustrating typical reseller-to-reseller price spread for this professional plumbing tool). Not articulating: the imager head is fixed, aimed only by physically bending/rotating the cable/reel, not by an onboard steering mechanism. Image is amazingmachinery's product photo showing the complete RIDGID-branded kit (handheld unit, case, charger, cable, and accessories)."
+    },
+    {
+      "slug": "milwaukee-m12-m-spector-360-2323-21",
+      "name": "Milwaukee M12 M-SPECTOR 360 4' Inspection Camera Kit (2323-21)",
+      "brand": "Milwaukee Tool",
+      "category": "inspection-cameras",
+      "releaseDate": null,
+      "priceUsd": 274,
+      "priceNote": "$274 is Home Depot's price 'after $25 off with the Home Depot Consumer Card,' which implies a $299 base/list price that could not be independently confirmed elsewhere - milwaukeetool.com does not publish consumer pricing directly, so the concretely-observed $274 figure is used rather than the implied $299.",
+      "specs": {
+        "probe_diameter_mm": 10,
+        "cable_length_ft": 4,
+        "resolution_px": "1280x720",
+        "screen_size_in": 4.3,
+        "waterproof_rating": null,
+        "led_lights": null,
+        "articulating": true,
+        "wifi": false
+      },
+      "source": {
+        "url": "https://www.milwaukeetool.com/products/details/m12-m-spector-360-4-inspection-camera/2323-21",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.homedepot.com/p/Milwaukee-M12-12V-Lithium-Ion-Cordless-M-SPECTOR-360-Degree-4-ft-Inspection-Camera-Kit-2323-21/324325310",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/milwaukee-m12-m-spector-360-2323-21.webp?v=c95701dec8",
+        "source": "milwaukeetool.com",
+        "license": "© Milwaukee Tool",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "This dataset's seed, the Milwaukee M12 2317-21 (M-SPECTOR FLEX, 3ft cable, 12.5mm/270-degree-rotation head, 3.5in wireless LCD console), is confirmed DISCONTINUED by milwaukeetool.com's own product page, which explicitly names its replacement as the 2323-21 (M-SPECTOR 360) - so the current, purchasable product is used here instead. The 2323-21 pairs a 10mm camera head with 3-level zoom and '360-degree image rotation' (both physical and digital adjustment) on a 4ft cable, a 4.3-inch 720p LCD, 5-mode LED brightness (LED count itself unstated), and ships with a hook/mirror/magnet/plumbing-ball accessory kit plus a 32GB card; waterproof rating is not stated on milwaukeetool.com. Home Depot's listing corroborates the model and price point. Articulating is recorded true because the 360-degree head rotation is an explicit, mechanically-adjustable steering feature (not merely a bendable cable). Image is Milwaukee's own official kit photo (webp format), confirmed by direct inspection to show the correct M12 M-SPECTOR console, case, charger, and battery."
+    },
+    {
+      "slug": "vividia-ablescope-va-400",
+      "name": "Vividia Ablescope VA-400 v5 USB Rigid Articulating Borescope",
+      "brand": "Vividia",
+      "category": "inspection-cameras",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "No clean current US price could be independently confirmed: vividia-tech.com's own product page does not list one, and both Amazon and authorized reseller Oasis Scientific either blocked the fetch (Amazon: price not present in the retrieved content) or returned HTTP 429/500 on every attempt in this session.",
+      "specs": {
+        "probe_diameter_mm": 8.5,
+        "cable_length_ft": 1.4,
+        "resolution_px": "1280x720",
+        "screen_size_in": null,
+        "waterproof_rating": "IP67",
+        "led_lights": 6,
+        "articulating": true,
+        "wifi": false
+      },
+      "source": {
+        "url": "https://www.vividia-tech.com/va-400-version-5.html",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.amazon.com/Vividia-Ablescope-VA-400-Borescope-Articulating/dp/B00GY7C9ZW",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/vividia-ablescope-va-400.jpg?v=d0985cc4a8",
+        "source": "vividia-tech.com",
+        "license": "© Vividia Technologies",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "The VA-400 v5 is a USB-only rigid borescope (no built-in screen; requires a PC, tablet, or compatible phone) with an 8.5mm-diameter, 42cm/16.5in rigid probe that continuously articulates 0-180 degrees with a locking mechanism, 6 built-in white LEDs, a 120-degree lens field of view, a 5mm-to-infinity focus range, and a 30mm bend radius, connected via a separate 200cm USB 2.0 cable. Per this dataset's cable_length_ft convention, only the insertable rigid-probe length (42cm = 1.4ft) is recorded, since the 200cm figure is a non-insertable USB tether rather than comparable probe reach - a distinction worth flagging given how differently 'cable length' is used elsewhere in this category. Resolution is 1280x720 (1MP) per vividia-tech.com; an Amazon listing for this same model independently confirms an IP67 rating (stated in the product title) via a direct, successful fetch. No built-in WiFi; an optional VA-B2/W03B WiFi AirBox add-on is sold separately as a bundle. Image is vividia-tech.com's own product photograph - a close-up of the articulating probe's locking grip/tip assembly rather than a full-unit shot, which is the most relevant framing this source offered but is noted here for transparency."
+    },
+    {
+      "slug": "oiiwak-5-5mm-4-3-endoscope",
+      "name": "Oiiwak Industrial Endoscope 5.5mm 4.3″ IPS (11.5ft)",
+      "brand": "Oiiwak",
+      "category": "inspection-cameras",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "A Newegg (TA Factory) listing for this model was found priced at $177.98 via a search index, but the page itself returned HTTP 404 on direct re-fetch and so could not be independently confirmed; oiiwak.com's own storefront returned an expired-TLS-certificate error on every attempt in this session, so no price is recorded as confirmed.",
+      "specs": {
+        "probe_diameter_mm": 5.5,
+        "cable_length_ft": 11.5,
+        "resolution_px": "1920x1080",
+        "screen_size_in": 4.3,
+        "waterproof_rating": "IP67",
+        "led_lights": 6,
+        "articulating": false,
+        "wifi": false
+      },
+      "source": {
+        "url": "https://jasminesmarthomes.com/product/CD2302",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/oiiwak-5-5mm-4-3-endoscope.jpg?v=e6d9a20075",
+        "source": "jasminesmarthomes.com",
+        "license": "© Oiiwak",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "'Oiiwak 4.3-inch' names a large family of near-identical Oiiwak endoscopes differing mainly by cable length (5ft/11.5ft/33ft/50ft) and probe diameter (3.9mm/5.5mm); the 5.5mm-probe, 11.5ft/3.5m-cable, 2800mAh-battery configuration (the brand's most-reviewed 4.3-inch model across Amazon/Newegg/eBay listings) is used here as the representative SKU. Reseller jasminesmarthomes.com's listing confirms a 5.5mm probe, 3.5m/11.5ft semi-rigid cable, 1080P HD output, a 4.3-inch IPS screen, IP67 waterproofing, 6 LED lights, no articulating head, and no WiFi. oiiwak.com's own site was unreachable (expired TLS certificate) on every attempt, and Amazon/eBay/Walmart fetches for this model were all blocked (500/ECONNRESET/robot-check pages), so pricing could not be independently confirmed beyond the single unverified Newegg search result noted above. Image is jasminesmarthomes.com's product photo, clearly showing 'Oiiwak' branding on the handheld console and matching the described 5.5mm probe/blue cable."
+    },
+    {
+      "slug": "klein-tools-et16",
+      "name": "Klein Tools ET16 Borescope for Android Devices",
+      "brand": "Klein Tools",
+      "category": "inspection-cameras",
+      "releaseDate": null,
+      "priceUsd": 45.94,
+      "priceNote": "$45.94 per authorized distributor DigiKey; kleintools.com does not publish consumer pricing directly.",
+      "specs": {
+        "probe_diameter_mm": 8.9,
+        "cable_length_ft": 10,
+        "resolution_px": "640x480",
+        "screen_size_in": null,
+        "waterproof_rating": "IP67 (camera only)",
+        "led_lights": 6,
+        "articulating": false,
+        "wifi": false
+      },
+      "source": {
+        "url": "https://www.kleintools.com/catalog/borescopes/borescope-android-devices",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.digikey.com/en/products/detail/klein-tools-inc/ET16/13170612",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/klein-tools-et16.jpg?v=ee398a7619",
+        "source": "kleintools.com",
+        "license": "© Klein Tools",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "kleintools.com's own ET16 page states a 0.35in/8.9mm camera on a 10ft (3m) armored gooseneck cable, IP67 waterproofing scoped to the camera only, six white LEDs with adjustable brightness, and a maximum 640x480 image/screen resolution. There is no built-in display: the ET16 connects directly via USB Type-C (a micro-USB adapter is included) to an OTG-4.0-or-higher Android device, which serves as the viewfinder - so screen_size_in is recorded null rather than a phone's own screen size, and wifi is false since the connection is explicitly a direct wired one, not wireless. Not articulating: the gooseneck is passively bendable/shape-holding (no dial or motor steers it), consistent with this dataset's articulating convention. DigiKey's distributor listing corroborates the product and gives the $45.94 price. Image is Klein Tools' own official product photo, directly confirmed by visual inspection to show the correct orange ET16 console, USB-C connector, and armored gooseneck cable."
+    },
+    {
+      "slug": "bosch-gic-120-c",
+      "name": "Bosch Professional GIC 120 C Inspection Camera",
+      "brand": "Bosch",
+      "category": "inspection-cameras",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "Bosch Professional's GIC 120 (the AA-battery-only base variant sharing this camera/cable platform) lists at £144.06 inc. VAT on the official UK bosch-professional.com store. The cordless 'C' variant specifically (dual 10.8V/12V Li-ion + AA power, a larger 3.5in screen per a US Amazon listing) has no clean confirmed price in this session: its own bosch-professional.com product page returned HTTP 404, and UK resellers Kelvin Power Tools and Toolnation returned HTTP 503 / an unhelpful redirect. Bosch Professional (the blue-tool line) is primarily sold in the EU/UK/international markets without a standard US MSRP; US buyers reach the GIC 120 C mainly via Amazon marketplace imports, which is consistent with no clean US-native price existing to confirm.",
+      "specs": {
+        "probe_diameter_mm": 8.5,
+        "cable_length_ft": 3.9,
+        "resolution_px": null,
+        "screen_size_in": 3.5,
+        "waterproof_rating": null,
+        "led_lights": null,
+        "articulating": false,
+        "wifi": false
+      },
+      "source": {
+        "url": "https://www.bosch-professional.com/gb/en/products/gic-120-0601241100920",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.amazon.com/Bosch-Professional-Industrial-Inspection-Camera/dp/B00XX0L69S",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/bosch-gic-120-c.webp?v=0e953ff699",
+        "source": "bosch-professional.com",
+        "license": "© Bosch",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "bosch-professional.com's official UK page for the base GIC 120 (AA-battery-only) confirms an 8.5mm probe on a 120cm (3.9ft) cable with a bright LED light at 3 brightness stages, Quick Connector cable-swap technology, a 'Compass View' auto-orientation display, and a 2.7-inch screen, at £144.06. The seeded GIC 120 C is the same camera/cable platform's cordless-capable sibling: per Amazon's US product listing it instead carries a larger 3.5-inch screen and adds a rechargeable 10.8V/12V Bosch Li-ion battery option alongside the base model's 4xAA power, per a separate distributor description (kaisertech.co.uk/beyondtools.com) noting dual power-source capability, digital zoom, and MicroSD/microUSB media transfer. Neither resolution nor an explicit IP rating is stated on any Bosch-published page reachable this session, so both are left null rather than assumed from sibling products. Not articulating and not WiFi per every source describing this platform. Image is Bosch's own official product photo (small 166x164px asset from Bosch's media CDN) depicting the shared GIC 120 camera/console design; visually confirmed to show the correct Bosch-blue inspection-camera unit, though it is not confirmed to be the exact 'C' cordless variant's photo specifically (Bosch's media library uses one shared image across this sub-family)."
+    },
+    {
+      "slug": "flir-vs80",
+      "name": "FLIR VS80 Videoscope (VS80-KIT-1)",
+      "brand": "FLIR (Teledyne FLIR)",
+      "category": "inspection-cameras",
+      "releaseDate": null,
+      "priceUsd": 3008,
+      "priceNote": "$3,008.00 list / $2,649.00 sale price per flir.com for the base VS80-KIT-1 configuration; other kit variants (different probe diameter/length/resolution, see provenance) are priced separately and not covered by this figure.",
+      "specs": {
+        "probe_diameter_mm": 5.5,
+        "cable_length_ft": 3.3,
+        "resolution_px": "640x480",
+        "screen_size_in": 7,
+        "waterproof_rating": "IP67 (camera tip)",
+        "led_lights": null,
+        "articulating": false,
+        "wifi": true
+      },
+      "source": {
+        "url": "https://www.flir.com/products/vs80/",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "This category's premium/industrial entry was not one of the seeds; FLIR's VS70 was investigated first as the obvious professional pick but flir.com confirms it is DISCONTINUED, explicitly naming the VS80 as its replacement - so VS80 is used instead. flir.com sells VS80 across many kit variants sharing one 7-inch, 1024x600 touchscreen console: probe diameters from 3.9mm up to a 19mm IR-camera head (VS80-IR21, 160x120 IR resolution), cable/reel lengths from 1m up to a 25m reel (KIT-5), and probe resolutions from a base 640x480 up to 1280x720 HD on several kits (KIT-3/6/7/8); this dataset records the base VS80-KIT-1 (5.5mm probe, 1m cable, 640x480) as the representative entry-level configuration and its $3,008/$2,649 price, both stated directly on flir.com. All camera tips across the line are rated IP67. Articulating is recorded FALSE: the base VS80-KIT-1's 5.5mm probe is a standard rigid (non-steerable) probe per flir.com - FLIR does offer separate 2-way and 4-way mechanically-steerable articulating-probe kits, but those are distinct SKUs, so to stay consistent with every other spec here being anchored to the KIT-1 configuration, articulating reflects the KIT-1 probe specifically. WiFi is via FLIR's Meterlink mobile app. LED illumination is not itemized by count anywhere on the page. No image could be sourced: FLIR's product-page image assets are served through an authenticated netx.net CDN (401 Unauthorized on direct fetch) with no public direct-file URL, and the only alternative image found on flir.com's own site (a Meterlink phone-app screenshot) does not depict the VS80 device itself, so the image key is omitted rather than used to show an unrelated photo."
+    },
+    {
+      "slug": "general-tools-toolsmart-ts03",
+      "name": "General Tools ToolSmart Wifi Connected Video Inspection Camera (TS03)",
+      "brand": "General Tools",
+      "category": "inspection-cameras",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "Not listed on generaltools.com, which links out to Amazon for purchase; Amazon fetches were blocked (HTTP 500) on every attempt in this session, so no price could be independently confirmed.",
+      "specs": {
+        "probe_diameter_mm": 8,
+        "cable_length_ft": 3.3,
+        "resolution_px": "640x480",
+        "screen_size_in": 2.7,
+        "waterproof_rating": "IP67 (probe)",
+        "led_lights": 4,
+        "articulating": false,
+        "wifi": true
+      },
+      "source": {
+        "url": "https://generaltools.com/toolsmart-wifi-connected-video-inspection-camera",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/general-tools-toolsmart-ts03.jpg?v=a0d0a2175d",
+        "source": "generaltools.com",
+        "license": "© General Tools",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "generaltools.com's own TS03 page states an 8mm/0.31in probe on a 3.3ft (1m) cable, a 2.7-inch color TFT screen at 960x240 (with the phone app usable as 'a second borescope screen'), a 640x480 VGA camera with a 54-degree field of view and a 1.2in-to-10ft depth of field, an IP67-rated probe, four adjustable-brightness white LEDs, WiFi enabled via a local (no-internet) hotspot with up to 60ft unobstructed range to a phone/tablet, three interchangeable tip accessories (mirror, hook, magnetic pickup), and 4xAA battery power. The page describes the probe itself as 'flexible-obedient' rather than steerable/articulating, consistent with a false articulating value here. No price is published on generaltools.com itself (it links out to Amazon), and Amazon could not be fetched in this session, so priceUsd is left null. Image is General Tools' own official product photo, confirmed by direct visual inspection to show the correct black/yellow 'ToolSmart' branded console with its WiFi/photo/video/power button row and attached gooseneck probe."
+    }
+  ]
+}

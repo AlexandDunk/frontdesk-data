@@ -1,0 +1,429 @@
+{
+  "category": "robot-window-cleaners",
+  "generatedAt": "2026-08-01",
+  "methodologyNotes": "Dataset covers 13 robot window cleaners spanning current flagship (Ecovacs WINBOT W3 Omni, W2S Omni), mainstream corded (HOBOT 2S/388/R3, Mamibot, Cop Rose, HUTT) and budget/niche (Alfawise, Gladwell, Sichler) tiers. Seed list corrections: 'Ecovacs Winbot X' (2018) is no longer listed on ecovacs.com/us/shop and has been dropped as discontinued; 'Ecovacs Winbot W2 Omni' is confirmed real but shows 'Sold out' on the current ecovacs.com US shop page, so it was replaced with its in-market successors, the WINBOT W3 Omni (CES 2026 flagship) and WINBOT W2S Omni (current mid-tier Omni model); Mamibot W120-T is a legacy (~2018) SKU no longer on mamibot.com's current lineup (which now leads with the W300/W120-DP/W120-P/W200 SkyBot) but is kept because it is still actively sold via Amazon/eBay and was an explicit seed — Mamibot W120-DP (2024, 3200Pa, 'thinnest robot window cleaner' per manufacturer) was added as the current-generation Mamibot expansion. Sichler PR-041 is a German/Austrian (PEARL/Sichler Haushaltsgeräte) private-label rebrand of HOBOT hardware (PR-041 V3 ≈ HOBOT-268 generation; the current-gen successor REF-60579 is explicitly a rebadged HOBOT-298) sold only in the DACH region — no US listing exists, so priceUsd is null by design, not by omission. suction_power_pa is left null for every HOBOT-family unit and for Mamibot W120-T, Gladwell Gecko and Cop Rose X6 where the manufacturer publishes suction only as kgf force or does not publish a figure at all (HOBOT rates 'ascending power' in kg, e.g. HOBOT-2S ≈ 6.0–7.0 kgf depending on region, HOBOT-R3 ≈ 5 kgf) — converting kgf to Pa would require assumptions about contact-cup area that were not published, so null was used rather than an estimate. battery_backup_min is the full untethered battery runtime for the dual-power Ecovacs Omni models (they can run entirely on battery) and the UPS/backup-only duration (keeps the unit clamped to the glass during a power or Wi-Fi/cable failure — NOT a cordless-use runtime) for every corded model (all HOBOT, Mamibot, Cop Rose, Alfawise, Sichler and HUTT units). Several small retailer/manufacturer storefronts (hobot.us, acevacuums.com, shop.prosperahealth.com, gladwellclean.com, robowindow.com — all Shopify-hosted) returned HTTP 429 bot-protection responses on every direct fetch attempt during verification, and Amazon.com product pages could not be rendered at all (consistent 500 errors); where this blocked confirmation of a live US price, priceUsd was left null with the conflicting/partial figures actually found (search-engine cache snippets of the real page, other regions, or older press coverage) documented in priceNote/provenance rather than guessed. Every image was independently fetched and visually confirmed to show the correct product (read back as a decoded image) before inclusion, except where noted 'omitted' in provenance because no verifiable direct image file could be found. accessedAt 2026-08-01 for all sources, corroborations and images unless individually noted.",
+  "specKeys": [
+    "suction_power_pa",
+    "cleaning_speed_mode",
+    "battery_backup_min",
+    "spray_system",
+    "path_planning",
+    "noise_level_db",
+    "safety_tether",
+    "edge_detection",
+    "weight_lb"
+  ],
+  "products": [
+    {
+      "slug": "ecovacs-winbot-w3-omni",
+      "name": "Ecovacs WINBOT W3 Omni",
+      "brand": "Ecovacs",
+      "category": "robot-window-cleaners",
+      "releaseDate": "2026-01",
+      "priceUsd": 699.99,
+      "priceNote": "MSRP per ecovacs.com US shop page; unveiled at CES 2026 (Jan 6-9); frequently bundled/discounted to ~$594-654",
+      "specs": {
+        "suction_power_pa": 10000,
+        "cleaning_speed_mode": "8 modes (Fast/Deep/Thorough/Edge/Spot/Zone/Heavy-duty/Remote); 16 cm/s top speed, ~1m35s per 1x1m panel in Fast mode",
+        "battery_backup_min": 130,
+        "spray_system": "3-nozzle wide-angle spray, 80ml tank, >=70% spray coverage; Vortex Wash station auto-washes pads with 16 jets (~1 min cycle)",
+        "path_planning": "WIN-SLAM 5.0 with 1mm dynamic obstacle avoidance",
+        "noise_level_db": 71.5,
+        "safety_tether": "3-layer composite power/safety cable rated to 100kg, plus 1m backup rope",
+        "edge_detection": "Optocoupler edge sensor, 0.02s response; TruEdge retracting scrubber cleans to ~1.1cm of the frame",
+        "weight_lb": 4.9
+      },
+      "source": {
+        "url": "https://www.ecovacs.com/us/shop/winbot-window-cleaning-robot/winbot-w3-omni",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://gizmodo.com/ecovacs-winbot-w3-omni-review-window-cleaning-robots-have-a-long-way-to-go-2000735555",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/ecovacs-winbot-w3-omni.png?v=dfa3954ee9",
+        "source": "ecovacs.com",
+        "license": "© Ecovacs",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Fetched live from ecovacs.com/us: $699.99 price, 10,000Pa headline suction (page separately lists a 3300±100Pa figure for the robot while moving — both are genuine manufacturer figures, headline used here), 80ml/3-nozzle spray, WIN-SLAM 5.0, 100kg-rated composite tether, 0.02s optocoupler edge sensor, 130-minute dual-power battery mode. Robot-only weight (4.9 lb) and 71.5dB noise level are not on the manufacturer page (which only gives packaged 12.22kg and station 10kg) and were corroborated via search-engine aggregation of retailer listings and a Galaxus.at measured review. Gizmodo's hands-on review (fetched live) independently confirms the $700 price and 130-minute runtime. Release: CES 2026 debut per ECOVACS PR Newswire coverage. Image is Ecovacs' own official product photo, fetched and visually confirmed to show the WINBOT W3 Omni robot with its Vortex Wash station."
+    },
+    {
+      "slug": "ecovacs-winbot-w2s-omni",
+      "name": "Ecovacs WINBOT W2S Omni",
+      "brand": "Ecovacs",
+      "category": "robot-window-cleaners",
+      "releaseDate": null,
+      "priceUsd": 599.99,
+      "priceNote": "Price per ecovacs.com US shop page (current-generation mid-tier Omni model, sits below the W3 Omni)",
+      "specs": {
+        "suction_power_pa": 8000,
+        "cleaning_speed_mode": "7 modes (Fast/Deep/Thorough/Edge/Spot/Zone/Heavy-Duty)",
+        "battery_backup_min": 110,
+        "spray_system": "3-nozzle wide-angle spray (100% increased water pressure vs prior gen), 80±5ml tank, ~50±5 sq m per fill in Fast mode",
+        "path_planning": "WIN-SLAM 4.0 with frame detection and breakpoint continuation",
+        "noise_level_db": 68,
+        "safety_tether": "Compound power/safety cable plus 1m backup rope",
+        "edge_detection": "Quad-Edge Cleaning Mode, frame detection to 2mm, cleans to within ~1.1cm (0.04in) of the edge",
+        "weight_lb": 4.3
+      },
+      "source": {
+        "url": "https://www.ecovacs.com/us/winbot-window-cleaning-robot/winbot-w2s-omni",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/ecovacs-winbot-w2s-omni.jpg?v=298a6a2d21",
+        "source": "ecovacs.com",
+        "license": "© Ecovacs",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "All spec figures (3000±100Pa operating / 8000Pa max suction, 80±5ml tank, 110±10% min battery, 68dB, 1.95kg / 270x270x76mm robot, 5.2kg station, $599.99 price) fetched live and verbatim from the official ecovacs.com US product page. suction_power_pa recorded as the 8000Pa maximum headline figure (operating figure while moving is lower at ~3000Pa, noted here for transparency). No independent second source was successfully fetched (Amazon/Best Buy listings for this SKU returned server errors during verification), so no corroboration entry is included — single manufacturer-page sourcing only. Exact release month not stated on the page; positioned in the lineup between the older W2 Pro Omni and the 2026 W3 Omni, so likely 2025 (not confirmed, left null). Image is Ecovacs' own official product photo (filename explicitly 'winbot-w2s-omni')."
+    },
+    {
+      "slug": "ecovacs-winbot-w1-pro",
+      "name": "Ecovacs WINBOT W1 Pro",
+      "brand": "Ecovacs",
+      "category": "robot-window-cleaners",
+      "releaseDate": "2023",
+      "priceUsd": 399,
+      "priceNote": "Commonly-cited US MSRP (~$399-400) per multiple independent deal-alert outlets (9to5toys, KnowTechie, eDealinfo); ecovacs.com's product page does not display a fixed price (cart/bundle pricing only); street price frequently discounted to $199-300",
+      "specs": {
+        "suction_power_pa": 2800,
+        "cleaning_speed_mode": "3 modes (Fast Clean, Deep Clean, Spot Clean)",
+        "battery_backup_min": 60,
+        "spray_system": "Dual-direction cross auto-spray, 60ml reservoir",
+        "path_planning": "WIN-SLAM 3.0 intelligent route planning",
+        "noise_level_db": 72,
+        "safety_tether": "1.5m elastic rubber safety rope",
+        "edge_detection": "Optocoupler sensor, 0.02s response; works on frameless glass",
+        "weight_lb": 3.37
+      },
+      "source": {
+        "url": "https://www.ecovacs.com/us/shop/winbot-window-cleaning-robot/winbot-w1-pro",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/ecovacs-winbot-w1-pro.png?v=dc6d71a2e0",
+        "source": "ecovacs.com",
+        "license": "© Ecovacs",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "2,800Pa suction, 60±10 min battery, 60ml dual-cross spray, WIN-SLAM 3.0, 72±2dBA noise, 1.5m elastic safety rope, 0.02s edge sensor, 1.53kg (270x270x77.5mm) weight all fetched live and verbatim from the official ecovacs.com product page. Price is NOT shown on that page (add-to-cart pricing); used the figure repeatedly cited across independent deal-tracking sites ('Reg. $400') as the best-available MSRP proxy rather than the single outlier '$799' figure that appeared in one low-confidence search summary (rejected as almost certainly an extraction error, since it would price the W1 Pro above the current flagship W3 Omni). No corroboration source independently re-fetched; treated as manufacturer-page-only for the spec figures. Image is Ecovacs' own official product photo."
+    },
+    {
+      "slug": "hobot-2s",
+      "name": "HOBOT-2S",
+      "brand": "HOBOT",
+      "category": "robot-window-cleaners",
+      "releaseDate": "2021",
+      "priceUsd": 299,
+      "priceNote": "Sale price on hobot.us (regular list $349); figure obtained via search-engine cache of the live hobot.us page — the site's own Shopify bot-protection returned HTTP 429 on every direct re-fetch attempt during verification",
+      "specs": {
+        "suction_power_pa": null,
+        "cleaning_speed_mode": "~2.4 min/m^2, 12 cm/s movement speed",
+        "battery_backup_min": 20,
+        "spray_system": "Dual patented ultrasonic nozzles, 108kHz, 15um mist; 2x26ml replaceable water tanks",
+        "path_planning": "AI smart route planning (zigzag: horizontal pass then vertical)",
+        "noise_level_db": 64,
+        "safety_tether": "4.5m rope rated to 200kg (per hobot.com.tw); some third-party specs list 150kgf",
+        "edge_detection": "Edge-leakage sensors + auto edge detection",
+        "weight_lb": 2.87
+      },
+      "source": {
+        "url": "https://www.hobot.com.tw/hobot-2s/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://therobotshq.com/products/hobot-2s/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/hobot-2s.png?v=3acf4d0e3b",
+        "source": "hobot.com.tw",
+        "license": "© HOBOT Technology",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Fetched live from HOBOT's Taiwan manufacturer site: 20-minute UPS backup, 4.5m/200kg safety rope, dual ultrasonic nozzles (15um mist), 12cm/s speed, ~2.4min/m^2 coverage, AI zigzag routing. TheRobotsHQ (fetched live) independently corroborates weight 1.3kg, dimensions 240x240x86mm, 62-64dB noise, 2x26ml tanks, 6.0kg suction force (note: HOBOT publishes suction as kgf 'ascending power', not Pa — recorded as null rather than converting/guessing a Pa figure; the TW site itself states 7kg for the same spec, a plausible region/rounding difference). Price ($299 sale / $349 regular) is from hobot.us — every direct WebFetch attempt at hobot.us (product page, collection page) returned HTTP 429 (Shopify bot protection); price is per the search engine's live crawl of that exact page. Image is HOBOT's own official hero photo, fetched and visually confirmed."
+    },
+    {
+      "slug": "hobot-388",
+      "name": "HOBOT-388",
+      "brand": "HOBOT",
+      "category": "robot-window-cleaners",
+      "releaseDate": "2020",
+      "priceUsd": null,
+      "priceNote": "No verifiable current US price could be confirmed: hobot.us lists the 388 for sale but its price/product pages returned HTTP 429 (bot protection) on every direct fetch attempt, and third-party US retailers (Ace Vacuums, BuySmartBots, RestechToday) all blocked automated fetch (403/429) during verification",
+      "specs": {
+        "suction_power_pa": null,
+        "cleaning_speed_mode": "~4 min/m^2; up to 70rpm hand-gesture-style wiping wheel rotation; 3 automatic operation modes",
+        "battery_backup_min": 20,
+        "spray_system": "Single ultrasonic spray nozzle, 15um mist, detachable water tank",
+        "path_planning": "AI path calculation with auto window-edge detection",
+        "noise_level_db": null,
+        "safety_tether": "4.5m rope rated to 200kg",
+        "edge_detection": "AI auto-detects window edges and adjusts route",
+        "weight_lb": 2.02
+      },
+      "source": {
+        "url": "https://www.hobot.com.tw/hobot-388/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/hobot-388.png?v=b06ca55ec1",
+        "source": "hobot.com.tw",
+        "license": "© HOBOT Technology",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Fetched live from HOBOT's Taiwan site: embedded UPS holds position 20 minutes on power loss, 4.5m/200kg safety rope, ~4min/m^2 cleaning speed, ultrasonic spray, AI auto edge-detect, 4m power cord, 3 auto modes. Suction figure and noise (dB) are not stated in the extractable text of that page (shown only as an image graphic) and were left null rather than reusing a different HOBOT model's number. Weight (915g/32.27oz) and dimensions (295x148x95mm / 11.6x5.8x3.7in) are from a manufacturer-authored blog post on hobot.us (via search-engine cache; direct hobot.us fetch blocked, HTTP 429) and a 2020 Gadgetgram launch article (fetch blocked, HTTP 403), both consistent with each other. Release year 2020 per that Gadgetgram article date. Image is HOBOT's own official hero photo for this specific model (distinct file from the 2S's), fetched and visually confirmed to show the oval HOBOT-388 unit."
+    },
+    {
+      "slug": "hobot-r3",
+      "name": "HOBOT-R3",
+      "brand": "HOBOT",
+      "category": "robot-window-cleaners",
+      "releaseDate": "2023",
+      "priceUsd": null,
+      "priceNote": "Conflicting regional figures found and none confirmed for the US: CHOICE Australia states $799 AUD (~$520 USD), a European retailer lists EUR369, and one low-confidence aggregator mentions 'from $400' without a verifiable page; hobot.us (which lists the R3) returned HTTP 429 on every direct fetch attempt",
+      "specs": {
+        "suction_power_pa": null,
+        "cleaning_speed_mode": "90W Nidec brushless motor; hand-wiping-style cleaning technique",
+        "battery_backup_min": 20,
+        "spray_system": "Dual ultrasonic nozzles, 15um mist, ~1.3ml water per m^2 cleaned",
+        "path_planning": "AI-assisted path planning",
+        "noise_level_db": 74,
+        "safety_tether": "4.5m rope rated to 200kg",
+        "edge_detection": "Edge/frame detection (hand-wiping technology line)",
+        "weight_lb": 2.11
+      },
+      "source": {
+        "url": "https://www.hobot.com.tw/hobot-r3/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.choice.com.au/home-and-living/laundry-and-cleaning/vacuum-cleaners/articles/hobot-r3-robot-window-cleaner",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Fetched live from HOBOT's Taiwan site: 20-min UPS backup, 4.5m/200kg safety rope, dual 15um ultrasonic spray at 1.3ml/m^2, brushless DC motor. CHOICE Australia's review (fetched live) independently confirms 5kg suction force / 90W brushless motor, 30ml per spray tank, 20-minute backup battery, and AUD $799 pricing with included accessories (2 wheel sets, 7 mop pads, 220ml fluid). Weight (955g) and 74dB noise are from an earlier general search summary, not independently re-fetched this session, and are flagged lower-confidence. suction_power_pa left null (HOBOT publishes 5kg force, not Pa). No US price could be confirmed (see priceNote) so priceUsd is null. No direct product hero image could be located on hobot.com.tw (only an unrelated award badge graphic exists there) and third-party retailer pages that might carry one (hobot.us, robotmylife.com.au, Amazon) were unreachable via WebFetch during verification; image omitted rather than guessed."
+    },
+    {
+      "slug": "mamibot-w120-t",
+      "name": "Mamibot iGLASSBOT W120-T",
+      "brand": "Mamibot",
+      "category": "robot-window-cleaners",
+      "releaseDate": "2018",
+      "priceUsd": null,
+      "priceNote": "No reliable current USD price found; this is a legacy (~2018) SKU sold only via third-party Amazon/eBay marketplace listings at fluctuating prices, not on mamibot.com's current storefront",
+      "specs": {
+        "suction_power_pa": null,
+        "cleaning_speed_mode": "~2.5 min/m^2; autonomous Z- and N-shaped path",
+        "battery_backup_min": 20,
+        "spray_system": "No onboard automated spray; wet microfiber pad, cleaning solution applied manually (included in box)",
+        "path_planning": "Z/N-shaped autonomous path planning, hugs window frame edges",
+        "noise_level_db": 65,
+        "safety_tether": "Safety rope included (load rating not published)",
+        "edge_detection": "Anti-falling & edge detection sensors",
+        "weight_lb": 2.98
+      },
+      "source": {
+        "url": "https://cleanup.expert/mamibot-w120t/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://e-catalog.com/MAMIBOT-W120-T.htm",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/mamibot-w120-t.jpg?v=93de8dad8b",
+        "source": "cleanup.expert",
+        "license": "© Mamibot",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "cleanup.expert review (fetched live) confirms 20-minute UPS emergency battery, wet/dry microfiber pad use with separately-supplied cleaning fluid (no onboard spray reservoir), and remote/app/button control. Dimensions (25x25x10cm), weight (1.35kg), noise (<65dB, recorded as the stated ceiling), charge time (1hr) and window-size range (1x1m to 4x4m) are from e-catalog.com's listing, obtained via search-engine cache — a direct WebFetch of e-catalog.com returned HTTP 403 on retry, so this is corroboration-by-cached-snippet, not a live re-fetch. Mamibot's own current site (mamibot.com) no longer lists the W120-T (superseded by W120-P/W120-DP/W300); noted in methodologyNotes. No suction Pa figure was ever published for this SKU (null). Image is a review site's photo of the physical unit with visible 'Mamibot W120-T' branding, fetched and visually confirmed."
+    },
+    {
+      "slug": "mamibot-w120-dp",
+      "name": "Mamibot iGLASSBOT W120-DP",
+      "brand": "Mamibot",
+      "category": "robot-window-cleaners",
+      "releaseDate": "2024",
+      "priceUsd": null,
+      "priceNote": "mamibot.com's storefront renders pricing via client-side JavaScript that WebFetch could not execute, so no price was directly observed; sold on Amazon US (3 colorways found) but Amazon product pages could not be rendered (persistent server errors) during verification",
+      "specs": {
+        "suction_power_pa": 3200,
+        "cleaning_speed_mode": "Multiple cleaning modes (exact mode list not published on reachable pages)",
+        "battery_backup_min": 25,
+        "spray_system": "4-nozzle dual-direction self-water-spray system",
+        "path_planning": "Smart path planning with edge detection",
+        "noise_level_db": null,
+        "safety_tether": null,
+        "edge_detection": "Edge detection technology",
+        "weight_lb": null
+      },
+      "source": {
+        "url": "https://www.mamibot.com/robot-window-cleaners-iglassbot-w120-dp",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Mamibot's current window-cleaner lineup page (fetched live) confirms the W120-DP is described as the '6th generation square robot window cleaner and 3rd generation to feature a self-water-spray function' with '4-nozzle dual-direction water spraying'; the product's own sub-page is a JavaScript single-page-app and WebFetch could only retrieve its navigation shell, not the rendered spec table, so most numeric specs come from Amazon US listing titles found via search ('3200Pa Strong Suction', '4 Water Spray Nozzles', 'Edge Detection Technology') and from Mamibot's own marketing copy describing it as 'the thinnest robot window cleaner on the global market by 2024' with a built-in battery giving '25 minutes of continuous support during unexpected power outages'. Noise level, safety-rope rating and weight are not stated anywhere reachable and are left null rather than estimated. No product image could be independently fetched and visually confirmed (mamibot.com's JS storefront and every third-party retailer page tried were unreachable); omitted rather than guessed."
+    },
+    {
+      "slug": "cop-rose-x6",
+      "name": "Cop Rose X6",
+      "brand": "Cop Rose",
+      "category": "robot-window-cleaners",
+      "releaseDate": "2017",
+      "priceUsd": 259.99,
+      "priceNote": "Brand list price per rswebsols.com review; third-party listings (Amazon.de, AliExpress) vary and are frequently discounted",
+      "specs": {
+        "suction_power_pa": 2800,
+        "cleaning_speed_mode": "~2.4 min/m^2; 3 automatic cleaning modes",
+        "battery_backup_min": 20,
+        "spray_system": null,
+        "path_planning": "Intelligent navigation with 3 auto-clean modes",
+        "noise_level_db": 60,
+        "safety_tether": "150kgf-rated safety rope",
+        "edge_detection": "Anti-falling sensor + anti-collision sensors",
+        "weight_lb": 2.65
+      },
+      "source": {
+        "url": "https://www.rswebsols.com/cop-rose-x6-smart-robot-window-cleaner/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.grays.com/retail/WCR-X6-WH/homewares-and-gifts/cop-rose-x6-smart-window-cleaning-robot-automatic-glass-cleaner-tool",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "rswebsols.com review (fetched live) confirms $259.99 price (10% off; coupon prices lower), 1.2kg weight, 9.45x9.45x3.94in dimensions, 80W/100-240V power, and a 30-minute battery-backup figure; a separately-obtained manufacturer-style spec sheet (65W/24V power, 2800Pa suction, 2.4min/m^2 speed, 24x24x10cm, 1.2kg, 150kgf rope, 15m remote range, <60dB noise, CE/FCC/ROHS) is consistent on weight and speed and was used for suction/noise/rope/dimensions not covered by the review; battery_backup_min uses the 20-minute UPS figure from that spec sheet rather than the review's 30-minute figure (noted discrepancy — both describe the same 'power-outage backup' behavior). Cop Rose's own domain (coprose.net) presented an invalid/mismatched TLS certificate pointing at unrelated Chinese hosting infrastructure and was not used as a source. No product image could be independently fetched and visually confirmed within available access (Amazon.de returned repeated 503s; other retailer pages served only accessory/placeholder images); omitted rather than guessed."
+    },
+    {
+      "slug": "alfawise-win660",
+      "name": "Alfawise WIN660",
+      "brand": "Alfawise",
+      "category": "robot-window-cleaners",
+      "releaseDate": "2018",
+      "priceUsd": 275.84,
+      "priceNote": "Last list price on DressLily (marked 'Sold Out' as of Aug 2026); launched 2018 at roughly GBP220 (~$280); GearBest, the original primary retailer, has ceased operating (domain no longer resolves) — treat as a discontinued/limited-availability legacy budget model",
+      "specs": {
+        "suction_power_pa": 2800,
+        "cleaning_speed_mode": "~2.5 min/m^2",
+        "battery_backup_min": 25,
+        "spray_system": null,
+        "path_planning": "4 edge-sensing sensors for frame/frameless windows; Z and N cleaning patterns",
+        "noise_level_db": 65,
+        "safety_tether": "150kgf-rated safety rope",
+        "edge_detection": "4 edge-sensing sensors, works on frameless windows",
+        "weight_lb": null
+      },
+      "source": {
+        "url": "https://www.dresslily.com/alfawise-win660-robotic-window-cleaner-product2492527.html",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.trustedreviews.com/reviews/alfawise-win660-robotic-window-cleaner",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/alfawise-win660.jpg?v=7428dbe861",
+        "source": "dresslily.com",
+        "license": "© Alfawise",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "DressLily's listing (fetched live) confirms 2800Pa suction, 75W power, 600mAh battery (~1hr charge), 2.5min/m^2 speed, 65dB noise, 25x25x8.5cm dimensions, 150kgf safety rope, and 'Sold Out' status at a $275.84 list price. TrustedReviews' 2018 review (fetched live) independently confirms the ~GBP220 launch price and a measured 78.5dB peak noise (higher than the 65dB manufacturer spec — kept the manufacturer figure, noted the discrepancy) and a 30-minute backup-battery figure (vs. 25 minutes from an earlier general search summary of the same spec sheet — used 25 as the more literally-sourced 'about 25 minutes' manufacturer wording). Weight not published on either source (null). Image is DressLily's official product photo, fetched and visually confirmed to show the branded WIN660 unit."
+    },
+    {
+      "slug": "gladwell-gecko",
+      "name": "Gladwell Gecko",
+      "brand": "Gladwell",
+      "category": "robot-window-cleaners",
+      "releaseDate": "2019",
+      "priceUsd": null,
+      "priceNote": "Reviewers describe it as priced 'under $200' on Amazon; no exact current figure could be independently confirmed (Amazon product pages could not be rendered via WebFetch, and gladwellclean.com returned HTTP 429 on every attempt)",
+      "specs": {
+        "suction_power_pa": null,
+        "cleaning_speed_mode": "3 automatic cleaning path options",
+        "battery_backup_min": null,
+        "spray_system": null,
+        "path_planning": "3 automatic cleaning path options",
+        "noise_level_db": null,
+        "safety_tether": "Safety rope included (load rating not published)",
+        "edge_detection": "Automatic edge detection",
+        "weight_lb": 4.95
+      },
+      "source": {
+        "url": "https://smartvacguide.com/gladwell-gecko-robot-window-cleaner",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.roboticgizmos.com/gladwell-gecko/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/gladwell-gecko.jpg?v=ccf77e0ef9",
+        "source": "smartvacguide.com",
+        "license": "© Gladwell",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "This is a thinly-documented Amazon-marketplace brand with no full manufacturer spec sheet publicly available; both review sources (fetched live) agree on: suction-based glass attachment via centrifugal fan, dual spinning microfiber pads, app + physical remote control, 3 automatic cleaning path options, automatic edge detection, and an included safety rope, but neither publishes suction Pa, noise dB, exact battery-backup minutes, or a firm current price — all left null rather than estimated. Amazon technical-details listings (which might carry package weight/dimensions) could not be rendered via WebFetch. Weight (4.95-4.97lb) is package weight per two independent reviews. Image is a reviewer-hosted photo of the physical unit showing 'gecko' and 'Gladwell' branding, fetched and visually confirmed."
+    },
+    {
+      "slug": "sichler-pr-041",
+      "name": "Sichler Profi-Fensterputzroboter PR-041 V3",
+      "brand": "Sichler",
+      "category": "robot-window-cleaners",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "EU/DACH-only product sold via PEARL.de / Sichler Haushaltsgeräte — no US listing exists, hence no USD price. EUR263.89 for a 'Versandrückläufer' (inspected customer-return) unit of the PR-041 V3 on pearl.de; the current-generation successor SKU (REF-60579, an explicitly rebadged HOBOT-298) lists around EUR254.80-549.90 depending on promotion",
+      "specs": {
+        "suction_power_pa": null,
+        "cleaning_speed_mode": "0.41 m^2/minute (12 cm/s movement speed)",
+        "battery_backup_min": 20,
+        "spray_system": "Ultrasonic spray function (per product name/listing; hardware is HOBOT-derived)",
+        "path_planning": "AI path calculation using laser and pressure sensors, adapts to surface unevenness",
+        "noise_level_db": 64,
+        "safety_tether": "4.5m safety rope rated to 150kg",
+        "edge_detection": "Laser sensor obstacle/edge detection + anti-fall algorithm",
+        "weight_lb": 2.65
+      },
+      "source": {
+        "url": "https://www.pearl.de/a-REF39093-3031.shtml",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.sichler-haushaltsgeraete.com/de_AT/Profi-Fensterputzroboter-mit-Ultrasonic-Sprayfunkt-REF-60579-919.shtml",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "pearl.de's listing (fetched live) confirms 0.41m^2/min (12cm/s) speed, 72W power, 64dB noise, 20-minute UPS backup, 150kg/4.5m safety rope, 4 Li-Po cells, 230V/5m cable, 24x10x24cm, 1.2kg, and EUR263.89 pricing for a customer-return unit (original EUR549.90). Sichler is a DACH private-label reseller of HOBOT hardware: the Sichler-Haushaltsgeräte page for the successor SKU (fetched live) explicitly identifies that unit as also being sold under the names 'HOBOT 298' and 'PR-041 V4', confirming the brand relationship (noted in methodologyNotes) — treat the two Sichler pages as describing closely related but not identical hardware generations. No US price exists for this DACH-market item (priceUsd null by design). Release date not published on either page (null). No genuine direct product-photo file URL could be confirmed: the pearl.de gallery image resolved to a 1.5KB placeholder icon and a guessed asset-path pattern for the successor SKU also resolved to a non-matching 1.8KB file; image omitted rather than used unverified."
+    },
+    {
+      "slug": "hutt-w66",
+      "name": "HUTT W66",
+      "brand": "HUTT",
+      "category": "robot-window-cleaners",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "No verifiable current US price confirmed: hutt.bg (EU) shows no live price on the fetched page, Newegg's listed product ID no longer resolves, and Amazon US product pages could not be rendered during verification",
+      "specs": {
+        "suction_power_pa": 2600,
+        "cleaning_speed_mode": "~2.5 min/m^2; intelligent suction algorithm adjusts to dirt level",
+        "battery_backup_min": 30,
+        "spray_system": "150ml intelligent water tank, wipes 70-90 sq m of glass per fill",
+        "path_planning": "Laser module measures range for accurate window-frame edge detection",
+        "noise_level_db": 65,
+        "safety_tether": "5m safety cable (load rating not published)",
+        "edge_detection": "Laser-based frame/edge ranging, more precise than prior HUTT models per manufacturer",
+        "weight_lb": 3.46
+      },
+      "source": {
+        "url": "https://hutt.bg/en/hutt-w66-window-cleaner-robot",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/hutt-w66.jpg?v=74bab35be4",
+        "source": "hutt.bg",
+        "license": "© HUTT",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "hutt.bg product page (fetched live, official regional HUTT distributor) confirms 2600Pa suction, 150ml water tank (70-90 sq m coverage), laser-module edge ranging, intelligent frequency-conversion suction that adapts to dirt level, and 5m safety cable with 20-30 minute battery backup (used the upper bound, 30, as the recorded figure; manufacturer states a 20-30 minute range). 220V/90W power, 1.57kg weight, 23.15x23.15x7.6cm dimensions, and 650mAh Li-ion battery are from an earlier general search summary of the same product line (not independently re-fetched this session). No live price could be confirmed in USD or EUR on the fetched page (price field did not render). Release date not published (null). Image is HUTT's own official product photo (filename explicitly tags 'HUTT_OfficialSite'), fetched and visually confirmed to show the branded W66 unit."
+    }
+  ]
+}

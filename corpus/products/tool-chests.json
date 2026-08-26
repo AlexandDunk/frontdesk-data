@@ -1,0 +1,353 @@
+{
+  "category": "tool-chests",
+  "generatedAt": "2026-08-12T00:00:00.000Z",
+  "methodologyNotes": "Roster covers thirteen rolling tool chests / roller cabinets across nine brands (Husky, Milwaukee, Craftsman, Snap-on, Homak, Gladiator, Extreme Tools, Viper Tool Storage, DeWalt, WEN), verified 2026-08-12 primarily against manufacturer-hosted product/spec pages (milwaukeetool.com, homak.com, gladiatorgarageworks.com, extremetools.com, wenproducts.com) with Craftsman, Husky, and Snap-on corroborated via indexed manufacturer/retailer page titles where direct fetch was blocked by bot protection (Home Depot, Lowe's, and several other major retailers returned HTTP 403 to automated fetches all session, so those pages could not be scraped directly even though they are real, live listings). Two seed items could not be verified as real, current products and were corrected rather than guessed: (1) the seed \"DeWalt DWST24072\" does not resolve to any current DeWalt SKU (absent from DeWalt's own storage-and-organization catalog listing and from every retailer search performed) while the near-identical \"DWST24071 — 41 in. Wide 7-Drawer Tool Chest\" is real and indexed on dewalt.com, so the entry was corrected to DWST24071. (2) the seed \"WEN 5-Drawer\" does not correspond to a rolling cabinet in WEN's current lineup (WEN sells almost no wheeled tool storage); the closest real match is the WEN GG261T, a 5-drawer premium tool chest with carrying handles designed to sit atop WEN's separate GG262B rolling base — it is stationary, not itself a rolling unit, and is retained with caster fields left null and this distinction noted in its provenance rather than silently presented as a rolling cabinet. \"US General\" (Harbor Freight), \"Kobalt 3000 Series,\" \"RIDGID Pro Series,\" and \"Montezuma SE Series\" from the suggested list were dropped entirely rather than included on unverifiable specs: their retailer/manufacturer pages returned 403/404/JS-shell responses all session and no reliable model number or spec could be confirmed, so two additional real, verified products (a second Milwaukee and a second Craftsman/Gladiator SKU each) were substituted to reach the required count without guessing. total_load_capacity_lb, steel_gauge, caster_load_rating_lb, and weight_lb are left null wherever no fetched source stated the figure for that specific SKU — general per-drawer-slide or product-line figures were not extrapolated onto a specific model's overall rating. Snap-on's own literature states the broader Masters Series line is \"rated up to 6,800 lbs\" across various configurations; that figure is not attributed to the specific KTL1022APBO1 SKU documented here since no per-SKU total was found, so total_load_capacity_lb is null for that entry. Craftsman CMST82763BK's caster-size text (\"3 in. x 1 in. casters\") appeared adjacent to a load figure that could not be reliably distinguished from a page-parsing artifact, so caster_load_rating_lb was left null for that entry rather than repeat a possibly-corrupted number. priceUsd is null wherever no manufacturer or dealer page displayed a concrete current price (Milwaukee, Snap-on, and several others sell only through dealer networks or omit consumer pricing from their own pages). accessedAt 2026-08-12 throughout.",
+  "specKeys": [
+    "drawer_count",
+    "overall_width_in",
+    "total_load_capacity_lb",
+    "drawer_slide_type",
+    "steel_gauge",
+    "caster_load_rating_lb",
+    "lock_type",
+    "weight_lb"
+  ],
+  "products": [
+    {
+      "slug": "husky-h46mwc9v2",
+      "name": "Husky 46 in. W x 24 in. D Standard Duty 9-Drawer Mobile Workbench Tool Chest with Solid Wood Top",
+      "brand": "Husky",
+      "category": "tool-chests",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "Home Depot exclusive; current listing price could not be confirmed via direct fetch this session (Home Depot returns 403 to automated fetches) so no figure is asserted",
+      "specs": {
+        "drawer_count": 9,
+        "overall_width_in": 46,
+        "total_load_capacity_lb": 1500,
+        "drawer_slide_type": "Ball-bearing, full-extension, 100 lb rated per drawer",
+        "steel_gauge": "21-gauge welded steel",
+        "caster_load_rating_lb": null,
+        "lock_type": null,
+        "weight_lb": 293.7
+      },
+      "source": {
+        "url": "https://www.homedepot.com/p/Husky-46-in-W-x-24-in-D-Standard-Duty-9-Drawer-Mobile-Workbench-Tool-Chest-with-Solid-Wood-Top-in-Gloss-Black-H46MWC9V2-C/313833944",
+        "accessedAt": "2026-08-12"
+      },
+      "provenance": "Home Depot's own product listing (indexed page title and spec summary; direct re-fetch returned HTTP 403) documents all-welded 21-gauge steel construction, 9 drawers on 100 lb-rated full-extension ball-bearing slides, a combined 1,500 lb top-and-drawer load capacity, 19,650 cu in. of storage, 5 in. x 2 in. casters (2 swivel with brake, 2 rigid), and assembled weight of 293.7 lbs. No individual caster load rating or lock-type detail was stated on the listing, so both are left null rather than assumed."
+    },
+    {
+      "slug": "milwaukee-48-22-8500",
+      "name": "Milwaukee 46 in. 16-Drawer Steel Storage Combo",
+      "brand": "Milwaukee",
+      "category": "tool-chests",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "Milwaukee does not display consumer pricing on its own product page; sold through authorized dealers whose pricing was not fetched this session",
+      "specs": {
+        "drawer_count": 16,
+        "overall_width_in": 46,
+        "total_load_capacity_lb": 1800,
+        "drawer_slide_type": "100 lb-rated soft-close ball-bearing slides (2 of the 16 drawers rated 200 lb each)",
+        "steel_gauge": null,
+        "caster_load_rating_lb": null,
+        "lock_type": "Independent locking drawer, keyed",
+        "weight_lb": null
+      },
+      "source": {
+        "url": "https://www.milwaukeetool.com/products/details/46-steel-storage-combo/48-22-8500",
+        "accessedAt": "2026-08-12"
+      },
+      "provenance": "Milwaukee's official 48-22-8500 product page (fetched directly) confirms 16 total drawers, 46 in. width, a 1,800 lb combined weight capacity, 27,354 cu in. storage volume, 100 lb soft-close drawer slides, 5 in. industrial casters, an angle-iron reinforced frame, and independent locking drawers. Steel gauge, individual caster load rating, unit weight, and price are not published on the manufacturer's page and were not located elsewhere, so they are left null.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/milwaukee-48-22-8500.webp?v=453343fff8",
+        "source": "www.milwaukeetool.com",
+        "license": "© Milwaukee",
+        "accessedAt": "2026-08-12"
+      }
+    },
+    {
+      "slug": "milwaukee-48-22-8546",
+      "name": "Milwaukee High Capacity 46 in. 18-Drawer Steel Storage Combo",
+      "brand": "Milwaukee",
+      "category": "tool-chests",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "Milwaukee does not display consumer pricing on its own product page",
+      "specs": {
+        "drawer_count": 18,
+        "overall_width_in": 46,
+        "total_load_capacity_lb": 2500,
+        "drawer_slide_type": "100 lb-rated soft-close ball-bearing slides",
+        "steel_gauge": "18-gauge, angle-iron reinforced frame",
+        "caster_load_rating_lb": null,
+        "lock_type": null,
+        "weight_lb": null
+      },
+      "source": {
+        "url": "https://www.milwaukeetool.com/products/details/46-high-capacity-steel-storage-combo/48-22-8546",
+        "accessedAt": "2026-08-12"
+      },
+      "provenance": "Milwaukee's official 48-22-8546 product page (fetched directly) confirms 18 drawers, 46 in. width, over 35,000 cu in. of storage, 2,500 lb weight capacity, 18-gauge angle-iron reinforced construction, 100 lb soft-close drawer slides, and 6 in. industrial casters. The page does not specify a lock type, individual caster rating, unit weight, or price, so those are left null rather than assumed. This is Milwaukee's higher-capacity sibling to the 16-drawer 48-22-8500.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/milwaukee-48-22-8546.webp?v=94e63522c5",
+        "source": "www.milwaukeetool.com",
+        "license": "© Milwaukee",
+        "accessedAt": "2026-08-12"
+      }
+    },
+    {
+      "slug": "craftsman-cmst98268rb",
+      "name": "Craftsman 2000 Series 26.5 in. W x 37.5 in. H 5-Drawer Steel Rolling Tool Cabinet (Red)",
+      "brand": "Craftsman",
+      "category": "tool-chests",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "Listed for sale at Ace Hardware and Lowe's; exact current price could not be confirmed via direct fetch this session (both retailers return 403 to automated fetches)",
+      "specs": {
+        "drawer_count": 5,
+        "overall_width_in": 26.5,
+        "total_load_capacity_lb": 1500,
+        "drawer_slide_type": "Ball-bearing, soft-close, 100 lb rated per drawer",
+        "steel_gauge": "18-20 gauge steel I-Frame construction",
+        "caster_load_rating_lb": null,
+        "lock_type": "Overmold key, internal locking system",
+        "weight_lb": null
+      },
+      "source": {
+        "url": "https://www.craftsman.com/en-us/product/cmst98268rb/s2000-series-26-inch-5-drawer-steel-rolling-tool-cabinet-red",
+        "accessedAt": "2026-08-12"
+      },
+      "provenance": "Craftsman's own product listing (indexed page title and spec copy reproduced at Ace Hardware and Lowe's) documents 26.5 in. x 37.5 in. x 18 in. dimensions, 5 drawers each rated 100 lbs on soft-close ball-bearing slides, 9,266 cu in. of storage, 18-20 gauge steel I-Frame construction, 5 in. x 2 in. casters supporting 1,500 lbs total, an overmold key/internal locking system, and included drawer liners, top mat, keys, and caster set. Unit weight and a confirmed current price were not located on a directly-fetchable page this session, so both are null."
+    },
+    {
+      "slug": "craftsman-cmst82763bk",
+      "name": "Craftsman S1000 26 in. Wide 5-Drawer Rolling Tool Chest Combo",
+      "brand": "Craftsman",
+      "category": "tool-chests",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "Craftsman's own product page does not display a consumer price",
+      "specs": {
+        "drawer_count": 5,
+        "overall_width_in": 26,
+        "total_load_capacity_lb": 300,
+        "drawer_slide_type": "Full-extension ball-bearing slides, 30 lb rated per drawer",
+        "steel_gauge": "24-gauge steel",
+        "caster_load_rating_lb": null,
+        "lock_type": "Keyed locking system",
+        "weight_lb": null
+      },
+      "source": {
+        "url": "https://www.craftsman.com/en-us/product/cmst82763bk/craftsman-s1000-26-inch-wide-5-drawer-rolling-tool-chest-combo-drawer-liner",
+        "accessedAt": "2026-08-12"
+      },
+      "provenance": "Craftsman's official S1000 product page (fetched directly) confirms 5 drawers each rated 30 lbs on full-extension ball-bearing slides (300 lb total rated capacity), 26 in. width, 1,227 cu in. storage, 24-gauge steel construction, a keyed locking system, and an included drawer liner roll. The page's caster-size text was ambiguous/possibly a rendering artifact where it adjoined a '3 lb' figure inconsistent with the stated 300 lb total capacity, so individual caster load rating is left null rather than repeating a likely-corrupted number. This is Craftsman's entry-level S1000 line, distinct from the mid-tier S2000 (CMST98268RB) also in this dataset."
+    },
+    {
+      "slug": "snap-on-ktl1022apbo1",
+      "name": "Snap-on Masters Series 54 in. 10-Drawer Double-Bank Stainless Steel Top Roll Cab (Red)",
+      "brand": "Snap-on",
+      "category": "tool-chests",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "Snap-on sells exclusively through its mobile-dealer franchise network (shop.snapon.com); no fixed consumer list price is published",
+      "specs": {
+        "drawer_count": 10,
+        "overall_width_in": 54,
+        "total_load_capacity_lb": null,
+        "drawer_slide_type": "Ball-bearing slides with patented Lock 'N Roll latch mechanism",
+        "steel_gauge": null,
+        "caster_load_rating_lb": null,
+        "lock_type": "Lock 'N Roll patented latch, keyed",
+        "weight_lb": null
+      },
+      "source": {
+        "url": "https://shop.snapon.com/product/KTL1022-Master-Series-Roll-Cabs-(54%22)/54%22-10-Drawer-Double-Bank-Masters-Series-Stainless-Steel-Top-Roll-Cab-(Red)/KTL1022APBO1",
+        "accessedAt": "2026-08-12"
+      },
+      "provenance": "Snap-on's own online shop lists model KTL1022APBO1 as the 54 in. 10-Drawer Double-Bank Masters Series Stainless Steel Top Roll Cab; the page requires a supported browser session and did not render full specs to the fetch tool, so structural details are drawn from Snap-on's Masters Series brand literature: divider-free ball-bearing drawers with full-length pulls, the patented Lock 'N Roll latch mechanism preventing drift-open, and heavy-duty casters. Snap-on states the broader Masters Series line is rated 'up to 6,800 lbs' across its various configurations; that line-wide figure is not applied to this specific 10-drawer SKU since no per-model total was confirmed, so total_load_capacity_lb is left null. Steel gauge, weight, and price are not published for this SKU."
+    },
+    {
+      "slug": "homak-04054014-1",
+      "name": "Homak 54 in. RS Pro 10-Drawer Roller Cabinet with Stainless Steel Top",
+      "brand": "Homak",
+      "category": "tool-chests",
+      "releaseDate": null,
+      "priceUsd": 3037,
+      "priceNote": "Manufacturer direct price, homak.com",
+      "specs": {
+        "drawer_count": 10,
+        "overall_width_in": 54.5,
+        "total_load_capacity_lb": null,
+        "drawer_slide_type": "Ball-bearing, 100 lb rated per drawer (per slide pair)",
+        "steel_gauge": "18-gauge / 1.2mm body, frame, and drawers",
+        "caster_load_rating_lb": 660,
+        "lock_type": "HMC High Security Tubular Locking System",
+        "weight_lb": 370
+      },
+      "source": {
+        "url": "https://www.homak.com/product/54-rs-pro-roller-cabinet-w-stainless-steel-top/",
+        "accessedAt": "2026-08-12"
+      },
+      "provenance": "Homak's official product page (model 04054014-1, fetched directly) confirms 54.5 in. W x 24 in. D x 40.375 in. H, 10 drawers on 100 lb-rated ball-bearing slide pairs, 19,800 cu in. of storage, 18-gauge/1.2mm steel body/frame/drawer construction, four 6 in. x 2 in. casters (2 swivel-locking, 2 fixed) each rated 660 lbs, the HMC High Security Tubular Locking System, a stainless-steel work surface, 370 lb product weight (397 lb shipping), and a $3,037.00 direct price. No overall combined load-capacity total was stated separately from the per-drawer/per-caster figures, so total_load_capacity_lb is left null rather than computed by multiplication (which would not reflect a manufacturer-published rating).",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/homak-04054014-1.png?v=2f6f86873c",
+        "source": "www.homak.com",
+        "license": "© Homak",
+        "accessedAt": "2026-08-12"
+      }
+    },
+    {
+      "slug": "gladiator-gatc4115jg",
+      "name": "Gladiator Premier Series 41 in. 15-Drawer Mobile Tool Chest Combo",
+      "brand": "Gladiator",
+      "category": "tool-chests",
+      "releaseDate": null,
+      "priceUsd": 1799.99,
+      "priceNote": "Current price at gladiatorgarageworks.com; item shown out of stock online at time of access",
+      "specs": {
+        "drawer_count": 15,
+        "overall_width_in": 41,
+        "total_load_capacity_lb": 1500,
+        "drawer_slide_type": "Soft-close, 100 lb rated per drawer/shelf",
+        "steel_gauge": null,
+        "caster_load_rating_lb": null,
+        "lock_type": null,
+        "weight_lb": null
+      },
+      "source": {
+        "url": "https://www.gladiatorgarageworks.com/products/premier-41-inch-15-drawer-mobile-tool-chest-combo",
+        "accessedAt": "2026-08-12"
+      },
+      "provenance": "Gladiator's own individual product page for the Premier 41-inch 15-Drawer Mobile Tool Chest Combo (model GATC4115JG; page fetched directly this session, the collection page priced it at $1,799.99) confirms 41 in. W x 63 in. H x 24.5 in. D dimensions, 15 soft-close drawers, a 1,500 lb/unit total load capacity with 100 lb per-drawer rating, welded-steel construction, 5 in. locking casters, an integrated power supply with USB ports, and an included magnetic tool organizer. Steel gauge, individual caster load rating, lock type, and unit weight are not itemized on the page, so those remain null."
+    },
+    {
+      "slug": "gladiator-gamt41hwjg",
+      "name": "Gladiator 41 in. 9-Drawer Mobile Tool Workbench with Solid Wood Top",
+      "brand": "Gladiator",
+      "category": "tool-chests",
+      "releaseDate": null,
+      "priceUsd": 1199.99,
+      "priceNote": "Current price at gladiatorgarageworks.com",
+      "specs": {
+        "drawer_count": 9,
+        "overall_width_in": 41,
+        "total_load_capacity_lb": 1500,
+        "drawer_slide_type": null,
+        "steel_gauge": null,
+        "caster_load_rating_lb": null,
+        "lock_type": "Tool-safe locking drawers",
+        "weight_lb": null
+      },
+      "source": {
+        "url": "https://www.gladiatorgarageworks.com/products/premier-41-inch-9-drawer-mobile-tool-workbench-with-solid-wood-top",
+        "accessedAt": "2026-08-12"
+      },
+      "provenance": "Gladiator's own individual product page for the Premier 41-inch 9-Drawer Mobile Tool Workbench with Solid Wood Top (model GAMT41HWJG; page fetched directly this session, the collection page priced it at $1,199.99) confirms 41 in. W x 38.5 in. H x 24.5 in. D dimensions, 9 drawers, a 1,500 lb/unit weight capacity, a 3/4 in. solid wood top, welded-steel construction, tool-safe locking drawers, integrated power/USB supply, and rolling mobility. Drawer slide type, steel gauge, caster rating, and unit weight are not itemized on the page, so those remain null."
+    },
+    {
+      "slug": "extreme-tools-ex7217rcq",
+      "name": "Extreme Tools EX7217RCQ 72 in. 17-Drawer Triple-Bank EX Professional Series Roller Cabinet",
+      "brand": "Extreme Tools",
+      "category": "tool-chests",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "Price varies by finish (six color/top options); not displayed as a single figure on the fetched category page",
+      "specs": {
+        "drawer_count": 17,
+        "overall_width_in": 72,
+        "total_load_capacity_lb": null,
+        "drawer_slide_type": "Full-extension ball-bearing, rated 300-600 lb per drawer",
+        "steel_gauge": "11-gauge steel frame",
+        "caster_load_rating_lb": 900,
+        "lock_type": "Locking security drawer",
+        "weight_lb": null
+      },
+      "source": {
+        "url": "https://extremetools.com/product/roller-cabinets/extreme-tools-professional-72-inch-quick-release-17-drawer-triple-bank-roller-cabinet/",
+        "accessedAt": "2026-08-12"
+      },
+      "provenance": "Extreme Tools' own individual product page for model EX7217RCQ (fetched directly and re-confirmed this session; page carries the EX7217RCQ base SKU with GNBK/BLBK/ORBK/etc. color variants) documents a 72 in. 17-drawer triple-bank roller cabinet with 11-gauge steel frame construction, full-extension ball-bearing drawers individually rated 300-600 lbs, a 304-grade stainless steel work surface with rolled edge, six Mag Wheel casters rated 900 lbs each (1,200 lb upgraded spring-loaded casters optional), patented Quick Release self-latching drawer pulls, a locking security drawer, and a limited lifetime warranty. No single combined 'total load capacity' figure distinct from the per-drawer and per-caster ratings was published, and price varies by finish, so total_load_capacity_lb, unit weight, and priceUsd are left null.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/extreme-tools-ex7217rcq.jpg?v=785496c384",
+        "source": "extremetools.com",
+        "license": "© Extreme Tools",
+        "accessedAt": "2026-08-12"
+      }
+    },
+    {
+      "slug": "viper-v412409ssr",
+      "name": "Viper Tool Storage V412409SSR 41 in. 9-Drawer Stainless Steel Rolling Cabinet",
+      "brand": "Viper Tool Storage",
+      "category": "tool-chests",
+      "releaseDate": null,
+      "priceUsd": 2239.99,
+      "priceNote": "Current price at vipertoolstorage.com",
+      "specs": {
+        "drawer_count": 9,
+        "overall_width_in": 41.625,
+        "total_load_capacity_lb": null,
+        "drawer_slide_type": "Full-extension ball-bearing, 100 lb rated per drawer (200 lb on 3 premium drawers)",
+        "steel_gauge": null,
+        "caster_load_rating_lb": null,
+        "lock_type": "Viper SlideLock, locking drawers",
+        "weight_lb": 273
+      },
+      "source": {
+        "url": "https://vipertoolstorage.com/products/41-inch-9-drawer-rolling-cabinet-304-stainless-steel",
+        "accessedAt": "2026-08-12"
+      },
+      "provenance": "Viper Tool Storage's own individual product page for model V412409SSR (fetched directly this session) confirms the 41-inch 9-Drawer Stainless Steel Rolling Cabinet: 304 stainless-steel construction, 41 5/8 in. cabinet width (45 in. including side handle) x 24 in. depth, 19,300+ cu in. storage, full-extension ball-bearing drawers rated 100 lbs each with three premium drawers rated 200 lbs (top, left/right bottom), Viper SlideLock security, four 5-inch polyurethane casters (2 swivel, 2 rigid), and a 273 lb net weight, priced at $2,239.99. Steel gauge (beyond the 304 material grade), individual caster load rating, and a manufacturer-published combined total load capacity were not stated, so those remain null."
+    },
+    {
+      "slug": "dewalt-dwst24071",
+      "name": "DeWalt DWST24071 41 in. Wide 7-Drawer Tool Chest",
+      "brand": "DeWalt",
+      "category": "tool-chests",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "DeWalt.com does not display a consumer list price on its (JavaScript-rendered) product pages; no retailer price was confirmed this session",
+      "specs": {
+        "drawer_count": 7,
+        "overall_width_in": 41,
+        "total_load_capacity_lb": null,
+        "drawer_slide_type": null,
+        "steel_gauge": "Double-wall steel construction",
+        "caster_load_rating_lb": null,
+        "lock_type": "Keyed internal locking system",
+        "weight_lb": null
+      },
+      "source": {
+        "url": "https://www.dewalt.com/product/dwst24071/41-wide-7-drawer-tool-chest",
+        "accessedAt": "2026-08-12"
+      },
+      "provenance": "CORRECTED FROM SEED: the seed model number 'DWST24072' does not correspond to any current DeWalt product — it is absent from DeWalt's own storage-and-organization catalog listing (which enumerates DWST26041, DWST41061, DWST37041, DWST52071, DWST41083, DWST37052, DWST27042, and others) and from every retailer search performed. The near-identical, separately-indexed page 'DWST24071 — 41 in. Wide 7-Drawer Tool Chest' on dewalt.com is real, so the seed was corrected to DWST24071. DeWalt's site renders product specs via client-side JavaScript that this session's fetch tool could not execute (repeated fetches returned only the homepage shell), so only generic DeWalt tool-chest construction claims found in DeWalt's general marketing copy (double-wall steel construction, keyed internal locking system, embossed drawer liners) are attributed here; drawer-slide type, exact load capacity, caster rating, and weight specific to this SKU could not be confirmed and are left null rather than assumed from DeWalt's other combo models."
+    },
+    {
+      "slug": "wen-gg261t",
+      "name": "WEN GG261T 26 in. 5-Drawer Premium Tool Chest",
+      "brand": "WEN",
+      "category": "tool-chests",
+      "releaseDate": null,
+      "priceUsd": 555.99,
+      "priceNote": "Current price at wenproducts.com (bulk pricing of $228.36/unit available for 6+ pieces)",
+      "specs": {
+        "drawer_count": 5,
+        "overall_width_in": 26,
+        "total_load_capacity_lb": null,
+        "drawer_slide_type": "Soft-close ball-bearing slides, 100 lb rated per drawer",
+        "steel_gauge": "21-gauge powder-coated steel",
+        "caster_load_rating_lb": null,
+        "lock_type": "Internal locking system with keys",
+        "weight_lb": null
+      },
+      "source": {
+        "url": "https://wenproducts.com/collections/storage/products/wen-gg261t-26-inch-premium-tool-chest-with-heavy-duty-21-gauge-powder-coated-steel-construction",
+        "accessedAt": "2026-08-12"
+      },
+      "provenance": "CORRECTED FROM SEED: WEN's current product lineup contains almost no wheeled/rolling tool cabinets (its 'Storage' collection is dominated by generators, utility carts, and stationary chests); no product literally named or configured as a rolling '5-Drawer' cabinet was found. The closest real match, confirmed on WEN's own site, is the GG261T: a 26 in. wide, 5-drawer (2 top + 2 middle + 1 bottom) premium tool chest with dual gas lid struts, side carrying handles, soft-close ball-bearing drawer slides rated 100 lbs each, 21-gauge powder-coated steel construction, and an internal locking system — priced at $555.99. WEN's own page states it is designed to sit atop the separate WEN GG262B rolling cabinet base; it has carrying handles, not casters, so caster_load_rating_lb is null and this entry is retained with that caveat rather than mislabeled as a wheeled unit. Overall combined load capacity and unit weight are not published on the manufacturer page."
+    }
+  ]
+}

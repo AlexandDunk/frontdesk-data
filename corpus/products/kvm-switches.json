@@ -1,0 +1,279 @@
+{
+  "category": "kvm-switches",
+  "generatedAt": "2026-07-11",
+  "methodologyNotes": "Covers standalone desktop KVM (keyboard-video-mouse) switches and USB-C KVM docking switches that let one keyboard, monitor set, and mouse control two or more computers, sold at a published US price. Excludes IP/remote KVM-over-IP appliances, rackmount enterprise matrix switches, and monitors with a built-in KVM feature. Price is US MSRP or typical street price in USD. portCount is the number of source computers the switch connects (count). displayHeads is the number of monitors driven per computer (1 = single-head, 2 = dual-head; count). videoInterface is the primary console video connector, an enum of HDMI, DisplayPort, USB-C, or Mixed (when inputs/outputs combine types). maxResolution is the highest supported resolution and refresh as pixels@Hz (e.g. 3840x2160@60), NOT interpolated. maxRefreshAt4kHz is the maximum refresh rate at 4K UHD (3840x2160) in Hz; null if the switch does not reach 4K. usbHubStandard is the shared peripheral USB generation, an enum of USB 2.0, USB 3.0 (5 Gbps), or USB 3.2 (10 Gbps). usbPortCount is the count of shared USB peripheral ports exposed to the connected computers (count). edidEmulation is a boolean: true if the switch emulates/retains EDID so windows do not rearrange on switch. audioSupport is a boolean: true if it has dedicated analog 3.5mm audio jacks. powerDeliveryWatts is the maximum USB-C Power Delivery to a connected laptop in watts; null if the switch does not charge hosts over USB-C. switchingMethods lists the supported input-switch controls as a slash-delimited enum drawn from button, hotkey, remote, mouse.",
+  "specKeys": [
+    "portCount",
+    "displayHeads",
+    "videoInterface",
+    "maxResolution",
+    "maxRefreshAt4kHz",
+    "usbHubStandard",
+    "usbPortCount",
+    "edidEmulation",
+    "audioSupport",
+    "powerDeliveryWatts",
+    "switchingMethods"
+  ],
+  "products": [
+    {
+      "slug": "aten-cs1922m",
+      "name": "ATEN CS1922M 2-Port USB 3.0 4K DisplayPort MST KVMP Switch",
+      "brand": "ATEN",
+      "category": "kvm-switches",
+      "releaseDate": null,
+      "priceUsd": 508,
+      "priceNote": "HDTVSupply (US retailer) lists the ATEN CS1922M at \"Today's Price: $508.00\" (cables included). AVLGEAR (US retailer) lists the same model at \"$541.00\" with free shipping. No manufacturer MSRP figure was retrievable — ATEN.com and the assets.aten.com datasheet PDF both returned HTTP 403 to the fetcher — so priceUsd uses the sourced HDTVSupply street price ($508.00).",
+      "specs": {
+        "portCount": 2,
+        "displayHeads": 2,
+        "videoInterface": "Mixed",
+        "maxResolution": "4096x2160@60",
+        "maxRefreshAt4kHz": 60,
+        "usbHubStandard": "USB 3.0 (5 Gbps)",
+        "usbPortCount": 2,
+        "edidEmulation": null,
+        "audioSupport": true,
+        "powerDeliveryWatts": null,
+        "switchingMethods": "button/hotkey/mouse"
+      },
+      "source": {
+        "url": "https://www.hdtvsupply.com/aten-cs1922m.html",
+        "accessedAt": "2026-07-11"
+      },
+      "corroboration": {
+        "url": "https://avlgear.com/products/aten-cs1922m-2-port-usb-3-0-4k-displayport-mst-kvmp-switch",
+        "accessedAt": "2026-07-11"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/aten-cs1922m.jpg?v=26cae1fc68",
+        "source": "hdtvsupply.com",
+        "license": "© ATEN",
+        "accessedAt": "2026-07-12"
+      },
+      "provenance": "Both fetched pages are US retailers reproducing ATEN's own specification table for the exact model CS1922M, and both confirm identity as the 2-port variant (not the 4-port CS1924M sibling): each lists \"Computer Connections: 2\", 2 x DisplayPort computer ports, a 2-port USB 3.1 Gen 1 (5 Gbps) hub, dual 3.5mm audio jacks, max video \"4096 x 2160 @ 60Hz\", and key feature \"4K UHD (3840 x 2160 @ 60 Hz)\". HDTVSupply (source) shows \"Today's Price: $508.00\" for the CS1922M cables-included package; AVLGEAR (corroboration) independently confirms the identical spec table and lists $541.00. The ATEN manufacturer product page and datasheet PDF returned HTTP 403 to the fetcher, so no manufacturer-stated MSRP or release date was available, and EDID/Video DynaSync emulation is not stated on either fetched page — so releaseDate and edidEmulation are left null rather than guessed."
+    },
+    {
+      "slug": "iogear-gcs1942",
+      "name": "IOGEAR GCS1942 2-Port 4K Dual View DisplayPort KVMP Switch",
+      "brand": "IOGEAR",
+      "category": "kvm-switches",
+      "releaseDate": null,
+      "priceUsd": 449.95,
+      "priceNote": "IOGEAR support/spec page (support.iogear.com/product/GCS1942) explicitly states \"MSRP: $449.95\" — used verbatim as priceUsd. Note pricing conflicts across pages: IOGEAR's own store (iogear.com/products/gcs1942) lists $349.95 (sale and regular), and retailer KVMGalore lists \"MSRP $350.00\" with \"Our Price $314.00\", so actual street price runs well below the stated $449.95 MSRP.",
+      "specs": {
+        "portCount": 2,
+        "displayHeads": 2,
+        "videoInterface": "DisplayPort",
+        "maxResolution": "4096x2160@60",
+        "maxRefreshAt4kHz": 60,
+        "usbHubStandard": "USB 3.0 (5 Gbps)",
+        "usbPortCount": 2,
+        "edidEmulation": null,
+        "audioSupport": true,
+        "powerDeliveryWatts": null,
+        "switchingMethods": "button/hotkey/mouse"
+      },
+      "source": {
+        "url": "https://support.iogear.com/product/GCS1942",
+        "accessedAt": "2026-07-11"
+      },
+      "corroboration": {
+        "url": "https://www.kvmgalore.com/shopping/iogear-4k-multi-screen-displayport-kvmp-switch-2-ports-dual-view-gcs1942-p-50846.html",
+        "accessedAt": "2026-07-11"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/iogear-gcs1942.jpg?v=1b647f688a",
+        "source": "support.iogear.com",
+        "license": "© IOGEAR",
+        "accessedAt": "2026-07-12"
+      },
+      "provenance": "The IOGEAR support product page (support.iogear.com/product/GCS1942, MPN GCS1942, UPC 881317516671) confirms the exact model and provides the full spec table: Video Resolution 4096 x 2160 @60 Hz (4K DCI), 2 direct computer connections, console/CPU DisplayPort monitor connectors, 2x USB 3.0 Type-A shared peripheral ports (front + rear), 3.5mm mini stereo audio/mic jacks, SuperSpeed 5Gbps USB 3.0, and port selection via pushbuttons, hotkey, or mouse; it states MSRP $449.95. The KVMGalore retailer page corroborates the same model GCS1942 with matching 4096x2160@60Hz resolution, USB 3.0 5Gbps hub, DisplayPort 1.2/HDCP, 7.1 HD audio, and pushbutton/hotkey/mouse switching, listing MSRP $350.00 and street price $314.00. Both pages consistently describe the 2-port dual-view DisplayPort KVMP, confirming this is exactly the GCS1942 and not the HDMI GCS1942H, cable-less GCS1942NC, or DisplayPort/HDMI GCS1942-UN sibling."
+    },
+    {
+      "slug": "startech-sv231dpu34k",
+      "name": "StarTech.com SV231DPU34K 2-Port DisplayPort KVM Switch 4K 60Hz",
+      "brand": "StarTech.com",
+      "category": "kvm-switches",
+      "releaseDate": null,
+      "priceUsd": 398.71,
+      "priceNote": "Markertek product page for MFG# SV231DPU34K lists \"List Price: $398.71\" and \"Our Price: $398.71\". Newegg lists the identical model at $475.94 via a third-party marketplace seller (NothingButSavings), so the Markertek list price is used as the more representative US figure.",
+      "specs": {
+        "portCount": 2,
+        "displayHeads": 1,
+        "videoInterface": "DisplayPort",
+        "maxResolution": "3840x2160@60",
+        "maxRefreshAt4kHz": 60,
+        "usbHubStandard": "USB 3.0 (5 Gbps)",
+        "usbPortCount": 2,
+        "edidEmulation": null,
+        "audioSupport": true,
+        "powerDeliveryWatts": null,
+        "switchingMethods": "button/hotkey"
+      },
+      "source": {
+        "url": "https://www.markertek.com/product/st-sv231dpu34k/startech-sv231dpu34k-2-port-displayport-kvm-switch-4k-60hz",
+        "accessedAt": "2026-07-11"
+      },
+      "corroboration": {
+        "url": "https://www.newegg.com/startech-sv231dpu34k-displayport-usb/p/N82E16817707461",
+        "accessedAt": "2026-07-11"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/startech-sv231dpu34k.jpg?v=878dc764a5",
+        "source": "markertek.com",
+        "license": "© StarTech.com",
+        "accessedAt": "2026-07-12"
+      },
+      "provenance": "The official StarTech.com page (startech.com/en-us/kvm-switches-accessories/sv231dpu34k) returned HTTP 403 to the fetcher, so primary sourcing is Markertek's product page for MFG# SV231DPU34K, which reproduces StarTech's full spec sheet: KVM Ports 2, Number of Monitors Supported 1, PC Video Type DisplayPort (DisplayPort 1.2), Maximum Digital Resolutions 3840x2160 @ 60Hz, integrated USB 3.0 hub sharing two peripherals, separate 3.5 mm stereo audio, and Push Button and Hotkeys port selection; it also lists List Price $398.71. Newegg independently confirms the exact same model SV231DPU34K with the identical spec table (2 Ports, 3840x2160 Ultra HD 4K, USB 3.0, 18W, push-button and hotkey) at a third-party price of $475.94, corroborating both specs and model identity. Both pages confirm this is the 2-port single-display SV231DPU34K, distinct from the 4-port quad-monitor SV231QDPU34K variant."
+    },
+    {
+      "slug": "tesmart-hks0402a1u",
+      "name": "TESmart HKS0402A1U 2-Port Dual Monitor HDMI KVM Switch 4K60 with EDID",
+      "brand": "TESmart",
+      "category": "kvm-switches",
+      "releaseDate": "2023",
+      "priceUsd": 199.99,
+      "priceNote": "US price $199.99 from the TESmart official product page (tesmart.com/products/hks202-e23), shown as \"Regular price $199.99\" / \"Sale price $199.99\" for the HKS202-E23 \"2 Port Dual Monitor KVM Switch Kit HDMI 4K60Hz with EDID\" — the current model name for HKS0402A1U. The Newegg retailer page was out of stock and showed no price, so the price comes from the manufacturer page.",
+      "specs": {
+        "portCount": 2,
+        "displayHeads": 2,
+        "videoInterface": "HDMI",
+        "maxResolution": "3840x2160@60",
+        "maxRefreshAt4kHz": 60,
+        "usbHubStandard": "USB 2.0",
+        "usbPortCount": null,
+        "edidEmulation": true,
+        "audioSupport": true,
+        "powerDeliveryWatts": null,
+        "switchingMethods": "button/hotkey/remote"
+      },
+      "source": {
+        "url": "https://www.tesmart.com/products/hks202-e23",
+        "accessedAt": "2026-07-11"
+      },
+      "corroboration": {
+        "url": "https://www.newegg.com/tesmart-hks0402a1u-hdmi-usb/p/1DJ-00RG-00043",
+        "accessedAt": "2026-07-11"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/tesmart-hks0402a1u.jpg?v=4edeb3458d",
+        "source": "tesmart.com",
+        "license": "© TESmart",
+        "accessedAt": "2026-07-12"
+      },
+      "provenance": "The TESmart official product page (tesmart.com/products/hks202-e23) is the current listing for this unit — TESmart's own support FAQ titles it \"HKS202-E23 ... (Previously HKS0402A1U/HDK0402A1U)\", confirming HKS202-E23 is the renamed HKS0402A1U — and its spec table states: For 2 PCs & 2 Monitors, max 3840x2160@60Hz (4K@60Hz), EDID Emulation Yes, 4x HDMI 2.0 in / 2x HDMI 2.0 out, 1x USB 2.0 hub, 1x 3.5mm L/R audio output, Laptop Charging No, and Keyboard Hotkey / Front Panel Button / IR Remote switching, with a Regular price of $199.99. The Newegg retailer page independently lists the exact SKU HKS0402A1U (Brand TESmart, Model HKS0402A1U, 2 computer ports, 2 monitor ports, Video Resolution 3840x2160@60Hz, HDMI+USB, USB 2.0 hub, EDID emulators, L/R audio, push-button/hotkey/IR switching), corroborating model identity and specs, and dates it \"First Listed on Newegg January 16, 2023\". Newegg was out of stock and displayed no price, so the $199.99 US figure is taken from the manufacturer page; usbPortCount is left null because the shared peripheral ports are split as 1x USB 2.0 hub + 2x USB 1.1 K/M pass-through with no single verbatim total stated."
+    },
+    {
+      "slug": "ugreen-8k-hdmi-kvm-switch-2-computers",
+      "name": "UGREEN 8K@60Hz HDMI KVM Switch (2 Computers, 1 Monitor)",
+      "brand": "UGREEN",
+      "category": "kvm-switches",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "No US price could be sourced verbatim. The Amazon US listing (ASIN B0CFFCPL26) showed \"No featured offers available\" with no displayed price at access time, and UGREEN's US store no longer lists this model (its HDMI-switch collection returns only two USB switches). Official UGREEN regional listings quote non-USD prices only — UGREEN Singapore: \"$106.39 SGD\"; UGREEN Sri Lanka: \"LKR 21,990\" (from LKR 24,433.31). No verbatim US MSRP or street price was available, so priceUsd is null.",
+      "specs": {
+        "portCount": 2,
+        "displayHeads": 1,
+        "videoInterface": "HDMI",
+        "maxResolution": "8K@60Hz",
+        "maxRefreshAt4kHz": 60,
+        "usbHubStandard": "USB 3.0 (5 Gbps)",
+        "usbPortCount": 4,
+        "edidEmulation": false,
+        "audioSupport": false,
+        "powerDeliveryWatts": null,
+        "switchingMethods": "button/remote"
+      },
+      "source": {
+        "url": "https://ugreen.lk/product/ugreen-hdmi-8k-60hz-kvm-switch-2-in-1-out-with-4-usb-devices-cm692-25961-1-year-warranty/",
+        "accessedAt": "2026-07-11"
+      },
+      "corroboration": {
+        "url": "https://www.amazon.com/UGREEN-Computers-Monitor-Keyboard-Controller/dp/B0CFFCPL26",
+        "accessedAt": "2026-07-11"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/ugreen-8k-hdmi-kvm-switch-2-computers.webp?v=be803e7b3c",
+        "source": "ugreen.lk",
+        "license": "© UGREEN",
+        "accessedAt": "2026-07-12"
+      },
+      "provenance": "The UGREEN Sri Lanka official-store page (source) carries the full manufacturer spec table for model CM692 / 25961, confirming HDMI 2.1 2-in/1-out, \"Maximum Resolution: 8K@60Hz\" (backward compatible 4K@60Hz), \"USB 3.0, up to 5Gbps\" with 3x USB-A + 1x USB-C, Button/Desktop-Controller switching, and that \"Hotkey switching and EDID emulation are not supported\"; its enumerated port list has no 3.5mm jack and power is only \"USB-C 5.0V 3.0A\" to the switch (no host power delivery). The Amazon US listing (corroboration) confirms the exact model identity — title \"UGREEN 8K@60Hz HDMI KVM Switch ... for 2 Computers Share 1 Monitor,\" \"Model Number 25961,\" ASIN B0CFFCPL26 — and the same 8K@60Hz / 4 USB 3.0 (5Gbps) / no-hotkey-no-EDID specs, but displayed \"No featured offers available\" so no US price could be captured. Both pages cite UGREEN model 25961 (the HDMI 2-computer/1-monitor variant), distinguishing it from the DisplayPort variant (B0CFFFHFJT) and the 2-monitor variant."
+    },
+    {
+      "slug": "avaccess-idock-c20",
+      "name": "AV Access iDock C20 USB-C KVM Switch Docking Station",
+      "brand": "AV Access",
+      "category": "kvm-switches",
+      "releaseDate": "2024-06",
+      "priceUsd": 207.99,
+      "priceNote": "AV Access official store lists the base iDock C20 at $207.99 (page shows a price range $207.99–$220.98 spanning the C20 and the C20+EXB01 kit; currently marked \"Sale! 20% OFF\"). Newegg lists the same model at $259.99 (Item# 9SIBVD9K925399), which matches the implied pre-discount list price (259.99 x 0.8 = 207.99). Value taken verbatim from the manufacturer's current published base-config price.",
+      "specs": {
+        "portCount": 2,
+        "displayHeads": 2,
+        "videoInterface": "Mixed",
+        "maxResolution": "3840x2160@60",
+        "maxRefreshAt4kHz": 60,
+        "usbHubStandard": "USB 3.0 (5 Gbps)",
+        "usbPortCount": 7,
+        "edidEmulation": true,
+        "audioSupport": true,
+        "powerDeliveryWatts": 60,
+        "switchingMethods": "button/remote"
+      },
+      "source": {
+        "url": "https://www.avaccess.com/products/idock-c20-kvm-switch-docking-station/",
+        "accessedAt": "2026-07-11"
+      },
+      "corroboration": {
+        "url": "https://www.newegg.com/v-av-access-idock-c20-usb-c-hdmi-usb/p/1DJ-01CR-00002",
+        "accessedAt": "2026-07-11"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/avaccess-idock-c20.jpg?v=4ff6582e6b",
+        "source": "newegg.com",
+        "license": "© AV Access",
+        "accessedAt": "2026-07-12"
+      },
+      "provenance": "The AV Access official product page (source) confirms the exact model \"iDock C20 USB C KVM Switch Docking Station for 2 Laptops\" (SKU: iDock C20): 2x full-featured USB-C inputs, 2x HDMI 2.0 outputs, dual 4K@60Hz, 60W PD per laptop, EDID emulation, 1G LAN, 1x 3.5mm headset jack, and shared peripheral USB (2x USB 3.0 up to 5Gb/s + 4x USB 2.0 + 1x USB-C data), switched via panel button or wired remote (EXB01, not included; its FAQ explicitly states hotkey switching is not supported). The manufacturer store lists the base config at $207.99 (range $207.99–$220.98 with the +EXB01 kit, marked 20% off). Newegg (corroboration) confirms the identical model (Model: iDock C20, Series: iDock, Brand: v AV Access, Item# 9SIBVD9K925399, \"First Listed on Newegg June 26, 2024\") with matching specs (2 computer / 2 monitor connections, 4K@60Hz, 60W PD, 2x USB 3.0 + 4x USB 2.0 + 1x USB-C, EDID emulation, push-button/remote) and lists it at $259.99, corroborating both the exact model identity and a mid-2024 release."
+    },
+    {
+      "slug": "unitek-v307a",
+      "name": "Unitek V307A HDMI 4K 60Hz KVM Switch (2-in-1-Out)",
+      "brand": "Unitek",
+      "category": "kvm-switches",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "No US-dollar price could be sourced verbatim from any fetched page. The manufacturer's own V307A product page has been delisted (Unitek's current KVM Switch collection at unitek-products.com lists 6 other models, not the V307A), and US retailer pages returned HTTP 403 to fetching (Central Computer, PB Tech). Fetched listings show only non-USD prices: HKTVmall (Sold by UNITEK) HK$388 special / HK$398, and MS Electronics EUR 54.99. priceUsd left null rather than converting or guessing.",
+      "specs": {
+        "portCount": 2,
+        "displayHeads": 1,
+        "videoInterface": "HDMI",
+        "maxResolution": null,
+        "maxRefreshAt4kHz": 60,
+        "usbHubStandard": "USB 2.0",
+        "usbPortCount": 4,
+        "edidEmulation": true,
+        "audioSupport": false,
+        "powerDeliveryWatts": null,
+        "switchingMethods": "button/hotkey"
+      },
+      "source": {
+        "url": "https://www.hktvmall.com/hktv/en/main/UNITEK/s/H0623006/Gadgets-&-Electronics/Gadgets-&-Electronics/Desktop-Computer-&-Computer-Accessories/Connecting-Cable-&-Unit-Convertor/Unit-Convertor/V307A-HDMI-KVM-Switch-2-In-1-Out/p/H0623006_S_785-2844",
+        "accessedAt": "2026-07-11"
+      },
+      "corroboration": {
+        "url": "https://www.mstronics.com/p/20651/unitek-kvm-hdmi-switch-2-1-with-4-port-usb-hub-v307a.html?cPath=294_1289_1209",
+        "accessedAt": "2026-07-11"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/unitek-v307a.jpg?v=5b4ae2c21d",
+        "source": "hktvmall.com",
+        "license": "© Unitek",
+        "accessedAt": "2026-07-12"
+      },
+      "provenance": "The HKTVmall listing is operated and \"Sold by UNITEK\" (the manufacturer's official Hong Kong storefront) and confirms the exact model V307A with a full spec table: 2 Input / 1 Output HDMI KVM sharing 1 HDMI monitor and 4 USB ports, HDMI 2.0 up to 4K@60Hz UHD, HDCP 2.2, EDID Signal Transmission, switch-button/hotkey switching, Space Grey metal housing, downstream HDMI(4K)x1 + USB-A(480Mbps)x2 + K/M USB-A x2 (confirming the 4-port USB 2.0 hub and no 3.5mm audio jack). MS Electronics (independent retailer) corroborates the same V307A feature set and lists Connectivity: HDMI and Ports: 2 port. No verbatim US-dollar price appeared on any fetched page — the manufacturer's own product page is delisted and US retailer pages (Central Computer, PB Tech) blocked fetching with HTTP 403 — so priceUsd is left null; the only prices on fetched pages were HK$388/HK$398 (HKTVmall) and EUR 54.99 (MS Electronics)."
+    }
+  ]
+}

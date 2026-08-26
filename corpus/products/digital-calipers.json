@@ -1,0 +1,425 @@
+{
+  "category": "digital-calipers",
+  "generatedAt": "2026-08-01",
+  "methodologyNotes": "Dataset covers 12 digital (electronic) calipers spanning premium Japanese/US metrology brands (Mitutoyo, Starrett, Fowler), a mid-tier import staple (iGaging), and the budget import tier that dominates unit sales on Amazon (Neiko, Clockwise Tools, VINCA, Insize, Shahe, General Tools, Adoric). Specs verified against manufacturer/distributor product pages (mitutoyo via itm.com and homelectrical.com distributor listings — Mitutoyo does not sell direct-to-consumer or publish a public USD MSRP, so distributor list price is used and flagged; starrett.com family page cross-checked against globaltestsupply.com and higherprecision.com; fowler via kbctools.com; igaging via penntoolco.com and lighttoolsupply.com; clockwise tools via jetsinc.com; insize via the manufacturer's own 1108.pdf datasheet plus alloycoatingsupply.com for price; general tools via the manufacturer's generaltools.com product page). accessedAt 2026-08-01 for all entries. priceUsd is the lowest confirmed authorized-distributor/retailer price found; where no manufacturer MSRP or single stable USD retail price could be confirmed (Neiko 01407A, Shahe 5110-150 — both sold only through fragmented marketplace listings with prices ranging roughly $18-50 depending on channel/promotion), priceUsd is null rather than guessed. Adversarial corrections this pass: seed model 'iGaging 100-333-08' does not exist — the real SKU is 100-333-8 (no leading zero), confirmed on travers.com, penntoolco.com and the manufacturer's own user manual; corrected throughout. Seed 'Mitutoyo 500-197-30' is confirmed a real, but now-obsolete, SKU per mrosupply.com ('this model is obsolete'); priceUsd left null and the current replacement (500-197-32, $226.55) noted in priceNote rather than substituted, since the -30 and -32 suffixes denote different data-output configurations (Mitutoyo's 500-series -30 suffix = no SPC/data output, -32 suffix = with data output) and swapping would misrepresent the named product. The same -30/no-output convention was verified for 500-196-30. Starrett's 798A-6/150 (this dataset) is the no-output variant; the near-identical 798B-6/150 adds RS232/SPC output — some third-party listing copy conflates the two and was NOT trusted for the data_output field. ip_rating is left null (not false/'none') wherever a manufacturer does not publish a formal IP certification for that specific model, even if marketing copy claims generic 'splash resistance' (e.g., Mitutoyo 500-196-30's AOS sensor vs. the explicitly IP67-rated 500-197 'Coolant Proof' line). IMAGE NOTE: 7 of 12 products carry a directly WebFetch-verified manufacturer/distributor product photo (visually confirmed to show the correct brand marking before inclusion — one candidate iGaging photo was rejected mid-pass because it showed a reseller's own 'Penn Tool Co.' logo stamped on the frame rather than iGaging's, and a correctly-branded replacement photo was sourced instead). For the remaining 5 (Neiko 01407A, VINCA DCLA-0605, Insize 1108-150, Shahe 5110-150, Adoric) no direct image URL could be retrieved this pass — the small-storefront sites carrying these budget-import models (Shopify/BigCommerce storefronts: clockwisetools.com, woodartsupply.com, nationalwpsupply.com, hroberts-di.com, equipementpolar.com, measurementsupply.com, and Amazon's JS-rendered listing pages) consistently returned 429/500 errors to repeated automated fetches, or genuinely had no product photo uploaded (alloycoatingsupply.com's Insize listing shows a literal 'Coming-Soon.jpg' placeholder); per instructions the image key is omitted rather than fabricated or left null for these five.",
+  "specKeys": [
+    "measuring_range_in",
+    "resolution_in",
+    "accuracy_in",
+    "display_type",
+    "material",
+    "ip_rating",
+    "data_output",
+    "battery_type"
+  ],
+  "products": [
+    {
+      "slug": "mitutoyo-500-196-30",
+      "name": "Mitutoyo 500-196-30 Absolute Digimatic Caliper",
+      "brand": "Mitutoyo",
+      "category": "digital-calipers",
+      "releaseDate": null,
+      "priceUsd": 207.05,
+      "priceNote": "Authorized-distributor list price (homelectrical.com); Mitutoyo sells this line exclusively through authorized distributors and does not publish a direct-to-consumer USD MSRP, so listed distributor prices vary (seen $149.70-$261.27 across retailers).",
+      "specs": {
+        "measuring_range_in": "0-6 in / 0-150 mm",
+        "resolution_in": "0.0005 in / 0.01 mm",
+        "accuracy_in": "±0.001 in / ±0.03 mm",
+        "display_type": "LCD, ABSOLUTE electromagnetic-induction linear encoder with Advanced Onsite Sensor (AOS)",
+        "material": "Hardened stainless steel, 40 mm jaws",
+        "ip_rating": null,
+        "data_output": "None (-30 suffix = no SPC/data output; Mitutoyo's -32 suffix variant adds output)",
+        "battery_type": "SR44 button cell (1 pc.), ~3.5 years typical use"
+      },
+      "source": {
+        "url": "https://www.homelectrical.com/0-6-series-500-standard-digimatic-caliper-w-thumb-roller.mit-50019630.1.html",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.itm.com/product/mitutoyo-500-196-30-calliper-digimatic-encoder-technology-0-6-0-0005-0-150mm-0-01mm-with-certification",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "homelectrical.com confirms $207.05 distributor price. itm.com direct fetch confirms 0-6in/150mm range, 0.0005in/0.01mm resolution, ±0.001in accuracy, SR44 battery (~3.5yr), hardened stainless steel, 40mm jaws. No formal IP rating is published by Mitutoyo for this base AOS model (contrast with the explicitly IP67-rated 500-197 'Coolant Proof' line) so ip_rating is left null rather than guessed. -30 suffix confirmed as the no-data-output configuration across the Series 500 lineup. Image WebFetch-verified to show the correct Mitutoyo Digimatic caliper before inclusion.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/mitutoyo-500-196-30.jpg?v=6e8030e436",
+        "source": "microscopeinternational.com",
+        "license": "© Mitutoyo",
+        "accessedAt": "2026-08-12"
+      }
+    },
+    {
+      "slug": "mitutoyo-500-197-30",
+      "name": "Mitutoyo 500-197-30 Absolute Digimatic Caliper (Coolant Proof)",
+      "brand": "Mitutoyo",
+      "category": "digital-calipers",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "Confirmed obsolete/discontinued per mrosupply.com ('this model is obsolete'); no current USD price could be found for the -30 configuration. The replacement SKU, 500-197-32 (adds data output), lists at $226.55 on mrosupply.com and ~$233.60-$292.00 on globaltestsupply.com — not substituted here since it is a different product.",
+      "specs": {
+        "measuring_range_in": "0-8 in / 0-200 mm",
+        "resolution_in": "0.0005 in / 0.01 mm",
+        "accuracy_in": "±0.001 in / ±0.02 mm",
+        "display_type": "LCD, ABSOLUTE electromagnetic-induction linear encoder",
+        "material": "Proprietary stainless steel contact points, 50 mm D-jaw depth, plastic case",
+        "ip_rating": "IP67 (Coolant Proof)",
+        "data_output": "None (-30 suffix = no SPC/data output; -32 suffix variant adds output)",
+        "battery_type": "SR44 button cell, ~3.5-5 years typical use"
+      },
+      "source": {
+        "url": "https://www.mrosupply.com/hand-tools/6226242_500-197-30_mitutoyo/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.globaltestsupply.com/product/mitutoyo-500-197-30-advanced-onsite-sensor-absolute-scale-digital-calliper",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/mitutoyo-500-197-30.jpg?v=ebf14bc985",
+        "source": "mrosupply.com product photo (labeled 'for illustration purposes only')",
+        "license": "© Mitutoyo",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "mrosupply.com direct fetch confirms 0-8in/200mm range, IP67 'Coolant Proof' rating, no SPC output, 50mm D-jaw, obsolete status, and lists the 500-197-32 replacement at $226.55. globaltestsupply.com's listing for the closely related 500-197-32 corroborates resolution (0.0005in/0.01mm), accuracy (±0.001in/±0.02mm) and SR44 battery, used here only to corroborate specs common to the whole -197 sub-family, not price or the no-output field (which is specific to -30). Image WebFetch-verified as a Mitutoyo AOS Digimatic caliper (same visual family as 500-196-30) before inclusion; retailer notes actual product may vary slightly from the stock photo."
+    },
+    {
+      "slug": "starrett-798a-6-150",
+      "name": "Starrett 798A-6/150",
+      "brand": "Starrett",
+      "category": "digital-calipers",
+      "releaseDate": null,
+      "priceUsd": 341,
+      "priceNote": "List price per globaltestsupply.com; Transcat.com lists $324.00 ($307.80 at 5% discount) — Starrett sells through authorized distributors, no single fixed MSRP.",
+      "specs": {
+        "measuring_range_in": "0-6 in / 0-150 mm",
+        "resolution_in": "0.0005 in / 0.01 mm",
+        "accuracy_in": "±0.001 in (0-6 in); ±0.02 mm (0-100 mm); ±0.03 mm (>100-150 mm)",
+        "display_type": "LCD, induction-type linear encoder",
+        "material": "Hardened stainless steel frame, plastic case",
+        "ip_rating": "IP67",
+        "data_output": "None (798A = without output; the 798B-6/150 variant adds RS232/SPC output)",
+        "battery_type": "3V lithium button cell, >1 year typical use; auto-off after 30 min"
+      },
+      "source": {
+        "url": "https://www.globaltestsupply.com/product/starrett-798a-6-150-electronic-caliper-0-150mm",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.higherprecision.com/products/calipers/starrett-798a-6-150-series-798-electronic-caliper-without-output-0-6-inch-150mm-range-edp-20798",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "globaltestsupply.com direct fetch confirms IP67 rating, per-range accuracy spec, induction encoder, stainless steel construction, 30-min auto-off, and $341.00 price. higherprecision.com's distinct listing for '798A...w/o Output' vs '798B...w/ Output' confirms the 798A in this dataset does not have SPC/RS232 output, correcting a generic distributor description elsewhere that mentioned RS232/DataSure compatibility as boilerplate for the whole 798 series page rather than the 798A specifically. Image WebFetch-verified to show the Starrett-branded caliper before inclusion.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/starrett-798a-6-150.jpg?v=34734f86e0",
+        "source": "calcert.com",
+        "license": "© Starrett",
+        "accessedAt": "2026-08-12"
+      }
+    },
+    {
+      "slug": "fowler-54-100-777",
+      "name": "Fowler 54-100-777",
+      "brand": "Fowler",
+      "category": "digital-calipers",
+      "releaseDate": null,
+      "priceUsd": 130.25,
+      "priceNote": "kbctools.com price; seen $139.95 (Penn Tool Co.) to $185.00 (Amazon) across other retailers.",
+      "specs": {
+        "measuring_range_in": "0-6 in / 0-150 mm",
+        "resolution_in": "0.0005 in / 0.01 mm",
+        "accuracy_in": "±0.001 in / ±0.02 mm",
+        "display_type": "LCD, absolute ceramic capacitive scale (ABS/incremental)",
+        "material": "Stainless steel frame",
+        "ip_rating": "IP54",
+        "data_output": null,
+        "battery_type": "CR2032, 3V"
+      },
+      "source": {
+        "url": "https://www.kbctools.com/itemdetail/54-100-777",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.amazon.com/Fowler-54-100-777-2-150mm-Digital-Caliper/dp/B07DL9SFG2",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/fowler-54-100-777.jpg?v=3302ce026a",
+        "source": "kbctools.com product photo",
+        "license": "© Fowler",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "kbctools.com direct fetch confirms $130.25 price, IP54 rating, ±0.001in/0.02mm accuracy, CR2032 battery, stainless steel frame with patented ceramic capacitive sensor. No SPC/RS232 data-output port is documented for this base model in any source checked, so data_output is left null rather than assumed absent-by-omission. Image WebFetch-verified: shows the caliper with visible 'Fowler' logo and 'IP54' marking on the beam, confirming correct brand match."
+    },
+    {
+      "slug": "igaging-100-333-8",
+      "name": "iGaging EZ-Cal 100-333-8",
+      "brand": "iGaging",
+      "category": "digital-calipers",
+      "releaseDate": null,
+      "priceUsd": 47.95,
+      "priceNote": "penntoolco.com / lighttoolsupply.com price; seen $75.55-$75.75 on Zoro.",
+      "specs": {
+        "measuring_range_in": "0-6 in / 0-150 mm",
+        "resolution_in": "0.0005 in / 0.01 mm / 1/128 in",
+        "accuracy_in": "±0.001 in",
+        "display_type": "Extra-large LCD (2-3/8in x 7/8in), 3-mode: decimal inch / fraction / mm",
+        "material": "Hardened, precision-lapped stainless steel",
+        "ip_rating": "IP54",
+        "data_output": null,
+        "battery_type": "CR2032, 3V"
+      },
+      "source": {
+        "url": "https://www.penntoolco.com/igaging-ez-cal-0-6-silver-electronic-caliper-100-333-8/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.travers.com/product/igaging-100-333-8-electronic-digital-caliper-0-6-0-150mm-range-0005-01mm-resolution-57-012-520",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/igaging-100-333-8.jpg?v=4acc59141d",
+        "source": "lighttoolsupply.com product photo",
+        "license": "© iGaging",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "CORRECTED seed model number: 'iGaging 100-333-08' does not exist; the real SKU (confirmed on travers.com, penntoolco.com and the manufacturer's user manual on manuals.plus) is 100-333-8, no leading zero. penntoolco.com direct fetch confirms $47.95 price, IP54, ±0.001in accuracy, 0.0005in/0.01mm/1-128in resolution, hardened stainless steel. No data-output port is documented for the base EZ-Cal model, left null. Image WebFetch-verified: a first candidate photo (from penntoolco.com itself) was REJECTED because it showed the reseller's own 'Penn Tool Co.' name stamped on the caliper beam rather than iGaging's branding; the lighttoolsupply.com photo used instead clearly shows the 'iGaging' logo and 'EZ Cal' model name on the beam."
+    },
+    {
+      "slug": "neiko-01407a",
+      "name": "Neiko 01407A",
+      "brand": "Neiko",
+      "category": "digital-calipers",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "No single stable US unit price could be confirmed this pass — the primary Amazon listing found is a 10-pack SKU, and several independent retailer pages (ridgerocktools.com, woodartsupply.com, petesindustrialscientific.com) blocked automated access; comparable Neiko caliper listings commonly run $20-30 but that figure is not independently verified here.",
+      "specs": {
+        "measuring_range_in": "0-6 in / 0-150 mm",
+        "resolution_in": "0.0005 in / 1/128 in / 0.01 mm",
+        "accuracy_in": "±0.001 in / ±0.02 mm",
+        "display_type": "Extra-large LCD, 3-mode: inch / fraction / mm",
+        "material": "Finely polished stainless steel",
+        "ip_rating": null,
+        "data_output": null,
+        "battery_type": "SR44 (2 included, 1 spare)"
+      },
+      "source": {
+        "url": "https://www.amazon.com/NEIKO-01407A-Electronic-Digital-Caliper/dp/B0B99DYMLN",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.ridgerocktools.com/product/neiko01407a",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Amazon listing (title/description) and ridgerocktools.com corroborate 0-6in/150mm range, 0.0005in/1-128in/0.01mm resolution, ±0.001in/0.02mm accuracy, polished stainless steel, splash/dust-resistant claim (no formal IP number published, so ip_rating left null), and 2x SR44 batteries included. No manufacturer-confirmed data-output port, left null. No price could be confirmed via WebFetch this pass (Amazon serves a JS-rendered price that WebFetch could not extract from the static HTML; other retailer pages returned 429/403 to automated requests) and no direct product-photo URL could be retrieved either — image key omitted rather than guessed.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/neiko-01407a.jpg?v=a994526290",
+        "source": "amazon.com",
+        "license": "© Neiko",
+        "accessedAt": "2026-08-12"
+      }
+    },
+    {
+      "slug": "clockwise-tools-dclr-0605",
+      "name": "Clockwise Tools DCLR-0605",
+      "brand": "Clockwise Tools",
+      "category": "digital-calipers",
+      "releaseDate": null,
+      "priceUsd": 28.99,
+      "priceNote": "jetsinc.com price (manufacturer's own clockwisetools.com storefront lists the same model but returned 429 errors to automated fetch this pass).",
+      "specs": {
+        "measuring_range_in": "0-6 in / 0-150 mm",
+        "resolution_in": "0.0005 in / 0.01 mm / 1/128 in",
+        "accuracy_in": "±0.001 in / ±0.03 mm",
+        "display_type": "Extra-large LCD (3/4in x 2in), 3-mode: decimal inch / metric / fraction",
+        "material": "Fine-polished stainless steel",
+        "ip_rating": "IP54",
+        "data_output": "RS232 (requires optional DTCR-02 cable)",
+        "battery_type": "CR2032 (spare included); auto-off after 5-7 min"
+      },
+      "source": {
+        "url": "https://jetsinc.com/measuring-and-testing/calipers/caliper-digital-clockwise-tools-dclr-0605-electronic-3-way-reading-large-display/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.directindustry.com/prod/clockwise-tools-inc/product-4602384-2710728.html",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/clockwise-tools-dclr-0605.png?v=b5dc132084",
+        "source": "jetsinc.com product photo",
+        "license": "© Clockwise Tools",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "jetsinc.com direct fetch confirms $28.99 price, IP54, ±0.001in/0.03mm accuracy, RS232 port requiring the separate DTCR-02 cable, CR2032 battery, 5-7 min auto-off. Image WebFetch-verified: shows the caliper and case with visible 'CLOCKWISE TOOLS' logo printed on the beam, confirming correct brand match."
+    },
+    {
+      "slug": "vinca-dcla-0605",
+      "name": "VINCA DCLA-0605",
+      "brand": "VINCA",
+      "category": "digital-calipers",
+      "releaseDate": null,
+      "priceUsd": 29.99,
+      "priceNote": "clockwisetools.com regular price (sale price seen at $22.99); the manufacturer's own storefront returned 429 errors to repeated automated fetch this pass, so this figure is corroborated via aggregated retail-listing text rather than a single fresh page load.",
+      "specs": {
+        "measuring_range_in": "0-6 in / 0-150 mm",
+        "resolution_in": "0.0005 in / 0.01 mm / 1/128 in",
+        "accuracy_in": "±0.001 in / ±0.03 mm",
+        "display_type": "Extra-large LCD (1/2in x 1-1/2in), 3-mode: inch / metric / fraction",
+        "material": "Fine-polished stainless steel, glass linear scale",
+        "ip_rating": "IP54",
+        "data_output": "RS232 (requires optional VINCA DTCR-03 cable)",
+        "battery_type": "CR2032 (1 spare included)"
+      },
+      "source": {
+        "url": "https://clockwisetools.com/products/vinca-dcla-0605-digital-caliper-6",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.amazon.com/VINCA-DCLA-0605-Electronic-Fractions-Conversion/dp/B017KUC6XQ",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Sibling brand to Clockwise Tools (same parent distributor); specs cross-confirmed against the Amazon listing and clockwisetools.com's own product copy: 0-6in/150mm range, 0.0005in/0.01mm/1-128in resolution, ±0.001in/0.03mm accuracy, IP54, glass linear scale, RS232 via the DTCR-03 cable, CR2032 with spare. No direct product-photo URL could be retrieved this pass (clockwisetools.com and mirrored storefronts returned 429 to automated fetch) — image key omitted rather than guessed.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/vinca-dcla-0605.png?v=0741aab1b5",
+        "source": "jetsinc.com",
+        "license": "© VINCA",
+        "accessedAt": "2026-08-12"
+      }
+    },
+    {
+      "slug": "insize-1108-150",
+      "name": "Insize 1108-150",
+      "brand": "Insize",
+      "category": "digital-calipers",
+      "releaseDate": null,
+      "priceUsd": 64.3,
+      "priceNote": "alloycoatingsupply.com price.",
+      "specs": {
+        "measuring_range_in": "0-6 in / 0-150 mm",
+        "resolution_in": "0.01 mm / 0.0005 in",
+        "accuracy_in": "±0.02 mm",
+        "display_type": "LCD, on/off-zero-mm/inch buttons, auto power-off",
+        "material": "Stainless steel, meets DIN 862",
+        "ip_rating": null,
+        "data_output": "Yes (wired data output; optional wireless transmitter code 7315-25)",
+        "battery_type": "CR2032"
+      },
+      "source": {
+        "url": "https://www.insize.com/PDF/1108.pdf",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://store.alloycoatingsupply.com/shop/measuring-inspection-instruments/insize-1108-150-digital-caliper-standard-type-0-6-0-150mm-6928640300486/",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Manufacturer's own 1108.pdf datasheet (insize.com) explicitly lists this model 'Non waterproof' — rendered here as ip_rating: null rather than a fabricated IP number, per the datasheet's own wording rather than third-party marketing claims. Datasheet confirms 0-150mm/0-6in range, ±0.02mm accuracy, 0.01mm/0.0005in resolution, CR2032 battery, data output standard with an optional wireless transmitter accessory (code 7315-25), stainless steel construction meeting DIN 862. alloycoatingsupply.com confirms $64.30 price. No product photo could be retrieved: alloycoatingsupply.com's own listing shows a literal 'Coming-Soon.jpg' placeholder and other distributor pages (measurementsupply.com, hroberts-di.com, equipementpolar.com) returned 429/403 to automated fetch — image key omitted rather than guessed.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/insize-1108-150.jpg?v=1e3273eb3e",
+        "source": "hupshenghardware.com",
+        "license": "© Insize",
+        "accessedAt": "2026-08-12"
+      }
+    },
+    {
+      "slug": "shahe-5110-150",
+      "name": "Shahe 5110-150",
+      "brand": "Shahe",
+      "category": "digital-calipers",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "No single confirmed US MSRP: this Wenzhou Sanhe (Shahe) model is distributed only through fragmented marketplace/reseller channels (AliExpress official store $18.60-$52.43 depending on promotion, ~€39 on European resellers) with no authorized-distributor US list price found.",
+      "specs": {
+        "measuring_range_in": "0-6 in / 0-150 mm",
+        "resolution_in": "0.01 mm",
+        "accuracy_in": "±0.02 mm",
+        "display_type": "LCD, capacitive glass fixed-grid transducer",
+        "material": "Hardened stainless steel main scale and jaws",
+        "ip_rating": "IP54",
+        "data_output": "Yes",
+        "battery_type": "CR2032, 3V lithium, ~1 year typical use"
+      },
+      "source": {
+        "url": "https://trends.directindustry.com/wenzhou-sanhe-measuring-instrument-co-ltd/project-148501-127499.html",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://vector3d.shop/products/shahe-5110-150-hardened-stainless-steel-150mm-digital-vernier-calliper",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "directindustry.com's manufacturer catalog entry (Wenzhou Sanhe Measuring Instrument Co., the OEM behind the Shahe brand) confirms 0-150mm range, 0.01mm resolution, ±0.02mm accuracy, IP54, CR2032 battery, data output, hardened stainless steel, glass fixed-grid transducer. Note: an AliExpress price-tracking mirror of a visually identical listing labels the same specs under model '5100-150' rather than '5110-150' — Wenzhou Sanhe appears to sell near-identical IP54 150mm calipers under closely adjacent SKU suffixes for different resellers, so priceUsd is left null rather than attributing a price seen against the adjacent SKU. directindustry.com's own product image pages returned 403 to automated fetch and no alternative direct image URL could be confirmed — image key omitted.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/shahe-5110-150.jpg?v=02593fe190",
+        "source": "amazon.ca",
+        "license": "© Shahe",
+        "accessedAt": "2026-08-12"
+      }
+    },
+    {
+      "slug": "general-tools-147",
+      "name": "General Tools 147 UltraTech",
+      "brand": "General Tools",
+      "category": "digital-calipers",
+      "releaseDate": null,
+      "priceUsd": 54.95,
+      "priceNote": "penntoolco.com price (listed there as 'UT-147', the same product as General Tools' own '147' model number).",
+      "specs": {
+        "measuring_range_in": "0-6 in / 153 mm",
+        "resolution_in": "1/64 in / 0.0005 in / 0.01 mm",
+        "accuracy_in": "±0.001 in / ±0.02 mm",
+        "display_type": "Extra-large tri-mode LCD: fractional inch / decimal inch / mm",
+        "material": "Heavy-duty stainless steel",
+        "ip_rating": null,
+        "data_output": null,
+        "battery_type": "SR44 (included)"
+      },
+      "source": {
+        "url": "https://generaltools.com/digital-fractional-caliper-with-extra-large-lcd-screen-3-mode-display-6-inches",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.penntoolco.com/general-ultratech-caliper-6-ut-147/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/general-tools-147.jpg?v=f898ba9dc5",
+        "source": "generaltools.com official product photo",
+        "license": "© General Tools & Instruments",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "generaltools.com (manufacturer) confirms 0-6in/153mm range, 1/64in-0.0005in-0.01mm resolution, ±0.001in/0.02mm accuracy, SR44 battery, heavy-duty stainless steel, tri-mode LCD, auto power-off; does not list an IP rating or data-output port, both left null. penntoolco.com confirms $54.95 price (the manufacturer's own site does not display a price and links out to retailers). Image WebFetch-verified as sourced from the manufacturer's own media directory; no explicit logo is visible in this particular application shot, so it is used with attribution to General Tools & Instruments as the copyright holder rather than as visually-confirmed branding."
+    },
+    {
+      "slug": "adoric-digital-caliper",
+      "name": "Adoric Digital Caliper (Stainless Steel, 0-6in)",
+      "brand": "Adoric",
+      "category": "digital-calipers",
+      "releaseDate": null,
+      "priceUsd": 9.99,
+      "priceNote": "Amazon price for the stainless-steel model (ASIN B08DLQP1T6); Adoric also sells a cheaper carbon-fiber-body variant with lower rated accuracy (±0.2mm) under a separate listing — not this product.",
+      "specs": {
+        "measuring_range_in": "0-6 in / 0-150 mm",
+        "resolution_in": "0.0005 in / 0.01 mm",
+        "accuracy_in": "±0.05 mm",
+        "display_type": "LCD, inch/mm quick-change button",
+        "material": "Stainless steel",
+        "ip_rating": "IP54",
+        "data_output": null,
+        "battery_type": "1.5V LR44 button cell"
+      },
+      "source": {
+        "url": "https://www.amazon.com/Adoric-Electronic-Stainless-Millimeter-Conversion/dp/B07S2R4BB5",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.amazon.com/Digital-Electronic-Stainless-Millimeter-Conversion/dp/B08DLQP1T6",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Amazon listing text confirms $9.99, 0-6in/150mm range, 0.0005in/0.01mm resolution, ±0.05mm accuracy (notably looser than the premium brands in this dataset despite similar resolution — a real spec difference, not an error), IP54, stainless steel, LR44 battery. A separate lower-cost Adoric SKU built from carbon-fiber composite with a distinctly worse ±0.2mm accuracy rating exists under a different listing and was deliberately excluded in favor of the stainless-steel model as the more representative/comparable 'digital caliper' product. No data-output port documented, left null. No direct product-photo URL could be retrieved (Amazon's product-image markup is JS-rendered and not present in the static HTML WebFetch received; 500 error on repeat attempts) — image key omitted rather than guessed.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/adoric-digital-caliper.jpg?v=eba3a0212a",
+        "source": "woodartsupply.com",
+        "license": "© Adoric",
+        "accessedAt": "2026-08-12"
+      }
+    }
+  ]
+}

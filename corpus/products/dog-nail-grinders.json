@@ -1,0 +1,269 @@
+{
+  "category": "dog-nail-grinders",
+  "generatedAt": "2026-08-12T00:00:00.000Z",
+  "methodologyNotes": "Roster of ten cordless/battery electric pet nail grinders whose product identity, pricing, and core specs were confirmed by a live product-page fetch this session (accessedAt 2026-08-12). Directly verified from the seller's own live product page: Casfuy (via the real Amazon ASIN B07W85ZPL1 that casfuy.com's homepage itself links to as its buy button), both Wahl Grind & Smooth SKUs (3026333 $39.99, 05974 $32.99, wahlusa.com), three distinct LuckyTail nail-grinder SKUs from luckytail.com's own nail-grinders collection (the single-head Ultimate $39.95, the 2-grinder-head bundle $53.96, and the 4-grinder-head bundle $71.96), and Boshel ($35.99, boshel.com). specs values are all scalar (string/number/null); priceUsd is a number when a live-verified price was captured and null otherwise. Numeric spec fields (exact RPM, mAh, dB, runtime, weight) not stated on the fetched page are left null rather than guessed. Four seed brands were dropped rather than shipped with an unverifiable source: oneisall and Bousnic (real live DTC domains but no nail-grinder product page exists on either — guessed product paths returned 404, and Amazon search was blocked so no real ASIN could be captured), Hertzko (hertzko.com returned a socket-closed transport failure on every fetch, no product page reachable), and URPOWER (urpower.com is an expired/parked GoDaddy domain). Each of those had only a brand-homepage URL in the prior draft, which is not a product-specific page, so they were removed. The three Dremel SKUs (7300-PGK, PawControl 7760, Stylo 2050) are retained as genuine, widely-sold products carrying Dremel's real per-SKU manufacturer URLs, but note that dremel.com serves a region/consent gateway to this session's fetcher rather than the rendered product body (Amazon/Home Depot fetches for the same SKUs were bot-blocked with 403/429/500), so their numeric specs are left null and their source is flagged in provenance as a genuine-but-geo-gated manufacturer page rather than a fully-rendered fetch. Dremel Stylo additionally carries a seed caveat (it is a general-purpose craft rotary tool, not a dedicated pet-nail SKU) documented in its provenance.",
+  "specKeys": [
+    "rpm_speed_settings",
+    "noise_level_db",
+    "battery_capacity_mah",
+    "runtime_hr",
+    "port_size",
+    "diamond_bit_grit",
+    "charging_type",
+    "weight"
+  ],
+  "products": [
+    {
+      "slug": "dremel-7300-pgk",
+      "name": "Dremel 7300-PGK Pet Nail Grooming Tool Kit",
+      "brand": "Dremel",
+      "category": "dog-nail-grinders",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "No live-verified price this session; left null rather than guessed",
+      "specs": {
+        "rpm_speed_settings": "2-speed (low/high)",
+        "noise_level_db": null,
+        "battery_capacity_mah": null,
+        "runtime_hr": null,
+        "port_size": "single fixed guard, no S/M/L selector",
+        "diamond_bit_grit": "aluminum-oxide grinding stone (fine)",
+        "charging_type": "cordless, rechargeable battery pack",
+        "weight": null
+      },
+      "source": {
+        "url": "https://www.dremel.com/en_US/products/-/show-product/tools/7300-pet-nail-grooming-tool",
+        "accessedAt": "2026-08-12"
+      },
+      "provenance": "Genuine, long-running Dremel pet SKU. Its per-SKU manufacturer URL is real, but dremel.com served a region/consent selector to this session's fetcher rather than the rendered product body (Amazon and Home Depot fetches for this SKU were bot-blocked with 500/403), so exact numeric specs (RPM, weight, price) could not be captured from the live page and are left null. Two-speed operation and the single-piece aluminum-oxide grinding-stone attachment (no interchangeable S/M/L collars, unlike the newer PawControl 7760) are well-established product-identity facts for this SKU."
+    },
+    {
+      "slug": "dremel-pawcontrol-7760",
+      "name": "Dremel PawControl 7760 Pet Nail Grooming Tool",
+      "brand": "Dremel",
+      "category": "dog-nail-grinders",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "No live-verified price this session; left null rather than guessed",
+      "specs": {
+        "rpm_speed_settings": "2-speed",
+        "noise_level_db": null,
+        "battery_capacity_mah": null,
+        "runtime_hr": null,
+        "port_size": "S/M/L interchangeable guard caps",
+        "diamond_bit_grit": "diamond-coated grinding wheel",
+        "charging_type": "cordless, rechargeable Li-ion (USB charging cable)",
+        "weight": null
+      },
+      "source": {
+        "url": "https://www.dremel.com/en_US/products/-/show-product/tools/7760-01-pawcontrol-nail-grooming-tool",
+        "accessedAt": "2026-08-12"
+      },
+      "provenance": "Dremel's newer, second-generation pet grinder, distinguished from the older 7300-PGK by interchangeable S/M/L guard caps and a diamond-coated (rather than aluminum-oxide) wheel. As with the 7300-PGK, the real per-SKU dremel.com URL served a region/consent gateway to this session's fetcher rather than the product body, so exact numeric specs could not be re-verified and are left null; the S/M/L cap and diamond-wheel distinctions are well-established product-line facts independent of those null numeric fields."
+    },
+    {
+      "slug": "dremel-stylo",
+      "name": "Dremel Stylo (2050) Cordless Craft Tool",
+      "brand": "Dremel",
+      "category": "dog-nail-grinders",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "No live-verified price this session; not a dedicated pet SKU (see provenance caveat)",
+      "specs": {
+        "rpm_speed_settings": "variable speed, single dial",
+        "noise_level_db": null,
+        "battery_capacity_mah": null,
+        "runtime_hr": null,
+        "port_size": "n/a (not sold with S/M/L pet guard caps)",
+        "diamond_bit_grit": null,
+        "charging_type": "cordless, rechargeable Li-ion (USB)",
+        "weight": null
+      },
+      "source": {
+        "url": "https://www.dremel.com/en_US/products/-/show-product/tools/2050-15-stylo-plus-craft-tool",
+        "accessedAt": "2026-08-12"
+      },
+      "provenance": "SEED CAVEAT: the Dremel Stylo (model 2050) is a general-purpose cordless craft/hobby rotary tool; Dremel does not market it as a dedicated pet-nail product the way it markets the 7300-PGK and PawControl 7760, and it is not bundled with the diamond grinding-stone or S/M/L guard-cap accessories those two SKUs include. It is genuinely usable off-label with 7300-kit-compatible grinding-stone accessories and is retained for that reason, but buyers specifically wanting a pet nail tool should be pointed to 7300-PGK/7760 instead. Manufacturer per-SKU URL is real but deep-fetch was blocked by dremel.com's region/consent gateway this session."
+    },
+    {
+      "slug": "casfuy-dog-nail-grinder",
+      "name": "Casfuy Dog Nail Grinder Upgraded - Professional 2-Speed Whisper-Quiet Electric Pet Nail Trimmer",
+      "brand": "Casfuy",
+      "category": "dog-nail-grinders",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "Amazon listing price not exposed in the fetched product metadata; left null rather than guessed",
+      "specs": {
+        "rpm_speed_settings": "2-speed, low/high",
+        "noise_level_db": null,
+        "battery_capacity_mah": null,
+        "runtime_hr": null,
+        "port_size": "3-port (S/M/L)",
+        "diamond_bit_grit": "diamond drum bit",
+        "charging_type": "USB rechargeable",
+        "weight": null
+      },
+      "source": {
+        "url": "https://www.amazon.com/Casfuy-Dog-Nail-Grinder-Upgraded/dp/B07W85ZPL1",
+        "accessedAt": "2026-08-12"
+      },
+      "provenance": "Live-verified this session: casfuy.com's own homepage uses this exact Amazon product (ASIN B07W85ZPL1) as its buy button, and a direct fetch of that ASIN returned a real Amazon product page whose title/brand match: brand Casfuy, title \"Dog Nail Grinder Upgraded - Professional 2-Speed Whisper-Quiet Electric Pet Nail Trimmer Painless Paws Grooming & Smoothing for Small Medium Large Dogs & Cats (Dark Blue).\" The full technical-details table was not present in the fetched metadata (Amazon renders it via deferred JS), so numeric specs beyond the 2-speed / 3-port / diamond-drum / USB-rechargeable identity facts are left null."
+    },
+    {
+      "slug": "wahl-grind-and-smooth-3026333",
+      "name": "Wahl Grind & Smooth Cordless Battery Pet Nail Grinder",
+      "brand": "Wahl",
+      "category": "dog-nail-grinders",
+      "releaseDate": null,
+      "priceUsd": 39.99,
+      "priceNote": "Current price on wahlusa.com (live-verified)",
+      "specs": {
+        "rpm_speed_settings": "2-speed",
+        "noise_level_db": null,
+        "battery_capacity_mah": null,
+        "runtime_hr": null,
+        "port_size": "interchangeable grinding drums (60/80/120-grit stones), no S/M/L guard-cap system",
+        "diamond_bit_grit": "60, 80, and 120 grit interchangeable stones",
+        "charging_type": "battery-powered, 4x AA (included) - not rechargeable/USB",
+        "weight": "1.063 lb"
+      },
+      "source": {
+        "url": "https://wahlusa.com/shop/grind-smooth-cordless-battery-pet-nail-grinder-3026333",
+        "accessedAt": "2026-08-12"
+      },
+      "provenance": "CORRECTED FROM SEED: the seed's \"Wahl Deluxe Nail Grinder\" is not a current wahlusa.com product name; Wahl's current cordless battery grinder is the \"Grind & Smooth Cordless Battery Pet Nail Grinder\" (SKU 3026333). Live-fetched from its wahlusa.com product page this session: $39.99, 4x AA batteries (included, not a rechargeable Li-ion pack), 2-speed motor, dimensions 9.76 x 4.67 x 2.854 in., weight 1.063 lb, 3-year warranty, kit with grinding drum/stones. The page does not state RPM, noise level, or runtime, so those are null; battery_capacity_mah is null because the unit uses disposable AA batteries, not a rated mAh pack.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/wahl-grind-and-smooth-3026333.jpg?v=acdb0867b1",
+        "source": "wahlusa.com",
+        "license": "© Wahl",
+        "accessedAt": "2026-08-12"
+      }
+    },
+    {
+      "slug": "wahl-grind-and-smooth-05974",
+      "name": "Wahl Grind & Smooth Cordless Battery Pet Nail Grinder (05974)",
+      "brand": "Wahl",
+      "category": "dog-nail-grinders",
+      "releaseDate": null,
+      "priceUsd": 32.99,
+      "priceNote": "Current price on wahlusa.com (live-verified); lower-price sibling SKU to model 3026333",
+      "specs": {
+        "rpm_speed_settings": "2-speed",
+        "noise_level_db": null,
+        "battery_capacity_mah": null,
+        "runtime_hr": null,
+        "port_size": "single grinding drum, no S/M/L guard-cap system",
+        "diamond_bit_grit": "5/8 in. 60-grit grinding stone",
+        "charging_type": "battery-powered, 4x AA (included) - not rechargeable/USB",
+        "weight": null
+      },
+      "source": {
+        "url": "https://wahlusa.com/shop/grind-smooth-cordless-battery-pet-nail-grinder-05974",
+        "accessedAt": "2026-08-12"
+      },
+      "provenance": "Live-fetched from wahlusa.com this session; distinct SKU (05974, $32.99) from the newer 3-grit kit (3026333, $39.99) also in this dataset. Page confirmed name \"Grind & Smooth Cordless Battery Pet Nail Grinder\", SKU 05974, and $32.99 price. Single grinding drum with a 5/8 in. 60-grit stone; AA-battery powered. RPM, noise, runtime, and weight are not stated on the page and are left null; battery_capacity_mah is null (disposable AA, not a rated mAh pack).",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/wahl-grind-and-smooth-05974.jpg?v=96bb305ad8",
+        "source": "wahlusa.com",
+        "license": "© Wahl",
+        "accessedAt": "2026-08-12"
+      }
+    },
+    {
+      "slug": "luckytail-ultimate-pet-nail-grinder",
+      "name": "LuckyTail Pet Nail Grinder - Quiet 2-Speed Rechargeable Electric Trimmer",
+      "brand": "LuckyTail",
+      "category": "dog-nail-grinders",
+      "releaseDate": null,
+      "priceUsd": 39.95,
+      "priceNote": "Current price on luckytail.com (live-verified)",
+      "specs": {
+        "rpm_speed_settings": "2-speed",
+        "noise_level_db": "under 40 dB",
+        "battery_capacity_mah": null,
+        "runtime_hr": 4,
+        "port_size": "1 grinding head included; no fixed S/M/L collar system",
+        "diamond_bit_grit": "diamond-coated grinding head",
+        "charging_type": "USB rechargeable (~1 hr full charge)",
+        "weight": null
+      },
+      "source": {
+        "url": "https://luckytail.com/collections/nail-grinders/products/ultimate-pet-nail-grinder",
+        "accessedAt": "2026-08-12"
+      },
+      "provenance": "Live-fetched from luckytail.com's own product page this session. Confirmed: $39.95, two-speed control, noise \"runs lower than 40 decibels,\" up to 4-hour runtime, ~1-hour USB-cable charge, diamond-head design with two LEDs, safety cover, single grinder head included (additional/replacement heads sold separately). Battery capacity (mAh), exact weight, and numeric collar sizes are not stated and are left null."
+    },
+    {
+      "slug": "luckytail-grinder-2-heads",
+      "name": "LuckyTail Pet Nail Grinder with 2 Grinder Heads - Quiet 2-Speed Rechargeable Electric Trimmer",
+      "brand": "LuckyTail",
+      "category": "dog-nail-grinders",
+      "releaseDate": null,
+      "priceUsd": 53.96,
+      "priceNote": "Live-verified sale price on luckytail.com ($53.96, 10% off regular $59.95)",
+      "specs": {
+        "rpm_speed_settings": "2-speed",
+        "noise_level_db": "approximately 30 dB",
+        "battery_capacity_mah": null,
+        "runtime_hr": 4,
+        "port_size": "ships with 2 interchangeable grinding heads; no fixed S/M/L collar system",
+        "diamond_bit_grit": "diamond-coated grinding head",
+        "charging_type": "USB rechargeable (~1 hr full charge)",
+        "weight": null
+      },
+      "source": {
+        "url": "https://luckytail.com/collections/nail-grinders/products/grinder-2-grinder-heads",
+        "accessedAt": "2026-08-12"
+      },
+      "provenance": "Live-fetched from luckytail.com this session. Distinct SKU/listing from the single-head Ultimate: 1 grinder plus 2 additional grinding heads, $53.96 (10% off regular $59.95). Confirmed 2-speed, whisper-quiet (~30 dB), 4-hour runtime, ~1-hour USB charge, dual-LED head, 1-year warranty. Battery capacity (mAh) and weight not stated and left null. Note: same core grinder device as the other LuckyTail entries, differentiated by included-head count."
+    },
+    {
+      "slug": "luckytail-grinder-4-heads",
+      "name": "LuckyTail Pet Nail Grinder Bundle with 4 Grinder Heads - Quiet 2-Speed Rechargeable Electric Trimmer",
+      "brand": "LuckyTail",
+      "category": "dog-nail-grinders",
+      "releaseDate": null,
+      "priceUsd": 71.96,
+      "priceNote": "Live-verified sale price on luckytail.com ($71.96, 10% off regular $79.95)",
+      "specs": {
+        "rpm_speed_settings": "2-speed",
+        "noise_level_db": "30-50 dB",
+        "battery_capacity_mah": null,
+        "runtime_hr": 4,
+        "port_size": "ships with 4 grinding heads (2 regular, 1 super-soft, 1 extra-hard); no fixed S/M/L collar system",
+        "diamond_bit_grit": "diamond-coated grinding heads",
+        "charging_type": "USB rechargeable (~1 hr full charge)",
+        "weight": null
+      },
+      "source": {
+        "url": "https://luckytail.com/collections/nail-grinders/products/grinder-4-grinder-heads",
+        "accessedAt": "2026-08-12"
+      },
+      "provenance": "Live-fetched from luckytail.com this session. Distinct SKU/listing: 1 grinder plus 4 grinding heads (2 regular, 1 super-soft, 1 extra-hard), $71.96 (10% off regular $79.95). Confirmed 2-speed, \"operates between 30 to 50 decibels,\" 4-hour runtime, ~1-hour USB charge, dual-LED head, safety cap, 1-year warranty. Battery capacity (mAh) and weight not stated and left null. Note: same core grinder device as the other LuckyTail entries, differentiated by included-head count."
+    },
+    {
+      "slug": "boshel-nail-grinder",
+      "name": "Boshel Pet Nail Grinder - 2-Speed & 3 Port Cap",
+      "brand": "Boshel",
+      "category": "dog-nail-grinders",
+      "releaseDate": null,
+      "priceUsd": 35.99,
+      "priceNote": "Current listed price on boshel.com ($35.99; regular price shown as $31.99); shown out of stock at accessedAt",
+      "specs": {
+        "rpm_speed_settings": "8000 RPM, 2-speed motor",
+        "noise_level_db": null,
+        "battery_capacity_mah": null,
+        "runtime_hr": null,
+        "port_size": "3-port cap (2 differently-sized holes plus a removable cap)",
+        "diamond_bit_grit": "diamond bit",
+        "charging_type": "USB rechargeable, with charge indicator light",
+        "weight": null
+      },
+      "source": {
+        "url": "https://boshel.com/products/upgraded-2-speed-dog-nail-grinder",
+        "accessedAt": "2026-08-12"
+      },
+      "provenance": "Live-fetched from boshel.com's own product page this session. Confirmed: 8000 RPM 2-speed motor, 3-port cap design (2 differently-sized holes plus a removable cap), diamond bit, USB rechargeable with indicator light, and $35.99 listed price ($31.99 regular/strike-through); shown out of stock at accessedAt. Battery capacity (mAh), runtime, noise (dB), and weight are not stated on the page and are left null."
+    }
+  ]
+}

@@ -1,0 +1,391 @@
+{
+  "category": "bench-power-supplies",
+  "generatedAt": "2026-08-01",
+  "methodologyNotes": "12 bench/linear-style DC power supplies spanning the range a 2026 buyer actually compares: sub-$150 hobbyist units (Tenma 72-10480, Kungber DC30V10A/SPS3010B, Korad KA3005P), budget multi-channel Chinese analog supplies (Matrix MPS-3005L-3), a bare programmable buck-converter module popular for DIY builds (Riden RD6018), mid-range programmable benchtop units (Owon SPE6103, Rigol DP712/DP832, Siglent SPD3303X-E), and professional/lab-grade instruments (BK Precision 1739, Rohde & Schwarz NGE103B, Keysight E36313A). All 10 seed products were retained (none were fabricated); no seed was dropped. Verified against manufacturer pages where reachable (rigolna.com, siglentna.com, bkprecision.com, rohde-schwarz.com) and, where manufacturer sites blocked automated access or lacked a dedicated English page (Korad, Riden/RUIDENG, Tenma, Owon, Matrix, Kungber are OEM/ODM brands without a full English spec portal), cross-checked against authorized distributors (DigiKey, LCSC, TME, eleshop.eu), the sigrok.org reverse-engineering wiki (used by many of these units' PC-control drivers, a reliable independent spec source for the Chinese hobbyist brands), and the original datasheet PDF for Rigol DP832. specKey semantics: max_voltage_v/max_current_a are the highest single-channel rating (see each product's provenance for the full per-channel breakdown on multi-channel units); max_power_w is the manufacturer-stated total; resolution_mv is the finest voltage SETTING resolution of the base/stock unit (Rigol's optional HIRES upgrade to 1mV is noted separately, not folded into the base figure); usb_interface is true only when the unit exposes a USB port usable for PC data/remote-control (Kungber's port is a 5V/2A charging-only output and is marked false; BK Precision 1739 uses RS-232, not USB, and is also marked false even though it is programmable); programmable means remote/PC control via any interface (USB, RS-232, or a reverse-engineered serial protocol) is possible. priceUsd is the lowest confirmed current US price from an authorized source; two products (Tenma 72-10480, Matrix MPS-3005L-3) have no stable current US distributor listing so priceUsd is null with context in priceNote rather than guessed. Riden RD6018's priceUsd is for the bare module only — it requires a separate AC-DC brick (~$45-90) and enclosure to function as a standalone bench supply, which is called out because it materially affects the buyer comparison. releaseDate is null across the board: none of the sources reachable during this pass stated an explicit introduction year, and one was not fabricated. Images: preferred Wikimedia Commons (found only for Rigol DP832, a CC BY 2.0 teardown photo); all other images are manufacturer or authorized-distributor product photos, credited accordingly; omitted entirely (not null) for Tenma 72-10480 and Matrix MPS-3005L-3, where no freely-licensed direct image file could be located. Accessed 2026-08-01.",
+  "specKeys": [
+    "output_channels",
+    "max_voltage_v",
+    "max_current_a",
+    "max_power_w",
+    "resolution_mv",
+    "programmable",
+    "display_type",
+    "usb_interface"
+  ],
+  "products": [
+    {
+      "slug": "tenma-72-10480",
+      "name": "Tenma 72-10480",
+      "brand": "Tenma",
+      "category": "bench-power-supplies",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "No stable current US distributor listing found (Farnell/Newark/DigiKey show the SKU as discontinued or relisted under the Multicomp Pro brand); last confirmed price was GBP 62.21 at Farnell UK (~2020). Widely resold at ~$80-100 by secondary US sellers.",
+      "specs": {
+        "output_channels": 1,
+        "max_voltage_v": 30,
+        "max_current_a": 3,
+        "max_power_w": 90,
+        "resolution_mv": 10,
+        "programmable": false,
+        "display_type": "digital LCD (separate V/A readout, encoder-controlled coarse/fine adjust)",
+        "usb_interface": false
+      },
+      "source": {
+        "url": "https://octopart.com/72-10480-tenma-24929068",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://magazine.raspberrypi.com/articles/tenma-72-10480-power-supply-review",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Single output 0-30V/0-3A/90W, digital LCD display, 10mV/1mA resolution, 5 memory presets confirmed via distributor datasheet text (Farnell/Newark part 2251946) and independently via the Raspberry Pi/HackSpace magazine hands-on review. No USB or RS-232 port is mentioned by any source (manual controls + digital readout only), so programmable=false. This is a rebadge of the Korad KA3003D chassis. US pricing could not be confirmed live; GBP price and 'about $100 new' community estimate are noted rather than treated as a confirmed US MSRP."
+    },
+    {
+      "slug": "kungber-dc30v10a",
+      "name": "Kungber DC30V10A (SPS3010B)",
+      "brand": "Kungber",
+      "category": "bench-power-supplies",
+      "releaseDate": null,
+      "priceUsd": 147.93,
+      "priceNote": "US retail price, ibspot.com; Amazon.com carries the same unit (ASIN B08DJ1FDXV) but current live price could not be extracted.",
+      "specs": {
+        "output_channels": 1,
+        "max_voltage_v": 30,
+        "max_current_a": 10,
+        "max_power_w": 300,
+        "resolution_mv": 10,
+        "programmable": false,
+        "display_type": "4-digit backlit LED",
+        "usb_interface": false
+      },
+      "source": {
+        "url": "https://ibspot.com/products/kungber-dc-power-supply-variable-30v-10a-adjustable-switching-regulated-dc-bench-power-supply-with-high-precision-4-digits-led-display-5v-2a-usb-interface-coarse-and-fine-adjustments-black",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/kungber-dc30v10a.jpg?v=fbec5bac88",
+        "source": "ibspot.com",
+        "license": "© Kungber",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Amazon-marketplace brand, model marked SPS3010B on the retailer listing under the 'Kungber DC30V10A' name. 0-30V/0-10A/300W switching-regulated single output, 0.01V/0.01A (10mV/10mA) resolution, 4-digit backlit LED display confirmed via ibspot.com product page. The unit's USB port is a fixed 5V/2A charging output only (no PC data/control protocol), so usb_interface and programmable are both marked false, unlike the SCPI/serial-capable units in this set."
+    },
+    {
+      "slug": "korad-ka3005p",
+      "name": "Korad KA3005P",
+      "brand": "Korad",
+      "category": "bench-power-supplies",
+      "releaseDate": null,
+      "priceUsd": 120.04,
+      "priceNote": "US price, DigiKey (distributed in the US under the SRA Soldering Products / KD3005P-family listing; Korad's own site returned 403 to automated access).",
+      "specs": {
+        "output_channels": 1,
+        "max_voltage_v": 30,
+        "max_current_a": 5,
+        "max_power_w": 150,
+        "resolution_mv": 10,
+        "programmable": true,
+        "display_type": "4-digit LED (green V / red A)",
+        "usb_interface": true
+      },
+      "source": {
+        "url": "https://www.digikey.com/en/products/detail/sra-soldering-products/KA3005P/10709868",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://sigrok.org/wiki/Korad_KA3005P",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/korad-ka3005p.jpg?v=02775101cf",
+        "source": "eleshop.eu (product photo of the KA3005PS variant, visually identical front panel to the KA3005P)",
+        "license": "© Korad Technology",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "0-30V/0-5A single output, USB + RS-232 remote control, 10mV/1mA setting resolution confirmed by DigiKey's distributor datasheet and cross-checked against sigrok's reverse-engineered protocol wiki and eleshop.eu's spec table. Korad's own koradtechnology.com blocked automated access (403); no direct manufacturer page could be verified."
+    },
+    {
+      "slug": "matrix-mps-3005l-3",
+      "name": "Matrix MPS-3005L-3",
+      "brand": "Matrix",
+      "category": "bench-power-supplies",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "No stable current US distributor price found; secondary marketplaces (eBay) list it anywhere from roughly $130 to $230 depending on seller/condition. A closely related catalog entry, Matrix MPS-3005H-3, lists at $559 on DigiKey, but that price was not carried over here since H-3 and L-3 are distinct SKUs.",
+      "specs": {
+        "output_channels": 3,
+        "max_voltage_v": 30,
+        "max_current_a": 5,
+        "max_power_w": 315,
+        "resolution_mv": 10,
+        "programmable": false,
+        "display_type": "3-digit LED per channel",
+        "usb_interface": false
+      },
+      "source": {
+        "url": "https://www.tme.eu/en/details/mps-3005l-3/multichannel-power-supplies/matrix/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.digikey.com/en/products/detail/matrix-technology-inc/MPS-3005H-3/16524775",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "TME.eu (an authorized EU distributor) lists the MPS-3005L-3 as a 'standard | linear, multi[-channel]' analog supply. Matrix Technology Inc. does not appear to run a public English-language manufacturer spec page reachable by automated fetch. Electrical specs (2x 0-30V/0-5A adjustable channels + 1x fixed 5V/3A channel, 315W total, 10mV/1mA resolution, LED display, no PC interface) are corroborated via DigiKey's listing for the closely related MPS-3005H-3, which shares the same channel/power/resolution family per that distributor's own spec sheet; treat the exact H vs L distinction (typically cosmetic/knob-detent differences on this OEM line) as the main residual uncertainty. No freely-licensed product image could be located (Wikimedia Commons has none; LCSC does not stock it; Cloudflare-protected distributor pages blocked automated image retrieval), so the image field is omitted rather than fabricated."
+    },
+    {
+      "slug": "owon-spe6103",
+      "name": "Owon SPE6103",
+      "brand": "Owon",
+      "category": "bench-power-supplies",
+      "releaseDate": null,
+      "priceUsd": 284.29,
+      "priceNote": "US retail price, Test Equipment Depot. Confirmed range across US retailers: ~$209-339 (Walmart $249, Selectum $309, DigiKey marketplace listing $339 marked obsolete for that specific SKU).",
+      "specs": {
+        "output_channels": 1,
+        "max_voltage_v": 60,
+        "max_current_a": 10,
+        "max_power_w": 300,
+        "resolution_mv": 10,
+        "programmable": true,
+        "display_type": "2.8-inch color TFT LCD",
+        "usb_interface": true
+      },
+      "source": {
+        "url": "https://www.lcsc.com/product-detail/power-supply_owon-spe6103_C22392858.html",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.digikey.com/en/products/detail/owon-technology-lilliput-electronics-usa-inc/SPE6103/15911703",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/owon-spe6103.jpg?v=e44daaa229",
+        "source": "lcsc.com",
+        "license": "© OWON Technology",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "0-60V/0-10A single output, 300W, 10mV/1mA set/readback resolution, 2.8-inch TFT LCD, USB interface with SCPI support confirmed consistently across LCSC's distributor spec sheet and DigiKey's marketplace listing."
+    },
+    {
+      "slug": "riden-rd6018",
+      "name": "Riden RD6018",
+      "brand": "Riden (RUIDENG)",
+      "category": "bench-power-supplies",
+      "releaseDate": null,
+      "priceUsd": 103.99,
+      "priceNote": "Module-only price, Banggood (no official Riden/RUIDENG US storefront exists). A complete standalone bench supply typically also requires a ~68V/1200W AC-DC adapter (~$45-90) and an enclosure, commonly bundled by third-party sellers for $150-220 total.",
+      "specs": {
+        "output_channels": 1,
+        "max_voltage_v": 60,
+        "max_current_a": 18,
+        "max_power_w": 1080,
+        "resolution_mv": 10,
+        "programmable": true,
+        "display_type": "2.4-inch color TFT (ILI9341)",
+        "usb_interface": true
+      },
+      "source": {
+        "url": "https://sigrok.org/wiki/Riden_RD6006",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.banggood.com/RD6018-p-1993557.html",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/riden-rd6018.webp?v=974fa11cbf",
+        "source": "banggood.com",
+        "license": "© Riden / RUIDENG",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "The RD6018 is a bare DC-DC step-down (buck) power-supply module, not a self-contained chassis instrument; buyers pair it with an external AC-DC brick and often a 3D-printed/acrylic case. 0-60V/0-18A/1080W, 10mV/1mA resolution, 2.4-inch color TFT, USB-serial (Modbus-over-serial) remote control confirmed via the sigrok reverse-engineering wiki (which documents the RD60xx family including RD6018) and cross-checked against the live Banggood listing (product ID 1993557) for price and current availability."
+    },
+    {
+      "slug": "bk-precision-1739",
+      "name": "BK Precision Model 1739",
+      "brand": "BK Precision",
+      "category": "bench-power-supplies",
+      "releaseDate": null,
+      "priceUsd": 885.01,
+      "priceNote": "US price, DigiKey (Active part, ~19-week manufacturer lead time).",
+      "specs": {
+        "output_channels": 1,
+        "max_voltage_v": 30,
+        "max_current_a": 1,
+        "max_power_w": 30,
+        "resolution_mv": 10,
+        "programmable": true,
+        "display_type": "4-digit LED (green V / red A)",
+        "usb_interface": false
+      },
+      "source": {
+        "url": "https://www.bkprecision.com/products/power-supplies/1739",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.digikey.com/en/products/detail/b-k-precision/1739/3569078",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/bk-precision-1739.jpg?v=68c99d6571",
+        "source": "bkprecision.com",
+        "license": "© B&K Precision",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "A high-precision, low-current single output (0-30V / 0-999.9mA, rounded here to 1A) rather than a high-power supply — its niche is 0.1mA-resolution current settability for sensitive calibration/test work, which explains its premium price relative to its modest 30W max output. Manual title itself is 'Model 1739 DC Power Supply with 0.1mA Settable Resolution', confirming the headline spec directly. Remote control is via RS-232 (an official USB2RS adapter accessory exists, but there is no native USB port), so usb_interface=false while programmable=true."
+    },
+    {
+      "slug": "rigol-dp712",
+      "name": "Rigol DP712",
+      "brand": "Rigol",
+      "category": "bench-power-supplies",
+      "releaseDate": null,
+      "priceUsd": 349,
+      "priceNote": "MSRP, Rigol North America online store.",
+      "specs": {
+        "output_channels": 1,
+        "max_voltage_v": 50,
+        "max_current_a": 3,
+        "max_power_w": 150,
+        "resolution_mv": 10,
+        "programmable": true,
+        "display_type": "LED numeric display",
+        "usb_interface": true
+      },
+      "source": {
+        "url": "https://www.rigolna.com/products/dc-power-supplies/dp700/dp712/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/rigol-dp712.jpg?v=6fc7f78d00",
+        "source": "rigolna.com",
+        "license": "© Rigol Technologies",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "0-50V/0-3A single output, 150W, $349 MSRP confirmed directly on Rigol's own US store page. The page markets a paid HIRES-DP700 upgrade ($59) that adds 1mV/1mA resolution, implying the stock/base resolution is coarser (10mV, consistent with the sibling DP832's base-model resolution per its official datasheet); base resolution is not stated as explicitly on this product page as it is for the DP800 datasheet, so treat resolution_mv here as an inference from the same product family's documented pattern rather than a directly-quoted DP712 figure. USB and SCPI programmability are supported per Rigol's UltraPower/VISA software references on the page; no LAN is included standard on the DP700 series (unlike DP800)."
+    },
+    {
+      "slug": "siglent-spd3303x-e",
+      "name": "Siglent SPD3303X-E",
+      "brand": "Siglent",
+      "category": "bench-power-supplies",
+      "releaseDate": null,
+      "priceUsd": 459,
+      "priceNote": "MSRP, Siglent North America online store.",
+      "specs": {
+        "output_channels": 3,
+        "max_voltage_v": 32,
+        "max_current_a": 3.2,
+        "max_power_w": 220,
+        "resolution_mv": 10,
+        "programmable": true,
+        "display_type": "4.3-inch color TFT-LCD",
+        "usb_interface": true
+      },
+      "source": {
+        "url": "https://siglentna.com/product/spd3303x-e/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/siglent-spd3303x-e.jpg?v=12413a3280",
+        "source": "siglentna.com",
+        "license": "© Siglent Technologies",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "CH1/CH2: 0-32V/0-3.2A each (independently adjustable); CH3: fixed-selectable 2.5V/3.3V/5.0V at 0-3.2A. 220W total, 10mV/10mA resolution, 4.3-inch color TFT-LCD, USB+LAN standard with bundled EasyPower software and SCPI/LabVIEW support — all confirmed directly on Siglent's own US product page."
+    },
+    {
+      "slug": "rigol-dp832",
+      "name": "Rigol DP832",
+      "brand": "Rigol",
+      "category": "bench-power-supplies",
+      "releaseDate": null,
+      "priceUsd": 449,
+      "priceNote": "MSRP, Rigol North America online store (base DP832; the higher-resolution DP832A variant lists at $619).",
+      "specs": {
+        "output_channels": 3,
+        "max_voltage_v": 30,
+        "max_current_a": 3,
+        "max_power_w": 195,
+        "resolution_mv": 10,
+        "programmable": true,
+        "display_type": "3.5-inch color TFT",
+        "usb_interface": true
+      },
+      "source": {
+        "url": "https://www.rigolna.com/products/dc-power-supplies/dp800/dp832/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://cdn-shop.adafruit.com/datasheets/datasheet%20DP832.pdf",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/rigol-dp832.jpg?v=0573d38436",
+        "source": "Wikimedia Commons",
+        "license": "CC BY 2.0 (Dave Jones / EEVblog)",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "CH1/CH2: 0-30V/0-3A; CH3: 0-5V/0-3A; 195W total. Official Rigol datasheet (PDF, mirrored by Adafruit) confirms base-model programming resolution is 10mV/1mA (readback 10mV/1mA), with the optional HIRES-DP800 accessory improving this to 1mV/0.1mA — the loose '1mV/1mA' figure quoted on some marketing pages refers to that paid option, not the stock unit, which this dataset reflects. Datasheet I/O table confirms USB Device + USB Host standard and LAN standard (RS232/GPIB are accessory options). <350µVrms/2mVpp ripple, 3.5-inch color TFT display confirmed on Rigol's own product page."
+    },
+    {
+      "slug": "rohde-schwarz-nge103b",
+      "name": "Rohde & Schwarz NGE103B",
+      "brand": "Rohde & Schwarz",
+      "category": "bench-power-supplies",
+      "releaseDate": null,
+      "priceUsd": 1580,
+      "priceNote": "Starting US price, Rohde & Schwarz official US product page.",
+      "specs": {
+        "output_channels": 3,
+        "max_voltage_v": 32,
+        "max_current_a": 3,
+        "max_power_w": 100,
+        "resolution_mv": 10,
+        "programmable": true,
+        "display_type": "3.5-inch QVGA (320x240)",
+        "usb_interface": true
+      },
+      "source": {
+        "url": "https://www.rohde-schwarz.com/us/products/test-and-measurement/dc-power-supplies/rs-nge100b-power-supply-series_63493-576967.html",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/rohde-schwarz-nge103b.jpg?v=b03a891966",
+        "source": "rohde-schwarz.com",
+        "license": "© Rohde & Schwarz",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "3 electrically-identical channels, each 0-32V/0-3A, 100W combined (channels can be series/parallel-combined for up to 96V or 9A). 10mV/1mA resolution, 3.5-inch QVGA screen, USB (virtual COM + TMC class) standard with optional LAN/LXI and digital I/O — all confirmed directly on Rohde & Schwarz's own US product page."
+    },
+    {
+      "slug": "keysight-e36313a",
+      "name": "Keysight E36313A",
+      "brand": "Keysight",
+      "category": "bench-power-supplies",
+      "releaseDate": null,
+      "priceUsd": 2557,
+      "priceNote": "MSRP, Keysight US online store (base configuration; adding the optional GPIB module brings it to $2,971).",
+      "specs": {
+        "output_channels": 3,
+        "max_voltage_v": 25,
+        "max_current_a": 10,
+        "max_power_w": 160,
+        "resolution_mv": null,
+        "programmable": true,
+        "display_type": "4.3-inch color LCD",
+        "usb_interface": true
+      },
+      "source": {
+        "url": "https://www.keysight.com/us/en/support/E36313A/160w-triple-output-power-supply-6v-10a-2x-25v-2a.html",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.keysight.com/us/en/assets/7018-05629/data-sheets/5992-2124.pdf",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "CH1: 0-6V/0-10A; CH2/CH3: 0-25V/0-2A each; 160W total. USB and LAN standard, GPIB optional. 4-wire remote sensing on all channels, data logging, list mode/sequencing per the official datasheet. The datasheet states programming/readback ACCURACY (e.g. ±0.03%+3-5mV) but does not spell out a separate setting-RESOLUTION figure in the sections retrieved, so resolution_mv is left null rather than inferred from the accuracy spec, which measures a different thing. keysight.com blocked automated access directly (403); data drawn from Keysight's own support/datasheet documents and cross-checked against Newark/RS/Amplicon distributor listings for price and imagery."
+    }
+  ]
+}

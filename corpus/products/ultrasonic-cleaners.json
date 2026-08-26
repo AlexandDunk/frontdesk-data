@@ -1,0 +1,379 @@
+{
+  "category": "ultrasonic-cleaners",
+  "generatedAt": "2026-08-01",
+  "methodologyNotes": "Dataset covers 12 benchtop/consumer ultrasonic cleaners spanning budget jewelry cleaners through professional/lab-grade baths, the range a 2026 buyer actually compares. Seed list was verified against manufacturer and specialist-retailer pages; two seeds could not be substantiated as real, current, US-market products and were corrected: 'LifeBasis 2.5L' does not exist in LifeBasis's current lineup (their largest tank is 750-850 ml) and was replaced with their verified flagship, the CD-2820 (750 ml); 'InvisiClean IC-6-Pro' is not a documented model number and was replaced with InvisiClean's actual flagship personal cleaner, the Pro Elite IC-2755 (brand now also sold as VisiClean). 'Ultra 8051E' (James Products Ltd / JPL, UK) was dropped entirely -- JPL stopped manufacturing ultrasonic cleaners in 2021 and the unit was 220-240V-only UK stock, never sold in the US, so it fails the 'a 2026 buyer compares' bar -- and replaced with Elmasonic S30H (Elma, Germany), a genuinely current professional/lab-tier cleaner distributed in the US. The roster was also expanded with L&R Quantrex 140 (a US jewelry/watch-trade industry-standard brand) to properly represent the professional tier. Two entries (CO-Z DUC-1002-00 and CREWORKS DUC-M02J-US) rely on cross-referenced retailer/marketplace listings rather than a successfully loaded manufacturer page, because cozpalace.com and creworksequipment.com returned HTTP 429 on every attempt during this research session; their specs are corroborated across at least two independent listings each (eBay, DealNews, and the identical-SKU sister-brand page) and are flagged as lower-confidence in each product's provenance field. VEVOR's own site geo-redirected every request to vevor.fr and then 404'd, so its spec figures are drawn from VEVOR's own indexed listing title/description text rather than a live-rendered page; its price is left null rather than guessed. Fields that could not be verified from any accessible source are null rather than estimated, per the 'null beats a guess' rule -- this affects several ultrasonic_power_w/heater_watt splits (many listings only publish combined wattage) and most releaseDate values (none of these ongoing product lines had a documented launch year on any accessed page). tank_capacity_l is the manufacturer-stated nominal tank volume in liters. ultrasonic_power_w and heater_watt are reported separately where the manufacturer publishes them separately; where only a combined 'total power' figure exists, that is noted in provenance rather than split by guesswork. All accessedAt 2026-08-01.",
+  "specKeys": [
+    "tank_capacity_l",
+    "ultrasonic_frequency_khz",
+    "ultrasonic_power_w",
+    "heater_watt",
+    "timer_settings",
+    "tank_material",
+    "digital_display",
+    "transducers"
+  ],
+  "products": [
+    {
+      "slug": "isonic-p4810",
+      "name": "iSonic P4810 Commercial Ultrasonic Cleaner",
+      "brand": "iSonic",
+      "category": "ultrasonic-cleaners",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "No current, stable US MSRP could be verified on an accessible retailer page at access time (isonicinc.com returned HTTP 429 on every attempt this session); historically listed in the $70-90 range at jewelry/lab suppliers.",
+      "specs": {
+        "tank_capacity_l": 2,
+        "ultrasonic_frequency_khz": 35,
+        "ultrasonic_power_w": 60,
+        "heater_watt": 80,
+        "timer_settings": "1-30 minute full-range digital timer",
+        "tank_material": "Stainless steel",
+        "digital_display": true,
+        "transducers": 1
+      },
+      "source": {
+        "url": "https://www.manualslib.com/manual/4014603/Isonic-P4810.html",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.jewelsclean.com/isonic-p4810-commercial-ultrasonic-cleaner.html",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/isonic-p4810.png?v=b20975f3fc",
+        "source": "jewelsclean.com (manufacturer product photo)",
+        "license": "© iSonic Inc.",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "isonicinc.com (manufacturer) was unreachable all session (HTTP 429). Verified instead via iSonic's official printed user manual (hosted on ManualsLib): 2L/2.1qt stainless tank, 1-30 min digital timer, ceramic heater, 2-color LED display, industrial-grade transducer. Frequency (35kHz), ultrasonic wattage (60W) and heater wattage (80W) corroborated independently on JewelsClean's review, which cites the same manufacturer figures. Price not found on any live page during this session -- left null rather than guessed."
+    },
+    {
+      "slug": "magnasonic-mguc500",
+      "name": "Magnasonic MGUC500 Digital Ultrasonic Jewelry Cleaner",
+      "brand": "Magnasonic",
+      "category": "ultrasonic-cleaners",
+      "releaseDate": null,
+      "priceUsd": 39.99,
+      "priceNote": "MSRP per magnasonic.com product page.",
+      "specs": {
+        "tank_capacity_l": 0.6,
+        "ultrasonic_frequency_khz": 42,
+        "ultrasonic_power_w": 35,
+        "heater_watt": null,
+        "timer_settings": "5 presets: 90/180/280/380/480 seconds",
+        "tank_material": "304 stainless steel",
+        "digital_display": true,
+        "transducers": null
+      },
+      "source": {
+        "url": "https://www.magnasonic.com/digital-ultrasonic-jewelry-cleaner",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/magnasonic-mguc500.jpg?v=d37e6f16a6",
+        "source": "magnasonic.com",
+        "license": "© Magnasonic",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Verified directly on the manufacturer product page. No heater feature is advertised on this model, so heater_watt is null rather than 0 (unclear if 'no heater' vs 'unpublished'; treated as no heater per the product description listing no heating feature). Transducer count not published."
+    },
+    {
+      "slug": "co-z-duc-1002-00-2l",
+      "name": "CO-Z DUC-1002-00 2L Professional Ultrasonic Cleaner",
+      "brand": "CO-Z",
+      "category": "ultrasonic-cleaners",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "A discontinued DealNews listing showed ~$56; could not be reverified live. No current stable MSRP confirmed at access time.",
+      "specs": {
+        "tank_capacity_l": 2,
+        "ultrasonic_frequency_khz": 40,
+        "ultrasonic_power_w": 60,
+        "heater_watt": 100,
+        "timer_settings": "1-30 minute digital timer, 20-80°C heat range",
+        "tank_material": "Stainless steel (interior and exterior)",
+        "digital_display": true,
+        "transducers": null
+      },
+      "source": {
+        "url": "https://www.ebay.com/p/24030640817",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.creworksequipment.com/products/2l-ultrasonic-cleaner-duc-l102-00",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "LOWER CONFIDENCE: the manufacturer site (cozpalace.com) returned HTTP 429 on every attempt this session and could not be loaded directly. Specs are cross-referenced across the eBay listing and a DealNews listing (both independently reporting 40kHz/60W ultrasonic/100W heater/stainless/1-30min), plus the identical OEM part number DUC-L102-00 sold under the CREWORKS sister brand with matching figures. No image URL could be captured because the hosting domain would not load. Price left null -- the only figure found ($56) was on a now-dead DealNews link and could not be reverified.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/co-z-duc-1002-00-2l.jpg?v=b9ffba7fa8",
+        "source": "ultrasonic-cleaners.info",
+        "license": "© CO-Z",
+        "accessedAt": "2026-08-12"
+      }
+    },
+    {
+      "slug": "branson-cpx-952-116r",
+      "name": "Branson CPX-952-116R (Bransonic M1800) Ultrasonic Cleaning Bath",
+      "brand": "Branson",
+      "category": "ultrasonic-cleaners",
+      "releaseDate": null,
+      "priceUsd": 591.6,
+      "priceNote": "Sale price at ultrasoniccleaners.com; list price shown as $696.00. Industrial/lab distributor pricing varies by channel.",
+      "specs": {
+        "tank_capacity_l": 1.9,
+        "ultrasonic_frequency_khz": 40,
+        "ultrasonic_power_w": 90,
+        "heater_watt": null,
+        "timer_settings": "60-minute mechanical timer plus continuous-run mode",
+        "tank_material": "Stainless steel tank, chemical-resistant housing",
+        "digital_display": false,
+        "transducers": null
+      },
+      "source": {
+        "url": "https://www.ultrasoniccleaners.com/product/branson-m1800/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/branson-cpx-952-116r.jpg?v=3f441bca1c",
+        "source": "ultrasoniccleaners.com",
+        "license": "© Branson / Emerson",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Verified on an authorized Branson (Emerson) distributor product page. This 0.5-gallon 'M'-size model has no heating element (explicitly stated). The 90W figure is the unit's rated power draw at 0.8A, not necessarily an ultrasonic-only figure -- Branson does not publish a separate ultrasonic-only wattage for this model. Mechanical control, no digital display. Sweep-frequency technology is used to eliminate standing waves."
+    },
+    {
+      "slug": "kendal-hb-s-49dht",
+      "name": "Kendal HB-S-49DHT Commercial Grade Digital Heated Ultrasonic Cleaner",
+      "brand": "Kendal",
+      "category": "ultrasonic-cleaners",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "The mechanical sibling (HB-49MHT) is listed at $388; the digital DHT variant's price could not be independently verified at access time.",
+      "specs": {
+        "tank_capacity_l": 9,
+        "ultrasonic_frequency_khz": 42,
+        "ultrasonic_power_w": 240,
+        "heater_watt": 300,
+        "timer_settings": "Digital timer, adjustable (mechanical sibling variant: 0-20 min)",
+        "tank_material": "All stainless steel (body, tank, cover, mesh basket)",
+        "digital_display": true,
+        "transducers": 4
+      },
+      "source": {
+        "url": "https://www.ultrasonic-cleaners.info/kendal/kendal-commercial-grade-9-liters-540-watts-heated-ultrasonic-cleaner-hb-49/",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "LOWER CONFIDENCE ON EXACT SKU: Kendal sells this 9L/540W commercial tank in two control-panel variants sharing identical tank/transducer/power hardware -- HB-S-49DHT ('Digital Heater Timer', the seed's requested model) and HB-49MHT (mechanical knob timer). The only page with a full technical breakdown reachable this session documented the mechanical HB-49MHT variant; those figures (9L, 42kHz, 240W ultrasonic + 300W heater = 540W total, 4 transducers, all-stainless construction) are reported here for the digital DHT sibling on the assumption the tank/power hardware is shared, per Kendal's own product family naming. Timer range for the DHT variant specifically is unconfirmed (mechanical sibling: 0-20 min). No product photo included because the only image found depicts the mechanical-knob sibling, not the digital DHT panel, and using it would misrepresent the product's control interface."
+    },
+    {
+      "slug": "lifebasis-cd-2820",
+      "name": "LifeBasis CD-2820 Professional Ultrasonic Cleaner (750ml)",
+      "brand": "LifeBasis",
+      "category": "ultrasonic-cleaners",
+      "releaseDate": null,
+      "priceUsd": 45.99,
+      "priceNote": "Regular price per lifebasis.com; a $36.99 sale price was also observed.",
+      "specs": {
+        "tank_capacity_l": 0.75,
+        "ultrasonic_frequency_khz": 42,
+        "ultrasonic_power_w": 36,
+        "heater_watt": null,
+        "timer_settings": "3 cycles: 1.5 / 3 / 5 minutes",
+        "tank_material": "Stainless steel SUS304",
+        "digital_display": null,
+        "transducers": null
+      },
+      "source": {
+        "url": "https://lifebasis.com/products/life-basis-professional-ultrasonic-cleaner-42khz-sonic-cleaning-stainless-steel-750ml",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/lifebasis-cd-2820.jpg?v=c027cc4ec8",
+        "source": "lifebasis.com",
+        "license": "© LifeBasis",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "CORRECTION: the seed 'LifeBasis 2.5L' does not exist -- LifeBasis's current catalog tops out around 750-850ml (verified against their full ultrasonic-cleaner collection page). Substituted their verified flagship, the CD-2820 (750ml), confirmed directly on the manufacturer page. Ultrasonic wattage (36W) is the AC 100-120V (US) spec; the same unit is rated 26W at 100V and 50W at 220-240V for other markets. No heater feature on this model. Digital display not explicitly confirmed on the accessed page -- left null rather than assumed."
+    },
+    {
+      "slug": "gemoro-1791-sparkle-spa-pro",
+      "name": "GemOro Sparkle Spa Pro 1791 Personal Ultrasonic Cleaner",
+      "brand": "GemOro",
+      "category": "ultrasonic-cleaners",
+      "releaseDate": null,
+      "priceUsd": 74.95,
+      "priceNote": "Price per kingsleynorth.com (jewelry-trade supplier) product page.",
+      "specs": {
+        "tank_capacity_l": 0.75,
+        "ultrasonic_frequency_khz": 42,
+        "ultrasonic_power_w": null,
+        "heater_watt": null,
+        "timer_settings": "5 cycles: 90/180/280/380/480 seconds, auto shut-off",
+        "tank_material": "Stainless steel, LED-illuminated",
+        "digital_display": true,
+        "transducers": null
+      },
+      "source": {
+        "url": "https://kingsleynorth.com/sparkle-spa-pro-personal-ultrasonic.html",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/gemoro-1791-sparkle-spa-pro.jpg?v=a2330d77a6",
+        "source": "kingsleynorth.com",
+        "license": "© GemOro",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "NOTE ON MODEL NUMBER: the accessed jewelry-trade supplier page lists this exact unit as model '1790' (Slate color); other retailers (Amazon, BatteryJunction) list the same Sparkle Spa Pro unit under SKU '1791' for the Slate Gray colorway -- same core hardware/specs, differing catalog numbering by seller/color batch. No heater on this personal-use model; ultrasonic wattage not published by GemOro."
+    },
+    {
+      "slug": "invisiclean-pro-elite-ic-2755",
+      "name": "InvisiClean Pro Elite IC-2755 Ultrasonic Cleaner",
+      "brand": "InvisiClean",
+      "category": "ultrasonic-cleaners",
+      "releaseDate": null,
+      "priceUsd": 69.95,
+      "priceNote": "Price per the brand's own site (now operating as VisiClean); a $49.95 factory-refurbished price was also observed via third-party sellers.",
+      "specs": {
+        "tank_capacity_l": 0.8,
+        "ultrasonic_frequency_khz": 42,
+        "ultrasonic_power_w": 55,
+        "heater_watt": null,
+        "timer_settings": "90/180/300/480/600 second presets",
+        "tank_material": null,
+        "digital_display": true,
+        "transducers": 2
+      },
+      "source": {
+        "url": "https://www.visiclean.co/visiclean-pro-elite-ultrasonic-cleaner.html",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/invisiclean-pro-elite-ic-2755.jpg?v=664b743962",
+        "source": "visiclean.co",
+        "license": "© InvisiClean / VisiClean",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "CORRECTION: the seed model 'IC-6-Pro' is not a documented InvisiClean SKU -- no manufacturer, retailer, or manual reference to it was found. Replaced with InvisiClean's actual flagship personal ultrasonic cleaner, the Pro Elite IC-2755 (max fill 650ml / total tank 800ml, 2x 50mm transducers, 55W total power draw). The brand's own site now presents this product line under the name 'VisiClean' -- same manufacturer, same model number. Tank material not stated on the accessed page. 55W is total power consumption, not confirmed ultrasonic-only wattage; no separate heater is advertised on this model."
+    },
+    {
+      "slug": "vevor-6l-digital-ultrasonic-cleaner",
+      "name": "VEVOR Digital Ultrasonic Cleaner 6L (50kHz)",
+      "brand": "VEVOR",
+      "category": "ultrasonic-cleaners",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "VEVOR runs frequent promotional pricing across region-specific storefronts; no stable USD price could be verified this session because vevor.com repeatedly geo-redirected to vevor.fr, which then 404'd on the specific SKU.",
+      "specs": {
+        "tank_capacity_l": 6,
+        "ultrasonic_frequency_khz": 50,
+        "ultrasonic_power_w": 180,
+        "heater_watt": 200,
+        "timer_settings": "0-30 minutes adjustable, LCD display",
+        "tank_material": "304 stainless steel",
+        "digital_display": true,
+        "transducers": null
+      },
+      "source": {
+        "url": "https://www.vevor.com/ultrasonic-cleaner-c_11064/vevor-digital-ultrasonic-cleaner-ultrasonic-cleaning-machine-6l-stainless-steel-p_010703075178",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "LOWER CONFIDENCE ON LIVE VERIFICATION: every attempt to load this VEVOR product page this session was geo-redirected to vevor.fr and then returned HTTP 404, and the corresponding Amazon (B09J8G7FR7) and Walmart listings could not be loaded either (bot-check pages / server errors). The specs reported here (6L, 50kHz, 180W ultrasonic, 200W heater, 304 stainless steel, LCD timer/temp display) come from VEVOR's own indexed product title and description text for this exact SKU, cross-checked against VEVOR's separate reviews-page listing for the same product code, both of which state the same figures. No image could be captured. Price left null rather than guessed.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/vevor-6l-digital-ultrasonic-cleaner.jpg?v=2db5b1651c",
+        "source": "eur.vevor.com",
+        "license": "© VEVOR",
+        "accessedAt": "2026-08-12"
+      }
+    },
+    {
+      "slug": "elmasonic-s30h",
+      "name": "Elmasonic S30H Ultrasonic Cleaning Unit",
+      "brand": "Elma (Elmasonic)",
+      "category": "ultrasonic-cleaners",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "EU list price observed at a European lab-equipment marketplace: €495.00 ex. VAT. No verified US-dollar MSRP was found from a US distributor at access time.",
+      "specs": {
+        "tank_capacity_l": 2.75,
+        "ultrasonic_frequency_khz": 37,
+        "ultrasonic_power_w": null,
+        "heater_watt": null,
+        "timer_settings": "1-30 minutes or continuous; normal, sweep, and degas modes",
+        "tank_material": "Stainless steel",
+        "digital_display": true,
+        "transducers": null
+      },
+      "source": {
+        "url": "https://questpair.com/marketplace/facilities-and-equipment/laboratory-equipment/general-laboratory-equipment/ultrasonic-cleaners/elma-elmasonic-s30h-27637",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/elmasonic-s30h.jpg?v=1f917eb16d",
+        "source": "questpair.com",
+        "license": "© Elma Schmidbauer GmbH",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "SEED SUBSTITUTION: the requested seed 'Ultra 8051E' is a James Products Ltd (JPL) unit, UK-manufactured, 220-240V only, and JPL stopped producing ultrasonic cleaners entirely in 2021 -- it was never sold in the US and is no longer available new anywhere, so it fails the brief's 'a buyer compares in 2026' bar. Replaced with Elmasonic S30H (Elma, Germany), a genuinely current professional/lab-tier cleaner distributed in the US (e.g. via Cole-Parmer and lab suppliers), representing the premium tier a buyer would realistically cross-shop against Branson. Power figures: Elma publishes 280W total system power at 220/240V for the non-US-voltage S30(H) family; a separate ultrasonic-only/heater-only split for the US 120V unit could not be confirmed, so both are left null rather than estimated."
+    },
+    {
+      "slug": "lr-quantrex-140-timer-heat-drain",
+      "name": "L&R Quantrex 140 Ultrasonic Cleaning System (w/ Timer, Heat & Drain)",
+      "brand": "L&R",
+      "category": "ultrasonic-cleaners",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "L&R sells exclusively through authorized jewelry/watch-trade dealers; no list price is published on the manufacturer site and no dealer price could be independently verified at access time.",
+      "specs": {
+        "tank_capacity_l": 3.2,
+        "ultrasonic_frequency_khz": 43,
+        "ultrasonic_power_w": 95,
+        "heater_watt": null,
+        "timer_settings": "60-minute timer",
+        "tank_material": null,
+        "digital_display": null,
+        "transducers": null
+      },
+      "source": {
+        "url": "https://www.lrultrasonics.com/systems/quantrex-ultrasonic-cleaning-systems/quantrex140-with-timer-and-drain",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/lr-quantrex-140-timer-heat-drain.png?v=685e2737b9",
+        "source": "lrultrasonics.com",
+        "license": "© L&R Manufacturing",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "ADDED TO EXPAND ROSTER: L&R Quantrex is a long-established, industry-standard brand among US jewelers and watchmakers, filling the professional/trade tier alongside Branson and Elmasonic that a serious 2026 buyer would compare. Manufacturer page states 95W consumption without the heat option and 150W with it engaged; heater_watt is left null because L&R does not publish a separate heater-only rating (the 55W arithmetic difference is not a directly-stated figure, so per the null-beats-a-guess rule it is not recorded). Tank material and digital-display status not specified on the accessed page (Quantrex tanks are stainless steel across the broader product line per L&R's general literature, but this was not explicitly confirmed on this specific product's page, so left null)."
+    },
+    {
+      "slug": "creworks-duc-m02j-us-2l",
+      "name": "CREWORKS 2L Knob-Control Ultrasonic Cleaner (DUC-M02J-US)",
+      "brand": "CREWORKS",
+      "category": "ultrasonic-cleaners",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "Promotional/coupon pricing observed in the $41-100 range across Amazon US, Amazon UK, and DealNews listings, with no single stable MSRP -- left null rather than guessed.",
+      "specs": {
+        "tank_capacity_l": 2,
+        "ultrasonic_frequency_khz": 40,
+        "ultrasonic_power_w": 60,
+        "heater_watt": 150,
+        "timer_settings": "1-30 minutes, with degas mode",
+        "tank_material": "Stainless steel",
+        "digital_display": false,
+        "transducers": null
+      },
+      "source": {
+        "url": "https://www.creworksequipment.com/products/knob-ultrasonic-cleaner-2l-duc-m02j-us",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "LOWER CONFIDENCE: creworksequipment.com returned HTTP 429 on every attempt this session and could not be loaded directly. Specs cross-referenced from DealNews and Amazon (US/UK) listings for this exact SKU, all independently citing '60W ultrasonic power, 40kHz frequency, 150W heater, 2L capacity' with a degas mode. Product name explicitly says 'Knob' control, so digital_display is recorded as false (mechanical knob interface) despite one aggregated source loosely describing a 'digital control panel' -- the knob-based naming is treated as more authoritative since it's the product's own title. No image URL could be captured because the hosting domain would not load.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/creworks-duc-m02j-us-2l.jpg?v=0c04a12297",
+        "source": "creworksequipment.com",
+        "license": "© CREWORKS",
+        "accessedAt": "2026-08-12"
+      }
+    }
+  ]
+}

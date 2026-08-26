@@ -1,0 +1,352 @@
+{
+  "category": "anemometers",
+  "generatedAt": "2026-08-09T00:00:00.000Z",
+  "methodologyNotes": "Roster covers twelve anemometers spanning professional weather meters (Kestrel), HVAC/duct thermo-anemometers (Extech, REED, Amprobe, Fluke, testo, General Tools) and budget consumer vane meters (BTMETER, HoldPeak, Proster, UNI-T), verified 2026-08-09 primarily via direct fetches of manufacturer pages (kestrelinstruments.com, extech.com, meters.uni-trend.com, reedinstruments.com, amprobe.com) where those succeeded, supplemented by search-engine-surfaced retailer/reseller copy where manufacturer sites rate-limited (testo.com, HTTP 429), bot-blocked (fluke.com, HTTP 403), or simply do not publish consumer pricing (Extech, REED, Amprobe, General Tools all sell through distributor networks with no listed price on their own sites); three seed products did not check out and were corrected/replaced rather than guessed at — \"REED R4700SD\" does not exist in REED's current Air Velocity Meters catalog (confirmed by fetching that category page directly) and was replaced with their actual current SD-card datalogging vane anemometer, the R4000SD; \"Ambient Weather WM-4\" and \"WeatherFlow WEATHERmeter\" could not be found as currently-sold products (Ambient Weather's own site and shop pages show no WM-4, and weatherflow.com now redirects to tempest.earth whose /weathermeter page 404s, consistent with that smartphone-dongle product line being discontinued) and were replaced with two verifiably real, currently-cataloged instruments, the Fluke 925 and Amprobe TMA10A; and \"Dr.meter FB600\" returned zero search results and does not appear in drmeter.com's own product catalog (which has no anemometer category at all) and was replaced with the General Tools DAF800, the closest real match to the seed-suggested \"General Tools DAFM8\" (also not a real model number). Several fields are left null rather than estimated: airflow_cfm_cmm and temperature_range where a fetched or surfaced source did not state that capability; priceUsd for seven of twelve entries (Extech 45158, UNI-T UT363, REED R4000SD, Fluke 925, Amprobe TMA10A, General Tools DAF800) where no live-fetched or search-surfaced dollar figure could be confirmed during this session, each documented in its own priceNote rather than guessed.",
+  "specKeys": [
+    "wind_speed_range_ms",
+    "airflow_cfm_cmm",
+    "velocity_accuracy",
+    "sensor_type",
+    "temperature_range",
+    "data_hold_logging",
+    "backlit_display"
+  ],
+  "products": [
+    {
+      "slug": "kestrel-3500-weather-meter",
+      "name": "Kestrel 3500 Weather Meter",
+      "brand": "Kestrel",
+      "category": "anemometers",
+      "releaseDate": null,
+      "priceUsd": 209,
+      "priceNote": "Current price on kestrelinstruments.com (Nielsen-Kellerman's official storefront)",
+      "specs": {
+        "wind_speed_range_ms": "0.6 to 40.0 m/s (1.3-89.5 mph); operational to 60.0 m/s",
+        "airflow_cfm_cmm": null,
+        "velocity_accuracy": "Larger of ±3% of reading or 20 ft/min",
+        "sensor_type": "Rotating vane (impeller)",
+        "temperature_range": "-10 to 55 °C (14 to 131 °F), ±0.5 °C accuracy",
+        "data_hold_logging": "No built-in logging on base 3500 (shows current/max/min/avg); optional USB/RS-232 PC interface cable sold separately for one-way data transfer",
+        "backlit_display": true
+      },
+      "source": {
+        "url": "https://kestrelinstruments.com/kestrel-3500-pocket-weather-meter",
+        "accessedAt": "2026-08-09"
+      },
+      "provenance": "Fetched directly from Nielsen-Kellerman's official Kestrel Instruments product page: confirms 0.6-40.0 m/s wind speed range (±3% of reading or 20 ft/min accuracy, whichever is larger), -10 to 55°C operating temperature range with ±0.5°C accuracy, reflective LCD with manually-activated blue-white backlight, and $209.00 current price. The base 3500 has no built-in data logging (that starts at the Kestrel 4000/4500 series); a USB/RS-232 interface is available only as a separate accessory for one-way data transfer, not onboard storage.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/kestrel-3500-weather-meter.jpg?v=d4a6e46396",
+        "source": "kestrelinstruments.com",
+        "license": "© Kestrel",
+        "accessedAt": "2026-08-12"
+      }
+    },
+    {
+      "slug": "kestrel-5500-weather-meter",
+      "name": "Kestrel 5500 Weather Meter",
+      "brand": "Kestrel",
+      "category": "anemometers",
+      "releaseDate": null,
+      "priceUsd": 379,
+      "priceNote": "Current price on kestrelinstruments.com",
+      "specs": {
+        "wind_speed_range_ms": "0.6 to 40.0 m/s (1.3-89.5 mph)",
+        "airflow_cfm_cmm": null,
+        "velocity_accuracy": "Larger of ±3% of reading or 20 ft/min",
+        "sensor_type": "Rotating vane (impeller)",
+        "temperature_range": "-10 to 55 °C (14 to 131 °F)",
+        "data_hold_logging": "Logs over 10,000 time-stamped records, adjustable 2 sec-12 hr intervals; Bluetooth sync to Kestrel LiNK app",
+        "backlit_display": true
+      },
+      "source": {
+        "url": "https://kestrelinstruments.com/kestrel-5500-weather-meter",
+        "accessedAt": "2026-08-09"
+      },
+      "provenance": "Fetched directly from kestrelinstruments.com: confirms the same 0.6-40.0 m/s wind-speed range and accuracy formula as the 3500, -10 to 55°C operating range, switchable white/red backlit sunlight-readable LCD, a 10,000+ record onboard datalogger with adjustable interval, Bluetooth sync to the Kestrel LiNK app (the 5500's main upgrade over the 3500), and $379.00 current price.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/kestrel-5500-weather-meter.jpg?v=982c08d403",
+        "source": "kestrelinstruments.com",
+        "license": "© Kestrel",
+        "accessedAt": "2026-08-12"
+      }
+    },
+    {
+      "slug": "extech-45158",
+      "name": "Extech 45158 Mini Thermo-Anemometer with Humidity",
+      "brand": "Extech Instruments",
+      "category": "anemometers",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "No consumer list price found on extech.com (Extech/FLIR/Teledyne sells through a distributor network); distributor pages that typically show pricing (Grainger, Amazon) returned server errors on direct fetch during this session, so left null rather than guessed",
+      "specs": {
+        "wind_speed_range_ms": "1.1 to 20 m/s (2.5-44.7 mph)",
+        "airflow_cfm_cmm": null,
+        "velocity_accuracy": "±(3% of reading + 0.4 mph)",
+        "sensor_type": "Vane, 1 in. (24mm) diameter",
+        "temperature_range": "-18 to 50 °C (0 to 122 °F), ±1 °C accuracy",
+        "data_hold_logging": "Data hold; selectable 5/10/13-second averaging (no onboard SD/USB logging)",
+        "backlit_display": true
+      },
+      "source": {
+        "url": "https://www.extech.com/products/45158",
+        "accessedAt": "2026-08-09"
+      },
+      "provenance": "Fetched directly from extech.com, which confirms model 45158 is the 'Mini Thermo-Anemometer with Humidity': 1.1-20 m/s vane anemometer (1 in./24mm vane), ±(3%+0.4 mph) accuracy, -18 to 50°C temperature range with ±1°C accuracy, waterproof pocket-sized housing with a fold-up protective cover extending to 9 in., selectable averaging, and data hold. No price is published on Extech's own site; distributor price pages that were attempted (Grainger, Amazon) failed with server errors during this session, so priceUsd is left null rather than estimated.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/extech-45158.jpg?v=a5d8683c6f",
+        "source": "instrumart.com",
+        "license": "© Extech Instruments",
+        "accessedAt": "2026-08-12"
+      }
+    },
+    {
+      "slug": "uni-t-ut363",
+      "name": "UNI-T UT363 Wind Speed and Temperature Meter",
+      "brand": "UNI-T",
+      "category": "anemometers",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "Listed as out of stock with no price shown on meters.uni-trend.com (manufacturer's own meters storefront); no other live-verifiable retailer price was obtained during this session",
+      "specs": {
+        "wind_speed_range_ms": "0 to 30 m/s",
+        "airflow_cfm_cmm": null,
+        "velocity_accuracy": "±(5% of reading + 0.5 digit)",
+        "sensor_type": "Fixed rotating-vane head, typical of the UT36x series (not explicitly named on the manufacturer spec sheet)",
+        "temperature_range": "-10 to 50 °C (14 to 122 °F), ±2 °C / ±4 °F accuracy",
+        "data_hold_logging": "Data hold only; no onboard logging (the separate UT363BT variant adds Bluetooth transmission to the iENV app, still no SD storage)",
+        "backlit_display": true
+      },
+      "source": {
+        "url": "https://meters.uni-trend.com/product/ut363/",
+        "accessedAt": "2026-08-09"
+      },
+      "provenance": "Fetched directly from UNI-T's own meters.uni-trend.com product page: confirms 0-30 m/s range, ±(5%rdg+0.5) accuracy, -10 to 50°C temperature range with ±2°C/±4°F accuracy, data hold, and LCD backlight. The page marks the product out of stock with no price shown; sensor design is a fixed rotating-vane head consistent with the standard UT36x family, though the manufacturer page itself does not use the word 'vane' explicitly, so this is noted as an inference rather than a direct quote.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/uni-t-ut363.jpg?v=a86f965725",
+        "source": "meters.uni-trend.com",
+        "license": "© UNI-T",
+        "accessedAt": "2026-08-09"
+      }
+    },
+    {
+      "slug": "reed-r4000sd",
+      "name": "REED R4000SD Data Logging Vane Thermo-Anemometer",
+      "brand": "REED Instruments",
+      "category": "anemometers",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "REED Instruments sells through a distributor network and does not publish direct consumer pricing on reedinstruments.com; distributor price pages (TEquipment, Transcat, Global Test Supply) returned errors (403/404/405) on direct fetch during this session, so left null rather than guessed",
+      "specs": {
+        "wind_speed_range_ms": "0.4 to 30 m/s (79-5906 ft/min)",
+        "airflow_cfm_cmm": null,
+        "velocity_accuracy": "±(2% of reading + 0.2 m/s / 40 ft/min)",
+        "sensor_type": "Rotating vane, 72mm (2.8 in.) diameter, low-friction ball bearing",
+        "temperature_range": "0 to 50 °C (32 to 122 °F) ambient probe; optional Type K (-100 to 1300 °C) / Type J (-100 to 1200 °C) thermocouple input",
+        "data_hold_logging": "Onboard SD-card datalogging up to 16GB, adjustable 1-3600 sec sampling interval",
+        "backlit_display": true
+      },
+      "source": {
+        "url": "https://www.reedinstruments.com/product/reed-r4000sd-data-logging-vane-thermo-anemometer",
+        "accessedAt": "2026-08-09"
+      },
+      "provenance": "CORRECTED FROM SEED: the seed model 'REED R4700SD' does not exist in REED Instruments' current catalog. Their own reedinstruments.com Air Velocity Meters category (fetched directly) lists twelve current products — R4100, R3001, R4000SD/-KIT/-KIT2, R4500SD/-KIT/-KIT2, R4100-PROBE, 8906, R1600/-KIT — with no R4700SD among them. The seed was replaced with REED's actual current SD-card data-logging vane anemometer, the R4000SD (the R4500SD is the equivalent hot-wire-probe sibling for low-velocity duct work, kept out to avoid duplicating the sensor type already covered by testo 405i). Specs fetched directly from REED's own R4000SD product page: 79-5906 fpm (0.4-30 m/s) vane range, ±(2%rdg+40fpm) accuracy, 72mm vane, 0-50°C ambient temperature with optional Type K/J thermocouple input, and SD datalogging up to 16GB, 1-3600 sec intervals. No price is shown on REED's own page (B2B distributor sales model)."
+    },
+    {
+      "slug": "testo-405i",
+      "name": "testo 405i Smart Probe Thermal Anemometer",
+      "brand": "Testo",
+      "category": "anemometers",
+      "releaseDate": null,
+      "priceUsd": 123.95,
+      "priceNote": "Aggregated 'starting from' price across 2+ US retailers per ShopSavvy's price-comparison tool; testo.com's own product page returned HTTP 429 (rate-limited) on repeated direct-fetch attempts during this session, so the manufacturer's own listed price could not be independently reconfirmed",
+      "specs": {
+        "wind_speed_range_ms": "0 to 30 m/s",
+        "airflow_cfm_cmm": null,
+        "velocity_accuracy": "±(0.1 m/s + 5% of reading) below 2 m/s; ±(0.3 m/s + 5% of reading) 2-15 m/s",
+        "sensor_type": "Hot-wire (thermal), foldable telescopic probe",
+        "temperature_range": "0 to 50 °C (32 to 122 °F)",
+        "data_hold_logging": "Hold/min/max/logging via Bluetooth-paired testo Smart App; no onboard display",
+        "backlit_display": false
+      },
+      "source": {
+        "url": "https://www.testo.com/en-US/testo-405i/p/0560-1405",
+        "accessedAt": "2026-08-09"
+      },
+      "provenance": "testo.com's own product page (URL is live, confirmed by repeated HTTP 429 rate-limit responses rather than a 404) could not be fetched successfully in this session. Specs reflect testo's well-established, consistently published data sheet for the 405i Bluetooth Smart Probe: 0-30 m/s hot-wire velocity range, dual-tier accuracy below/above 2 m/s, 0-50°C temperature range, and app-only operation with no integrated display — the 405i has no screen of its own; readings are shown live in the testo Smart App over Bluetooth, so backlit_display is false. Price is the aggregated minimum figure reported across US distributors by ShopSavvy's comparison tool rather than a single directly-fetched retailer figure.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/testo-405i.jpg?v=b7b99021ae",
+        "source": "globaltestsupply.com",
+        "license": "© Testo",
+        "accessedAt": "2026-08-12"
+      }
+    },
+    {
+      "slug": "btmeter-bt-100-app",
+      "name": "BTMETER BT-100APP Bluetooth Vane Anemometer",
+      "brand": "BTMETER",
+      "category": "anemometers",
+      "releaseDate": null,
+      "priceUsd": 45.99,
+      "priceNote": "Price for the Bluetooth/App-enabled BT-100APP variant per BTMETER's own online store (cross-referenced from the base-model product page); the standard non-Bluetooth BT-100 sells for $30.99 on the same store. BTMETER's manufacturer domain (btmeter-tech.com) did not resolve and Amazon product pages returned server errors on direct-fetch attempts in this session",
+      "specs": {
+        "wind_speed_range_ms": "0.3 to 30 m/s (0.67-67.1 mph)",
+        "airflow_cfm_cmm": "CFM = velocity (ft/min) x duct cross-sectional area (ft²), user-entered area",
+        "velocity_accuracy": "±5% of reading",
+        "sensor_type": "8-vane wheel with dual temperature sensors",
+        "temperature_range": "-10 to 45 °C (14 to 113 °F), ±2 °C accuracy",
+        "data_hold_logging": "Current/Max/Min/Average hold; Bluetooth live streaming to companion app (no onboard SD logging)",
+        "backlit_display": true
+      },
+      "source": {
+        "url": "https://www.btmeter-store.com/products/bt-meter100-vane-anemometer",
+        "accessedAt": "2026-08-09"
+      },
+      "provenance": "Fetched directly from BTMETER's own online store page for the base BT-100 vane anemometer: confirms 0.67-67.1 mph (0.3-30 m/s) range, an 8-vane sensor with dual temperature sensors, ±5% velocity accuracy / ±2°C temperature accuracy, backlit LCD, and CFM calculation from user-entered duct area. That page states a separate Bluetooth/App-enabled 'BT-100APP' variant — the specific product named in this dataset — is priced at $45.99 versus $30.99 for the non-Bluetooth base unit; the APP variant's own dedicated product page returned a 404 on direct fetch in this session, so its price is sourced from the base page's cross-reference rather than a live fetch of its own listing.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/btmeter-bt-100-app.jpg?v=f51dc704ae",
+        "source": "www.btmeter-store.com",
+        "license": "© BTMETER",
+        "accessedAt": "2026-08-09"
+      }
+    },
+    {
+      "slug": "holdpeak-hp-866b",
+      "name": "HoldPeak HP-866B Digital Anemometer",
+      "brand": "HoldPeak",
+      "category": "anemometers",
+      "releaseDate": null,
+      "priceUsd": 37.11,
+      "priceNote": "HoldPeak's own online store price (marked down from $40.15 list), surfaced via search rather than a direct live fetch — holdpeak.com's own product page returned a connection error (ECONNREFUSED) during this session",
+      "specs": {
+        "wind_speed_range_ms": "0.3 to 30 m/s (59-5905 ft/min)",
+        "airflow_cfm_cmm": null,
+        "velocity_accuracy": "±5% of reading",
+        "sensor_type": "Rotating vane",
+        "temperature_range": "-10 to 45 °C (14 to 113 °F), ±3.6 °F accuracy",
+        "data_hold_logging": "Max/Min/Average hold; no onboard logging",
+        "backlit_display": true
+      },
+      "source": {
+        "url": "https://holdpeak.com/product/252.html",
+        "accessedAt": "2026-08-09"
+      },
+      "provenance": "HoldPeak's official product page returned a connection error (ECONNREFUSED) on direct fetch in this session. Specs and pricing instead compiled from search-engine-surfaced excerpts of the HoldPeak Store listing and a third-party review site (bestactioncameras.com), which independently corroborate a 59-5905 ft/min (0.3-30 m/s) vane anemometer, ±5% accuracy, -10 to 45°C temperature range, backlit LCD with max/min/average hold, and pricing of $30.99-$37.11 depending on retailer/promotion. $37.11 (HoldPeak's own store, marked down from $40.15) is used as the primary figure."
+    },
+    {
+      "slug": "proster-handheld-anemometer",
+      "name": "Proster Handheld Digital Anemometer",
+      "brand": "Proster",
+      "category": "anemometers",
+      "releaseDate": null,
+      "priceUsd": 33.67,
+      "priceNote": "Proster's EU store lists a stripped-down model at $14.85 and this full-featured model (CFM + backlight + hold) at $33.67; figure surfaced via search rather than a direct live fetch, and Proster has no confirmed North American manufacturer storefront — sold primarily through Amazon/eBay marketplace listings",
+      "specs": {
+        "wind_speed_range_ms": "0.4 to 30 m/s (80-5900 ft/min)",
+        "airflow_cfm_cmm": "0 to 99990 CFM and CMM",
+        "velocity_accuracy": null,
+        "sensor_type": "Rotating vane",
+        "temperature_range": "Displays temperature and wind chill, including sub-0°C readings; exact range not stated in surfaced sources",
+        "data_hold_logging": "Reading hold; max/min for handheld or fixed measurement; no onboard logging",
+        "backlit_display": true
+      },
+      "source": {
+        "url": "https://www.ebay.com/itm/358241845889",
+        "accessedAt": "2026-08-09"
+      },
+      "provenance": "Specs compiled from search-engine-surfaced retailer copy (Proster's EU store and this eBay listing), not a direct in-session fetch of a Proster-hosted product page. Confirms 80-5900 fpm (0.4-30 m/s) vane anemometer with CFM/CMM airflow calculation, backlit LCD, reading hold/max/min, wind-chill display, and 9V battery power with auto power-off. Velocity accuracy and the exact temperature measurement range are not stated in any surfaced source and are left null/qualified rather than guessed.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/proster-handheld-anemometer.jpg?v=76c5ec9e9b",
+        "source": "prostereu.com",
+        "license": "© Proster",
+        "accessedAt": "2026-08-12"
+      }
+    },
+    {
+      "slug": "fluke-925",
+      "name": "Fluke 925 Vane Anemometer",
+      "brand": "Fluke",
+      "category": "anemometers",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "No price found in Fluke's own product materials or corroborating retailer snippets during this session; fluke.com returned HTTP 403 on direct fetch, so left null rather than guessed",
+      "specs": {
+        "wind_speed_range_ms": "0.40 to 25.00 m/s (80-4900 ft/min)",
+        "airflow_cfm_cmm": "0.01 to 99.99 m³/s (CFM and CMS units)",
+        "velocity_accuracy": "±2% of full scale",
+        "sensor_type": "Vane, separate probe head connected to handheld display unit",
+        "temperature_range": null,
+        "data_hold_logging": "Simultaneous wind-temperature and airflow measurement; hold function",
+        "backlit_display": null
+      },
+      "source": {
+        "url": "https://www.fluke.com/en-us/product/air-quality/vane-anemometers/fluke-925",
+        "accessedAt": "2026-08-09"
+      },
+      "provenance": "fluke.com returned HTTP 403 Forbidden on repeated direct-fetch attempts in this session (bot-protection blocking the request, not a dead URL — the slug matches Fluke's known URL pattern for this product line). Specs compiled from search-engine-surfaced summaries of Fluke's own product description: 80-4900 fpm (0.40-25.00 m/s) range, ±2% of full-scale accuracy, 0.01-99.99 m³/s CFM/CMS airflow via a separate vane probe head wired to a handheld display, and simultaneous wind-temperature measurement. Exact temperature range and backlit-display status were not stated in any surfaced source and are left null rather than guessed.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/fluke-925.jpg?v=f55f248487",
+        "source": "fluke.com",
+        "license": "© Fluke",
+        "accessedAt": "2026-08-12"
+      }
+    },
+    {
+      "slug": "amprobe-tma10a",
+      "name": "Amprobe TMA10A Vane Anemometer",
+      "brand": "Amprobe",
+      "category": "anemometers",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "No price shown on amprobe.com's own product page; distributor pages (TEquipment, Test Equipment Depot, Mouser) that typically carry pricing were not successfully reconfirmed with a price during this session",
+      "specs": {
+        "wind_speed_range_ms": "0.40 to 25.00 m/s (80-4900 ft/min)",
+        "airflow_cfm_cmm": "1 to 9999 ft³/min; 0.01 to 99.99 m³/sec",
+        "velocity_accuracy": "±0.5 m/s (0.40-10.00 m/s); ±0.75 m/s (10.00-25.00 m/s)",
+        "sensor_type": "Flexible precision vane on an extended flexible cord (remote probe)",
+        "temperature_range": "0 to 50 °C (32 to 122 °F), ±0.8 °C accuracy",
+        "data_hold_logging": "Data hold; continuous moving average up to 2 hours; RS232 PC interface (no onboard SD logging)",
+        "backlit_display": null
+      },
+      "source": {
+        "url": "https://amprobe.com/product/tma10a/",
+        "accessedAt": "2026-08-09"
+      },
+      "provenance": "Fetched directly from Amprobe's own product page: confirms 80-4900 fpm (0.40-25.00 m/s) range with tiered accuracy (±0.5 m/s below 10 m/s, ±0.75 m/s above), CFM 1-9999 ft³/min and CMM 0.01-99.99 m³/sec via user-entered duct area, a flexible remote vane probe on an extended cord, 0-50°C dual-display temperature measurement with ±0.8°C accuracy, data hold, up to 2-hour continuous moving average, and an RS232 PC interface. Backlighting is not mentioned anywhere in the fetched page content, so left null rather than assumed. No price is shown on Amprobe's own site (B2B/distributor sales model).",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/amprobe-tma10a.jpg?v=1a47a9c9e5",
+        "source": "amprobe.com",
+        "license": "© Amprobe",
+        "accessedAt": "2026-08-09"
+      }
+    },
+    {
+      "slug": "general-tools-daf800",
+      "name": "General Tools DAF800 Mini Digital Airflow Meter",
+      "brand": "General Tools",
+      "category": "anemometers",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "No price found on Calright Instruments' listing or General Tools' own site during this session; General Tools' own DAF800 product URL returned 404",
+      "specs": {
+        "wind_speed_range_ms": "0.4 to 30.0 m/s (80-5910 ft/min)",
+        "airflow_cfm_cmm": null,
+        "velocity_accuracy": "±3% full scale",
+        "sensor_type": "Low-friction ball vane wheel",
+        "temperature_range": null,
+        "data_hold_logging": "Data hold freezes current value; no onboard logging",
+        "backlit_display": null
+      },
+      "source": {
+        "url": "https://www.calright.com/general-tools-daf800-mini-digital-airflow-meter",
+        "accessedAt": "2026-08-09"
+      },
+      "provenance": "CORRECTED FROM SEED: the seed name 'General Tools DAFM8' does not match any current General Tools catalog number found during research; the closest and consistently corroborated current product is the General Tools DAF800 Mini Digital Airflow Meter. This entry also stands in for two other seed products that did not check out: 'WeatherFlow WEATHERmeter,' a smartphone-dongle wind meter that appears discontinued (weatherflow.com now redirects to tempest.earth, whose /weathermeter page 404s, and no live purchase page could be found), and 'Dr.meter FB600,' which does not appear to exist — drmeter.com's own catalog has no anemometer category at all, and targeted searches for 'FB600' plus 'Dr.meter' returned zero results. DAF800 specs fetched directly via Calright Instruments (an authorized General Tools reseller): 80-5910 fpm (0.4-30.0 m/s), ±3% full-scale accuracy, low-friction ball vane wheel, data hold, single 9V battery power, no temperature measurement on this model. General Tools' own product page returned 404 in this session; no price was found on any fetched or surfaced source.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/general-tools-daf800.jpg?v=a689c4c083",
+        "source": "www.calright.com",
+        "license": "© General Tools",
+        "accessedAt": "2026-08-09"
+      }
+    }
+  ]
+}

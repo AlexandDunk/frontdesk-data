@@ -960,6 +960,213 @@
         ],
         "provenance": "Pricing from corroborating sources (official page 403); compliance from userflow.com/blog/soc-2-type-2."
       }
+    },
+    {
+      "slug": "product-fruits",
+      "name": "Product Fruits",
+      "domain": "productfruits.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Slack",
+        "Mixpanel",
+        "HubSpot",
+        "Segment",
+        "Zapier",
+        "Salesforce"
+      ],
+      "provenance": "Re-fetched the Product Fruits pricing page (https://productfruits.com/pricing) via fetch-clean.mjs on 2026-07-10; it renders USD figures directly. Pricing is framed by monthly active users (\"See exactly what you'll pay based on your monthly active users\"). At the minimum 1,500-MAU slider position the Starter plan shows \"$96 /month\" annotated \"25% off billed annually\" and \"Save $396\", with Pro and Business both at \"$149 /month\" and a quote-only Custom plan. The page lists only a free trial (\"The trial is completely free, no credit card is required\"), no $0-forever plan, so freeTier=false. Security row explicitly states \"SOC 2 Type 2, ISO 27001 certification, GDPR compliance\" (soc2=true); no HIPAA/BAA mention anywhere (hipaa=null). All six integrations verified in the feature comparison table. Confirmed this is Product Fruits' own onboarding product, not a sibling. No corroboration was needed because the pricing page itself carries the USD figures.",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": 96,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Lowest paid tier at the minimum 1,500 MAU slider position. The shown $96/month is the 25%-off \"billed annually\" rate (Save $396); no separate monthly-billed figure appears in the fetched page text (the toggle defaults to Yearly). Includes linear flows, standard adaptive onboarding, onboarding creator agent, public knowledge base, basic integrations. Pro and Business both show $149/month at this MAU tier; Custom is quote-only.",
+          "source": {
+            "url": "https://productfruits.com/pricing",
+            "accessedAt": "2026-07-10"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Slack",
+          "Mixpanel",
+          "HubSpot",
+          "Segment",
+          "Zapier",
+          "Salesforce"
+        ],
+        "limits": [],
+        "keyFeatures": [],
+        "bestFor": [
+          "SaaS product teams building adaptive, AI-powered in-app user onboarding and activation"
+        ],
+        "sources": [
+          {
+            "url": "https://productfruits.com/pricing",
+            "accessedAt": "2026-07-10"
+          }
+        ],
+        "provenance": "Re-fetched the Product Fruits pricing page (https://productfruits.com/pricing) via fetch-clean.mjs on 2026-07-10; it renders USD figures directly. Pricing is framed by monthly active users (\"See exactly what you'll pay based on your monthly active users\"). At the minimum 1,500-MAU slider position the Starter plan shows \"$96 /month\" annotated \"25% off billed annually\" and \"Save $396\", with Pro and Business both at \"$149 /month\" and a quote-only Custom plan. The page lists only a free trial (\"The trial is completely free, no credit card is required\"), no $0-forever plan, so freeTier=false. Security row explicitly states \"SOC 2 Type 2, ISO 27001 certification, GDPR compliance\" (soc2=true); no HIPAA/BAA mention anywhere (hipaa=null). All six integrations verified in the feature comparison table. Confirmed this is Product Fruits' own onboarding product, not a sibling. No corroboration was needed because the pricing page itself carries the USD figures."
+      }
+    },
+    {
+      "slug": "rocketlane",
+      "name": "Rocketlane",
+      "domain": "rocketlane.com",
+      "hipaa": true,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Zapier",
+        "Hubspot",
+        "Jira",
+        "Slack",
+        "Salesforce",
+        "Workato"
+      ],
+      "provenance": "Re-fetched the Rocketlane pricing page (https://www.rocketlane.com/pricing) via fetch-clean.mjs on 2026-07-10. Page displayed four USD tiers — Essential $19, Standard $49, Premium $69, Enterprise $99 — each stated \"per team member/month billed annually,\" with Essential and Standard marked \"*minimum of 5 team members.\" Essential's $19 is the lowest self-serve paid plan, quoted verbatim (billed-annually monthly rate; no separate monthly-billed price shown). Page shows only a 14-day free trial (\"Try for free\"; FAQ references 14-day trial) with no $0-forever plan, so freeTier=false. Security section lists \"SOC 2 Compliant\" and \"HIPAA Compliant\" (compliance table also shows \"SOC2 Type II Certification\"), confirming soc2=true and hipaa=true. Integration sections name Zapier, Hubspot, Jira, Slack, Salesforce, and Workato. Vendor identity confirmed as Rocketlane (rocketlane.com PSA/customer-onboarding platform); Webflow strings in nav are CMS boilerplate, not a sibling product. No corroboration source needed since USD prices were present on the vendor page.",
+      "plans": [
+        {
+          "name": "Essential",
+          "monthlyUsd": 19,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "\"$19 per team member/month billed annually, *minimum of 5 team members\" — unlimited projects, branded customer portal, templates, time tracking; \"Perfect for small service teams seeking foundational delivery blocks to kickstart operations.\" Priced per seat.",
+          "source": {
+            "url": "https://www.rocketlane.com/pricing",
+            "accessedAt": "2026-07-10"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": true,
+          "soc2": true,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Zapier",
+          "Hubspot",
+          "Jira",
+          "Slack",
+          "Salesforce",
+          "Workato"
+        ],
+        "limits": [],
+        "keyFeatures": [],
+        "bestFor": [
+          "Small service teams needing foundational client-onboarding and project-delivery blocks"
+        ],
+        "sources": [
+          {
+            "url": "https://www.rocketlane.com/pricing",
+            "accessedAt": "2026-07-10"
+          }
+        ],
+        "provenance": "Re-fetched the Rocketlane pricing page (https://www.rocketlane.com/pricing) via fetch-clean.mjs on 2026-07-10. Page displayed four USD tiers — Essential $19, Standard $49, Premium $69, Enterprise $99 — each stated \"per team member/month billed annually,\" with Essential and Standard marked \"*minimum of 5 team members.\" Essential's $19 is the lowest self-serve paid plan, quoted verbatim (billed-annually monthly rate; no separate monthly-billed price shown). Page shows only a 14-day free trial (\"Try for free\"; FAQ references 14-day trial) with no $0-forever plan, so freeTier=false. Security section lists \"SOC 2 Compliant\" and \"HIPAA Compliant\" (compliance table also shows \"SOC2 Type II Certification\"), confirming soc2=true and hipaa=true. Integration sections name Zapier, Hubspot, Jira, Slack, Salesforce, and Workato. Vendor identity confirmed as Rocketlane (rocketlane.com PSA/customer-onboarding platform); Webflow strings in nav are CMS boilerplate, not a sibling product. No corroboration source needed since USD prices were present on the vendor page."
+      }
+    },
+    {
+      "slug": "dock",
+      "name": "Dock",
+      "domain": "dock.us",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "HubSpot",
+        "Salesforce",
+        "Slack",
+        "Microsoft Teams",
+        "Gong",
+        "Loom"
+      ],
+      "provenance": "Re-fetched the Dock pricing page (https://www.dock.us/pricing) via the fetch-clean script on 2026-07-10. It renders all prices natively in USD, so no corroboration source is required. Verbatim from the fetched page: Free \"$ 0 forever\", Standard \"$ 350 per month\" (for growing teams), Premium \"$ 1,000 per month, billed annually\", Enterprise \"Custom annual contract\". Standard at $350/mo is the lowest self-serve paid monthly plan and is the entry price (entryMonthlyUsd=350, entryPlanName=Standard). The comparison table Standard column confirms: 5 users included, additional seats $50/mo, Workspaces Unlimited, CMS assets 100, Salesforce ✓, HubSpot ✓, Priority support ✓. The \"$ 0 forever\" Free plan confirms freeTier=true. Integrations confirmed on the same table: Slack + MS Teams, Call recorders (Gong, Chorus, Fathom…), Embeds (Loom, PandaDoc…), Salesforce, HubSpot. Correct vendor/product: page is dock.us (Dock Labs, Inc.), and Customer Onboarding is a listed Dock product. HIPAA and SOC 2 are not stated anywhere on the page (only a generic Trust Center link, no explicit SOC 2 claim), so both remain null.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Forever-free plan.",
+          "source": {
+            "url": "https://www.dock.us/pricing",
+            "accessedAt": "2026-07-10"
+          }
+        },
+        {
+          "name": "Standard",
+          "monthlyUsd": 350,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "\"For growing teams\" — 5 users included, additional seats $50/mo, unlimited workspaces, 100 CMS assets, Salesforce + HubSpot, priority support.",
+          "source": {
+            "url": "https://www.dock.us/pricing",
+            "accessedAt": "2026-07-10"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "HubSpot",
+          "Salesforce",
+          "Slack",
+          "Microsoft Teams",
+          "Gong",
+          "Loom"
+        ],
+        "limits": [],
+        "keyFeatures": [],
+        "bestFor": [
+          "Growing revenue teams running customer onboarding and client portals"
+        ],
+        "sources": [
+          {
+            "url": "https://www.dock.us/pricing",
+            "accessedAt": "2026-07-10"
+          }
+        ],
+        "provenance": "Re-fetched the Dock pricing page (https://www.dock.us/pricing) via the fetch-clean script on 2026-07-10. It renders all prices natively in USD, so no corroboration source is required. Verbatim from the fetched page: Free \"$ 0 forever\", Standard \"$ 350 per month\" (for growing teams), Premium \"$ 1,000 per month, billed annually\", Enterprise \"Custom annual contract\". Standard at $350/mo is the lowest self-serve paid monthly plan and is the entry price (entryMonthlyUsd=350, entryPlanName=Standard). The comparison table Standard column confirms: 5 users included, additional seats $50/mo, Workspaces Unlimited, CMS assets 100, Salesforce ✓, HubSpot ✓, Priority support ✓. The \"$ 0 forever\" Free plan confirms freeTier=true. Integrations confirmed on the same table: Slack + MS Teams, Call recorders (Gong, Chorus, Fathom…), Embeds (Loom, PandaDoc…), Salesforce, HubSpot. Correct vendor/product: page is dock.us (Dock Labs, Inc.), and Customer Onboarding is a listed Dock product. HIPAA and SOC 2 are not stated anywhere on the page (only a generic Trust Center link, no explicit SOC 2 claim), so both remain null."
+      }
     }
   ]
 }

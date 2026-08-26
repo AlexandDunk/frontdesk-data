@@ -1,0 +1,477 @@
+{
+  "category": "electric-unicycles",
+  "generatedAt": "2026-08-01",
+  "methodologyNotes": "Roster covers 12 flagship-to-enthusiast electric unicycles (EUCs) actively marketed in the US as of 2026, spanning the four brands that dominate buyer comparisons in enthusiast communities (Electric Unicycle Forum, r/ElectricUnicycle) and retailer catalogs: InMotion, King Song (Kingsong), Begode (formerly Gotway), and Veteran/LeaperKim. All 12 seed models supplied for this dataset were verified as real, currently-sold products via manufacturer or authorized-retailer pages; none needed to be replaced, so the roster was kept at 12 rather than padded to 15 with lower-confidence entries. Primary sources were the manufacturer's own storefront where it publishes a reachable, static spec page (myinmotion.com, kingsong.com). Begode and Veteran/LeaperKim do not run a reliably fetchable EN-language spec storefront (begode.com and a dedicated leaperkim.com both returned persistent errors during research), so for those eight products the primary source is smartwheel.us, a US-based authorized EUC retailer that publishes a consistent, detailed spec table per model plus a confirmed USD price; each was corroborated against a second independent retailer, national distributor, or in-depth enthusiast review (Freshly Charged, Electrek, Voltride, EUCO, ZoomRide, myewheel.com). Every source and corroboration URL was fetched and confirmed live on accessedAt=2026-08-01. EUC spec sheets routinely disagree across retailers on 'range' and 'top speed' because manufacturers publish theoretical/ideal-conditions maximums that each reseller rounds or restates differently (and sometimes conflates a wheel's base model with its '-S' or 'Pro' sibling). Where sources disagreed materially, the figure repeated by the majority of independent sources was used for the specKey value and the conflicting figure(s) are called out by name in that product's provenance field — figures were never averaged or invented to split the difference. motor_power_w is the manufacturer-rated continuous/sustained output; motor_peak_power_w is the stated peak/burst output, null where no source gave a discrete peak number. battery_voltage_v is nominal pack voltage. top_speed_mph and range_mi reflect the source's advertised maximum under ideal conditions (flat ground, moderate speed, ~75kg rider for range); real-world range is typically 60-75% of the advertised figure. weight_lb and max_load_lb describe the base configuration without seat/accessories. ip_rating is the shell ingress-protection rating exactly as stated by the cited source; null means no source specified a rating (not an assertion of zero protection). charge_time_hr is for the stock/standard single charger to full unless the provenance notes otherwise; several models offer optional dual/fast chargers that roughly halve this time. suspension_travel_mm is 0 for models that ship with a rigid, non-suspension fork, and null where a model has suspension but no source gave a millimeter travel figure. priceUsd is the lowest advertised US price found for the base battery/tire configuration at accessedAt; where only non-USD pricing or an out-of-stock/discontinued listing was found, priceUsd is null per the 'null beats a guess' rule and the observed price is reported in priceNote instead of being converted or estimated. Wikimedia Commons was checked first (Category:Motorized unicycles, Category:Self-balancing unicycles, Category:Eunicycle, and the illustrations on the English Wikipedia 'Electric unicycle' article) but contains no identifiable photography of any 2026-era high-performance EUC brand — only generic/older Solowheel and Airwheel devices — so every image in this dataset is manufacturer or authorized-retailer product photography, licensed as '© <Brand>'. Every candidate image URL was downloaded and visually inspected to confirm correct brand markings before being included.",
+  "specKeys": [
+    "motor_power_w",
+    "motor_peak_power_w",
+    "battery_capacity_wh",
+    "battery_voltage_v",
+    "top_speed_mph",
+    "range_mi",
+    "wheel_diameter_in",
+    "max_load_lb",
+    "weight_lb",
+    "ip_rating",
+    "charge_time_hr",
+    "suspension_travel_mm"
+  ],
+  "products": [
+    {
+      "slug": "inmotion-v13-challenger",
+      "name": "InMotion V13 Challenger",
+      "brand": "InMotion",
+      "category": "electric-unicycles",
+      "releaseDate": "2022-08",
+      "priceUsd": 4600,
+      "priceNote": "US MSRP at original launch per myinmotion.com and Electrek's launch coverage; InMotion's early-bird pre-order price was $3,999. Street/sale price varies by retailer and promotion.",
+      "specs": {
+        "motor_power_w": 4500,
+        "motor_peak_power_w": 10000,
+        "battery_capacity_wh": 3024,
+        "battery_voltage_v": 126,
+        "top_speed_mph": 56,
+        "range_mi": 88,
+        "wheel_diameter_in": 22,
+        "max_load_lb": 265,
+        "weight_lb": 110,
+        "ip_rating": "IP55",
+        "charge_time_hr": 6,
+        "suspension_travel_mm": 90
+      },
+      "source": {
+        "url": "https://www.myinmotion.com/inmotion-v13",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://electrek.co/2022/08/14/inmotion-unveils-fastest-in-the-world-87-mph-v13-challenger-electric-unicycle/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/inmotion-v13-challenger.webp?v=4e63d049b3",
+        "source": "myinmotion.com",
+        "license": "© InMotion",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "myinmotion.com's own V13 page confirms 4500W rated / 3024Wh at 126V, 56mph top speed, 22in wheel, IP55, 265lb max load, 110lb weight and 4-6hr charge (dual charger: 3hr); it states range as 'approximately 88 miles'. Electrek's August 2022 launch article (quoting InMotion directly) corroborates the 4500W/10000W-peak motor, 3024Wh/126V battery, 110lb weight, 90mm suspension, and gives the $4,600 retail / $3,999 pre-order pricing; it also cites an optimistic 124-mile (200km) range figure repeated by some third-party retailers (e.g. maxblinker.com), which this record treats as the manufacturer's ideal-conditions ceiling rather than the primary 88mi figure."
+    },
+    {
+      "slug": "begode-master-pro",
+      "name": "Begode Master Pro",
+      "brand": "Begode",
+      "category": "electric-unicycles",
+      "releaseDate": null,
+      "priceUsd": 4399,
+      "priceNote": "Sale price at smartwheel.us (US authorized retailer) for the 4800Wh/134V configuration; list price at the same retailer is $4,599.",
+      "specs": {
+        "motor_power_w": 4500,
+        "motor_peak_power_w": null,
+        "battery_capacity_wh": 4800,
+        "battery_voltage_v": 134,
+        "top_speed_mph": 53,
+        "range_mi": 124,
+        "wheel_diameter_in": 22,
+        "max_load_lb": 285,
+        "weight_lb": 118,
+        "ip_rating": null,
+        "charge_time_hr": null,
+        "suspension_travel_mm": 80
+      },
+      "source": {
+        "url": "https://smartwheel.us/begode-gotway-master-pro-22-4500w-motor-electric-unicycle-with-4800wh/134v-battery/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://freshlycharged.com/reviews/154/begode-master-pro-electric-unicycle-review-the-biggest-euc-battery-yet",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/begode-master-pro.jpg?v=554c27b87c",
+        "source": "smartwheel.us",
+        "license": "© Begode",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "smartwheel.us's C30-motor spec sheet (Begode's own '4800Wh/134V' naming convention for this SKU) gives 4500W rated power, 22in knobby tire, 80mm suspension, 53.5kg (118lb) weight, 129kg (285lb) max load, ~80-85km/h (~50-53mph) top speed and ~200km (124mi) maximum range, with a 122km/h (~76mph) unloaded free-spin figure that is not a rideable top speed. No discrete peak-wattage or IP figure is published by any source checked. Freshly Charged's review corroborates the 4800Wh pack being the largest ever fitted to a production EUC at review time and the 50+mph/100+mile-class positioning as Begode's direct answer to the InMotion V13 Challenger; some retailers round range down to '100+ miles' rather than the manufacturer's 124mi ceiling."
+    },
+    {
+      "slug": "king-song-s22-pro",
+      "name": "King Song S22 Pro",
+      "brand": "King Song",
+      "category": "electric-unicycles",
+      "releaseDate": null,
+      "priceUsd": 2299,
+      "priceNote": "Official kingsong.com US store price (list $3,199, frequently run at a discount). Other authorized US retailers price the same wheel $2,449-$2,799 depending on edition and promotion.",
+      "specs": {
+        "motor_power_w": 4000,
+        "motor_peak_power_w": 8500,
+        "battery_capacity_wh": 2220,
+        "battery_voltage_v": 126,
+        "top_speed_mph": 43.5,
+        "range_mi": 70,
+        "wheel_diameter_in": 20,
+        "max_load_lb": 265,
+        "weight_lb": 77,
+        "ip_rating": null,
+        "charge_time_hr": 4.5,
+        "suspension_travel_mm": 130
+      },
+      "source": {
+        "url": "https://www.kingsong.com/products/kingsong-s22-pro",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.mykingsong.com/kss22-pro-eunicycle",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/king-song-s22-pro.jpg?v=c86b4f4567",
+        "source": "kingsong.com",
+        "license": "© King Song",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "kingsong.com's own S22 Pro+ listing gives 4000W rated / 5000-8500W peak (the page shows both a 5000W-peak and 8500W-peak figure across its spec blocks; this record uses the higher 8500W cited on the dedicated s22-pro-spec page), 2220Wh at 126V, 77lb weight, 265lb max load, 20in wheel, 130mm suspension (the largest of any EUC to date), and 43.5mph top speed. mykingsong.com's official US support page corroborates the 43.5mph top speed and 265lb max load and states range as '60-70 miles max potential range' — used here as range_mi=70 — while kingsong.com's own marketing copy separately claims 'up to 200km (124mi)'; the lower, distributor-stated figure was used as the more conservative, frequently-repeated number. No IP rating was found on either official page."
+    },
+    {
+      "slug": "veteran-sherman-l",
+      "name": "Veteran Sherman-L",
+      "brand": "Veteran (LeaperKim)",
+      "category": "electric-unicycles",
+      "releaseDate": null,
+      "priceUsd": 4399,
+      "priceNote": "US retail price at smartwheel.us (authorized US retailer) for the standard Fastace-suspension configuration; list price at the same retailer is $4,599. EU retail runs roughly €3,999-4,499.",
+      "specs": {
+        "motor_power_w": 3200,
+        "motor_peak_power_w": 8000,
+        "battery_capacity_wh": 4000,
+        "battery_voltage_v": 151.2,
+        "top_speed_mph": 60,
+        "range_mi": 100,
+        "wheel_diameter_in": 20,
+        "max_load_lb": 265,
+        "weight_lb": 102.5,
+        "ip_rating": "IPX6",
+        "charge_time_hr": 6,
+        "suspension_travel_mm": 90
+      },
+      "source": {
+        "url": "https://smartwheel.us/veteran-sherman-l-20-3200w-motor-electric-unicycle-with-suspension/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://voltride.com/veteran-sherman-l/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/veteran-sherman-l.jpg?v=fedd974831",
+        "source": "smartwheel.us",
+        "license": "© Veteran (LeaperKim)",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "smartwheel.us's US listing confirms 3200W rated / 8000W peak motor, 4000Wh Samsung 50S pack at 151.2V, 20in x 3in tire, 90mm adjustable Fastace hydraulic suspension (62/66/70lb spring options), 90km/h (60mph) top speed and 140-160km (87-100mi) real-world range; this record uses the upper 100mi bound. voltride.com corroborates the 3200W/8kW-peak motor and 4000Wh/151V pack, gives IPX6 water resistance and a 6-hour standard charge time (a 20A fast charger reaching 80% in ~1.5hr per other retailers), and separately states 'range 200km' (124mi) as its own ideal-conditions ceiling — noted here as the more optimistic outlier versus the 87-100mi figure used. Weight is reported consistently as ~102.5lb (46.5kg) and max load as 120kg (265lb) across both sources; a third, less-detailed retailer aggregate cited a 320lb load limit that was not corroborated and was discarded."
+    },
+    {
+      "slug": "inmotion-v12-ht",
+      "name": "InMotion V12 HT",
+      "brand": "InMotion",
+      "category": "electric-unicycles",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "No current US MSRP could be confirmed: myinmotion.com's own V12 HT page does not display a price, and the model appears to have been superseded by the InMotion V12 Pro (built explicitly 'on the legacy of the V12 HT', $2,299 at smartwheel.us). A European retailer (maxblinker.com) listed it at €2,707.98 marked out of stock.",
+      "specs": {
+        "motor_power_w": 2800,
+        "motor_peak_power_w": null,
+        "battery_capacity_wh": 1750,
+        "battery_voltage_v": 100,
+        "top_speed_mph": 37,
+        "range_mi": 70,
+        "wheel_diameter_in": 16,
+        "max_load_lb": 308,
+        "weight_lb": 65.5,
+        "ip_rating": "IPX5 (IPX7 battery)",
+        "charge_time_hr": 9,
+        "suspension_travel_mm": 0
+      },
+      "source": {
+        "url": "https://www.myinmotion.com/products/inmotion-v12-ht-electric-unicycle",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://electrek.co/2023/03/21/inmotion-v12ht-electric-unicycle-review-i-have-no-business-on-a-high-power-wheel/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/inmotion-v12-ht.webp?v=766853fc41",
+        "source": "myinmotion.com",
+        "license": "© InMotion",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "myinmotion.com's official V12 HT page states a 2800W motor (peak unspecified beyond 'can peak much higher'), 1750Wh/100V battery, 37mph top speed, ~70mi max range, 16x3in reinforced off-road tire, 65.5lb weight, 308lb max load, IPX5 wheel/IPX7 battery rating, and a 9-hour charge with the stock charger; the page has no suspension (rigid, high-torque off-road variant of the base V12). Electrek's March 2023 in-depth review, which predates and corroborates the page, confirms the 2800W torque-focused motor, ~37mph practical top speed, and 45° climbing angle, and independently reports 188Nm of torque. No source checked (including InMotion's own US store) currently lists a USD sale price for this exact model, and smartwheel.us now sells its direct successor, the 'V12 Pro,' at $2,299 with nearly identical 2800W/1750Wh/100V specs and a 5600W peak figure — noted here as the closest available USD price reference but not used as this product's priceUsd."
+    },
+    {
+      "slug": "begode-t4",
+      "name": "Begode T4",
+      "brand": "Begode",
+      "category": "electric-unicycles",
+      "releaseDate": null,
+      "priceUsd": 2199,
+      "priceNote": "Sale price at smartwheel.us (US authorized retailer); regular list price at the same retailer is $2,399.",
+      "specs": {
+        "motor_power_w": 2500,
+        "motor_peak_power_w": null,
+        "battery_capacity_wh": 1800,
+        "battery_voltage_v": 100.8,
+        "top_speed_mph": 37,
+        "range_mi": 93,
+        "wheel_diameter_in": 16,
+        "max_load_lb": 286,
+        "weight_lb": 67,
+        "ip_rating": null,
+        "charge_time_hr": 5,
+        "suspension_travel_mm": 100
+      },
+      "source": {
+        "url": "https://smartwheel.us/begode-gotway-tesla-t4-16-2500w-motor-suspension-electric-unicycle-with-1800wh-100v-battery/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://voltride.com/begode-t4/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/begode-t4.jpg?v=1cc66fe223",
+        "source": "smartwheel.us",
+        "license": "© Begode",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "smartwheel.us gives 2500W rated power (peak not specified), 1800Wh 21700-cell pack at 100.8V/18Ah, ~60km/h (37mph) top speed, ~150km (93mi) range, 16x3in tire, 100mm adjustable air suspension (Begode's first 16in suspension wheel), 25° max climb, 30.4kg (67lb) weight and 130kg (286lb) max load, with a 5-hour charge on the stock 100.8V/5A charger. voltride.com corroborates the 2500W motor, 1800Wh capacity, 16in wheel, 32kg weight and 120kg load, and its own road-test range of 70km against Begode's 100km factory claim illustrates the real-world-vs-ideal gap; voltride's page states pack voltage as 84V, which conflicts with the 100.8V figure given by smartwheel.us and ewheels.com — this record uses 100.8V as the majority-corroborated value. Some retailers advertise a higher 'ideal conditions' top speed of 43mph; 37mph was used as the figure repeated by the majority of sources checked."
+    },
+    {
+      "slug": "king-song-s16-pro",
+      "name": "King Song S16 Pro",
+      "brand": "King Song",
+      "category": "electric-unicycles",
+      "releaseDate": null,
+      "priceUsd": 2399,
+      "priceNote": "US retail price at smartwheel.us for the 'KS-S16 Pro Alcidae' edition (authorized US retailer).",
+      "specs": {
+        "motor_power_w": 3000,
+        "motor_peak_power_w": 5000,
+        "battery_capacity_wh": 1480,
+        "battery_voltage_v": 84,
+        "top_speed_mph": 37,
+        "range_mi": 80,
+        "wheel_diameter_in": 16,
+        "max_load_lb": 265,
+        "weight_lb": 72.7,
+        "ip_rating": null,
+        "charge_time_hr": 4.5,
+        "suspension_travel_mm": null
+      },
+      "source": {
+        "url": "https://smartwheel.us/kingsong-ks-s16-pro-alcidae-3000w-electric-unicycle-euc-with-suspension/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.mykingsong.com/kss16-pro-eunicycle",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/king-song-s16-pro.jpg?v=d47a198e59",
+        "source": "smartwheel.us",
+        "license": "© King Song",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "smartwheel.us's US listing gives 3000W rated / 5000W peak motor, 1480Wh pack at 84V, ~60km/h (37mph) top speed, ~130km (80mi) max range, 33kg (72.7lb) weight, 120kg (265lb) max load, 16x3in off-road tire, a 750lb coil-shock suspension, and 4-5hr charge on the 5A stock charger, at a $2,399 sale price. mykingsong.com's official US support page corroborates the 3000W/5000W-peak motor, 1480Wh/84V battery and 265lb max load, but states a more conservative '50 miles max potential range' and a lower ~68lb weight than smartwheel's 72.7lb figure — both discrepancies are noted here; range_mi=80 (the manufacturer-distributor's own separate base-S16 page independently states 130km/81mi for the same battery, supporting the higher figure) was used as the majority/consistent value. No suspension-travel-in-mm figure or IP rating was found on either source."
+    },
+    {
+      "slug": "veteran-patton",
+      "name": "Veteran Patton",
+      "brand": "Veteran (LeaperKim)",
+      "category": "electric-unicycles",
+      "releaseDate": null,
+      "priceUsd": 3250,
+      "priceNote": "Sale price at smartwheel.us (US authorized retailer) for the original Patton (16in, 3000W); distinct from the newer Patton S variant, which is priced separately (~$3,099-4,499 depending on retailer/region).",
+      "specs": {
+        "motor_power_w": 3000,
+        "motor_peak_power_w": 7000,
+        "battery_capacity_wh": 2220,
+        "battery_voltage_v": 126,
+        "top_speed_mph": 43.5,
+        "range_mi": 50,
+        "wheel_diameter_in": 16,
+        "max_load_lb": 265,
+        "weight_lb": 85.9,
+        "ip_rating": null,
+        "charge_time_hr": null,
+        "suspension_travel_mm": 80
+      },
+      "source": {
+        "url": "https://smartwheel.us/veteran-patton-16-3000w-motor-electric-unicycle-with-suspension/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://zoomride.com/product/veteran-patton-electric-unicycle/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/veteran-patton.png?v=97aae69244",
+        "source": "smartwheel.us",
+        "license": "© Veteran (LeaperKim)",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "smartwheel.us's listing for the original (non-S) Patton gives 3000W rated / 7000W peak motor, 2220Wh Samsung 21700-50E pack at 126V, 16in knobby tire, ~70km/h (43.5mph) top speed, ~60-80km (37-50mi) range, 265lb max load and 85.9lb weight, at a $3,250 sale price (list $3,699 at other retailers). zoomride.com's official-distributor product page for the Patton corroborates the 3000W motor, 2220Wh/126V Samsung 50S battery, 80mm adjustable Fastace suspension, 265lb max load and aviation-grade aluminum frame, though it lists the top speed as 40-42mph cruising up to a 50mph rating — this record uses smartwheel's more specific 43.5mph. No IP rating or charge-time figure was found on either page. This entry is deliberately kept distinct from the separately-sold 'Patton S' (2,220-2,700Wh, 50mph+, different weight/range specs), which some aggregated search summaries conflate with the original Patton."
+    },
+    {
+      "slug": "leaperkim-lynx",
+      "name": "Leaperkim Lynx",
+      "brand": "LeaperKim (Veteran)",
+      "category": "electric-unicycles",
+      "releaseDate": null,
+      "priceUsd": 4299,
+      "priceNote": "US retail price at smartwheel.us (authorized US retailer) for the standard 2700Wh/151V configuration; distinct from the newer, higher-output Lynx-S variant, which is priced separately.",
+      "specs": {
+        "motor_power_w": 3200,
+        "motor_peak_power_w": 8000,
+        "battery_capacity_wh": 2700,
+        "battery_voltage_v": 151,
+        "top_speed_mph": 62,
+        "range_mi": 100,
+        "wheel_diameter_in": 20,
+        "max_load_lb": 265,
+        "weight_lb": 88,
+        "ip_rating": null,
+        "charge_time_hr": 5,
+        "suspension_travel_mm": 90
+      },
+      "source": {
+        "url": "https://smartwheel.us/veteran-lynx-20-3200w-motor-electric-unicycle-with-suspension/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://myewheel.com/lynx-50s/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/leaperkim-lynx.jpg?v=9b80b2f000",
+        "source": "smartwheel.us",
+        "license": "© LeaperKim (Veteran)",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "smartwheel.us gives 3200W rated / 8000W peak motor, 2700Wh Samsung 50S pack at 151V, 20x4in tire on a 14in rim, 88lb weight, 265lb max load, 90mm Fastace hydraulic suspension (62/66/70lb spring options), a 77mph (125km/h) unloaded free-spin figure against a 62mph practical operational top speed, 100mi (160km) range, and 4-6hr charge on the 5A stock charger (2hr with a 10A fast charger), priced at $4,299. myewheel.com corroborates the 151.2V system, 2700Wh Samsung 50S battery, 3200W motor, 90mm Fastace suspension and ~40kg (88lb) weight for the base Lynx, and separately describes the newer 'Lynx-S' as a higher-power (~3800W) variant on the same 151V platform — this record covers only the base Lynx to match the specs and price sourced above, not the Lynx-S."
+    },
+    {
+      "slug": "begode-ex30",
+      "name": "Begode EX30",
+      "brand": "Begode",
+      "category": "electric-unicycles",
+      "releaseDate": "2023",
+      "priceUsd": 3299,
+      "priceNote": "Sale price at smartwheel.us (US authorized retailer); regular list price at the same retailer is $3,699.",
+      "specs": {
+        "motor_power_w": 4000,
+        "motor_peak_power_w": 8000,
+        "battery_capacity_wh": 3600,
+        "battery_voltage_v": 134,
+        "top_speed_mph": 55,
+        "range_mi": 90,
+        "wheel_diameter_in": 20,
+        "max_load_lb": 264,
+        "weight_lb": 101,
+        "ip_rating": null,
+        "charge_time_hr": null,
+        "suspension_travel_mm": 100
+      },
+      "source": {
+        "url": "https://smartwheel.us/begode-gotway-ex30-4000w-motor-suspension-electric-unicycle-with-3600wh134v-battery/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://escooterclinic.co.uk/en/products/begode-ex30-electric-unicycle-4000w-power-26-8ah-battery-62mph-speed-100mi-range-6819",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/begode-ex30.jpg?v=70b027a37e",
+        "source": "smartwheel.us",
+        "license": "© Begode",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Begode markets the EX30 as its most powerful production EUC, built around a high-torque 'C40' motor (40mm-wide stator magnets) on a 134V/3600Wh Samsung pack, 20in wheel with 100mm air suspension shared with the T4/Master/Master Pro chassis, and a 45° max climb. Figures vary unusually widely by retailer: smartwheel.us states 62mph/100mi (used here for range_mi) but separately claims an implausible 75mph/186mi elsewhere on the same listing that this record treats as an outlier and discards; escooterclinic.co.uk (UK retailer, priced in GBP) independently states 62mph top speed, 100mi range, 264lb max load and 101lb (46kg) weight, which are the figures used for those specKeys; a Freshly Charged review instead measured 55mph and a seated-position range of 69-90mi, which is why 55mph (the more conservative, review-tested figure) was used for top_speed_mph rather than the 62mph retailer marketing number. No IP rating or charge-time figure was found on any source checked. Freshly Charged's review also states a 2023 release."
+    },
+    {
+      "slug": "inmotion-v14-adventure",
+      "name": "InMotion V14 Adventure",
+      "brand": "InMotion",
+      "category": "electric-unicycles",
+      "releaseDate": null,
+      "priceUsd": 2699,
+      "priceNote": "US retail price via the EUCO/InMotion USA storefront, where this Adventure-series wheel is listed under the name 'V14 Pro' ($2,699, list $2,899). myinmotion.com's own 'inmotion-adventure' marketing page uses the 'V14 Adventure' name for what appears to be the same physical wheel but does not display a price directly.",
+      "specs": {
+        "motor_power_w": 4000,
+        "motor_peak_power_w": 9000,
+        "battery_capacity_wh": 2400,
+        "battery_voltage_v": 134,
+        "top_speed_mph": 43,
+        "range_mi": 75,
+        "wheel_diameter_in": 16,
+        "max_load_lb": 309,
+        "weight_lb": 86,
+        "ip_rating": "IPX6",
+        "charge_time_hr": 5,
+        "suspension_travel_mm": null
+      },
+      "source": {
+        "url": "https://www.myinmotion.com/inmotion-adventure",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.euco.us/products/inmotion-adventurer-electric-unicycle",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/inmotion-v14-adventure.webp?v=def69863fe",
+        "source": "euco.us",
+        "license": "© InMotion",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "myinmotion.com's 'inmotion-adventure' page (marketed as the 'V14 Adventure,' InMotion's off-road flagship with a first-of-its-kind progressive dual-rate spring, 600lb/in front and 970lb/in rear) states 4000W rated / 9000W peak motor, 2400Wh at 134V, 43mph top speed, ~75mi range, 16in wheel, 86lb weight, 309lb max load and IPX6 rating, but does not display a price. euco.us's storefront (URL slug 'inmotion-adventurer-electric-unicycle') serves what its own page header labels the 'InMotion V14 Pro' at $2,699 (list $2,899), with nearly identical specs — 4000W motor, 2400Wh/134V battery, 86lb weight, 309lb max load, IPX6 — but a higher-stated 50mph top speed and 70mi range; ZoomRide's Canadian distributor catalog separately lists an 'InMotion V14 Adventure 50S' at C$4,199, suggesting InMotion/its resellers use 'V14 Adventure,' 'V14 Pro,' and regional battery-suffix names somewhat interchangeably for what is largely the same wheel. This record uses myinmotion.com's own spec figures (43mph/75mi) as authoritative for the specs and euco.us's confirmed USD listing as the price reference."
+    },
+    {
+      "slug": "king-song-f22-pro",
+      "name": "King Song F22 Pro",
+      "brand": "King Song",
+      "category": "electric-unicycles",
+      "releaseDate": null,
+      "priceUsd": 3099,
+      "priceNote": "Current price at the official kingsong.com US store (list $3,999, frequently discounted to $3,099). Other authorized retailers price the same wheel $3,099-3,499.",
+      "specs": {
+        "motor_power_w": 5500,
+        "motor_peak_power_w": 12000,
+        "battery_capacity_wh": 3108,
+        "battery_voltage_v": 176.4,
+        "top_speed_mph": 72,
+        "range_mi": 100,
+        "wheel_diameter_in": 20,
+        "max_load_lb": 265,
+        "weight_lb": 110.8,
+        "ip_rating": "IPX6",
+        "charge_time_hr": 2.5,
+        "suspension_travel_mm": 100
+      },
+      "source": {
+        "url": "https://www.kingsong.com/products/kingsong-f22-pro",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.smartwheel.us/kingsong-f22-pro-5500w-electric-unicycle-euc-with-suspension-and-3108wh-battery/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/king-song-f22-pro.jpg?v=8249975e71",
+        "source": "kingsong.com",
+        "license": "© King Song",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "kingsong.com's own F22 Pro page states 5500W rated / 12000W peak motor (the highest of any King Song wheel), 3108Wh Samsung 50S pack at 176.4V, 72mph/116km/h top speed, 100mi/161km range (112mi under controlled/theoretical conditions), 20in tire, IPX6-rated key components, 50.24kg/110.8lb weight, 2-3hr charge on the standard 10A charger (~1.5hr with optional 20A dual charging), and a discounted $3,099 price (list $3,999); its spec table separately lists two different max-load figures (140kg/309lb in one block, 120kg/265lb in the 'specifications' block) — this record uses the more conservative 265lb figure. smartwheel.us corroborates the 5500W/12000W-peak motor and 3108Wh pack, though it states voltage as 155.4V (matching the earlier, lower-capacity 'F22' rather than the 'F22 Pro') and a higher ~81mph top speed with ~112mi range — both treated as less reliable than kingsong.com's own product page and noted here as a source discrepancy."
+    }
+  ]
+}

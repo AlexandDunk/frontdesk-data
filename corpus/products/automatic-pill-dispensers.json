@@ -1,0 +1,435 @@
+{
+  "category": "automatic-pill-dispensers",
+  "generatedAt": "2026-08-01",
+  "methodologyNotes": "Covers automatic/locked medication dispensers and smart pill organizers a 2026 buyer (or their family/caregiver) cross-shops, spanning connected consumer devices (Hero, MedMinder Maya/Jon, Karie), telecare/medical-alert channel devices (Philips Medication Dispensing Service, Pivotell Advance), classic locked mechanical dispensers (e-pill MedTime Station Pro, e-pill MedSmart Voice Pro, TabTime Automatic Pill Dispenser, MedReady 1700), a premium touchscreen robot (MedaCube 2.0), and non-motorized smart organizers with LED/alarm reminders (Med-Q, Ellie Grid). specKeys definitions: compartments = number of discrete medication slots/cells in the base tray (null for pouch/cartridge-based or day-supply-only designs with no discrete slot count published); doses_per_day = maximum scheduled dispense/alarm times per day as published (or, for MedMinder Jon, inferred from the same 28-cell/7-day platform as Maya, since 28 = 7x4 is internally consistent and Jon-specific redocumentation was not found); capacity_pills = maximum tablets/capsules per compartment as published, left null where only a volume (e.g. Pivotell's 10ml/cell) or a vague 'entire bottle' claim is given rather than a discrete count; locking = physical/software access-control mechanism, null if not stated; connectivity = the device's own network link (wifi/cellular/bluetooth/landline/none), left null where a companion-app claim exists but the underlying radio technology is not stated by the manufacturer (Karie); alerts = reminder/notification mechanism as described; power_source = as published; dispensing_type = whether/how medication is physically released. priceUsd is a US-market MSRP/list or direct-purchase price actually published in USD; left null rather than converted for products priced only in GBP (TabTime, Pivotell) or for services/devices whose vendor does not publish a retail figure at all (MedMinder, Philips, Karie, Ellie Grid), per priceNote. Seed corrections: 'Livi by Hero' could not be verified as an existing product on herohealth.com, in Hero's own pricing/FAQ pages, or via web search (Bing returned only the unrelated Swedish telehealth brand 'Livi') and was dropped rather than guessed. 'e-pill MedSmart Plus' is no longer active branding on epill.com; the seed slot was corrected to the brand's current flagship locked dispenser, e-pill MedTime Station Pro (formerly part of the MedSmart line), and a second e-pill tier (MedSmart Voice Pro, Bluetooth+voice-reminder) was added to show the brand's price range. 'TabTime Super 8' is not the name used on tabtime.com/us.tabtime.com today (current name: 'Automatic Pill Dispenser'), but 'Super 8' persists in TabTime's own support-article URLs and remains the live marketing name on Amazon US/international listings for what independent reseller GoSupps and TabTime's own current spec page confirm is the same 28-compartment locked device; both names are treated as one product. MedMinder no longer names device tiers ('Maya'/'Jon') on medminder.com/shop.medminder.com, which now market one generic 'MedMinder Smart Pill Dispenser'; the Maya/Jon split (Jon adds a physically locking tray to the same 28-cell cellular+WiFi platform) was independently verified via two third-party reviewers (Lark Maple, Tech Enhanced Life), and MedMinder's $40-65/month price and ~12-pill/cell capacity are as reported by Lark Maple since the manufacturer publishes neither. MedaCube's $1,500 price is attributed to a secondary senior-care aggregator citing 'The Senior List'; medacube.com does not publish price and the exact underlying article URL could not be re-confirmed after DuckDuckGo/Bing repeatedly served CAPTCHA challenges during verification, so this figure carries lower confidence than manufacturer-sourced prices. Expansion candidates Dosell (Sweden) and Pria (Black+Decker/GreatCall) were investigated and dropped: Dosell's site is B2B/institutional marketing for European home-care providers with no verifiable consumer specs or price, and Pria's status as a currently-sold 2026 product could not be confirmed. Access constraints: medacube.com, elliegrid.com, and the TabTime storefronts (tabtime.com/us.tabtime.com) returned HTTP 429 on essentially every direct request across repeated attempts with both the primary fetch tool and a raw browser-header curl client, so their spec pages were retrieved via a text-extraction reader proxy (r.jina.ai) instead, with product images sourced from their own CDN asset paths (which were not rate-limited) or from authorized resellers. pivotell.co.uk returned HTTP 401/429 on direct requests (specs via reader proxy; product photo via UK reseller Essential Aids). lifeline.philips.com returned persistent HTTP 522 (origin unreachable); Philips Lifeline's own official user manual (hosted via manualslib.com) was used for specs instead, corroborated by philips.ca confirming the service remains actively sold in 2026. All sources accessed 2026-08-01.",
+  "specKeys": [
+    "compartments",
+    "doses_per_day",
+    "capacity_pills",
+    "locking",
+    "connectivity",
+    "alerts",
+    "power_source",
+    "dispensing_type"
+  ],
+  "products": [
+    {
+      "slug": "hero-health-hero",
+      "name": "Hero",
+      "brand": "Hero Health, Inc.",
+      "category": "automatic-pill-dispensers",
+      "releaseDate": null,
+      "priceUsd": 29.99,
+      "priceNote": "Hero is sold as a subscription (device included, no separate purchase price): $29.99/mo with a 12-month prepaid plan, $44.99/mo on a 12-month monthly-pay commitment, or $59.99/mo with no commitment, per herohealth.com.",
+      "specs": {
+        "compartments": 10,
+        "doses_per_day": null,
+        "capacity_pills": null,
+        "locking": "passcode protection; adjustable maximum dispense limits",
+        "connectivity": "wifi",
+        "alerts": "audible sound + blinking light at dose time; app push notifications; missed-dose and low-pill alerts to caregivers",
+        "power_source": null,
+        "dispensing_type": "automatic single-dose dispensing from 10 medication pods, one-button collection"
+      },
+      "source": {
+        "url": "https://herohealth.com/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/hero-health-hero.png?v=2c057424ad",
+        "source": "herohealth.com",
+        "license": "© Hero Health, Inc.",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "herohealth.com states the device 'holds up to a 90-day supply of 10 different medications' (used as compartments=10) and 'the connected app tracks up to 10 additional medications outside the device'. WiFi connectivity, passcode/dispense-limit safety features, and alert behavior (sound+light, missed-dose/low-pill alerts) are from the same site and its /pricing page, which also lists the three subscription tiers. Doses/day, exact per-pod pill capacity, and battery-backup status are not stated on-site and are left null rather than guessed (Hero has no separate battery backup per independent reviews, but this was not manufacturer-confirmed this session). support.herohealth.com's help-center collections were checked for additional device specs but only exposed article titles, not content."
+    },
+    {
+      "slug": "medminder-maya",
+      "name": "MedMinder Maya",
+      "brand": "MedMinder",
+      "category": "automatic-pill-dispensers",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "MedMinder does not publish pricing on medminder.com/shop.medminder.com. Independent reviewer Lark Maple reports $40-65/month rental depending on plan, sometimes covered by Medicaid/insurance; not manufacturer-confirmed.",
+      "specs": {
+        "compartments": 28,
+        "doses_per_day": 4,
+        "capacity_pills": 12,
+        "locking": "none (open-access tray; unauthorized access outside the scheduled window is logged, not physically blocked)",
+        "connectivity": "cellular (LTE) + wifi",
+        "alerts": "flashing light at dose time, beeping alarm escalating to phone call; customizable voice reminders; caregiver text/app alerts for missed doses",
+        "power_source": "AC adapter with battery backup during outages",
+        "dispensing_type": "pre-sorted (pharmacy- or self-filled) rotating weekly tray; the correct compartment flashes at dose time but any compartment remains physically accessible at any time"
+      },
+      "source": {
+        "url": "https://shop.medminder.com/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.larkmaple.com/reviews/medminder-pill-dispenser",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/medminder-maya.webp?v=fb2833f927",
+        "source": "shop.medminder.com",
+        "license": "© MedMinder",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "MedMinder's current storefront (shop.medminder.com) markets one generic 'MedMinder Smart Pill Dispenser' -- 28-day capacity, 4G LTE + WiFi, secure locking mechanism, medication alerts -- without naming Maya/Jon variants. Model-specific detail (Maya = no locking tray, ~12 pills/compartment, up to 4 doses/day, built-in LTE working without home WiFi, escalating phone-call alerts, 48-hour battery backup) is corroborated by independent reviewers Lark Maple and Tech Enhanced Life (techenhancedlife.com/reviews/medminder-maya), which both describe the same 28-compartment platform. doses_per_day=4 is consistent with 28 compartments over a 7-day tray (28 = 7x4). Price is as reported by Lark Maple ($40-65/mo); medminder.com requires contacting the company directly for a quote and does not publish a rate."
+    },
+    {
+      "slug": "medminder-jon",
+      "name": "MedMinder Jon",
+      "brand": "MedMinder",
+      "category": "automatic-pill-dispensers",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "Not published by MedMinder; reviewers report the same $40-65/month range as Maya without a separate Jon-specific breakdown.",
+      "specs": {
+        "compartments": 28,
+        "doses_per_day": 4,
+        "capacity_pills": 12,
+        "locking": "locking tray -- unlocks only the compartment scheduled for the current dose time",
+        "connectivity": "cellular (LTE) + wifi",
+        "alerts": "light, sound, phone call, text, or email alerts, per reviewer description",
+        "power_source": "AC adapter with battery backup",
+        "dispensing_type": "pre-sorted rotating weekly tray with a locking mechanism that physically restricts access to compartments outside the scheduled dose time"
+      },
+      "source": {
+        "url": "https://www.larkmaple.com/reviews/medminder-pill-dispenser",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://shop.medminder.com/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/medminder-jon.webp?v=fb2833f927",
+        "source": "shop.medminder.com",
+        "license": "© MedMinder",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "MedMinder no longer names the Jon variant on its own site, so Jon-specific detail is sourced from Lark Maple's side-by-side review, which states Jon and Maya 'share the same 28-compartment tray and built-in cellular monitoring; the locking tray option is what sets the Jon apart,' recommended for households with 'a genuine risk of double-dosing.' Base-platform specs (28 cells, LTE+WiFi, AC+battery backup) are corroborated by MedMinder's own generic shop.medminder.com description of its current device. Per-cell capacity (~12 pills) and doses/day (4, consistent with 28 cells / 7 days) are carried over from the shared platform per the same review, since no Jon-specific figures were separately published."
+    },
+    {
+      "slug": "epill-medtime-station-pro",
+      "name": "e-pill MedTime Station Pro",
+      "brand": "e-pill, LLC",
+      "category": "automatic-pill-dispensers",
+      "releaseDate": null,
+      "priceUsd": 549.95,
+      "priceNote": "White Lid model, item #993040: e-pill.com selling price $549.95 (list $695.95). The Clear Lid variant is identically priced and marketed as a 'New 2025 model'.",
+      "specs": {
+        "compartments": 28,
+        "doses_per_day": 24,
+        "capacity_pills": 18,
+        "locking": "auto-locking dispensing door, opens only during scheduled medication times; 2 keys included",
+        "connectivity": "none",
+        "alerts": "audible + visual alarm, up to 24 alarms/day, adjustable alert duration",
+        "power_source": "4x AA batteries (included), 6-12 month life, low-battery warning",
+        "dispensing_type": "automatic rotation to correct compartment at scheduled times; dual trays included"
+      },
+      "source": {
+        "url": "https://www.epill.com/stationplus.html",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/epill-medtime-station-pro.png?v=a9bfa987c1",
+        "source": "epill.com",
+        "license": "© e-pill, LLC",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "This is the corrected replacement for the seed 'e-pill MedSmart Plus', which is no longer active branding on epill.com (checked medsmart.html, xmedsmart.html, ymedsmart.html, getmedsmart.html -- none named a current 'Plus' SKU; the site's own current category page, dispenser.html, lists e-pill's active locked-dispenser lineup, topped by MedTime Station Pro). Specs (28 compartments across dual trays, up to 24 daily alarms, 18 aspirin-size tablets/compartment, auto-locking door, antimicrobial silver-ion plastics, 4xAA batteries, made in Sweden) are all from e-pill.com's own product page. A legacy 'e-pill MD2 MedSmart' SKU ($589.95, 29-compartment tray) was found via sitemap but is absent from the current dispenser.html lineup, suggesting Station Pro has superseded it as the flagship."
+    },
+    {
+      "slug": "epill-medsmart-voice-pro",
+      "name": "e-pill MedSmart Voice Pro",
+      "brand": "e-pill, LLC",
+      "category": "automatic-pill-dispensers",
+      "releaseDate": null,
+      "priceUsd": 324.95,
+      "priceNote": "e-pill.com selling price $324.95 (list $395.95).",
+      "specs": {
+        "compartments": 28,
+        "doses_per_day": 9,
+        "capacity_pills": 24,
+        "locking": "keyed lock, 2 keys included",
+        "connectivity": "bluetooth (companion iOS/Android app, ~33 ft range)",
+        "alerts": "spoken voice reminder ('It's time for your medications') plus blinking light",
+        "power_source": "AC adapter or 4x AA batteries",
+        "dispensing_type": "automatic dispenser releasing only the scheduled dose while the remaining tray stays secured"
+      },
+      "source": {
+        "url": "https://www.epill.com/medsmartvoice.html",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/epill-medsmart-voice-pro.png?v=3f55b90afc",
+        "source": "epill.com",
+        "license": "© e-pill, LLC",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Added alongside MedTime Station Pro to show e-pill's price range: a lower-cost ($324.95 vs $549.95), Bluetooth+voice-reminder tier from the same brand, distinct in connectivity (Bluetooth app pairing vs none) and alert style (spoken voice vs alarm-only) from Station Pro. All specs (28-compartment tray, up to 9 daily alarms, 24 aspirin-size tablets/compartment, keyed lock, Bluetooth app, AC/battery power, 9in x 2in / 22oz) are from e-pill.com's own product page."
+    },
+    {
+      "slug": "philips-medication-dispensing-service",
+      "name": "Philips Medication Dispensing Service",
+      "brand": "Philips Lifeline",
+      "category": "automatic-pill-dispensers",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "Philips Lifeline does not publish a price; it is sold bundled with medical-alert monitoring via phone consultation, not as a standalone retail SKU.",
+      "specs": {
+        "compartments": null,
+        "doses_per_day": 6,
+        "capacity_pills": null,
+        "locking": "keyed lock (2 keys)",
+        "connectivity": "landline (analog phone jack); automatic daily dial-up check-in call to the monitoring center",
+        "alerts": "monitoring-center alerts to caregivers for missed doses and low medication ('Almost Empty Alerts'); daily automatic status check-in",
+        "power_source": "AC power adapter; rechargeable battery backup for the missed-dose collection bin",
+        "dispensing_type": "automatic dispensing into a medication cup at scheduled times; missed doses collected separately in a secured bin"
+      },
+      "source": {
+        "url": "https://www.manualslib.com/manual/577881/Philips-Medication-Dispenser.html",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.philips.ca/c-m-hs/medication-adherence/medication-dispensing-service/latest",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/philips-medication-dispensing-service.jpg?v=3849789324",
+        "source": "manualslib.com (hosting Philips Lifeline's own product manual)",
+        "license": "© Philips Lifeline",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "lifeline.philips.com's direct product page (medication-dispensing-service.html) returned persistent HTTP 522 (origin unreachable) across repeated attempts, so specs are from Philips Lifeline's own official user manual (manufacturer: 'Philips Lifeline, U.S.: Framingham, MA; Canada: Toronto, ON'), hosted via manualslib.com: 'up to a 40-day supply' varying with dose count, 'up to 6 doses per day' (each a medication cup or reminder-only message), phone-jack + electrical-outlet connectivity with automatic daily check-in calls, keyed door lock (2 keys), AC power with rechargeable battery backup for the missed-dose bin, and caregiver alerts for missed/low medication. philips.ca's medication-dispensing-service category page (loaded, but with an empty client-side product list) confirms Philips Lifeline still actively markets this service line in 2026. Discrete compartment count is not given (capacity is described only in days-of-supply, which varies by dose frequency), so left null."
+    },
+    {
+      "slug": "aceage-karie",
+      "name": "AceAge Inc. Karie",
+      "brand": "AceAge Inc.",
+      "category": "automatic-pill-dispensers",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "Not published on kariehealth.com; Karie is distributed through partnering pharmacies/care providers (see 'how-to-buy-karie' page). The dedicated cost-FAQ page returned a server error during verification.",
+      "specs": {
+        "compartments": null,
+        "doses_per_day": null,
+        "capacity_pills": null,
+        "locking": "PIN entry + facial recognition; can also be physically secured",
+        "connectivity": null,
+        "alerts": "flashing light + audible chime (audible from another room); app notifications to caregivers for adherence",
+        "power_source": null,
+        "dispensing_type": "automatic dispensing of individual pharmacist-packed multi-dose medication pouches from a loaded cartridge, released on an illuminated button press at scheduled times"
+      },
+      "source": {
+        "url": "https://kariehealth.com/how-karie-automatic-pill-dispenser-works/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/aceage-karie.jpg?v=98f9de69c5",
+        "source": "kariehealth.com",
+        "license": "© AceAge Inc.",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "kariehealth.com describes Karie as dispensing 'multi-pouch medication strips dispensed by a Pharmacist and loaded into the Karie medicine dispenser cartridge,' secured by 'optional PIN entry and facial recognition,' with a 'flashing light and chime whenever it's time,' paired to a 'Karie Companion app.' Because it is pouch-based rather than fixed-compartment, compartments/capacity_pills are not applicable in the same units as tray-based dispensers and are left null. The underlying network radio (WiFi vs. cellular) for the app connection is not stated by AceAge, so connectivity is left null rather than assumed. Price, power source, and doses/day are not published on the site; the cost-FAQ page (kariehealth.com/faq/how-much-does-karie-cost/) returned HTTP 500 during verification."
+    },
+    {
+      "slug": "tabtime-super-8",
+      "name": "TabTime Automatic Pill Dispenser (Super 8)",
+      "brand": "TabTime Limited",
+      "category": "automatic-pill-dispensers",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "GBP71.99 on TabTime's own UK/US storefront (us.tabtime.com); no independently confirmed USD MSRP was found (a US Amazon listing exists under the 'TabTime Super 8' name, but its price could not be retrieved -- Amazon blocked automated access on every attempt this session).",
+      "specs": {
+        "compartments": 28,
+        "doses_per_day": 6,
+        "capacity_pills": 18,
+        "locking": "secure metal lock (solid or clear lid options)",
+        "connectivity": "none",
+        "alerts": "audio (30-minute buzzer) + flashing LED reminder light",
+        "power_source": "battery-operated (batteries included), low-battery alert",
+        "dispensing_type": "automatic timed rotation; alarm is cancelled by tipping the unit to dispense the dose"
+      },
+      "source": {
+        "url": "https://us.tabtime.com/collections/all/products/automatic-pill-dispenser",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.gosupps.com/tabtime-automatic-pill-dispenser-6-alarms-per-day-clear-lockable-lid-uk-customer-service-the-essential-medication-aid-for-the-elderly-and-alzheimer-s-and-dementia-patients-clear-lid-19cm.html",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/tabtime-super-8.jpg?v=261998fd28",
+        "source": "gosupps.com (authorized reseller; Amazon-sourced product photo)",
+        "license": "© TabTime Limited",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "tabtime.com/us.tabtime.com currently sell this device simply as 'Automatic Pill Dispenser,' but 'TabTime Super 8' remains the live name used in TabTime's own support-article URLs ('Setting up your TabTime Super 8') and on Amazon US/DE listings for what independent reseller GoSupps' listing (28 compartments, 1-6 alarms/day, clear lockable lid) confirms is the same product, also sold historically as 'TabTime Medelert.' Direct requests to tabtime.com/us.tabtime.com were blocked with HTTP 429 on essentially every attempt (both via the primary fetch tool and raw curl with browser headers), so the current product page was retrieved via a text-extraction reader proxy: GBP71.99, 28 compartments, up to 6 daily alarms, 18 aspirin-size (or 5 Calichew-size) tablets/compartment, secure metal lock with solid/clear lid options, 30-minute buzzer + flashing LED, battery-powered. The product image was sourced from GoSupps (an authorized UK reseller) since tabtime.com's own CDN was equally rate-limited."
+    },
+    {
+      "slug": "med-q-pill-dispenser",
+      "name": "Med-Q",
+      "brand": "Med-Q",
+      "category": "automatic-pill-dispensers",
+      "releaseDate": null,
+      "priceUsd": 79.95,
+      "priceNote": "medqpillbox.com sale price $79.95 (list $105.95).",
+      "specs": {
+        "compartments": null,
+        "doses_per_day": 2,
+        "capacity_pills": null,
+        "locking": null,
+        "connectivity": "none",
+        "alerts": "AI-powered triple alarm: sound, flashing lights, and a light-box visual cue",
+        "power_source": null,
+        "dispensing_type": "manual self-fill pill box with light-box technology that illuminates the correct compartment at dose time (no motorized release)"
+      },
+      "source": {
+        "url": "https://medqpillbox.com/product/med-q/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/med-q-pill-dispenser.jpg?v=8ba59427e0",
+        "source": "medqpillbox.com",
+        "license": "© Med-Q",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "medqpillbox.com's own product page and site structured data (organization/product name 'Med-Q', described as \\\"America's #1 Digital Pill Dispenser with triple alarms\\\") confirm this is the manufacturer's own brand name, not a sub-line of a larger company. It markets '1 or 2 daily reminders' (doses_per_day=2), 'AI-Powered Triple Alarms -- Sound, flashing lights, and visual cues,' and 'Light Box Technology' that illuminates the correct compartment. No mention of WiFi/Bluetooth/app connectivity, a lock, compartment count, or power source appears anywhere in the page's full HTML (checked directly, not just via AI summary), so those fields are left null/none rather than assumed; this is a light-indicator organizer rather than a motorized dispenser."
+    },
+    {
+      "slug": "elliegrid-smart-pill-box",
+      "name": "Ellie Grid",
+      "brand": "EllieGrid",
+      "category": "automatic-pill-dispensers",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "Not published on elliegrid.com. A single third-party eBay listing showed ~$67, which is not treated as a reliable current MSRP.",
+      "specs": {
+        "compartments": 7,
+        "doses_per_day": null,
+        "capacity_pills": null,
+        "locking": "none",
+        "connectivity": "bluetooth (companion 'PRIME' app)",
+        "alerts": "adaptive audio + visual (LED) smart alarm, patent-pending sensor/ML-based schedule adjustment, plus app notifications",
+        "power_source": "rechargeable battery (charger included; ~1 week between charges)",
+        "dispensing_type": "manual self-fill grid organizer with LED-illuminated compartment indicator (no motorized release); 'pour pills straight in from the bottle'"
+      },
+      "source": {
+        "url": "https://elliegrid.com/products/ellie-smart-pill-box",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://elliegrid.com/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/elliegrid-smart-pill-box.jpg?v=ba2449cbac",
+        "source": "elliegrid.com",
+        "license": "© EllieGrid",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "elliegrid.com returned HTTP 429 on essentially every direct request this session, so its homepage and product page were retrieved via a text-extraction reader proxy. The homepage states the grid 'Holds 7 different types of pills' (used as compartments=7); the product page separately notes compartments are of two sizes, with large-pill compartments holding 'up to 7 large pills' each -- a per-compartment pill count distinct from the 7-slot claim, and ambiguous enough (small compartments hold 'an entire bottle') that capacity_pills is left null rather than conflating the two figures. Bluetooth app pairing, rechargeable ~1-week battery, and adaptive LED+audio alarms are consistent across both pages. It is a manual-fill organizer (no motorized dispensing), so locking is 'none'."
+    },
+    {
+      "slug": "medacube",
+      "name": "PharmAdva MedaCube 2.0",
+      "brand": "PharmAdva",
+      "category": "automatic-pill-dispensers",
+      "releaseDate": null,
+      "priceUsd": 1500,
+      "priceNote": "$1,500 one-time purchase price, as reported by a senior-care research aggregator citing 'The Senior List'; medacube.com does not publish price on-site, and the exact underlying Senior List article URL could not be re-confirmed independently after DuckDuckGo/Bing search UIs repeatedly served CAPTCHA challenges during verification, so this figure carries lower confidence than the specs below.",
+      "specs": {
+        "compartments": 16,
+        "doses_per_day": null,
+        "capacity_pills": null,
+        "locking": "electronic lock + tamper alarm",
+        "connectivity": "wifi + optional cellular backup",
+        "alerts": "audio + visual alarms at dose times; missed/late-dose and refill notifications to caregivers by email/text/phone; connection-loss and tamper alarms",
+        "power_source": "AC adapter with battery backup",
+        "dispensing_type": "automatic motorized dispense drawer; touchscreen-programmed, with photo verification of each dispensed dose"
+      },
+      "source": {
+        "url": "https://www.medacube.com/products/medacube-automatic-pill-dispenser",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.pisceshealth.com/automatic-pill-dispenser",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/medacube.jpg?v=4632c96901",
+        "source": "medacube.com",
+        "license": "© PharmAdva",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "medacube.com returned HTTP 429 on every direct request this session (primary fetch tool and raw curl both blocked), so its product page was retrieved via a text-extraction reader proxy, which describes the current 'MedaCube 2.0' as holding 'up to 16 medications' / a '90-day supply', with WiFi + optional cellular backup, a metal lock + tamper alarm, AC power with battery backup, a touchscreen 'dispense drawer', and automatic dose photography. Authorized reseller Pisces Healthcare Solutions independently corroborates the 2.0 generation's 'improved Wi-Fi connectivity, updated electronics, a replaceable battery'; a direct fetch of that reseller page returned HTTP 403 during verification, but it is cited per the aggregated findings that surfaced it. An older marketing mention of 'holds 12 medications out of the box, optional Expanded' suggests a smaller base configuration exists; 16 (the figure on the current 2.0 product page) is used as the primary compartments value, with the 12-count noted here rather than in a second spec field. Per-compartment capacity and doses/day are not stated and are left null; dimensions are 10in x 10in x 10in per the product page."
+    },
+    {
+      "slug": "pivotell-advance-dispenser",
+      "name": "Pivotell Advance Dispenser",
+      "brand": "Pivotell Ltd",
+      "category": "automatic-pill-dispensers",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "GBP149.99 at UK pharmacy chain Boots (per a Trolley.co.uk price-comparison listing); no independently confirmed USD MSRP -- Pivotell sells primarily through UK/Irish healthcare and telecare channels.",
+      "specs": {
+        "compartments": 28,
+        "doses_per_day": 24,
+        "capacity_pills": null,
+        "locking": "self-locking shutter over the lid opening; unlocks only at the scheduled alarm time",
+        "connectivity": "none (this base model; a separate 'Advance GSM' variant adds SMS messaging, and the unit can be Telecare-enabled by third-party providers)",
+        "alerts": "audible alarm (programmable up to 5 hours) with 4 selectable tones; flashing light for hearing-impaired users",
+        "power_source": "4x 1.5V alkaline or 4x 1.2V rechargeable NiMH AA batteries; battery life exceeds 1 year",
+        "dispensing_type": "automatic rotating-tray mechanism presenting one dose compartment at each scheduled alarm time"
+      },
+      "source": {
+        "url": "https://www.pivotell.co.uk/PivoTell+Advance+Dispenser/0_CAAA001/PRAA001.htm",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.essentialaids.com/pivotell-advance-automatic-pill-dispenser.html",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/pivotell-advance-dispenser.jpg?v=0ba84ed830",
+        "source": "essentialaids.com (authorized UK reseller)",
+        "license": "© Pivotell Ltd",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "pivotell.co.uk returned HTTP 401/429 on direct requests (primary fetch tool and curl both blocked), so its product page was retrieved via a text-extraction reader proxy: 28 compartments, ~10ml capacity per compartment (a volume, not a discrete pill count, so capacity_pills is left null), 1-24 programmable daily alarm times, a self-locking shutter, 4 alarm tones + flashing light, and 4xAA (alkaline or NiMH) batteries lasting over a year. It is a Class 1 medical device registered with the UK MHRA. The device photo was sourced from UK reseller Essential Aids since pivotell.co.uk's own image assets were not reachable; price is from a Trolley.co.uk price-comparison mention of Boots' listing (GBP149.99), the only concrete figure found across several UK retailers checked."
+    },
+    {
+      "slug": "medready-1700",
+      "name": "MedReady 1700",
+      "brand": "MedReady, Inc.",
+      "category": "automatic-pill-dispensers",
+      "releaseDate": null,
+      "priceUsd": 149,
+      "priceNote": "$149.00 direct from medreadyinc.net.",
+      "specs": {
+        "compartments": 28,
+        "doses_per_day": 4,
+        "capacity_pills": 9,
+        "locking": "robust lock and key system (2 keys), tamper-resistant blue lid",
+        "connectivity": "none (non-monitored model; MedReady also sells monitored variants)",
+        "alerts": "low-frequency audible buzzer alarm (no light/flash alert on this model)",
+        "power_source": "120V AC outlet with rechargeable nickel-metal-hydride battery backup, up to 48 hours",
+        "dispensing_type": "automatic timed compartment rotation; only the latest/current dose is accessible as the tray advances with each alarm"
+      },
+      "source": {
+        "url": "https://medreadyinc.net/products/medication-dispensers/non-monitored-medication-dispensers/medready-1700/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/medready-1700.jpg?v=73a91d1c95",
+        "source": "medreadyinc.net",
+        "license": "© MedReady, Inc.",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "All specs and price are from medreadyinc.net's own '1700' non-monitored dispenser product page: 28 compartments/doses, dispensing 1-4 times per day via loading-ring templates for 3x/4x daily configurations, up to 9 M&M-sized pills per compartment, a robust lock-and-key system with tamper-resistant blue lid, 120V AC power with rechargeable NiMH battery backup (up to 48 hours), and a low-frequency buzzer alarm with no visual/flashing light on this specific model. Described by the manufacturer as 'a non-monitored automatic pill dispenser with alarm.'"
+    }
+  ]
+}

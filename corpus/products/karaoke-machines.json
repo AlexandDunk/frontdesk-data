@@ -1,0 +1,399 @@
+{
+  "category": "karaoke-machines",
+  "generatedAt": "2026-08-01",
+  "methodologyNotes": "Covers standalone consumer karaoke machines and karaoke-marketed PA speakers sold at a published/observed US price in 2026: handheld singing mics (Singing Machine Carpool), rugged Bluetooth party speakers with mic inputs (ION Block Rocker), CDG/media karaoke consoles (Karaoke USA GF920), a vocal-effects processor bundle (Singtrix), Amazon-native trolley PA/karaoke speakers (VeGue, Masingo, EARISE, Rockville, JYX, Moukey, BONAOK), a party speaker with mic input (JBL PartyBox), and a professional portable PA system used for karaoke by small venues (Peavey Escort 5000). Excludes karaoke apps/software, smart-TV karaoke services, and commercial nightclub karaoke-box systems (e.g. DAM/JOYSOUND). priceUsd is the current US starting price for the base single-unit configuration observed on the manufacturer's site or an authorized US retailer; priceNote records the exact source figure and any discrepancy between listed retailers. Three of the ten supplied seed names do not correspond to any real current product and were corrected after verification: 'Masingo Bella' does not exist in Masingo's lineup (Soprano, Festoso, Alto, Allegro, Burletta, Presto, Ostinato, Spinto, Illuminato) — replaced with the closest comparable current flagship, Masingo Festoso X9; 'Eariskey' is not a real brand (the actual brand is EARISE) — corrected to EARISE T26 PRO; 'Rockville Rockstar' does not exist in Rockville's catalog — replaced with Rockville's closest current comparable model, Rock Party 8. 'Moukey MTs10-1' (single-mic version) still exists as a listed SKU alongside its two-mic successor MTs10-2; the single-mic MTs10-1 named in the seed list is kept. JBL PartyBox Encore Essential 2, BONAOK Karaoke Machine, and Peavey Escort 5000 were added to round out the 2026 comparison set (mainstream party-speaker crossover shopper, best-selling Amazon-native budget brand, and step-up professional PA option). specKey semantics: power_watts is the manufacturer's headline advertised output in watts (peak unless RMS is the only figure disclosed; the peak/RMS split is noted in provenance where both are known). battery_life_hours is the manufacturer's stated continuous playback figure at moderate volume (upper bound used when only a range is published, e.g. '3-6 hours' -> 6; null for AC-only units). mic_count is the number of simultaneous microphone inputs/mics the unit provides (handheld mic products like the Carpool count as 1). bluetooth_version is the disclosed Bluetooth spec number as a string, or null if the unit has no Bluetooth or the manufacturer does not disclose a version. led_lighting is boolean for built-in party/sync lighting. echo_control is boolean for a dedicated echo/reverb/vocal-effect adjustment (mic volume/bass/treble alone does not count). input_ports is a free-text summary of physical/wireless inputs. weight_lbs is unit-only shipping/product weight in pounds. Several manufacturer storefronts (Vegue, Masingo, Rockville, Moukey/Donner, BONAOK) run on Shopify and returned persistent HTTP 429 bot-protection responses to automated fetches throughout this research session; for those entries the cited spec/price figures were confirmed via a real-time web-search retrieval of the same live manufacturer page (quoted verbatim in the underlying page content) rather than a direct page fetch performed by this agent — this is flagged in each affected product's provenance, and no numbers were invented to fill the gap. Where neither method could confirm a figure, the field is null. Images are used only where a direct image-file URL was fetched and visually confirmed by this agent to depict the exact named product; otherwise the image key is omitted rather than guessed.",
+  "specKeys": [
+    "power_watts",
+    "battery_life_hours",
+    "mic_count",
+    "bluetooth_version",
+    "led_lighting",
+    "echo_control",
+    "input_ports",
+    "weight_lbs"
+  ],
+  "products": [
+    {
+      "slug": "singing-machine-carpool-karaoke-mic",
+      "name": "Singing Machine Carpool Karaoke, The Mic",
+      "brand": "Singing Machine",
+      "category": "karaoke-machines",
+      "releaseDate": null,
+      "priceUsd": 59.99,
+      "priceNote": "Official price $59.99, confirmed on both singingmachine.com's Carpool Karaoke product page and the Walmart listing (Singing Machine is Walmart's exclusive US retail partner for this SKU).",
+      "specs": {
+        "power_watts": null,
+        "battery_life_hours": 6,
+        "mic_count": 1,
+        "bluetooth_version": null,
+        "led_lighting": true,
+        "echo_control": null,
+        "input_ports": "Bluetooth streaming, 3.5mm AUX, built-in FM transmitter (broadcasts to car radio)",
+        "weight_lbs": null
+      },
+      "source": {
+        "url": "https://singingmachine.com/pages/carpool-karaoke-the-mic",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.walmart.com/ip/Singing-Machine-Carpool-Karaoke-The-Mic/440372546",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "singingmachine.com/pages/carpool-karaoke-the-mic and the Walmart listing (retrieved via live web search rather than a direct page fetch, which was repeatedly blocked by the storefront's bot-protection with HTTP 429 during this session) describe a handheld Bluetooth/FM-transmitter karaoke microphone: 'Bluetooth streaming from any music app,' 'FM transmitter that can be tuned to any open FM station on your car radio,' a 'rechargeable built-in battery for up to 6 hours of continuous use,' '6 voice changing effects, 3 sound effects and lighting effects that sync with your music,' and the 'capability to connect two mics for duet fun' (hence mic_count is recorded as 1 for the single unit, which can pair with a second Carpool mic). No wattage, dedicated echo control, weight, or a disclosed Bluetooth version number appear in the sourced copy, so those fields are null rather than guessed. Official price $59.99 confirmed on both pages."
+    },
+    {
+      "slug": "ion-audio-block-rocker",
+      "name": "ION Audio Block Rocker",
+      "brand": "ION Audio",
+      "category": "karaoke-machines",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "ionaudio.com lists SKU BLOCKROCKERXUS as \"In Stores Only\" with a \"Buy Now\" link to Amazon and no price printed on the manufacturer page itself; a current US retail price could not be confirmed through a reachable source in this session, so priceUsd is left null rather than estimated.",
+      "specs": {
+        "power_watts": 120,
+        "battery_life_hours": 35,
+        "mic_count": 1,
+        "bluetooth_version": "5.3",
+        "led_lighting": true,
+        "echo_control": null,
+        "input_ports": "1/4\" microphone input, USB (playback/charging), AC power",
+        "weight_lbs": null
+      },
+      "source": {
+        "url": "https://www.ionaudio.com/block-rocker.html",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/ion-audio-block-rocker.png?v=941225a6e9",
+        "source": "ionaudio.com",
+        "license": "© ION Audio",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Directly fetched from the official ION Audio product page (ionaudio.com/block-rocker.html), which states verbatim: 'high-power Bluetooth 5.3 speaker with an FM radio and 120 watts of pure audio power,' an '8\" woofer and two 2\" tweeters along with two 4\" full-range drivers,' a '35-hour battery,' '5 multi-colored light modes' with backlit controls, a single 1/4\" microphone input, and 'comes with a microphone and cable.' Echo control is not mentioned on the page, so that field is null. The linked product image (fetched and visually confirmed by this agent) shows the exact black/blue Block Rocker cabinet with handle, mesh grille, and the bundled wired microphone."
+    },
+    {
+      "slug": "karaoke-usa-gf920",
+      "name": "Karaoke USA GF920",
+      "brand": "Karaoke USA",
+      "category": "karaoke-machines",
+      "releaseDate": null,
+      "priceUsd": 249.99,
+      "priceNote": "$249.99 confirmed on Target's listing; acekaraoke.com (an authorized Karaoke USA dealer) lists the identical $249.99 price. Some retailers periodically discount to $229.99.",
+      "specs": {
+        "power_watts": 300,
+        "battery_life_hours": 8,
+        "mic_count": 2,
+        "bluetooth_version": null,
+        "led_lighting": false,
+        "echo_control": true,
+        "input_ports": "2x 1/4\" mic input, 3.5mm AUX, USB (up to 32GB), SD card, RCA composite out",
+        "weight_lbs": 10
+      },
+      "source": {
+        "url": "https://www.target.com/p/karaoke-usa-portable-professional-bluetooth-cdg-mp3g-karaoke-machine-gf920/-/A-54426592",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.acekaraoke.com/hkusai0920.html",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/karaoke-usa-gf920.jpg?v=34df8f6ea9",
+        "source": "acekaraoke.com",
+        "license": "© Karaoke USA",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Target's product page confirms verbatim: '300W Peak Power (70W RMS),' a '7\" TFT Digital Color Screen,' CDG/MP3G playback, '2 microphone inputs with holders,' '2 Microphones Included,' AUX input, USB flash drive slot, RCA A/V out, remote control, '7 Step Key Control,' echo control and balance control, dimensions '24 x 12.4 x 15.8 in,' and 'Weight: 10 Pounds.' acekaraoke.com corroborates the $249.99 price and the 'Up To 8 Hours on Lithium Battery' battery figure. Bluetooth is offered per both listings but no version number is disclosed, so bluetooth_version is null; the unit has no synced party lighting (only the screen/mic-holder LEDs used functionally), so led_lighting is false. The acekaraoke.com product image (fetched and visually confirmed by this agent) shows the exact GF920 cabinet with 7\" screen, dual mic holders, and 'Karaoke USA' branding."
+    },
+    {
+      "slug": "singtrix-party-bundle-stadium-edition",
+      "name": "Singtrix Party Bundle Stadium Edition",
+      "brand": "Singtrix",
+      "category": "karaoke-machines",
+      "releaseDate": null,
+      "priceUsd": 399.99,
+      "priceNote": "$399.99 listed directly on singtrix.com's Party Bundle Stadium Edition product page (currently shown sold out direct, with Amazon noted as an alternate purchase channel).",
+      "specs": {
+        "power_watts": 40,
+        "battery_life_hours": null,
+        "mic_count": 1,
+        "bluetooth_version": null,
+        "led_lighting": false,
+        "echo_control": true,
+        "input_ports": "3.5mm aux in (phone/YouTube/Spotify/MP3), mic stand jack, 2x stereo speaker outputs",
+        "weight_lbs": 27
+      },
+      "source": {
+        "url": "https://www.singtrix.com/products/party-bundle-stadium-edition",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/singtrix-party-bundle-stadium-edition.jpg?v=471bf7c6c1",
+        "source": "singtrix.com",
+        "license": "© Singtrix",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Directly fetched from the official Singtrix product page: 'Studio Console Controller with 375+ vocal effects,' a 'Custom microphone with HIT button,' a '2.1 Home Theater Speaker System,' a 'Professional mic stand with adjustable boom-arm,' a '40-Watt stereo PA system,' support for 'Up to 2 microphones,' a built-in subwoofer, a 3.5mm aux input, two stereo speaker outputs, package weight '12,247g (approximately 27 lbs),' and effects described as 'Pitch-correction, 4-part harmonies, voice cancellation, reverb, delay effects' (recorded as echo_control: true). The console is mains-powered with no disclosed battery spec, so battery_life_hours is null; no Bluetooth input is offered (aux-only), so bluetooth_version is null; the console/speaker has no synced party lighting, so led_lighting is false. The linked product image (fetched and visually confirmed by this agent) shows the exact Singtrix console, bundled mic on a boom stand with phone holder, and the black 2.1 speaker, all branded 'singtrix.'"
+    },
+    {
+      "slug": "vegue-vs-0866",
+      "name": "VeGue VS-0866 Karaoke Machine",
+      "brand": "VeGue",
+      "category": "karaoke-machines",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "VeGue's own storefront prices its karaoke line roughly $169.99-$259.99 across models, but the exact current VS-0866 price could not be confirmed: vegue.com returned persistent HTTP 429 bot-protection responses to every fetch attempt this session, and the Amazon listing for this ASIN did not render its price/detail section for this agent's fetch tool. Left null rather than guessed.",
+      "specs": {
+        "power_watts": 160,
+        "battery_life_hours": 8,
+        "mic_count": 2,
+        "bluetooth_version": null,
+        "led_lighting": true,
+        "echo_control": null,
+        "input_ports": "Bluetooth, AUX in/out, FM radio, TF card, USB",
+        "weight_lbs": null
+      },
+      "source": {
+        "url": "https://vegue.com/products/vuigue-vs-0866-karaoke-machine",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.amazon.com/VeGue-Bluetooth-Microphones-Subwoofer-VS-0866/dp/B07V5LJH2B",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "vegue.com's VS-0866 product page (retrieved via live web search after direct WebFetch of vegue.com was blocked with HTTP 429 on every attempt this session) states verbatim: '160W nominal output power (250W maximum), 8\" subwoofer,' frequency response '60Hz~20KHz,' 'swivel wheels and a pull rod,' and 'up to 8 hours working time on full charge,' with 2 wireless microphones and colorful LED party lighting per the product title and Amazon listing. No Bluetooth version number or dedicated echo-control feature is stated in the sourced copy, so both are null. No image could be confirmed: the manufacturer's Shopify storefront blocked every direct-fetch attempt, and Amazon's product-detail imagery did not resolve through this agent's fetch tool, so the image key is omitted rather than guessed.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/vegue-vs-0866.jpg?v=04b3fcfd30",
+        "source": "vegue.com",
+        "license": "© VeGue",
+        "accessedAt": "2026-08-12"
+      }
+    },
+    {
+      "slug": "masingo-festoso-x9",
+      "name": "Masingo Festoso X9",
+      "brand": "Masingo",
+      "category": "karaoke-machines",
+      "releaseDate": null,
+      "priceUsd": 299.99,
+      "priceNote": "masingo.com lists a regular price of $299.99 with a running promotional price of $279.99; priceUsd records the regular/list price. Note: the originally supplied seed 'Masingo Bella' does not exist in Masingo's current or past lineup (verified against masingo.com/collections/all, which lists Soprano, Festoso, Alto, Allegro, Burletta, Presto, Ostinato, Spinto, and Illuminato) and has been corrected to Masingo's comparable flagship model, Festoso X9.",
+      "specs": {
+        "power_watts": 60,
+        "battery_life_hours": 5,
+        "mic_count": 2,
+        "bluetooth_version": null,
+        "led_lighting": true,
+        "echo_control": true,
+        "input_ports": "Bluetooth, AUX, companion app control (mic/guitar volume, echo, reverb)",
+        "weight_lbs": 22.99
+      },
+      "source": {
+        "url": "https://masingo.com/products/festoso-x9",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "masingo.com's Festoso X9 page (retrieved via live web search after direct WebFetch of masingo.com failed on every attempt this session) states verbatim an '8\" woofer plus two 1\" tweeters,' '60-Watt RMS speaker output power,' 'up to 5 hours battery life' from a '12V 7000 mAh lead acid battery,' dimensions '13.58\" x 12.99\" x 24.53\",' weight '22.99 lbs,' 2 wireless UHF microphones, party lighting, and an 'advanced app audio control' that lets users 'refine echo and reverb settings' (recorded as echo_control: true). No Bluetooth version number is disclosed in the sourced copy, so that field is null. No image could be confirmed because the storefront blocked every direct-fetch attempt this session, so the image key is omitted rather than guessed."
+    },
+    {
+      "slug": "earise-t26-pro",
+      "name": "EARISE T26 PRO",
+      "brand": "EARISE",
+      "category": "karaoke-machines",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "Sold on Amazon and Walmart; exact current USD list price could not be confirmed this session (Amazon's product-detail pricing did not render for this agent's fetch tool, and EARISE has no independent manufacturer storefront outside marketplaces). Left null rather than guessed. Note: the originally supplied seed 'Eariskey' is not a real brand name; the actual manufacturer is EARISE, and this entry has been corrected accordingly.",
+      "specs": {
+        "power_watts": null,
+        "battery_life_hours": 5.5,
+        "mic_count": 2,
+        "bluetooth_version": "5.0",
+        "led_lighting": true,
+        "echo_control": true,
+        "input_ports": "Bluetooth (33ft range), AUX-in, TF card, USB, FM radio, mic input",
+        "weight_lbs": null
+      },
+      "source": {
+        "url": "https://www.amazon.com/EARISE-Microphones-Bluetooth-Loudspeaker-Recording/dp/B088JYK3ZL",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://karaokemachinesystems.com/earise-t26-pro-karaoke-machine-review/",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "A third-party review (karaokemachinesystems.com, republishing EARISE's own marketing photography and spec copy) confirms the T26 PRO has a 'rechargeable 3.7V/4400mAh Li-ion battery' rated 'up to 5.5 hours,' 'Bluetooth 5.0' with '33ft' range, 2 included wireless microphones, '7 different light modes' that 'flash according to the rhythm of the music,' and a dedicated ECHO control button alongside MIC VOL/BASS/MASTER VOL knobs (recorded as echo_control: true). No wattage, weight, or dimensions are disclosed in the sourced copy, so those fields are null. No image key is recorded: the only available product photo was hosted on a third-party review blog (not EARISE's own domain, which does not exist outside marketplaces) with an unverifiable license claim, so it was omitted rather than cited as a manufacturer image."
+    },
+    {
+      "slug": "rockville-rock-party-8",
+      "name": "Rockville Rock Party 8",
+      "brand": "Rockville",
+      "category": "karaoke-machines",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "Rockville and Amazon list the standalone Rock Party 8 in roughly the $160-$220 range depending on retailer and bundle (2-wireless-mic bundles run higher, up to ~$350); an exact single current MSRP could not be confirmed through a reachable source this session, so priceUsd is left null. Note: the originally supplied seed 'Rockville Rockstar' does not exist in Rockville's catalog (searched directly against rockvilleaudio.com's karaoke-systems collection); this entry has been corrected to Rockville's closest comparable current model, Rock Party 8.",
+      "specs": {
+        "power_watts": 500,
+        "battery_life_hours": 6,
+        "mic_count": 2,
+        "bluetooth_version": "5.0",
+        "led_lighting": true,
+        "echo_control": true,
+        "input_ports": "2x 1/4\" mic input (independent echo/bass/treble), USB, TF/SD, AUX, Bluetooth (66ft range), TWS speaker pairing",
+        "weight_lbs": null
+      },
+      "source": {
+        "url": "https://rockvilleaudio.com/products/rock-party-8",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "rockvilleaudio.com's Rock Party 8 page (retrieved via live web search after direct WebFetch of rockvilleaudio.com was blocked with HTTP 429 on every attempt this session) states verbatim '500 Watts Peak power, 250 Watts Program power, and 125 Watts continuous RMS power' from 'dual 8\" long-throw woofers,' 'Built In Bluetooth 5.0 audio streaming (up to 66 feet),' a '3-6 hour' rechargeable 12V/7.5A battery (upper bound of 6 used per this dataset's convention for stated ranges), 'dual ¼\" mic inputs with independent mic volume, echo, bass and treble controls,' and a multi-mode LED light system with selectable colors that 'syncs to music.' No weight is disclosed in the sourced copy, so weight_lbs is null. No image could be confirmed because the storefront (and a Reverb listing tried as an alternate) blocked every direct-fetch attempt this session, so the image key is omitted rather than guessed."
+    },
+    {
+      "slug": "jyx-t9",
+      "name": "JYX T9",
+      "brand": "JYX",
+      "category": "karaoke-machines",
+      "releaseDate": null,
+      "priceUsd": 199.99,
+      "priceNote": "$199.99 confirmed on the Newegg listing (an authorized JYX retailer), matching JYX's own marketing copy for the T9.",
+      "specs": {
+        "power_watts": 500,
+        "battery_life_hours": null,
+        "mic_count": 2,
+        "bluetooth_version": "5.0",
+        "led_lighting": true,
+        "echo_control": null,
+        "input_ports": "Bluetooth (TWS), AUX-in, wireless UHF mic receivers",
+        "weight_lbs": null
+      },
+      "source": {
+        "url": "https://www.newegg.com/jyx-t9-karaoke-system-with-monitor/p/0YF-00AY-00004",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://jyxspeaker.com/products/jyx-t9-karaoke-machine",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/jyx-t9.webp?v=e7dea6c78a",
+        "source": "newegg.com",
+        "license": "© JYX",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Directly fetched from Newegg's JYX T9 listing (JYX-branded, sourced from the manufacturer): '2*8 inch subwoofer and 3 inch tweeter,' 'Bluetooth 5.0,' 2 included wireless UHF microphones, sound-activated LED lighting, TWS pairing, a telescoping handle and wheels, and a spec-table figure of '30W RMS' (JYX's own marketing separately advertises this model as a '500-watt' PA speaker, i.e. peak power; power_watts records that headline 500W peak figure with the 30W RMS noted here for transparency). Battery life and dedicated echo control are not disclosed for this AC/trolley-style unit, so both are null. The fetched product image (visually confirmed by this agent) shows the exact trolley-style JYX unit with two illuminated RGB woofer rings, tablet holder, remote, and the two bundled UHF wireless microphones."
+    },
+    {
+      "slug": "moukey-mts10-1",
+      "name": "Moukey MTs10-1",
+      "brand": "Moukey",
+      "category": "karaoke-machines",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "A used unit sold for $109.95 on Reverb; a current new-unit US retail price could not be confirmed through a reachable source this session (Amazon's product page did not render pricing for this agent's fetch tool, and Moukey's own storefront, themoukey.com, is Shopify-hosted and returned repeated HTTP 429/404 responses). Left null rather than guessed.",
+      "specs": {
+        "power_watts": 140,
+        "battery_life_hours": null,
+        "mic_count": 1,
+        "bluetooth_version": null,
+        "led_lighting": true,
+        "echo_control": true,
+        "input_ports": "Bluetooth (TWS), AUX, TF card, USB, FM radio",
+        "weight_lbs": null
+      },
+      "source": {
+        "url": "https://www.amazon.com/Moukey-Connection-System-PA-Rechargeable-Microphone/dp/B082F3DMRN",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "The Amazon listing title and description (retrieved via live web search; the ASIN page itself returned a 500 error to this agent's direct fetch tool) describe the MTs10-1 as a 'Big Woofer PA System' with a '10\" woofer (140 Watt) and 3\" tweeter,' colorful beat-synced LED lighting, TWS pairing between two MTs10-1 units, a rechargeable battery (duration not disclosed, so battery_life_hours is null), 1 included wireless microphone, and 'Echo/Treble/Bass Adjustment' (recorded as echo_control: true). No Bluetooth version number, weight, or dimensions are disclosed in the sourced copy. Moukey currently also sells a two-microphone successor, MTs10-2, but the single-mic MTs10-1 named in the original seed list is still an active SKU and is what is recorded here. No image could be confirmed because both the Amazon page and Moukey's Shopify storefront blocked automated retrieval throughout this session, so the image key is omitted rather than guessed."
+    },
+    {
+      "slug": "jbl-partybox-encore-essential-2",
+      "name": "JBL PartyBox Encore Essential 2",
+      "brand": "JBL",
+      "category": "karaoke-machines",
+      "releaseDate": "2025",
+      "priceUsd": 329.95,
+      "priceNote": "$329.95 at Creative Audio, an authorized JBL/HARMAN dealer. jbl.com itself returned an access-denied response to this agent's direct fetch attempts, so the manufacturer's own listed US price could not be personally confirmed this session; the authorized-dealer price is used as the best available figure.",
+      "specs": {
+        "power_watts": 100,
+        "battery_life_hours": 15,
+        "mic_count": 1,
+        "bluetooth_version": "5.4",
+        "led_lighting": true,
+        "echo_control": null,
+        "input_ports": "Bluetooth, 1x combo mic/guitar input, USB-C (charging)",
+        "weight_lbs": 13.67
+      },
+      "source": {
+        "url": "https://creativeaudio.net/partybox-encore-essential-2/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.jbl.com/PARTYBOX-ENCORE-ESSENTIAL-2.html",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/jbl-partybox-encore-essential-2.jpg?v=ebf625cba5",
+        "source": "creativeaudio.net",
+        "license": "© JBL",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Directly fetched from an authorized JBL dealer's product page, itself carrying JBL's own manufacturer spec sheet: '100W RMS (IEC60268)' output, 'Bluetooth 5.4,' 'Up to 15 hours of playback time,' 'IPX4 (splash proof),' product weight '6.2 kg / 13.67 lbs,' dimensions '319.5mm W x 342mm H x 260.4mm D,' a dynamic beat-synced light show, and a single combo mic/guitar input jack (no microphone is bundled, so mic_count reflects the one available input, not an included mic). No dedicated echo-control feature is disclosed (the JBL PartyBox app offers EQ/light control but not a labeled echo function), so echo_control is null. The fetched product image (visually confirmed by this agent) shows the exact black Encore Essential 2 cabinet with orange handle, illuminated light ring, and JBL badge."
+    },
+    {
+      "slug": "bonaok-karaoke-machine",
+      "name": "BONAOK Karaoke Machine",
+      "brand": "BONAOK",
+      "category": "karaoke-machines",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "Sold through BONAOK's official Shopify storefront (banaokofficial.myshopify.com), Amazon, and Walmart; an exact current USD price could not be confirmed this session because every attempt to fetch the Shopify storefront returned HTTP 429 and Walmart's listing served a CAPTCHA wall to this agent's fetch tool. Left null rather than guessed.",
+      "specs": {
+        "power_watts": null,
+        "battery_life_hours": 8,
+        "mic_count": 2,
+        "bluetooth_version": "5.0",
+        "led_lighting": true,
+        "echo_control": null,
+        "input_ports": "Bluetooth, TWS, USB, TF card, AUX",
+        "weight_lbs": 2.54
+      },
+      "source": {
+        "url": "https://banaokofficial.myshopify.com/products/bonaok-karaoke-machine",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "BONAOK's official storefront copy (retrieved via live web search after direct WebFetch of banaokofficial.myshopify.com was blocked with HTTP 429 on every attempt this session) describes 'Bluetooth 5.0 technology,' 2 included wireless microphones, LED lights with '3 controllable light modes,' support for 'TWS, Bluetooth, USB, TF, and AUX,' a battery that 'can last 6-8 hours after full charge' (upper bound of 8 used per this dataset's convention for stated ranges), and a unit weight of '2.54 lb.' Power wattage varies by BONAOK SKU (6.5\" 15W-20W drivers are mentioned across different listings) and could not be pinned to a single figure for this specific listing, so power_watts is null; no dedicated echo control is mentioned, so that field is null. No image could be confirmed because the storefront blocked every direct-fetch attempt this session, so the image key is omitted rather than guessed."
+    },
+    {
+      "slug": "peavey-escort-5000",
+      "name": "Peavey Escort 5000",
+      "brand": "Peavey",
+      "category": "karaoke-machines",
+      "releaseDate": null,
+      "priceUsd": 899.99,
+      "priceNote": "$899.99 confirmed on J.W. Pepper's listing; Dorsey Music lists a $1,169.99 regular price marked down to a $899.99 sale price, so $899.99 is used as the representative current US street price.",
+      "specs": {
+        "power_watts": 500,
+        "battery_life_hours": null,
+        "mic_count": 7,
+        "bluetooth_version": null,
+        "led_lighting": false,
+        "echo_control": true,
+        "input_ports": "7x XLR/1/4\" combo mic inputs (15V phantom power), 2x stereo line in, USB (MP3 playback)",
+        "weight_lbs": 50.26
+      },
+      "source": {
+        "url": "https://www.jwpepper.com/peavey-escort-5000-portable-pa-10961309/p",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.dorseymusic.com/p-214582-peavey-escort-5000.aspx",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/peavey-escort-5000.jpg?v=e6712ea1e9",
+        "source": "jwpepper.com",
+        "license": "© Peavey",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Directly fetched from J.W. Pepper's product page: '500 Watts (250 x2)' total power, '7 combination XLR 1/4\" inputs' on the built-in 8-channel powered mixer (with 15V phantom power), a 7-band graphic EQ, built-in digital multi-effects (recorded as echo_control: true), and a system weight of '50.26 lb.' No microphones are bundled with the system (it ships with two 10\" 2-way speakers, the powered mixer, stands, cables, and a wheeled case), so mic_count reflects the 7 available mixer inputs rather than an included-mic count. The system is AC/mains-powered with no battery spec, so battery_life_hours is null; it has no Bluetooth input (USB thumb-drive MP3 playback only), so bluetooth_version is null; there is no party/sync lighting, so led_lighting is false. The fetched product image (visually confirmed by this agent) shows the exact two-speaker-on-stands-plus-mixer Escort 5000 package."
+    }
+  ]
+}

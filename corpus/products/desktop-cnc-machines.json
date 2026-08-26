@@ -1,0 +1,384 @@
+{
+  "category": "desktop-cnc-machines",
+  "generatedAt": "2026-08-09T00:00:00.000Z",
+  "methodologyNotes": "Twelve desktop CNC routers/mills were verified 2026-08-09 against manufacturer product/spec pages (Carbide 3D, Inventables, SainSmart/Genmitsu, Bantam Tools, Sienci Labs, MillRight CNC, Snapmaker, OpenBuilds) where those pages were reachable, corroborated by independent review sites (MellowPine, All3DP, CNCRouterInfo) and resellers (MatterHackers, MakerTechStore, Amazon) where official pages 404'd, blocked automated fetches, or omitted a spec; every numeric field left null rather than guessed reflects a genuine gap across all sources checked, most notably: spindle wattage for machines sold without a bundled router/spindle (Shapeoko 4, Shapeoko Pro XXL, BobsCNC E4 body-only kit, OpenBuilds LEAD 1010 base kit) where the buyer supplies their own trim router; and max feed rate / repeatability for several budget and semi-DIY kits whose vendors never publish a tolerance figure. The BobsCNC Evolution 4 (E4) is confirmed discontinued and replaced by BobsCNC's Quantum series; its own site returned errors on every fetch attempt during verification, so its entry is sourced from MellowPine's review (which reproduces BobsCNC's original spec sheet) rather than a live manufacturer page, and priceUsd is left null since no current authorized-dealer listing could be found. Onefinity's own product page also 404'd during verification (site restructuring); the Woodworker X-35 entry is sourced from the Onefinity community forum and MellowPine's review instead. Inventables' X-Carve Pro price shows a real conflict between a cached shop-page fetch ($4,995/$7,495) and multiple independent retailer/aggregator citations of Inventables' own stated MSRP ($9,995/$11,995); the higher, more consistently cited MSRP figures were used, with the discrepancy flagged in priceNote rather than silently resolved.",
+  "specKeys": [
+    "work_area_x_mm",
+    "work_area_y_mm",
+    "work_area_z_mm",
+    "spindle_power_w",
+    "spindle_speed_rpm",
+    "frame_material",
+    "controller_firmware",
+    "max_feed_rate_mm_min",
+    "repeatability_mm"
+  ],
+  "products": [
+    {
+      "slug": "carbide3d-shapeoko-4",
+      "name": "Carbide 3D Shapeoko 4 (Standard)",
+      "brand": "Carbide 3D",
+      "category": "desktop-cnc-machines",
+      "releaseDate": "2020-11-01",
+      "priceUsd": 1800,
+      "priceNote": "Current price on shop.carbide3d.com for the Standard config bundled with the Carbide Compact Router; XL ($2,150) and XXL ($2,400) variants cost more for larger work areas.",
+      "specs": {
+        "work_area_x_mm": 445,
+        "work_area_y_mm": 445,
+        "work_area_z_mm": 102,
+        "spindle_power_w": null,
+        "spindle_speed_rpm": "12,000-30,000",
+        "frame_material": "Aluminum extrusion rails with machined aluminum X/Y carriage plates",
+        "controller_firmware": "Carbide Motion controller board (GRBL-based firmware), USB-connected, Carbide Motion software",
+        "max_feed_rate_mm_min": null,
+        "repeatability_mm": null
+      },
+      "source": {
+        "url": "https://shop.carbide3d.com/products/shapeoko4",
+        "accessedAt": "2026-08-09"
+      },
+      "provenance": "Carbide 3D's own shop page confirms the Standard/XL/XXL work-area tiers (17.5x17.5in / 33x17.5in / 33x33in, all 4in Z) and pricing ($1,800/$2,150/$2,400). Spindle is a 65mm trim router (Carbide Compact Router, 12,000-30,000 RPM per Carbide 3D's own router spec page); Carbide 3D does not publish a wattage figure for this router on any official page, so spindle_power_w is left null rather than inferred from a third-party community estimate. Max feed rate and repeatability are likewise not published on the current product or docs pages.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/carbide3d-shapeoko-4.jpg?v=5be40e4050",
+        "source": "shop.carbide3d.com",
+        "license": "© Carbide 3D",
+        "accessedAt": "2026-08-09"
+      }
+    },
+    {
+      "slug": "inventables-x-carve-pro-4x4",
+      "name": "Inventables X-Carve Pro (4x4)",
+      "brand": "Inventables",
+      "category": "desktop-cnc-machines",
+      "releaseDate": "2021-01-01",
+      "priceUsd": 11995,
+      "priceNote": "MSRP as cited by CNCRouterInfo and MatterHackers reseller listings for the 4x4 model (4x2 model $9,995). A cached fetch of Inventables' own shop page briefly returned lower figures ($7,495/$4,995) which appear to be a stale or promotional financing display, not the current list price - flagged here rather than silently resolved.",
+      "specs": {
+        "work_area_x_mm": 1219,
+        "work_area_y_mm": 1219,
+        "work_area_z_mm": 102,
+        "spindle_power_w": 1500,
+        "spindle_speed_rpm": "8,000-24,000",
+        "frame_material": "Powder-coated aluminum gantry with 25mm ball screws and linear guides",
+        "controller_firmware": "X-Controller Pro (Inventables proprietary controller enclosure), Easel Pro software",
+        "max_feed_rate_mm_min": null,
+        "repeatability_mm": 0.025
+      },
+      "source": {
+        "url": "https://www.inventables.com/pages/x-carve-pro-tech-specs",
+        "accessedAt": "2026-08-09"
+      },
+      "provenance": "Inventables' own tech-specs page confirms 48x48x4in (4x4) and 48x24x4in (4x2) work areas, a 2hp (1.5kW) air-cooled spindle at 8,000-24,000 RPM, powder-coated aluminum frame with 1in ball screws, NEMA-23 motors, and .001in (0.025mm) accuracy, but does not list pricing or max feed rate. Pricing sourced from CNCRouterInfo and MatterHackers reseller listings citing Inventables' stated MSRP.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/inventables-x-carve-pro-4x4.jpg?v=e855ad01a6",
+        "source": "www.inventables.com",
+        "license": "© Inventables",
+        "accessedAt": "2026-08-09"
+      }
+    },
+    {
+      "slug": "onefinity-woodworker-x-35",
+      "name": "Onefinity Woodworker X-35",
+      "brand": "Onefinity",
+      "category": "desktop-cnc-machines",
+      "releaseDate": "2020-06-01",
+      "priceUsd": 2099,
+      "priceNote": "Current price per Onefinity's own materials as cited by review/aggregator sites; onefinitycnc.com's individual product page returned a 404 during verification (site restructuring), so this figure is corroborated rather than directly re-fetched.",
+      "specs": {
+        "work_area_x_mm": 819,
+        "work_area_y_mm": 819,
+        "work_area_z_mm": 133,
+        "spindle_power_w": 710,
+        "spindle_speed_rpm": "10,000-30,000",
+        "frame_material": "Anodized aluminum extrusion with cylindrical 35mm steel shaft linear rails, ball screw drive",
+        "controller_firmware": "Buildbotics onboard touchscreen controller (Original/PRO series)",
+        "max_feed_rate_mm_min": null,
+        "repeatability_mm": null
+      },
+      "source": {
+        "url": "https://mellowpine.com/onefinity-cnc-review-woodworker/",
+        "accessedAt": "2026-08-09"
+      },
+      "provenance": "Onefinity's official product page returned HTTP 404 on every fetch attempt during verification. Work area (32.25 x 32.25 x 5.25in), 710W router spindle at 10,000-30,000 RPM, aluminum extrusion frame with 35mm shaft (the 'X-35' designation), and Buildbotics controller are confirmed via the Onefinity community forum's own gen-1 spec thread and corroborated by MellowPine's review. Max feed rate and repeatability were not found on any reachable source, so both are left null rather than guessed.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/onefinity-woodworker-x-35.jpg?v=b175ac7f21",
+        "source": "mellowpine.com",
+        "license": "© Onefinity",
+        "accessedAt": "2026-08-09"
+      }
+    },
+    {
+      "slug": "sainsmart-genmitsu-3018-prover",
+      "name": "SainSmart Genmitsu 3018-PROVer",
+      "brand": "SainSmart / Genmitsu",
+      "category": "desktop-cnc-machines",
+      "releaseDate": null,
+      "priceUsd": 199.99,
+      "priceNote": "Typical current retail on sainsmart.com/Amazon; frequently discounted below $180 during site promotions.",
+      "specs": {
+        "work_area_x_mm": 300,
+        "work_area_y_mm": 180,
+        "work_area_z_mm": 45,
+        "spindle_power_w": 75,
+        "spindle_speed_rpm": 10000,
+        "frame_material": "Extruded aluminum with 20mm linear rails on all axes",
+        "controller_firmware": "GRBL 1.1 (32-bit ARM control board) with 1.8in TFT offline controller",
+        "max_feed_rate_mm_min": null,
+        "repeatability_mm": 0.05
+      },
+      "source": {
+        "url": "https://www.sainsmart.com/products/sainsmart-genmitsu-cnc-router-3018-prover-kit",
+        "accessedAt": "2026-08-09"
+      },
+      "provenance": "SainSmart's own product page confirms the 300x180mm work area (260x155x35mm effective engraving area), 75W 775-format brushed spindle, extruded aluminum frame with 20mm linear rails, and 32-bit GRBL 1.1 control board with offline TFT controller. 0.05mm positional repeatability figure is from SainSmart's own review documentation of 20 consecutive test runs. Max feed rate is not published on any reachable source.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/sainsmart-genmitsu-3018-prover.jpg?v=368f3fddd6",
+        "source": "www.sainsmart.com",
+        "license": "© SainSmart / Genmitsu",
+        "accessedAt": "2026-08-09"
+      }
+    },
+    {
+      "slug": "sainsmart-genmitsu-proverxl-4030",
+      "name": "SainSmart Genmitsu PROVerXL 4030",
+      "brand": "SainSmart / Genmitsu",
+      "category": "desktop-cnc-machines",
+      "releaseDate": null,
+      "priceUsd": 949,
+      "priceNote": "Starting price for the standard 300W-spindle configuration on sainsmart.com/genmitsu.com; the 4030S variant with a 710W spindle lists from $1,399.",
+      "specs": {
+        "work_area_x_mm": 400,
+        "work_area_y_mm": 300,
+        "work_area_z_mm": 110,
+        "spindle_power_w": 300,
+        "spindle_speed_rpm": null,
+        "frame_material": "C-Beam aluminum extrusion frame with NEMA 23 stepper motors",
+        "controller_firmware": "GRBL 1.1 control board, USB (Candle / Universal Gcode Sender / Carveco compatible)",
+        "max_feed_rate_mm_min": 5000,
+        "repeatability_mm": null
+      },
+      "source": {
+        "url": "https://genmitsu.com/collections/proverxl-series",
+        "accessedAt": "2026-08-09"
+      },
+      "provenance": "Genmitsu's own PROVerXL series page and SainSmart product listings confirm the 400x300x110mm work area, 24V DC 300W standard spindle (710W on the 4030S upgrade), C-BEAM aluminum frame, GRBL 1.1 control board, and a stated running speed up to 5,000mm/min. No official source states a spindle RPM figure for the standard DC spindle, and no repeatability tolerance is published, so both are left null rather than guessed.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/sainsmart-genmitsu-proverxl-4030.png?v=02a43810cc",
+        "source": "genmitsu.com",
+        "license": "© SainSmart / Genmitsu",
+        "accessedAt": "2026-08-09"
+      }
+    },
+    {
+      "slug": "bantam-tools-desktop-cnc-milling-machine",
+      "name": "Bantam Tools Desktop CNC Milling Machine",
+      "brand": "Bantam Tools",
+      "category": "desktop-cnc-machines",
+      "releaseDate": "2019-01-01",
+      "priceUsd": 6999,
+      "priceNote": "Current price on bantamtools.com for the Desktop CNC Milling Machine; the 178x229x84mm work area, $6,999 price, and product URL all correspond to this larger machine rather than the smaller/cheaper Desktop PCB Milling Machine (~140x114mm, ~$3,599).",
+      "specs": {
+        "work_area_x_mm": 178,
+        "work_area_y_mm": 229,
+        "work_area_z_mm": 84,
+        "spindle_power_w": 250,
+        "spindle_speed_rpm": "10,000-28,000",
+        "frame_material": "Fully enclosed steel chassis with powder-coat finish",
+        "controller_firmware": "Bantam Tools Milling Machine Software (proprietary, USB-connected)",
+        "max_feed_rate_mm_min": 6350,
+        "repeatability_mm": 0.025
+      },
+      "source": {
+        "url": "https://bantamtools.com/products/bantam-tools-desktop-cnc-milling-machine",
+        "accessedAt": "2026-08-09"
+      },
+      "provenance": "Bantam Tools' own product page confirms a 7x9x3.3in (178x229x84mm) work area, 250W spindle at 10,000-28,000 RPM, fully enclosed steel construction, ER-11 collet, 250in/min (6,350mm/min) max feed rate, +/-.001in (0.025mm) repeatability, and current $6,999 price.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/bantam-tools-desktop-cnc-milling-machine.jpg?v=6a385ed353",
+        "source": "bantamtools.com",
+        "license": "© Bantam Tools",
+        "accessedAt": "2026-08-09"
+      }
+    },
+    {
+      "slug": "sienci-longmill-mk2-48x30",
+      "name": "Sienci LongMill MK2 (48x30)",
+      "brand": "Sienci Labs",
+      "category": "desktop-cnc-machines",
+      "releaseDate": "2022-02-01",
+      "priceUsd": 1799,
+      "priceNote": "MSRP for the 48x30in work-area configuration on sienci.com; the smaller 30x30in variant lists lower (~$1,499) and the 12x30in entry kit lower still.",
+      "specs": {
+        "work_area_x_mm": 1219,
+        "work_area_y_mm": 762,
+        "work_area_z_mm": null,
+        "spindle_power_w": 710,
+        "spindle_speed_rpm": "10,000-30,000",
+        "frame_material": "Extruded aluminum rails with UHMW/HDPE wheels, lead screw drive on all axes",
+        "controller_firmware": "Sienci controller box (GRBL-based), gSender sender software",
+        "max_feed_rate_mm_min": null,
+        "repeatability_mm": null
+      },
+      "source": {
+        "url": "https://sienci.com/2022/02/24/everything-you-need-to-know-about-the-longmill-mk2-48x30-and-extension-kits/",
+        "accessedAt": "2026-08-09"
+      },
+      "provenance": "Sienci's own MK2 48x30 announcement post confirms the 1219x762mm (48x30in) work area, lead-screw-driven extruded aluminum construction, and the recommended Makita RT0700/RT0701 trim router (1-1/4HP / ~710W, 10,000-30,000 RPM, run in a 15,000-25,000 RPM sweet spot per Sienci's own guidance). Sienci publishes Z-axis clearance rather than a standalone Z-travel figure, and does not publish a maximum feed rate or repeatability tolerance for the MK2 (lead-screw, not ball-screw, motion), so those fields are left null rather than guessed."
+    },
+    {
+      "slug": "bobscnc-evolution-4",
+      "name": "BobsCNC Evolution 4 (E4)",
+      "brand": "BobsCNC",
+      "category": "desktop-cnc-machines",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "Discontinued and replaced by BobsCNC's Quantum series; bobscnc.com returned errors on every fetch attempt during verification and no current authorized-dealer listing could be found, so no MSRP is stated rather than guessing from stale secondary-market listings.",
+      "specs": {
+        "work_area_x_mm": 610,
+        "work_area_y_mm": 610,
+        "work_area_z_mm": 84,
+        "spindle_power_w": null,
+        "spindle_speed_rpm": "10,000-30,000",
+        "frame_material": "Laser-cut Baltic birch plywood",
+        "controller_firmware": "Arduino Uno with GRBL 1.1 firmware, custom stepper driver shield",
+        "max_feed_rate_mm_min": 5080,
+        "repeatability_mm": null
+      },
+      "source": {
+        "url": "https://mellowpine.com/bobscnc-evolution-4-cnc-router-review/",
+        "accessedAt": "2026-08-09"
+      },
+      "provenance": "bobscnc.com's own product and shop pages returned HTTP 403/timeout on every fetch attempt during verification. Specs are sourced from MellowPine's review, which reproduces BobsCNC's original spec sheet: 24x24x3.3in work area, laser-cut Baltic birch plywood chassis, Arduino Uno + GRBL 1.1 control board, up to 100in/min cutting feed with 200in/min (5,080mm/min) jog speed, and 0.002-0.004in repeatability. The machine ships without a router; it is commonly paired with a Makita RT0701C (1.25HP, 10,000-30,000 RPM), so spindle_power_w is left null since no fixed spindle is bundled or sold by BobsCNC.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/bobscnc-evolution-4.jpg?v=05592540c7",
+        "source": "mellowpine.com",
+        "license": "© BobsCNC",
+        "accessedAt": "2026-08-09"
+      }
+    },
+    {
+      "slug": "openbuilds-lead-1010",
+      "name": "OpenBuilds LEAD CNC 1010",
+      "brand": "OpenBuilds",
+      "category": "desktop-cnc-machines",
+      "releaseDate": null,
+      "priceUsd": 1665.97,
+      "priceNote": "Bundle price at MakerTechStore (authorized OpenBuilds reseller); openbuilds.com's own store pages returned 403/404 errors on every fetch attempt during verification, and price varies significantly by which router/motor/controller options are selected in the bundle configurator.",
+      "specs": {
+        "work_area_x_mm": 730,
+        "work_area_y_mm": 810,
+        "work_area_z_mm": 102,
+        "spindle_power_w": null,
+        "spindle_speed_rpm": null,
+        "frame_material": "C-Beam aluminum extrusion with dual XLarge C-Beam gantry plates, Xtreme solid V-wheels",
+        "controller_firmware": "OpenBuilds BlackBox Motion Control System (ATmega328p, GRBL 1.1)",
+        "max_feed_rate_mm_min": null,
+        "repeatability_mm": 0.08
+      },
+      "source": {
+        "url": "https://www.makertechstore.com/products/openbuilds-lead-cnc-1010-40-x-41",
+        "accessedAt": "2026-08-09"
+      },
+      "provenance": "MakerTechStore's authorized-reseller listing (reproducing OpenBuilds' own bundle specs) confirms a 730x810x102mm (29x32x4in) work area within a 1000x1000mm machine footprint, C-Beam aluminum extrusion frame with V-wheel linear motion, and the BlackBox GRBL 1.1 controller. Machine accuracy is stated as 0.001-0.003in (0.025-0.076mm); 0.08mm used as the rounded upper bound. The bundle lets buyers choose their own router or OpenBuilds' RoutER11, so no fixed spindle wattage/RPM is bundled and both are left null. Max feed rate is not published as a fixed spec since it depends on the chosen stepper/driver configuration.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/openbuilds-lead-1010.png?v=5d96300ca3",
+        "source": "www.makertechstore.com",
+        "license": "© OpenBuilds",
+        "accessedAt": "2026-08-09"
+      }
+    },
+    {
+      "slug": "snapmaker-2-0-a350",
+      "name": "Snapmaker 2.0 A350 (3-in-1, CNC module)",
+      "brand": "Snapmaker",
+      "category": "desktop-cnc-machines",
+      "releaseDate": "2019-08-01",
+      "priceUsd": 1799,
+      "priceNote": "Current bundle price on shop.snapmaker.com for the A350/A350T 3-in-1 system (3D printing + laser + CNC modules); the CNC-only work envelope is smaller than the printer's build volume.",
+      "specs": {
+        "work_area_x_mm": 320,
+        "work_area_y_mm": 350,
+        "work_area_z_mm": 275,
+        "spindle_power_w": 60,
+        "spindle_speed_rpm": 12000,
+        "frame_material": "Aluminum alloy modular gantry shared across the 3D-print/laser/CNC toolheads",
+        "controller_firmware": "Snapmaker proprietary touchscreen controller with Luban software",
+        "max_feed_rate_mm_min": null,
+        "repeatability_mm": null
+      },
+      "source": {
+        "url": "https://shop.snapmaker.com/products/snapmaker-2-0-modular-3-in-1-3d-printer-a350t-a250t",
+        "accessedAt": "2026-08-09"
+      },
+      "provenance": "Snapmaker's own store page and spec pages confirm the A350's CNC carving work area (approximately 320x350x275mm, with a slightly smaller 320x335mm figure cited for the stock 50-60W CNC Module vs. the optional higher-power 200W CNC Module), an ER11 collet supporting 0.5-6.35mm bits at up to 12,000 RPM, the shared aluminum-alloy modular frame, and current $1,799 bundle pricing. Max feed rate and repeatability specific to the CNC module are not published, so both are left null.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/snapmaker-2-0-a350.jpg?v=a8148b229b",
+        "source": "shop.snapmaker.com",
+        "license": "© Snapmaker",
+        "accessedAt": "2026-08-09"
+      }
+    },
+    {
+      "slug": "carbide3d-shapeoko-pro-xxl",
+      "name": "Carbide 3D Shapeoko Pro XXL",
+      "brand": "Carbide 3D",
+      "category": "desktop-cnc-machines",
+      "releaseDate": "2022-09-01",
+      "priceUsd": 2800,
+      "priceNote": "Current price on shop.carbide3d.com for the Pro XXL configuration.",
+      "specs": {
+        "work_area_x_mm": 838,
+        "work_area_y_mm": 838,
+        "work_area_z_mm": 102,
+        "spindle_power_w": null,
+        "spindle_speed_rpm": "12,000-30,000",
+        "frame_material": "Linear rail motion system with machined aluminum plates and integrated Hybrid Table",
+        "controller_firmware": "Carbide Motion controller board (GRBL-based firmware), USB-connected",
+        "max_feed_rate_mm_min": null,
+        "repeatability_mm": 0.127
+      },
+      "source": {
+        "url": "https://shop.carbide3d.com/products/shapeoko-pro-cnc-router",
+        "accessedAt": "2026-08-09"
+      },
+      "provenance": "Carbide 3D's own product page confirms the XXL 33x33x4in work area, $2,800 price, linear-rail motion upgrade over the Shapeoko 4, and the same 65mm trim-router spindle mount (Carbide Compact Router or Makita RT0701C recommended, 12,000-30,000 RPM) - wattage is not published by Carbide 3D for this router, so spindle_power_w is left null rather than inferred. Repeatability is cited elsewhere in Carbide 3D's own marketing as approximately 0.005in (0.127mm); max feed rate is not published on the current product page.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/carbide3d-shapeoko-pro-xxl.jpg?v=78dc98647f",
+        "source": "shop.carbide3d.com",
+        "license": "© Carbide 3D",
+        "accessedAt": "2026-08-09"
+      }
+    },
+    {
+      "slug": "millright-mega-v2",
+      "name": "MillRight CNC Mega V 2",
+      "brand": "MillRight CNC",
+      "category": "desktop-cnc-machines",
+      "releaseDate": "2022-01-01",
+      "priceUsd": 2299,
+      "priceNote": "Current base price on millrightcnc.com before spindle/controller upgrade options; original Kickstarter early-bird pledges (2021) started lower, around $1,249 for the smaller Standard config.",
+      "specs": {
+        "work_area_x_mm": 483,
+        "work_area_y_mm": 483,
+        "work_area_z_mm": 133,
+        "spindle_power_w": 1500,
+        "spindle_speed_rpm": "6,000-24,000",
+        "frame_material": "Steel rack-and-pinion X/Y drive with Hiwin MGN15 linear profile rails and thickened aluminum joining plates",
+        "controller_firmware": "GRBL (USB-connected) or optional Masso G3 Touch standalone controller",
+        "max_feed_rate_mm_min": null,
+        "repeatability_mm": 0.0254
+      },
+      "source": {
+        "url": "https://millrightcnc.com/product/mega-v-2-cnc-performance-cnc-routers/",
+        "accessedAt": "2026-08-09"
+      },
+      "provenance": "MillRight CNC's own product page confirms the Standard 19x19x5.25in work area (35x35in XL and 50x50in XXL variants also offered), steel rack-and-pinion X/Y with Hiwin MGN15 linear rails, GRBL or optional Masso G3 Touch control, and spindle options including a 1.5kW air-cooled VFD spindle at 6,000-24,000 RPM (router mounts for Makita RT0701C or DeWalt DW618 also available). Base price confirmed as $2,299 before spindle/controller upgrades. Repeatability of 0.001in (0.0254mm) is stated on MillRight's own marketing materials; a fixed max feed rate is not published since it depends on the motor/driver configuration chosen.",
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/millright-mega-v2.png?v=3ef0661775",
+        "source": "millrightcnc.com",
+        "license": "© MillRight CNC",
+        "accessedAt": "2026-08-09"
+      }
+    }
+  ]
+}

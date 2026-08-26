@@ -1,0 +1,409 @@
+{
+  "category": "continuous-glucose-monitors",
+  "generatedAt": "2026-08-01",
+  "methodologyNotes": "Roster covers 12 continuous glucose monitors (CGMs) spanning the three segments a 2026 buyer compares: prescription/insulin-integrated CGMs (Dexcom G6, Dexcom G7, Abbott FreeStyle Libre 2 Plus, Abbott FreeStyle Libre 3, Abbott FreeStyle Libre 3 Plus, Medtronic Guardian 4, Medtronic Simplera Sync), long-wear implantable CGMs (Senseonics Eversense E3, Senseonics Eversense 365), and over-the-counter wellness biosensors (Dexcom Stelo, Abbott Lingo, Sibionics GS3). All 9 seed products were kept and verified; three were added to round out the comparison: FreeStyle Libre 3 (the base 14-day model still actively dispensed in the US alongside Libre 3 Plus), Medtronic Simplera Sync (the 2025 disposable successor that now pairs with the MiniMed 780G, positioned alongside Guardian 4), and Eversense 365 (Senseonics' newer 1-year implant, now sold alongside the 6-month E3). Abbott Libre Rio was researched and deliberately excluded: it was FDA-cleared in June 2024, but per Abbott's own newsroom and every trade source checked on 2026-08-01 it still has not commercially launched in the US, so no verifiable specs or price exist for it — including a product buyers cannot yet purchase would mean an entry that is mostly null. Primary spec source for the Dexcom / Abbott / Medtronic / Senseonics prescription and implantable devices is the American Diabetes Association's consumerguide.diabetes.org CGM comparison database, which tabulates wear duration, warmup time, MARD, sensor size and water resistance in a consistent format across manufacturers; official manufacturer sites (stelo.com, hellolingo.com, sibionicscgm.com, medtronicdiabetes.com/minimed.com) filled gaps and confirmed OTC-vs-prescription status. No manufacturer publishes a direct-to-consumer USD MSRP for prescription/DME-channel sensors (Dexcom G6/G7, the Libre family, Guardian 4, Simplera Sync, Eversense E3/365) since they are billed through pharmacy or durable-medical-equipment channels; for those, priceUsd uses SingleCare's published average US pharmacy cash price without insurance for the smallest standard fill (clearly flagged as such in priceNote) — these are real observed market prices, not manufacturer list prices, and they vary by pharmacy and region. Sibionics GS3 has no FDA clearance and is not officially sold in the US (its storefront defaults to a EUR-priced European store, confirmed 2026-08-01); priceUsd is null rather than guessed from grey-market resellers. mard_accuracy_pct records each source's reported adult MARD; pediatric figures, where a source states one separately, are noted in that product's provenance. Wikimedia Commons was searched first for every product; where a correctly-identified CC-licensed photo existed it was used (Dexcom G6, Dexcom G7, FreeStyle Libre 2 Plus, FreeStyle Libre 3, FreeStyle Libre 3 Plus). Where Commons had nothing, an official manufacturer or manufacturer-supplied retailer product photo was used instead and marked with a '© Brand' license (Dexcom Stelo, Abbott Lingo, Medtronic Guardian 4, Medtronic Simplera Sync, Sibionics GS3). No freely-licensed photo could be confirmed for Senseonics Eversense E3 or Eversense 365 after checking Wikimedia Commons, Wikipedia, eversensecgm.com, and PR Newswire/BusinessWire press-kit pages, so the image field is omitted for both rather than guessed. All web sources were accessed 2026-08-01.",
+  "specKeys": [
+    "wear_duration_days",
+    "warmup_time_hours",
+    "reading_interval_min",
+    "water_resistance",
+    "app_platform",
+    "prescription_required",
+    "mard_accuracy_pct",
+    "sensor_size"
+  ],
+  "products": [
+    {
+      "slug": "dexcom-stelo",
+      "name": "Dexcom Stelo",
+      "brand": "Dexcom",
+      "category": "continuous-glucose-monitors",
+      "releaseDate": "2024-08",
+      "priceUsd": 99,
+      "priceNote": "Dexcom's official one-time price at stelo.com for the standard 2-biosensor box (up to 30 days of wear), HSA/FSA eligible; a recurring subscription option is also offered but its exact price was not confirmed on the pages checked.",
+      "specs": {
+        "wear_duration_days": 15,
+        "warmup_time_hours": 0.5,
+        "reading_interval_min": 5,
+        "water_resistance": "Waterproof to 8 ft (2.4 m) for 24 hours",
+        "app_platform": "iOS & Android (Stelo app); syncs with Apple Health and Google Health Connect",
+        "prescription_required": false,
+        "mard_accuracy_pct": 8.3,
+        "sensor_size": "1.1 x 0.9 x 0.2 in"
+      },
+      "source": {
+        "url": "https://consumerguide.diabetes.org/products/cgms/dexcom-stelo-cgm-system",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.stelo.com/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://nationaldiabeticsupply.com/wp-content/uploads/2025/10/stelo.webp",
+        "source": "nationaldiabeticsupply.com",
+        "license": "© Dexcom",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "The American Diabetes Association's consumer guide gives the full spec table for the Stelo Glucose Biosensor System: 15-day wear (independently confirmed on stelo.com, which notes 77.9% of sensors lasted the full 15 days), 30-minute warmup, 5-minute data-transmission interval, waterproof to 8 ft/2.4 m for 24 hours, OTC / no prescription required, 8.3% MARD, and a 1.1 x 0.9 x 0.2 in sensor. stelo.com independently confirms the $99 one-time price (HSA/FSA eligible, free shipping) and that Stelo is intended for people 18+ not on insulin; it integrates with Apple Health and Google Health Connect. Note: some third-party consumer articles describe the Stelo app as refreshing on-screen roughly every 15 minutes even though the sensor itself transmits every 5 minutes — the spec above reflects the sensor's transmission interval, as tabulated by the ADA source. Image is Dexcom's own 'Stelo Glucose Biosensor Kit (2)' retail packaging photo as hosted on a US diabetic-supply retailer's product page; confirmed by direct visual inspection to show the authentic Stelo box art."
+    },
+    {
+      "slug": "dexcom-g7",
+      "name": "Dexcom G7",
+      "brand": "Dexcom",
+      "category": "continuous-glucose-monitors",
+      "releaseDate": "2023",
+      "priceUsd": 569.87,
+      "priceNote": "SingleCare-reported average US pharmacy cash price without insurance for one box of 3 Dexcom G7 sensors (a 30-day supply); Dexcom has not published a direct consumer MSRP since G7 is dispensed through pharmacy/DME channels. Dexcom's own Pharmacy Savings Program advertises roughly $210 off a 30-day supply for cash-pay patients with a prescription.",
+      "specs": {
+        "wear_duration_days": 10,
+        "warmup_time_hours": 0.5,
+        "reading_interval_min": 5,
+        "water_resistance": "Waterproof to 8 ft (2.4 m) for 24 hours (IP28)",
+        "app_platform": "iOS & Android (Dexcom G7 app); optional dedicated receiver",
+        "prescription_required": true,
+        "mard_accuracy_pct": 8.7,
+        "sensor_size": "0.94 x 1.07 x 0.47 in"
+      },
+      "source": {
+        "url": "https://consumerguide.diabetes.org/products/cgms/dexcom-g7-and-g7-15-day-cgm-system",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.singlecare.com/prescription/dexcom-g7-sensor",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Cropped_dexcom_g7.jpg",
+        "source": "commons.wikimedia.org",
+        "license": "CC BY-SA 4.0",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "ADA's consumer guide (which covers both the 10-day G7 and the newer G7 15-Day in one table) gives: G7 wears 10 days (the G7 15-Day variant, ages 18+ only and not yet pump-compatible, wears 15.5 days with an 8.0% overall MARD); 30-minute warmup for both; 5-minute reading interval; waterproof to 2.4 m for 24 hours; no fingerstick calibration; MARD 8.7% (Adult) / 8.5% (Pediatric) for the standard G7; sensor+transmitter 0.94 x 1.07 x 0.47 in — a general-knowledge figure of ~8.2% MARD is sometimes cited elsewhere for G7 but the tabulated ADA figure is used here for cross-device consistency. FDA cleared the G7 on 2022-12-08 with US commercial availability following in early 2023. SingleCare's live pricing page states 'the average pharmacy price of Dexcom G7 Sensor without insurance is $569.87 per 3, 1 miscellaneous boxes' (i.e. one standard box of 3 sensors). Image is a CC BY-SA 4.0 photo of the actual G7 applicator on Wikimedia Commons (uploader MolBioByte), confirmed to depict the G7 auto-injector applicator with its button visible."
+    },
+    {
+      "slug": "dexcom-g6",
+      "name": "Dexcom G6",
+      "brand": "Dexcom",
+      "category": "continuous-glucose-monitors",
+      "releaseDate": "2018",
+      "priceUsd": 576.57,
+      "priceNote": "SingleCare-reported average US pharmacy cash price without insurance for one box of 3 Dexcom G6 sensors (a 30-day supply); no manufacturer MSRP is published since G6 is dispensed through pharmacy/DME channels.",
+      "specs": {
+        "wear_duration_days": 10,
+        "warmup_time_hours": 2,
+        "reading_interval_min": 5,
+        "water_resistance": "Waterproof to 8 ft (2.4 m) for 24 hours",
+        "app_platform": "iOS & Android (Dexcom G6 app); optional dedicated receiver",
+        "prescription_required": true,
+        "mard_accuracy_pct": 9.8,
+        "sensor_size": "4.2 x 2.5 x 0.6 in (transmitter + sensor)"
+      },
+      "source": {
+        "url": "https://consumerguide.diabetes.org/products/cgms/dexcom-g6-cgm-system",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.singlecare.com/prescription/dexcom-g6-sensor",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/7/74/Dexcom_G6_applicator.jpg",
+        "source": "commons.wikimedia.org",
+        "license": "CC0 1.0 (Public domain)",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "ADA's consumer guide gives the full G6 spec table: 10-day wear, 120-minute (2-hour) warmup, 5-minute data-transmission interval, waterproof to 2.4 m for 24 hours, MARD 9.8% (Adult) / 7.7% (Pediatric), transmitter+sensor size 4.2 x 2.5 x 0.6 in (2x/24h calibration option available though not required), compatible with Omnipod 5, iLet, and Tandem pumps; approved for ages 2+ and for use during pregnancy. Prescription requirement confirmed via SingleCare/GoodRx pharmacy pricing pages, which only list G6 as an Rx product. SingleCare states 'the average retail price of Dexcom G6 Sensor is $576.57 for 1, 3 sensors box' (one box of 3). Image is a CC0/public-domain photo of the actual G6 sensor applicator on Wikimedia Commons (uploader MallardTV)."
+    },
+    {
+      "slug": "abbott-freestyle-libre-3-plus",
+      "name": "Abbott FreeStyle Libre 3 Plus",
+      "brand": "Abbott",
+      "category": "continuous-glucose-monitors",
+      "releaseDate": "2023",
+      "priceUsd": 245.03,
+      "priceNote": "SingleCare-reported average US pharmacy cash price without insurance for a standard sensor fill (SingleCare lists this as 2 units per fill); Abbott does not publish a direct consumer MSRP since Libre 3 Plus is dispensed through pharmacy/DME channels.",
+      "specs": {
+        "wear_duration_days": 15,
+        "warmup_time_hours": 1,
+        "reading_interval_min": 1,
+        "water_resistance": "Water-resistant to 3 ft (1 m) for up to 30 min",
+        "app_platform": "iOS & Android (FreeStyle Libre 3 app / LibreLink)",
+        "prescription_required": true,
+        "mard_accuracy_pct": 8.9,
+        "sensor_size": "0.11 in height x 0.83 in diameter"
+      },
+      "source": {
+        "url": "https://consumerguide.diabetes.org/products/abbott-freestyle-libre-3",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.singlecare.com/prescription/freestyle-libre-3-plus-sensor",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Abbott_Freestyle_Libre_3_sensor_applicator-1150.jpg",
+        "source": "commons.wikimedia.org",
+        "license": "CC BY-SA 4.0",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "ADA's combined FreeStyle Libre 3 / Libre 3 Plus comparison page states Libre 3 Plus wears 15 days (vs 14 for the base Libre 3) and is approved for ages 2+ (vs 4+ for base Libre 3); both share a 60-minute warmup, 1-minute glucose reading interval, immersion to 3 ft/1 m for up to 30 minutes, no calibration, and a single combined MARD of 8.9% (Adult) / 9.4% (Pediatric) that the ADA page does not split by sub-model. Abbott's freestyle.abbott/us-en product page independently confirms the 15-day wear, 60-minute warmup, 1-minute updates, 3 ft/30 min water resistance, and prescription-only status ('Product for prescription only'); it does not publish a price. FDA clearance for the 15-day Plus variant occurred in 2023 (the same clearance that also extended AID-system integration to Libre 2/3); an exact month was not confirmed on the sources checked. SingleCare states 'the average cost of FreeStyle Libre 3 Plus Sensor without insurance is $245.03 per 2, 1 miscellaneous boxes.' Image is a CC BY-SA 4.0 photo of the actual Libre 3 sensor applicator on Wikimedia Commons (photographer Raimond Spekking, 2022-08-18); Libre 3 and Libre 3 Plus share the same coin-sized sensor hardware, differing only in firmware-enabled wear duration."
+    },
+    {
+      "slug": "abbott-freestyle-libre-3",
+      "name": "Abbott FreeStyle Libre 3",
+      "brand": "Abbott",
+      "category": "continuous-glucose-monitors",
+      "releaseDate": "2022",
+      "priceUsd": 236.2,
+      "priceNote": "SingleCare-reported average US pharmacy cash price without insurance for a standard sensor fill (SingleCare lists this as 2 units per fill); no manufacturer MSRP is published since Libre 3 is dispensed through pharmacy/DME channels and is being progressively superseded by Libre 3 Plus.",
+      "specs": {
+        "wear_duration_days": 14,
+        "warmup_time_hours": 1,
+        "reading_interval_min": 1,
+        "water_resistance": "Water-resistant to 3 ft (1 m) for up to 30 min",
+        "app_platform": "iOS & Android (FreeStyle Libre 3 app / LibreLink)",
+        "prescription_required": true,
+        "mard_accuracy_pct": 8.9,
+        "sensor_size": "0.11 in height x 0.83 in diameter"
+      },
+      "source": {
+        "url": "https://consumerguide.diabetes.org/products/abbott-freestyle-libre-3",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.singlecare.com/prescription/freestyle-libre-3",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Abbott_Freestyle_Libre_3_sensor_applicator-1150.jpg",
+        "source": "commons.wikimedia.org",
+        "license": "CC BY-SA 4.0",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Base FreeStyle Libre 3 is still an active, separately-dispensed NDC/SKU alongside Libre 3 Plus as of 2026-08-01 (confirmed via a live SingleCare pricing page for 'FreeStyle Libre 3'), approved for ages 4+ and wearing 14 days vs the Plus variant's 15 days and 2+ approval. Per ADA's comparison page the two share the same 60-minute warmup, 1-minute reading interval, 3 ft/30 min water resistance, no-calibration design, and the page's single combined MARD figure of 8.9% (Adult) / 9.4% (Pediatric). FDA cleared Libre 3 in May 2022. SingleCare states 'the average retail price of FreeStyle Libre 3 is $236.20 for 2, 1 miscellaneous boxes' (2 sensors per standard fill). Image is the same Wikimedia Commons CC BY-SA 4.0 photo of the physical Libre 3 sensor applicator (photographer Raimond Spekking) used for Libre 3 Plus, since both models share identical sensor hardware and differ only in firmware wear-duration/age approval."
+    },
+    {
+      "slug": "abbott-freestyle-libre-2-plus",
+      "name": "Abbott FreeStyle Libre 2 Plus",
+      "brand": "Abbott",
+      "category": "continuous-glucose-monitors",
+      "releaseDate": "2023",
+      "priceUsd": 248.63,
+      "priceNote": "SingleCare-reported average US pharmacy cash price without insurance for a standard sensor fill (SingleCare lists this as 2 units per fill); no manufacturer MSRP is published since Libre 2 Plus is dispensed through pharmacy/DME channels.",
+      "specs": {
+        "wear_duration_days": 15,
+        "warmup_time_hours": 1,
+        "reading_interval_min": 1,
+        "water_resistance": "Water-resistant to 3 ft (1 m) for up to 30 min",
+        "app_platform": "iOS & Android (FreeStyle Libre 2 app / LibreLink)",
+        "prescription_required": true,
+        "mard_accuracy_pct": 8.2,
+        "sensor_size": "1.38 in diameter x 0.2 in"
+      },
+      "source": {
+        "url": "https://consumerguide.diabetes.org/products/cgms/freestyle-libre-2-and-freestyle-libre-2-plus",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.singlecare.com/prescription/freestyle-libre-2-plus-sensor",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Abbott_Freestyle_Libre_2_glucose_sensor-1157.jpg",
+        "source": "commons.wikimedia.org",
+        "license": "CC BY-SA 4.0",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "ADA's combined Libre 2 / Libre 2 Plus page states Libre 2 Plus wears 15 days (vs 14 for base Libre 2) and is approved for ages 2+ (vs 4+ for base Libre 2), with a Libre-2-Plus-specific MARD of 8.2% vs 9.2% (Adult) / 9.7% (Pediatric) for the base model; both share a 60-minute warmup, immersion to 3 ft/1 m for 30 minutes, real-time 1-minute glucose updates, and a 1.38 in diameter x 0.2 in disc sensor. FDA cleared Libre 2/3 for AID-system integration (the clearance that underlies the extended-wear 'Plus' naming) in March 2023; the exact clearance date specific to the Libre 2 Plus SKU was not separately confirmed. SingleCare states 'the typical cash price of FreeStyle Libre 2 Plus Sensor is $248.63 per 2, 1 miscellaneous boxes.' Image is a CC BY-SA 4.0 photo of the actual Libre 2 sensor disc on Wikimedia Commons (photographer Raimond Spekking); Libre 2 and Libre 2 Plus share identical sensor hardware, differing only in firmware wear-duration/age approval."
+    },
+    {
+      "slug": "abbott-lingo",
+      "name": "Abbott Lingo",
+      "brand": "Abbott",
+      "category": "continuous-glucose-monitors",
+      "releaseDate": "2024-09",
+      "priceUsd": 54,
+      "priceNote": "Abbott's official hellolingo.com price for the entry 2-week plan (1 biosensor with full app access), HSA/FSA eligible; hellolingo.com and third-party trackers also describe ongoing multi-sensor monthly subscription plans at different price points, but no single official recurring price was confirmed on the pages checked.",
+      "specs": {
+        "wear_duration_days": 14,
+        "warmup_time_hours": 1,
+        "reading_interval_min": 1,
+        "water_resistance": "Water-resistant to 3 ft (1 m) for up to 30 min",
+        "app_platform": "iOS & Android (Lingo app)",
+        "prescription_required": false,
+        "mard_accuracy_pct": null,
+        "sensor_size": null
+      },
+      "source": {
+        "url": "https://www.hellolingo.com",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://support.hellolingo.com/hc/en-us/articles/12766568895639",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://strapi.hellolingo.com/uploads/app_image_f7a45e9f51.png",
+        "source": "hellolingo.com",
+        "license": "© Abbott",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Abbott's official hellolingo.com confirms: no prescription needed (OTC), $54 for the initial 2-week / 1-biosensor plan with full app access, iOS & Android app, and 'minute-by-minute' glucose monitoring (recorded as a 1-minute reading interval); the biosensor 'attaches painlessly to the back of your upper arm' and 91.6% of surveyed users found it painless to apply. Abbott's own Lingo support article confirms 'the biosensor is water resistant and will withstand being worn in water up to depths of one metre (3 ft) for up to 30 minutes.' ADCES's danatech CGM-comparison detail page for Lingo (indexed via search, direct fetch blocked by the site) states a sensor duration of 'up to 14 days' and a 60-minute warmup 'after a successful pairing,' matching Abbott's own Libre-3-generation biosensor hardware that Lingo is built on. Abbott announced US availability of Lingo on 2024-09-05. MARD and exact sensor dimensions are deliberately not published for Lingo, which is marketed and FDA-classified as a general wellness biosensor rather than a diagnostic/insulin-dosing CGM, so both are left null rather than assumed equal to Libre 3. Image is Abbott's own official app+device product photo hosted on hellolingo.com's CMS, showing the Lingo phone app alongside the physical biosensor disc; confirmed by direct visual inspection."
+    },
+    {
+      "slug": "medtronic-guardian-4",
+      "name": "Medtronic Guardian 4",
+      "brand": "Medtronic",
+      "category": "continuous-glucose-monitors",
+      "releaseDate": "2023-04",
+      "priceUsd": 2478.3,
+      "priceNote": "SingleCare-reported average US pharmacy cash price without insurance for a standard sensor fill (SingleCare lists this as a 5-box quantity, each sensor lasting 7 days); Medtronic has not published a direct consumer MSRP since Guardian 4 is dispensed through pharmacy/DME channels tied to the MiniMed 780G pump system.",
+      "specs": {
+        "wear_duration_days": 7,
+        "warmup_time_hours": 2,
+        "reading_interval_min": 5,
+        "water_resistance": "Splash-resistant only; not rated for submersion",
+        "app_platform": "iOS & Android (Guardian Connect app); also displays on the MiniMed 780G pump",
+        "prescription_required": true,
+        "mard_accuracy_pct": 10.6,
+        "sensor_size": "1.50 x 2.60 x 2.00 in"
+      },
+      "source": {
+        "url": "https://consumerguide.diabetes.org/products/cgms/guardian-4-sensor-guardian-4-transmitter",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.singlecare.com/prescription/guardian-4-glucose-sensor",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://www.minimed.com/content/dam/image/photography/product-lifestyle/cgm/katie-g4s-attaching-transmitter-500px.jpg",
+        "source": "minimed.com",
+        "license": "© Medtronic",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "ADA's consumer guide gives the Guardian 4 spec table: 7-day wear, 120-minute (2-hour) warmup, checks glucose every 5 minutes, 'brief exposure only (splashes of water)' water resistance, no calibration required, MARD 10.6% (Adult) / 11.6% (Pediatric), sensor 1.50 x 2.60 x 2.00 in, approved ages 7+ but not for use during pregnancy, 6 ft transmitter range, insertion in the back of the upper arm. Medtronic's own support materials name the Guardian Connect app (separate iOS/Android builds) as the companion app, which also displays glucose data live on the MiniMed 780G pump when the sensor is used with that system. Medtronic and the FDA both confirm the Guardian 4 sensor's approval alongside the MiniMed 780G system on 2023-04-21. SingleCare states 'the average cash price of Guardian 4 Glucose Sensor is $2,478.3 per 3, 5 miscellaneous boxes,' i.e. a multi-box fill; no cleaner official per-box breakdown was found, so the total figure is reported as-is with this caveat. Image is Medtronic's own official lifestyle photo (from the Guardian 4 sensor support page on minimed.com) showing a person attaching the actual Guardian 4 sensor/transmitter to their upper arm."
+    },
+    {
+      "slug": "medtronic-simplera-sync",
+      "name": "Medtronic Simplera Sync",
+      "brand": "Medtronic",
+      "category": "continuous-glucose-monitors",
+      "releaseDate": "2025",
+      "priceUsd": 960,
+      "priceNote": "SingleCare-reported average US pharmacy cash price without insurance for a standard sensor fill; Medtronic has not published a direct consumer MSRP since Simplera Sync is dispensed through pharmacy/DME channels tied to the MiniMed 780G pump system.",
+      "specs": {
+        "wear_duration_days": 7,
+        "warmup_time_hours": 1,
+        "reading_interval_min": 5,
+        "water_resistance": "Waterproof to 8 ft (2.4 m) for up to 30 minutes",
+        "app_platform": "iOS & Android (MiniMed Mobile app); also displays on the MiniMed 780G pump and Apple Watch",
+        "prescription_required": true,
+        "mard_accuracy_pct": 10.2,
+        "sensor_size": "1.128 x 1.128 x 0.188 in"
+      },
+      "source": {
+        "url": "https://consumerguide.diabetes.org/products/cgms/simplera-sync-sensor",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.singlecare.com/prescription/simplera-sync-sensor",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://mma.prnewswire.com/media/2668551/Medtronic_plc___MiniMed_780G_system_with_Simplera_Sync_sensor.jpg",
+        "source": "prnewswire.com",
+        "license": "© Medtronic",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "ADA's consumer guide gives the Simplera Sync spec table: 6-day wear plus a 24-hour grace period (recorded here as 7 days), waterproof to 8 ft/2.4 m for up to 30 minutes, 5-minute data-transmission interval, no calibration required, MARD 10.2% (Adult) / 10.8% (Pediatric), sensor 1.128 x 1.128 x 0.188 in, approved for type 1 diabetes ages 7+ and insulin-requiring type 2 diabetes adults; the disposable all-in-one sensor requires no fingersticks or overtape. The ADA warmup field literally reads '60 minutes' although Medtronic's own descriptive text elsewhere says 'two hour warm-up' — the tabulated 60-minute (1-hour) value is used here since it is the structured spec-table entry; this inconsistency appears on Medtronic's own materials, not introduced by this dataset. Medtronic's Simplera Sync user guide and support pages confirm the sensor pairs with the MiniMed Mobile app (iOS/Android) as a secondary display for the MiniMed 780G pump, and also mirrors to Apple Watch; it requires the 780G pump and is not usable as a phone-only standalone CGM. FDA approved Simplera Sync on 2025-04-18, with a limited US market rollout beginning fall 2025. SingleCare states 'Simplera Sync Sensor ... $960.00 per 1, 5 miscellaneous package.' Image is Medtronic's own official PR Newswire press photo (distributed with the FDA-approval announcement) showing the MiniMed 780G pump, phone app, Apple Watch, and the actual white Simplera Sync sensor patch."
+    },
+    {
+      "slug": "senseonics-eversense-e3",
+      "name": "Senseonics Eversense E3",
+      "brand": "Senseonics",
+      "category": "continuous-glucose-monitors",
+      "releaseDate": "2022-02",
+      "priceUsd": 3309.69,
+      "priceNote": "SingleCare-reported average US retail cash price without insurance for the Eversense (E3) Sensor/Holder; a separate reusable transmitter (~$700 per other cited estimates) is purchased once. No direct consumer MSRP is published by Senseonics/Ascensia since the sensor is implanted by a clinician and billed through the prescription/DME channel.",
+      "specs": {
+        "wear_duration_days": 180,
+        "warmup_time_hours": 24,
+        "reading_interval_min": 5,
+        "water_resistance": "Sensor is water-resistant once implanted; the external transmitter is removable for bathing/showering",
+        "app_platform": "iOS & Android (Eversense NOW app)",
+        "prescription_required": true,
+        "mard_accuracy_pct": 8.5,
+        "sensor_size": "approx. 0.72 x 0.14 in (18.3 x 3.5 mm) implantable sensor"
+      },
+      "source": {
+        "url": "https://www.diabetesnet.com/diabetes-technology/meters-monitors/continuous-monitors/eversense-cgms/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.singlecare.com/prescription/eversense-sensor-holder",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Diabetesnet.com's Eversense E3-vs-365 comparison (cross-checked against the FDA approval record and ADA's Eversense materials) states: E3 wears up to 180 days (6 months), both E3 and 365 share a 24-hour warmup and update glucose every 5 minutes, both are 'water-resistant once implanted' with a removable external transmitter, E3's MARD is 8.5%, and the implanted sensor capsule is approximately 1.5 in long per that source — this is inconsistent with Senseonics' own published sensor dimensions of 18.3 mm x 3.5 mm (~0.72 x 0.14 in), which is used here instead as the more precise manufacturer-sourced figure, with the discrepancy noted rather than silently resolved. The FDA approved the Eversense E3 System (P160048/S016) on 2022-02-10. The Eversense NOW companion app is confirmed to run on iOS and Android. Calibration requires an initial fingerstick sequence followed by roughly once-daily calibration. SingleCare states the average retail price of the 'Eversense Sensor/Holder' (E3) is $3,309.69 per a 2-unit fill; a separately cited industry estimate (diabetesnet.com) puts the sensor near $1,350 plus a ~$700 one-time transmitter, which is noted here as a secondary reference point given the spread between sources. No image field is included: Wikimedia Commons, Wikipedia, eversensecgm.com, and PR Newswire/BusinessWire press pages were all checked on 2026-08-01 without turning up a confirmable, freely-licensed product photo of the E3 hardware."
+    },
+    {
+      "slug": "senseonics-eversense-365",
+      "name": "Senseonics Eversense 365",
+      "brand": "Senseonics",
+      "category": "continuous-glucose-monitors",
+      "releaseDate": "2024-09",
+      "priceUsd": 6319.89,
+      "priceNote": "SingleCare-reported average US retail cash price without insurance for the Eversense 365 Sensor/Holder (one annual sensor); the reusable Smart Transmitter is a separate one-time purchase (~$1,000 per other cited estimates). No direct consumer MSRP is published by Senseonics/Ascensia since the sensor is implanted by a clinician and billed through the prescription/DME channel.",
+      "specs": {
+        "wear_duration_days": 365,
+        "warmup_time_hours": 24,
+        "reading_interval_min": 5,
+        "water_resistance": "Sensor is water-resistant once implanted; Smart Transmitter is submersible to 1 m (3 ft) for up to 30 minutes",
+        "app_platform": "iOS & Android (Eversense 365 Mobile app)",
+        "prescription_required": true,
+        "mard_accuracy_pct": 8.8,
+        "sensor_size": "approx. 0.75 x 0.17 in implantable sensor; Smart Transmitter 1.5 x 1.9 x 0.35 in"
+      },
+      "source": {
+        "url": "https://consumerguide.diabetes.org/products/cgms/eversense-365-cgm-system",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.singlecare.com/prescription/eversense-365-sensor-holder",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "ADA's consumer guide gives the Eversense 365 spec table: 365-day wear, 1440-minute (24-hour) warmup, submersible to 1 m for 30 minutes, works with the Eversense 365 Mobile app on iPhone and Android, MARD 8.8%, sensor approx. 0.75 in (H) x 0.17 in (diameter) with a separate transmitter approx. 1.5 x 1.9 x 0.35 in, prescription device, approved for adults 18+ on insulin therapy, insertion/removal performed by a healthcare provider. Diabetesnet.com's E3-vs-365 comparison independently confirms the 24-hour warmup and 5-minute glucose-update interval (not itemized in the same way on the ADA 365 page) and notes 365 calibrates weekly by fingerstick after an initial two-week period, vs. E3's roughly-daily calibration. The FDA cleared Eversense 365 as an iCGM system on 2024-09-17, with Senseonics/Ascensia targeting an early-Q4-2024 launch. SingleCare states 'the average retail price of Eversense 365 Sensor/Holder is $6,319.89 per 1, 1 miscellaneous box'; a separate SingleCare listing prices the Eversense 365 Smart Transmitter individually (~$1,000 per other cited industry estimates, not independently re-verified here). No image field is included: Wikimedia Commons, Wikipedia, eversensecgm.com, and PR Newswire/BusinessWire press pages were all checked on 2026-08-01 without turning up a confirmable, freely-licensed product photo of the 365 hardware."
+    },
+    {
+      "slug": "sibionics-gs3",
+      "name": "Sibionics GS3",
+      "brand": "Sibionics",
+      "category": "continuous-glucose-monitors",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "Sibionics has no FDA clearance and no official US storefront (sibionicscgm.com defaults to a EUR-priced European store, listing the sensor at €69 base price as of 2026-08-01); US buyers can only obtain it via third-party marketplace resellers (e.g. Walmart Marketplace listings around $40-90) with no manufacturer-published USD MSRP, so priceUsd is left null rather than guessed from grey-market listings.",
+      "specs": {
+        "wear_duration_days": 14,
+        "warmup_time_hours": 1,
+        "reading_interval_min": 5,
+        "water_resistance": "IP38 - water-resistant to 1 m for up to 1 hour",
+        "app_platform": "iOS & Android",
+        "prescription_required": false,
+        "mard_accuracy_pct": 8.83,
+        "sensor_size": "24.8 x 17.8 x 2.9 mm (0.98 x 0.70 x 0.11 in), 1.5 g"
+      },
+      "source": {
+        "url": "https://www.sibionicscgm.com/products/sibionics-gs3-cgm-continuous-glucose-monitoring-system",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://www.sibionicscgm.com/cdn/shop/files/PDP_box_PC_6c6a1d4e-ef68-41bc-808a-f800c05a9b47.jpg?v=1755760797",
+        "source": "sibionicscgm.com",
+        "license": "© Sibionics",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Sibionics' own GS3 product page states a full spec panel matching the packaging insert graphic on the same page: 'Sensor service life 14 days,' 'Sensor memory 14 days,' 'Waterproof rating IP38,' a MARD of 8.7% for children/adolescents (ages 3-17) and 8.83% for adults (18+, used here as the adult figure), sensor dimensions 24.8 mm x 17.8 mm x 2.9 mm and weight 1.5 g, Bluetooth range 10 m to a phone / 6 m to a smartwatch, a 1-hour sensor warmup, and glucose readings updated every 5 minutes via Bluetooth; the page also states the sensor is calibration-free and 'scan-free.' The main sibionicscgm.com storefront (as opposed to the product page) resolves to a Malta-based, EUR-priced European store, and a general web check found explicit statements that the GS3 'is not FDA-cleared and not sold in the US' — consistent with there being no official US price. It is sold direct-to-consumer without a prescription in the markets where Sibionics does sell it, so prescription_required is recorded as false. Image is Sibionics' own official packaging-and-device photo from the GS3 product page, showing the retail box, the sensor applicator, and the product insert side by side; confirmed by direct visual inspection to show the genuine GS3 hardware and Sibionics branding."
+    }
+  ]
+}

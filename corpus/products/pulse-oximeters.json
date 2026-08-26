@@ -1,0 +1,425 @@
+{
+  "category": "pulse-oximeters",
+  "generatedAt": "2026-08-01",
+  "methodologyNotes": "Roster covers 12 pulse oximeters spanning three tiers a 2026 buyer actually compares: clinical-grade Rx fingertip (Masimo MightySat Rx), professional spot-check fingertips (Nonin Onyx Vantage 9590, Nonin GO2 9570), consumer/aviation/sports fingertips (Zacurate Pro Series 500DL, Contec CMS50D, Innovo Deluxe iP900AP, Santamedical Generation 2 SM-165), connected/app fingertips (iHealth Air PO3M, Beurer PO60, Wellue FS20F), and continuous overnight-wear designs (Wellue O2Ring, Wellue Checkme O2 Max). Primary sources were official manufacturer spec sheets and Instructions-for-Use PDFs (masimo.com/nonin.com official brochures, Nonin Onyx Vantage 9590 and GO2 9570 IFU/spec-sheet PDFs), official brand storefronts (getwellue.com, shop-beurer.com, zacurate.com, innovo-medical.com, santamedical.com), and manufacturer/OEM pages (contecmedsystems.com, ihealthlabs.com/ihealthlabs.eu), cross-checked against authorized resellers (CardiacDirect, TurnerMedical, Win-Health, Hart Medical, MedicalMega) where the manufacturer page itself did not publish a spot price. Several official storefronts (getwellue.com, shop-beurer.com, zacurate.com, innovo-medical.com, santamedical.com) actively rate-limited automated fetches; those pages were retrieved via a read-only text-rendering proxy (r.jina.ai) mirroring the same live HTML, not through any authentication bypass. priceUsd is each product's current US starting price on its own official store where fetched (Beurer PO60 $29.99 and Zacurate 500DL $19.99 confirmed directly on the brand's own US site; several early aggregator snippets quoted stale/incorrect PO60 figures around $97-100 that the live shop-beurer.com page contradicts and which were discarded); where no official US storefront price could be retrieved, an authorized reseller's listed price is used and flagged in priceNote. continuous_monitoring is scored true only for designs the manufacturer explicitly markets for unattended overnight/extended wear (O2Ring, Checkme O2 Max); ordinary fingertip clips are spot-check devices even when Bluetooth-connected to a trend app, and Innovo's own product page and Wellue's own FS20F manual explicitly warn against extended/overnight use on one finger. Nonin GO2 9570 is confirmed discontinued (superseded by the Onyx Vantage 9590) but retained because it remains commonly stocked/compared secondhand and its spec sheet is Nonin's own PDF. Wellue FS20F is confirmed no longer listed for direct sale on Wellue's current US site (redirects/404s on old product URLs; the brand's own page states the model 'is currently only sold in the EU') even though US Amazon/Walmart third-party listings persist — priceUsd is left null rather than guessed from stale reseller caches. Adversarial corrections made this pass: Contec CMS50D SpO2 accuracy is officially ±2% over 70-100% (an initial aggregator snippet mis-stated ±4%, which is actually the device's separate low-signal/weak-perfusion figure); Beurer PO60 pulse-rate range corrected to the officially documented 30-250 bpm (a generic aggregator snippet had quoted 20-250 bpm); several SpO2/pulse-rate range and accuracy fields for Innovo iP900AP, Wellue FS20F (accuracy), and Santamedical Gen2 (range/accuracy) could not be verified on any fetched manufacturer or reseller page and are left null rather than assumed from comparable sibling models. accessedAt 2026-08-01 for all products.",
+  "specKeys": [
+    "spo2_range",
+    "spo2_accuracy_percent",
+    "pulse_rate_range_bpm",
+    "display_type",
+    "perfusion_index",
+    "continuous_monitoring",
+    "bluetooth",
+    "battery_life_hr"
+  ],
+  "products": [
+    {
+      "slug": "masimo-mightysat-rx",
+      "name": "Masimo MightySat Rx (Bluetooth LE)",
+      "brand": "Masimo",
+      "category": "pulse-oximeters",
+      "releaseDate": null,
+      "priceUsd": 549,
+      "priceNote": "US price for the P/N 9809 configuration (Rx, Bluetooth LE, no PVI) per CardiacDirect; the PVI-equipped P/N 9909 lists around $649. Rx models are 'Federal (USA) law restricts this device to sale by or on the order of a physician' (prescription-only).",
+      "specs": {
+        "spo2_range": "0-100%",
+        "spo2_accuracy_percent": "70-100% Arms: ±2% no motion, ±3% motion, ±2% low perfusion",
+        "pulse_rate_range_bpm": "25-240 bpm",
+        "display_type": "Rotating, adjustable 3.3 cm color display with pleth waveform and Signal IQ indicator",
+        "perfusion_index": true,
+        "continuous_monitoring": false,
+        "bluetooth": true,
+        "battery_life_hr": 15
+      },
+      "source": {
+        "url": "https://www.cardiacdirect.com/product/masimo-mightysat-rx-fingertip-pulse-oximeter/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://henrotech.be/sites/default/files/product/manual/Brochure%20MightySat%20Rx.pdf",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/masimo-mightysat-rx.jpg?v=0b8680e09d",
+        "source": "cardiacdirect.com",
+        "license": "© Masimo",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Masimo's own MightySat Rx brochure/spec sheet (fetched directly, P/N 9709/9809/9909 model table) confirms: SpO2 display 0-100%, PR 25-240 bpm, ARMS accuracy 70-100% SpO2 (±2% no-motion/low-perfusion, ±3% motion) and PR (±3 bpm no-motion/low-perfusion, ±5 bpm motion), Perfusion Index (0.02-20%) and Pleth Variability Index (0-100%, PVI on the 9909 only), a rotating 3.3 cm color display with pleth waveform, IP23, and battery life 'Approximately 1800 spot checks' footnoted as based on 15 hours of operation at 30-second spot checks. The 9809 configuration adds Bluetooth LE and the Masimo Professional Health app but not PVI. CardiacDirect's live product page lists $549.00 for this exact device; a second reseller (tactical-medicine.com) independently corroborates $549 standard / $649 with the PVI/RRp option. continuous_monitoring is set false because this is an Rx spot-check clinical device (no onboard trend memory; live data only while connected to the companion app), not a device marketed for unattended overnight wear like the O2Ring or Checkme O2 Max in this same dataset. No release year is stated on either fetched source; the brochure itself carries a 2015 copyright but that is a document date, not a confirmed launch year, so releaseDate is left null."
+    },
+    {
+      "slug": "wellue-o2ring",
+      "name": "Wellue O2Ring",
+      "brand": "Wellue (Viatom)",
+      "category": "pulse-oximeters",
+      "releaseDate": null,
+      "priceUsd": 179,
+      "priceNote": "Regular US price on getwellue.com; the device is frequently discounted (e.g. $152.90 sale price seen at time of access, and BOGO bundles).",
+      "specs": {
+        "spo2_range": "70-100%",
+        "spo2_accuracy_percent": "±2% (80-100%), ±3% (70-79%)",
+        "pulse_rate_range_bpm": "30-250 bpm",
+        "display_type": "On-ring digital display with app-adjustable brightness",
+        "perfusion_index": null,
+        "continuous_monitoring": true,
+        "bluetooth": true,
+        "battery_life_hr": 16
+      },
+      "source": {
+        "url": "https://getwellue.com/products/o2ring-wearable-pulse-oximeter",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://blog.getwellue.com/the-most-detailed-wellue-o2ring-review-keep-an-eye-on-your-spo2-with-medical-grade-accuracy/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/wellue-o2ring.jpg?v=c285aefbb6",
+        "source": "getwellue.com",
+        "license": "© Wellue",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Wellue's own O2Ring product page confirms: SpO2 70-100% (accuracy 80-100% ±2%, 70-79% ±3%), pulse rate 30-250 bpm (±2 bpm or ±2%), continuous per-second sampling ('Track Your Oxygen Level Every Second') displayed in-app every 4 seconds, an on-ring display with app-set brightness, Bluetooth 4.0 BLE to iOS 9.0+/Android 5.0+, 16-hour typical battery life (2-3 hr recharge), 4 on-device sessions of up to 10 hours each, and a listed price of $179.00 (a $152.90 sale price and BOGO bundle were also showing at access time). Perfusion Index is not mentioned anywhere on the product page or spec table, so left null rather than assumed. This is one of only two devices in this dataset (with the Checkme O2 Max) explicitly designed and marketed for continuous overnight wear, so continuous_monitoring=true. No release year stated on the fetched page."
+    },
+    {
+      "slug": "nonin-onyx-vantage-9590",
+      "name": "Nonin Onyx Vantage 9590",
+      "brand": "Nonin Medical",
+      "category": "pulse-oximeters",
+      "releaseDate": null,
+      "priceUsd": 199,
+      "priceNote": "Single-unit US price per CardiacDirect; other clinical-supply resellers list higher case/bulk figures (e.g. $748.99 seen at one retailer likely reflects a multi-unit configuration, not a single device, so it was not used).",
+      "specs": {
+        "spo2_range": "0-100%",
+        "spo2_accuracy_percent": "70-100% Arms ±2 digits (finger/thumb, no motion); toe accuracy ±2 (70-90%) / ±3 (90-100%)",
+        "pulse_rate_range_bpm": "18-321 bpm display; declared accuracy 20-250 bpm ±3 digits (40-240 bpm ±3 digits low perfusion)",
+        "display_type": "Numeric LED display with tricolor pulse-quality indicator",
+        "perfusion_index": false,
+        "continuous_monitoring": false,
+        "bluetooth": false,
+        "battery_life_hr": 36
+      },
+      "source": {
+        "url": "https://www.nonin.com/wp-content/uploads/2018/09/Instructions-for-Use-9590.pdf",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.cardiacdirect.com/product/nonin-onyx-vantage-9590-fingertip-pulse-oximeter/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/nonin-onyx-vantage-9590.jpg?v=d5641ce608",
+        "source": "nonin.com",
+        "license": "© Nonin Medical",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Nonin's own Instructions for Use PDF for the 9590 (fetched directly) states verbatim: Oxygen Saturation Display Range 0% to 100%, Pulse Rate Display Range 18 to 321 BPM, SpO2 Low Perfusion Accuracy (Arms) 70-100% ±2 digits, Pulse Rate Declared Accuracy 20-250 BPM ±3 digits (Low Perfusion 40-240 BPM ±3 digits), and by-decade accuracy tables (±2 finger/thumb across 70-100%, ±2/±3 by decade for toe). It measures only SpO2 and pulse rate (no Perfusion Index parameter is listed anywhere in the spec sheet), has no Bluetooth radio, and battery life is 'Approximately 6,000 spot checks or 36 hours of continuous operation' on two AAA batteries. It carries the explicit symbol 'Not for continuous monitoring (no alarm for SpO2)' and its Indications for Use describe 'spot-checking' only, so continuous_monitoring is set false despite the IEC 60601-1 'Mode of Operation: Continuous' electrical classification (a duty-cycle rating, not a claim of unattended overnight monitoring). CardiacDirect's live product page lists $199.00 for a single unit; one other reseller's $748.99 figure appears in search results but is inconsistent with every other listing found and was treated as likely a bulk/case price, not used. No release year is stated in the IFU (2020 copyright is a document revision date, not launch year)."
+    },
+    {
+      "slug": "zacurate-pro-series-500dl",
+      "name": "Zacurate Pro Series 500DL",
+      "brand": "Zacurate",
+      "category": "pulse-oximeters",
+      "releaseDate": null,
+      "priceUsd": 19.99,
+      "priceNote": "Regular US price on zacurate.com (official brand store).",
+      "specs": {
+        "spo2_range": "0-100%",
+        "spo2_accuracy_percent": "±2% (70-99%)",
+        "pulse_rate_range_bpm": "25-250 bpm",
+        "display_type": "LED numeric display",
+        "perfusion_index": false,
+        "continuous_monitoring": false,
+        "bluetooth": false,
+        "battery_life_hr": 35
+      },
+      "source": {
+        "url": "https://zacurate.com/products/500dl-fingertip-pulse-oximeter-black",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.amazon.com/Zacurate-Fingertip-Oximeter-Saturation-Batteries/dp/B07PQ8WTC4",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/zacurate-pro-series-500dl.png?v=8422704c56",
+        "source": "zacurate.com",
+        "license": "© Zacurate",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Zacurate's own product page (fetched directly) lists $19.99 and states: SpO2 0-100% with ±2% accuracy over 70-99% (no statement below 70%), pulse rate 25-250 bpm ±2 bpm, a self-adjusting silicone finger chamber, 2 AAA batteries good for roughly 30-40 hours of active use (used as the battery_life_hr midpoint, 35), an LED display, and no onboard recording ('does not record data') with automatic 10-second shutoff after finger removal, so continuous_monitoring is false. No Bluetooth or Perfusion Index feature is mentioned anywhere on the page. No release year is stated."
+    },
+    {
+      "slug": "ihealth-air-po3m",
+      "name": "iHealth Air PO3M",
+      "brand": "iHealth Labs",
+      "category": "pulse-oximeters",
+      "releaseDate": null,
+      "priceUsd": 69.99,
+      "priceNote": "US price per Hart Medical (authorized iHealth reseller); iHealth's own US store price could not be retrieved (ihealthlabs.com repeatedly blocked automated access). iHealth's EU store lists the equivalent model at €49.99.",
+      "specs": {
+        "spo2_range": "70-99%",
+        "spo2_accuracy_percent": "±2% (70-99%)",
+        "pulse_rate_range_bpm": "30-250 bpm",
+        "display_type": "Bright LED numeric display",
+        "perfusion_index": null,
+        "continuous_monitoring": false,
+        "bluetooth": true,
+        "battery_life_hr": null
+      },
+      "source": {
+        "url": "https://support.ihealthlabs.com/hc/en-us/articles/8499453953677-FAQ-Technical-Specifications-for-the-iHealth-Air-Wireless-Pulse-Oximeter-PO3",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://helpcenter.ihealthlabs.eu/hc/en-gb/articles/360000012085-iHealth-Air-PO3M-Technical-specifications",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/ihealth-air-po3m.jpg?v=928be34977",
+        "source": "medicalmega.com",
+        "license": "© iHealth Labs",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "iHealth's own technical-specification support article states: SpO2 measuring range 70-99% with ±2% accuracy over 70-99%, pulse rate 30-250 bpm with ±2 bpm or ±2% (whichever is larger) accuracy, a 3.7V/300mAh lithium-ion rechargeable battery, and Bluetooth sync to the iHealth MyVitals app; a bright LED display is confirmed on iHealth's own product marketing copy. Perfusion/'pulse strength' is mentioned in general marketing text but no formal Perfusion Index metric or units are given, so left null. No explicit continuous/overnight-wear claim is made (standard fingertip clip), so continuous_monitoring is false. Price: Hart Medical (authorized reseller) lists $74.99 and a slickdeals thread references $20-39 promotional pricing; $69.99 is used as a representative current US figure since iHealth's own US store page returned repeated 429s to automated fetches. No release year is stated on any source consulted."
+    },
+    {
+      "slug": "innovo-deluxe-ip900ap",
+      "name": "Innovo Deluxe iP900AP",
+      "brand": "Innovo",
+      "category": "pulse-oximeters",
+      "releaseDate": null,
+      "priceUsd": 34.99,
+      "priceNote": "US price confirmed independently on Walmart.com and eBay listings for this exact model.",
+      "specs": {
+        "spo2_range": null,
+        "spo2_accuracy_percent": null,
+        "pulse_rate_range_bpm": null,
+        "display_type": "OLED display with six multi-directional viewing orientations",
+        "perfusion_index": true,
+        "continuous_monitoring": false,
+        "bluetooth": false,
+        "battery_life_hr": null
+      },
+      "source": {
+        "url": "https://innovo-medical.com/products/ip900ap",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.walmart.com/ip/Innovo-Deluxe-iP900AP-Fingertip-Pulse-Oximeter-Blood-Oxygen-Saturation-Monitor-with-Alarm-Plethysmograph-and-Perfusion-Index/165943306",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/innovo-deluxe-ip900ap.jpg?v=0d96cc740d",
+        "source": "ebay.com listing (Innovo product photo)",
+        "license": "© Innovo",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Innovo's own product page (fetched directly) confirms an OLED display with six multi-directional viewing choices, built-in Plethysmograph and Perfusion Index ('PI conveniently informs you of the strength of your pulse'), an audible alarm, 2 AAA batteries, FDA clearance, and explicitly states 'This pulse oximeter cannot be used to monitor O2 levels overnight' — the basis for continuous_monitoring=false. No Bluetooth is mentioned anywhere. Price $34.99 is corroborated identically on both the Walmart listing and an eBay listing for the same model/UPC. SpO2 range/accuracy and pulse-rate range/accuracy are not stated on Innovo's own page, Walmart, or eBay, and could not be verified elsewhere, so all four are left null rather than assumed from comparable Innovo siblings. No release year found."
+    },
+    {
+      "slug": "contec-cms50d",
+      "name": "Contec CMS50D",
+      "brand": "Contec Medical Systems",
+      "category": "pulse-oximeters",
+      "releaseDate": null,
+      "priceUsd": 8.99,
+      "priceNote": "Budget-tier price per an eBay CMS50D listing; corroborated by Contec's own US storefront (contechealth.com), where sibling low-cost LED models (CMS50M, CMS50NA) sell new for $9.99-$10.99, confirming this is a genuine ultra-low price segment rather than an error.",
+      "specs": {
+        "spo2_range": "0-100%",
+        "spo2_accuracy_percent": "±2% (70-100%); ±4% under weak/low-perfusion signal conditions",
+        "pulse_rate_range_bpm": "30-250 bpm",
+        "display_type": "LED display",
+        "perfusion_index": false,
+        "continuous_monitoring": false,
+        "bluetooth": false,
+        "battery_life_hr": 24
+      },
+      "source": {
+        "url": "https://www.contecmedsystems.com/showroom/contec-cms50d-fingertip-pulse-oximeter-spo2-sensor-ce-and-fda-approved.html",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://contechealth.com/products/contec-cms50m-pulse-oximeter-fingertip-blood-oxygen-saturation-spo2-pr-monitor-led",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/contec-cms50d.jpg?v=69d3e1f8ae",
+        "source": "contecmedsystems.com",
+        "license": "© Contec Medical Systems",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "CORRECTED: an initial aggregator search snippet claimed SpO2 accuracy of ±4%; the manufacturer's own showroom spec table (fetched directly) actually states '70%~100%: ±2%' as the primary declared accuracy, with '±4%' listed separately as the weak-signal/low-perfusion figure — both values are now captured, with ±2% used as spo2_accuracy_percent. The same source confirms pulse rate 30-250 bpm (±2 bpm or ±2%, whichever is larger), an LED display (no OLED, no Perfusion Index, no Bluetooth), 1.5V AAA×2 batteries rated for a minimum 24 hours continuous operation (up to a theoretical 56 hours), and CE/FDA clearance. It is a basic spot-check clip (no onboard trend memory), so continuous_monitoring is false. Price: $8.99 is what one eBay CMS50D listing shows; Contec's own current US storefront (contechealth.com) doesn't list the CMS50D by that exact model name but sells closely related low-cost LED-display siblings (CMS50M $9.99, CMS50NA $10.99), corroborating this device sits in the same sub-$15 price band rather than the $748 bulk-case figure that surfaced for a different (Nonin) product in this dataset. No release year found."
+    },
+    {
+      "slug": "beurer-po60",
+      "name": "Beurer PO60",
+      "brand": "Beurer",
+      "category": "pulse-oximeters",
+      "releaseDate": null,
+      "priceUsd": 29.99,
+      "priceNote": "Current US price on shop-beurer.com (Beurer's official US store), confirmed on two separate fetches of the live page. Earlier aggregator search snippets had quoted ~$97-100, which the brand's own live pricing contradicts and which was discarded as stale.",
+      "specs": {
+        "spo2_range": "0-100%",
+        "spo2_accuracy_percent": "±2% (70-100%)",
+        "pulse_rate_range_bpm": "30-250 bpm",
+        "display_type": "Color OLED display with 4 selectable views",
+        "perfusion_index": null,
+        "continuous_monitoring": false,
+        "bluetooth": true,
+        "battery_life_hr": null
+      },
+      "source": {
+        "url": "https://www.shop-beurer.com/products/beurer-pulse-oximeter-po60",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.win-health.com/beurer-po60-pulse-oximeter",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/beurer-po60.jpg?v=57e7806ad5",
+        "source": "shop-beurer.com",
+        "license": "© Beurer",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "CORRECTED: Beurer's own live US storefront (fetched directly, cross-checked twice) lists the PO60 at $29.99 within its pulse-oximeter collection, alongside the PO30 ($24.99), PO13 kids' model ($34.99) and PO50 ($34.99, out of stock); this supersedes an earlier ~$97-100 figure surfaced by generic aggregator search snippets, which appears stale/incorrect. Win-Health's UK product page (a Beurer distributor) independently corroborates the technical spec: SpO2 0-100% with ±2% accuracy over 70-100%, pulse rate 0-254 bpm with ±2 bpm accuracy over the declared 30-250 bpm range, a color display with 4 views and adjustable brightness, Bluetooth 4.0 to the Beurer HealthManager Pro app (iOS 10+/Android 5+), and 2×1.5V AAA batteries with auto shutoff. No Perfusion Index or explicit battery-life-in-hours figure is stated on either source, so both are left null. It is a standard fingertip clip (not marketed for overnight wear), so continuous_monitoring is false. No release year confirmed (an instruction-manual PDF filename suggests a 2019 revision date, but that is not evidence of original launch year)."
+    },
+    {
+      "slug": "wellue-fs20f",
+      "name": "Wellue FS20F",
+      "brand": "Wellue (Viatom)",
+      "category": "pulse-oximeters",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "No current US MSRP could be confirmed: Wellue's own site states this model 'is currently only sold in the EU', and its old US product URLs now 404. Third-party US listings persist on Amazon/Walmart but no live price could be retrieved from those pages (JS-rendered listings blocked automated fetches).",
+      "specs": {
+        "spo2_range": "70-100%",
+        "spo2_accuracy_percent": null,
+        "pulse_rate_range_bpm": "25-250 bpm",
+        "display_type": "OLED display with pulse waveform and bar-graph pulse intensity",
+        "perfusion_index": true,
+        "continuous_monitoring": false,
+        "bluetooth": true,
+        "battery_life_hr": null
+      },
+      "source": {
+        "url": "https://getwellue.com/pages/fs20f-bluetooth-finger-oximeter",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://manuals.plus/wellue/wellue-fs20f-pulse-oximeter-fingertip-saturation-monitor",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/wellue-fs20f.jpg?v=a9d142c781",
+        "source": "getwellue.com",
+        "license": "© Wellue",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Wellue's own current FS20F marketing page (fetched directly, now a legacy 'pages/' URL rather than an active 'products/' storefront listing) states the device 'is currently only sold in the EU', gives SpO2 range 70~99% with an 88% low-alert threshold, pulse rate 25-250 bpm, an OLED display with bar-graph pulse intensity, Bluetooth 4.0 to a free iOS/Android app, and 2×AAA batteries at 3.0V. The official user-guide PDF (Manuals+, mirroring Wellue's own documentation) instead states SpO2 range 70%-100% and PR 25-250 bpm and explicitly instructs 'Do not use the oximeter for more than 5 minutes without relocating the device to another finger', confirming this is a spot-check device rather than an overnight/continuous monitor (continuous_monitoring=false) despite Bluetooth app-trending. An in-app screenshot embedded in that same user guide shows a live 'Pi: 10.9%' Perfusion Index reading alongside SpO2 and PR, so perfusion_index=true. No SpO2 accuracy percentage (ARMS) or battery-life-in-hours figure is stated in either source, so both are left null. No release year found. No priceUsd is assigned since the brand's own current page disclaims US sale and no live US retail price could be independently confirmed."
+    },
+    {
+      "slug": "nonin-go2-9570",
+      "name": "Nonin GO2 (Model 9570)",
+      "brand": "Nonin Medical",
+      "category": "pulse-oximeters",
+      "releaseDate": null,
+      "priceUsd": 99,
+      "priceNote": "List price per TurnerMedical, which also flags the product as discontinued ('PRODUCT IS DISCONTINUED - Nonin 9590 Vantage has replaced the GO2'); a $89 sale price was showing on the same listing at access time.",
+      "specs": {
+        "spo2_range": "0-100%",
+        "spo2_accuracy_percent": "70-100% Arms ±2 digits (no motion and low perfusion)",
+        "pulse_rate_range_bpm": "18-321 bpm display; declared accuracy 20-250 bpm ±3 digits (40-240 bpm ±3 digits low perfusion)",
+        "display_type": "Backlit numeric LCD display",
+        "perfusion_index": false,
+        "continuous_monitoring": false,
+        "bluetooth": false,
+        "battery_life_hr": 21
+      },
+      "source": {
+        "url": "https://www.nonin.com/wp-content/uploads/2018/09/GO2-Spec-Sheet.pdf",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.turnermedical.com/NONIN_GO2_ACHIEVE_9570_FINGER_PULSE_OXIMETER_p/nonin_9570_go2.htm",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/nonin-go2-9570.jpg?v=5f307fa7cc",
+        "source": "turnermedical.com",
+        "license": "© Nonin Medical",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Nonin's own GO2 Model 9570 spec-sheet PDF (fetched directly) states: Oxygen Saturation Display Range 0-100% SpO2, Pulse Rate Display Range 18-321 BPM, Oxygen Saturation Declared Accuracy 70-100% SpO2 ±2 digits (identical for low perfusion), Pulse Rate Declared Accuracy 20-250 BPM ±3 digits (40-240 BPM ±3 digits low perfusion), and Battery Life 'Approximately 2,400 spot checks (Based on ~21 hours of operation using one AAA-size alkaline battery...)'. Powered by Nonin PureSAT technology, uses a backlit numeric LCD (per multiple reseller descriptions), and has neither a Perfusion Index parameter nor Bluetooth radio anywhere in the spec sheet. TurnerMedical's listing independently confirms this exact model is discontinued and superseded by the Onyx Vantage 9590 (also in this dataset), listing $99.00 with an $89 sale price at time of access; used $99 as the representative list price. It is a basic spot-check clip, so continuous_monitoring is false. No release year is stated in the spec sheet (its ©2016 copyright is a document date, not necessarily the launch year, so releaseDate is left null)."
+    },
+    {
+      "slug": "wellue-checkme-o2-max",
+      "name": "Wellue Checkme O2 Max",
+      "brand": "Wellue (Viatom)",
+      "category": "pulse-oximeters",
+      "releaseDate": null,
+      "priceUsd": 199.99,
+      "priceNote": "Regular US price per TekHanceUS (authorized Wellue reseller), seen discounted to $185.98 at access time. Wellue's own product page did not display a price to the automated fetcher.",
+      "specs": {
+        "spo2_range": "70-100%",
+        "spo2_accuracy_percent": "±2% (80-100%), ±3% (70-79%)",
+        "pulse_rate_range_bpm": "30-250 bpm",
+        "display_type": null,
+        "perfusion_index": true,
+        "continuous_monitoring": true,
+        "bluetooth": true,
+        "battery_life_hr": 72
+      },
+      "source": {
+        "url": "https://getwellue.com/products/checkme-o2-max-wrist-pulse-oximeter",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.viatomtech.com/checkmeo2-max",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/wellue-checkme-o2-max.jpg?v=3591e6df3b",
+        "source": "getwellue.com",
+        "license": "© Wellue",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Wellue's own Checkme O2 Max product page (fetched directly) and Viatom's own technical page (Wellue's parent brand, fetched directly) agree: oxygen range 70-100% with ±2% accuracy (80-100%) / ±3% (70-79%), heart rate 30-250 bpm (±2 bpm or ±2%), continuous per-second automatic recording of SpO2/heart rate/body motion for up to 72 hours per charge (2-2.5 hr recharge, rechargeable lithium-polymer), 4 on-device sessions of up to 10 hours each, Bluetooth 4.0 BLE, and IP22 water/dust resistance. Perfusion Index is listed as a recorded parameter on Viatom's own page. This is one of only two devices in the dataset explicitly built for continuous unattended overnight wear (with the O2Ring), so continuous_monitoring=true. Onboard display technology is not detailed on either fetched page (described only as an 'intuitive display'), so display_type is left null rather than guessed. Price: TekHanceUS (an authorized reseller) shows a regular price of $199.99 discounted to $185.98; used $199.99 as the representative regular price since Wellue's own page did not surface a price to the fetcher. No release year found."
+    },
+    {
+      "slug": "santamedical-generation-2-sm-165",
+      "name": "Santamedical Generation 2 SM-165",
+      "brand": "Santamedical",
+      "category": "pulse-oximeters",
+      "releaseDate": null,
+      "priceUsd": 24.95,
+      "priceNote": "Current offer price on santamedical.com (official brand store), independently corroborated at the same $24.95 on a Gurin Products listing of the identical model.",
+      "specs": {
+        "spo2_range": null,
+        "spo2_accuracy_percent": null,
+        "pulse_rate_range_bpm": null,
+        "display_type": "OLED display, readable from four directions",
+        "perfusion_index": false,
+        "continuous_monitoring": false,
+        "bluetooth": false,
+        "battery_life_hr": 30
+      },
+      "source": {
+        "url": "https://santamedical.com/products/santamedical-generation-2-fingertip-pulse-oximeter-oximetry-blood-oxygen-saturation-monitor-with-batteries-and-lanyard",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://gurinproducts.com/product/santamedical-generation-2-oled-fingertip-pulse-oximeter-oximetry-blood-oxygen-saturation-monitor-with-batteries-and-lanyard-black/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/santamedical-generation-2-sm-165.jpg?v=47d04ea214",
+        "source": "santamedical.com",
+        "license": "© Santamedical",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Santamedical's own product page (fetched directly) confirms an offer price of $24.95 (a listed $199 MSRP is a strikethrough anchor price, not a real transaction price, so not used), a bright OLED display readable from four/six orientations, '30+ hours of continuous monitoring on one set of batteries' (2×AAA) with auto power-off after 10 seconds of inactivity, and a self-adjusting finger clamp. The '30+ hours continuous monitoring' phrase refers to cumulative battery endurance across repeated spot-checks, not a claim of unattended/overnight wear (this is a basic finger clip with no onboard trend memory), so continuous_monitoring is set false and battery_life_hr is set to 30. Neither Santamedical's own page, Gurin's mirrored listing, nor the Amazon listings found state a numeric SpO2 range, SpO2 accuracy, pulse-rate range, or pulse-rate accuracy (an Amazon spec table only showed a placeholder 'Measuring Range: [INF]'), so all four fields are left null rather than assumed. No Perfusion Index or Bluetooth feature is mentioned. No release year found."
+    }
+  ]
+}

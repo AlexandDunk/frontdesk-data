@@ -1,0 +1,399 @@
+{
+  "category": "microscopes",
+  "generatedAt": "2026-08-01",
+  "methodologyNotes": "Covers 13 compound (compound-optical, eyepiece+objective-turret) microscopes a 2026 buyer actually cross-shops: budget-to-mid student/hobbyist trinoculars with integrated USB cameras (AmScope T490B-5MT, AmScope B120C-M, Swift SW380T, OMAX M837ZL, Levenhuk D740T), entry monocular lab scopes (Celestron LABS CM2000CF, Bresser Erudit DLX), a legacy university digital-camera scope (National Optical DC5-163), and clinical/educational-grade instruments from the major optics brands (Evident/Olympus CX23, Nikon Eclipse E100, Leica DM750, Zeiss Primostar 3, Motic BA210). One seed from the original brief, the Andonstar AD409, was dropped after verification: it is a single-lens handheld/HDMI digital inspection scope (no eyepiece, objective turret, or condenser) and does not fit the 'compound microscope' schema (head_type, objective_count, condenser_type, mechanical_stage would all be fabricated); it was replaced with AmScope B120C-M, Nikon Eclipse E100, Leica DM750, and Zeiss Primostar 3 to keep the roster at a genuine apples-to-apples compound-microscope comparison spanning ~$300-$3,000+. max_magnification is the manufacturer-stated total magnification (highest objective x eyepiece, using the eyepiece pairing the source itself uses for its headline 'NNx-NNNNx' figure, e.g. a 100x oil objective x a 25x eyepiece for machines marketed with a 25x eyepiece option) - not a sum. objective_count is the number of nosepiece positions on the standard/base configuration described. camera_compatible is true if the product ships with an integrated digital camera, a trinocular/photo port, or a documented C-mount/eyepiece-camera adapter path; false only where a source explicitly rules this out; null where genuinely undocumented. Every product's optical/mechanical specs were independently fetched from either the manufacturer's own product or spec page (Evident/Olympus, Nikon, Leica, Zeiss, Bresser, Levenhuk, National Optical's own PDF datasheet) or, where the manufacturer's storefront returned persistent HTTP 429 bot-blocking on every attempt across many retries and IP-varying reseller domains (amscope.com, swiftmicroscopes.com, omaxmicroscope.com, celestron.com, motic.com, nationaloptical.com all did this consistently), from a named US reseller's product page instead (amscope.shop, selectumllc.com, kwtelescope.com, camnexas.com, motic-microscope.com, review-rating.com, microscopecrew.com) - every such substitution is flagged in that product's provenance. priceUsd is the clearest confirmed US-dollar starting price found; several products in this category (Evident CX23, National Optical DC5-163, Bresser Erudit DLX, Levenhuk D740T, OMAX M837ZL base config, Leica DM750, Zeiss Primostar 3) are sold through quote-only/B2B lab-equipment channels or EU-only storefronts with no public US list price, and priceUsd is null for these rather than converting a foreign-currency figure or borrowing a different SKU's price - the specific figures that were found (EUR prices, sibling-model prices, higher-spec-variant prices) are preserved in priceNote for context. Images: a manufacturer-hosted or manufacturer-supplied reseller product photo, HTTP-verified and visually inspected (via direct file fetch) at capture time for each; four products (AmScope T490B-5MT, Swift SW380T, National Optical DC5-163, OMAX M837ZL) had no independently fetchable direct image file found despite repeated attempts (dead links, JS-rendered galleries, or only a text-and-stock-photo review-blog banner) and ship without an image key rather than a guessed or mismatched one. No Wikimedia Commons images were usable: Commons has no photos of these specific SKUs, and the closest hits (a different-generation Nikon Eclipse Ci, an older two-word 'Primo Star' Zeiss unit) were rejected as not depicting the exact product. accessedAt 2026-08-01 throughout.",
+  "specKeys": [
+    "max_magnification",
+    "head_type",
+    "illumination_type",
+    "objective_count",
+    "mechanical_stage",
+    "condenser_type",
+    "camera_compatible",
+    "focus_mechanism"
+  ],
+  "products": [
+    {
+      "slug": "amscope-t490b-5mt",
+      "name": "AmScope T490B-5MT",
+      "brand": "AmScope",
+      "category": "microscopes",
+      "releaseDate": null,
+      "priceUsd": 630.99,
+      "priceNote": "List price for the T490B-5MT variant (trinocular tube + integrated 5MP USB camera) per amscope.shop; amscope.com's own storefront returned persistent HTTP 429 across every attempt.",
+      "specs": {
+        "max_magnification": 2000,
+        "head_type": "Trinocular, vertical camera mount + Siedentopf binocular mount",
+        "illumination_type": "Halogen, brightfield, rheostat intensity control",
+        "objective_count": 4,
+        "mechanical_stage": true,
+        "condenser_type": "Abbe, N.A. 1.25, iris diaphragm, rack-and-pinion focus",
+        "camera_compatible": true,
+        "focus_mechanism": "Coaxial coarse and fine focus with tension control"
+      },
+      "source": {
+        "url": "https://amscope.shop/products/amscope-t490b-5mt-digital-compound-trinocular-microscope-wf1-b004t6q852",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "amscope.com (manufacturer) returned HTTP 429 on every attempt; specs and price ($630.99) fetched instead from amscope.shop, a US AmScope-operated storefront mirror, which lists 4x/10x/40xS/100xS spring-loaded oil objectives, interchangeable 10x/20x eyepieces, integrated 5MP USB 2.0 camera with reduction lens, double-layer mechanical stage (1mm divisions), and 1.25 NA Abbe condenser. Seed name was plain 'AmScope T490B'; the -5MT (camera-equipped) SKU is used since it is the configuration with a fully verifiable spec sheet and price."
+    },
+    {
+      "slug": "swift-sw380t",
+      "name": "Swift SW380T",
+      "brand": "Swift Optical",
+      "category": "microscopes",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "swiftmicroscopes.com (manufacturer) returned persistent HTTP 429 across more than five separate attempts over the session; no independently confirmed US-dollar price was found. An EU reseller (albenth.com) listed roughly EUR 374, which is not used here since it is not a US figure.",
+      "specs": {
+        "max_magnification": 2500,
+        "head_type": "Trinocular, Siedentopf, 360-degree rotation, 30-degree ergonomic tilt",
+        "illumination_type": "LED, built-in",
+        "objective_count": 4,
+        "mechanical_stage": true,
+        "condenser_type": "Abbe, coarse and fine adjustment",
+        "camera_compatible": true,
+        "focus_mechanism": "Dual coarse and ultra-fine focus controls"
+      },
+      "source": {
+        "url": "https://microscopecrew.com/swift-sw380t-review/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.review-rating.com/en/product/swift-sw380t-trinocular-microscope-13183",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "swiftmicroscopes.com returned HTTP 429 on every attempt (manufacturer domain plus a reseller mirror, albenth.com, both persistently blocked). Specs corroborated across two independent reviewer/retailer sources: microscopecrew.com states 4x/10x/40x/100x-oil DIN achromatic objectives, interchangeable WF10x/25x eyepieces, ABBE condenser, LED illumination, and camera-ready eyepiece tube; review-rating.com independently confirms the Siedentopf 360-degree trinocular head, four-objective DIN turret, LED illumination, and dual coarse/ultra-fine focus. One reviewer snippet listed a '25x objective' which is almost certainly a transcription mix-up with the 25x eyepiece option (25x objectives are not a standard DIN size and the stated 40x-2500x range only reconciles with a standard 4/10/40/100x objective set paired with 10x/25x eyepieces); the standard 4/10/40/100x set is used here. A 5MP or 25MP Swiftcam is available but sold as an add-on per the Amazon listing title, not confirmed integrated by default."
+    },
+    {
+      "slug": "celestron-labs-cm2000cf",
+      "name": "Celestron LABS CM2000CF",
+      "brand": "Celestron",
+      "category": "microscopes",
+      "releaseDate": null,
+      "priceUsd": 315,
+      "priceNote": "camnexas.com listed $315.00 as the pre-discount ('reduced from') list price; celestron.com itself returned persistent HTTP 429 on every attempt. kwtelescope.com corroborates the identical spec sheet at CAD $410.00.",
+      "specs": {
+        "max_magnification": 2000,
+        "head_type": "Monocular, 360-degree rotatable, 45-degree incline",
+        "illumination_type": "Halogen, variable intensity dial",
+        "objective_count": 4,
+        "mechanical_stage": true,
+        "condenser_type": "Abbe, N.A. 1.25, iris diaphragm",
+        "camera_compatible": null,
+        "focus_mechanism": "Rack and pinion, separate coarse/fine dials, 0.1mm travel per rotation"
+      },
+      "source": {
+        "url": "https://kwtelescope.com/cm2000cf-compound-microscope/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.camnexas.com/product/celestron-cm2000cf-compound-microscope-44130/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/celestron-labs-cm2000cf.jpg?v=4f54dd35d6",
+        "source": "Celestron product photo, hosted via kwtelescope.com's BigCommerce catalog CDN",
+        "license": "© Celestron",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "celestron.com returned HTTP 429 on every attempt. Full spec sheet fetched from kwtelescope.com (an authorized Celestron reseller): 40x-2000x range (8 discrete magnification levels: 40/80/100/200/400/800/1000/2000x), monocular 360-degree/45-degree head, 4x/10x/40x/100x-oil achromatic objectives, one 10x and one 20x eyepiece, 110x125mm mechanical stage, 1.25 NA Abbe condenser with iris, halogen illumination, rack-and-pinion coarse/fine focus. Price corroborated by camnexas.com ($315 list, on sale at $150 at capture time) and cross-checked against kwtelescope's CAD $410 listing for consistency. The Amazon listing for this SKU is titled 'Compound Monocular Microscope,' confirming head type; no camera port or C-mount adapter is documented for this base configuration, so camera_compatible is left null rather than guessed false."
+    },
+    {
+      "slug": "evident-olympus-cx23",
+      "name": "Olympus CX23",
+      "brand": "Olympus (Evident)",
+      "category": "microscopes",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "Evident (formerly Olympus Life Science, now the standalone company selling this line) publishes no price on evidentscientific.com; clinical/educational microscopes in this range are typically sold through a quote-only distributor channel and no public US list price was found.",
+      "specs": {
+        "max_magnification": 1000,
+        "head_type": "Binocular or trinocular, 30-degree tube inclination",
+        "illumination_type": "LED lamp, transmitted, uniform color temperature",
+        "objective_count": 4,
+        "mechanical_stage": true,
+        "condenser_type": "Abbe, N.A. 1.25",
+        "camera_compatible": true,
+        "focus_mechanism": "Stage focus, 15mm coarse handle stroke, adjustable torque, coarse-limit stopper"
+      },
+      "source": {
+        "url": "https://evidentscientific.com/en/products/upright/cx23",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/evident-olympus-cx23.jpg?v=574a69d1b2",
+        "source": "evidentscientific.com (Evident/Olympus official product page)",
+        "license": "© Evident (Olympus)",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Fetched directly from evidentscientific.com (olympus-lifescience.com now 301-redirects here, confirming this is the current official home of the Olympus microscope line). Page states binocular and trinocular tube options at 30 degrees, LED transmitted illumination, manual right-hand-control mechanical stage (X 76mm / Y 30mm travel), Abbe condenser N.A. 1.25, stage-focus system with 15mm coarse stroke, and trinocular-tube compatibility with the EP50 wireless digital camera. Standard quad-nosepiece objective set (4x/10x/40x/100x oil) and 10x eyepiece give a 1000x optical maximum for the base configuration; no price is published anywhere in the fetched content."
+    },
+    {
+      "slug": "national-optical-dc5-163",
+      "name": "National Optical DC5-163",
+      "brand": "National Optical & Scientific Instruments",
+      "category": "microscopes",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "No reachable manufacturer or distributor page published a US price: nationaloptical.com returned persistent HTTP 429, and Cole-Parmer/Southland Instruments listings for this SKU require account/quote access that could not be fetched.",
+      "specs": {
+        "max_magnification": 1000,
+        "head_type": "Binocular, 30-degree inclined, dual diopter, with 3-position beam-splitter (100% binocular / 100% camera / 70:30 split)",
+        "illumination_type": "12V 20W halogen with variable rheostat",
+        "objective_count": 4,
+        "mechanical_stage": true,
+        "condenser_type": "Abbe, N.A. 1.25, iris diaphragm, rack-and-pinion focus, swing-out filter holder (clear/blue/green/yellow)",
+        "camera_compatible": true,
+        "focus_mechanism": "Coaxial coarse (tension-adjustable) and fine (graduated)"
+      },
+      "source": {
+        "url": "https://www.homesciencetools.com/content/reference/MI-163DC5.pdf",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "nationaloptical.com returned HTTP 429 on every attempt across multiple URL guesses. Full official National Optical spec/instruction sheet (model DC5-163 & DC5-163-P) was instead retrieved as a PDF hosted by homesciencetools.com and read directly: widefield 10x/18mm eyepiece (pointer standard), 30-degree inclined binoculars with 54-76mm interpupillary adjustment, DIN 4x(0.10)/10x(0.25)/40xR(0.65)/100xR-oil(1.25) achromatic or plan objectives on a ball-bearing quad turret, built-in 2.0-megapixel USB 2.0 digital camera (1600x1200, USB-powered) working alongside a fully independent optical path, 140x135mm mechanical stage (70x50mm travel, 0.1mm graduation), 1.25 NA Abbe condenser, 12V/20W halogen illumination on a 100-240V universal supply, and coaxial coarse/fine focus. No price was present in this datasheet and none could be found elsewhere; this appears to be an older, still-cataloged SKU sold mainly to institutional buyers rather than direct consumers."
+    },
+    {
+      "slug": "bresser-erudit-dlx",
+      "name": "Bresser Erudit DLX 40x-1000x",
+      "brand": "Bresser",
+      "category": "microscopes",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "bresser.com lists EUR 274.90 (unit shown temporarily out of stock at capture time); Bresser does not appear to sell direct-to-US and no USD-denominated retail listing could be confirmed.",
+      "specs": {
+        "max_magnification": 1000,
+        "head_type": "Monocular, 360-degree rotatable",
+        "illumination_type": "LED with integrated dimmer",
+        "objective_count": 4,
+        "mechanical_stage": true,
+        "condenser_type": "Abbe, height-adjustable, field diaphragm, filter holder",
+        "camera_compatible": true,
+        "focus_mechanism": "Coaxial coarse and fine focusing drive"
+      },
+      "source": {
+        "url": "https://www.bresser.com/p/bresser-erudit-dlx-40-1000x-microscope-5102000",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/bresser-erudit-dlx.jpg?v=eed76f7fbd",
+        "source": "bresser.com (manufacturer official product page)",
+        "license": "© Bresser",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Fetched directly from bresser.com (bresser.de and bresser-usa.com both redirect to or fail to resolve to this domain). SKU 5102000: 4x/10x/40x/100x-oil achromatic DIN objectives, monocular 360-degree rotatable tube, LED illumination with dimmer, Abbe condenser with adjustable height and filter holder, coaxial mechanical stage with vernier ('nonius'), coaxial coarse/fine focus. No integrated camera, but the 23.2mm standard eyepiece-tube diameter is stated as compatible with external eyepiece cameras (marked camera_compatible true on that basis, consistent with this dataset's convention). Price is EUR-only; no US distributor or USD Amazon listing could be reached (amazon.com listing for this exact model returned HTTP 500 on every attempt)."
+    },
+    {
+      "slug": "levenhuk-d740t",
+      "name": "Levenhuk D740T",
+      "brand": "Levenhuk",
+      "category": "microscopes",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "levenhuk.com's US storefront renders its price via client-side JavaScript that did not appear in the static fetch. The EU storefront (eu.levenhuk.com) lists EUR 1,099.95, not used here since it is not a US figure; a different, non-digital sibling model (Levenhuk 740T) separately lists at $639.95 on levenhuk.com, but using that would misrepresent the D740T (which adds a 5.1MP integrated camera).",
+      "specs": {
+        "max_magnification": 2000,
+        "head_type": "Trinocular, 360-degree rotation, 45-degree inclination",
+        "illumination_type": "LED, 3W, brightness-adjustable",
+        "objective_count": 4,
+        "mechanical_stage": true,
+        "condenser_type": "Abbe, N.A. 1.25, iris diaphragm",
+        "camera_compatible": true,
+        "focus_mechanism": "Coaxial; coarse 22mm stroke, fine 0.002mm per division"
+      },
+      "source": {
+        "url": "https://levenhuk.com/catalogue/microscopes/levenhuk-d740t-5-1m-digital-trinocular-microscope/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/levenhuk-d740t.jpg?v=4a95449544",
+        "source": "levenhuk.com (manufacturer official product page)",
+        "license": "© Levenhuk",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Fetched directly from levenhuk.com (US storefront). Page states 40x-2000x total magnification, trinocular 360-degree/45-degree head, achromatic 4x/10x/40xs/100xs-oil objectives, WF10x/18mm and WFH20x eyepieces, integrated 5MP digital camera installable in the eyepiece tube (plus compatibility with additional Levenhuk cameras sold separately), 140x130mm mechanical stage (75mm/24mm travel), 1.25 NA Abbe condenser with iris, 3W adjustable LED, and coaxial coarse(22mm)/fine(0.002mm) focus. No dollar figure rendered in the static page; the EU price and a cheaper non-digital sibling model's US price were both found but are noted only for context in priceNote rather than used as this product's price."
+    },
+    {
+      "slug": "omax-m837zl",
+      "name": "OMAX M837ZL",
+      "brand": "OMAX",
+      "category": "microscopes",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "omaxmicroscope.com (manufacturer) returned persistent HTTP 429 across many attempts, so no price could be confirmed for the plain LED trinocular M837ZL-TP configuration described here. Confirmed USD prices exist only for higher-spec darkfield/phase-contrast M837ZL family variants: $1,719.00 (M837ZL-A191BOIL-TP, primelabmed.com) and $1,772.99 (M837ZL-PHB1-A185A-C50U3). A EUR price (EUR 675.99, SKU M837ZL-C90U-3PL) was found on eu.amscope.com for a closer LED-only configuration, but is not used since it is not a US figure.",
+      "specs": {
+        "max_magnification": 2500,
+        "head_type": "Trinocular, LED compound",
+        "illumination_type": "LED, adjustable brightness",
+        "objective_count": 4,
+        "mechanical_stage": true,
+        "condenser_type": "Abbe, N.A. 1.25, iris diaphragm",
+        "camera_compatible": true,
+        "focus_mechanism": null
+      },
+      "source": {
+        "url": "https://www.omaxmicroscope.com/products/m837zl-tp",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "omaxmicroscope.com returned HTTP 429 on every direct attempt (including the M837ZL-TP and M837ZL-PHB1-A185A-C50U3 product URLs); curativescope.com and primelabmed.com direct fetches were also blocked (403/404). Specs given here are drawn from consistently repeated figures across independently indexed retailer/manufacturer copy (40x-2500x range, 10x/25x eyepieces, 4x/10x/40x/100x objectives, LED illumination, mechanical stage, 5-10MP USB camera options, Abbe N.A.1.25 condenser with iris) rather than a single directly-rendered fetch; focus mechanism specifics were not found in any reachable source and are left null rather than assumed to match sibling AmScope-family products. No image file could be independently fetched (manufacturer galleries are JS-rendered; reseller pages 403'd)."
+    },
+    {
+      "slug": "motic-ba210",
+      "name": "Motic BA210",
+      "brand": "Motic",
+      "category": "microscopes",
+      "releaseDate": null,
+      "priceUsd": 1429,
+      "priceNote": "Fisher Scientific lists the BA210 series (binocular through trinocular configurations) from $1,429.00 to $2,948.00; $1,429 is the lowest confirmed US configuration price. motic.com itself returned HTTP 404/429 on every attempted URL.",
+      "specs": {
+        "max_magnification": 1000,
+        "head_type": "Binocular or trinocular, Siedentopf, 30-degree incline, 360-degree rotation",
+        "illumination_type": "3W LED, intensity control",
+        "objective_count": 4,
+        "mechanical_stage": true,
+        "condenser_type": "Abbe, N.A. 1.25, rack-and-pinion, iris diaphragm",
+        "camera_compatible": true,
+        "focus_mechanism": "Coaxial coarse/fine, tension adjustment, 20mm travel, 2µm fine precision"
+      },
+      "source": {
+        "url": "https://www.motic-microscope.com/motic-ba210s-compound-led-microscope/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.fishersci.com/shop/products/ba210-basic-biological-microscope-3/p-200007180",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/motic-ba210.jpg?v=d3b7d51068",
+        "source": "Motic product photo, hosted via motic-microscope.com's BigCommerce catalog CDN",
+        "license": "© Motic",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "motic.com returned HTTP 404/429 across all attempted URL patterns. Full specs (iASC infinity-corrected 4x/10x/40x/100x-oil objectives, Siedentopf widefield 10x eyepieces, 3W LED, 140x135mm coaxial stage with 76x40mm travel, Abbe N.A.1.25 condenser, coaxial focus with 2µm fine precision) were fetched from motic-microscope.com, a US Motic distributor, for the closely related BA210S sub-variant of the same series; fishersci.com's own listing (page fetch failed with a connection reset, but its indexed price range of $1,429-$2,948 was independently visible via search) corroborates a US price for the BA210 family at the low end for a monocular/binocular base unit. The BA210 (non-S) and BA210S share the same optical/mechanical architecture per Motic's own naming convention; this is flagged since seed named the plain 'BA210'."
+    },
+    {
+      "slug": "amscope-b120c-m",
+      "name": "AmScope B120C-M",
+      "brand": "AmScope",
+      "category": "microscopes",
+      "releaseDate": null,
+      "priceUsd": 431.85,
+      "priceNote": "Kit price (binocular tube + integrated 1.3MP USB camera) per selectumllc.com, a US AmScope reseller; amscope.com's own product pages returned persistent HTTP 429.",
+      "specs": {
+        "max_magnification": 2500,
+        "head_type": "Binocular, Siedentopf, 30-degree incline, 360-degree rotatable",
+        "illumination_type": "1W variable-intensity LED with fly-eye lens",
+        "objective_count": 4,
+        "mechanical_stage": true,
+        "condenser_type": "Abbe, N.A. 1.25, centerable, rack-and-pinion, iris diaphragm",
+        "camera_compatible": true,
+        "focus_mechanism": "Coaxial coarse/fine, 30mm range, 0.002mm fine-focus division"
+      },
+      "source": {
+        "url": "https://selectumllc.com/i/amscope-b120c-m",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/amscope-b120c-m.jpg?v=f4d4f40c00",
+        "source": "AmScope product photo, hosted via selectumllc.com's catalog CDN",
+        "license": "© AmScope",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "amscope.com returned HTTP 429 on every attempt (both the main domain and the amscope.shop mirror used successfully for other products in this file returned a 404 for this specific SKU path). Full specs and $431.85 kit price fetched from selectumllc.com, a US AmScope reseller: 2500x max (with 25x eyepieces), 4x/10x/40x/100x-oil NA-rated achromatic objectives, double-layer caliper mechanical stage, centerable Abbe N.A.1.25 condenser, integrated 1.3MP USB 2.0 C-mount camera with 0.37x reduction lens, and coaxial coarse/fine focus. Substituted in for the seed's Andonstar AD409 (see category methodologyNotes) as a well-documented budget/mid-tier binocular reference point."
+    },
+    {
+      "slug": "nikon-eclipse-e100",
+      "name": "Nikon Eclipse E100",
+      "brand": "Nikon",
+      "category": "microscopes",
+      "releaseDate": null,
+      "priceUsd": 3000,
+      "priceNote": "$3,000.00 flat listing per ReScience Inc, a US microscope reseller; exact configuration (binocular vs. trinocular, LED vs. halogen) is not specified on that listing. Nikon's own healthcare/microscope site is spec-only with no public price.",
+      "specs": {
+        "max_magnification": 1000,
+        "head_type": "Binocular or trinocular tube, 47-75mm interpupillary adjustment, 30-degree inclination",
+        "illumination_type": "High-luminescence white LED (Eco-illumination) or 6V/20W halogen",
+        "objective_count": 4,
+        "mechanical_stage": true,
+        "condenser_type": "Abbe (YS-CA), N.A. 1.25; optional YS100 phase condenser",
+        "camera_compatible": true,
+        "focus_mechanism": "Coaxial coarse/fine, adjustable torque, 22mm stroke, 0.2mm per rotation (fine)"
+      },
+      "source": {
+        "url": "https://www.microscope.healthcare.nikon.com/en_AOM/products/upright-microscopes/eclipse-e100/specifications",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.rescienceinc.com/product-page/nikon-eclipse-e100-microscope",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/nikon-eclipse-e100.jpg?v=7b2f5b8f15",
+        "source": "Product photo listed by ReScience Inc (US Nikon microscope reseller); image file's own embedded metadata is titled 'Nikon Eclipse E100 Microscope_01'",
+        "license": "© Nikon",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Fetched directly from Nikon's own healthcare/microscope specifications page: binocular and trinocular tube options (30-degree, 47-75mm IPD), high-luminescence white LED or 6V/20W halogen illumination, nine total CFI BE Plan Achromat objective options (4x/10x/20x/40x/60x/100x-oil plus DL variants), rectangular mechanical stage (76x40mm cross-travel, vernier), Abbe N.A.1.25 condenser (optional phase condenser), and coaxial coarse/fine focus (22mm stroke, 0.2mm fine/rotation). Standard base kit uses 4 objectives (4x/10x/40x/100x-oil) for a 1000x optical max with 10x eyepieces; the full 9-objective menu is available across configurations. Price ($3,000.00) corroborated by ReScience Inc, a US microscope reseller; the product photo's own file metadata explicitly names the depicted unit 'Nikon Eclipse E100 Microscope_01,' directly confirming it depicts this exact model."
+    },
+    {
+      "slug": "leica-dm750",
+      "name": "Leica DM750",
+      "brand": "Leica Microsystems",
+      "category": "microscopes",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "Leica markets the DM750 through a quote-only B2B channel; leica-microsystems.com shows no price, and retailer listings found (Fisher Scientific, MicroscopeCentral) require account/quote access that could not be fetched (fishersci.com connection reset on every attempt).",
+      "specs": {
+        "max_magnification": 1000,
+        "head_type": "Binocular, 45-degree inclined EZ Tube",
+        "illumination_type": "LED, auto-off after 2 hours",
+        "objective_count": 4,
+        "mechanical_stage": true,
+        "condenser_type": "Abbe, N.A. 0.9 dry / 1.25 oil, with slot for phase and darkfield sliders",
+        "camera_compatible": true,
+        "focus_mechanism": "Weighted coaxial focus knobs (inertia-damped for accuracy)"
+      },
+      "source": {
+        "url": "https://www.leica-microsystems.com/products/light-microscopes/p/dm750-educational-microscope/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/leica-dm750.jpg?v=2c235050b6",
+        "source": "leica-microsystems.com (manufacturer official product page)",
+        "license": "© Leica Microsystems",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Fetched directly from leica-microsystems.com: Plan 4x/10x/40x/100x-oil (1.25 NA) objectives, 45-degree binocular EZ Tube with integrated 10x/20mm-field eyepieces, LED illumination with 2-hour auto-off, non-extending rack-and-slide mechanical stage, Abbe condenser (0.9 dry/1.25 oil) with a slot for phase-contrast and darkfield sliders, and weighted coaxial focus knobs. Integrated-wireless-camera and ICC50W 5MP camera-module variants are separately listed by Leica and by resellers (microscopeinternational.com, megamedicalshop.com - both blocked on fetch), confirming camera compatibility for the DM750 line. No price is published on the manufacturer page or reachable in any retailer listing; image directly confirmed via fetch, showing 'LEICA DM750' branding on the arm."
+    },
+    {
+      "slug": "zeiss-primostar-3",
+      "name": "Zeiss Primostar 3",
+      "brand": "Zeiss",
+      "category": "microscopes",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "ZEISS's own micro-shop.zeiss.com product page displays no price (login/quote-gated), and third-party listings (hospitalstore.com returned HTTP 403, midlandsci.com returned HTTP 402) likewise gate pricing behind an account.",
+      "specs": {
+        "max_magnification": 1000,
+        "head_type": "Binocular or trinocular (25°/20 tube or 25°/22 50:50 phototube)",
+        "illumination_type": "LED 1W or 3W (5600K), or 6V/30W halogen",
+        "objective_count": 4,
+        "mechanical_stage": true,
+        "condenser_type": "Abbe, N.A. 0.9/1.25 with slot; turret versions add BF/DF/Ph1/Ph2/Ph3",
+        "camera_compatible": true,
+        "focus_mechanism": "Rackless focusing system"
+      },
+      "source": {
+        "url": "https://www.micro-shop.zeiss.com/en/us/system/Primostar%203/10335/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/zeiss-primostar-3.jpg?v=be250e35ac",
+        "source": "micro-shop.zeiss.com (manufacturer official storefront)",
+        "license": "© Zeiss",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Fetched directly from ZEISS's own micro-shop.zeiss.com US storefront page: iPlan-Achromat 4x/10x/40x/100x-oil objectives, binocular/trinocular tube options, LED (1W/3W, 5600K) or halogen (6V/30W) illumination, rackless mechanical stage (75x40mm or 75x50mm), Abbe condenser (plain or BF/DF/Ph1-3 turret), and optional 5MP CMOS or 8MP Sony CMOS integrated cameras with USB3.0/Ethernet/HDMI. No price is exposed on the page (quote-gated); image directly fetched and visually confirmed showing 'ZEISS' and partial 'Primostar' branding with an Axiocam 208 color camera fitted, consistent with the trinocular camera-ready configuration described."
+    }
+  ]
+}

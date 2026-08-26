@@ -1,0 +1,405 @@
+{
+  "category": "tens-units",
+  "generatedAt": "2026-08-01",
+  "methodologyNotes": "Roster covers 12 OTC TENS/EMS units a 2026 buyer typically compares, spanning budget wired units through app-controlled wireless systems: TENS 7000 2nd Edition, Omron Pocket Pain Pro (PM400, the current SKU that superseded the PM3029/PM3030), Omron Max Power Relief (PM500), iReliev ET-1313, Compex Edge 3.0, AUVON Dual Channel TENS Unit, Belifu Dual Channel TENS/EMS Unit, NueMedics Tens 24, HealthmateForever YK15AB, Easy@Home EHE009, and PowerDot 2.0 Duo, plus TechCare Massager Plus 24 added for category coverage. Primary sources were official manufacturer pages (tens7000.com, omronhealthcare.com) where reachable, cross-checked against medgrade.org's per-device spec tables (fetched and parsed from raw HTML, not just AI summaries) and, for iReliev ET-1313, a manufacturer product-box photo that visually confirmed model number, program count and timer text. Four brand storefronts — ireliev.com, nuemedics.com, auvonhealth.com and techcaremassager.com — were unreachable all session (network layer returned 429 'local_rate_limited' on every attempt, including plain product-JSON endpoints), so those four products relied on medgrade.org plus archived manual/retail listings instead; NueMedics additionally has no confirmed USD price or intensity-level count (both left null) because no reachable source published either. One QA note worth flagging: a '100 intensity levels' figure for PowerDot 2.0 Duo turned out on raw-text review to be the device's peak 100 mA output current, not a discrete intensity-level count, so intensity_levels is null for PowerDot rather than a mA figure mislabeled as levels. For the Compex Edge 3.0, the medgrade.org spec table does list 'Intensity Levels: 999' (confirmed in the live page), which is Compex's genuine 0-999 intensity scale, so that field is recorded as 999. AUVON's medgrade listing carries FDA/regulatory model number TP2208C while its retail packaging and manual (ManualsLib-hosted) use AS8012; both names are for the same physical dual-channel unit and are noted together. 'electrode_pads_included' reflects pads shipped in the base box, not replacement-pad multipacks (several device pages list a monthly/replacement pad SKU under a cost-analysis section that is NOT the in-box count, and was excluded accordingly). All prices are current US list/street price for the base single-unit configuration; accessedAt 2026-08-01.",
+  "specKeys": [
+    "output_channels",
+    "intensity_levels",
+    "preset_modes",
+    "power_source",
+    "electrode_pads_included",
+    "timer_range_min",
+    "wireless",
+    "fda_cleared"
+  ],
+  "products": [
+    {
+      "slug": "tens-7000-2nd-edition",
+      "name": "TENS 7000 2nd Edition",
+      "brand": "TENS 7000",
+      "category": "tens-units",
+      "releaseDate": null,
+      "priceUsd": 52.99,
+      "priceNote": "MSRP for the 2nd Edition kit with accessories on tens7000.com (the brand's own storefront); a bare-bones listing at tensproducts.com shows $36.95 for the same device without the full accessory kit",
+      "specs": {
+        "output_channels": 2,
+        "intensity_levels": 8,
+        "preset_modes": 5,
+        "power_source": "9V battery (included)",
+        "electrode_pads_included": 4,
+        "timer_range_min": "2-60",
+        "wireless": false,
+        "fda_cleared": true
+      },
+      "source": {
+        "url": "https://tens7000.com/products/tens-7000-2nd-edition-digital-tens-unit-with-accessories",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://tensproducts.com/product/tens-7000-2nd-edition-digital-tens-unit-otc/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://tens7000.com/cdn/shop/files/DT7202_Web_Images-16_1024x1024.jpg?v=1695914873",
+        "source": "tens7000.com",
+        "license": "© TENS 7000",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Fetched directly from tens7000.com: dual channel (up to 4 electrodes), 0-100 mA output across 8 intensity levels, 5 built-in modes (Normal, Burst, Modulation, SD1, SD2), pulse duration 50-300 µs, timer adjustable 2-60 min, 9V battery, four 2\"x2\" reusable electrodes included, FDA-cleared OTC device. Product photo (downloaded and visually confirmed) shows the branded hard case, 2 lead wires, 4 pads and the dual-channel LCD unit reading CH1/CH2, 120 Hz, SD2, 60 Min."
+    },
+    {
+      "slug": "omron-pocket-pain-pro-pm400",
+      "name": "Omron Pocket Pain Pro (PM400)",
+      "brand": "Omron",
+      "category": "tens-units",
+      "releaseDate": null,
+      "priceUsd": 51.99,
+      "priceNote": "MSRP per omronhealthcare.com; PM400 is the current SKU that replaced the earlier PM3029/PM3030",
+      "specs": {
+        "output_channels": 1,
+        "intensity_levels": 10,
+        "preset_modes": "5 (3 pain-relief programs: Arm/Shoulder, Lower Back, Leg/Foot + 2 massage modes: Knead, Steady)",
+        "power_source": "2x AAA batteries (included)",
+        "electrode_pads_included": 2,
+        "timer_range_min": "0-15",
+        "wireless": false,
+        "fda_cleared": true
+      },
+      "source": {
+        "url": "https://omronhealthcare.com/products/pocket-pain-pro-tens-unit-pm400",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://accessgudid.nlm.nih.gov/devices/search?query=Omron+Pocket+Pain+Pro+PM400",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://omronhealthcare.com/images/fit=crop-50-50,fm=jpg,h=1200,w=1200/products/pm400-hero-600x600.jpg",
+        "source": "omronhealthcare.com",
+        "license": "© Omron",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Fetched directly from omronhealthcare.com: single-channel, 10 adjustable intensity levels, 3 pre-set pain programs (Arm/Shoulder, Lower Back, Leg/Foot) plus 2 massage modes (Knead, Steady), 2 AAA batteries, 2 reusable Long Life Pads included (reusable up to ~150 uses), max 15-minute therapy duration, belt-clip design. Page did not itself state an FDA clearance line; fda_cleared confirmed via the device's registered AccessGUDID/UDI entry (Omron Healthcare, model PM400), and OTC TENS devices legally require FDA 510(k) clearance to be sold in the US. Product photo downloaded and visually confirmed (round silver 'OMRON' unit, 2 Long Life Pads)."
+    },
+    {
+      "slug": "omron-max-power-relief-pm500",
+      "name": "Omron Max Power Relief (PM500)",
+      "brand": "Omron",
+      "category": "tens-units",
+      "releaseDate": null,
+      "priceUsd": 79.99,
+      "priceNote": "MSRP per omronhealthcare.com",
+      "specs": {
+        "output_channels": 1,
+        "intensity_levels": 15,
+        "preset_modes": "9 (6 pain programs: Arm, Lower Back, Leg/Foot, Joint, Shoulder + 3 massage modes: Tap, Knead, Rub)",
+        "power_source": "2x AAA batteries (included)",
+        "electrode_pads_included": 2,
+        "timer_range_min": "0-15",
+        "wireless": false,
+        "fda_cleared": true
+      },
+      "source": {
+        "url": "https://omronhealthcare.com/products/max-power-relief-tens-unit-pm500",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://omronhealthcare.com/images/fit=crop-50-50,fm=jpg,h=1200,w=1200/products/pm500-hero-600x600.png",
+        "source": "omronhealthcare.com",
+        "license": "© Omron",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Fetched directly from omronhealthcare.com: single-channel, 15 intensity levels ('2x the power' vs. entry Omron models), 6 pain-relief modes, 3 massage modes, 2 AAA batteries, 1 pair of Long Life Pads included, max 15-minute session, belt clip + case. Page did not itself state an explicit FDA-clearance sentence; marked true on the same basis as the PM400 (same Omron OTC TENS line, legally requires 510(k) clearance to be sold OTC in the US) — treat as high-confidence but not page-quoted. Product photo downloaded and visually confirmed (black 'MAX POWER RELIEF' unit with Tap/Knead/Rub and Arm/LBack/Leg/Foot/Joint mode grid, intensity 15 shown on display)."
+    },
+    {
+      "slug": "ireliev-et-1313",
+      "name": "iReliev TENS Unit Pain Relief System (ET-1313)",
+      "brand": "iReliev",
+      "category": "tens-units",
+      "releaseDate": null,
+      "priceUsd": 59.95,
+      "priceNote": "Current price per medgrade.org device page; other retailers have shown this model between $49.95 and $67.95 list",
+      "specs": {
+        "output_channels": 2,
+        "intensity_levels": 25,
+        "preset_modes": 8,
+        "power_source": "3x AAA batteries",
+        "electrode_pads_included": null,
+        "timer_range_min": "up to 60 (adjustable)",
+        "wireless": false,
+        "fda_cleared": true
+      },
+      "source": {
+        "url": "https://medgrade.org/reviews/ireliev-tens-unit-pain-relief-system-et-1313-review/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.amazon.com/iReliev-Relief-System-Channel-Massager/dp/B00J5QHNO6",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://medgrade.org/app/uploads/2026/04/iReliev-TENS-Unit-Pain-Relief-System-ET-1313-mg.jpg",
+        "source": "medgrade.org",
+        "license": "© iReliev",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "TENS-only (no EMS) wired dual-channel device: 80 mA medical-grade symmetrical biphasic output, 8 pre-set programs, dual-channel with independent per-channel intensity, 3 AAA batteries, FDA 510(k) Cleared (confirmed in medgrade.org raw page text). Downloaded and visually confirmed the retail box photo, which reads 'Model # ET-1313', 'Wired', '8 TENS Programs', '60 Minutes Adjustable Therapy Time', and shows the LCD reading CH1 25 / CH2 25 / P8 TENS / 60 MIN — corroborating the 25-level intensity figure and the up-to-60-minute timer. ireliev.com itself was unreachable all session (429 on every request, including the .json product endpoint); iReliev's own official site could not be used as the primary source this pass. Box-included electrode pad count not confirmed anywhere reached (only a separate 4-8 pad refill-kit SKU was found) — left null rather than guessed."
+    },
+    {
+      "slug": "compex-edge-3-0",
+      "name": "Compex Edge 3.0",
+      "brand": "Compex",
+      "category": "tens-units",
+      "releaseDate": null,
+      "priceUsd": 149.99,
+      "priceNote": "List price per medgrade.org (data-track-price=149.99, matches the on-page displayed $149.99); street price at some retailers (e.g. Medco Sports Medicine) runs closer to $139.72",
+      "specs": {
+        "output_channels": 4,
+        "intensity_levels": 999,
+        "preset_modes": "4 (Resistance, Strength, Recovery, TENS)",
+        "power_source": "rechargeable Li-ion battery (USB), up to 8 hrs of stimulation",
+        "electrode_pads_included": 6,
+        "timer_range_min": null,
+        "wireless": false,
+        "fda_cleared": true
+      },
+      "source": {
+        "url": "https://medgrade.org/devices/compex-edge-3-0/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.medco-athletics.com/compex-edge-3-0",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://medgrade.org/app/uploads/2026/04/Compex-Edge-3.0-mg.jpg",
+        "source": "medgrade.org",
+        "license": "© Compex",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Verified directly against medgrade.org's raw HTML spec table: 'Number of Channels: 4 independent channels', 'Pre-set Programs: 4 (Resistance, Strength, Recovery, TENS)', 'Intensity Levels: 999', 'Power Source & Battery Life: Rechargeable battery; up to 8 hours', 'FDA Classification: Class II Medical Device', device price $149.99. The 999 figure is the source-listed value and matches Compex's signature 0-999 intensity scale used across its stimulator line, so intensity_levels is recorded as 999. Electrode pad count (2x 2\"x4\" + 4x 2\"x2\" = 6 total) and timer behavior are corroborated by Medco Sports Medicine's product page (which lists 2x4 snap electrodes qty 2 + 2x2 snap electrodes qty 4); Compex Edge 3.0 uses fixed program durations rather than a user-set timer dial, so timer_range_min is left null. No wireless/app connectivity on this wired model. compexusa.com now redirects to the brand's French storefront and could not be used directly this pass."
+    },
+    {
+      "slug": "auvon-dual-channel-as8012",
+      "name": "AUVON Dual Channel TENS Unit (AS8012)",
+      "brand": "AUVON",
+      "category": "tens-units",
+      "releaseDate": null,
+      "priceUsd": 31.99,
+      "priceNote": "Price per medgrade.org device listing; the same unit is commonly sold under SKU AS8012 on Amazon/retail for around $35.99",
+      "specs": {
+        "output_channels": 2,
+        "intensity_levels": 20,
+        "preset_modes": 20,
+        "power_source": "rechargeable lithium battery (USB), up to 10 hrs of use",
+        "electrode_pads_included": 8,
+        "timer_range_min": "10-60",
+        "wireless": false,
+        "fda_cleared": true
+      },
+      "source": {
+        "url": "https://medgrade.org/devices/auvon-dual-channel-tens-unit-20-modes/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.manualslib.com/manual/2939800/Auvon-As8012.html",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://medgrade.org/app/uploads/2026/04/AUVON-Dual-Channel-TENS-EMS-Unit-20-Modes-mg.jpg",
+        "source": "medgrade.org",
+        "license": "© AUVON",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "medgrade.org's device page (verified against raw HTML) lists this exact unit under FDA/regulatory model number TP2208C — 2 independent channels, 20 intensity levels, 20 pre-set programs, rechargeable lithium battery (~10 hrs), FDA Class II Medical Device — while AUVON's own retail packaging and user manual (hosted on ManualsLib) use model number AS8012 for the same physical dual-channel A/B unit and add the timer detail (default 20 min, adjustable 10-60 min) and included-pad count (8 pads: 4x 2\" + 4x 2\"x4\", per Green PT's retail listing). Both model numbers are used together in the name since they refer to the same device. auvonhealth.com itself was unreachable all session (429 on every request, including the .json product endpoint). Product photo downloaded and visually confirmed: black/silver AUVON dual-channel unit with A/B channel buttons, 8 pads, and a drawstring pouch."
+    },
+    {
+      "slug": "belifu-dual-channel-as8015",
+      "name": "Belifu Dual Channel TENS/EMS Unit (AS8015)",
+      "brand": "Belifu",
+      "category": "tens-units",
+      "releaseDate": null,
+      "priceUsd": 69.99,
+      "priceNote": "List price per medgrade.org (data-track-price=69.99); frequently discounted to around $35.99 on Amazon/Newegg",
+      "specs": {
+        "output_channels": 2,
+        "intensity_levels": 20,
+        "preset_modes": 24,
+        "power_source": "rechargeable lithium-polymer battery (USB)",
+        "electrode_pads_included": null,
+        "timer_range_min": null,
+        "wireless": false,
+        "fda_cleared": true
+      },
+      "source": {
+        "url": "https://medgrade.org/devices/belifu-tens-ems-unit/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.newegg.com/p/0DJ-09DK-00002",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://medgrade.org/app/uploads/2026/04/Belifu-TENS-EMS-Unit-mg.jpg",
+        "source": "medgrade.org",
+        "license": "© Belifu",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Verified directly against medgrade.org's raw HTML spec table: Model Number AS8015, Manufacturer Belifu, Connectivity USB, Modes 24, Intensity Levels 20, and 'FDA 510(k) Cleared' stated in the page body (all re-confirmed by re-fetching and grepping the raw HTML, not just the summarized page). Number of channels (2, independent A/B) confirmed via Newegg's listing title and product photo, which shows a touchscreen unit with separate TENS/EMS channels A and B, each independently at intensity 20. In-box electrode pad count and timer range were not stated on the sourced spec page (a separate Newegg listing for a different-looking Belifu model claims '10 Pads' and a 10-60 min timer, but since that photo does not match this touchscreen unit, those figures were not carried over) — left null rather than guessed."
+    },
+    {
+      "slug": "nuemedics-tens-24",
+      "name": "NueMedics Tens 24",
+      "brand": "NueMedics",
+      "category": "tens-units",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "No stable USD list price found; nuemedics.com does not show a price without selecting a bundle/variant at checkout, and the storefront was unreachable this session",
+      "specs": {
+        "output_channels": 2,
+        "intensity_levels": null,
+        "preset_modes": 24,
+        "power_source": "rechargeable lithium battery (USB), up to 20 hrs of continuous use",
+        "electrode_pads_included": 6,
+        "timer_range_min": "20-60",
+        "wireless": false,
+        "fda_cleared": true
+      },
+      "source": {
+        "url": "https://nuemedics.com/products/newest-model-nuemedics-tens-24-massager-tens-unit",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "nuemedics.com and its /products/*.json endpoint returned HTTP 429 ('local_rate_limited') on every attempt this session, both via the fetch tool and a direct curl with a standard browser user-agent, so the product page could not be independently re-verified — data below is from a search-engine synthesis of that exact nuemedics.com listing plus its FDA 510(k) status, and should be treated as lower-confidence than the other entries in this file: 24 pre-set massage modes (Neck, Acupuncture, Deep Tissue, Foot/Hand, Cupping, Joint, etc.), dual A-B output channels with independent per-channel strength, timer adjustable 20-60 min, rechargeable internal lithium battery (~20 hrs), large touch LCD display, includes 6 large electrode pads + 2 electrode cables, FDA 510(k) cleared. No specific intensity-level count or USD price was stated in any source reached — both left null. No confirmed, rights-clear product image could be sourced this session (manufacturer site blocked; Amazon/eBay listing photos could not be reliably matched to this exact model) — image intentionally omitted rather than guessed."
+    },
+    {
+      "slug": "healthmateforever-yk15ab",
+      "name": "HealthmateForever YK15AB",
+      "brand": "HealthmateForever",
+      "category": "tens-units",
+      "releaseDate": null,
+      "priceUsd": 59.99,
+      "priceNote": "List price per medgrade.org (data-track-price=59.99), consistent with the ~$60 price seen elsewhere",
+      "specs": {
+        "output_channels": 2,
+        "intensity_levels": 20,
+        "preset_modes": 15,
+        "power_source": "rechargeable Li-ion battery, ~25 hrs runtime",
+        "electrode_pads_included": 8,
+        "timer_range_min": "10-80",
+        "wireless": false,
+        "fda_cleared": true
+      },
+      "source": {
+        "url": "https://medgrade.org/devices/healthmateforever-yk15ab-tens-ems/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.healthmateforever.com/products/fda-cleared-otc-pain-relief-yk15ab-tens-units",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://medgrade.org/app/uploads/2026/04/HealthmateForever-YK15AB-TENS_EMS-Therapy-Device-mg.jpg",
+        "source": "medgrade.org",
+        "license": "© HealthmateForever",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Verified against medgrade.org's raw HTML spec table: Model YK15AB, Connectivity USB, Intensity Levels 20, Pulse Width 50-250 µs, Frequency 1-120 Hz, Number of Channels 2, Pre-set Programs/Modes 15, Timer Settings '10-80 min adjustable', Power Source 'Rechargeable Li-ion; ~25 h runtime', and 'FDA 510(k) Cleared' stated in the page body. The unit markets '4 outputs' because each of the 2 independent channels splits to 2 pad jacks (supports up to 8 pads simultaneously) — output_channels is recorded as 2 independent channels, matching the manufacturer's own healthmateforever.com listing. Downloaded and visually confirmed the retail photo: 'HealthmateForever' handheld unit, 8 electrode pads (2 sets of 4), 4 lead wires, and 3 AAA spare/backup batteries in the box."
+    },
+    {
+      "slug": "easy-at-home-ehe009",
+      "name": "Easy@Home EHE009",
+      "brand": "Easy@Home",
+      "category": "tens-units",
+      "releaseDate": null,
+      "priceUsd": 26.99,
+      "priceNote": "Current Walmart.com listing price; no manufacturer-published MSRP was found (Easy@Home does not appear to maintain a public US price list for this legacy model)",
+      "specs": {
+        "output_channels": 2,
+        "intensity_levels": 10,
+        "preset_modes": 6,
+        "power_source": "4x AAA batteries",
+        "electrode_pads_included": 4,
+        "timer_range_min": null,
+        "wireless": false,
+        "fda_cleared": true
+      },
+      "source": {
+        "url": "https://www.amazon.com/Easy-Home-TENS-Muscle-Stimulator/dp/B00O9P2VLI",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.walmart.com/ip/Easy-Home-TENS-Handheld-Electronic-Pulse-Massager-Unit-EHE009-Muscle-Pain-Relief-Stimulator/48841557",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Battery-powered (not rechargeable) budget handheld: 2 independent channels, 4 electrode pads, 6 auto/preset procedure options, 10 adjustable intensity levels, large LCD display, 4 AAA batteries included, FDA-cleared/510(k) OTC device per its Amazon and manufacturer listing titles. Timer range not stated on any source reached this session — left null. Both easyhomeus.com (not the actual brand site — it resolves to an unrelated real-estate lending company) and the manufacturer's Amazon/Walmart listings render pricing via client-side JavaScript that could not be captured directly; the $26.99 figure came from a search-engine snippet of the Walmart listing rather than a directly fetched page, so treat priceUsd with slightly lower confidence than the other entries. No confirmed, rights-clear product image could be sourced this session (retailer pages are bot-protected/JS-rendered and no manufacturer or medgrade.org photo could be reached) — image intentionally omitted rather than guessed."
+    },
+    {
+      "slug": "powerdot-2-0-duo",
+      "name": "PowerDot 2.0 Duo",
+      "brand": "Therabody (PowerDot)",
+      "category": "tens-units",
+      "releaseDate": null,
+      "priceUsd": 399,
+      "priceNote": "List price per medgrade.org (data-track-price=399); some retailers/regions have shown it closer to $349",
+      "specs": {
+        "output_channels": 4,
+        "intensity_levels": null,
+        "preset_modes": "10+ app-guided TENS/NMES protocols (Bluetooth app-controlled, plus a manual on-device mode)",
+        "power_source": "rechargeable Li-ion battery (USB-C), ~20 hrs per charge, ~60 min to full charge",
+        "electrode_pads_included": 4,
+        "timer_range_min": "app-guided ~20 min sessions; auto shut-off at 60 min",
+        "wireless": true,
+        "fda_cleared": true
+      },
+      "source": {
+        "url": "https://medgrade.org/reviews/powerdot-2-duo-review/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://mfimedical.com/products/tens-nmes-unit-powerdot-2-0-duo-4-channel",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://medgrade.org/app/uploads/2026/04/Therabody-PowerDot-2.0-Duo-Smart-Muscle-Stimulator-mg.jpg",
+        "source": "medgrade.org",
+        "license": "© Therabody",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Verified against medgrade.org's raw page text: 'Peak 100 mA wireless output' (this is the peak current, not a discrete intensity-level count — an earlier automated summary had mislabeled it as '100 intensity settings', so intensity_levels is left null rather than repeating that conflation), 'batteries lasted 20 h per charge', 'Master in an hour' (charge time), 'App-guided 20-minute sessions delivered peak benefit; auto-shutoff at 60 min', Bluetooth app with Apple Health integration, FDA 510(k) Cleared, price $399. Electrode Pads cost-section states 'Pack of 2 pads per pod'; the Duo kit ships 2 pods, so electrode_pads_included is computed as 4. output_channels=4 is corroborated independently by three medical-supply distributors (Betty Mills, McKesson, mfimedical) all titling this exact model 'PowerDot 2.0 Duo ... 4-Channel'."
+    },
+    {
+      "slug": "techcare-plus-24",
+      "name": "TechCare Massager Plus 24",
+      "brand": "TechCare",
+      "category": "tens-units",
+      "releaseDate": null,
+      "priceUsd": 49.95,
+      "priceNote": "List price per medgrade.org (data-track-price=49.95)",
+      "specs": {
+        "output_channels": 2,
+        "intensity_levels": 20,
+        "preset_modes": 24,
+        "power_source": "rechargeable Li-ion battery (USB), ~20 hrs of use",
+        "electrode_pads_included": 8,
+        "timer_range_min": "10-60",
+        "wireless": false,
+        "fda_cleared": true
+      },
+      "source": {
+        "url": "https://medgrade.org/devices/techcare-massager-plus-24/",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://techcaremassager.com/products/plus-tens-unit-1",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://medgrade.org/app/uploads/2026/04/TechCare-Massager-Plus-24-TENS-Unit-mg.jpg",
+        "source": "medgrade.org",
+        "license": "© TechCare",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "Verified directly against medgrade.org's raw HTML spec table: Model 'Plus 24', Intensity Levels 20, Pulse Width 20-400 µs, Frequency 1-120 Hz, Number of Channels 2, Pre-set Programs/Modes 24, Timer Settings '10-60 min adjustable', Power Source 'USB rechargeable Li-ion; ~20 h', Electrode Pads '(Pack of 8 reusable pads)', and 'FDA 510(k) Cleared' in the page body. techcaremassager.com (the manufacturer's real domain — an earlier guess at 'drfrequency.com' turned out to be an expired/parked domain unrelated to the brand) was unreachable this session (429 'local_rate_limited'), so its own product page could not be independently re-fetched, but its listing title and description corroborate the dual-channel/24-mode/TENS+PMS description. Product photo downloaded and visually confirmed: black 'TechCare' touchscreen handheld with A/B channel pad bundles (Kneading/Swedish/Cupping/Scrapping/Reflexology/Tai-Chi mode icons visible) and 8 total electrode pads."
+    }
+  ]
+}

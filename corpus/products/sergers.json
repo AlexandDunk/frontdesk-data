@@ -1,0 +1,419 @@
+{
+  "category": "sergers",
+  "generatedAt": "2026-08-01",
+  "methodologyNotes": "thread_count is a slash-separated string of the thread configurations the machine supports as published by the manufacturer (e.g. a 3/4-thread serger is \"3/4\"). stitch_options is the integer count of distinct built-in stitch types/patterns as explicitly stated by the manufacturer (e.g. 'Total Stitches: 23'); where the manufacturer only names stitch types without a published total, the count of distinctly named types is used and flagged in provenance; null where neither is available. stitches_per_minute is the maximum sewing speed in stitches per minute (spm). differential_feed, air_threading and free_arm are true/false when the manufacturer's spec sheet or feature list explicitly confirms or the feature is absent from an otherwise-detailed feature list (e.g. a flatbed coverstitch-only machine with no free-arm feature listed); null when genuinely unconfirmed either way. presser_foot_lift_in is the maximum presser-foot lift in inches (metric mm figures converted to inches); null if not published. needles is a free-text description of needle count/system (e.g. household HAx1) when the manufacturer publishes it; null otherwise. priceUsd is the US manufacturer-published price (MSRP/suggested retail or the brand's own direct-to-consumer listed price); null when no manufacturer or authorized-dealer price could be verified (several premium brands, notably BERNINA/bernette, restrict published pricing under MAP policy). Several official brand sites (singer.com, and intermittently bernette.com and some Shopify-hosted dealer sites) returned persistent HTTP 429/403 responses to automated access during this research pass; where the manufacturer page itself could not be retrieved, an authorized-dealer page was used as the primary source and is flagged in that product's provenance. A 14th candidate model (Husqvarna Viking Huskylock S25) was dropped from this dataset entirely because no manufacturer or authorized-dealer spec/price page could be verified this pass — consistent with this dataset's null-over-guess discipline. All figures verified 2026-08-01.",
+  "specKeys": [
+    "thread_count",
+    "stitch_options",
+    "stitches_per_minute",
+    "differential_feed",
+    "air_threading",
+    "free_arm",
+    "presser_foot_lift_in",
+    "needles"
+  ],
+  "products": [
+    {
+      "slug": "brother-1034d",
+      "name": "Brother 1034D",
+      "brand": "Brother",
+      "category": "sergers",
+      "releaseDate": null,
+      "priceUsd": 319.99,
+      "priceNote": "Current listed price $319.99 per brother-usa.com as of 2026-08-01; no separate MSRP/sale distinction shown on the official page.",
+      "specs": {
+        "thread_count": "3/4",
+        "stitch_options": 5,
+        "stitches_per_minute": 1300,
+        "differential_feed": true,
+        "air_threading": false,
+        "free_arm": true,
+        "presser_foot_lift_in": null,
+        "needles": "2 needles (system code not published)"
+      },
+      "source": {
+        "url": "https://www.brother-usa.com/p/sergers-coverstitch/1034D",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/brother-1034d.png?v=39ba214ab8",
+        "source": "brother-usa.com",
+        "license": "© Brother",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "brother-usa.com official spec/feature sheet (fetched directly, JSON-LD price 319.99) confirms 2-needle 3/4-thread capability, 5 named stitch types (4-thread overlock, 3-thread overlock, narrow hem, rolled hem, ribbon lock), differential feed, 1300 spm max speed, adjustable stitch width 3-7mm, and a 'Free Arm Capability' feature ('Free Arm for Sewing Cuffs and Sleeves'). Air threading and presser foot lift height are not published specs on this entry-level mechanical model — nulled/false accordingly. Needle system code not published on the spec sheet."
+    },
+    {
+      "slug": "juki-mo-654de",
+      "name": "Juki MO-654DE",
+      "brand": "Juki",
+      "category": "sergers",
+      "releaseDate": null,
+      "priceUsd": 1399,
+      "priceNote": "JUKI-published Suggested Retail Price $1,399.00 per jukihome.com as of 2026-08-01. Authorized-dealer street prices for this popular entry/mid-tier model commonly run well below suggested retail; no single verified street price was confirmed this pass.",
+      "specs": {
+        "thread_count": "2/3/4",
+        "stitch_options": null,
+        "stitches_per_minute": 1500,
+        "differential_feed": true,
+        "air_threading": false,
+        "free_arm": null,
+        "presser_foot_lift_in": 0.2,
+        "needles": "Household HAx1, sizes #11-14"
+      },
+      "source": {
+        "url": "https://www.jukihome.com/products/serging/mo-654de.html",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/juki-mo-654de.jpg?v=95b8f35a3f",
+        "source": "jukihome.com",
+        "license": "© Juki",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "jukihome.com official spec sheet confirms 2/3/4-thread capability, differential feed ratio 0.7-2.0, 1,500 spm max speed, presser foot lift 0.2in (5mm), household HAx1 needle system sizes #11-14, and JUKI Suggested Retail Price $1,399.00. Overlock/flatlock/rolled-hem stitch capability is described narratively without a published total stitch count, so stitch_options is nulled. Air threading and free arm are not mentioned on the spec page and are absent from Juki's marketing of this model tier (both features are reserved for higher Juki models), so air_threading is false and free_arm is nulled as unconfirmed rather than assumed false."
+    },
+    {
+      "slug": "singer-s0230",
+      "name": "Singer S0230",
+      "brand": "Singer",
+      "category": "sergers",
+      "releaseDate": null,
+      "priceUsd": 339.99,
+      "priceNote": "MSRP $339.99 per singer.com; listed at a sale price of $289.99 at time of access (2026-08-01).",
+      "specs": {
+        "thread_count": "2/3/4",
+        "stitch_options": null,
+        "stitches_per_minute": 1300,
+        "differential_feed": true,
+        "air_threading": false,
+        "free_arm": true,
+        "presser_foot_lift_in": null,
+        "needles": null
+      },
+      "source": {
+        "url": "https://www.singer.com/products/singer-s0230-serger",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/singer-s0230.jpg?v=36e74f7124",
+        "source": "singer.com",
+        "license": "© Singer",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "singer.com official product page confirms 2/3/4-thread capability, color-coded threading, differential feed, built-in free arm ('makes it possible to sew around small sleeves and cuffs'), 1,300 spm professional speed, rolled hem capability, MSRP $339.99 with a listed sale price of $289.99. No explicit total stitch-type count, presser foot lift measurement, air threading feature, or needle system designation is published on the page — nulled/false accordingly. Repeated automated re-verification attempts against singer.com later in this research session returned HTTP 429 (rate-limited); the data above reflects the successful initial fetch."
+    },
+    {
+      "slug": "bernette-b48-funlock",
+      "name": "bernette b48 FUNLOCK",
+      "brand": "bernette (BERNINA)",
+      "category": "sergers",
+      "releaseDate": null,
+      "priceUsd": null,
+      "priceNote": "No US price is published on bernette.com; bernette/BERNINA authorized dealers do not display pricing for this model publicly (MAP-restricted, 'call for price'). No verified MSRP found this pass.",
+      "specs": {
+        "thread_count": "2/3/4/5",
+        "stitch_options": 23,
+        "stitches_per_minute": 1300,
+        "differential_feed": true,
+        "air_threading": false,
+        "free_arm": false,
+        "presser_foot_lift_in": null,
+        "needles": "ELx705"
+      },
+      "source": {
+        "url": "https://www.bernette.com/en-US/models/bernette-48-funlock",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://yousewandsew.com/best-serger-reviews/bernette-b48/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/bernette-b48-funlock.png?v=de81123394",
+        "source": "bernette.com",
+        "license": "© BERNINA",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "bernette.com official product page confirms a total of 23 stitches (15 overlock, 3 coverstitch, 4 combo, 1 chain), 2-/3-/4-/5-thread capability, 1,300 spm max speed, differential feed, ELx705 needle set, and an overlock/coverstitch combo design. yousewandsew.com review corroborates and explicitly lists 'no free arm' as a noted limitation, consistent with the combo overlock/coverstitch chassis. Air threading is not mentioned on the official page or in the review (manual threading model) — false. Presser foot lift height is not published. No US price is shown on bernette.com for this locale/session; dealer sites checked (sergerpro.com, amazon.com listing) also did not surface a current price."
+    },
+    {
+      "slug": "baby-lock-vibrant",
+      "name": "Baby Lock Vibrant",
+      "brand": "Baby Lock",
+      "category": "sergers",
+      "releaseDate": null,
+      "priceUsd": 524,
+      "priceNote": "$524.00 per babylock.com official product page as of 2026-08-01 (model BL460B).",
+      "specs": {
+        "thread_count": "2/3/4",
+        "stitch_options": null,
+        "stitches_per_minute": null,
+        "differential_feed": true,
+        "air_threading": false,
+        "free_arm": null,
+        "presser_foot_lift_in": null,
+        "needles": "2 needles, color-coded (system not published)"
+      },
+      "source": {
+        "url": "https://babylock.com/machines/serger/vibrant",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/baby-lock-vibrant.png?v=97b129b7d4",
+        "source": "babylock.com",
+        "license": "© Baby Lock",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "babylock.com official product page (model BL460B, JSON price data confirms $524.00) states 4/3/2 thread serging, lay-in tension discs, differential feed, max stitch width 7mm/length 4mm, color-coded 2-needle threading, weight 19.84 lbs. No stitches-per-minute figure, total stitch-option count, air threading, free arm, or presser foot lift height is published on the page — nulled/false accordingly (air threading false because Baby Lock reserves that feature for its Euphoria/Acclaim/Applaud/Splendor/Triumph tiers, confirmed by comparing against babylock.com's own serger lineup page)."
+    },
+    {
+      "slug": "brother-2340cv",
+      "name": "Brother 2340CV Cover Stitch",
+      "brand": "Brother",
+      "category": "sergers",
+      "releaseDate": null,
+      "priceUsd": 579.99,
+      "priceNote": "$579.99 per brother-usa.com official page as of 2026-08-01.",
+      "specs": {
+        "thread_count": "2/3/4",
+        "stitch_options": 2,
+        "stitches_per_minute": 1100,
+        "differential_feed": true,
+        "air_threading": false,
+        "free_arm": false,
+        "presser_foot_lift_in": null,
+        "needles": "3 needles + 1 looper thread (system not published)"
+      },
+      "source": {
+        "url": "https://www.brother-usa.com/p/sergers-coverstitch/2340CV",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/brother-2340cv.png?v=e674e3e7f3",
+        "source": "brother-usa.com",
+        "license": "© Brother",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "brother-usa.com official spec/feature sheet (fetched directly, JSON-LD price 579.99) confirms 2/3/4-thread cover stitch with 3 needles and one looper thread, cover stitch width 3-6mm, chain stitch capability, differential feed, 1,100 spm max speed, color-coded threading. This is a dedicated coverstitch/chain-stitch machine (not a true overlock serger) included as a common serger-comparison companion purchase per the seed list. The official 5-item feature list (Fabric Feed, 2/3/4 Thread Cover Stitch, Cover Stitch Capability, Chain Stitch, Color-coded Threading) does not include a free-arm feature, consistent with its flatbed coverstitch design — free_arm set false rather than null. Needle system code and presser foot lift height are not published."
+    },
+    {
+      "slug": "janome-mod-8933",
+      "name": "Janome MOD-8933",
+      "brand": "Janome",
+      "category": "sergers",
+      "releaseDate": null,
+      "priceUsd": 499,
+      "priceNote": "$499 per janome.com official product page (WooCommerce price widget) as of 2026-08-01; page notes authorized dealers may offer different pricing.",
+      "specs": {
+        "thread_count": "3/4",
+        "stitch_options": null,
+        "stitches_per_minute": 1300,
+        "differential_feed": true,
+        "air_threading": false,
+        "free_arm": null,
+        "presser_foot_lift_in": null,
+        "needles": null
+      },
+      "source": {
+        "url": "https://www.janome.com/product/mod-8933/",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/janome-mod-8933.webp?v=33c88fd47e",
+        "source": "janome.com",
+        "license": "© Janome",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "janome.com official product page confirms 3/4-thread serger, differential feed adjustable 0.5-2.25, cutting width 3.1-7.3mm, stitch length 1.0-4.0mm, snap-on presser feet, 'Flip Needle System: No', and a price of $499 (confirmed in the page's WooCommerce price markup). Maximum speed 1,300 spm and does not have air threading confirmed via third-party review (sewingmachinegreeks.com) cross-referenced against the official spec table. No total stitch-option count, needle system code, free arm, or presser foot lift height is published — nulled accordingly."
+    },
+    {
+      "slug": "juki-mo-2000qvp",
+      "name": "Juki MO-2000QVP",
+      "brand": "Juki",
+      "category": "sergers",
+      "releaseDate": null,
+      "priceUsd": 2299,
+      "priceNote": "JUKI-published Suggested Retail Price $2,299.00 per jukiquilting.com as of 2026-08-01; page notes current dealer pricing requires contacting an authorized dealer.",
+      "specs": {
+        "thread_count": "2/3/4",
+        "stitch_options": 15,
+        "stitches_per_minute": 1500,
+        "differential_feed": true,
+        "air_threading": true,
+        "free_arm": null,
+        "presser_foot_lift_in": 0.2,
+        "needles": "SCHMETZ 130/705H or JLx2, 1-2 needles"
+      },
+      "source": {
+        "url": "https://jukiquilting.com/products/mo-2000qvp.html",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/juki-mo-2000qvp.png?v=bcccd10284",
+        "source": "jukiquilting.com",
+        "license": "© Juki",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "jukiquilting.com official spec sheet confirms 2/3/4-thread capability, 15 built-in stitches with LCD tension display, 1,500 spm max speed, adjustable differential feed 0.7-2.0, automatic needle threader plus air threading for the loopers ('It can't get any easier than that'), standard presser foot lift 0.2in/5mm (extra-high 0.3in/8mm option for thick fabrics), SCHMETZ 130/705H or JLx2 needles, and Suggested Retail Price $2,299.00. Free arm is not mentioned on the spec page — nulled as unconfirmed."
+    },
+    {
+      "slug": "singer-profinish-14cg754",
+      "name": "Singer ProFinish 14CG754",
+      "brand": "Singer",
+      "category": "sergers",
+      "releaseDate": null,
+      "priceUsd": 399.99,
+      "priceNote": "List price $399.99 per AllBrands.com (authorized Singer dealer), currently offered at $299.99; confirmed via the dealer page's structured price data ($299.99/$399.99). singer.com's own product page returned persistent HTTP 429 (rate-limited) across repeated automated verification attempts this session, so the manufacturer page could not be fetched directly.",
+      "specs": {
+        "thread_count": "2/3/4",
+        "stitch_options": 6,
+        "stitches_per_minute": 1300,
+        "differential_feed": true,
+        "air_threading": false,
+        "free_arm": true,
+        "presser_foot_lift_in": null,
+        "needles": null
+      },
+      "source": {
+        "url": "https://www.allbrands.com/products/9340",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.singeronline.com/si14se.html",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/singer-profinish-14cg754.jpg?v=0b5988e891",
+        "source": "allbrands.com",
+        "license": "© Singer",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "singer.com (manufacturer) blocked automated access with HTTP 429 on every attempt this session; AllBrands.com, an authorized Singer dealer, was used as the primary verified source instead and confirms 2/3/4-thread capability, 6 built-in stitch types, 1,300 spm, fully adjustable differential feed, a removable free arm, an extra-high 2-position presser foot lifter (no inch figure published), 3.0-6.7mm stitch width, 16.8 lb weight, list price $399.99 / current $299.99. singeronline.com (Singer's own parts/support microsite) corroborates the '4-3-2 thread capability' description. Needle system code and an exact presser-foot-lift inch measurement are not published — nulled."
+    },
+    {
+      "slug": "bernina-l460",
+      "name": "Bernina L 460",
+      "brand": "BERNINA",
+      "category": "sergers",
+      "releaseDate": null,
+      "priceUsd": 1999,
+      "priceNote": "$1,999.00 confirmed directly in bernina.com's own page data (SalesPriceFormatted), linked through to shop.berninausa.com's overlocker storefront, as of 2026-08-01.",
+      "specs": {
+        "thread_count": "2/3/4",
+        "stitch_options": 16,
+        "stitches_per_minute": 1500,
+        "differential_feed": true,
+        "air_threading": false,
+        "free_arm": null,
+        "presser_foot_lift_in": null,
+        "needles": null
+      },
+      "source": {
+        "url": "https://www.bernina.com/en-US/Machines-US/Overlocker/Serger/BERNINA-L-460",
+        "accessedAt": "2026-08-01"
+      },
+      "corroboration": {
+        "url": "https://www.berninaomaha.com/shop/c/p/BERNINA-L460-SergerOverlocker-x33893941.htm",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/bernina-l460.png?v=bf1f820b36",
+        "source": "bernina.com",
+        "license": "© BERNINA",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "bernina.com official page (meta description and embedded page data, fetched directly) confirms 'up to 1500 stitches per minute', 16 built-in stitches, differential feed, Free Hand System knee-lift presser foot control, Micro Thread Control, and a sales price of $1,999.00. Authorized dealer berninaomaha.com corroborates 1,500 spm, 16 stitches, 3-9mm overlock seam width, and 5-step presser foot pressure adjustment (their own listing shows the machine out of stock/call-for-price, consistent with BERNINA's dealer MAP practice, so their page was used only as corroboration, not as the price source). sergerpro.com review additionally corroborates 2/3/4-thread capability and a 0.7-2.0mm differential feed ratio. Air threading, free arm and an exact presser-foot-lift inch figure are not published on the official page — false/nulled accordingly (air threading is not part of BERNINA's overlocker feature set, which instead emphasizes its knee-operated Free Hand System)."
+    },
+    {
+      "slug": "brother-1634d",
+      "name": "Brother 1634D",
+      "brand": "Brother",
+      "category": "sergers",
+      "releaseDate": null,
+      "priceUsd": 299.99,
+      "priceNote": "$299.99 per brother-usa.com official page as of 2026-08-01. Note this currently lists lower than Brother's own 1034D ($319.99) on the same storefront at time of access.",
+      "specs": {
+        "thread_count": "3/4",
+        "stitch_options": null,
+        "stitches_per_minute": 1300,
+        "differential_feed": true,
+        "air_threading": false,
+        "free_arm": true,
+        "presser_foot_lift_in": null,
+        "needles": "2 needles (system not published)"
+      },
+      "source": {
+        "url": "https://www.brother-usa.com/p/sergers-coverstitch/1634D",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/brother-1634d.png?v=2abf8a685d",
+        "source": "brother-usa.com",
+        "license": "© Brother",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "brother-usa.com official page (fetched directly, price 299.99) confirms 1-needle-3-thread or 2-needle-4-thread configurable serging, differential feed, 1,300 spm max speed, adjustable presser foot pressure, and an explicit free-arm feature ('Free-arm to access hard-to-reach areas'). Handles rolled hems, zippers, blind hems and ruffles per the marketing copy, but no total stitch-option count, needle system code, air threading feature, or presser foot lift height is published — nulled/false accordingly."
+    },
+    {
+      "slug": "baby-lock-triumph",
+      "name": "Baby Lock Triumph",
+      "brand": "Baby Lock",
+      "category": "sergers",
+      "releaseDate": null,
+      "priceUsd": 6214,
+      "priceNote": "$6,214.00 per babylock.com official product page (model BLETS8) as of 2026-08-01 — Baby Lock's flagship air-threading serger.",
+      "specs": {
+        "thread_count": "6/7/8",
+        "stitch_options": 87,
+        "stitches_per_minute": null,
+        "differential_feed": true,
+        "air_threading": true,
+        "free_arm": null,
+        "presser_foot_lift_in": null,
+        "needles": "5 needles (system not published)"
+      },
+      "source": {
+        "url": "https://babylock.com/machines/serger/triumph",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/baby-lock-triumph.png?v=d8dacc5e79",
+        "source": "babylock.com",
+        "license": "© Baby Lock",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "babylock.com official product page (model BLETS8, JSON price data confirms $6,214.00) states maximum 8 threads (8/7/6 thread serging), RevolutionAir Needle Threading (automatic needle and looper air threading via button), 87 total stitch combinations including an exclusive Wave Stitch, 5 needles, full-featured differential feed, hands-free knee-lift presser foot, and 5 inches of throat space to the right of the needle. No stitches-per-minute figure or presser-foot-lift inch measurement is published (Baby Lock markets 'variable speed' without a max-spm spec on this page) — nulled accordingly. Free arm is not mentioned — nulled as unconfirmed rather than assumed false, since this is a large-throat flatbed design where the feature is simply not part of the marketing copy either way."
+    },
+    {
+      "slug": "juki-mo-735",
+      "name": "Juki MO-735",
+      "brand": "Juki",
+      "category": "sergers",
+      "releaseDate": null,
+      "priceUsd": 2099,
+      "priceNote": "JUKI-published Suggested Retail Price $2,099.00 per jukihome.com as of 2026-08-01.",
+      "specs": {
+        "thread_count": "2/3/4/5",
+        "stitch_options": 24,
+        "stitches_per_minute": 1500,
+        "differential_feed": true,
+        "air_threading": false,
+        "free_arm": null,
+        "presser_foot_lift_in": 0.2,
+        "needles": null
+      },
+      "source": {
+        "url": "https://www.jukihome.com/products/serging/mo-735.html",
+        "accessedAt": "2026-08-01"
+      },
+      "image": {
+        "url": "https://img.frontdeskreview.com/products/juki-mo-735.jpg?v=fc178fc016",
+        "source": "jukihome.com",
+        "license": "© Juki",
+        "accessedAt": "2026-08-01"
+      },
+      "provenance": "jukihome.com official spec sheet confirms 2/3/4/5-thread capability, 24 stitch patterns including three coverhem types (2-needle wide, 2-needle narrow, 3-needle), 1,500 spm max speed, differential feed 0.7-2.0 ratio, standard presser foot lift 0.2in/5mm with an extra-high front-foot-lift option for thick fabrics, and Suggested Retail Price $2,099.00. Air threading is not mentioned on this model's spec page — Juki reserves that headline feature for the higher-tier MO-2000QVP in its lineup — set false. Free arm and needle system code are not published — nulled."
+    }
+  ]
+}

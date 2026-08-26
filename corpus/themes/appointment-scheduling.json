@@ -812,6 +812,349 @@
         ],
         "provenance": "Compliance: no HIPAA, SOC 2, or GDPR compliance statements found on any reachable TidyCal page (pricing, home, terms all checked); all compliance fields null. Free tier: confirmed ('Forever free' plan on pricing page, unlimited bookings, 1 calendar connection). No free trial days found. Product is individual-focused; no team/multi-seat plan exists."
       }
+    },
+    {
+      "slug": "youcanbook-me",
+      "name": "YouCanBook.me",
+      "domain": "youcanbook.me",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Google Calendar",
+        "Microsoft Outlook",
+        "Office 365",
+        "iCloud",
+        "Zoom",
+        "Google Meet",
+        "Microsoft Teams",
+        "Zapier",
+        "Stripe",
+        "PayPal"
+      ],
+      "provenance": "https://youcanbook.me/pricing (official pricing page, accessed 2026-06-15). Page is JavaScript-rendered: plan names and feature tiers are visible (Free, Individual, Professional, Team) but all dollar prices render as '$0' placeholder in static HTML — no USD figures were extractable from the authoritative source. Third-party guides were checked and CONFLICT, so no figure meets the confirmation bar: zeeg.me/en/blog/post/youcanbookme-pricing-features quotes Individual ~$7/Professional ~$10/Team ~$14 per member (annual); other roundups quote Individual $9/Professional $13/Team $18 (month-to-month); schedulingkit.com describes a single ~$14/month paid plan priced per calendar connection (not per user). Because sources disagree on both the figures and the unit (per-user vs per-calendar), monthlyUsd is set to null for all paid plans per methodology (cannot independently confirm).",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free forever. 1 calendar connection, 1 booking page, basic customization.",
+          "source": {
+            "url": "https://youcanbook.me/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Individual",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "Price not publicly confirmed (official page is JS-rendered, shows $0 placeholders). Includes 2 calendar connections, 2 booking pages, custom branding. Annual billing saves 10%; 2-year saves 20%. Third-party estimates range from ~$7 (annual) to $9 (month-to-month), but sources conflict on figures and on whether pricing is per-user or per-calendar, so monthlyUsd is left null.",
+          "source": {
+            "url": "https://youcanbook.me/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Professional",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "Price not publicly confirmed (JS-rendered). Includes 6 calendar connections, 10 booking pages, automations, analytics, Zapier. Annual billing saves 10%; 2-year saves 20%.",
+          "source": {
+            "url": "https://youcanbook.me/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Team",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "per_seat",
+          "notes": "Price not publicly confirmed (JS-rendered). Per-member pricing. Includes 10 calendar connections/user, 15+ booking pages/user, role-based access, centralized billing.",
+          "source": {
+            "url": "https://youcanbook.me/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": false,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://youcanbook.me/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Google Calendar",
+          "Microsoft Outlook",
+          "Apple Calendar",
+          "CalDAV",
+          "Fastmail",
+          "Zoom",
+          "Google Meet",
+          "Microsoft Teams",
+          "Stripe",
+          "HubSpot",
+          "Zapier"
+        ],
+        "limits": [
+          "Free: 1 calendar connection, 1 booking page; Individual: 2 calendars, 2 booking pages; Professional: 6 calendars, 10 booking pages; Team: 10 calendars/user, 15+ booking pages/user"
+        ],
+        "keyFeatures": [
+          "SOC 2 Type II (no control exceptions) and ISO/IEC 27001:2022 certified",
+          "40+ languages including RTL scripts",
+          "Password-protected booking pages",
+          "Custom SMS from dedicated business line"
+        ],
+        "bestFor": [
+          "multilingual teams",
+          "coaches and consultants",
+          "SMBs needing branded booking pages"
+        ],
+        "sources": [
+          {
+            "url": "https://youcanbook.me/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://youcanbook.me/security",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Verified 2026-06-15. Security page states 'compliant with the SOC 2 Type II standard ... with no control exceptions' (soc2=true), ISO/IEC 27001:2022 (Certificate #20/3433, issued 2024-02-20), and GDPR with an appointed DPO (gdpr=true). HIPAA not mentioned (hipaa=false). Free-forever plan (1 calendar, 1 booking page) confirmed; 14-day trial, no card required."
+      }
+    },
+    {
+      "slug": "zcal",
+      "name": "Zcal",
+      "domain": "zcal.co",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Google Calendar",
+        "Microsoft Outlook",
+        "Zoom",
+        "Google Meet",
+        "Stripe"
+      ],
+      "provenance": "https://zcal.co/pricing fetched 2026-06-15: page is JS-rendered, returned only navigation markup — no pricing figures extractable. Price sourced from Zapier roundup article: https://zapier.com/blog/best-meeting-scheduler-apps/ (accessed 2026-06-15) which states 'Pro plan: $9.50/month'. Zcal homepage (https://zcal.co, accessed 2026-06-15) confirms free tier covers '99% of features' with paid plan for 'team functionality or advanced features'.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free tier includes 99% of features: unlimited scheduling links, unlimited calendar connections. Paid plan required only for team features and advanced reminders.",
+          "source": {
+            "url": "https://zcal.co",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 9.5,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$9.50/month per Zapier's 2026 scheduling-app roundup. Adds team scheduling features and advanced reminders. Annual discount not confirmed. Official pricing page is JS-rendered and could not be parsed directly.",
+          "source": {
+            "url": "https://zapier.com/blog/best-meeting-scheduler-apps/",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": false,
+          "soc2": false,
+          "gdpr": false,
+          "source": {
+            "url": "https://zcal.co/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Google Calendar",
+          "Outlook Calendar",
+          "Apple Calendar",
+          "Zoom",
+          "Google Meet",
+          "Microsoft Teams",
+          "Stripe",
+          "Zapier",
+          "Google Analytics",
+          "Meta Pixel"
+        ],
+        "limits": [
+          "Free: unlimited scheduling links, unlimited calendar connections, ~99% of features; Paid: team features and advanced options (specific quota not publicly listed)"
+        ],
+        "keyFeatures": [
+          "Highly customizable branded pages (fonts, colors, media embeds)",
+          "Group scheduling with capacity limits",
+          "Meeting polls",
+          "Daily booking limits and buffer times"
+        ],
+        "bestFor": [
+          "solopreneurs wanting custom-branded pages",
+          "coaches",
+          "creators",
+          "budget-conscious users"
+        ],
+        "sources": [
+          {
+            "url": "https://zcal.co",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://zcal.co/security",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Verified 2026-06-15. Security page states SOC 2 and ISO 27001 are 'actively working toward achieving these certifications' — i.e. NOT yet achieved, so soc2=false. GDPR and HIPAA are not mentioned on the security page, so both=false. Free-forever model confirmed via homepage ('99% of our features for free, including unlimited links and calendar connections'); no fixed-day trial."
+      }
+    },
+    {
+      "slug": "motion",
+      "name": "Motion",
+      "domain": "usemotion.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Google Calendar",
+        "Microsoft Outlook",
+        "Office 365",
+        "Zoom",
+        "Google Meet",
+        "Linear",
+        "GitHub",
+        "Asana",
+        "Jira",
+        "Slack"
+      ],
+      "provenance": "https://usemotion.com/pricing (official pricing page, accessed 2026-06-15). Motion is primarily an AI task/calendar planner; scheduling link functionality is a core included feature. Annual billing at $19/$29 saves 33% vs month-to-month (~$28/$43).",
+      "plans": [
+        {
+          "name": "Pro AI",
+          "monthlyUsd": 19,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 33,
+          "billingModel": "per_seat",
+          "notes": "$19/seat/month on annual billing (save 33% vs ~$28/seat month-to-month). Individual plan. Includes AI scheduling links, AI calendar and meetings, AI projects and tasks, AI docs/wiki/notes, unlimited storage, 7,500 AI credits/seat/month.",
+          "source": {
+            "url": "https://usemotion.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        {
+          "name": "Business AI",
+          "monthlyUsd": 29,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 33,
+          "billingModel": "per_seat",
+          "notes": "$29/seat/month on annual billing (save 33% vs ~$43/seat month-to-month). All Pro AI features plus team capacity planning, advanced dashboards and reports, timeline/Gantt charts, time tracking, permissions and access control, central billing, priority support, 15,000 AI credits/seat/month.",
+          "source": {
+            "url": "https://usemotion.com/pricing",
+            "accessedAt": "2026-06-15"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": false,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://usemotion.com/security",
+            "accessedAt": "2026-06-15"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Google Calendar",
+          "Microsoft Outlook 365",
+          "iCloud Calendar",
+          "Zoom",
+          "Google Meet",
+          "Microsoft Teams",
+          "Gmail",
+          "Zapier",
+          "Siri"
+        ],
+        "limits": [
+          "No free plan; Pro AI: $19/seat/mo, 7,500 AI credits/mo; Business AI: $29/seat/mo, 15,000 AI credits/mo; additional credits at 25¢/100 (Pro) or 19¢/100 (Business)"
+        ],
+        "keyFeatures": [
+          "AI-powered task and calendar auto-scheduling",
+          "Team capacity planning and Gantt charts (Business)",
+          "Time tracking and advanced dashboards (Business)",
+          "Does not use customer data to train AI models"
+        ],
+        "bestFor": [
+          "AI-first productivity teams",
+          "service businesses needing automated scheduling",
+          "project-heavy teams"
+        ],
+        "sources": [
+          {
+            "url": "https://usemotion.com/pricing",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://usemotion.com/security",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://usemotion.com",
+            "accessedAt": "2026-06-15"
+          },
+          {
+            "url": "https://usemotion.com/features/integrations",
+            "accessedAt": "2026-06-15"
+          }
+        ],
+        "provenance": "Verified 2026-06-15. Security page states 'NexusBird, Inc (dba Motion) successfully completed the AICPA SOC 2 Type II audit' (auditor Prescient Assurance), so soc2=true; GDPR badge displayed (gdpr=true). HIPAA not mentioned (hipaa=false). No free-forever plan — trial only, and the exact trial length is not stated on any public page, so freeTrialDays=null."
+      }
     }
   ]
 }
