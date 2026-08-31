@@ -11,7 +11,7 @@
       "baa": null,
       "bilingual": null,
       "integrations": [],
-      "provenance": "https://www.cloudflare.com/products/registrar/ (official product page, accessed 2026-06-13; confirms at-cost / registry-wholesale pricing with no markup; the page does not publish a per-TLD table so specific TLD figures were taken from the cfdomainpricing.com tracker and corroborated by Cloudflare's at-cost statement)",
+      "provenance": "https://www.cloudflare.com/products/registrar/ (official product page, accessed 2026-06-13, all figures re-verified live 2026-08-30; confirms at-cost / registry-wholesale pricing with no markup; the page does not publish a per-TLD table so specific TLD figures were taken from the cfdomainpricing.com tracker and corroborated by Cloudflare's at-cost statement)",
       "plans": [
         {
           "name": ".com (per year)",
@@ -25,11 +25,11 @@
           "notes": "At-cost .com registration billed per year; renewal is the same $10.46/yr. Cloudflare charges only registry wholesale cost + ICANN fee with no markup; Registrar is only available for domains using Cloudflare DNS. Free WHOIS privacy.",
           "source": {
             "url": "https://www.cloudflare.com/products/registrar/",
-            "accessedAt": "2026-06-13"
+            "accessedAt": "2026-08-30"
           },
           "corroboration": {
             "url": "https://cfdomainpricing.com/",
-            "accessedAt": "2026-06-13"
+            "accessedAt": "2026-08-30"
           }
         },
         {
@@ -44,11 +44,11 @@
           "notes": "At-cost .net registration per year; renewal same $11.86/yr (registration and renewal match for most TLDs under Cloudflare's at-cost model).",
           "source": {
             "url": "https://www.cloudflare.com/products/registrar/",
-            "accessedAt": "2026-06-13"
+            "accessedAt": "2026-08-30"
           },
           "corroboration": {
             "url": "https://cfdomainpricing.com/",
-            "accessedAt": "2026-06-13"
+            "accessedAt": "2026-08-30"
           }
         },
         {
@@ -63,11 +63,11 @@
           "notes": "At-cost .org registration $8.50/yr; renewal $11.20/yr (.org is one of the TLDs where Cloudflare's renewal price differs from registration).",
           "source": {
             "url": "https://www.cloudflare.com/products/registrar/",
-            "accessedAt": "2026-06-13"
+            "accessedAt": "2026-08-30"
           },
           "corroboration": {
             "url": "https://cfdomainpricing.com/",
-            "accessedAt": "2026-06-13"
+            "accessedAt": "2026-08-30"
           }
         }
       ],
@@ -95,7 +95,8 @@
           "Registrar only available to domains that use Cloudflare as their DNS provider",
           "No standalone registrar without Cloudflare DNS",
           "390+ TLDs supported (not all TLDs available)",
-          "Enterprise domain protection (registry lock, multi-user confirmation) requires Enterprise plan"
+          "Enterprise domain protection (registry lock, multi-user confirmation) requires Enterprise plan",
+          "Domains are locked to Cloudflare's own nameservers for the life of the registration — to use a different DNS provider's nameservers you must transfer the domain out (subdomain delegation and Business/Enterprise custom-branded nameservers on Cloudflare's network are the only exceptions)"
         ],
         "keyFeatures": [
           "At-cost pricing — registry wholesale + ICANN fee, zero markup",
@@ -106,7 +107,8 @@
           "Free CDN integration",
           "Enterprise: registry lock, registrar lock, offline multi-user confirmation for changes",
           "Two-factor authentication enforcement for Enterprise accounts",
-          "Abuse reporting process via registrar WHOIS disclosure form"
+          "Abuse reporting process via registrar WHOIS disclosure form",
+          "Registers brand-new domains directly (availability check + purchase), not only transfers-in of domains already on Cloudflare"
         ],
         "bestFor": [
           "Teams already on Cloudflare seeking zero-markup domain costs",
@@ -117,7 +119,15 @@
         "sources": [
           {
             "url": "https://www.cloudflare.com/products/registrar/",
-            "accessedAt": "2026-06-15"
+            "accessedAt": "2026-08-30"
+          },
+          {
+            "url": "https://developers.cloudflare.com/registrar/faq/",
+            "accessedAt": "2026-08-30"
+          },
+          {
+            "url": "https://developers.cloudflare.com/registrar/get-started/register-domain/",
+            "accessedAt": "2026-08-30"
           },
           {
             "url": "https://www.cloudflare.com/trust-hub/gdpr/",
@@ -128,7 +138,7 @@
             "accessedAt": "2026-06-15"
           }
         ],
-        "provenance": "Compliance (SOC2 Type II, GDPR) confirmed from Cloudflare Trust Hub GDPR page which explicitly states SOC 2 Type II, ISO 27001, ISO 27701, PCI DSS Level 1. HIPAA not mentioned on any Cloudflare trust page — null. Features from official registrar product page. freeTier false: all domains require paid registration at registry cost."
+        "provenance": "Compliance (SOC2 Type II, GDPR) confirmed from Cloudflare Trust Hub GDPR page which explicitly states SOC 2 Type II, ISO 27001, ISO 27701, PCI DSS Level 1. HIPAA not mentioned on any Cloudflare trust page — null. Features from official registrar product page. freeTier false: all domains require paid registration at registry cost. Re-verified 2026-08-30: all pricing (.com $10.46, .net $11.86, .org $8.50 registration / $11.20 renewal) re-matched against the cfdomainpricing.com at-cost tracker, and the at-cost/no-markup, Cloudflare-nameserver lock-in, 390+ TLD, free WHOIS/DNSSEC/SSL/CDN and Enterprise registry-lock claims re-confirmed live on the Cloudflare registrar page and developer docs."
       }
     },
     {
