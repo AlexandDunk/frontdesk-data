@@ -1,6 +1,6 @@
 {
   "vertical": "mileage-tracking",
-  "generatedAt": "2026-06-19",
+  "generatedAt": "2026-09-02",
   "methodologyNotes": "Official pricing pages were fetched and re-verified for each vendor on 2026-06-19: mileiq.com/pricing, mileiq.com/pricing-for-business, everlance.com/pricing, triplog.net/pricing, triplog.net/pricing-multi-user, driversnote.com/pricing, hurdlr.com/pricing (the live page shows no dollar figures, so Premium/Pro prices were confirmed via Hurdlr University official help articles + Capterra), stridehealth.com/tax, and zoho.com/us/expense/pricing/. Zoho's official US page publishes per-month-billed-monthly ($43 Standard / $65 Premium) and the billed-annually per-month equivalents ($3 Standard / $5 Premium); the dataset uses the billed-annually equivalents and notes the monthly figures. monthlyUsd for annual-only plans is the effective per-month equivalent; annualDiscountPct is computed or sourced from published savings claims. Quote-only/enterprise tiers with no published price have monthlyUsd=null. accessedAt 2026-06-19.",
   "vendors": [
     {
@@ -823,6 +823,145 @@
           }
         ],
         "provenance": "USD pricing re-verified directly on the official US page zoho.com/us/expense/pricing/: Standard $3/user/month (annual) / $43 (monthly); Premium $5/user/month (annual) / $65 (monthly). Draft's $4/$7 annual figures corrected to $3/$5. 'Save up to 25%' annual claim from the official page. Free plan 3 users and 14-day trial confirmed."
+      }
+    },
+    {
+      "slug": "taxmiles",
+      "name": "TaxMiles",
+      "domain": "taxmilesapp.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "CSV export",
+        "PDF export"
+      ],
+      "provenance": "Vendor (Gigabyte LLC) wrote in offering inclusion; every figure below was then verified directly, not taken from the email. App Store listing id6758579463 (seller Gigabyte LLC), accessed 2026-09-02, states: Free plan with 40 trips/month; TaxMiles Pro at $5.99/month, $39.99/year ('$3.33/month — save 44%'), or $79.99 one-time lifetime purchase ('not a subscription'). taxmilesapp.com, accessed the same day, corroborates $39.99/year and the $3.33/month annual equivalent. iPhone-only per the listing; no Android or web app was found. The lifetime tier carries no monthlyUsd because it is a one-time purchase, not a recurring monthly price.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "40 trips per month, forever free (not a trial). Automatic trip detection (GPS + motion), real-time tax estimate, odometer log. iPhone only.",
+          "source": {
+            "url": "https://apps.apple.com/us/app/taxmiles-mileage-tracker/id6758579463",
+            "accessedAt": "2026-09-02"
+          },
+          "corroboration": {
+            "url": "https://taxmilesapp.com/",
+            "accessedAt": "2026-09-02"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Pro (Monthly)",
+          "monthlyUsd": 5.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Unlimited trips; billed monthly. Swipe-to-classify business vs personal, IRS standard mileage rate applied by trip date, IRS-ready PDF/CSV export.",
+          "source": {
+            "url": "https://apps.apple.com/us/app/taxmiles-mileage-tracker/id6758579463",
+            "accessedAt": "2026-09-02"
+          },
+          "corroboration": {
+            "url": "https://taxmilesapp.com/",
+            "accessedAt": "2026-09-02"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Pro (Annual)",
+          "monthlyUsd": 3.33,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 44,
+          "billingModel": "flat",
+          "notes": "$39.99/year billed annually, shown on the App Store as '$3.33/month — save 44%' vs the $5.99 monthly plan. Same features as Pro (Monthly).",
+          "source": {
+            "url": "https://apps.apple.com/us/app/taxmiles-mileage-tracker/id6758579463",
+            "accessedAt": "2026-09-02"
+          },
+          "corroboration": {
+            "url": "https://taxmilesapp.com/",
+            "accessedAt": "2026-09-02"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Pro (Lifetime)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$79.99 one-time purchase ('not a subscription' per the App Store listing). No recurring monthly figure, so no monthlyUsd is recorded — the price is stated here rather than forced into a per-month field.",
+          "source": {
+            "url": "https://apps.apple.com/us/app/taxmiles-mileage-tracker/id6758579463",
+            "accessedAt": "2026-09-02"
+          },
+          "corroboration": {
+            "url": "https://taxmilesapp.com/",
+            "accessedAt": "2026-09-02"
+          },
+          "setupFeeUsd": 0
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": {
+            "url": "https://apps.apple.com/us/app/taxmiles-mileage-tracker/id6758579463",
+            "accessedAt": "2026-09-02"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "CSV export (IRS-ready)",
+          "PDF export (IRS-ready)"
+        ],
+        "limits": [
+          "iPhone only — no Android or web app found",
+          "Free plan capped at 40 trips per month",
+          "Lifetime tier is a one-time $79.99 purchase, not a subscription"
+        ],
+        "keyFeatures": [
+          "Automatic drive detection via GPS + motion",
+          "Swipe to classify each trip business vs personal",
+          "Applies the IRS standard mileage rate by trip date",
+          "IRS-ready PDF and CSV export",
+          "Real-time tax-deduction estimate"
+        ],
+        "bestFor": [
+          "iPhone-only solo drivers and gig workers who want set-and-forget tracking",
+          "Buyers who prefer a one-time lifetime purchase over a subscription"
+        ],
+        "sources": [
+          {
+            "url": "https://apps.apple.com/us/app/taxmiles-mileage-tracker/id6758579463",
+            "accessedAt": "2026-09-02"
+          },
+          {
+            "url": "https://taxmilesapp.com/",
+            "accessedAt": "2026-09-02"
+          }
+        ],
+        "provenance": "Features and tiers from the App Store listing (Gigabyte LLC) and taxmilesapp.com, both accessed 2026-09-02. Compliance posture not published on either — left null rather than assumed. No integrations beyond export formats were found."
       }
     }
   ]
