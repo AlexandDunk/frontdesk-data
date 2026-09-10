@@ -1,7 +1,7 @@
 {
   "vertical": "call-tracking-analytics",
   "generatedAt": "2026-06-11T00:00:00.000Z",
-  "methodologyNotes": "Call-tracking / call-analytics software (CallRail / WhatConverts / CallTrackingMetrics class). Pricing figures were collected from each vendor's public pricing page on the accessedAt date recorded per source; where a second independent source (vendor pricing-guide, comparison roundup, or G2/Capterra listing) confirms the same figure on the same date it is attached as 'corroboration', satisfying the two-source rule. No figure is ever invented. This category bills as subscription + metered usage: most vendors charge a flat monthly base PLUS per-minute (local/toll-free), per-number, recording, and transcription fees on top, while a sub-segment (Nimbata, Infinity) bills per ANSWERED CALL instead of per minute. Plans are normalized to the dataset shape: monthlyUsd is the recurring base, minutesIncluded/callsIncluded carry bundled quota where the vendor publishes one (usually null — these platforms meter usage rather than bundle it; the entry tier's headline allowance is recorded where stated, e.g. CallRail's 250 local minutes / 5 numbers), overagePerMin is the marginal local per-minute rate and overagePerCall the per-answered-call rate. Toll-free per-minute, recording, transcription, SMS and per-number rates are preserved in plan notes rather than dropped. IMPORTANT FABRICATION-GUARD NOTE: several vendors (CallRail, WhatConverts, WildJar, Convirza) publish a SINGLE platform-wide per-minute overage that applies identically to every tier rather than a per-plan rate; to avoid presenting a falsely uniform column, that single rate is recorded once on the relevant tier(s) with the platform-wide caveat in notes, not copied across all plans. Quote-only / sales-gated vendors (Invoca, Phonexa, Marchex, CallSource, Retreaver) carry empty plans[] with a provenance note stating where pricing was sought and why no figure was recorded — never a guessed number. Per-minute developer-style metering means the cost normalizer must combine base + (minutes x rate). HIPAA/BAA and integration fields reflect what each vendor states publicly; null means not published, not absence. This is a static snapshot intended to be refreshed from our scheduled public-page monitoring pipeline.",
+  "methodologyNotes": "Call-tracking / call-analytics software (CallRail / WhatConverts / CallTrackingMetrics class). Pricing figures were collected from each vendor's public pricing page on the accessedAt date recorded per source; where a second independent source (vendor pricing-guide, comparison roundup, or G2/Capterra listing) confirms the same figure it is attached as 'corroboration', satisfying the two-source rule. Each capture carries its OWN accessedAt: re-reading a vendor's page refreshes the source date alone, so a corroboration is usually dated earlier than the source beside it, and it evidences the figure as of the day we read that second page rather than as of the source read. /changes/ applies that directly — a corroboration read before a price move is not counted as a witness to it. No figure is ever invented. This category bills as subscription + metered usage: most vendors charge a flat monthly base PLUS per-minute (local/toll-free), per-number, recording, and transcription fees on top, while a sub-segment (Nimbata, Infinity) bills per ANSWERED CALL instead of per minute. Plans are normalized to the dataset shape: monthlyUsd is the recurring base, minutesIncluded/callsIncluded carry bundled quota where the vendor publishes one (usually null — these platforms meter usage rather than bundle it; the entry tier's headline allowance is recorded where stated, e.g. CallRail's 250 local minutes / 5 numbers), overagePerMin is the marginal local per-minute rate and overagePerCall the per-answered-call rate. Toll-free per-minute, recording, transcription, SMS and per-number rates are preserved in plan notes rather than dropped. IMPORTANT FABRICATION-GUARD NOTE: some vendors (WhatConverts, CallTrackingMetrics) publish a SINGLE platform-wide per-minute overage that applies identically to every tier rather than a per-plan rate; to avoid presenting a falsely uniform column, that single rate is recorded once on the relevant tier(s) with the caveat in notes, not copied across all plans. WildJar and Convirza were named here until 2026-09-08 and do NOT belong: a first-party re-read that day found both metering per tier rather than platform-wide. Convirza charges $0.08/min on Starter and $0.05 on Agency, which is what its rows record. WildJar publishes $0.10/min on Agency and no per-minute rate at all on Starter, whose $150 base buys 500 bundled minutes instead — the $0.05 and $0.04 this note carried until that day came from a pricing page WildJar has abandoned. CallRail was listed here until 2026-09-08 and is NOT one of them: its per-minute rate is set by the bundled allotment, not by the platform (local minutes $0.06 at the 250-minute entry allotment, stepping down to $0.045 at 4,000 minutes), so its overagePerMin records the entry allotment's rate and its notes say which allotment that is. Quote-only / sales-gated vendors (Invoca, Phonexa, Marchex, CallSource, Retreaver) carry empty plans[] with a provenance note stating where pricing was sought and why no figure was recorded — never a guessed number. Per-minute developer-style metering means the cost normalizer must combine base + (minutes x rate). HIPAA/BAA and integration fields reflect what each vendor states publicly; null means not published, not absence. This is a static snapshot intended to be refreshed from our scheduled public-page monitoring pipeline.",
   "vendors": [
     {
       "slug": "callrail",
@@ -10,66 +10,62 @@
       "plans": [
         {
           "name": "Lead Tracking",
-          "monthlyUsd": 50,
+          "monthlyUsd": 55,
           "minutesIncluded": 250,
           "callsIncluded": null,
-          "overagePerMin": 0.045,
+          "overagePerMin": 0.06,
           "overagePerCall": null,
-          "annualDiscountPct": 10,
+          "annualDiscountPct": 9,
           "billingModel": "hybrid",
-          "notes": "Entry tier: 5 local tracking numbers + 250 local minutes included. Platform-wide usage rates: local $0.045/min, toll-free $0.065/min, SMS $0.03/msg. Annual up to ~10% off.",
-          "corroboration": {
-            "url": "https://www.toolcomparelab.com/call-tracking-pricing-comparison/",
-            "accessedAt": "2026-06-11"
-          },
+          "notes": "Entry tier: 5 local tracking numbers + 250 local minutes included. Metered usage at THIS allotment: local $0.06/min, toll-free $0.08/min, SMS $0.03/msg — CallRail's schedule steps down as the bundled allotment grows (local minutes reach $0.045 on its 4,000-minute allotment), so this is not a platform-wide rate. Month-to-month price; $50/mo billed annually, which is the figure callrail.com/pricing shows before you touch its toggle.",
           "source": {
             "url": "https://www.callrail.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-08"
           }
         },
         {
           "name": "Lead Tracking Complete",
-          "monthlyUsd": 95,
+          "monthlyUsd": 105,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
           "annualDiscountPct": 10,
           "billingModel": "hybrid",
-          "notes": "Adds form tracking & multi-touch cost-per-lead reporting on top of Lead Tracking. Same platform-wide usage rates apply (local $0.045/min) — not repeated per-plan to avoid a falsely uniform column.",
+          "notes": "Adds form tracking & multi-touch cost-per-lead reporting on top of Lead Tracking. Same bundled allotment and the same metered rates as Lead Tracking; overagePerMin is recorded once on the entry tier rather than copied here, to avoid a falsely uniform column. Month-to-month price; $95/mo billed annually, which is the figure callrail.com/pricing shows before you touch its toggle.",
           "source": {
             "url": "https://www.callrail.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-08"
           }
         },
         {
           "name": "Lead Conversion",
-          "monthlyUsd": 150,
+          "monthlyUsd": 165,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
-          "annualDiscountPct": 10,
+          "annualDiscountPct": 9,
           "billingModel": "hybrid",
-          "notes": "Adds Premium Conversation Intelligence (AI call summaries & sentiment). Same platform-wide usage rates.",
+          "notes": "Adds Premium Conversation Intelligence (AI call summaries & sentiment). Same bundled allotment and metered rates as Lead Tracking. Month-to-month price; $150/mo billed annually, which is the figure callrail.com/pricing shows before you touch its toggle.",
           "source": {
             "url": "https://www.callrail.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-08"
           }
         },
         {
           "name": "Lead Conversion Complete",
-          "monthlyUsd": 195,
+          "monthlyUsd": 215,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
-          "annualDiscountPct": 10,
+          "annualDiscountPct": 9,
           "billingModel": "hybrid",
-          "notes": "Top tier: form tracking + conversation intelligence + coaching. Same platform-wide usage rates.",
+          "notes": "Top tier: form tracking + conversation intelligence + coaching. Same bundled allotment and metered rates as Lead Tracking. Month-to-month price; $195/mo billed annually, which is the figure callrail.com/pricing shows before you touch its toggle.",
           "source": {
             "url": "https://www.callrail.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-08"
           }
         }
       ],
@@ -88,7 +84,7 @@
       ],
       "bilingual": null,
       "demoPhone": null,
-      "provenance": "Four-tier 2026 plan structure (Lead Tracking $50 / Lead Tracking Complete $95 / Lead Conversion $150 / Lead Conversion Complete $195, each + metered usage) confirmed from callrail.com/pricing and corroborated by an independent 2026 pricing roundup (toolcomparelab) which lists CallRail 'From $50/mo, subscription + usage'. Entry tier bundles 5 local numbers + 250 local minutes; platform-wide usage rates local $0.045/min, toll-free $0.065/min, SMS $0.03 recorded on the entry tier only because they are a single platform rate, not per-plan figures. The market leader (700+ integrations). HIPAA/BAA available for healthcare accounts. Re-verified 2026-09-02 against the live pricing page — 1 plan price(s) updated: Lead Tracking: $45 -> $50."
+      "provenance": "Four-tier 2026 plan structure read from callrail.com/pricing rendered in a headless browser on 2026-09-08 (the page is JavaScript-rendered; a plain fetch returns no prices). The page opens on its Yearly toggle — CallRail's own code defaults the billing period to annual — so the figures it shows first are the ANNUAL-BILLED ones: Lead Tracking $50 / Lead Tracking Complete $95 / Lead Conversion $150 / Lead Conversion Complete $195 per month. Switching to Monthly gives $55 / $105 / $165 / $215, and CallRail's own \"See all Lead Tracking plans\" table labels the two columns \"Yearly\" and \"Monthly\" in those words. monthlyUsd holds the MONTH-TO-MONTH figure, as it does across this dataset, with annualDiscountPct carrying the annual saving; records before 2026-09-08 held the annual-billed figure in monthlyUsd and then applied a further ~10% discount on top of it, understating the month-to-month price by about 10% and counting the annual saving twice. Corrected 2026-09-08 and logged in data/corrections.jsonl. Metered usage is billed on top and is set by the bundled allotment, not platform-wide: at the 250-minute entry allotment local minutes are $0.06, toll-free $0.08, SMS $0.03; the same table meters local minutes at $0.045 on the 4,000-minute allotment, which is the rate this record previously carried on the entry tier. The market leader (700+ integrations). HIPAA/BAA available for healthcare accounts. The corroboration recorded here on 2026-06-11 (toolcomparelab, \"From $50/mo\") corroborated the annual-billed figure rather than the month-to-month one now recorded, and that host has since gone offline (503, with no archive.org capture of it), so it was removed rather than left standing beside a figure it does not support."
     },
     {
       "slug": "whatconverts",
@@ -105,13 +101,9 @@
           "annualDiscountPct": null,
           "billingModel": "hybrid",
           "notes": "$30/mo includes a $30 usage credit (~up to 148 calls). Platform-wide usage: local $0.045/min, toll-free $0.065/min, SMS $0.03/msg.",
-          "corroboration": {
-            "url": "https://www.toolcomparelab.com/call-tracking-pricing-comparison/",
-            "accessedAt": "2026-06-11"
-          },
           "source": {
             "url": "https://www.whatconverts.com/pricing/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-08"
           }
         },
         {
@@ -126,7 +118,7 @@
           "notes": "Adds 300 forms/chats on top of call tracking + $30 usage credit. Same platform-wide usage rates.",
           "source": {
             "url": "https://www.whatconverts.com/pricing/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-08"
           }
         },
         {
@@ -141,7 +133,7 @@
           "notes": "$30 usage credit; advanced reporting. Same platform-wide usage rates.",
           "source": {
             "url": "https://www.whatconverts.com/pricing/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-08"
           }
         },
         {
@@ -156,11 +148,11 @@
           "notes": "$30 usage credit. Same platform-wide usage rates. Agency 'Unlimited Accounts' tiers ($500/$800/$1,250) drop overage to $0.04/min local; omitted here as a separate billing model.",
           "source": {
             "url": "https://www.whatconverts.com/pricing/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-08"
           }
         }
       ],
-      "hipaa": null,
+      "hipaa": true,
       "baa": null,
       "integrations": [
         "Google Ads",
@@ -175,7 +167,7 @@
       ],
       "bilingual": null,
       "demoPhone": null,
-      "provenance": "Single-account tiers ($30/$60/$100/$160, each including a $30 usage credit ~148 calls) from whatconverts.com/pricing, corroborated by the toolcomparelab 2026 roundup ('From $30/mo, subscription with included usage credit + extra usage'). Platform-wide overage (local $0.045/min, toll-free $0.065/min, SMS $0.03) is a single rate recorded on the entry tier only. callsIncluded=148 is the vendor-stated ceiling implied by the $30 credit at the local rate. HIPAA/BAA not published. Re-verified 2026-09-02 against the live pricing page; all published figures unchanged."
+      "provenance": "Single-account tiers ($30/$60/$100/$160, each including a $30 usage credit) from whatconverts.com/pricing. Platform-wide overage (local $0.045/min, toll-free $0.065/min, SMS $0.03) is a single rate recorded on the entry tier only. callsIncluded=148 is stated outright by the vendor — its own comparison table prints \"Included Phone Call Leads Tracked: Up to 148\" — not a figure we derived from the credit, as this note previously implied; a 2026-09-08 re-read shows the page printing that same ceiling on all four single-account tiers, and recording it on the other three is queued rather than done here because it changes what the cost model can compute above the credit. HIPAA is published: the Pro card lists it and the comparison table ticks a HIPAA Compliance row from Pro upward, so hipaa is true from 2026-09-08 (it was null, reasoned from the pricing table alone). No BAA is mentioned anywhere on the page, so baa stays null. The corroboration recorded on the entry tier (toolcomparelab) was removed on 2026-09-08: that host now fails its TLS handshake outright and returns 503, and archive.org holds no capture of it. The page's segmented control selects a business type, not a billing period — there is no monthly/annual toggle, and every figure in both states is labelled \"/mo\"."
     },
     {
       "slug": "calltrackingmetrics",
@@ -187,37 +179,33 @@
           "monthlyUsd": 79,
           "minutesIncluded": null,
           "callsIncluded": null,
-          "overagePerMin": null,
+          "overagePerMin": 0.04,
           "overagePerCall": null,
           "annualDiscountPct": 18,
           "billingModel": "hybrid",
-          "notes": "Unlimited users/tracking sources; 25 sub-accounts. Annual ~$65/mo (~18% off), 2-yr ~$60/mo. Usage metered: live transcription $0.02/min.",
-          "corroboration": {
-            "url": "https://www.toolcomparelab.com/call-tracking-pricing-comparison/",
-            "accessedAt": "2026-06-11"
-          },
+          "notes": "Unlimited users and tracking sources; no sub-accounts on this tier (the grid gives 25 to Marketing Pro). Local call forwarding is metered platform-wide at $0.04/min and is recorded once here rather than copied across every tier. Live transcription is billed separately at $0.02/min. Annual ~$65/mo (~18% off), 2-yr ~$60/mo.",
           "source": {
-            "url": "https://www.ctm.com/plans/",
-            "accessedAt": "2026-09-02"
+            "url": "https://www.ctm.com/plans-pricing/",
+            "accessedAt": "2026-09-08"
           }
         },
         {
           "name": "Marketing Pro",
           "monthlyUsd": 179,
-          "minutesIncluded": 3000,
+          "minutesIncluded": null,
           "callsIncluded": null,
-          "overagePerMin": 0.02,
+          "overagePerMin": null,
           "overagePerCall": null,
-          "annualDiscountPct": 18,
+          "annualDiscountPct": 17,
           "billingModel": "hybrid",
-          "notes": "3,000 transcribed minutes included; overage $0.02/min. AskAI, HubSpot integration, white-label. HIPAA/GDPR available on this tier+. Annual ~$149/mo.",
+          "notes": "25 sub-accounts, with additional packs of 25 at $50/mo. Includes 3,000 transcribed minutes per sub-account, then $0.02/min — but the page states those minutes do NOT renew each month, so they are not recorded in minutesIncluded, which this dataset uses for a monthly allowance. AskAI, HubSpot integration, white-label. HIPAA/GDPR available on this tier and above. Same platform-wide $0.04/min local forwarding as every tier. Annual ~$149/mo.",
           "corroboration": {
             "url": "https://www.itqlick.com/calltrackingmetrics/pricing",
             "accessedAt": "2026-06-11"
           },
           "source": {
-            "url": "https://www.ctm.com/plans/",
-            "accessedAt": "2026-09-02"
+            "url": "https://www.ctm.com/plans-pricing/",
+            "accessedAt": "2026-09-08"
           }
         },
         {
@@ -225,18 +213,18 @@
           "monthlyUsd": 329,
           "minutesIncluded": null,
           "callsIncluded": null,
-          "overagePerMin": 0.12,
+          "overagePerMin": null,
           "overagePerCall": null,
-          "annualDiscountPct": 18,
+          "annualDiscountPct": 17,
           "billingModel": "hybrid",
-          "notes": "VoIP softphone + Smart Dialer + Salesforce. VoiceAI $0.12/min (250 min/agent included). Annual ~$274/mo.",
+          "notes": "VoIP softphone + Smart Dialer + Salesforce; unlimited sub-accounts. VoiceAI is billed at $0.12/min with 60 minutes included per agent. Carries the same non-renewing 3,000 transcribed minutes per sub-account as Marketing Pro, then $0.02/min, and the same platform-wide $0.04/min local forwarding. Annual ~$274/mo.",
           "corroboration": {
             "url": "https://www.itqlick.com/calltrackingmetrics/pricing",
             "accessedAt": "2026-06-11"
           },
           "source": {
-            "url": "https://www.ctm.com/plans/",
-            "accessedAt": "2026-09-02"
+            "url": "https://www.ctm.com/plans-pricing/",
+            "accessedAt": "2026-09-08"
           }
         },
         {
@@ -254,8 +242,8 @@
             "accessedAt": "2026-06-11"
           },
           "source": {
-            "url": "https://www.ctm.com/plans/",
-            "accessedAt": "2026-09-02"
+            "url": "https://www.ctm.com/plans-pricing/",
+            "accessedAt": "2026-09-08"
           }
         }
       ],
@@ -273,7 +261,7 @@
       ],
       "bilingual": null,
       "demoPhone": null,
-      "provenance": "Four-tier plan ($79/$179/$329/$1,999 monthly) from ctm.com/plans (calltrackingmetrics.com 301-redirects to ctm.com) corroborated by the toolcomparelab roundup ('From $79/mo'). Marketing Pro bundles 3,000 transcribed minutes (overage $0.02/min). HIPAA/GDPR compliance offered on Marketing Pro and higher; BAA specifics not published. Annual ~18% / 2-yr ~24% off. Re-verified 2026-09-02 against the live pricing page; all published figures unchanged."
+      "provenance": "Four-tier plan ($79/$179/$329/$1,999 monthly) from the CallTrackingMetrics plans page, re-read in a headless browser on 2026-09-08. The recorded URL is ctm.com/plans-pricing: ctm.com/plans 301-redirects there, and citing the redirecting address made the page fail our own scanner's provenance gate, which compares the address we cite with the address a fetch actually lands on. The page loads on its Yearly control — it ships marked active in the served HTML, with the monthly figures pre-hidden and every Select Plan link pointing at length=yearly — so the figures a visitor sees first are the annual-billed ones; monthlyUsd holds the month-to-month price, which the page shows once the control is switched. annualDiscountPct now carries each plan's own saving (Marketing Lite 17.7%, Marketing Pro 16.8%, Sales Engage 16.7%, which the page markets as \"Up to 2 months free\" = 16.67%) rather than a flat 18 across the board; the 2-yr saving checks out at ~24%. Local call forwarding is a single platform-wide $0.04/min and is recorded once on the entry tier with the caveat in notes, not copied across all plans; overagePerMin previously held the transcription rate on Marketing Pro and the VoiceAI rate on Sales Engage, which is not what that field means in this dataset. The 3,000 transcribed minutes are per sub-account and, per the page, do not renew monthly, so they are not recorded as a monthly minutesIncluded allowance. HIPAA/GDPR compliance offered on Marketing Pro and higher; BAA specifics not published. The corroboration recorded on Marketing Lite (toolcomparelab, \"From $79/mo\") was removed on 2026-09-08: that host now returns 503 behind a certificate for an unrelated domain and archive.org holds no capture of it."
     },
     {
       "slug": "ringba",
@@ -289,14 +277,14 @@
           "overagePerCall": null,
           "annualDiscountPct": 13,
           "billingModel": "hybrid",
-          "notes": "Pay-per-call/inbound focus. Local $0.055/min, toll-free $0.06/min, local numbers $3/mo, recording $0.01/min, transcription $0.04/min. Annual $127/mo (~13% off). No bundled minutes.",
+          "notes": "Pay-per-call/inbound focus. Local $0.055/min, toll-free $0.06/min, local numbers $3/mo, recording $0.01/min, transcription $0.04/min. $147 is the month-to-month price: ringba.com/pricing loads in its Annual state — the section ships marked annual in the served HTML and the signup links read cycle=yearly before any interaction — so the first figure a visitor sees is the annual-billed $127/mo.",
           "corroboration": {
             "url": "https://www.g2.com/products/ringba/pricing",
             "accessedAt": "2026-06-11"
           },
           "source": {
             "url": "https://www.ringba.com/pricing/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-08"
           }
         },
         {
@@ -315,7 +303,7 @@
           },
           "source": {
             "url": "https://www.ringba.com/pricing/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-08"
           }
         }
       ],
@@ -345,12 +333,12 @@
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
-          "annualDiscountPct": 20,
+          "annualDiscountPct": 10,
           "billingModel": "per_call",
-          "notes": "Bills one flat rate per ANSWERED call regardless of duration (rate not published per tier). Monthly $39/mo; annual ~$31/mo (up to 20% off).",
+          "notes": "Bills one flat rate per ANSWERED call regardless of duration. Month-to-month $39/mo; $35/mo billed annually, which is the figure nimbata.com/pricing shows before its toggle is touched. The per-answered-call rate is carried in the page's own rate table but never rendered on our read (see provenance), so overagePerCall stays null rather than take a figure the page did not display.",
           "source": {
             "url": "https://www.nimbata.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-08"
           },
           "corroboration": {
             "url": "https://www.capterra.com/p/163493/Nimbata/",
@@ -359,32 +347,32 @@
         },
         {
           "name": "Marketing",
-          "monthlyUsd": 80,
+          "monthlyUsd": 89,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
-          "annualDiscountPct": 20,
+          "annualDiscountPct": 10,
           "billingModel": "per_call",
-          "notes": "Per-answered-call billing. Annual ~$80/mo (from $89).",
+          "notes": "Per-answered-call billing. Month-to-month $89/mo; $80/mo billed annually, which is the figure nimbata.com/pricing shows before its toggle is touched.",
           "source": {
             "url": "https://www.nimbata.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-08"
           }
         },
         {
           "name": "Agency",
-          "monthlyUsd": 120,
+          "monthlyUsd": 149,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
-          "annualDiscountPct": 20,
+          "annualDiscountPct": 19,
           "billingModel": "per_call",
-          "notes": "Per-answered-call billing. Annual ~$120/mo (from $149).",
+          "notes": "Per-answered-call billing. Month-to-month $149/mo; $120/mo billed annually, which is the figure nimbata.com/pricing shows before its toggle is touched. This is the only tier where the annual saving approaches the page's headline 20%.",
           "source": {
             "url": "https://www.nimbata.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-08"
           }
         }
       ],
@@ -404,7 +392,7 @@
       ],
       "bilingual": null,
       "demoPhone": null,
-      "provenance": "Tiered base ($35/$80/$120, annual-discounted from $39/$89/$149) from nimbata.com/pricing. Distinctive model: one flat charge per ANSWERED call, not per minute — the per-call rate is not published on the page so overagePerCall is left null rather than guessed. Free 'Entry' ($0 + usage) tier omitted (no base price to compare). HIPAA/BAA not published. Re-verified 2026-09-02 against the live pricing page; all published figures unchanged."
+      "provenance": "Tiered base read from nimbata.com/pricing rendered in a headless browser on 2026-09-08. The page carries a billing toggle that LOADS IN THE ANNUAL STATE and is easy to miss — a zero-width, transparent checkbox whose two labels are drawn in CSS pseudo-elements — so the figures a visitor sees first are the annual-billed ones: Pro $35 / Marketing $80 / Agency $120 per month, each printed beside a struck-through month-to-month price. Switching the toggle to Monthly gives Pro $39 / Marketing $89 / Agency $149, and the page's own pricing script sets the same three pairs. monthlyUsd holds the MONTH-TO-MONTH figure, as it does across this dataset; the Marketing and Agency rows held the annual-billed figure until 2026-09-08, while the Pro row had already been re-based, so one field meant two different things inside one vendor. Corrected 2026-09-08 and logged in data/corrections.jsonl. annualDiscountPct carried 20 on all three rows — the page's \"Save up to 20% with an annual plan\" headline, which is a ceiling only Agency approaches; each row now records its own saving (10% Pro, 10% Marketing, 19% Agency). Distinctive model: one flat charge per ANSWERED call, not per minute. That per-call rate IS carried in the page's own rate table, but the table fills in only after a country lookup that failed on our read, so every cell rendered as a dash; overagePerCall stays null rather than take a figure the page did not display, and the rate is country-dependent and published as \"starting at\" in any case. Free 'Entry' ($0 + usage) tier omitted (no base price to compare). HIPAA/BAA not published."
     },
     {
       "slug": "infinity",
@@ -427,7 +415,7 @@
           },
           "source": {
             "url": "https://www.infinity.co/us/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-08"
           }
         },
         {
@@ -446,7 +434,7 @@
           },
           "source": {
             "url": "https://www.infinity.co/us/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-08"
           }
         }
       ],
@@ -477,10 +465,10 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "hybrid",
-          "notes": "$3.00/number, $0.08/min, SMS $0.03, MMS $0.05. Unlimited phone leads tracked; conversation analytics add-ons (transcription/scoring) from $0.02/min.",
+          "notes": "$3.00/number, $0.08/min, SMS $0.03, MMS $0.05. Unlimited phone leads tracked. Conversation-analytics add-ons are priced separately and are published on Convirza's pricing hub page rather than on the call-tracking pricing page cited here: sentiment $0.005/min, topics and intent $0.005/min, summary/transcription $0.02/min, standard call scoring $0.02/min, advanced call scoring $0.03/min. Every tier's button is \"Get A Demo\" — there is no self-serve purchase.",
           "source": {
             "url": "https://www.convirza.com/pricingpage/convirza-call-tracking-pricing/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-08"
           },
           "corroboration": {
             "url": "https://www.softwaresuggest.com/convirza",
@@ -496,10 +484,10 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "hybrid",
-          "notes": "$1.00/number, $0.05/min, SMS $0.025, MMS $0.045. Advanced IVR, priority support.",
+          "notes": "$1.00/number, $0.05/min, SMS $0.025, MMS $0.045. Advanced IVR, priority support. Same conversation-analytics add-on rates as Starter, published on the pricing hub page. Convirza's hub page lists this tier's numbers at $1.50 rather than the $1.00 on the page cited here; the cited page's figure is the one recorded. Sold through a demo request like every other tier.",
           "source": {
             "url": "https://www.convirza.com/pricingpage/convirza-call-tracking-pricing/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-08"
           }
         }
       ],
@@ -514,7 +502,7 @@
       ],
       "bilingual": null,
       "demoPhone": null,
-      "provenance": "Two published tiers (Starter $29 + $0.08/min, Agency $149 + $0.05/min) with per-number and SMS/MMS rates from convirza.com call-tracking pricing page. AI conversation-analytics add-ons (transcription/scoring/sentiment) priced separately from $0.005-$0.03/min. Enterprise custom-quote omitted. References 'Caller Privacy (HIPAA & Legal)' but does not detail HIPAA in tiers, so hipaa=null. Re-verified 2026-09-02 against the live pricing page; all published figures unchanged."
+      "provenance": "Two published tiers (Starter $29 + $0.08/min, Agency $149 + $0.05/min) with per-number and SMS/MMS rates from convirza.com call-tracking pricing page. AI conversation-analytics add-ons (transcription/scoring/sentiment) priced separately from $0.005-$0.03/min. Enterprise custom-quote omitted. Every tier's button on that page is \"Get A Demo\" — there is no self-serve sign-up, free trial or cart on any of them, so the published figures are list prices rather than a price you can pay unaided. HIPAA and BAA are both recorded as unstated, and after a full read of the public site on 2026-09-08 that is a considered null rather than an unexamined one: the Caller Privacy page does carry the sentence \"To help you comply with privacy regulations, Convirza will provide and sign a Business Associate Agreement (BAA), extending our commitment to data protection\", but it sits as one tile in a product feature grid, names no plan, tier or account type, and Caller Privacy itself appears in neither of the two published plan matrices; meanwhile clause 15 of convirza.com/terms-conditions/ states \"Convirza makes no claims or warranties regarding compliance with HIPAA\" and clause 27 voids any term not written into that agreement. A vendor that publishes a BAA commitment on a marketing page and disclaims HIPAA in the contract that governs the account has not established either field, so both stay null rather than resolve a contradiction in the vendor's favour. Re-verified 2026-09-02 against the live pricing page; all published figures unchanged."
     },
     {
       "slug": "wildjar",
@@ -523,21 +511,17 @@
       "plans": [
         {
           "name": "Starter",
-          "monthlyUsd": 39,
-          "minutesIncluded": null,
+          "monthlyUsd": 150,
+          "minutesIncluded": 500,
           "callsIncluded": null,
-          "overagePerMin": 0.05,
+          "overagePerMin": null,
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "hybrid",
-          "notes": "$0.05/min, numbers $4.50 each, SMS $0.05, call intelligence $0.04/min. No bundled minutes published.",
-          "corroboration": {
-            "url": "https://www.g2.com/products/wildjar/pricing",
-            "accessedAt": "2026-06-11"
-          },
+          "notes": "All-inclusive on minutes and numbers, not a pure meter: $150/mo includes 4 tracking numbers, 500 minutes of call volume and WildJar AI transcription. No per-minute rate is published for this tier at all — the page states neither an overage rate nor what happens once the 500 minutes are used — so overagePerMin is null rather than borrowed from the tier above or inferred. Usage that IS priced on this tier: SMS $0.06 each, AI Lead Agent $79/agent/mo, AI Voice Agent $0.90/answered call. Monthly only; no annual billing exists anywhere on WildJar's pricing page, and there are no setup fees or lock-in contracts.",
           "source": {
-            "url": "https://www.wildjar.com/pricing-united-states",
-            "accessedAt": "2026-09-02"
+            "url": "https://www.wildjar.com/pricing",
+            "accessedAt": "2026-09-08"
           }
         },
         {
@@ -545,33 +529,18 @@
           "monthlyUsd": 89,
           "minutesIncluded": null,
           "callsIncluded": null,
-          "overagePerMin": 0.04,
+          "overagePerMin": 0.1,
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "hybrid",
-          "notes": "$0.04/min, numbers $4.00 each. Call intelligence $0.04/min.",
+          "notes": "$89/mo plus usage. WildJar publishes this one plan under two names — \"Growth\" in the Growth view of its pricing page and \"Agency\" in the Agency & whitelabel view — and its own FAQ says they are the same plan at the same price; the record keeps the name Agency it has always used. Metered: local tracking numbers $8.50/mo each, calls $0.10/min, SMS $0.06 each, WildJar AI transcription $0.04/min. Add-ons: AI Lead Agent $39/agent/mo, AI Voice Agent $0.90/answered call. Agency-side features are a whitelabel dashboard, unlimited client accounts, reseller margin, and advanced call flows plus API. Monthly only, billed in arrears, cancel with 30 days notice.",
           "corroboration": {
             "url": "https://www.g2.com/products/wildjar/pricing",
             "accessedAt": "2026-06-11"
           },
           "source": {
-            "url": "https://www.wildjar.com/pricing-united-states",
-            "accessedAt": "2026-09-02"
-          }
-        },
-        {
-          "name": "Mammoth",
-          "monthlyUsd": 159,
-          "minutesIncluded": null,
-          "callsIncluded": null,
-          "overagePerMin": null,
-          "overagePerCall": null,
-          "annualDiscountPct": null,
-          "billingModel": "hybrid",
-          "notes": "Top tier with 'mammoth discounts'; per-minute rate not separately published for this tier.",
-          "source": {
-            "url": "https://www.wildjar.com/pricing-united-states",
-            "accessedAt": "2026-09-02"
+            "url": "https://www.wildjar.com/pricing",
+            "accessedAt": "2026-09-08"
           }
         }
       ],
@@ -589,7 +558,7 @@
       ],
       "bilingual": null,
       "demoPhone": null,
-      "provenance": "US tiers (Starter $39, Agency $89, Mammoth $159) with per-minute and per-number rates from wildjar.com/pricing-united-states, corroborated by G2's 2026 WildJar pricing listing. Per-minute rate for the Mammoth tier not published (left null). HIPAA/BAA not published. Re-verified 2026-09-02 against the live pricing page; all published figures unchanged."
+      "provenance": "US tiers read from wildjar.com/pricing in a headless browser on 2026-09-08, and confirmed by a second independent read. THIS RECORD WAS REBUILT THAT DAY, because the page it had been citing is no longer WildJar's pricing page. It had held Starter $39, Agency $89 and Mammoth $159 from wildjar.com/pricing-united-states — a page nothing on the site links to any more, whose footer still reads 2024, whose testimonials are placeholder Lorem Ipsum, and whose sitemap entry was last touched 2026-05-24 against 2026-09-04 for the live page. It still answers with HTTP 200 and still serves the old figures, which is exactly why the error survived re-verification: a scanner pointed at that URL keeps confirming prices WildJar no longer charges. The live page publishes, for the United States, Starter at $150/mo — a different product, bundling 4 tracking numbers, 500 minutes and AI transcription rather than metering from zero — Growth/Agency at $89/mo plus usage, and Mammoth with no price at all (\"Talk to the pack\", every comparison cell reading Custom), so Mammoth is no longer carried as a priced tier. Metered rates are $8.50/mo per local number, $0.10/min on calls, $0.06 per SMS and $0.04/min for AI transcription. There is NO annual billing: the words annual, yearly and per year appear zero times, and the FAQ states monthly subscriptions only, no setup fees, no lock-in, billed in arrears with 30 days notice. Two cautions for whoever reads this page next. It is one page for four regions (Australia, New Zealand, United Kingdom, United States) held as hidden blocks with AUSTRALIA ACTIVE ON LOAD, switched by a script that only shows and hides — so a fetch or a scan reads Australian dollars unless the United States control is clicked. And every US numeral except the AI Voice Agent charge is identical to the Australian one, while New Zealand and the United Kingdom are genuinely localised; whether that is deliberate parity or an un-localised block cannot be settled from the page, and it is recorded here rather than smoothed over. The G2 listing that corroborated the old Starter price was removed with that price; it still stands on Agency, which G2 recorded at the same $89 the live page publishes today. HIPAA/BAA not published."
     },
     {
       "slug": "dialics",
@@ -605,10 +574,10 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "per_minute",
-          "notes": "Pure usage: local $0.045/min, toll-free $0.055/min, local numbers $1/mo, toll-free $2/mo, transcription $0.02/min, recording $0.0025/min, SMS $0.0024. 7-day trial + $10 credit. Some third-party listings cite a ~$99/mo entry, but the live page shows pure pay-as-you-go, so base=0 is recorded.",
+          "notes": "Pure usage, and the published table covers INBOUND calls only — its own column header reads \"price of inbound calls\" and no outbound rates are published. Local $0.045/min, toll-free $0.055/min, local numbers $1/mo, toll-free $2/mo, transcription $0.02/min, recording $0.0025/min (the page prints this one with a comma, \"$0,0025\", where every other row uses a period), auto SMS replies $0.0024 each. 7-day trial + $10 credit. The page footnotes every figure with \"International rates may vary\" and directs non-US buyers to a contact form, so these are the US rates.",
           "source": {
             "url": "https://dialics.com/call-tracking-pricing/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-08"
           }
         }
       ],
@@ -629,18 +598,33 @@
       "domain": "mediahawk.co.uk",
       "plans": [
         {
-          "name": "Per-user (entry)",
-          "monthlyUsd": 50,
+          "name": "Starter",
+          "monthlyUsd": null,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
-          "annualDiscountPct": 20,
+          "annualDiscountPct": 10,
           "billingModel": "hybrid",
-          "notes": "UK vendor; ~$50/user/mo entry (vendor-stated USD-equivalent). Flat monthly fee + per-number + per-minute call charges (from ~2p/min). Annual up to 20% off. Per-minute USD rate not published; left null.",
+          "notes": "GBP-only vendor: £199/mo month-to-month, £179/mo on an annual contract, with unlimited users — headcount changes nothing. Includes either 1 dynamic number pool or 10 static numbers; no minutes and no calls are bundled, so metering starts at the first minute. Per-call connection fee 15p on this tier, landline or mobile; per-minute charges run 2.5p-14p by number type and destination (local presence and 03 numbers 2.5p to landline / 9.5p to mobile). Onboarding is free. Every money field in this dataset is USD and Mediahawk publishes no USD figure at all, so all of them are null here rather than converted.",
           "source": {
             "url": "https://www.mediahawk.co.uk/pricing/",
-            "accessedAt": "2026-06-11"
+            "accessedAt": "2026-09-08"
+          }
+        },
+        {
+          "name": "Professional",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "hybrid",
+          "notes": "GBP-only vendor: £299/mo month-to-month, £269/mo on an annual contract, unlimited users. Same number allowance as Starter, and the same per-minute schedule; the per-call connection fee drops to 12p. Onboarding is free. All USD fields are null because the vendor publishes no USD figure.",
+          "source": {
+            "url": "https://www.mediahawk.co.uk/pricing/",
+            "accessedAt": "2026-09-08"
           }
         }
       ],
@@ -656,7 +640,7 @@
       ],
       "bilingual": null,
       "demoPhone": null,
-      "provenance": "UK-headquartered marketing-attribution / call-analytics vendor. Per-user entry (~$50/user/mo, scaling to ~$400/mo at 10 users, ~$3,500/mo at 100) from mediahawk.co.uk/pricing; call charges from ~2p/min on top. Annual up to 20% off. Only the entry per-user base is recorded as a comparable plan; higher seat-count totals are headcount-derived, not separate published tiers. Native currency GBP; figure is vendor-stated USD-equivalent and flagged. HIPAA/BAA not published."
+      "provenance": "UK-headquartered marketing-attribution / call-analytics vendor, re-read in a headless browser on 2026-09-08. THIS RECORD WAS REBUILT THAT DAY. It previously held a single plan called \"Per-user (entry)\" at $50/user/mo, described as a vendor-stated USD equivalent, with a 20% annual discount. None of that is on the page: mediahawk.co.uk/pricing publishes two priced tiers, Starter and Professional, at £199/mo and £299/mo month-to-month (£179 and £269 on an annual contract), plus an Enterprise tier quoted on application. Both priced tiers state \"Unlimited users\" and the phrase \"per user\" does not appear anywhere on the page, so the per-user model was never real; the page contains no \"$\" character at all, so nothing on it was ever a vendor-stated USD figure; and the annual saving is stated as 10% in three places and computes to 10.05% and 10.03%, not 20%. The annual discount applies to the fixed subscription only — per-minute and per-call charges are not discounted. Nothing is bundled: minutesIncluded and callsIncluded are null because metering starts at the first minute, and each tier includes either 1 dynamic number pool or 10 static numbers. Metered charges are published in pence and vary two ways: the per-call connection fee by tier (15p Starter, 12p Professional, to landline or mobile) and the per-minute rate by number type and destination (2.5p-14p; local presence and 03 numbers 2.5p to landline and 9.5p to mobile). Onboarding is free and explicitly stated as included in every plan. Every money field in this dataset is denominated in USD, and this vendor publishes no USD price, so every one of them is null rather than converted at a rate the vendor does not quote — the previous $50 was exactly such a figure and it matched nothing. The pricing page also loads with its billing toggle already on Annually, behind a zero-size transparent checkbox whose two state words are unclickable, with the month-to-month price struck through; a future re-read that trusts the first figures rendered would record £179 and £269, which are the annual prices. HIPAA/BAA not published."
     },
     {
       "slug": "invoca",

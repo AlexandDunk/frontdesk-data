@@ -1,7 +1,7 @@
 {
   "vertical": "internal-tool-builders",
   "generatedAt": "2026-06-14",
-  "methodologyNotes": "Pricing fetched directly from each vendor's official /pricing page on 2026-06-14. Retool's pricing page geo-redirected to EUR; USD figures sourced from GetApp (getapp.com) and SoftwareAdvice, which both independently show Team=$10/seat/mo and Business=$50/seat/mo — consistent with EUR figures at current exchange rates. All prices reflect the smallest billable unit (one seat). Annual rates are the annualized monthly equivalent. monthlyUsd on per_seat plans = price for one seat. Quote-only / contact-sales tiers recorded as null. Non-telephony vertical: minutesIncluded, callsIncluded, overagePerMin, overagePerCall are null on every plan.",
+  "methodologyNotes": "Pricing fetched directly from each vendor's official /pricing page on 2026-06-14. Retool's pricing page geo-redirected to EUR; USD figures sourced from GetApp (getapp.com) and SoftwareAdvice, which both independently show Team=$10/seat/mo and Business=$50/seat/mo — consistent with EUR figures at current exchange rates. All prices reflect the smallest billable unit (one seat). monthlyUsd is the month-to-month rate; annual rates, as the annualized monthly equivalent, belong in notes with the saving in annualDiscountPct. Rows here held the annual figure until 2026-09-09. Rows recorded on the annual basis were re-based to the month-to-month price on 2026-09-09, each against the pair of figures its own notes already named, and logged in data/corrections.jsonl. monthlyUsd on per_seat plans = price for one seat. Quote-only / contact-sales tiers recorded as null. Non-telephony vertical: minutesIncluded, callsIncluded, overagePerMin, overagePerCall are null on every plan.",
   "vendors": [
     {
       "slug": "retool",
@@ -11,7 +11,7 @@
       "baa": null,
       "bilingual": null,
       "integrations": [],
-      "provenance": "Official pricing page retool.com/pricing geo-redirected to EUR on 2026-06-14. USD prices sourced from GetApp (getapp.com/content-management-software/a/retool/pricing/) and SoftwareAdvice (softwareadvice.com/construction/retool-profile/) which both report Team=$10/user/mo and Business=$50/user/mo. Retool's page distinguishes 'builder' and 'internal user' seats; third-party sources show a simplified single per-user figure. HIPAA not mentioned on pricing page or accessible security page.",
+      "provenance": "Official pricing page retool.com/pricing geo-redirected to EUR on 2026-06-14. USD prices sourced from GetApp (getapp.com/content-management-software/a/retool/pricing/) and SoftwareAdvice (softwareadvice.com/construction/retool-profile/) which both report Team=$10/user/mo and Business=$50/user/mo. Retool's page distinguishes 'builder' and 'internal user' seats; third-party sources show a simplified single per-user figure. HIPAA not mentioned on pricing page or accessible security page. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
       "plans": [
         {
           "name": "Free",
@@ -24,8 +24,8 @@
           "billingModel": "per_seat",
           "notes": "Up to 5 users, 500 workflow runs/month, 250 AI credits/month. No annual billing required.",
           "source": {
-            "url": "https://getapp.com/content-management-software/a/retool/pricing/",
-            "accessedAt": "2026-06-14"
+            "url": "https://retool.com/pricing",
+            "accessedAt": "2026-09-05"
           },
           "corroboration": {
             "url": "https://www.softwareadvice.com/construction/retool-profile/",
@@ -43,8 +43,8 @@
           "billingModel": "per_seat",
           "notes": "Per user/month. 20% savings with annual billing. 5,000 workflow runs/month, staging environment. EUR pricing page shows €9/builder/mo and €5/internal-user/mo; third-party USD sources consolidate to $10/user/mo.",
           "source": {
-            "url": "https://getapp.com/content-management-software/a/retool/pricing/",
-            "accessedAt": "2026-06-14"
+            "url": "https://retool.com/pricing",
+            "accessedAt": "2026-09-05"
           },
           "corroboration": {
             "url": "https://www.softwareadvice.com/construction/retool-profile/",
@@ -62,8 +62,8 @@
           "billingModel": "per_seat",
           "notes": "Per user/month. 20% savings with annual billing. Audit logging, rich permission controls, custom branding, portals. EUR pricing page shows €46/builder/mo and €14/internal-user/mo; third-party USD sources consolidate to $50/user/mo.",
           "source": {
-            "url": "https://getapp.com/content-management-software/a/retool/pricing/",
-            "accessedAt": "2026-06-14"
+            "url": "https://retool.com/pricing",
+            "accessedAt": "2026-09-05"
           },
           "corroboration": {
             "url": "https://www.softwareadvice.com/construction/retool-profile/",
@@ -82,7 +82,7 @@
           "notes": "Custom pricing, contact sales. Includes SAML/OIDC SSO, volume-based discounts, dedicated support.",
           "source": {
             "url": "https://retool.com/pricing",
-            "accessedAt": "2026-06-14"
+            "accessedAt": "2026-09-02"
           }
         }
       ],
@@ -152,7 +152,7 @@
         "SAML",
         "OIDC"
       ],
-      "provenance": "Official pricing page appsmith.com/pricing fetched 2026-06-14. Business plan confirmed at $15/user/month. Enterprise confirmed at $2,500/month for 100 users. HIPAA not mentioned on pricing page; SOC 2 Type 2 mentioned for Enterprise only. No annual discount published for Business plan.",
+      "provenance": "Official pricing page appsmith.com/pricing fetched 2026-06-14. Business plan confirmed at $15/user/month. Enterprise confirmed at $2,500/month for 100 users. HIPAA not mentioned on pricing page; SOC 2 Type 2 mentioned for Enterprise only. No annual discount published for Business plan. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
       "plans": [
         {
           "name": "Free",
@@ -166,7 +166,7 @@
           "notes": "Up to 5 users on cloud, 5 workspaces, 3 Git repos, Google SSO, 3 standard roles.",
           "source": {
             "url": "https://www.appsmith.com/pricing",
-            "accessedAt": "2026-06-14"
+            "accessedAt": "2026-09-02"
           }
         },
         {
@@ -181,7 +181,7 @@
           "notes": "$15/user/month, up to 99 users. Unlimited environments, workflows, reusable packages, custom roles, audit logs. 15-day free trial.",
           "source": {
             "url": "https://www.appsmith.com/pricing",
-            "accessedAt": "2026-06-14"
+            "accessedAt": "2026-09-02"
           }
         },
         {
@@ -196,7 +196,7 @@
           "notes": "$2,500/month starting for 100 users, typically billed annually. SAML/OIDC SSO, SCIM, CI/CD, airgapped edition, dedicated support with SLAs.",
           "source": {
             "url": "https://www.appsmith.com/pricing",
-            "accessedAt": "2026-06-14"
+            "accessedAt": "2026-09-02"
           }
         }
       ],
@@ -275,7 +275,7 @@
         "Google Sheets",
         "Slack"
       ],
-      "provenance": "Official pricing page budibase.com/pricing fetched 2026-06-14. Annual discount is exactly 20% per FAQ on the page (monthly = annual price x 1.20). HIPAA not mentioned; SOC 1/2 and ISO 27001 mentioned on security page. monthlyUsd values below reflect the annual billing rate (lowest published price).",
+      "provenance": "Official pricing page budibase.com/pricing fetched 2026-06-14. Annual discount is exactly 20% per FAQ on the page (monthly = annual price x 1.20). HIPAA not mentioned; SOC 1/2 and ISO 27001 mentioned on security page. monthlyUsd values below reflect the annual billing rate (lowest published price). Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
       "plans": [
         {
           "name": "Open Source (Self-hosted)",
@@ -289,7 +289,7 @@
           "notes": "Self-hosted only. Unlimited apps, actions, users, automations. Fair-code license.",
           "source": {
             "url": "https://budibase.com/pricing",
-            "accessedAt": "2026-06-14"
+            "accessedAt": "2026-09-02"
           }
         },
         {
@@ -304,7 +304,7 @@
           "notes": "$19/month billed annually; $22.80/month billed monthly. Includes 1 creator, 5K actions/month, 2K AI credits, 1 workspace. End users at $5/user/mo add-on. Annual discount: monthly is ~20% higher than annual rate (inverse: annual saves ~16.7% vs monthly).",
           "source": {
             "url": "https://budibase.com/pricing",
-            "accessedAt": "2026-06-14"
+            "accessedAt": "2026-09-02"
           }
         },
         {
@@ -319,7 +319,7 @@
           "notes": "$49/month billed annually; $58.80/month billed monthly. Includes 1 creator, 20K actions/month, 10K AI credits, 10 workspaces, custom branding, SSO. Creators expandable at $50/creator/mo.",
           "source": {
             "url": "https://budibase.com/pricing",
-            "accessedAt": "2026-06-14"
+            "accessedAt": "2026-09-02"
           }
         },
         {
@@ -334,7 +334,7 @@
           "notes": "$299/month billed annually; $358.80/month billed monthly. Includes 3 creators, 250K actions/month, 50K AI credits, unlimited workspaces, 30-day logs, email support.",
           "source": {
             "url": "https://budibase.com/pricing",
-            "accessedAt": "2026-06-14"
+            "accessedAt": "2026-09-02"
           }
         },
         {
@@ -349,7 +349,7 @@
           "notes": "Custom pricing, contact sales. Unlimited actions, 365-day logs, audit logs, priority support/SLAs.",
           "source": {
             "url": "https://budibase.com/pricing",
-            "accessedAt": "2026-06-14"
+            "accessedAt": "2026-09-02"
           }
         }
       ],
@@ -439,7 +439,7 @@
         "Twilio",
         "Slack"
       ],
-      "provenance": "Official pricing page tooljet.com/pricing fetched twice on 2026-06-14 — both fetches returned identical USD figures. SOC 2 Type II and ISO 27001 mentioned on security page; HIPAA not mentioned. 20% annual discount confirmed on Pro and Team plans.",
+      "provenance": "Official pricing page tooljet.com/pricing fetched twice on 2026-06-14 — both fetches returned identical USD figures. SOC 2 Type II and ISO 27001 mentioned on security page; HIPAA not mentioned. 20% annual discount confirmed on Pro and Team plans. Re-verified 2026-09-02 against the live pricing page — Enterprise: quote-only -> $3000 (third-party figure).",
       "plans": [
         {
           "name": "Free",
@@ -453,12 +453,12 @@
           "notes": "Up to 2 builders, 50 end users, 2 apps, 100 AI credits/month. Community Slack support.",
           "source": {
             "url": "https://tooljet.com/pricing",
-            "accessedAt": "2026-06-14"
+            "accessedAt": "2026-09-02"
           }
         },
         {
           "name": "Pro",
-          "monthlyUsd": 63.2,
+          "monthlyUsd": 79,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
@@ -468,12 +468,12 @@
           "notes": "$63.20/builder/month billed annually (20% off $79/mo). Month-to-month: $79/builder/month. 100 end users, 5 apps, 2,000 AI credits/builder/month, custom styling, version control.",
           "source": {
             "url": "https://tooljet.com/pricing",
-            "accessedAt": "2026-06-14"
+            "accessedAt": "2026-09-02"
           }
         },
         {
           "name": "Team",
-          "monthlyUsd": 159.2,
+          "monthlyUsd": 199,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
@@ -483,12 +483,12 @@
           "notes": "$159.20/builder/month billed annually (20% off $199/mo). Month-to-month: $199/builder/month. Unlimited end users and apps, SSO, custom user groups, white labelling, Git sync, audit logs.",
           "source": {
             "url": "https://tooljet.com/pricing",
-            "accessedAt": "2026-06-14"
+            "accessedAt": "2026-09-02"
           }
         },
         {
           "name": "Enterprise",
-          "monthlyUsd": null,
+          "monthlyUsd": 3000,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
@@ -498,7 +498,7 @@
           "notes": "Custom pricing, contact sales. SCIM provisioning, custom AI model options, multi-instance deployments, premium SLAs.",
           "source": {
             "url": "https://tooljet.com/pricing",
-            "accessedAt": "2026-06-14"
+            "accessedAt": "2026-09-02"
           }
         }
       ],
@@ -579,7 +579,7 @@
         "Google Sheets",
         "Airtable"
       ],
-      "provenance": "Official pricing page uibakery.io/pricing fetched 2026-06-14. Annual vs monthly rates confirmed directly from page. HIPAA not mentioned. Builder plan: $20/dev/mo annually vs $25/mo monthly (20% discount). Team plan: $35/dev/mo annually vs $40/mo monthly (12.5% discount).",
+      "provenance": "Official pricing page uibakery.io/pricing fetched 2026-06-14. Annual vs monthly rates confirmed directly from page. HIPAA not mentioned. Builder plan: $20/dev/mo annually vs $25/mo monthly (20% discount). Team plan: $35/dev/mo annually vs $40/mo monthly (12.5% discount). Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
       "plans": [
         {
           "name": "Free",
@@ -593,12 +593,12 @@
           "notes": "Cloud and self-hosted. Unlimited apps, public/private apps, hosted database, trial AI credits. 1,000 automation executions/month.",
           "source": {
             "url": "https://uibakery.io/pricing",
-            "accessedAt": "2026-06-14"
+            "accessedAt": "2026-09-02"
           }
         },
         {
           "name": "Builder",
-          "monthlyUsd": 20,
+          "monthlyUsd": 25,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
@@ -608,7 +608,7 @@
           "notes": "$20/developer/month billed annually; $25/developer/month billed monthly. Includes $25 AI credits, environments, app export, built-in roles, up to 50 viewer seats.",
           "source": {
             "url": "https://uibakery.io/pricing",
-            "accessedAt": "2026-06-14"
+            "accessedAt": "2026-09-02"
           }
         },
         {
@@ -623,7 +623,7 @@
           "notes": "$35/developer/month billed annually; $40/developer/month billed monthly (~12.5% discount). Includes $40 AI credits, RBAC, audit logs, premium support. 5,000 automation executions/month.",
           "source": {
             "url": "https://uibakery.io/pricing",
-            "accessedAt": "2026-06-14"
+            "accessedAt": "2026-09-02"
           }
         },
         {
@@ -638,7 +638,7 @@
           "notes": "Custom pricing, contact sales. App migration, custom development, 50+ viewer seats, dedicated VM, custom SSO (SAML, OpenID, OAuth2), bring-your-own AI model.",
           "source": {
             "url": "https://uibakery.io/pricing",
-            "accessedAt": "2026-06-14"
+            "accessedAt": "2026-09-02"
           }
         }
       ],
@@ -727,7 +727,7 @@
         "GCP Secret Manager",
         "HashiCorp Vault"
       ],
-      "provenance": "Official pricing page superblocks.com/pricing fetched twice on 2026-06-14. HIPAA Compliant badge explicitly present on pricing page; BAA not mentioned. SOC 2 Type II certified. Teams plan: $125/AI Builder/mo monthly, $100/AI Builder/mo annually (20% discount). Enterprise is quote-only.",
+      "provenance": "Official pricing page superblocks.com/pricing fetched twice on 2026-06-14. HIPAA Compliant badge explicitly present on pricing page; BAA not mentioned. SOC 2 Type II certified. Teams plan: $125/AI Builder/mo monthly, $100/AI Builder/mo annually (20% discount). Enterprise is quote-only. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
       "plans": [
         {
           "name": "Teams",
@@ -741,7 +741,7 @@
           "notes": "$100/AI Builder/month billed annually; $125/AI Builder/month billed monthly. Up to 15 builders. Includes 1 hosted app (additional apps $100/app/mo), 100 AI credits/builder/month, 50+ integrations, staging/production environments, RBAC. 14-day free trial.",
           "source": {
             "url": "https://www.superblocks.com/pricing",
-            "accessedAt": "2026-06-14"
+            "accessedAt": "2026-09-02"
           }
         },
         {
@@ -756,7 +756,7 @@
           "notes": "Custom pricing, contact sales. VPC deployment, unlimited hosted apps and end users, audit logs, observability pipelines, dedicated account team, SSO/SAML/OIDC.",
           "source": {
             "url": "https://www.superblocks.com/pricing",
-            "accessedAt": "2026-06-14"
+            "accessedAt": "2026-09-02"
           }
         }
       ],
@@ -850,7 +850,7 @@
         "OpenAI",
         "Anthropic"
       ],
-      "provenance": "Official pricing page nocodb.com/pricing fetched 2026-06-14. USD prices confirmed directly from the page. HIPAA not mentioned. Self-hosted Community edition is free. Cloud plans have per-seat and flat-rate options. monthlyUsd reflects annual billing rate (lowest published price).",
+      "provenance": "Official pricing page nocodb.com/pricing fetched 2026-06-14. USD prices confirmed directly from the page. HIPAA not mentioned. Self-hosted Community edition is free. Cloud plans have per-seat and flat-rate options. monthlyUsd reflects annual billing rate (lowest published price). Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
       "plans": [
         {
           "name": "Free",
@@ -864,12 +864,12 @@
           "notes": "Cloud: 3 editors, 10 commenters, 1,000 records, 1 GB storage. Self-hosted Community edition: unlimited records, storage, seats.",
           "source": {
             "url": "https://nocodb.com/pricing",
-            "accessedAt": "2026-06-14"
+            "accessedAt": "2026-09-02"
           }
         },
         {
           "name": "Plus",
-          "monthlyUsd": 12,
+          "monthlyUsd": 15,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
@@ -879,12 +879,12 @@
           "notes": "$12/seat/month billed annually ($108/month for unlimited seats option); $15/seat/month billed monthly. 50,000 records, 20 GB storage.",
           "source": {
             "url": "https://nocodb.com/pricing",
-            "accessedAt": "2026-06-14"
+            "accessedAt": "2026-09-02"
           }
         },
         {
           "name": "Business",
-          "monthlyUsd": 24,
+          "monthlyUsd": 30,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
@@ -894,7 +894,7 @@
           "notes": "$24/seat/month billed annually ($216/month unlimited seats option); $30/seat/month billed monthly. 300,000 records, 100 GB storage, 10 external DB connections.",
           "source": {
             "url": "https://nocodb.com/pricing",
-            "accessedAt": "2026-06-14"
+            "accessedAt": "2026-09-02"
           }
         },
         {
@@ -909,7 +909,7 @@
           "notes": "$45/seat/month billed annually (3-seat minimum); $54/seat/month billed monthly. 1,000,000 records, 150 GB storage, row-level security.",
           "source": {
             "url": "https://nocodb.com/pricing",
-            "accessedAt": "2026-06-14"
+            "accessedAt": "2026-09-02"
           }
         },
         {
@@ -924,7 +924,7 @@
           "notes": "Custom pricing, contact sales. Unlimited workspaces, SCIM/SSO, audit logs, team hierarchy, air-gapped installation available.",
           "source": {
             "url": "https://nocodb.com/pricing",
-            "accessedAt": "2026-06-14"
+            "accessedAt": "2026-09-02"
           }
         }
       ],

@@ -1,7 +1,7 @@
 {
   "vertical": "project-management",
   "generatedAt": "2026-06-13",
-  "methodologyNotes": "Published self-serve pricing for project-management / work-management software (Asana, Monday.com, ClickUp, Wrike, Trello, Notion, Airtable, Basecamp) was collected from each vendor's public pricing page on the accessedAt date and normalized to USD. Where a vendor prices per seat/user, monthlyUsd records the per-seat list price (billingModel per_seat) at the annual-billing rate, with the month-to-month rate noted in the plan notes; flat-priced tiers record the flat monthly fee (billingModel flat). Quote-only / contact-sales / Enterprise tiers carry a null price rather than an estimate. These are not telephony products, so minutesIncluded, callsIncluded, overagePerMin and overagePerCall are null on every plan, and HIPAA/BAA/bilingual are null unless a vendor states otherwise. Every figure is sourced to the vendor pricing page on the accessed date with an independent corroborating source attached where one confirmed the figure.",
+  "methodologyNotes": "Published self-serve pricing for project-management / work-management software (Asana, Monday.com, ClickUp, Wrike, Trello, Notion, Airtable, Basecamp) was collected from each vendor's public pricing page on the accessedAt date and normalized to USD. Where a vendor prices per seat/user, monthlyUsd records the per-seat MONTH-TO-MONTH list price (billingModel per_seat), with the annual-billing rate in the plan notes and the saving in annualDiscountPct; flat-priced tiers record the flat monthly fee (billingModel flat). The annual rate sat in that field until 2026-09-09. Rows recorded on the annual basis were re-based to the month-to-month price on 2026-09-09, each against the pair of figures its own notes already named, and logged in data/corrections.jsonl. Quote-only / contact-sales / Enterprise tiers carry a null price rather than an estimate. These are not telephony products, so minutesIncluded, callsIncluded, overagePerMin and overagePerCall are null on every plan, and HIPAA/BAA/bilingual are null unless a vendor states otherwise. Every figure is sourced to the vendor pricing page on the accessed date with an independent corroborating source attached where one confirmed the figure.",
   "vendors": [
     {
       "slug": "asana",
@@ -19,7 +19,7 @@
         "Microsoft Teams",
         "Zapier"
       ],
-      "provenance": "Prices read from asana.com/pricing on 2026-06-13; per-user/month rates corroborated by buyersprint.com Asana 2026 pricing breakdown.",
+      "provenance": "Prices read from asana.com/pricing on 2026-06-13; per-user/month rates corroborated by buyersprint.com Asana 2026 pricing breakdown. Re-verified 2026-09-03 against the live pricing page; published figures unchanged.",
       "plans": [
         {
           "name": "Personal",
@@ -34,12 +34,12 @@
           "notes": "Free forever for up to 2 users: unlimited tasks/projects, list/board/calendar views, 100+ integrations, 100MB per-file storage cap. Limited to 2 users.",
           "source": {
             "url": "https://asana.com/pricing",
-            "accessedAt": "2026-06-13"
+            "accessedAt": "2026-09-03"
           }
         },
         {
           "name": "Starter",
-          "monthlyUsd": 10.99,
+          "monthlyUsd": 13.49,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
@@ -50,7 +50,7 @@
           "notes": "$10.99/user/mo at annual-billing rate; month-to-month rate $13.49/user/mo. Adds timeline & Gantt, reporting dashboards, unlimited automations, forms, custom fields, AI Studio Basic (50K credits/mo), unlimited free guests.",
           "source": {
             "url": "https://asana.com/pricing",
-            "accessedAt": "2026-06-13"
+            "accessedAt": "2026-09-03"
           },
           "corroboration": {
             "url": "https://buyersprint.com/2026/04/02/asana-pricing-2026/",
@@ -59,7 +59,7 @@
         },
         {
           "name": "Advanced",
-          "monthlyUsd": 24.99,
+          "monthlyUsd": 30.49,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
@@ -70,7 +70,7 @@
           "notes": "$24.99/user/mo at annual-billing rate; month-to-month rate $30.49/user/mo. Adds unlimited portfolios, goals, workload management, approvals & proofing, time tracking, formulas, Salesforce/Tableau/Power BI, AI Studio Basic (75K credits/mo).",
           "source": {
             "url": "https://asana.com/pricing",
-            "accessedAt": "2026-06-13"
+            "accessedAt": "2026-09-03"
           },
           "corroboration": {
             "url": "https://buyersprint.com/2026/04/02/asana-pricing-2026/",
@@ -89,7 +89,7 @@
           "notes": "Contact-sales / custom pricing. Adds SAML SSO, SCIM provisioning, universal workload, capacity planning, service accounts, admin controls, AI Studio Basic (200K credits/mo). Enterprise+ tier available for enhanced security/compliance.",
           "source": {
             "url": "https://asana.com/pricing",
-            "accessedAt": "2026-06-13"
+            "accessedAt": "2026-09-03"
           }
         }
       ],
@@ -161,7 +161,7 @@
         "Zapier",
         "Jira"
       ],
-      "provenance": "Work Management plan prices read from monday.com/pricing on 2026-06-13. Official page rendered EUR (€0/€9/€12/€19) due to geo; US per-seat USD list ($9/$12/$19, same numerals) corroborated by 2026 third-party pricing roundups (costbench, plaky).",
+      "provenance": "Work Management plan prices read from monday.com/pricing on 2026-06-13. Official page rendered EUR (€0/€9/€12/€19) due to geo; US per-seat USD list ($9/$12/$19, same numerals) corroborated by 2026 third-party pricing roundups (costbench, plaky). Re-verified 2026-09-03 against the live pricing page; published figures unchanged.",
       "plans": [
         {
           "name": "Free",
@@ -176,23 +176,23 @@
           "notes": "Free forever for up to 2 seats (Work Management): up to 3 boards, 3 docs, 200+ templates, 8 column types, iOS/Android apps.",
           "source": {
             "url": "https://monday.com/pricing",
-            "accessedAt": "2026-06-13"
+            "accessedAt": "2026-09-03"
           }
         },
         {
           "name": "Basic",
-          "monthlyUsd": 9,
+          "monthlyUsd": 12,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
-          "annualDiscountPct": 18,
+          "annualDiscountPct": 25,
           "billingModel": "per_seat",
           "setupFeeUsd": 0,
           "notes": "$9/seat/mo annual-billing rate; month-to-month $12/seat/mo. Paid plans carry a 3-seat minimum (official calculator may show 10-seat default). Unlimited viewers, unlimited items, basic AI (1,000 credits/mo).",
           "source": {
             "url": "https://monday.com/pricing",
-            "accessedAt": "2026-06-13"
+            "accessedAt": "2026-09-03"
           },
           "corroboration": {
             "url": "https://costbench.com/software/project-management/monday/",
@@ -201,7 +201,7 @@
         },
         {
           "name": "Standard",
-          "monthlyUsd": 12,
+          "monthlyUsd": 14,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
@@ -212,7 +212,7 @@
           "notes": "$12/seat/mo annual-billing rate; month-to-month $14/seat/mo. 3-seat minimum. Adds timeline/Gantt & calendar views, guest access, 250 automations & 250 integration actions/mo, advanced AI (2,000 credits/mo).",
           "source": {
             "url": "https://monday.com/pricing",
-            "accessedAt": "2026-06-13"
+            "accessedAt": "2026-09-03"
           },
           "corroboration": {
             "url": "https://costbench.com/software/project-management/monday/",
@@ -221,7 +221,7 @@
         },
         {
           "name": "Pro",
-          "monthlyUsd": 19,
+          "monthlyUsd": 24,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
@@ -232,7 +232,7 @@
           "notes": "$19/seat/mo annual-billing rate; month-to-month $24/seat/mo. 3-seat minimum. Adds private boards/docs, time tracking, advanced board views & columns, 25,000 automations & integration actions/mo, premium AI (3,000 credits/mo).",
           "source": {
             "url": "https://monday.com/pricing",
-            "accessedAt": "2026-06-13"
+            "accessedAt": "2026-09-03"
           },
           "corroboration": {
             "url": "https://costbench.com/software/project-management/monday/",
@@ -251,7 +251,7 @@
           "notes": "Contact-sales / custom pricing. Adds enterprise security & governance, portfolio & resource management, multi-level permissions, enterprise support, 20,000 AI credits/mo.",
           "source": {
             "url": "https://monday.com/pricing",
-            "accessedAt": "2026-06-13"
+            "accessedAt": "2026-09-03"
           }
         }
       ],
@@ -324,7 +324,7 @@
         "Microsoft Teams",
         "Salesforce"
       ],
-      "provenance": "Prices read from clickup.com/pricing on 2026-06-13 (annual rates shown on page); monthly-billing rates corroborated by costbench 2026 ClickUp breakdown. HIPAA availability stated on Enterprise tier.",
+      "provenance": "Prices read from clickup.com/pricing on 2026-06-13 (annual rates shown on page); monthly-billing rates corroborated by costbench 2026 ClickUp breakdown. HIPAA availability stated on Enterprise tier. Re-verified 2026-09-03 against the live pricing page; published figures unchanged.",
       "plans": [
         {
           "name": "Free Forever",
@@ -339,12 +339,12 @@
           "notes": "Free forever: unlimited tasks, unlimited free members, 60MB storage, collaborative docs, kanban boards, sprint management, calendar view, 2FA, 1 form.",
           "source": {
             "url": "https://clickup.com/pricing",
-            "accessedAt": "2026-06-13"
+            "accessedAt": "2026-09-03"
           }
         },
         {
           "name": "Unlimited",
-          "monthlyUsd": 7,
+          "monthlyUsd": 10,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
@@ -355,7 +355,7 @@
           "notes": "$7/user/mo annual-billing rate; month-to-month $10/user/mo. Unlimited storage/spaces/folders/forms/integrations, unlimited Gantt, native time tracking, goals & portfolios, resource management, guest permissions.",
           "source": {
             "url": "https://clickup.com/pricing",
-            "accessedAt": "2026-06-13"
+            "accessedAt": "2026-09-03"
           },
           "corroboration": {
             "url": "https://costbench.com/software/project-management/clickup/",
@@ -364,7 +364,7 @@
         },
         {
           "name": "Business",
-          "monthlyUsd": 12,
+          "monthlyUsd": 19,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
@@ -375,7 +375,7 @@
           "notes": "$12/user/mo annual-billing rate; month-to-month $19/user/mo. Adds unlimited dashboards, 5K automations/mo, webhooks, mind maps, private whiteboards, sprint points & reporting, portfolio workload, Google SSO.",
           "source": {
             "url": "https://clickup.com/pricing",
-            "accessedAt": "2026-06-13"
+            "accessedAt": "2026-09-03"
           },
           "corroboration": {
             "url": "https://costbench.com/software/project-management/clickup/",
@@ -394,7 +394,7 @@
           "notes": "Contact-sales / custom quote. Adds SAML SSO & SCIM, enterprise permissions, unlimited custom roles, audit log, 250K automations/mo, custom branding, MSA & HIPAA availability, data residency, dedicated CSM.",
           "source": {
             "url": "https://clickup.com/pricing",
-            "accessedAt": "2026-06-13"
+            "accessedAt": "2026-09-03"
           }
         }
       ],
@@ -469,7 +469,7 @@
         "Adobe Creative Cloud",
         "Zapier"
       ],
-      "provenance": "Prices read from wrike.com/price on 2026-06-13. Page states figures are 'priced per month and billed on an annual per-user basis,' valid for purchases from 2026-01-21.",
+      "provenance": "Prices read from wrike.com/price on 2026-06-13. Page states figures are 'priced per month and billed on an annual per-user basis,' valid for purchases from 2026-01-21. Re-verified 2026-09-03 against the live pricing page; published figures unchanged.",
       "plans": [
         {
           "name": "Free",
@@ -484,7 +484,7 @@
           "notes": "Free for unlimited users: web/desktop/mobile apps, project & task management, board view, table view.",
           "source": {
             "url": "https://www.wrike.com/price/",
-            "accessedAt": "2026-06-13"
+            "accessedAt": "2026-09-03"
           }
         },
         {
@@ -500,7 +500,7 @@
           "notes": "$10/user/mo, billed annually. Seat range 2-15 users. Adds AI Essentials, shareable dashboards, interactive Gantt charts.",
           "source": {
             "url": "https://www.wrike.com/price/",
-            "accessedAt": "2026-06-13"
+            "accessedAt": "2026-09-03"
           }
         },
         {
@@ -516,7 +516,7 @@
           "notes": "$25/user/mo, billed annually (annual subscription required). Seat range 5-200 users; licenses sold in fixed bands. Adds AI Elite features, workspace templates, standard integrations.",
           "source": {
             "url": "https://www.wrike.com/price/",
-            "accessedAt": "2026-06-13"
+            "accessedAt": "2026-09-03"
           }
         },
         {
@@ -531,7 +531,7 @@
           "notes": "Contact-sales / 'Contact us for pricing'. 5+ users. Adds 3x AI Elite actions, advanced resource planning, budgeting, advanced reporting.",
           "source": {
             "url": "https://www.wrike.com/price/",
-            "accessedAt": "2026-06-13"
+            "accessedAt": "2026-09-03"
           }
         },
         {
@@ -546,7 +546,7 @@
           "notes": "Contact-sales / 'Contact us for pricing'. 5+ users. Top tier: 10x AI Elite actions, unlimited whiteboards, Wrike Integrate, bi-directional integrations.",
           "source": {
             "url": "https://www.wrike.com/price/",
-            "accessedAt": "2026-06-13"
+            "accessedAt": "2026-09-03"
           }
         }
       ],
@@ -620,7 +620,7 @@
         "Zapier",
         "GitHub"
       ],
-      "provenance": "Prices read from trello.com/pricing on 2026-06-13 (Atlassian product). Per-user/month annual and monthly rates shown on page.",
+      "provenance": "Prices read from trello.com/pricing on 2026-06-13 (Atlassian product). Per-user/month annual and monthly rates shown on page. Re-verified 2026-09-03 against the live pricing page; published figures unchanged.",
       "plans": [
         {
           "name": "Free",
@@ -635,12 +635,12 @@
           "notes": "Free: unlimited cards, up to 10 boards per Workspace, up to 10 collaborators, unlimited Power-Ups, 250 Workspace command runs/mo, 2FA, 10MB per-file storage.",
           "source": {
             "url": "https://trello.com/pricing",
-            "accessedAt": "2026-06-13"
+            "accessedAt": "2026-09-03"
           }
         },
         {
           "name": "Standard",
-          "monthlyUsd": 5,
+          "monthlyUsd": 6,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
@@ -651,12 +651,12 @@
           "notes": "$5/user/mo annual-billing rate; month-to-month $6/user/mo. Adds unlimited boards, advanced checklists, custom fields, card mirroring, Planner, 1,000 command runs/mo, 250MB per-file storage.",
           "source": {
             "url": "https://trello.com/pricing",
-            "accessedAt": "2026-06-13"
+            "accessedAt": "2026-09-03"
           }
         },
         {
           "name": "Premium",
-          "monthlyUsd": 10,
+          "monthlyUsd": 12.5,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
@@ -667,7 +667,7 @@
           "notes": "$10/user/mo annual-billing rate; month-to-month $12.50/user/mo. Adds Calendar/Timeline/Table/Dashboard/Map views, workspace-level views, unlimited command runs, admin & security controls, AI card features, data export.",
           "source": {
             "url": "https://trello.com/pricing",
-            "accessedAt": "2026-06-13"
+            "accessedAt": "2026-09-03"
           }
         },
         {
@@ -683,7 +683,7 @@
           "notes": "$17.50/user/mo billed annually (~$210/user/year); rate scales by seat band. Adds unlimited Workspaces, org-wide permissions, multi-board guests, Power-Up administration, free SSO & user provisioning via Atlassian Guard.",
           "source": {
             "url": "https://trello.com/pricing",
-            "accessedAt": "2026-06-13"
+            "accessedAt": "2026-09-03"
           }
         }
       ],
@@ -760,7 +760,7 @@
         "Zapier",
         "Microsoft Teams"
       ],
-      "provenance": "Prices read from notion.com/pricing on 2026-06-13. Per-seat rates shown ($9.50 Plus / $19.50 Business); page notes 20% annual saving.",
+      "provenance": "Prices read from notion.com/pricing on 2026-06-13. Per-seat rates shown ($9.50 Plus / $19.50 Business); page notes 20% annual saving. Re-verified 2026-09-03 against the live pricing page; published figures unchanged.",
       "plans": [
         {
           "name": "Free",
@@ -775,7 +775,7 @@
           "notes": "Free: databases with subtasks/dependencies, basic forms & sites, Notion Calendar & Mail, trial AI. Limits: 5MB file uploads, 7-day page history, 10 external guests, limited blocks for 2+ member workspaces.",
           "source": {
             "url": "https://www.notion.com/pricing",
-            "accessedAt": "2026-06-13"
+            "accessedAt": "2026-09-03"
           }
         },
         {
@@ -822,7 +822,7 @@
           "notes": "Contact-sales / custom pricing. Adds zero data retention with LLM providers, SCIM user provisioning, advanced security controls, audit logs, CSM, domain management.",
           "source": {
             "url": "https://www.notion.com/pricing",
-            "accessedAt": "2026-06-13"
+            "accessedAt": "2026-09-03"
           }
         }
       ],
@@ -897,7 +897,7 @@
         "Microsoft Teams",
         "GitHub"
       ],
-      "provenance": "Prices read from airtable.com/pricing on 2026-06-13. Page states Team $20/user/mo and Business $45/user/mo when billed annually; monthly-billing rates not published on the page. HIPAA support offered on Enterprise Scale.",
+      "provenance": "Prices read from airtable.com/pricing on 2026-06-13. Page states Team $20/user/mo and Business $45/user/mo when billed annually; monthly-billing rates not published on the page. HIPAA support offered on Enterprise Scale. Re-verified 2026-09-03 against the live pricing page; published figures unchanged.",
       "plans": [
         {
           "name": "Free",
@@ -912,7 +912,7 @@
           "notes": "Free for small teams: core building blocks for apps, individual/small-team use. Capacity limited vs paid tiers.",
           "source": {
             "url": "https://www.airtable.com/pricing",
-            "accessedAt": "2026-06-13"
+            "accessedAt": "2026-09-03"
           }
         },
         {
@@ -928,7 +928,7 @@
           "notes": "$20/user/mo billed annually (monthly-billing rate not published on page). More capacity than Free for growing teams.",
           "source": {
             "url": "https://www.airtable.com/pricing",
-            "accessedAt": "2026-06-13"
+            "accessedAt": "2026-09-03"
           }
         },
         {
@@ -944,7 +944,7 @@
           "notes": "$45/user/mo billed annually (monthly-billing rate not published on page). Adds customization, data scale, flexibility, and administrative features.",
           "source": {
             "url": "https://www.airtable.com/pricing",
-            "accessedAt": "2026-06-13"
+            "accessedAt": "2026-09-03"
           }
         },
         {
@@ -959,7 +959,7 @@
           "notes": "Contact-sales / custom pricing based on org needs and scale. Unlimited org units, workspaces, and bases within the organization.",
           "source": {
             "url": "https://www.airtable.com/pricing",
-            "accessedAt": "2026-06-13"
+            "accessedAt": "2026-09-03"
           }
         }
       ],
@@ -1031,7 +1031,7 @@
         "Slack",
         "GitHub"
       ],
-      "provenance": "Prices read from basecamp.com/pricing on 2026-06-13. Basecamp offers a per-user Pro plan and a flat-rate Pro Unlimited plan; both figures shown on page.",
+      "provenance": "Prices read from basecamp.com/pricing on 2026-06-13. Basecamp offers a per-user Pro plan and a flat-rate Pro Unlimited plan; both figures shown on page. Re-verified 2026-09-03 against the live pricing page; published figures unchanged.",
       "plans": [
         {
           "name": "Free",
@@ -1046,7 +1046,7 @@
           "notes": "Run 1 project free forever: 1 project, 1GB storage, up to 20 users.",
           "source": {
             "url": "https://basecamp.com/pricing",
-            "accessedAt": "2026-06-13"
+            "accessedAt": "2026-09-03"
           }
         },
         {

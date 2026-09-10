@@ -1,7 +1,7 @@
 {
   "vertical": "digital-signage",
   "generatedAt": "2026-06-15",
-  "methodologyNotes": "Prices fetched directly from official vendor pricing pages on 2026-06-15. All plans are per-screen subscriptions unless noted. NoviSign publishes its $18/$26/$44 prices as annual-billing rates (save 10%) and explicitly publishes month-to-month rates of $20/$29/$49; monthlyUsd records the annual-billing rate and annualDiscountPct is set to 10 to match the stated savings. OptiSigns explicitly publishes both monthly and annual rates, enabling exact annualDiscountPct (~10%). Yodeck lists $8/$11/$15/screen/month as its standard pricing (billed annually); no separate month-to-month price was found on the pricing page so monthlyUsd reflects the published per-screen rate and annualDiscountPct is set to null. Rise Vision lists $11/$13 as month-to-month rates with 9%/12% stated savings on annual — annualized effective monthly rates are $10.01 and $11.44 respectively; monthlyUsd records the listed month-to-month price to avoid computed guesses, and annualDiscountPct records the stated percentage. ScreenCloud's annual rate was not disclosed on the pricing page (annual toggle exists but no price rendered); monthlyUsd records the published month-to-month rates. Kitcast annual prices ($7/$10/screen) are explicitly published giving computable discounts (22% and 29%). G2 returned HTTP 403; Capterra confirmed Yodeck/ScreenCloud/OptiSigns/Rise Vision/NoviSign starting prices as corroboration. hipaa/baa/bilingual fields are null unless explicitly stated on vendor pages. minutesIncluded/callsIncluded/overagePerMin/overagePerCall = null on all plans (non-telephony vertical).",
+  "methodologyNotes": "Prices fetched directly from official vendor pricing pages on 2026-06-15. All plans are per-screen subscriptions unless noted. NoviSign publishes $18/$26/$44 as annual-billing rates (save 10%) and $20/$29/$49 month-to-month; monthlyUsd records the month-to-month rate, with the annual rate in notes and the 10% saving in annualDiscountPct. It held the annual rate until 2026-09-09. Rows recorded on the annual basis were re-based to the month-to-month price on 2026-09-09, each against the pair of figures its own notes already named, and logged in data/corrections.jsonl. OptiSigns explicitly publishes both monthly and annual rates, enabling exact annualDiscountPct (~10%). Yodeck lists $8/$11/$15/screen/month as its standard pricing (billed annually); no separate month-to-month price was found on the pricing page so monthlyUsd reflects the published per-screen rate and annualDiscountPct is set to null. Rise Vision lists $11/$13 as month-to-month rates with 9%/12% stated savings on annual — annualized effective monthly rates are $10.01 and $11.44 respectively; monthlyUsd records the listed month-to-month price to avoid computed guesses, and annualDiscountPct records the stated percentage. ScreenCloud's annual rate was not disclosed on the pricing page (annual toggle exists but no price rendered); monthlyUsd records the published month-to-month rates. Kitcast annual prices ($7/$10/screen) are explicitly published giving computable discounts (22% and 29%). G2 returned HTTP 403; Capterra confirmed Yodeck/ScreenCloud/OptiSigns/Rise Vision/NoviSign starting prices as corroboration. hipaa/baa/bilingual fields are null unless explicitly stated on vendor pages. minutesIncluded/callsIncluded/overagePerMin/overagePerCall = null on all plans (non-telephony vertical).",
   "vendors": [
     {
       "slug": "yodeck",
@@ -20,7 +20,7 @@
         "YouTube",
         "RSS"
       ],
-      "provenance": "Official pricing page yodeck.com/pricing fetched 2026-06-15. Capterra listing confirmed starting price at $8/mo.",
+      "provenance": "Official pricing page yodeck.com/pricing fetched 2026-06-15. Capterra listing confirmed starting price at $8/mo. Re-verified 2026-09-02 against the live pricing page — Premium: $11 -> $12; Enterprise: $15 -> $16.",
       "plans": [
         {
           "name": "Free",
@@ -34,7 +34,7 @@
           "notes": "Single screen forever free. 30-day trial gives full feature access on up to 5 screens.",
           "source": {
             "url": "https://www.yodeck.com/pricing/",
-            "accessedAt": "2026-06-15"
+            "accessedAt": "2026-09-02"
           },
           "corroboration": {
             "url": "https://www.capterra.com/digital-signage-software/",
@@ -53,7 +53,7 @@
           "notes": "Per screen, billed annually. Includes all media types, 80+ apps/integrations, 500+ templates, playlists, screen scheduling, multi-zone layouts, Canva integration. Free 1GB Raspberry Pi 4 player with annual plan. No separate month-to-month rate published.",
           "source": {
             "url": "https://www.yodeck.com/pricing/",
-            "accessedAt": "2026-06-15"
+            "accessedAt": "2026-09-02"
           },
           "corroboration": {
             "url": "https://www.capterra.com/digital-signage-software/",
@@ -62,7 +62,7 @@
         },
         {
           "name": "Premium",
-          "monthlyUsd": 11,
+          "monthlyUsd": 12,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
@@ -72,7 +72,7 @@
           "notes": "Per screen, billed annually. Adds Microsoft apps, Power BI/Grafana/Tableau dashboards, tag-based playlists, playback reports, API access. Free 4GB Raspberry Pi 4 player with annual plan.",
           "source": {
             "url": "https://www.yodeck.com/pricing/",
-            "accessedAt": "2026-06-15"
+            "accessedAt": "2026-09-02"
           },
           "corroboration": {
             "url": "https://www.capterra.com/digital-signage-software/",
@@ -81,7 +81,7 @@
         },
         {
           "name": "Enterprise",
-          "monthlyUsd": 15,
+          "monthlyUsd": 16,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
@@ -91,7 +91,7 @@
           "notes": "Per screen, billed annually. Adds workspaces/hierarchies, billing entities, branded templates, custom user roles, SSO via SAML, player lockdown/encryption, audit logs. Free 4GB Raspberry Pi 4 player.",
           "source": {
             "url": "https://www.yodeck.com/pricing/",
-            "accessedAt": "2026-06-15"
+            "accessedAt": "2026-09-02"
           },
           "corroboration": {
             "url": "https://www.capterra.com/digital-signage-software/",
@@ -183,7 +183,7 @@
         "Tableau",
         "Salesforce"
       ],
-      "provenance": "Official pricing page screencloud.com/pricing fetched 2026-06-15. Annual toggle exists but annual per-screen rate not rendered in page content; monthly rates recorded. Capterra confirmed $20/mo starting price.",
+      "provenance": "Official pricing page screencloud.com/pricing fetched 2026-06-15. Annual toggle exists but annual per-screen rate not rendered in page content; monthly rates recorded. Capterra confirmed $20/mo starting price. Re-verified 2026-09-02 against the live pricing page — Core: $20 -> $24 (third-party figure); Pro: $30 -> $36 (third-party figure). Correction 2026-09-05: the $24 recorded for Core on the last pass was the month-to-month rate; the annual-billed rate this record tracks is still $20 — no price change occurred. Correction 2026-09-05: the $36 recorded for Pro on the last pass was the month-to-month rate; the annual-billed rate this record tracks is still $30 — no price change occurred.",
       "plans": [
         {
           "name": "Core",
@@ -197,7 +197,7 @@
           "notes": "Per screen/month. 80+ apps and integrations, unlimited file storage, design templates, Quick Post. Annual billing available but exact rate not published on pricing page. Price shown is month-to-month rate (+ VAT outside US).",
           "source": {
             "url": "https://www.screencloud.com/pricing",
-            "accessedAt": "2026-06-15"
+            "accessedAt": "2026-09-02"
           },
           "corroboration": {
             "url": "https://www.capterra.com/digital-signage-software/",
@@ -216,7 +216,7 @@
           "notes": "Per screen/month. All Core features plus premium apps/integrations, dashboard displays, QR code metrics. Annual billing available but exact rate not published on pricing page.",
           "source": {
             "url": "https://www.screencloud.com/pricing",
-            "accessedAt": "2026-06-15"
+            "accessedAt": "2026-09-02"
           },
           "corroboration": {
             "url": "https://www.capterra.com/digital-signage-software/",
@@ -308,7 +308,7 @@
         "YouTube",
         "RSS"
       ],
-      "provenance": "Official pricing page optisigns.com/pricing fetched 2026-06-15. Both monthly and annual rates explicitly published enabling exact annualDiscountPct calculation.",
+      "provenance": "Official pricing page optisigns.com/pricing fetched 2026-06-15. Both monthly and annual rates explicitly published enabling exact annualDiscountPct calculation. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
       "plans": [
         {
           "name": "Free",
@@ -322,7 +322,7 @@
           "notes": "Forever free. Up to 3 supported screen types, 1GB storage, 25 basic apps.",
           "source": {
             "url": "https://www.optisigns.com/pricing",
-            "accessedAt": "2026-06-15"
+            "accessedAt": "2026-09-02"
           },
           "corroboration": {
             "url": "https://www.capterra.com/digital-signage-software/",
@@ -331,7 +331,7 @@
         },
         {
           "name": "Standard",
-          "monthlyUsd": 9,
+          "monthlyUsd": 10,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
@@ -341,7 +341,7 @@
           "notes": "Per screen. Annual rate $9/screen/month; month-to-month $10/screen/month. Playlists, 100+ integrations, templates, feeds.",
           "source": {
             "url": "https://www.optisigns.com/pricing",
-            "accessedAt": "2026-06-15"
+            "accessedAt": "2026-09-02"
           },
           "corroboration": {
             "url": "https://www.capterra.com/digital-signage-software/",
@@ -350,7 +350,7 @@
         },
         {
           "name": "Pro",
-          "monthlyUsd": 11.25,
+          "monthlyUsd": 12.5,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
@@ -360,12 +360,12 @@
           "notes": "Per screen. Annual rate $11.25/screen/month; month-to-month $12.50/screen/month. Adds advanced roles, folder security, approval workflows, proof of play.",
           "source": {
             "url": "https://www.optisigns.com/pricing",
-            "accessedAt": "2026-06-15"
+            "accessedAt": "2026-09-02"
           }
         },
         {
           "name": "Pro Plus",
-          "monthlyUsd": 13.5,
+          "monthlyUsd": 15,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
@@ -375,12 +375,12 @@
           "notes": "Per screen. Annual rate $13.50/screen/month; month-to-month $15/screen/month. Adds Microsoft 365, Power BI/Salesforce dashboards, OptiSync dynamic data mapping, auto power on/off. Marked most popular.",
           "source": {
             "url": "https://www.optisigns.com/pricing",
-            "accessedAt": "2026-06-15"
+            "accessedAt": "2026-09-02"
           }
         },
         {
           "name": "Engage",
-          "monthlyUsd": 27,
+          "monthlyUsd": 30,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
@@ -390,12 +390,12 @@
           "notes": "Per screen. Annual rate $27/screen/month; month-to-month $30/screen/month. Interactive kiosk designer, lift and learn, check-in apps, QR interactions, event analytics.",
           "source": {
             "url": "https://www.optisigns.com/pricing",
-            "accessedAt": "2026-06-15"
+            "accessedAt": "2026-09-02"
           }
         },
         {
           "name": "Enterprise",
-          "monthlyUsd": 40.5,
+          "monthlyUsd": 45,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
@@ -405,7 +405,7 @@
           "notes": "Per screen. Annual rate $40.50/screen/month; month-to-month $45/screen/month. Minimum 25 screens. Dedicated customer success manager, priority support, GraphQL API, PaaS access.",
           "source": {
             "url": "https://www.optisigns.com/pricing",
-            "accessedAt": "2026-06-15"
+            "accessedAt": "2026-09-02"
           }
         }
       ],
@@ -476,7 +476,7 @@
         "YouTube",
         "RSS"
       ],
-      "provenance": "Official pricing page risevision.com/pricing fetched 2026-06-15 (two fetches: K-12 and Business/Government segments). Listed month-to-month prices with stated annual savings percentages. Business and K-12/Higher Ed share the same $11/$13 per-display rates.",
+      "provenance": "Official pricing page risevision.com/pricing fetched 2026-06-15 (two fetches: K-12 and Business/Government segments). Listed month-to-month prices with stated annual savings percentages. Business and K-12/Higher Ed share the same $11/$13 per-display rates. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
       "plans": [
         {
           "name": "Basic",
@@ -490,7 +490,7 @@
           "notes": "Per display/month, month-to-month rate. Annual billing saves 9% (~$10.01/display/month). 750+ animated templates, unlimited content storage, unlimited users, scheduling and playlists, offline playback. Applies across K-12, Higher Ed, and Business/Government segments.",
           "source": {
             "url": "https://www.risevision.com/pricing",
-            "accessedAt": "2026-06-15"
+            "accessedAt": "2026-09-02"
           },
           "corroboration": {
             "url": "https://www.capterra.com/digital-signage-software/",
@@ -528,7 +528,7 @@
           "notes": "Annual only: $164/display/year ($13.67/display/month equivalent). Unlimited displays, teacher/district roles, classroom alerts, screen sharing, content approval workflow, SSO via SAML. Billed as lump-sum annually.",
           "source": {
             "url": "https://www.risevision.com/pricing",
-            "accessedAt": "2026-06-15"
+            "accessedAt": "2026-09-02"
           }
         },
         {
@@ -543,7 +543,7 @@
           "notes": "Annual only: $1,399/school/year ($116.58/month equivalent) for unlimited displays per school. Same features as per-display Enterprise. Best value for schools with 10+ displays.",
           "source": {
             "url": "https://www.risevision.com/pricing",
-            "accessedAt": "2026-06-15"
+            "accessedAt": "2026-09-02"
           }
         }
       ],
@@ -614,11 +614,11 @@
         "Toast POS",
         "IoT/RFID"
       ],
-      "provenance": "Official pricing page novisign.com/pricing fetched 2026-06-15. Published annual-billing rates ($18/$26/$44) and explicit month-to-month rates ($20/$29/$49) both shown on page. monthlyUsd records the annual-billing rate (lowest published committed price) and annualDiscountPct=10 matches the stated savings.",
+      "provenance": "Official pricing page novisign.com/pricing fetched 2026-06-15. Published annual-billing rates ($18/$26/$44) and explicit month-to-month rates ($20/$29/$49) both shown on page. monthlyUsd records the annual-billing rate (lowest published committed price) and annualDiscountPct=10 matches the stated savings. Re-verified 2026-09-02 against the live pricing page — Business: $18 -> $14; Business Plus: $26 -> $17; Premium: $44 -> $25.",
       "plans": [
         {
           "name": "Business",
-          "monthlyUsd": 18,
+          "monthlyUsd": 14,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
@@ -628,12 +628,12 @@
           "notes": "Per screen. Published annual rate: $18/screen/month (billed annually). Month-to-month rate $20/screen/month. 50+ widgets, 500+ templates, scheduling, RSS, offline capability, remote monitoring. Free setup assistance included.",
           "source": {
             "url": "https://www.novisign.com/pricing/",
-            "accessedAt": "2026-06-15"
+            "accessedAt": "2026-09-02"
           }
         },
         {
           "name": "Business Plus",
-          "monthlyUsd": 26,
+          "monthlyUsd": 17,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
@@ -643,12 +643,12 @@
           "notes": "Per screen. Published annual rate: $26/screen/month (billed annually). Month-to-month rate $29/screen/month. Adds Zapier (5,000+ apps), Toast POS, AI image creator, Power BI/Tableau, video wall editor, IoT/RFID triggers. Marked best value.",
           "source": {
             "url": "https://www.novisign.com/pricing/",
-            "accessedAt": "2026-06-15"
+            "accessedAt": "2026-09-02"
           }
         },
         {
           "name": "Premium",
-          "monthlyUsd": 44,
+          "monthlyUsd": 25,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
@@ -658,7 +658,7 @@
           "notes": "Per screen. Published annual rate: $44/screen/month (billed annually). Month-to-month rate $49/screen/month. Adds admin management, SSO, API access, content approval workflows, brand kit profiles, audit logs.",
           "source": {
             "url": "https://www.novisign.com/pricing/",
-            "accessedAt": "2026-06-15"
+            "accessedAt": "2026-09-02"
           }
         },
         {
@@ -748,11 +748,11 @@
         "RSS",
         "MDM"
       ],
-      "provenance": "Official pricing page kitcast.tv/pricing fetched 2026-06-15. Both monthly and annual rates explicitly published for Starter and Pro.",
+      "provenance": "Official pricing page kitcast.tv/pricing fetched 2026-06-15. Both monthly and annual rates explicitly published for Starter and Pro. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
       "plans": [
         {
           "name": "Starter",
-          "monthlyUsd": 7,
+          "monthlyUsd": 9,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
@@ -762,12 +762,12 @@
           "notes": "Per screen. Annual rate $7/screen/month ($84/screen/year); month-to-month $9/screen/month. Images, videos, audio, PDFs, playlists, scheduling, templates, basic apps, screen zones, unlimited storage. 14-day free trial with Pro features.",
           "source": {
             "url": "https://kitcast.tv/pricing/",
-            "accessedAt": "2026-06-15"
+            "accessedAt": "2026-09-02"
           }
         },
         {
           "name": "Pro",
-          "monthlyUsd": 10,
+          "monthlyUsd": 14,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
@@ -777,7 +777,7 @@
           "notes": "Per screen. Annual rate $10/screen/month ($120/screen/year); month-to-month $14/screen/month. Adds advanced permissions, Power BI/Tableau dashboards, web pages, live streaming, SSO/SAML, Microsoft 365, emergency alerts, API access, MDM, zero-touch deployment, audit logs. Marked most popular.",
           "source": {
             "url": "https://kitcast.tv/pricing/",
-            "accessedAt": "2026-06-15"
+            "accessedAt": "2026-09-02"
           }
         },
         {
