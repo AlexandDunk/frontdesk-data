@@ -470,6 +470,996 @@
         ],
         "provenance": "Compliance data from descript.com/security: SOC 2 Type II confirmed ('We have achieved SOC 2 Type II compliance by going through a Certified Public Accounting firm and auditing our internal measures and controls against the SOC 2 standards'); GDPR confirmed ('we align with SOC 2 standards and guidelines, as well as GDPR, CCPA, and the Privacy by Design framework'). HIPAA not mentioned on security page — null. Free tier confirmed: genuine $0 forever plan with 60 min/mo media. Feature data from descript.com/features and descript.com/pricing fetched 2026-06-15."
       }
+    },
+    {
+      "slug": "kapwing",
+      "name": "Kapwing",
+      "domain": "kapwing.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "kapwing.com/pricing was fetched twice on 2026-09-10 — once for the rate card and once specifically to challenge the per-export duration caps the draft asserted. Both paid tiers print two rates and the month-to-month (higher) figure is what sits in monthlyUsd: Pro $24 vs $16 annual-billed, Business $64 vs $50 annual-billed. The Free 4-minute per-export cap, the 120-minute paid cap, and the fact that export COUNT is unlimited on Free while total monthly export time is capped at 30 minutes were all confirmed verbatim. No figure required correction. annualDiscountPct stays null because the page prints no saving percentage; the annual rates are recorded in notes instead.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": 30,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Genuinely free forever. Metered at 30 minutes of total video export per month, with any single export capped at 4 minutes and 720p resolution. The number of exports is unlimited — only the total monthly minutes and the per-video length are capped — but every export carries a Kapwing watermark. Includes up to 50 minutes of auto-subtitling and 3 minutes of text-to-speech. The watermark, not the minute cap, is what catches most buyers out.",
+          "source": {
+            "url": "https://www.kapwing.com/pricing",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 24,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$24 per member per month billed month-to-month — the figure recorded here; the annual-billed rate is $16 per member per month. Priced per workspace member, so a three-person team pays three times over. Unlimited exports, no watermark, 4K, 120-minute maximum length for any single export, up to 1,000 minutes/month of auto-subtitling, 50 minutes/month of dubbing, 100 GB cloud storage.",
+          "source": {
+            "url": "https://www.kapwing.com/pricing",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 64,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "$64 per member per month billed month-to-month — the figure recorded here; the annual-billed rate is $50 per member per month. Same 4K output and same 120-minute per-export ceiling as Pro; the uplift buys up to 4,000 minutes/month of auto-subtitling, 200 minutes/month of dubbing, and 500 GB storage. Still billed per member.",
+          "source": {
+            "url": "https://www.kapwing.com/pricing",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only; no price is published. The page states all limits are customizable and routes to a sales contact.",
+          "source": {
+            "url": "https://www.kapwing.com/pricing",
+            "accessedAt": "2026-09-10"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [],
+        "limits": [
+          "Free plan: 30 min/month total export, 4 min maximum per video, 720p, watermark on every export",
+          "Export count is unlimited even on Free — it is total minutes and per-video length that are capped",
+          "Paid plans cap any single export at 120 minutes",
+          "Auto-subtitling metered: 50 min (Free), 1,000 min/mo (Pro), 4,000 min/mo (Business)",
+          "Dubbing metered: 50 min/mo (Pro), 200 min/mo (Business)",
+          "Storage: 100 GB (Pro), 500 GB (Business)",
+          "Pro and Business are billed per workspace member, so cost scales linearly with team size"
+        ],
+        "keyFeatures": [
+          "Browser-based editor with no install, workspace shared across members",
+          "Auto-subtitling and AI dubbing metered in minutes rather than sold as add-ons",
+          "4K export with no watermark from the Pro tier upward"
+        ],
+        "bestFor": [
+          "Social and marketing teams editing short-form video in the browser",
+          "Buyers who need subtitling and translation volume rather than a timeline NLE"
+        ],
+        "sources": [
+          {
+            "url": "https://www.kapwing.com/pricing",
+            "accessedAt": "2026-09-10"
+          }
+        ],
+        "provenance": "All prices and limits re-read from the live kapwing.com/pricing table on 2026-09-10 across two separate fetches; every draft assertion survived. Compliance fields are null because the pricing page makes no HIPAA, SOC 2 or GDPR claim and no compliance page was fetched."
+      }
+    },
+    {
+      "slug": "riverside",
+      "name": "Riverside",
+      "domain": "riverside.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "HubSpot"
+      ],
+      "provenance": "riverside.fm/pricing 301-redirects to riverside.com/pricing; figures below come from the redirected official page, re-fetched 2026-09-10. Two corrections this pass. First, the Webinar row's annual total was confirmed to be a genuine page error on refetch — the live page renders '$79/month (billed $408/year)', which cannot be right since $79 x 12 = $948, and $408 is exactly Grow's annual total duplicated into the Webinar column. Only the per-month rates ($99 month-to-month, $79 annual-billed) are therefore recorded and no yearly total is asserted for Webinar. Second, the Free tier's 2-hour multi-track allowance was moved out of minutesIncluded (now null) because it is a one-off lifetime allowance, not a per-period meter, and leaving 120 in a monthly field misreads as a monthly refill. Every monthlyUsd holds the month-to-month rate, not the annual-billed one.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Forever-free. Includes 2 hours (120 minutes) of multi-track — separate audio and video track — recording, but this is a ONE-OFF lifetime allowance rather than a monthly refill, which is why minutesIncluded is null rather than 120: it is not a recurring meter, and misreading it as monthly is the single biggest trap on this page. Capped at 720p video and 44.1 kHz audio, limited to 1 studio, and recordings carry a Riverside watermark. Single-track recording and video calls are unlimited.",
+          "source": {
+            "url": "https://riverside.com/pricing",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 29,
+          "minutesIncluded": 300,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$29/month month-to-month — the figure recorded here; annual billing drops it to $24/month, shown on the page as $288 billed annually. Includes 5 hours per month of separate-track recording (300 minutes, a genuine monthly meter), 15 hours/month of separate-track downloads, 1 studio, 4K video, 48 kHz audio, no watermark, teleprompter, AI editing and repurposing, unlimited transcription and podcast hosting. Recording hours and download hours are two different meters and both bind.",
+          "source": {
+            "url": "https://riverside.com/pricing",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Grow",
+          "monthlyUsd": 39,
+          "minutesIncluded": 900,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$39/month month-to-month — the figure recorded here; annual billing drops it to $34/month, shown as $408 billed annually. 15 hours/month of separate-track recording (900 minutes), 20 hours/month of downloads, 2 studios. Adds social scheduling, newsletter, a creator website, 1080p live streaming and multistreaming.",
+          "source": {
+            "url": "https://riverside.com/pricing",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Webinar",
+          "monthlyUsd": 99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$99/month month-to-month — the figure recorded here; the page shows an annual-billed rate of $79/month. No yearly total is asserted: the page prints '$408/year' against this row, which is arithmetically impossible at $79/month ($948) and is Grow's annual total duplicated into this column — confirmed as a page error on re-fetch, not a discount. Unlimited recording, 3 studios, 25 hours/month of separate-track downloads, webinars for up to 100 registrants, lead capture, webinar analytics and a HubSpot integration. Note the download meter still binds even though recording is unlimited.",
+          "source": {
+            "url": "https://riverside.com/pricing",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only, contact sales. Unlimited recording, studios and downloads; webinars up to 10,000 registrants, producer mode, SSO, API access, dedicated CSM, and the only tier to which the page attaches SOC 2 and ISO 27001 compliance.",
+          "source": {
+            "url": "https://riverside.com/pricing",
+            "accessedAt": "2026-09-10"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://riverside.com/pricing",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "HubSpot"
+        ],
+        "limits": [
+          "Free: 2 hours of multi-track recording as a ONE-OFF lifetime allowance, not monthly; 720p; watermarked",
+          "Free tier is limited to 1 studio",
+          "Separate-track recording metered monthly: 5 hrs (Pro), 15 hrs (Grow), unlimited (Webinar and Business)",
+          "Separate-track downloads metered separately and still bind on Webinar: 15 hrs (Pro), 20 hrs (Grow), 25 hrs (Webinar)",
+          "Studios limited: 1 (Free and Pro), 2 (Grow), 3 (Webinar), unlimited (Business)",
+          "Webinar registrant caps: 100 (Webinar), up to 10,000 (Business)",
+          "SOC 2 / ISO 27001 are listed only against the quote-only Business tier",
+          "The published Webinar annual total is a page error — do not rely on it"
+        ],
+        "keyFeatures": [
+          "Locally-recorded separate audio and video tracks at up to 4K / 48 kHz, uploaded rather than captured from the call stream",
+          "AI clip repurposing and unlimited transcription bundled into paid tiers",
+          "Webinar hosting with registration, lead capture and analytics in the same product as the editor"
+        ],
+        "bestFor": [
+          "Podcasters and interview shows needing broadcast-grade remote recording",
+          "Marketing teams running webinars who want the recording, edit and repurposing in one tool"
+        ],
+        "sources": [
+          {
+            "url": "https://riverside.com/pricing",
+            "accessedAt": "2026-09-10"
+          }
+        ],
+        "provenance": "Re-read from riverside.com/pricing on 2026-09-10 after following the 301 from riverside.fm. soc2 is true because the Business tier row explicitly lists SOC2 and ISO27001; HIPAA and GDPR stay null because the page makes no such claim. Free-tier minutesIncluded was nulled this pass as a one-off rather than recurring allowance."
+      }
+    },
+    {
+      "slug": "filmora",
+      "name": "Filmora (Wondershare)",
+      "domain": "filmora.wondershare.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Filmstock",
+        "AI Portrait Add-On"
+      ],
+      "provenance": "Both official Wondershare store pages were re-fetched on 2026-09-10: store/windows-individuals.html (monthly, annual and perpetual options) and shop/buy/buy-video-editor-na.html (annual subscription split into Basic, Advanced and Premium). All four headline prices survived — $19.99/Month, $49.99/Year, $59.99/Year, $99.99/Year and $79.99 one-time. Corrections applied to the crossed-out figures the draft asserted: the Windows page rotates a whole series of strike-through values against the same price ($67.97 / $61.99 / $61.98 / $59.98 / $57.98 / $55.98 / $51.99 for the annual, and $97.97 / $89.99 / $91.98 / $87.98 / $85.98 / $81.99 for the perpetual), so those are flagged as promotional rather than presented as a stable list price. The NA store's claimed crossed-out $59.99/yr for Basic and $64.99/yr for Advanced did not render on refetch — that page shows only 'Save extra' per-month figures — so both claims were dropped rather than reconciled. Only $19.99/Month is a true month-to-month price, so it is the sole monthlyUsd in this vendor.",
+      "plans": [
+        {
+          "name": "Monthly Plan",
+          "monthlyUsd": 19.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "The only true month-to-month price Filmora publishes: $19.99/Month, billed monthly with no long-term commitment. Per licence, one user. Two and a half months at this rate costs more than the whole first year of the annual plan, which is the trap. No watermark on exported video; unlimited assets download and preview.",
+          "source": {
+            "url": "https://filmora.wondershare.com/store/windows-individuals.html",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Basic (Annual)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Annual subscription, not a monthly price: billed yearly as US$49.99, which is why monthlyUsd is null. The NA store expresses it as roughly $4.17/month equivalent; the Windows individuals page prints it as 'Annual Plan $49.99/Year' against a crossed-out $67.97 — but that strike-through value rotates across several figures on reload, so treat it as promotional framing rather than a fixed list price. Auto-renews, cancel anytime. Includes one month of Filmstock Standard Assets and the AI Portrait Add-On when those boxes are ticked — they renew at extra cost afterwards. 30-day money-back guarantee.",
+          "source": {
+            "url": "https://filmora.wondershare.com/shop/buy/buy-video-editor-na.html",
+            "accessedAt": "2026-09-10"
+          },
+          "corroboration": {
+            "url": "https://filmora.wondershare.com/store/windows-individuals.html",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Advanced (Annual)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Annual subscription billed yearly as US$59.99, shown as a $5.00/month equivalent — an annual-billed equivalent, not a month-to-month rate, so monthlyUsd is null. No crossed-out list price is asserted: the figure the draft carried did not render on re-fetch. No month-to-month equivalent is offered at this tier. Auto-renews.",
+          "source": {
+            "url": "https://filmora.wondershare.com/shop/buy/buy-video-editor-na.html",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Premium (Annual)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Annual subscription billed yearly as US$99.99, shown as an $8.33/month equivalent — annual-billed, so monthlyUsd is null. Top individual subscription tier. Auto-renews. Non-US storefronts price separately (for example UK GBP 49.99/yr, AU$89.99/yr), so the USD figure is US-store specific.",
+          "source": {
+            "url": "https://filmora.wondershare.com/shop/buy/buy-video-editor-na.html",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Perpetual (one-time)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "One-time purchase, not a subscription, so monthlyUsd is null: $79.99 for Windows. The crossed-out comparison ($97.97 and several other values seen on reload) is promotional and not a stable list price. Buys the specific major version purchased for life, including its point updates, but NOT upgrades to future major versions — the standard perpetual-licence catch. Includes one month of the AI Portrait Add-On.",
+          "source": {
+            "url": "https://filmora.wondershare.com/store/windows-individuals.html",
+            "accessedAt": "2026-09-10"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Filmstock",
+          "AI Portrait Add-On"
+        ],
+        "limits": [
+          "No free PLAN is published — only a watermarked trial-version download, which is why freeTier is false; removing the Wondershare watermark requires a paid plan",
+          "Perpetual licence covers only the major version bought — future major versions cost again",
+          "Bundled Filmstock and AI Portrait add-ons are one month only, then billed separately",
+          "Windows and Mac perpetual licences are priced and sold separately",
+          "Crossed-out 'was' prices rotate between page loads, so the advertised discount is promotional framing, not a fixed list price",
+          "All subscriptions auto-renew; prices exclude local taxes",
+          "Only the $19.99/month option is genuinely month-to-month; Basic, Advanced and Premium are annual commitments despite per-month framing"
+        ],
+        "keyFeatures": [
+          "One of the few consumer NLEs still selling a genuine perpetual licence alongside subscriptions",
+          "Publishes a real month-to-month option at $19.99 rather than annual-only billing",
+          "Bundled stock library (Filmstock) and AI Portrait add-on included for a trial month"
+        ],
+        "bestFor": [
+          "Hobbyists and small businesses who want to own a version outright rather than rent it",
+          "Occasional editors who need one or two months of access without an annual commitment"
+        ],
+        "sources": [
+          {
+            "url": "https://filmora.wondershare.com/store/windows-individuals.html",
+            "accessedAt": "2026-09-10"
+          },
+          {
+            "url": "https://filmora.wondershare.com/shop/buy/buy-video-editor-na.html",
+            "accessedAt": "2026-09-10"
+          }
+        ],
+        "provenance": "Both official Wondershare store pages re-fetched on 2026-09-10. Headline prices confirmed; unsupported crossed-out figures removed and the remaining ones flagged as rotating promotional values. Team/Business and Education plans are linked from the store but publish no price on the pages fetched, so they are not listed. Compliance fields are null: no HIPAA, SOC 2 or GDPR claim appears on either page."
+      }
+    },
+    {
+      "slug": "camtasia",
+      "name": "Camtasia (TechSmith)",
+      "domain": "techsmith.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Snagit",
+        "Audiate",
+        "Screencast"
+      ],
+      "provenance": "techsmith.com/store/camtasia was re-fetched on 2026-09-10 and again geo-served euro prices with no USD figures, confirming all four euro amounts exactly as the draft recorded them (39,56 / 182,49 / 252,62 / 607,71 EUR, all billed yearly, no monthly option anywhere). USD annual rates for Essentials ($179/user/yr, 'as low as') and Pro ($599/user/yr) were re-confirmed from TechSmith's own support article. No USD figure is asserted for Starter or Create because none was rendered to us and converting EUR would be fabrication. Correction applied this pass: the draft asserted freeTier true without a supporting source and conflated the free editor with the paid Starter tier. techsmith.com/camtasia was fetched to settle it and does state the full Camtasia Editor is free to download and use with watermarked exports — so freeTier stands, but that URL is now in sources and the free editor is distinguished from the 39,56 EUR/yr Starter subscription. That same FAQ also establishes that Starter is still watermarked.",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Annual-only subscription — TechSmith publishes no month-to-month price for any Camtasia tier, so monthlyUsd is null by definition. The store served us 39,56 EUR per year billed yearly; no USD figure was rendered to our request, so none is claimed and the euro amount is not converted. Includes the Editor, Snagit, AI image and redaction features, and unlimited 4K/60fps recording. The catch: paying for Starter does NOT remove the export watermark — TechSmith's own FAQ states watermark removal requires Essentials, Create or Pro, so Starter buyers still ship stamped video.",
+          "source": {
+            "url": "https://www.techsmith.com/store/camtasia",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Essentials",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Annual-only subscription; no month-to-month price exists, so monthlyUsd is null. TechSmith's support site states Essentials is 'as low as $179/user per year' — priced per user, and the 'as low as' hedge means volume or promotional pricing may sit under a higher list rate, so treat $179 as a floor rather than a rate card. The same tier rendered as 182,49 EUR per year on the store served to us. This is the first tier that removes the export watermark, and it adds Audiate, text-based editing, speech-to-text and studio-quality audio effects over Starter.",
+          "source": {
+            "url": "https://www.techsmith.com/store/camtasia",
+            "accessedAt": "2026-09-10"
+          },
+          "corroboration": {
+            "url": "https://support.techsmith.com/hc/en-us/articles/41690266536589-Camtasia-Pro-vs-VEED",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Create",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Annual-only subscription, priced per user, so monthlyUsd is null. The store rendered 252,62 EUR per year billed yearly to our request and no USD equivalent was displayed, so no dollar figure is asserted. Adds AI script generation and improvement, 200+ voiceover options with multi-language support, and voiceover customization over Essentials.",
+          "source": {
+            "url": "https://www.techsmith.com/store/camtasia",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Annual-only subscription; no month-to-month price, so monthlyUsd is null. TechSmith's support site states Pro is $599/user per year. The same tier rendered as 607,71 EUR per year on the store served to us. Adds 49 avatar styles, image generation, 100 million+ premium royalty-free stock assets and unlimited Screencast video sharing. Subscriptions are described as non-transferable between individuals, so seats cannot be handed to a replacement employee.",
+          "source": {
+            "url": "https://www.techsmith.com/store/camtasia",
+            "accessedAt": "2026-09-10"
+          },
+          "corroboration": {
+            "url": "https://support.techsmith.com/hc/en-us/articles/41690266536589-Camtasia-Pro-vs-VEED",
+            "accessedAt": "2026-09-10"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Snagit",
+          "Audiate",
+          "Screencast"
+        ],
+        "limits": [
+          "Billing is annual only — TechSmith publishes no month-to-month rate for any tier",
+          "Priced per user and described as non-transferable between individuals",
+          "The free Camtasia Editor watermarks exports, and so does the paid Starter tier — watermark removal starts at Essentials",
+          "USD pricing was not rendered to our fetch (store geo-served EUR); only Essentials and Pro USD rates are documented, via TechSmith support",
+          "Essentials' $179/user/yr is an 'as low as' floor, not a firm list price",
+          "AI avatars, translation and dubbing are gated to the top Pro tier"
+        ],
+        "keyFeatures": [
+          "Screen recording and timeline editing in one product, built around software demos and training video",
+          "A genuinely free, time-unlimited full editor whose only restriction is a watermark on export",
+          "Text-based editing via the bundled Audiate transcript editor, with Snagit and Screencast hosting bundled rather than sold separately"
+        ],
+        "bestFor": [
+          "Learning-and-development and internal training teams producing how-to video",
+          "Software companies making product demos and support content"
+        ],
+        "sources": [
+          {
+            "url": "https://www.techsmith.com/store/camtasia",
+            "accessedAt": "2026-09-10"
+          },
+          {
+            "url": "https://support.techsmith.com/hc/en-us/articles/41690266536589-Camtasia-Pro-vs-VEED",
+            "accessedAt": "2026-09-10"
+          },
+          {
+            "url": "https://www.techsmith.com/camtasia/",
+            "accessedAt": "2026-09-10"
+          }
+        ],
+        "provenance": "Tier structure and euro amounts re-read from the live techsmith.com store on 2026-09-10; the two USD annual rates re-confirmed from TechSmith's own support documentation. freeTier true is now sourced to techsmith.com/camtasia, which states the full Camtasia Editor can be downloaded and used free with all editing features and a watermark on export — a permanent free version, not a trial, which is also why freeTrialDays stays null (no trial length is published)."
+      }
+    },
+    {
+      "slug": "capcut",
+      "name": "CapCut",
+      "domain": "capcut.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "capcut.com/pricing returns HTTP 404, so prices come from CapCut's own official comparison page at capcut.com/resource/capcut-standard-vs-pro, re-fetched twice on 2026-09-10. Confirmed verbatim: 'Monthly plan: $19.99 per month for individual users' and 'Yearly plan: $179.99 per year'. The Team plan is described only as 'Starts at around $24.99 per month' — a hedged starting figure, not a rate card — so no number is recorded and Team carries monthlyUsd null. The draft's '1024 GB' Pro storage claim was specifically challenged on the second fetch and confirmed ('approximately 1024 GB of cloud storage'). New fact added this pass that the draft missed: the free Standard tier's former 1 GB of cloud storage was discontinued as of August 2024, so free users now get none.",
+      "plans": [
+        {
+          "name": "Free (CapCut Standard)",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Genuinely free tier, referred to on CapCut's page as 'CapCut Standard' rather than a separate paid Standard product. Covers cutting, trimming, merging and splitting, filters, transitions and visual effects, text, captions and stickers, and basic audio adjustments and voice effects. Premium templates, effects and the AI tools are withheld. Worth knowing: the 1 GB of free cloud storage this tier used to include was discontinued as of August 2024, so free projects no longer sync.",
+          "source": {
+            "url": "https://www.capcut.com/resource/capcut-standard-vs-pro",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 19.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$19.99 per month for individual users — a genuine month-to-month rate, which is what sits in monthlyUsd. The yearly option is $179.99 per year, a 25% saving against twelve monthly payments of $239.88, though the page does not print that percentage itself. Includes advanced AI tools (auto caption generator, background remover, motion tracking, noise reduction, AI video, AI music, AI image generator), premium templates and exclusive effects, premium stock resources, approximately 1024 GB of cloud storage and collaboration features. Major caveat printed on the page: 'Prices can vary by region, platform (mobile, desktop, or web), taxes, and promotional discounts' — subscribing through the iOS or Google Play store commonly costs more than through the website or desktop app.",
+          "source": {
+            "url": "https://www.capcut.com/resource/capcut-standard-vs-pro",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Team",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "No firm price is published: CapCut's page says only that the Team plan 'Starts at around $24.99 per month', which is a hedged starting figure rather than a rate card, so monthlyUsd is null rather than carrying an approximate number. Aimed at collaborative group editing with enhanced project management. capcut.com/business redirects to a separate commerce site that was not treated as a pricing source.",
+          "source": {
+            "url": "https://www.capcut.com/resource/capcut-standard-vs-pro",
+            "accessedAt": "2026-09-10"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [],
+        "limits": [
+          "No server-rendered rate card: capcut.com/pricing is a 404 and prices appear only in an official comparison article",
+          "Prices vary by region, platform, taxes and promotions — the page says so explicitly",
+          "App Store and Google Play purchases typically cost more than buying via the website or desktop app",
+          "Team plan price is published only as an approximate starting figure, so it cannot be treated as a rate",
+          "Free Standard tier has no cloud storage at all — the former 1 GB allowance was discontinued in August 2024",
+          "Premium templates, effects, stock and all AI tools are Pro-only"
+        ],
+        "keyFeatures": [
+          "Free tier with a genuinely usable editing toolset across mobile, desktop and web",
+          "AI auto-captioning, background removal and motion tracking bundled into a single consumer price",
+          "Approximately 1 TB of cloud storage included with Pro, against none on the free tier"
+        ],
+        "bestFor": [
+          "Short-form and social creators working mainly on mobile",
+          "Buyers who want AI captioning and templates at consumer pricing rather than a pro NLE"
+        ],
+        "sources": [
+          {
+            "url": "https://www.capcut.com/resource/capcut-standard-vs-pro",
+            "accessedAt": "2026-09-10"
+          }
+        ],
+        "provenance": "Re-read from CapCut's official capcut.com resource page across two fetches on 2026-09-10, after capcut.com/pricing returned 404 and capcut.com/business redirected off-site. The 1024 GB storage figure and both Pro prices were specifically re-challenged and held. Compliance fields are null: no HIPAA, SOC 2 or GDPR statement appears on the page fetched."
+      }
+    },
+    {
+      "slug": "clipchamp",
+      "name": "Microsoft Clipchamp",
+      "domain": "clipchamp.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Microsoft 365"
+      ],
+      "provenance": "clipchamp.com/en/pricing was re-fetched on 2026-09-10 and confirms there is no standalone Premium price: the page presents only a free plan and premium access delivered through a Microsoft 365 Personal or Family subscription. Premium therefore keeps monthlyUsd null rather than borrowing the Microsoft 365 rate, which is a different product. Also re-confirmed and notable: the free tier exports 1080p with NO watermark, and watermark-free export, AI editing tools and recording are present on both tiers — the real split is resolution (1080p vs 4K) and premium stock plus brand kit. Microsoft 365 prices are carried only as corroboration for the route to premium features.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free forever with a personal Microsoft account; no payment or download required. Exports as many videos as you like at up to 1080p full HD and — unusually for a free video editor — with no watermark. AI editing tools and recording are included on this tier too. 4K UHD export, premium stock assets and the brand kit are the things withheld.",
+          "source": {
+            "url": "https://clipchamp.com/en/pricing/",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "No standalone Clipchamp Premium price is published: the pricing page states premium features are unlocked by a Microsoft 365 Personal or Family subscription, so monthlyUsd is null rather than a guessed or borrowed figure. The gating subscription costs $9.99/month or $99.99/year for Microsoft 365 Personal and $12.99/month or $129.99/year for Family, per microsoft.com — recorded as corroboration, not as Clipchamp's own price. Premium unlocks up to 4K UHD export, premium stock assets and the brand kit. Buyers should note they are buying an Office suite, not just a video editor.",
+          "source": {
+            "url": "https://clipchamp.com/en/pricing/",
+            "accessedAt": "2026-09-10"
+          },
+          "corroboration": {
+            "url": "https://www.microsoft.com/en-us/microsoft-365/buy/compare-all-microsoft-365-products",
+            "accessedAt": "2026-09-10"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Microsoft 365"
+        ],
+        "limits": [
+          "Free tier caps export at 1080p; 4K requires Microsoft 365",
+          "Premium has no standalone price — it is bundled into Microsoft 365 Personal or Family, so the editor cannot be bought on its own",
+          "Requires a Microsoft account to use at all",
+          "Premium stock assets and the brand kit are gated behind the Microsoft 365 subscription"
+        ],
+        "keyFeatures": [
+          "Watermark-free 1080p export on the free tier, which most browser editors do not offer",
+          "Runs entirely in the browser with no install",
+          "AI editing tools and recording available even on the free tier",
+          "Premium arrives as part of a Microsoft 365 subscription many buyers already hold"
+        ],
+        "bestFor": [
+          "Microsoft 365 households and small businesses who effectively get the editor for free",
+          "Casual editors who need clean 1080p output without paying anything"
+        ],
+        "sources": [
+          {
+            "url": "https://clipchamp.com/en/pricing/",
+            "accessedAt": "2026-09-10"
+          },
+          {
+            "url": "https://clipchamp.com/en/premium/",
+            "accessedAt": "2026-09-10"
+          },
+          {
+            "url": "https://www.microsoft.com/en-us/microsoft-365/buy/compare-all-microsoft-365-products",
+            "accessedAt": "2026-09-10"
+          }
+        ],
+        "provenance": "clipchamp.com/en/pricing re-fetched on 2026-09-10 and again displayed no standalone Premium price, so Premium stays null with the Microsoft 365 rate as corroborating context only. Compliance fields are null because no HIPAA, SOC 2 or GDPR claim was on the Clipchamp pages fetched."
+      }
+    },
+    {
+      "slug": "adobe-premiere-elements",
+      "name": "Adobe Premiere Elements",
+      "domain": "adobe.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Adobe Photoshop Elements"
+      ],
+      "provenance": "adobe.com/products/premiere-elements.html re-fetched on 2026-09-10. Every figure confirmed: US$99.99 for Premiere Elements 2026, US$149.99 for the Photoshop Elements bundle, US$79.99 upgrade for Premiere Elements alone, US$119.99 bundle upgrade, US$79.99 for students and teachers, and a 'free, full-featured 7-day trial'. The draft's central correction also held on re-fetch and is the most important thing on this record: Adobe frames this as 'a one-time purchase with no additional fees' but the same page calls it a '3-year term license' and states 'the license is non-renewing — it expires 3 years after redemption'. It is therefore recorded as a term licence, not a perpetual one, and monthlyUsd is null throughout since no monthly billing is offered. This is Premiere ELEMENTS, a distinct consumer product, not Premiere Pro.",
+      "plans": [
+        {
+          "name": "Premiere Elements 2026",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "One-time payment of US$99.99 with no monthly option, so monthlyUsd is null. The catch a buyer will be caught by: this is NOT a perpetual licence despite the one-time framing — Adobe describes a '3-year term license' and states it is 'non-renewing — it expires 3 years after redemption'. Averaged over the term that is about $2.78 a month, but access stops at the end of year three and you buy again.",
+          "source": {
+            "url": "https://www.adobe.com/products/premiere-elements.html",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Premiere Elements 2026 + Photoshop Elements 2026 bundle",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "One-time payment of US$149.99 for both applications, saving $50 against buying them separately at $99.99 each. Same non-renewing 3-year term licence, so monthlyUsd is null.",
+          "source": {
+            "url": "https://www.adobe.com/products/premiere-elements.html",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Upgrade pricing",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "One-time US$79.99 to upgrade Premiere Elements alone, or US$119.99 for the bundle upgrade. Students and teachers are quoted US$79.99. Available to existing Elements owners only, and the upgraded licence carries the same non-renewing 3-year term.",
+          "source": {
+            "url": "https://www.adobe.com/products/premiere-elements.html",
+            "accessedAt": "2026-09-10"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": 7,
+        "keyIntegrations": [
+          "Adobe Photoshop Elements"
+        ],
+        "limits": [
+          "Licence is a non-renewing 3-year term, not perpetual — it expires 3 years after redemption despite the 'one-time purchase' marketing",
+          "No subscription or monthly billing option is offered at all",
+          "Consumer product: it is not Premiere Pro and does not share its professional feature set",
+          "Upgrade pricing requires existing Elements ownership",
+          "Free trial is 7 days, and there is no free tier"
+        ],
+        "keyFeatures": [
+          "Guided Edits that walk a beginner through a technique step by step",
+          "Adobe AI features in a consumer package with no Creative Cloud subscription",
+          "Sold for a fixed sum rather than rented monthly, albeit for a bounded three-year term"
+        ],
+        "bestFor": [
+          "Home users and hobbyists editing family and event video",
+          "Buyers who refuse a recurring subscription but want Adobe tooling"
+        ],
+        "sources": [
+          {
+            "url": "https://www.adobe.com/products/premiere-elements.html",
+            "accessedAt": "2026-09-10"
+          }
+        ],
+        "provenance": "All figures and the 3-year non-renewing term wording re-read from Adobe's official product page on 2026-09-10; nothing required correction. freeTrialDays is 7 because the page advertises a 'free, full-featured 7-day trial'; freeTier is false because a trial is not a forever-free plan. Compliance fields are null as the page makes no such claims."
+      }
+    },
+    {
+      "slug": "cyberlink-powerdirector",
+      "name": "CyberLink PowerDirector",
+      "domain": "cyberlink.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "PhotoDirector 365",
+        "AudioDirector 365"
+      ],
+      "provenance": "cyberlink.com/products/powerdirector-video-editing-software/pricing_en_US.html re-fetched on 2026-09-10. The draft's key correction was specifically challenged and confirmed: the page's '$5.00 /month' and '$8.33 /month' figures are annual-billed equivalents (the yearly total divided by twelve), there is no true month-to-month option on any plan, and so monthlyUsd is null on every plan here. Also confirmed: the 'Limited Time Offer | 25% OFF! Ends September 13th' banner, the crossed-out $79.99 against $59.99 for PowerDirector 365, the crossed-out $139.99 against $99.99 for Director Suite 365, and $139.99 one-time for the perpetual PowerDirector 2026. No figure required correction.",
+      "plans": [
+        {
+          "name": "PowerDirector 365",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Annual subscription: $59.99/year discounted from a crossed-out $79.99, expressed on the page as '$5.00 /month' — that is the annual total divided by twelve, NOT a month-to-month price, which is why monthlyUsd is null. The discount sits under a 'Limited Time Offer | 25% OFF! Ends September 13th' banner, so $79.99/yr is the standing list price a buyer should expect after that date. Includes everything in PowerDirector 2026 plus premium AI features and monthly feature updates.",
+          "source": {
+            "url": "https://www.cyberlink.com/products/powerdirector-video-editing-software/pricing_en_US.html",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Director Suite 365",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Annual subscription bundle: $99.99/year discounted from a crossed-out $139.99, shown as an '$8.33 /month' annual-billed equivalent rather than a month-to-month rate, so monthlyUsd is null. Bundles PowerDirector 365 with PhotoDirector 365 and AudioDirector 365. The same limited-time 25%-off banner applies, so $139.99/yr is the post-promotion list price.",
+          "source": {
+            "url": "https://www.cyberlink.com/products/powerdirector-video-editing-software/pricing_en_US.html",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "PowerDirector 2026 (perpetual)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "One-time purchase of $139.99 for a perpetual licence to the 2026 version, with no renewal — a one-time price, so monthlyUsd is null. Does not include the 365 premium AI features or the monthly feature updates and asset drops that come with the subscription. At over twice the promotional first-year subscription cost, that trade is the thing to weigh.",
+          "source": {
+            "url": "https://www.cyberlink.com/products/powerdirector-video-editing-software/pricing_en_US.html",
+            "accessedAt": "2026-09-10"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "PhotoDirector 365",
+          "AudioDirector 365"
+        ],
+        "limits": [
+          "Prices captured during a '25% OFF, ends September 13th' promotion — list prices are $79.99/yr (PowerDirector 365) and $139.99/yr (Director Suite 365)",
+          "No month-to-month price is published on the page; the '/month' figures are annual-billed equivalents and a buyer cannot actually pay monthly",
+          "Perpetual PowerDirector 2026 excludes the 365 AI features and ongoing monthly updates",
+          "Premium stock and AI asset access is tied to the 365 subscription",
+          "No free tier is published"
+        ],
+        "keyFeatures": [
+          "Subscription and perpetual sold side by side, with a clear feature split between them",
+          "Monthly feature and asset drops for 365 subscribers",
+          "Director Suite bundles video, photo and audio editing under one annual price"
+        ],
+        "bestFor": [
+          "Windows hobbyists and prosumers wanting a full NLE for well under $100 a year",
+          "Buyers who want video, photo and audio tools from one vendor on one bill"
+        ],
+        "sources": [
+          {
+            "url": "https://www.cyberlink.com/products/powerdirector-video-editing-software/pricing_en_US.html",
+            "accessedAt": "2026-09-10"
+          }
+        ],
+        "provenance": "Re-read from CyberLink's US pricing page on 2026-09-10 while the limited-time discount was still live; both promotional and crossed-out list prices are recorded so the figures stay interpretable after 13 September. The annual-billed-equivalent finding was re-tested and held, so monthlyUsd remains null throughout. Compliance fields are null as no such claims appear."
+      }
+    },
+    {
+      "slug": "lumafusion",
+      "name": "LumaFusion (LumaTouch)",
+      "domain": "luma-touch.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Final Cut Pro (via FCPXML export)",
+        "CoreMelt PaintX"
+      ],
+      "provenance": "luma-touch.com/purchase was re-fetched and again publishes no prices — it states only that 'LumaFusion is a 1-time purchase and can be purchased in any of the app stores' (Apple App Store, Google Play, Chrome Web Store, Samsung Galaxy Store) — so figures come from the US Apple App Store listing, re-fetched 2026-09-10. Prices confirmed: app $29.99; Speed Ramping & Keyframing, Multicam Studio, FCPXML Export and CoreMelt PaintX at $19.99 each; Creator Pass at $9.99/month or $69.99/year. Two substantive corrections applied this pass. First, the draft claimed Creator Pass bundles all the $19.99 packs; the listing states it unlocks Speed Ramping, Multicam Studio and FCPXML Export plus Storyblocks content — the CoreMelt PaintX plug-in is not listed as covered. Second, the draft's buying advice was arithmetically false: it said three or more packs cost more than a year of Creator Pass, when 3 x $19.99 = $59.97 is LESS than $69.99. That guidance has been inverted to match the arithmetic. Creator Pass is the only plan here with a real month-to-month rate; everything else is one-time and carries monthlyUsd null.",
+      "plans": [
+        {
+          "name": "LumaFusion app (one-time)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "One-time purchase of $29.99 on the US App Store — not a subscription, so monthlyUsd is null. Buys the full multi-track editor. Sold per app-store platform (Apple App Store, Google Play, Chrome Web Store, Samsung Galaxy Store), so buying on iPad does not license the Android or ChromeOS build; a cross-platform editor pays more than once.",
+          "source": {
+            "url": "https://apps.apple.com/us/app/lumafusion/id1062022008",
+            "accessedAt": "2026-09-10"
+          },
+          "corroboration": {
+            "url": "https://luma-touch.com/purchase/",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Creator Pass (subscription)",
+          "monthlyUsd": 9.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$9.99 per month month-to-month — a genuine monthly rate, which is why it is the only monthlyUsd on this vendor — or $69.99 per year as an annual in-app purchase. Optional, and additive on top of the $29.99 app: it does not replace the app purchase, which is the thing buyers miss. It unlocks Speed Ramping & Keyframing, Multicam Studio and FCPXML Export (three of the four paid packs, NOT the CoreMelt PaintX plug-in) and adds Storyblocks content — over a million royalty-free media assets. Features stay unlocked only while the subscription is active.",
+          "source": {
+            "url": "https://apps.apple.com/us/app/lumafusion/id1062022008",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Individual feature packs (one-time)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Each enhanced feature is a $19.99 one-time in-app purchase, so monthlyUsd is null. The App Store listing shows Multicam Studio $19.99, Speed Ramping & Keyframing $19.99, FCPXML Export $19.99 and the CoreMelt PaintX plug-in $19.99. Do the arithmetic before subscribing: buying outright all three packs that Creator Pass covers costs $59.97 once, which is less than a single $69.99 year of the Pass and keeps them permanently. Creator Pass only wins if you want the bundled Storyblocks library, or prefer $9.99 for a month or two of occasional access.",
+          "source": {
+            "url": "https://apps.apple.com/us/app/lumafusion/id1062022008",
+            "accessedAt": "2026-09-10"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Final Cut Pro (via FCPXML export)",
+          "CoreMelt PaintX"
+        ],
+        "limits": [
+          "No free tier and no trial published — the app is a paid download",
+          "Licences are per app store, so iOS, Android/ChromeOS and Samsung purchases are separate",
+          "Core features such as multicam, speed ramping and FCPXML export cost $19.99 each on top of the $29.99 app",
+          "Creator Pass is additive to the app purchase, not a replacement for it, and unlocks only 3 of the 4 paid packs — CoreMelt PaintX is not included",
+          "Creator Pass features lock again if the subscription lapses, unlike the one-time packs",
+          "Buying the three Pass-covered packs outright ($59.97) is cheaper than one year of Creator Pass ($69.99)",
+          "LumaTouch's own purchase page lists no prices; figures come from the store listing"
+        ],
+        "keyFeatures": [
+          "Full multi-track NLE on iPad, iPhone, Mac, Android and ChromeOS rather than desktop only",
+          "FCPXML export to hand a project off to a desktop finishing suite",
+          "Buy-what-you-need model: one-time feature packs as a cheaper alternative to subscribing"
+        ],
+        "bestFor": [
+          "Mobile and field editors cutting on an iPad or phone",
+          "Editors who want a professional timeline with no recurring cost, buying packs outright instead of subscribing"
+        ],
+        "sources": [
+          {
+            "url": "https://apps.apple.com/us/app/lumafusion/id1062022008",
+            "accessedAt": "2026-09-10"
+          },
+          {
+            "url": "https://luma-touch.com/purchase/",
+            "accessedAt": "2026-09-10"
+          }
+        ],
+        "provenance": "Prices re-read from the live US App Store listing on 2026-09-10 because LumaTouch's own purchase page carries none; the vendor page was re-fetched and confirms the one-time-purchase, app-store-distributed model. Corrected this pass: Creator Pass pack coverage (3 packs plus Storyblocks, not all 4) and the pack-versus-subscription cost comparison, which the draft had backwards. Compliance fields are null: no HIPAA, SOC 2 or GDPR claim was found."
+      }
     }
   ]
 }

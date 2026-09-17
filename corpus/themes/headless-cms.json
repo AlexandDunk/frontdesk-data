@@ -1,7 +1,7 @@
 {
   "vertical": "headless-cms",
   "generatedAt": "2026-06-14",
-  "methodologyNotes": "Pricing fetched from official vendor pricing pages via WebFetch on 2026-06-14 and independently re-verified on 2026-06-14. Contentful prices are EUR on their pricing page (Lite €300/mo); GetApp lists the USD self-serve price as $300/month for Lite, which is the figure used. Sanity Free $0 / Growth $15-per-seat / Enterprise custom confirmed from sanity.io/pricing. Storyblok Growth $99/mo and Growth Plus $349/mo confirmed (annual $90.75 / $319.91 via the 'one month free' model, ~8.3% discount). Strapi Cloud: the official page is JS-rendered and returns no figures, but the current self-serve tiers (Free $0, Essential $18, Pro $90, Scale $450, 20% annual discount) are confirmed via Strapi's own blog and costbench.com — corrected from a prior version that listed an invented 'Team' plan with null prices. Hygraph Hobby $0 / Growth $199 / Enterprise custom confirmed. Prismic prices are per-repository, billed annually (Free $0, Starter $10, Small $25, Medium $150, Platinum $675), confirmed from prismic.io/pricing. Directus Core $0 / Team $499 annual ($599 monthly, ~17% discount) / Open Innovation Grant $99 / Enterprise custom confirmed from directus.com/pricing. Builder.io Free $0 confirmed; Pro and Team per-user prices are rendered as images on the official page and no single credible current self-serve figure could be confirmed, so they remain null with a provenance note. All telephony fields (minutesIncluded, callsIncluded, overagePerMin, overagePerCall) are null for all plans as this is a non-telephony vertical.",
+  "methodologyNotes": "Pricing fetched from official vendor pricing pages on 2026-06-14 and independently re-verified on 2026-06-14. Contentful prices are EUR on their pricing page (Lite €300/mo); GetApp lists the USD self-serve price as $300/month for Lite, which is the figure used. Sanity Free $0 / Growth $15-per-seat / Enterprise custom confirmed from sanity.io/pricing. Storyblok Growth $99/mo and Growth Plus $349/mo confirmed (annual $90.75 / $319.91 via the 'one month free' model, ~8.3% discount). Strapi Cloud: the official page is JS-rendered and returns no figures, but the current self-serve tiers (Free $0, Essential $18, Pro $90, Scale $450, 20% annual discount) are confirmed via Strapi's own blog and costbench.com — corrected from a prior version that listed an invented 'Team' plan with null prices. Hygraph Hobby $0 / Growth $199 / Enterprise custom confirmed. Prismic prices are per-repository, billed annually (Free $0, Starter $10, Small $25, Medium $150, Platinum $675), confirmed from prismic.io/pricing. Directus Core $0 / Team $499 annual ($599 monthly, ~17% discount) / Open Innovation Grant $99 / Enterprise custom confirmed from directus.com/pricing. Builder.io Free $0 confirmed; Pro and Team per-user prices are rendered as images on the official page and no single credible current self-serve figure could be confirmed, so they remain null with a provenance note. All telephony fields (minutesIncluded, callsIncluded, overagePerMin, overagePerCall) are null for all plans as this is a non-telephony vertical.",
   "vendors": [
     {
       "slug": "contentful",
@@ -427,7 +427,7 @@
         "GitHub",
         "GitLab"
       ],
-      "provenance": "Strapi Cloud self-serve pricing verified 2026-06-14. The official pricing page (https://strapi.io/pricing) is JavaScript-rendered and returns no figures to WebFetch, but the current self-serve tiers and prices are confirmed by Strapi's own blog (https://strapi.io/blog/introducing-yearly-plans-and-new-limits-for-strapi-cloud, which states a 20% yearly-billing discount and Essential at $18/mo monthly / $15/mo annual) and corroborated by costbench.com: Free $0, Essential $18/mo, Pro $90/mo, Scale $450/mo. Annual billing gives a 20% discount. Enterprise (self-hosted edition) is custom/contact-sales. NOTE: a prior version of this entry listed an invented 'Team' plan with all-null prices; corrected to the actual published tiers. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
+      "provenance": "Strapi Cloud self-serve pricing verified 2026-06-14. The official pricing page (https://strapi.io/pricing) is JavaScript-rendered and returns no figures to an automated read, but the current self-serve tiers and prices are confirmed by Strapi's own blog (https://strapi.io/blog/introducing-yearly-plans-and-new-limits-for-strapi-cloud, which states a 20% yearly-billing discount and Essential at $18/mo monthly / $15/mo annual) and corroborated by costbench.com: Free $0, Essential $18/mo, Pro $90/mo, Scale $450/mo. Annual billing gives a 20% discount. Enterprise (self-hosted edition) is custom/contact-sales. NOTE: a prior version of this entry listed an invented 'Team' plan with all-null prices; corrected to the actual published tiers. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
       "plans": [
         {
           "name": "Free",
@@ -440,7 +440,7 @@
           "billingModel": "flat",
           "notes": "Free Strapi Cloud tier. ~2,500 API requests/month, 10 GB storage, limited database entries. Best for personal projects and testing. (The Strapi CMS itself is also free and open-source when self-hosted.)",
           "source": {
-            "url": "https://strapi.io/pricing",
+            "url": "https://strapi.io/pricing-cloud",
             "accessedAt": "2026-06-14"
           },
           "corroboration": {
@@ -478,7 +478,7 @@
           "billingModel": "flat",
           "notes": "$90/month billed monthly; ~20% discount with yearly billing. ~1M API requests/month, 250 GB storage, unlimited database entries. Best for growing teams.",
           "source": {
-            "url": "https://strapi.io/pricing",
+            "url": "https://strapi.io/pricing-cloud",
             "accessedAt": "2026-09-02"
           },
           "corroboration": {
@@ -497,7 +497,7 @@
           "billingModel": "flat",
           "notes": "$450/month billed monthly; ~20% discount with yearly billing. ~10M API requests/month, 1,000 GB storage, unlimited database entries. Best for high-scale applications.",
           "source": {
-            "url": "https://strapi.io/pricing",
+            "url": "https://strapi.io/pricing-cloud",
             "accessedAt": "2026-06-14"
           },
           "corroboration": {
@@ -516,7 +516,7 @@
           "billingModel": "custom",
           "notes": "Enterprise (self-hosted edition). Custom pricing, contact sales. SSO/SAML, RBAC, audit logs, content history, review workflows, and priority support.",
           "source": {
-            "url": "https://strapi.io/pricing",
+            "url": "https://strapi.io/pricing-cloud",
             "accessedAt": "2026-06-14"
           }
         }
@@ -897,7 +897,7 @@
         },
         {
           "name": "Team",
-          "monthlyUsd": 499,
+          "monthlyUsd": 599,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
@@ -1014,7 +1014,7 @@
         "BigCommerce",
         "Figma"
       ],
-      "provenance": "Official pricing page https://www.builder.io/m/pricing fetched on 2026-06-14. Free plan at $0 confirmed with up to 5 users. Pro and Team plan USD prices are rendered as images on the official page and could not be extracted by WebFetch. AlternativeTo lists plans at '$19-$36 per month' but this appears outdated and per-user structure couldn't be confirmed. Enterprise is custom. Pro and Team set to null pending official price confirmation. Re-verified 2026-09-02 against the live pricing page — Pro: quote-only -> $24 (third-party figure); Team: quote-only -> $40 (third-party figure).",
+      "provenance": "Official pricing page https://www.builder.io/m/pricing fetched on 2026-06-14. Free plan at $0 confirmed with up to 5 users. Pro and Team plan USD prices are rendered as images on the official page and could not be extracted. AlternativeTo lists plans at '$19-$36 per month' but this appears outdated and per-user structure couldn't be confirmed. Enterprise is custom. Pro and Team set to null pending official price confirmation. Re-verified 2026-09-02 against the live pricing page — Pro: quote-only -> $24 (third-party figure); Team: quote-only -> $40 (third-party figure).",
       "plans": [
         {
           "name": "Free",

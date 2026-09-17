@@ -1,7 +1,7 @@
 {
   "vertical": "data-warehouse",
   "generatedAt": "2026-06-14",
-  "methodologyNotes": "Pricing sourced from official vendor pages and reputable 2026 pricing-comparison articles where official pages returned truncated/JS-only content or timed out. All figures are USD, US-East / AWS US region defaults unless noted. Usage-metered services have monthlyUsd=null with unit rates in notes. 'Contact sales' tiers have monthlyUsd=null. BigQuery official page truncated on every fetch; figures corroborated via airbyte.com (Sep 2025 article) and cdcalculators.com (2026). Databricks official page shows no prices; figures from cloudzero.com (last updated May 26 2026) and cloudzero.com via WebSearch. Azure Synapse official pricing page timed out on every fetch; figures from cloudwebschool.com (last verified Mar 19 2026) and costbench.com (2026). Snowflake official PDF binary-only; figures from select.dev (Jan 2025 article verified against cloudzero.com Apr 2026 article). All accessedAt dates set to 2026-06-14 per dataset spec.",
+  "methodologyNotes": "Pricing sourced from official vendor pages and reputable 2026 pricing-comparison articles where official pages returned truncated/JS-only content or timed out. All figures are USD, US-East / AWS US region defaults unless noted. Usage-metered services have monthlyUsd=null with unit rates in notes. 'Contact sales' tiers have monthlyUsd=null. BigQuery official page truncated on every fetch; figures corroborated via airbyte.com (Sep 2025 article) and cdcalculators.com (2026). Databricks official page shows no prices; figures from cloudzero.com (last updated May 26 2026) and cloudzero.com via a web search. Azure Synapse official pricing page timed out on every fetch; figures from cloudwebschool.com (last verified Mar 19 2026) and costbench.com (2026). Snowflake official PDF binary-only; figures from select.dev (Jan 2025 article verified against cloudzero.com Apr 2026 article). All accessedAt dates set to 2026-06-14 per dataset spec.",
   "vendors": [
     {
       "slug": "snowflake",
@@ -35,7 +35,7 @@
           "billingModel": "custom",
           "notes": "Consumption-based: ~$2.00/credit on-demand (AWS US East). Storage $40/TB-month on-demand. No flat monthly fee; pay only for compute consumed. 60-second minimum per virtual warehouse start.",
           "source": {
-            "url": "https://www.snowflake.com/en/data-cloud/pricing-options/",
+            "url": "https://www.snowflake.com/en/pricing-options/",
             "accessedAt": "2026-09-02"
           },
           "corroboration": {
@@ -54,7 +54,7 @@
           "billingModel": "custom",
           "notes": "Consumption-based: ~$3.00/credit on-demand (AWS US East). Adds multi-cluster warehouses, materialized views, column-level security. Storage $40/TB-month on-demand.",
           "source": {
-            "url": "https://www.snowflake.com/en/data-cloud/pricing-options/",
+            "url": "https://www.snowflake.com/en/pricing-options/",
             "accessedAt": "2026-09-02"
           },
           "corroboration": {
@@ -73,7 +73,7 @@
           "billingModel": "custom",
           "notes": "Consumption-based: ~$4.00/credit on-demand (AWS US East). HIPAA-eligible edition; BAA required. Adds HIPAA/PCI DSS support, Tri-Secret Secure, AWS PrivateLink. Storage $40/TB-month on-demand.",
           "source": {
-            "url": "https://www.snowflake.com/en/data-cloud/pricing-options/",
+            "url": "https://www.snowflake.com/en/pricing-options/",
             "accessedAt": "2026-09-02"
           },
           "corroboration": {
@@ -92,7 +92,7 @@
           "billingModel": "custom",
           "notes": "Quote-only. Fully isolated single-tenant environment. ~$6.00/credit on-demand (AWS US East) per third-party sources; negotiated directly with Snowflake. Highest compliance tier.",
           "source": {
-            "url": "https://www.snowflake.com/en/data-cloud/pricing-options/",
+            "url": "https://www.snowflake.com/en/pricing-options/",
             "accessedAt": "2026-09-02"
           },
           "corroboration": {
@@ -343,7 +343,7 @@
         "Kafka",
         "Redshift"
       ],
-      "provenance": "Official pricing page databricks.com/product/pricing shows no USD figures (JS-rendered calculator only). DBU costs sourced from cloudzero.com Databricks pricing blog (last updated May 26 2026, corroborated by cloudzero.com WebSearch result from same article). HIPAA/BAA confirmed via docs.databricks.com/aws/en/security/privacy/hipaa and databricks.com/legal/baa — compliance security profile required, full enforcement from Sep 1 2026. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
+      "provenance": "Official pricing page databricks.com/product/pricing shows no USD figures (JS-rendered calculator only). DBU costs sourced from cloudzero.com Databricks pricing blog (last updated May 26 2026, corroborated by a cloudzero.com search result from same article). HIPAA/BAA confirmed via docs.databricks.com/aws/en/security/privacy/hipaa and databricks.com/legal/baa — compliance security profile required, full enforcement from Sep 1 2026. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
       "plans": [
         {
           "name": "SQL Classic (AWS, Premium tier)",
@@ -871,7 +871,7 @@
           "billingModel": "flat",
           "notes": "Free tier. Includes 10 GB storage and 10 hours of Pulse compute monthly at no cost. For solo practitioners and hobbyists. No HIPAA BAA on Lite.",
           "source": {
-            "url": "https://motherduck.com/pricing/",
+            "url": "https://motherduck.com/product/pricing/",
             "accessedAt": "2026-09-02"
           }
         },
@@ -886,7 +886,7 @@
           "billingModel": "flat",
           "notes": "$250/month per organization platform fee plus usage. Compute billed per second: Pulse $0.60/hr, Standard $2.40/hr, Jumbo $4.80/hr, Mega $12.00/hr, Giga $36.00/hr. Storage $0.04/GB-month. HIPAA BAA available on request. SOC 2 Type II certified.",
           "source": {
-            "url": "https://motherduck.com/pricing/",
+            "url": "https://motherduck.com/product/pricing/",
             "accessedAt": "2026-09-02"
           }
         },
@@ -901,7 +901,7 @@
           "billingModel": "custom",
           "notes": "Quote-only. Custom pricing for large-scale deployments. HIPAA BAA included.",
           "source": {
-            "url": "https://motherduck.com/pricing/",
+            "url": "https://motherduck.com/product/pricing/",
             "accessedAt": "2026-09-02"
           }
         }
@@ -912,7 +912,7 @@
           "soc2": true,
           "gdpr": true,
           "source": {
-            "url": "https://motherduck.com/pricing/",
+            "url": "https://motherduck.com/product/pricing/",
             "accessedAt": "2026-06-15"
           }
         },
@@ -955,7 +955,7 @@
             "accessedAt": "2026-06-15"
           },
           {
-            "url": "https://motherduck.com/pricing/",
+            "url": "https://motherduck.com/product/pricing/",
             "accessedAt": "2026-06-15"
           },
           {

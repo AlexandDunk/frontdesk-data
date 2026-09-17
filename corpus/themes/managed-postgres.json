@@ -1,7 +1,7 @@
 {
   "vertical": "managed-postgres",
   "generatedAt": "2026-06-14",
-  "methodologyNotes": "Prices sourced by fetching each vendor's official pricing page on 2026-06-14 using WebFetch. Supabase (supabase.com/pricing): all plan prices fetched directly; HIPAA confirmed as paid add-on on Team/Enterprise. Neon (neon.com/pricing and neon.com/docs/introduction/plans): Free confirmed at $0; Launch and Scale are pure pay-as-you-go with no monthly minimum — monthlyUsd recorded as null per billing-model rules; HIPAA confirmed available on Scale with additional charge. PlanetScale (planetscale.com/pricing): pricing is per-SKU metered (arm64/x86-64, HA vs Non-HA), no flat tier — smallest entry is $5/mo for PS-5 Non-HA; recorded as custom billing. Aiven (aiven.io/postgresql): Free=$0, Developer=$5/mo, Startup from $75/mo, Business from $180/mo confirmed; Premium plan exists but specific price not shown on fetched page — recorded as null; HIPAA compliance confirmed since 2018 via aiven.io/security-compliance; BAA not explicitly confirmed on page — baa=null. Railway (railway.com/pricing + docs.railway.com/reference/pricing/plans): Hobby=$5/mo, Pro=$20/mo/seat confirmed; resource rates confirmed ($10/GB-mo RAM, $20/vCPU-mo, $0.15/GB-mo volume, $0.05/GB egress). Render (render.com/docs/postgresql-legacy-instance-types): legacy instance pricing Starter=$7, Standard=$20, Pro=$95, Pro Plus=$185 confirmed; the newer flexible-plan pricing page renders no dollar amounts via WebFetch; legacy prices noted as applicable to existing databases (new databases use flexible plans whose exact instance prices were not retrievable). CockroachDB (cockroachlabs.com/pricing): Basic free tier confirmed (50M RUs + 10 GiB/mo free); Standard at $0.18/hr per 2 vCPUs and Advanced at $0.60/hr per 4 vCPUs confirmed; HIPAA-ready confirmed on Advanced plan. All telephony fields (minutesIncluded, callsIncluded, overagePerMin, overagePerCall) are null — this is a non-telephony vertical.",
+  "methodologyNotes": "Prices sourced by fetching each vendor's official pricing page on 2026-06-14. Supabase (supabase.com/pricing): all plan prices fetched directly; HIPAA confirmed as paid add-on on Team/Enterprise. Neon (neon.com/pricing and neon.com/docs/introduction/plans): Free confirmed at $0; Launch and Scale are pure pay-as-you-go with no monthly minimum — monthlyUsd recorded as null per billing-model rules; HIPAA confirmed available on Scale with additional charge. PlanetScale (planetscale.com/pricing): pricing is per-SKU metered (arm64/x86-64, HA vs Non-HA), no flat tier — smallest entry is $5/mo for PS-5 Non-HA; recorded as custom billing. Aiven (aiven.io/postgresql): Free=$0, Developer=$5/mo, Startup from $75/mo, Business from $180/mo confirmed; Premium plan exists but specific price not shown on fetched page — recorded as null; HIPAA compliance confirmed since 2018 via aiven.io/security-compliance; BAA not explicitly confirmed on page — baa=null. Railway (railway.com/pricing + docs.railway.com/reference/pricing/plans): Hobby=$5/mo, Pro=$20/mo/seat confirmed; resource rates confirmed ($10/GB-mo RAM, $20/vCPU-mo, $0.15/GB-mo volume, $0.05/GB egress). Render (render.com/docs/postgresql-legacy-instance-types): legacy instance pricing Starter=$7, Standard=$20, Pro=$95, Pro Plus=$185 confirmed; the newer flexible-plan pricing page renders no dollar amounts; legacy prices noted as applicable to existing databases (new databases use flexible plans whose exact instance prices were not retrievable). CockroachDB (cockroachlabs.com/pricing): Basic free tier confirmed (50M RUs + 10 GiB/mo free); Standard at $0.18/hr per 2 vCPUs and Advanced at $0.60/hr per 4 vCPUs confirmed; HIPAA-ready confirmed on Advanced plan. All telephony fields (minutesIncluded, callsIncluded, overagePerMin, overagePerCall) are null — this is a non-telephony vertical.",
   "vendors": [
     {
       "slug": "supabase",
@@ -541,7 +541,7 @@
             "accessedAt": "2026-09-02"
           },
           "corroboration": {
-            "url": "https://docs.railway.com/reference/pricing/plans",
+            "url": "https://docs.railway.com/pricing/plans",
             "accessedAt": "2026-06-14"
           }
         },
@@ -560,7 +560,7 @@
             "accessedAt": "2026-09-02"
           },
           "corroboration": {
-            "url": "https://docs.railway.com/reference/pricing/plans",
+            "url": "https://docs.railway.com/pricing/plans",
             "accessedAt": "2026-06-14"
           }
         },
@@ -644,7 +644,7 @@
       "baa": null,
       "bilingual": null,
       "integrations": [],
-      "provenance": "Legacy instance pricing fetched from https://render.com/docs/postgresql-legacy-instance-types on 2026-06-14: Starter=$7, Standard=$20, Pro=$95, Pro Plus=$185 confirmed. Render has launched newer flexible plans where compute and storage are billed separately ($0.30/GB-month for storage, per-instance compute), but the flexible plan pricing page (render.com/pricing#postgresql) returned only navigation HTML with no dollar amounts via WebFetch — flexible instance prices are not fetchable and therefore not recorded. Legacy plans apply only to databases created before the flexible-plan rollout. Free tier confirmed: 1 GB storage, expires after 30 days, one free database per workspace. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
+      "provenance": "Legacy instance pricing fetched from https://render.com/docs/postgresql-legacy-instance-types on 2026-06-14: Starter=$7, Standard=$20, Pro=$95, Pro Plus=$185 confirmed. Render has launched newer flexible plans where compute and storage are billed separately ($0.30/GB-month for storage, per-instance compute), but the flexible plan pricing page (render.com/pricing#postgresql) returned only navigation HTML with no dollar amounts — flexible instance prices are not fetchable and therefore not recorded. Legacy plans apply only to databases created before the flexible-plan rollout. Free tier confirmed: 1 GB storage, expires after 30 days, one free database per workspace. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
       "plans": [
         {
           "name": "Free",
@@ -825,7 +825,7 @@
             "accessedAt": "2026-09-02"
           },
           "corroboration": {
-            "url": "https://cockroachlabs.com/docs/cockroachcloud/plan-your-cluster/",
+            "url": "https://docs.cockroachlabs.com/docs/cockroachcloud/plan-your-cluster/",
             "accessedAt": "2026-06-14"
           }
         },
@@ -844,7 +844,7 @@
             "accessedAt": "2026-09-02"
           },
           "corroboration": {
-            "url": "https://cockroachlabs.com/docs/cockroachcloud/plan-your-cluster/",
+            "url": "https://docs.cockroachlabs.com/docs/cockroachcloud/plan-your-cluster/",
             "accessedAt": "2026-06-14"
           }
         },
@@ -863,7 +863,7 @@
             "accessedAt": "2026-09-02"
           },
           "corroboration": {
-            "url": "https://cockroachlabs.com/docs/cockroachcloud/plan-your-cluster/",
+            "url": "https://docs.cockroachlabs.com/docs/cockroachcloud/plan-your-cluster/",
             "accessedAt": "2026-06-14"
           }
         }

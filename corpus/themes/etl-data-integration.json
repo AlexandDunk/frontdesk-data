@@ -1,7 +1,7 @@
 {
   "vertical": "etl-data-integration",
   "generatedAt": "2026-06-14",
-  "methodologyNotes": "Prices fetched directly from each vendor's official /pricing page via WebFetch on 2026-06-14. Fivetran uses consumption-based MAR (Monthly Active Rows) pricing with no fixed monthly floor on Standard/Enterprise/Business Critical tiers — those plans have monthlyUsd=null as the cost varies entirely by data volume. Stitch Advanced and Premium are billed annually only; monthlyUsd reflects the annualized monthly rate. Airbyte Cloud has two product lines (Agents and Data Replication); both are represented. Hevo Starter price listed is the monthly (non-annual) rate; annual rate is 20% lower. Matillion publishes no USD figures — all plans are consumption-credit-based with custom quotes. Rivery Base plan is pay-as-you-go at $0.90/BDU credit with no stated monthly minimum, so monthlyUsd=null. Where a vendor's official page returned 403/404, the corroboration source is a third-party aggregator that retrieved pricing from the vendor's public page. HIPAA/BAA noted only when explicitly stated by the vendor.",
+  "methodologyNotes": "Prices fetched directly from each vendor's official /pricing page on 2026-06-14. Fivetran uses consumption-based MAR (Monthly Active Rows) pricing with no fixed monthly floor on Standard/Enterprise/Business Critical tiers — those plans have monthlyUsd=null as the cost varies entirely by data volume. Stitch Advanced and Premium are billed annually only; monthlyUsd reflects the annualized monthly rate. Airbyte Cloud has two product lines (Agents and Data Replication); both are represented. Hevo Starter price listed is the monthly (non-annual) rate; annual rate is 20% lower. Matillion publishes no USD figures — all plans are consumption-credit-based with custom quotes. Rivery Base plan is pay-as-you-go at $0.90/BDU credit with no stated monthly minimum, so monthlyUsd=null. Where a vendor's official page returned 403/404, the corroboration source is a third-party aggregator that retrieved pricing from the vendor's public page. HIPAA/BAA noted only when explicitly stated by the vendor.",
   "vendors": [
     {
       "slug": "fivetran",
@@ -528,7 +528,7 @@
           "billingModel": "flat",
           "notes": "Up to 1M events/month. 1-hour sync scheduling. Up to 5 users. 50+ free connectors.",
           "source": {
-            "url": "https://hevodata.com/pricing/",
+            "url": "https://hevodata.com/pricing/pipeline/",
             "accessedAt": "2026-09-02"
           }
         },
@@ -543,7 +543,7 @@
           "billingModel": "flat",
           "notes": "Month-to-month price $299/month; annual price $239/month (20% discount). Starts at 5M events/month; tiers for 20M and 50M available. Up to 10 users. 150+ connectors. dbt integration. SSH/SSL. 24x7 live chat support.",
           "source": {
-            "url": "https://hevodata.com/pricing/",
+            "url": "https://hevodata.com/pricing/pipeline/",
             "accessedAt": "2026-09-02"
           },
           "corroboration": {
@@ -562,7 +562,7 @@
           "billingModel": "flat",
           "notes": "Month-to-month price $849/month; annual price $679/month (20% discount). 20M, 50M, or 100M events/month tiers available. Unlimited users. Hevo APIs. Reverse SSH. Add-ons available.",
           "source": {
-            "url": "https://hevodata.com/pricing/",
+            "url": "https://hevodata.com/pricing/pipeline/",
             "accessedAt": "2026-09-02"
           }
         },
@@ -577,7 +577,7 @@
           "billingModel": "custom",
           "notes": "Custom pricing. Includes streaming pipelines, RBAC, SSO, multiple workspaces, VPC peering, advanced security. Contact sales.",
           "source": {
-            "url": "https://hevodata.com/pricing/",
+            "url": "https://hevodata.com/pricing/pipeline/",
             "accessedAt": "2026-09-02"
           }
         }
@@ -641,7 +641,7 @@
             "accessedAt": "2026-06-15"
           },
           {
-            "url": "https://hevodata.com/pricing/",
+            "url": "https://hevodata.com/pricing/pipeline/",
             "accessedAt": "2026-06-15"
           },
           {

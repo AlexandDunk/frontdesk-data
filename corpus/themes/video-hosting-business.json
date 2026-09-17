@@ -1,7 +1,7 @@
 {
   "vertical": "video-hosting-business",
   "generatedAt": "2026-06-14",
-  "methodologyNotes": "Pricing fetched June 2026 from each vendor's official pricing page via WebFetch. Vimeo's pricing page (vimeo.com/plans, /upgrade, /upgrade-plan) rendered JS-only with no content returned; prices sourced from GetApp aggregator (getapp.com) and corroborated by a second GetApp listing — noted in each plan's provenance. Wistia's official page shows only annual billing price; 20% annual discount stated on page, so month-to-month is not published. Brightcove and Kaltura returned 404 on all pricing URL attempts and publish no self-serve pricing per SoftwareAdvice. Dacast shows annual-only rates; month-to-month exists (3-month minimum) but amounts not disclosed on the pricing page. Loom annual rate computed as 17% off stated monthly rate (per official page claim) but exact annual figure not displayed; month-to-month rates used as monthlyUsd with discount noted. SproutVideo pricing page loaded fully with no annual toggle found. Vidyard Starter price sourced from GetApp/SoftwareAdvice aggregators as official page returned no dollar amounts. All plans with contact-only pricing have monthlyUsd=null.",
+  "methodologyNotes": "Pricing fetched June 2026 from each vendor's official pricing page. Vimeo's pricing page (vimeo.com/plans, /upgrade, /upgrade-plan) rendered JS-only with no content returned; prices sourced from GetApp aggregator (getapp.com) and corroborated by a second GetApp listing — noted in each plan's provenance. Wistia's official page shows only annual billing price; 20% annual discount stated on page, so month-to-month is not published. Brightcove and Kaltura returned 404 on all pricing URL attempts and publish no self-serve pricing per SoftwareAdvice. Dacast shows annual-only rates; month-to-month exists (3-month minimum) but amounts not disclosed on the pricing page. Loom annual rate computed as 17% off stated monthly rate (per official page claim) but exact annual figure not displayed; month-to-month rates used as monthlyUsd with discount noted. SproutVideo pricing page loaded fully with no annual toggle found. Vidyard Starter price sourced from GetApp/SoftwareAdvice aggregators as official page returned no dollar amounts. All plans with contact-only pricing have monthlyUsd=null.",
   "vendors": [
     {
       "slug": "vimeo",
@@ -204,9 +204,9 @@
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
-          "annualDiscountPct": 20,
+          "annualDiscountPct": null,
           "billingModel": "flat",
-          "notes": "$79/month billed annually. Month-to-month rate not published on pricing page (implied ~$99/mo based on 20% discount). 3 users included, additional seats at $25/user/mo. 250 GB storage, 1 TB bandwidth. Automation Suite add-on available at $250/mo (annual).",
+          "notes": "$79/month billed annually. Month-to-month rate not published on pricing page (implied ~$99/mo based on 20% discount). 3 users included, additional seats at $25/user/mo. 250 GB storage, 1 TB bandwidth. Automation Suite add-on available at $250/mo (annual). annualDiscountPct is null because the figure recorded here is the annual rate and the vendor does not publish the month-to-month one — a saving cannot be expressed against a price nobody publishes.",
           "source": {
             "url": "https://wistia.com/pricing",
             "accessedAt": "2026-09-03"
@@ -532,7 +532,7 @@
           "billingModel": "flat",
           "notes": "$39/month billed annually. Month-to-month rate not published (3-month minimum required). 500 GB storage, 2.4 TB/year bandwidth. Live streaming, 1080p HD, unlimited concurrent viewers, 3 live transcoding channels. Overage: $0.30/GB data, $0.15/GB storage.",
           "source": {
-            "url": "https://www.dacast.com/pricing/",
+            "url": "https://www.dacast.com/live-streaming-pricing-plans/",
             "accessedAt": "2026-09-03"
           }
         },
@@ -547,7 +547,7 @@
           "billingModel": "flat",
           "notes": "$63/month billed annually. Month-to-month rate not published. 250 GB storage, 6 TB upfront bandwidth. Adds live stream monitoring, China Live, Multi-CDN, paywall, advertising. Overage: $0.30/GB data, $0.15/GB storage.",
           "source": {
-            "url": "https://www.dacast.com/pricing/",
+            "url": "https://www.dacast.com/live-streaming-pricing-plans/",
             "accessedAt": "2026-09-03"
           }
         },
@@ -562,7 +562,7 @@
           "billingModel": "flat",
           "notes": "$165/month billed annually. Month-to-month rate not published. 2,000 GB storage, 24 TB/year bandwidth. Unlimited channels, DRM for VOD, 3 team members, phone support. Overage: $0.30/GB data, $0.15/GB storage. Additional team seats at $10/mo each.",
           "source": {
-            "url": "https://www.dacast.com/pricing/",
+            "url": "https://www.dacast.com/live-streaming-pricing-plans/",
             "accessedAt": "2026-09-03"
           }
         },
@@ -577,7 +577,7 @@
           "billingModel": "custom",
           "notes": "Contact sales. High-volume enterprise. M3u8 links, custom SLAs, migrations/integrations, 5 team members.",
           "source": {
-            "url": "https://www.dacast.com/pricing/",
+            "url": "https://www.dacast.com/live-streaming-pricing-plans/",
             "accessedAt": "2026-06-14"
           }
         }
@@ -628,7 +628,7 @@
             "accessedAt": "2026-06-15"
           },
           {
-            "url": "https://www.dacast.com/pricing/",
+            "url": "https://www.dacast.com/live-streaming-pricing-plans/",
             "accessedAt": "2026-06-15"
           },
           {
@@ -674,14 +674,14 @@
         },
         {
           "name": "Starter",
-          "monthlyUsd": 59,
+          "monthlyUsd": 89,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
-          "annualDiscountPct": 30,
+          "annualDiscountPct": 34,
           "billingModel": "per_seat",
-          "notes": "$59/user/month (month-to-month). Annual billing saves 30% per official page; exact annual per-user rate not published in available sources. Unlimited video recording, full and team analytics, branded sharing page, password-protected videos, 2 data integrations. 14-day free trial.",
+          "notes": "Month-to-month $89/user/mo; $59/user/mo billed annually (~34% less). The card also carries a 'Now 10% off' banner, so the $59 may include a promotion rather than being the standing annual rate. Unlimited video recording, full and team analytics, branded sharing page, password-protected videos, 2 data integrations. 14-day free trial.",
           "source": {
             "url": "https://www.getapp.com/content-management-software/a/vidyard/",
             "accessedAt": "2026-09-03"

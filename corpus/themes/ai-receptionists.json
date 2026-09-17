@@ -1023,7 +1023,7 @@
           "annualDiscountPct": 20,
           "billingModel": "per_call",
           "source": {
-            "url": "https://www.getaira.io/pricing",
+            "url": "https://www.getaira.io/agents/receptionist/pricing",
             "accessedAt": "2026-09-02"
           }
         },
@@ -1037,7 +1037,7 @@
           "annualDiscountPct": 20,
           "billingModel": "per_call",
           "source": {
-            "url": "https://www.getaira.io/pricing",
+            "url": "https://www.getaira.io/agents/receptionist/pricing",
             "accessedAt": "2026-09-02"
           }
         },
@@ -1051,7 +1051,7 @@
           "annualDiscountPct": 20,
           "billingModel": "per_call",
           "source": {
-            "url": "https://www.getaira.io/pricing",
+            "url": "https://www.getaira.io/agents/receptionist/pricing",
             "accessedAt": "2026-09-02"
           }
         },
@@ -1065,7 +1065,7 @@
           "annualDiscountPct": 20,
           "billingModel": "per_call",
           "source": {
-            "url": "https://www.getaira.io/pricing",
+            "url": "https://www.getaira.io/agents/receptionist/pricing",
             "accessedAt": "2026-09-02"
           }
         }
@@ -1118,7 +1118,7 @@
       ],
       "bilingual": null,
       "demoPhone": null,
-      "provenance": "Only the entry tier ($97/100 calls) is explicitly published on simplephones.ai/pricing; higher tiers/overage not published, so only Starter recorded. HIPAA/BAA and Spanish not published. Re-verified 2026-09-02 against the live pricing page; all published figures unchanged."
+      "provenance": "Only the entry tier ($97/100 calls) is explicitly published on simplephones.ai/pricing; higher tiers/overage not published, so only Starter recorded. HIPAA/BAA and Spanish not published. Re-verified 2026-09-02 against the live pricing page; all published figures unchanged. The page this record cites as its source (https://www.simplephones.ai/pricing) is gone: on 2026-09-11 it answered 200 and redirected to https://www.simplephones.ai/, both from a residential connection and from a datacenter on another continent — so the page is gone rather than withheld from one asker. Nothing else in this record can stand in for it, so re-sourcing needs a live page read; the figure stands as last read."
     },
     {
       "slug": "ruby",
@@ -1439,7 +1439,8 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "per_minute",
-          "notes": "$22.95 per user per month, billed monthly — no annual term is published anywhere on the page, so there is no saving to record. Includes unlimited US calling, desktop and mobile softphones, voicemail transcription, CRM-smart routing and the Sage AI voice agent. NO bundled Sage minutes at all: minutesIncluded is 0 because the page says so outright. The first 30 seconds of EVERY call are free and billing is by the second with no rounding. That waiver cannot be expressed in this schema — the only value of minutesIncluded that reproduces it is half a minute times the number of calls, which is a function of the reader's own volume input rather than a stored constant — so the modeled cost here IGNORES it and overstates by exactly $0.195 per call. The error is bounded and always in the buyer's favour, but it is largest on short calls: about +33% at a two-minute average, +100% at one minute. A second meter runs alongside: AI Transcription at $0.0198/min of live and recorded calls, on every plan, also billed by the second. Voicemail transcription is free. The page does not say whether a Sage-answered call also incurs that transcription charge, so the overlap is left unstated here rather than assumed either way. PRICED PER USER SEAT, which nothing else in this index is — every other vendor here prices per business. A five-person office pays five times this figure, so the headline number is not comparable with the others without that multiplication, and Sage is one included feature of a cloud phone system rather than a receptionist subscription sold on its own.",
+          "unmodelable": "The first 30 seconds of every call are free, so the true bill depends on call count as well as minutes, and minutesIncluded is one stored constant that cannot carry half a minute per call. A modeled figure here overstates by $0.195 per call — a third at a two-minute average, double at one minute — so the cell is left empty. Requested by the publisher, 2026-09-11.",
+          "notes": "$22.95 per user per month, billed monthly — no annual term is published anywhere on the page, so there is no saving to record. Includes unlimited US calling, desktop and mobile softphones, voicemail transcription, CRM-smart routing and the Sage AI voice agent. NO bundled Sage minutes at all: minutesIncluded is 0 because the page says so outright. The first 30 seconds of EVERY call are free and billing is by the second with no rounding. That waiver cannot be expressed in this schema — the only value of minutesIncluded that reproduces it is half a minute times the number of calls, which is a function of the reader's own volume input rather than a stored constant — so THIS PLAN IS WITHHELD FROM THE COST MODEL (see unmodelable) instead of being modeled wrong. Modeling it overstated by exactly $0.195 per call: about +33% at a two-minute average and +100% at one minute, always against the vendor. The published rate stays recorded at $0.39 because that is what the page says; it is the derived figure that is withheld, not the source one. A second meter runs alongside: AI Transcription at $0.0198/min of live and recorded calls, on every plan, also billed by the second. Voicemail transcription is free. The page bills the two as separate meters — “Sage and AI Transcription come with every plan and are metered only as you use them” — and CallSprout's founder confirmed in writing on 2026-09-11 that Sage minutes do not include call transcription by default. Recorded as the publisher's statement, not as a figure read from the page. PRICED PER USER SEAT, which nothing else in this index is — every other vendor here prices per business. A five-person office pays five times this figure, so the headline number is not comparable with the others without that multiplication, and Sage is one included feature of a cloud phone system rather than a receptionist subscription sold on its own.",
           "source": {
             "url": "https://callsprout.com/pricing",
             "accessedAt": "2026-09-09"
@@ -1458,7 +1459,8 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "per_minute",
-          "notes": "$39.95 per user per month, billed monthly. Everything in Business plus call queues with hold and position, skills-based routing across agents, supervisor monitor/whisper/barge, live wallboards and queue analytics, advanced reporting, and Sage overflow and after-hours answering. Same Sage rate and the same absence of bundled minutes as Business. The first 30 seconds of EVERY call are free and billing is by the second with no rounding. That waiver cannot be expressed in this schema — the only value of minutesIncluded that reproduces it is half a minute times the number of calls, which is a function of the reader's own volume input rather than a stored constant — so the modeled cost here IGNORES it and overstates by exactly $0.195 per call. The error is bounded and always in the buyer's favour, but it is largest on short calls: about +33% at a two-minute average, +100% at one minute. A second meter runs alongside: AI Transcription at $0.0198/min of live and recorded calls, on every plan, also billed by the second. Voicemail transcription is free. The page does not say whether a Sage-answered call also incurs that transcription charge, so the overlap is left unstated here rather than assumed either way. PRICED PER USER SEAT, which nothing else in this index is — every other vendor here prices per business. A five-person office pays five times this figure, so the headline number is not comparable with the others without that multiplication, and Sage is one included feature of a cloud phone system rather than a receptionist subscription sold on its own.",
+          "unmodelable": "The first 30 seconds of every call are free, so the true bill depends on call count as well as minutes, and minutesIncluded is one stored constant that cannot carry half a minute per call. A modeled figure here overstates by $0.195 per call — a third at a two-minute average, double at one minute — so the cell is left empty. Requested by the publisher, 2026-09-11.",
+          "notes": "$39.95 per user per month, billed monthly. Everything in Business plus call queues with hold and position, skills-based routing across agents, supervisor monitor/whisper/barge, live wallboards and queue analytics, advanced reporting, and Sage overflow and after-hours answering. Same Sage rate and the same absence of bundled minutes as Business. The first 30 seconds of EVERY call are free and billing is by the second with no rounding. That waiver cannot be expressed in this schema — the only value of minutesIncluded that reproduces it is half a minute times the number of calls, which is a function of the reader's own volume input rather than a stored constant — so THIS PLAN IS WITHHELD FROM THE COST MODEL (see unmodelable) instead of being modeled wrong. Modeling it overstated by exactly $0.195 per call: about +33% at a two-minute average and +100% at one minute, always against the vendor. The published rate stays recorded at $0.39 because that is what the page says; it is the derived figure that is withheld, not the source one. A second meter runs alongside: AI Transcription at $0.0198/min of live and recorded calls, on every plan, also billed by the second. Voicemail transcription is free. The page bills the two as separate meters — “Sage and AI Transcription come with every plan and are metered only as you use them” — and CallSprout's founder confirmed in writing on 2026-09-11 that Sage minutes do not include call transcription by default. Recorded as the publisher's statement, not as a figure read from the page. PRICED PER USER SEAT, which nothing else in this index is — every other vendor here prices per business. A five-person office pays five times this figure, so the headline number is not comparable with the others without that multiplication, and Sage is one included feature of a cloud phone system rather than a receptionist subscription sold on its own.",
           "source": {
             "url": "https://callsprout.com/pricing",
             "accessedAt": "2026-09-09"

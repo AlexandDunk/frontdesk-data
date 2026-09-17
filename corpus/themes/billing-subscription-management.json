@@ -1,7 +1,7 @@
 {
   "vertical": "billing-subscription-management",
   "generatedAt": "2026-06-14",
-  "methodologyNotes": "Prices fetched directly from each vendor's official pricing page via WebFetch on 2026-06-14. Stripe Billing pricing page geo-routes to localized (EUR/GBP/AUD) pages regardless of locale parameter; USD prices are not published at stripe.com/billing/pricing — only the 0.7% pay-as-you-go rate is currency-agnostic. The monthly subscription tiers (€500–€4,900/month) are EUR-only; those plans are recorded as null monthlyUsd with notes. Chargebee Performance plan is $7,188/year (annual commitment, billed monthly = $599/mo equivalent); confirmed via official site and SoftwareAdvice corroboration. Maxio Grow plan lists at $599 but sources disagree on frequency (official site renders /month; GetApp and Capterra list /year) — recorded as null monthlyUsd with a note rather than asserting a contested figure. Billsby Core=$45/month and Pro=$135/month confirmed via official site; GetApp discrepancy ($35) treated as stale. Zuora pricing is fully quote-only with no published tiers. HIPAA/BAA status set to null where not explicitly stated on security pages.",
+  "methodologyNotes": "Prices fetched directly from each vendor's official pricing page on 2026-06-14. Stripe Billing pricing page geo-routes to localized (EUR/GBP/AUD) pages regardless of locale parameter; USD prices are not published at stripe.com/billing/pricing — only the 0.7% pay-as-you-go rate is currency-agnostic. The monthly subscription tiers (€500–€4,900/month) are EUR-only; those plans are recorded as null monthlyUsd with notes. Chargebee Performance plan is $7,188/year (annual commitment, billed monthly = $599/mo equivalent); confirmed via official site and SoftwareAdvice corroboration. Maxio Grow plan lists at $599 but sources disagree on frequency (official site renders /month; GetApp and Capterra list /year) — recorded as null monthlyUsd with a note rather than asserting a contested figure. Billsby Core=$45/month and Pro=$135/month confirmed via official site; GetApp discrepancy ($35) treated as stale. Zuora pricing is fully quote-only with no published tiers. HIPAA/BAA status set to null where not explicitly stated on security pages.",
   "vendors": [
     {
       "slug": "chargebee",
@@ -327,7 +327,7 @@
             "accessedAt": "2026-09-02"
           },
           "corroboration": {
-            "url": "https://stripe.com/en-gb/billing/pricing",
+            "url": "https://stripe.com/gb/billing/pricing",
             "accessedAt": "2026-06-14"
           }
         },
@@ -346,7 +346,7 @@
             "accessedAt": "2026-09-02"
           },
           "corroboration": {
-            "url": "https://stripe.com/en-au/billing/pricing",
+            "url": "https://stripe.com/au/billing/pricing",
             "accessedAt": "2026-06-14"
           }
         },
@@ -821,7 +821,7 @@
         "Stripe",
         "PayPal"
       ],
-      "provenance": "Official pricing page https://www.billsby.com/pricing fetched 2026-06-14. Core=$45/month and Pro=$135/month confirmed. GetApp listed $35 for Core — treated as stale; official site is authoritative. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
+      "provenance": "Official pricing page https://www.billsby.com/pricing fetched 2026-06-14. Core=$45/month and Pro=$135/month confirmed. GetApp listed $35 for Core — treated as stale; official site is authoritative. Re-verified 2026-09-02 against the live pricing page; published figures unchanged. The page this record cites as its source (https://www.billsby.com/pricing) is gone: on 2026-09-11 it returned 404, both from a residential connection and from a datacenter on another continent — so the page is gone rather than withheld from one asker. Nothing else in this record can stand in for it, so re-sourcing needs a live page read; the figure stands as last read.",
       "plans": [
         {
           "name": "Free",
@@ -832,7 +832,7 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "flat",
-          "notes": "Unlimited setup and testing before going live. Unlimited users.",
+          "notes": "Unlimited setup and testing before going live. Unlimited users. The page this plan cites returned 404 when re-checked on 2026-09-10 from two vantages — a datacenter connection and a residential one, so bot-blocking is not being mistaken for a dead page. The figure stands as last read; re-sourcing it needs a live page, not a rule.",
           "source": {
             "url": "https://www.billsby.com/pricing",
             "accessedAt": "2026-06-14"
@@ -847,7 +847,7 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "flat",
-          "notes": "$45/month billed monthly, plus 0.4% on revenue exceeding $15,000/month. Up to 5 users. Includes metered billing, pro-rated options, custom fields, automated dunning, QuickBooks integration.",
+          "notes": "$45/month billed monthly, plus 0.4% on revenue exceeding $15,000/month. Up to 5 users. Includes metered billing, pro-rated options, custom fields, automated dunning, QuickBooks integration. The page this plan cites returned 404 when re-checked on 2026-09-10 from two vantages — a datacenter connection and a residential one, so bot-blocking is not being mistaken for a dead page. The figure stands as last read; re-sourcing it needs a live page, not a rule.",
           "source": {
             "url": "https://www.billsby.com/pricing",
             "accessedAt": "2026-06-14"
@@ -862,7 +862,7 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "flat",
-          "notes": "$135/month billed monthly, plus 0.5% on revenue exceeding $30,000/month. Up to 25 users. Adds multiple payment gateways, ACH, multiple tax regions, FreeAgent/TaxJar integrations, advanced reporting, multi-language, full API access.",
+          "notes": "$135/month billed monthly, plus 0.5% on revenue exceeding $30,000/month. Up to 25 users. Adds multiple payment gateways, ACH, multiple tax regions, FreeAgent/TaxJar integrations, advanced reporting, multi-language, full API access. The page this plan cites returned 404 when re-checked on 2026-09-10 from two vantages — a datacenter connection and a residential one, so bot-blocking is not being mistaken for a dead page. The figure stands as last read; re-sourcing it needs a live page, not a rule.",
           "source": {
             "url": "https://www.billsby.com/pricing",
             "accessedAt": "2026-06-14"
@@ -877,7 +877,7 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "custom",
-          "notes": "Quote-only. Unlimited users. Bespoke solution.",
+          "notes": "Quote-only. Unlimited users. Bespoke solution. The page this plan cites returned 404 when re-checked on 2026-09-10 from two vantages — a datacenter connection and a residential one, so bot-blocking is not being mistaken for a dead page. The figure stands as last read; re-sourcing it needs a live page, not a rule.",
           "source": {
             "url": "https://www.billsby.com/pricing",
             "accessedAt": "2026-09-02"
@@ -976,7 +976,7 @@
           "billingModel": "flat",
           "notes": "$50/month billed monthly; $39/month billed annually (22% discount). Up to 3 users. Quote and invoice creation, multi-currency, custom templates, tax reporting, progress invoicing, self-service customer portal.",
           "source": {
-            "url": "https://www.zoho.com/us/subscriptions/pricing.html",
+            "url": "https://www.zoho.com/us/billing/pricing/",
             "accessedAt": "2026-09-02"
           }
         },
@@ -991,7 +991,7 @@
           "billingModel": "flat",
           "notes": "$100/month billed monthly; $79/month billed annually (21% discount). Up to 10 users. Adds subscription billing, hosted payment pages, usage-based pricing automation, proration, dunning management, advanced analytics. Excludes local taxes.",
           "source": {
-            "url": "https://www.zoho.com/us/subscriptions/pricing.html",
+            "url": "https://www.zoho.com/us/billing/pricing/",
             "accessedAt": "2026-09-02"
           }
         },
@@ -1006,7 +1006,7 @@
           "billingModel": "custom",
           "notes": "Quote-only. High-volume transactions, advanced usage-based billing, revenue recognition, forecasting, priority support.",
           "source": {
-            "url": "https://www.zoho.com/us/subscriptions/pricing.html",
+            "url": "https://www.zoho.com/us/billing/pricing/",
             "accessedAt": "2026-09-02"
           }
         }
@@ -1059,7 +1059,7 @@
             "accessedAt": "2026-06-15"
           },
           {
-            "url": "https://www.zoho.com/us/subscriptions/pricing.html",
+            "url": "https://www.zoho.com/us/billing/pricing/",
             "accessedAt": "2026-06-15"
           }
         ],

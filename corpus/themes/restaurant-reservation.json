@@ -1,0 +1,1161 @@
+{
+  "vertical": "restaurant-reservation",
+  "generatedAt": "2026-09-10",
+  "methodologyNotes": "Every figure below was re-fetched on 2026-09-10 and monthlyUsd holds only the published MONTH-TO-MONTH subscription. Two pages default their toggle to annual billing and were explicitly corrected for: Eat App's page opens on the annual column ($0/$69/$159/$299) and Yelp's opens on 'Annually' ($129/$279) — the month-to-month figures ($0/$99/$199/$389 and $159/$349) are what monthlyUsd carries, with the annual rates quoted in notes. resOS's monthly toggle is labelled '-50% for 3 months', so its displayed $24/$49/$75 are promotional; monthlyUsd carries the list prices $47/$98/$149 read from the page's own embedded per-currency data (monthlyOriginal), with the promo disclosed in notes. Fees that ride alongside a subscription are never folded into monthlyUsd: Resy's 3%/2% prepayment fees, Tablein's EUR0.67/EUR0.37 per extra reservation, Zenchef's 2-6% card fees, Eat App's $2/cover Booking-network add-on and SpotOn's $250 one-time setup (setupFeeUsd, not monthly) all stay in notes and their own fields. Zenchef prices in EUR only, so monthlyUsd is null on all three tiers with the euro figures verbatim in notes; its annual prices are exactly 12x monthly, so annualDiscountPct is 0, not a discount. Quote-only vendors carry null: SevenRooms (all three tiers 'Get a quote'), TableCheck (no pricing page at all), Toast Tables ('a flat monthly price' with no figure), and Eat App Enterprise. OpenTable and Tock carry null because their own pages could not be rendered today — curl returned HTTP 000 for every opentable.com host and path, and exploretock.com/join/pricing/ returned HTTP 403 to both a direct read and curl. No figure is recited from memory for either. Compliance is asserted only where the vendor states it: SevenRooms SOC 2 + GDPR (+PCI DSS, CCPA) from its trust portal, TableCheck SOC 2 Type 1 from its own press release. TableCheck's GDPR flag was demoted to null because neither its press release nor its privacy policy names GDPR, and its PCI-DSS claim was removed for the same reason. Formitable and Resengo are not listed separately — they are now Zenchef. No vendor was removed: all twelve are real, current products. accessedAt 2026-09-10 throughout.",
+  "vendors": [
+    {
+      "slug": "opentable",
+      "name": "OpenTable",
+      "domain": "opentable.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "CORRECTED PROVENANCE: on 2026-09-10 we attempted www.opentable.com/restaurant-solutions/plans/ and the /basic/, /core/, /pro/ plan pages, restaurant.opentable.com/products/ and the .co.uk locale, via both a direct read and curl with desktop user agents. Every opentable.com request returned HTTP 000 (refused/timed out at the connection layer); restaurant.opentable.com/products/ returned a 301 that led nowhere retrievable. The draft claimed the Basic/Core/Pro names were 'confirmed from OpenTable's own live plan-page titles' — that overstates it: nothing rendered. The three plan names are confirmed only from the search index of official opentable.com plan URLs (/plans/basic/, /plans/core/, /plans/pro/), which returned OpenTable's own page titles. No OpenTable-published monthly or per-cover figure is asserted anywhere in this record.",
+      "plans": [
+        {
+          "name": "Basic",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "UNVERIFIED PRICE — OpenTable's plan page could not be rendered on 2026-09-10 (HTTP 000 on every host and path), so no monthly figure and no cover rate is stated here rather than recited. What is structurally established: OpenTable bills a monthly subscription PLUS a per-seated-cover fee, and the cover rate differs by booking channel (marketplace/network covers cost more than covers booked on the restaurant's own website). Third-party corroboration that IS verifiable today, recorded as competitor-published and NOT as OpenTable's rate card: Yelp's live restaurant-pricing comparison table puts the OpenTable column at '$149 - $499/month' with '$1 - $1.50 per network cover'. A buyer should assume any monthly headline understates true cost materially, because the cover fee scales with volume.",
+          "source": {
+            "url": "https://www.opentable.com/restaurant-solutions/plans/basic/",
+            "accessedAt": "2026-09-10"
+          },
+          "corroboration": {
+            "url": "https://business.yelp.com/restaurants/yelp-restaurants-pricing/",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Core",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Mid tier, sold as a monthly subscription plus a per-seated-cover fee on OpenTable-network bookings. UNVERIFIED PRICE: plan page returned HTTP 000 to our fetcher on 2026-09-10; no figure asserted. Plan name confirmed from the official /plans/core/ URL and page title only.",
+          "source": {
+            "url": "https://www.opentable.com/restaurant-solutions/plans/core/",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Top self-serve tier, monthly subscription plus a per-seated-cover fee on network bookings. UNVERIFIED PRICE: plan page returned HTTP 000 on 2026-09-10; no figure asserted. Plan name confirmed from the official /plans/pro/ URL and page title only.",
+          "source": {
+            "url": "https://www.opentable.com/restaurant-solutions/plans/pro/",
+            "accessedAt": "2026-09-10"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": null,
+        "freeTrialDays": null,
+        "keyIntegrations": [],
+        "limits": [
+          "Pricing is a monthly subscription plus a per-seated-cover fee — the headline monthly number is not the real cost for a busy room",
+          "Cover fees vary by booking channel (OpenTable marketplace vs the restaurant's own website)",
+          "Every official pricing page was unreachable from our fetcher on 2026-09-10 (HTTP 000 on all opentable.com hosts), so no figure is published in this record",
+          "The only cover rate verifiable today comes from a competitor's comparison page ($1-$1.50 per network cover, per Yelp), not from OpenTable"
+        ],
+        "keyFeatures": [
+          "Largest diner-demand marketplace of any reservation platform in the US",
+          "Per-cover billing tied to seated diners rather than flat software pricing",
+          "Tiered plans (Basic/Core/Pro) that trade a higher subscription for lower cover fees"
+        ],
+        "bestFor": [
+          "Restaurants that want inbound diner demand from a marketplace and will pay per cover for it",
+          "Operators comparing marketplace economics against flat-fee platforms"
+        ],
+        "sources": [
+          {
+            "url": "https://www.opentable.com/restaurant-solutions/plans/",
+            "accessedAt": "2026-09-10"
+          },
+          {
+            "url": "https://www.opentable.com/restaurant-solutions/plans/basic/",
+            "accessedAt": "2026-09-10"
+          },
+          {
+            "url": "https://business.yelp.com/restaurants/yelp-restaurants-pricing/",
+            "accessedAt": "2026-09-10"
+          }
+        ],
+        "provenance": "Listed with null pricing on purpose: OpenTable is the category leader and belongs in the index, but every attempt to fetch its plan pages on 2026-09-10 failed at the connection layer, so we publish no price rather than a remembered one. The draft's claim that plan pages were rendered has been corrected."
+      }
+    },
+    {
+      "slug": "resy",
+      "name": "Resy",
+      "domain": "resy.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Tock"
+      ],
+      "provenance": "Re-fetched resy.com/resyos/plans-and-pricing/ on 2026-09-10: all four plan prices confirmed unchanged at $289/$289/$459/$459, as are the 3% (Essential) and 2% (Premium) prepayment fees and the verbatim statement 'Resy pricing is transparent with no per-cover fees. We do not charge any fees on a per reservation basis.' The $249/$399/$899 figures that third-party pricing blogs repeat remain refuted. No annual toggle and no free trial appear anywhere on the page.",
+      "plans": [
+        {
+          "name": "Platform",
+          "monthlyUsd": 289,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Published verbatim as \"$289/month\". Flat fee with no per-cover and no per-reservation charge — the page states explicitly 'we do not charge any fees on a per reservation basis', so a full Saturday costs the same as a dead Tuesday. Includes reservation management, table management, walk-in waitlist, credit-card holds, deposits and prepayments, and chat/email support. No annual-billing discount is advertised and no free trial is offered.",
+          "source": {
+            "url": "https://resy.com/resyos/plans-and-pricing/",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Essential (Powered by Tock)",
+          "monthlyUsd": 289,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Published verbatim as \"$289/month\", labelled \"Powered by Tock\". Adds event ticketing to the core reservation/table/waitlist set. CAVEAT a buyer gets caught by: this plan carries a \"3% fee on prepayments\", so ticketed and prepaid covers cost 3% of the prepaid amount on top of the subscription. That percentage is deliberately not folded into monthlyUsd.",
+          "source": {
+            "url": "https://resy.com/resyos/plans-and-pricing/",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Platform 360",
+          "monthlyUsd": 459,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Published verbatim as \"$459/month\". Everything in Platform plus an advanced analytics dashboard for guest insights, full floor-plan management and booking APIs. Still no per-cover fee and no prepayment percentage listed on this tier.",
+          "source": {
+            "url": "https://resy.com/resyos/plans-and-pricing/",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Premium (Powered by Tock)",
+          "monthlyUsd": 459,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Published verbatim as \"$459/month\", labelled \"Powered by Tock\". Adds POS integrations, premium support and experience/ticketing tools, and cuts the prepayment fee to a \"2% fee on prepayments\" (vs 3% on Essential). The prepayment percentage, not the subscription, is the variable cost to model.",
+          "source": {
+            "url": "https://resy.com/resyos/plans-and-pricing/",
+            "accessedAt": "2026-09-10"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Tock"
+        ],
+        "limits": [
+          "No free plan and no free trial advertised on the pricing page",
+          "Tock-powered tiers charge 3% (Essential) or 2% (Premium) on prepayments",
+          "No annual-billing option or discount is published — the month-to-month price is the only price",
+          "Pricing page names POS integrations and booking APIs only on the higher tiers, without naming specific POS vendors"
+        ],
+        "keyFeatures": [
+          "Flat monthly pricing with an explicit no-per-cover, no-per-reservation statement",
+          "Credit-card holds, deposits and prepayments on every tier as no-show defence",
+          "Tock-powered tiers add event ticketing, with the prepayment fee halved at the top end"
+        ],
+        "bestFor": [
+          "High-volume restaurants punished by per-cover pricing elsewhere",
+          "Rooms selling ticketed dinners, tasting menus or prepaid events"
+        ],
+        "sources": [
+          {
+            "url": "https://resy.com/resyos/plans-and-pricing/",
+            "accessedAt": "2026-09-10"
+          }
+        ],
+        "provenance": "All four prices and both prepayment percentages re-read directly from Resy's official plans-and-pricing page on 2026-09-10; unchanged from the draft."
+      }
+    },
+    {
+      "slug": "sevenrooms",
+      "name": "SevenRooms",
+      "domain": "sevenrooms.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "DoorDash",
+        "Deliveroo"
+      ],
+      "provenance": "Re-fetched sevenrooms.com/pricing/ on 2026-09-10: three named tiers (Starter, Growth, Premium), 'Get a quote' on every one, and no dollar figure anywhere in the page — confirmed. Compliance re-checked on SevenRooms' own trust portal, which lists SOC 2, GDPR, PCI DSS and CCPA (HIPAA and ISO 27001 are not listed, so hipaa stays null). We publish no dollar estimate even though third-party sites quote $300-$1,000 per location.",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only — the page offers 'Get a quote' with no published price. Billed as 'Essential Operations': CRM, branded reservations, waitlist, table management, reputation management and basic marketing automations, plus \"Access to +50 mil DoorDash & Deliveroo Reservation Marketplace Users with No Cover Fees\". The no-cover-fee marketplace claim is the commercial hook versus OpenTable.",
+          "source": {
+            "url": "https://sevenrooms.com/pricing/",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Growth",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only; mid tier, no price published on the pricing page. Feature detail for this tier is not enumerated in the fetched page, so none is invented here.",
+          "source": {
+            "url": "https://sevenrooms.com/pricing/",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Premium",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only top tier, no price published. Add-ons are sold separately from every tier — Email Marketing, Event Management, Voice AI, WhatsApp/Text Marketing, API & Integrations and Group Portal — so whatever subscription a buyer is quoted is a floor, not the total.",
+          "source": {
+            "url": "https://sevenrooms.com/pricing/",
+            "accessedAt": "2026-09-10"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": true,
+          "source": {
+            "url": "https://trust.sevenrooms.com/",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "DoorDash",
+          "Deliveroo"
+        ],
+        "limits": [
+          "No price published anywhere on the pricing page — every tier is 'Get a quote'",
+          "Email Marketing, Event Management, Voice AI, WhatsApp/Text Marketing, API & Integrations and Group Portal are paid add-ons on top of the tier",
+          "No free plan or free trial mentioned",
+          "The trust portal lists SOC 2 without stating Type I or Type II, so the attestation depth is unknown"
+        ],
+        "keyFeatures": [
+          "Guest CRM and marketing automation built into the reservation system rather than bolted on",
+          "DoorDash and Deliveroo reservation-marketplace demand with no cover fees",
+          "Voice AI and WhatsApp/text marketing available as first-party add-ons",
+          "Trust portal lists SOC 2, GDPR, PCI DSS and CCPA"
+        ],
+        "bestFor": [
+          "Hotel groups and multi-venue operators that need one guest database across venues",
+          "Restaurants that want CRM-driven marketing, not just a booking book"
+        ],
+        "sources": [
+          {
+            "url": "https://sevenrooms.com/pricing/",
+            "accessedAt": "2026-09-10"
+          },
+          {
+            "url": "https://trust.sevenrooms.com/",
+            "accessedAt": "2026-09-10"
+          }
+        ],
+        "provenance": "Tier names and the no-cover-fee marketplace wording from the fetched official pricing page; SOC 2, GDPR, PCI DSS and CCPA from SevenRooms' own trust portal on 2026-09-10. No dollar figure is published because the vendor publishes none."
+      }
+    },
+    {
+      "slug": "tock",
+      "name": "Tock",
+      "domain": "exploretock.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Resy"
+      ],
+      "provenance": "Re-tested on 2026-09-10: exploretock.com/join/pricing/ returned HTTP 403 to an automated read and to curl with a desktop user agent (bot challenge), so no Tock-published figure is recited. The only official price points readable today are on Resy's live plans page, which sells two 'Powered by Tock' plans at $289/month and $459/month — recorded as corroboration, not as Tock's own rate card.",
+      "plans": [
+        {
+          "name": "Reservations (pricing not publicly retrievable)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Tock's own pricing page returned HTTP 403 to every fetch attempt on 2026-09-10, so no monthly figure is asserted. What is verifiable today: Resy's official plans page sells two Tock-powered tiers, \"Essential\" at \"$289/month\" with a \"3% fee on prepayments\" and \"Premium\" at \"$459/month\" with a \"2% fee on prepayments\". Tock's commercial model centres on prepaid and ticketed reservations, so the prepayment percentage is the fee a buyer must model alongside any subscription.",
+          "source": {
+            "url": "https://www.exploretock.com/join/pricing/",
+            "accessedAt": "2026-09-10"
+          },
+          "corroboration": {
+            "url": "https://resy.com/resyos/plans-and-pricing/",
+            "accessedAt": "2026-09-10"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": null,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Resy"
+        ],
+        "limits": [
+          "Official pricing page blocks automated retrieval (HTTP 403 on 2026-09-10), so no self-published price could be verified",
+          "Prepayment/ticketing percentage fees apply on the Tock-powered tiers sold through Resy (3% on Essential, 2% on Premium)",
+          "No tier list of Tock's own is retrievable — the plan structure recorded here is the one Resy publishes"
+        ],
+        "keyFeatures": [
+          "Prepaid and ticketed reservations as the core model rather than an add-on",
+          "Sold alongside Resy, whose official page lists Tock-powered Essential and Premium tiers",
+          "Suits tasting menus, pop-ups and deposit-backed bookings"
+        ],
+        "bestFor": [
+          "Tasting-menu and event-driven restaurants that take money upfront",
+          "Wineries, pop-ups and chef-driven rooms using ticketing to kill no-shows"
+        ],
+        "sources": [
+          {
+            "url": "https://www.exploretock.com/join/pricing/",
+            "accessedAt": "2026-09-10"
+          },
+          {
+            "url": "https://resy.com/resyos/plans-and-pricing/",
+            "accessedAt": "2026-09-10"
+          }
+        ],
+        "provenance": "Listed with null pricing: Tock is a real current vendor but its pricing page refused every fetch on 2026-09-10, so the only official figures recorded are the Tock-powered plan prices published on Resy's page."
+      }
+    },
+    {
+      "slug": "eat-app",
+      "name": "Eat App",
+      "domain": "eatapp.co",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "WhatsApp"
+      ],
+      "provenance": "Re-fetched restaurant.eatapp.co/pricing on 2026-09-10. IMPORTANT: the page's toggle DEFAULTS TO ANNUAL with a '30% off' banner, showing $0/$69/$159/$299 — monthlyUsd carries the month-to-month column ($0/$99/$199/$389) instead, and the annual rates sit in notes. The draft's arithmetic correction stands: the 30% banner only holds on Starter. New correction applied on re-verification: the add-on list includes a 'Booking network' add-on charged at $2/cover and paid integrations up to $80/month, so the draft's 'no per-cover charge' framing and its '$15-$59/month' add-on ceiling were both too generous and have been qualified.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Published as \"$0/mo\" on both the monthly and annual views. A genuine forever-free tier capped at \"Up to 100 covers /month\" — a hard cover cap, not a trial. Includes real-time floor plan, booking widget, chat inbox and custom forms; WhatsApp is excluded. Past 100 covers you must upgrade.",
+          "source": {
+            "url": "https://restaurant.eatapp.co/pricing",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Starter",
+          "monthlyUsd": 99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 30,
+          "billingModel": "flat",
+          "notes": "Month-to-month \"$99/mo\" (the page opens on the annual view, where it reads \"$69/mo\"); the annual saving is stated as $250/year, a ~30% cut that matches the page's headline discount claim. Capped at \"Up to 300 covers /month\" and includes \"100 WhatsApp conversations /month\", marketing suite, QR waitlist and email marketing. No per-cover fee in the subscription itself — the cover cap is the constraint.",
+          "source": {
+            "url": "https://restaurant.eatapp.co/pricing",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Essential",
+          "monthlyUsd": 199,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Month-to-month \"$199/mo\"; annual billing \"$159/mo\" with a published saving of $480/year. Marked 'Recommended'. Unlimited covers, loyalty suite, reports, guest surveys and \"250 WhatsApp conversations /month\". CAVEAT: the banner advertises annual billing as 30% off, but $199 to $159 is about 20% — annualDiscountPct is left null rather than repeat the banner.",
+          "source": {
+            "url": "https://restaurant.eatapp.co/pricing",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 389,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Month-to-month \"$389/mo\"; annual billing \"$299/mo\" with a published saving of $1,080/year. Unlimited covers, advanced analytics, full guest CRM, all add-ons included, dedicated success manager, \"500 WhatsApp conversations /month\" and \"500 WhatsApp marketing msgs /month\". The banner's 30% claim is nearer 23% on this tier, so no percentage is recorded.",
+          "source": {
+            "url": "https://restaurant.eatapp.co/pricing",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only — the page publishes no figure and asks you to \"Speak with our sales team to develop a tailored strategy\". Adds personalised training, a dedicated success manager, quarterly business reviews, an enterprise-wide admin panel, centralised guest data, call-centre tools, enterprise security and PCI-compliant payments.",
+          "source": {
+            "url": "https://restaurant.eatapp.co/pricing",
+            "accessedAt": "2026-09-10"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "WhatsApp"
+        ],
+        "limits": [
+          "Free tier hard-capped at 100 covers/month; Starter at 300 covers/month",
+          "WhatsApp conversations are metered per tier (100 / 250 / 500 per month) and WhatsApp is unavailable on Free",
+          "A per-cover fee DOES exist as an option: the 'Booking network' add-on is charged at $2/cover, so the flat-pricing story only holds if you skip it",
+          "Add-ons are priced $15-$59/month (review management $15, customizable widget $19, online waitlist $19, CRM & smart reports $39, custom messaging $39, email marketing $49, automation suite $59); paid integrations run $19-$80/month (hotel billing $80, POS guest spend $59, caller ID $25, online deposits $19); the chit printer is a one-time $179 purchase; WhatsApp bundles start at $100",
+          "The page opens on annual pricing with a '30% off' banner, but the 30% figure only matches the arithmetic on the Starter tier (Essential ~20%, Pro ~23%)"
+        ],
+        "keyFeatures": [
+          "Genuine forever-free tier with a real-time floor plan and booking widget",
+          "Subscriptions are flat with cover caps rather than per-cover billing (the marketplace add-on is the one exception)",
+          "WhatsApp conversations and WhatsApp marketing built into the tiers",
+          "Loyalty suite and full guest CRM on the upper tiers"
+        ],
+        "bestFor": [
+          "Independent restaurants and neighbourhood spots testing a booking system at zero cost",
+          "Operators in WhatsApp-first markets who want guest messaging in the reservation tool"
+        ],
+        "sources": [
+          {
+            "url": "https://restaurant.eatapp.co/pricing",
+            "accessedAt": "2026-09-10"
+          }
+        ],
+        "provenance": "All tier prices (both the default annual column and the month-to-month column), cover caps, WhatsApp allowances, the 14-day no-credit-card trial and the full add-on and integration price list were read from Eat App's official pricing page on 2026-09-10."
+      }
+    },
+    {
+      "slug": "yelp-guest-manager",
+      "name": "Yelp Guest Manager",
+      "domain": "yelp.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Reserve with Google",
+        "Apple Maps",
+        "ChatGPT"
+      ],
+      "provenance": "Re-fetched business.yelp.com/restaurants/yelp-restaurants-pricing/ on 2026-09-10. The Guest Manager toggle DEFAULTS TO 'Annually' ($129/$279); monthlyUsd carries the month-to-month figures ($159/$349) with the annual rates and the page's own 19%/20% savings labels in notes. The review-site figures of $99/$299 remain refuted. Added on re-verification: the page states tables are listed on 'Yelp, Reserve with Google, Apple Maps & ChatGPT', so those are recorded as integrations, and the Yelp Host tier prices and the '$300/month free ad credit*  *Purchase required' asterisk were confirmed verbatim.",
+      "plans": [
+        {
+          "name": "Basic",
+          "monthlyUsd": 159,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 19,
+          "billingModel": "flat",
+          "notes": "Month-to-month \"$159 / month\"; annual billing \"$129 / month\", which the page labels \"(19% savings when billed annually)\". The page opens on the annual view, so $129 is the number a casual reader sees — monthlyUsd holds the month-to-month $159. Includes bookings across popular sites and apps, reservation and waitlist management, and is capped at \"Up to 500 covers per month\". The page states \"No cover fees\" and its own comparison table contrasts that with a competitor column at \"$1 - $1.50 per network cover\".",
+          "source": {
+            "url": "https://business.yelp.com/restaurants/yelp-restaurants-pricing/",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Plus",
+          "monthlyUsd": 349,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "Month-to-month \"$349 / month\"; annual billing \"$279 / month\", labelled \"(20% savings when billed annually)\". Everything in Basic plus advanced front-of-house management, guest profiles and unlimited monthly covers. No cover fees.",
+          "source": {
+            "url": "https://business.yelp.com/restaurants/yelp-restaurants-pricing/",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "\"Custom pricing\", no figure published — positioned as \"a fully integrated ecosystem for multiple locations\". Everything in Plus plus more integrations, API access and a data feed.",
+          "source": {
+            "url": "https://business.yelp.com/restaurants/yelp-restaurants-pricing/",
+            "accessedAt": "2026-09-10"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Reserve with Google",
+          "Apple Maps",
+          "ChatGPT"
+        ],
+        "limits": [
+          "Basic is capped at 500 covers/month — unlimited covers require Plus at $349/month month-to-month",
+          "The pricing page defaults to annual billing, so the visible $129/$279 are annual-commitment rates, not month-to-month",
+          "Yelp Host, the 24/7 AI phone-answering product on the same page, is a separate subscription at $249/month (Basic) or $399/month (Plus), and the page footnotes that \"Yelp Host Basic is subject to call limits and additional fees may apply\"",
+          "The advertised \"$300/month free ad credit\" carries an asterisk: \"Purchase required. See additional terms.\"",
+          "API access and data feed are Enterprise-only"
+        ],
+        "keyFeatures": [
+          "Explicit no-cover-fee flat pricing positioned directly against a competitor's $1-$1.50 per network cover",
+          "Distribution through Yelp's own high-traffic restaurant pages plus Reserve with Google, Apple Maps and ChatGPT",
+          "Optional Yelp Host add-on that answers the phone and books reservations 24/7",
+          "Guest check-in kiosk and POS integration included in the platform comparison"
+        ],
+        "bestFor": [
+          "US restaurants already getting discovery traffic from Yelp",
+          "Operators who want predictable flat software cost instead of per-cover billing"
+        ],
+        "sources": [
+          {
+            "url": "https://business.yelp.com/restaurants/yelp-restaurants-pricing/",
+            "accessedAt": "2026-09-10"
+          }
+        ],
+        "provenance": "Both Guest Manager tiers, their annual rates and the page's own 19%/20% savings labels, the 500-cover cap, the distribution list, the Yelp Host prices and the ad-credit asterisk were all re-read from Yelp's official restaurant pricing page on 2026-09-10."
+      }
+    },
+    {
+      "slug": "zenchef",
+      "name": "Zenchef",
+      "domain": "zenchef.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Google Reserve",
+        "Instagram Reserve",
+        "Meta Reserve"
+      ],
+      "provenance": "Re-fetched zenchef.com/fr/plans (publishes the subscription numbers) and zenchef.com/plans (publishes the per-tier payment-fee table and the zero-commission claim) on 2026-09-10. All three monthly prices and all six add-on prices confirmed. Annual prices are exactly 12x monthly (EUR1,548 / EUR2,028 / EUR2,988), so annualDiscountPct is 0 — annual billing buys no saving. Zenchef publishes no USD rate card, so monthlyUsd stays null on every tier with the euro figure verbatim in notes. Formitable and Resengo are now Zenchef, so they are not listed separately. The page this record cites as its source (https://www.zenchef.com/fr/plans) is gone: on 2026-09-11 it answered 200 and redirected to https://www.zenchef.com/fr/formules, both from a residential connection and from a datacenter on another continent — so the page is gone rather than withheld from one asker. Its second recorded capture of the same figures — zenchef.com — still answers, and the figure stands as last read.",
+      "plans": [
+        {
+          "name": "Reserve",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 0,
+          "billingModel": "flat",
+          "notes": "Published in EUR as \"€129/mois\" (annual \"€1548/an\", exactly 12 x €129 — annual billing carries no discount). monthlyUsd is null because Zenchef publishes no USD price; no conversion is invented. Entry tier: website booking widget, Google Reserve, Zenchef app discovery, 24/7 call assist, reviews, and \"€0 commission per cover\". CAVEAT: payment fees are highest on this tier — credit card 6%, AMEX 6%, Bancontact 4% + €0.5, iDEAL €3.29.",
+          "source": {
+            "url": "https://www.zenchef.com/fr/plans",
+            "accessedAt": "2026-09-10"
+          },
+          "corroboration": {
+            "url": "https://www.zenchef.com/plans",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Manage",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 0,
+          "billingModel": "flat",
+          "notes": "Published in EUR as \"€169/mois\" (annual \"€2028/an\" = 12 x €169, no annual discount). Marked most popular. Adds table management, waitlist, Instagram Reserve and review publishing. Payment fees drop to credit card 4%, AMEX 4%, Bancontact 2% + €0.4, iDEAL €1.29. No cover commission.",
+          "source": {
+            "url": "https://www.zenchef.com/fr/plans",
+            "accessedAt": "2026-09-10"
+          },
+          "corroboration": {
+            "url": "https://www.zenchef.com/plans",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Grow",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 0,
+          "billingModel": "flat",
+          "notes": "Published in EUR as \"€249/mois\" (annual \"€2988/an\" = 12 x €249, no annual discount). For groups and fine dining: email campaigns, multi-venue management, deeper guest tools, and the lowest card fees — credit card 2%, AMEX 3.5%, Bancontact 1% + €0.2, iDEAL €0.29.",
+          "source": {
+            "url": "https://www.zenchef.com/fr/plans",
+            "accessedAt": "2026-09-10"
+          },
+          "corroboration": {
+            "url": "https://www.zenchef.com/plans",
+            "accessedAt": "2026-09-10"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Google Reserve",
+          "Instagram Reserve",
+          "Meta Reserve"
+        ],
+        "limits": [
+          "Pricing is published in EUR only — no USD rate card exists, so no dollar figure is recorded here",
+          "Annual billing is exactly 12x the monthly price on all three tiers: there is no annual saving",
+          "Card processing fees differ sharply by tier (credit card 6% on Reserve down to 2% on Grow; AMEX 6% / 4% / 3.5%) and can dominate total cost for deposit-taking venues",
+          "Transactional SMS is billed per message on a sliding scale by tier and country (about €0.05-€0.12 each)",
+          "Paid add-ons billed monthly: Website €29, Marketing Suite €29, Group Features €29, Automated SMS €49, AI Concierge €99, Meta Reserve €19",
+          "Prices and payment fees vary by country and currency"
+        ],
+        "keyFeatures": [
+          "Zero commission per cover on every tier, with card fees as the variable cost instead",
+          "Booking distribution via Google Reserve, Instagram and Meta Reserve",
+          "AI Concierge available as a €99/month add-on",
+          "Now the single platform behind Formitable and Resengo after the brand consolidation"
+        ],
+        "bestFor": [
+          "European restaurants and groups that want zero cover commission",
+          "Venues taking deposits or prepayments who will trade a higher subscription for lower card fees"
+        ],
+        "sources": [
+          {
+            "url": "https://www.zenchef.com/fr/plans",
+            "accessedAt": "2026-09-10"
+          },
+          {
+            "url": "https://www.zenchef.com/plans",
+            "accessedAt": "2026-09-10"
+          }
+        ],
+        "provenance": "Tier prices, annual prices and add-on prices from Zenchef's French plans page; the per-tier payment-fee table, the SMS bands and the €0-per-cover claim from the English plans page; both re-fetched 2026-09-10."
+      }
+    },
+    {
+      "slug": "resos",
+      "name": "resOS",
+      "domain": "resos.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Google Reserve"
+      ],
+      "provenance": "Re-fetched resos.com/pricing on 2026-09-10 (the page 403s automated fetchers, so it was retrieved with a browser user agent) and parsed the per-plan data-prices payloads the page itself ships. Those payloads confirm the correction exactly: USD monthlyOriginal $47 / $98 / $149 against a displayed monthly of $24 / $49 / $75, with annual at $37 / $78 / $119. The monthly toggle is literally labelled \"Monthly -50% for 3 months\", so the displayed monthly figure is promotional and monthlyUsd carries the list price. Booking caps (25 / 350 / 750 / unlimited), the 90-day money-back guarantee, \"Pause or cancel anytime\", the \"Free forever / No credit card required\" free tier and the €7.99-€19.99 add-on range were all read from the same page.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Published as \"$0\" (€0) monthly and annually. A genuine permanent free plan — the page's own wording is \"Free forever\" and \"No credit card required\" — limited to \"25 bookings /month\" with all core features and personal support. Add-ons are not available on this tier. No commission and no cover fees.",
+          "source": {
+            "url": "https://resos.com/pricing/",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Basic",
+          "monthlyUsd": 47,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 21,
+          "billingModel": "flat",
+          "notes": "List month-to-month price is \"$47\" (€45), which the page ships as monthlyOriginal; the displayed \"$24\" (€23) is the \"-50% for 3 months\" promotion, so the bill roughly doubles from month four. Annual billing is \"$37\"/month (€36), a ~21% cut off list. Includes 350 bookings/month, all core features, personal support, 90-day money-back guarantee and \"Pause or cancel anytime\". Paid add-ons are free for 30 days then billed separately. No commission, no cover fees.",
+          "source": {
+            "url": "https://resos.com/pricing/",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Plus",
+          "monthlyUsd": 98,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "List month-to-month price \"$98\" (€85), displayed at \"$49\" (€43) under the -50%-for-3-months promotion. Annual billing \"$78\"/month (€67), ~20% off list. Includes 750 bookings/month, all core features, personal support, the 90-day money-back guarantee and \"Pause or cancel anytime\".",
+          "source": {
+            "url": "https://resos.com/pricing/",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Unlimited",
+          "monthlyUsd": 149,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "List month-to-month price \"$149\" (€125), displayed at \"$75\" (€63) under the -50%-for-3-months promotion. Annual billing \"$119\"/month (€98), ~20% off list. Unlimited bookings per month, all core features, personal support, 90-day money-back guarantee, \"Pause or cancel anytime\". An \"All-Access\" option available on any paid tier bundles every add-on in.",
+          "source": {
+            "url": "https://resos.com/pricing/",
+            "accessedAt": "2026-09-10"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Google Reserve"
+        ],
+        "limits": [
+          "Free plan capped at 25 bookings/month; Basic 350; Plus 750",
+          "The prices the page displays on the monthly toggle are a \"-50% for 3 months\" promotion — the month-to-month cost roughly doubles after three months",
+          "Add-ons are free for 30 days on paid tiers then billed separately (about €7.99-€19.99/month each: Reserve with Google €7.99, Online payments €11.99, Experiences €19.99), or bundled via the 'All-Access' option",
+          "Reserve with Google is a paid add-on, not an included feature",
+          "The Free tier cannot use add-ons at all",
+          "Page defaults to the visitor's local currency; USD figures come from the page's own multi-currency price data"
+        ],
+        "keyFeatures": [
+          "Permanent free tier with all core features at 25 bookings/month, no credit card required",
+          "Never charges per booking, per cover or commission — flat monthly only",
+          "Every tier includes all core features; you pay for booking volume",
+          "90-day money-back guarantee on paid plans and 'Pause or cancel anytime'"
+        ],
+        "bestFor": [
+          "Small cafés, bars and pubs that need a free or very cheap booking system",
+          "Low-volume venues that would be punished by per-cover pricing"
+        ],
+        "sources": [
+          {
+            "url": "https://resos.com/pricing/",
+            "accessedAt": "2026-09-10"
+          }
+        ],
+        "provenance": "Prices, booking caps, promo structure, annual rates and add-on prices extracted from resos.com/pricing on 2026-09-10 including the page's embedded per-currency price payloads; the widely repeated €23/$24 'price' is confirmed to be a promo off the $47 list rate."
+      }
+    },
+    {
+      "slug": "tablein",
+      "name": "Tablein",
+      "domain": "tablein.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Google Reserve"
+      ],
+      "provenance": "Re-fetched tablein.com/pricing on 2026-09-10; the page publishes each plan in EUR, GBP and USD side by side, so monthlyUsd uses the published USD figures with no conversion. Per-extra-reservation overages are quoted verbatim in notes and are not folded into monthlyUsd. Added on re-verification: the Success annual price is published as €1,570, and the multi-location discount schedule includes a 4+ location step (-€20 per location) that the draft skipped.",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": 79,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Published as \"€67.00 / GBP 60 / USD 79\" per month and includes 50 reservations. CAVEAT: past the allowance the page charges \"€0.67 per extra reservation\", so a busy month adds real cost — this is a per-booking fee, not a per-minute or per-call one, so it lives here rather than in the metered fields. All system features are included on every tier — tiers differ only by reservation volume. No setup fee, no minimum term, no commission on Google Reserve bookings. 14-day trial.",
+          "source": {
+            "url": "https://www.tablein.com/pricing",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Growth",
+          "monthlyUsd": 139,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Published as \"€117.00 / GBP 105 / USD 139\" per month, including 150 reservations, then \"€0.37 per extra reservation\". Same full feature set as every other tier.",
+          "source": {
+            "url": "https://www.tablein.com/pricing",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Success",
+          "monthlyUsd": 209,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "Published as \"€177.00 / GBP 157 / USD 209\" per month with unlimited reservations and no overage. The annual option is published as \"pay for 10 months, get 2 months free\" at €1,570/year — about 17% off. Multi-location discounts are published: -€20 per location at 2 locations, -€20 per location at 4+, and -€30 per location at 7+.",
+          "source": {
+            "url": "https://www.tablein.com/pricing",
+            "accessedAt": "2026-09-10"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Google Reserve"
+        ],
+        "limits": [
+          "Starter includes only 50 reservations/month, then €0.67 each; Growth 150, then €0.37 each",
+          "Unlimited reservations require the €177/$209 Success plan",
+          "No forever-free plan — only a 14-day trial",
+          "The published 'pay for 10 months, get 2 free' annual option is shown against the Success plan; no annual rate is published for Starter or Growth"
+        ],
+        "keyFeatures": [
+          "Every tier includes the full feature set (booking widget, floor plans, guest CRM, payments, reports, website builder) — you pay for volume, not features",
+          "USD, EUR and GBP prices published side by side",
+          "No commission on Google Reserve bookings",
+          "Published multi-location discounts rather than a sales call"
+        ],
+        "bestFor": [
+          "Small and mid-size independent restaurants wanting every feature on the cheapest tier",
+          "Multi-location operators who want published volume discounts"
+        ],
+        "sources": [
+          {
+            "url": "https://www.tablein.com/pricing",
+            "accessedAt": "2026-09-10"
+          }
+        ],
+        "provenance": "Prices in three currencies, reservation allowances, per-extra-reservation overages, the €1,570 annual figure, the 14-day trial, the no-setup-fee and no-minimum-term statements and the full multi-location discount schedule all re-read from Tablein's official pricing page on 2026-09-10."
+      }
+    },
+    {
+      "slug": "spoton-reserve",
+      "name": "SpotOn Reserve",
+      "domain": "spoton.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "SpotOn Restaurant POS"
+      ],
+      "provenance": "Re-fetched SpotOn's own Knowledge Base FAQ for SpotOn Reserve on 2026-09-10, which confirms \"$150 per location\" monthly, a \"one-time $250 setup fee\" and \"There are no per cover charges, no hidden fees, or long term contracts.\" The $100/month figure repeated by older third-party pages remains refuted. The $250 setup fee sits in setupFeeUsd, not in monthlyUsd.",
+      "plans": [
+        {
+          "name": "SpotOn Reserve",
+          "monthlyUsd": 150,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 250,
+          "notes": "Published as \"$150 per location\" per month on a month-to-month subscription, with \"no per cover charges, no hidden fees, or long term contracts\". A one-time \"$250\" setup fee applies — the only published setup fee in this vertical, and it is recorded in setupFeeUsd rather than amortised into the monthly figure. Priced per location, so a group multiplies both the monthly fee and the setup fee. Includes reservations and waitlist management; no annual discount is published.",
+          "source": {
+            "url": "https://help.spoton.com/space/SK/1116667961",
+            "accessedAt": "2026-09-10"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "SpotOn Restaurant POS"
+        ],
+        "limits": [
+          "A one-time $250 setup fee applies",
+          "Priced per location — multi-site groups pay $150 per venue per month plus setup per venue",
+          "Best value assumes you also run SpotOn's POS; it is positioned as part of the SpotOn restaurant stack",
+          "Single tier only — no feature-based plan ladder published",
+          "Pricing is documented in a support-centre FAQ rather than on a marketing pricing page, so it can change without a visible announcement"
+        ],
+        "keyFeatures": [
+          "Flat $150/location with no per-cover charges and no long-term contract",
+          "Reservations plus waitlist in one module of the SpotOn restaurant platform",
+          "Month-to-month billing with published, not quoted, pricing"
+        ],
+        "bestFor": [
+          "Restaurants already on SpotOn POS wanting reservations in the same stack",
+          "Single-site US operators who want one flat published price"
+        ],
+        "sources": [
+          {
+            "url": "https://help.spoton.com/space/SK/1116667961",
+            "accessedAt": "2026-09-10"
+          }
+        ],
+        "provenance": "Price, setup fee, month-to-month terms and the no-per-cover statement re-quoted from SpotOn's official SpotOn Reserve FAQ on 2026-09-10."
+      }
+    },
+    {
+      "slug": "toast-tables",
+      "name": "Toast Tables",
+      "domain": "toasttab.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Toast POS",
+        "Toast Marketing",
+        "Toast Loyalty",
+        "Google"
+      ],
+      "provenance": "Re-fetched Toast's official Toast Tables announcement and the official Tables Plus Free Trial Terms on 2026-09-10 (both 403 to automated fetchers and were retrieved with a browser user agent; the product page itself remains blocked). Toast states a flat monthly price with no cover fees but publishes no dollar figure, so monthlyUsd is null — no number is inferred. Every trial-term claim in the draft was verified word for word against the live terms.",
+      "plans": [
+        {
+          "name": "Toast Tables / Tables Plus",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Quote-only: Toast states verbatim that the suite is \"available to Toast customers for a flat monthly price, no fees per cover, and package options for different seating policies\" but publishes no number, so monthlyUsd is null. Two caveats a buyer gets caught by: it is sold only to \"current Toast, Inc. merchant customer\" accounts, and the Tables Plus free trial is measured in reservations, not days — the trial ends \"on the date the seventy fifth (75th) reservation is fulfilled via the Service\", after which \"Merchant's access to and use of the Service will automatically discontinue\" unless you buy a paid monthly subscription \"at the then-current price\".",
+          "source": {
+            "url": "https://pos.toasttab.com/news/introducing-toast-tables-reservation-waitlist-management",
+            "accessedAt": "2026-09-10"
+          },
+          "corroboration": {
+            "url": "https://pos.toasttab.com/tables-plus-freetrial-terms",
+            "accessedAt": "2026-09-10"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Toast POS",
+          "Toast Marketing",
+          "Toast Loyalty",
+          "Google"
+        ],
+        "limits": [
+          "Available only to existing Toast POS merchant customers",
+          "No monthly price published — flat pricing is stated but the figure requires a sales conversation",
+          "The free trial ends at the 75th fulfilled reservation, not after a fixed number of days, and is \"only one time per merchant customer\", \"non-transferrable\", and \"may be available only in select markets and to select merchants\"",
+          "The trial waives only the software subscription fee: it \"does not affect any other fees ... including but not limited to applicable card processing rates\"",
+          "At trial end the merchant loses access and is \"solely responsible for managing any reservations made beyond\" that point"
+        ],
+        "keyFeatures": [
+          "Flat monthly price with no fees per cover, plus package options for different seating policies",
+          "Native POS integration giving real-time table updates and automatically synced server rosters",
+          "Guest profiles that feed Toast Marketing and Loyalty",
+          "Google booking distribution — guests can book through Toast Tables directly on a restaurant's Google Business Profile"
+        ],
+        "bestFor": [
+          "Restaurants already running Toast POS that want reservations and waitlist in one system",
+          "Operators who want guest data flowing straight into their POS-based marketing and loyalty"
+        ],
+        "sources": [
+          {
+            "url": "https://pos.toasttab.com/news/introducing-toast-tables-reservation-waitlist-management",
+            "accessedAt": "2026-09-10"
+          },
+          {
+            "url": "https://pos.toasttab.com/tables-plus-freetrial-terms",
+            "accessedAt": "2026-09-10"
+          }
+        ],
+        "provenance": "The flat-monthly/no-cover-fee wording, the POS/Marketing/Loyalty/Google integrations and the Google Business Profile booking detail are quoted from Toast's own announcement; the 75-reservation trial limit, one-time and non-transferrable restrictions, select-markets caveat and card-processing carve-out are quoted from Toast's official Tables Plus trial terms, all re-verified 2026-09-10."
+      }
+    },
+    {
+      "slug": "tablecheck",
+      "name": "TableCheck",
+      "domain": "tablecheck.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "Re-fetched tablecheck.com/en/join/ on 2026-09-10: no pricing, no named tiers, no figures — pricing runs entirely through a demo request, so monthlyUsd is null. CORRECTION applied this pass: the draft recorded gdpr true, but neither the SOC 2 press release nor tablecheck.com/en/policy/privacy names GDPR (the policy only commits to \"all applicable laws and ordinances ... established by the countries in which personal information is stored and used\"), so gdpr is demoted to null; the draft's PCI-DSS claim is removed for the same reason. SOC 2 Type 1 is confirmed verbatim from TableCheck's own press release, as is ISO 27001 certification of its data centres. Third-party directories quoting '¥150/month' or '$250/month' were not used.",
+      "plans": [
+        {
+          "name": "TableCheck platform (quote only)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only. TableCheck publishes no price page and no tier list: the site's calls to action are \"Get a free demo\" / \"Request a free demo\", and it states \"Do you want to learn more about our platform? Contact us and we can set up a demo.\" Platform covers online booking, group reservations, table management, activities booking, guest CRM, payments and API access. Aimed at mid-to-large restaurants, groups and hotel restaurants, so expect enterprise-style contracting rather than self-serve signup.",
+          "source": {
+            "url": "https://www.tablecheck.com/en/join/",
+            "accessedAt": "2026-09-10"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": true,
+          "gdpr": null,
+          "source": {
+            "url": "https://www.tablecheck.com/en/join/about-us/press/tablecheck-strengthens-enterprise-security-with-soc-2-type-1-certification/",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        "freeTier": null,
+        "freeTrialDays": null,
+        "keyIntegrations": [],
+        "limits": [
+          "No published pricing of any kind — every path leads to a demo request",
+          "No dedicated pricing page exists (the /join/pricing/ URL 404s)",
+          "Positioned at mid-to-large venues, groups and hotel restaurants rather than single independents",
+          "SOC 2 attestation is Type 1, not Type 2",
+          "GDPR is not named on TableCheck's press release or privacy policy, so no GDPR claim is recorded here despite its international footprint"
+        ],
+        "keyFeatures": [
+          "Strong presence in Japan and Asia-Pacific",
+          "SOC 2 Type 1 attestation under the AICPA Trust Services Criteria, with ISO 27001-certified data centres",
+          "Group reservations and activities booking alongside standard table management"
+        ],
+        "bestFor": [
+          "Hotel restaurant groups and multi-country operators in Asia-Pacific",
+          "Enterprises that need a documented SOC 2 attestation from their booking vendor"
+        ],
+        "sources": [
+          {
+            "url": "https://www.tablecheck.com/en/join/",
+            "accessedAt": "2026-09-10"
+          },
+          {
+            "url": "https://www.tablecheck.com/en/join/about-us/press/tablecheck-strengthens-enterprise-security-with-soc-2-type-1-certification/",
+            "accessedAt": "2026-09-10"
+          },
+          {
+            "url": "https://www.tablecheck.com/en/policy/privacy/",
+            "accessedAt": "2026-09-10"
+          }
+        ],
+        "provenance": "Quote-only status and the demo-request wording from TableCheck's official join page; SOC 2 Type 1 and ISO 27001 data centres quoted from TableCheck's own press release. The draft's GDPR true and PCI-DSS claims were refuted against the privacy policy and press release and have been removed."
+      }
+    }
+  ]
+}

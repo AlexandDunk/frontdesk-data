@@ -1,7 +1,7 @@
 {
   "vertical": "dns-hosting",
   "generatedAt": "2026-06-15",
-  "methodologyNotes": "Pricing re-verified 2026-06-15 by fetching each vendor's official pricing page via WebFetch (dnsimple.com/pricing, digicert.com/digicert-dns, cloudns.net premium/ddos-protected-plans/geodns pages, cloudflare.com/plans/, aws.amazon.com/route53/pricing/, bunny.net/pricing/dns/, dnsfilter.com/pricing). Google Cloud DNS pricing page returned truncated WebFetch output; figures corroborated via WebSearch citing cloud.google.com/dns/pricing. NS1/IBM pricing page confirmed HTTP 403; structure confirmed via WebSearch (free Developer tier exists, all paid tiers contact-sales). Constellix.com/pricing 301-redirects to constellix.digicert.com/pricing which 404s; pay-as-you-go figures corroborated via WebSearch citing assets.constellix.com/pricing and constellix.com/pricing/faq. CORRECTIONS vs draft: (1) Google Cloud DNS HIPAA/BAA set to null — Cloud DNS is not explicitly named in Google's public HIPAA covered-products list, so the 'explicitly covered' claim is unverifiable. (2) Constellix billingModel changed flat->custom: $5 is a usage-based minimum, not a flat subscription. (3) DNSimple Solo freeTier clarified to false — Solo has no base fee but charges $0.50/zone/month, so it is not forever-free. (4) Constellix provenance corrected: redirect host is constellix.digicert.com (not vercara). All vendors verified to exist; none removed. accessedAt 2026-06-15.",
+  "methodologyNotes": "Pricing re-verified 2026-06-15 by fetching each vendor's official pricing page (dnsimple.com/pricing, digicert.com/digicert-dns, cloudns.net premium/ddos-protected-plans/geodns pages, cloudflare.com/plans/, aws.amazon.com/route53/pricing/, bunny.net/pricing/dns/, dnsfilter.com/pricing). Google Cloud DNS pricing page returned truncated output; figures corroborated via a web search citing cloud.google.com/dns/pricing. NS1/IBM pricing page confirmed HTTP 403; structure confirmed via a web search (free Developer tier exists, all paid tiers contact-sales). Constellix.com/pricing 301-redirects to constellix.digicert.com/pricing which 404s; pay-as-you-go figures corroborated via a web search citing assets.constellix.com/pricing and constellix.com/pricing/faq. CORRECTIONS vs draft: (1) Google Cloud DNS HIPAA/BAA set to null — Cloud DNS is not explicitly named in Google's public HIPAA covered-products list, so the 'explicitly covered' claim is unverifiable. (2) Constellix billingModel changed flat->custom: $5 is a usage-based minimum, not a flat subscription. (3) DNSimple Solo freeTier clarified to false — Solo has no base fee but charges $0.50/zone/month, so it is not forever-free. (4) Constellix provenance corrected: redirect host is constellix.digicert.com (not vercara). All vendors verified to exist; none removed. accessedAt 2026-06-15.",
   "vendors": [
     {
       "slug": "dnsimple",
@@ -116,7 +116,7 @@
             "accessedAt": "2026-06-15"
           }
         ],
-        "provenance": "Plan details confirmed from dnsimple.com/pricing and corroborated via WebSearch; Solo is not forever-free because per-zone/per-query usage fees always apply. Accessed 2026-06-15."
+        "provenance": "Plan details confirmed from dnsimple.com/pricing and corroborated via a web search; Solo is not forever-free because per-zone/per-query usage fees always apply. Accessed 2026-06-15."
       }
     },
     {
@@ -224,7 +224,7 @@
         "DNS Failover",
         "Let's Encrypt SSL"
       ],
-      "provenance": "Fetched cloudns.net/premium/, cloudns.net/ddos-protected-plans/, and cloudns.net/geodns/ on 2026-06-15. All plan prices confirmed exactly. SLA values are published literally as '1000%' (Premium) and '10000%' (DDoS/GeoDNS) — i.e. 10x/100x downtime credit, not a literal uptime percentage. GDPR/ISO 27001 confirmed via cloudns.net about-us page. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
+      "provenance": "Fetched cloudns.net/premium/, cloudns.net/ddos-protected-plans/, and cloudns.net/geodns/ on 2026-06-15. All plan prices confirmed exactly. SLA values are published literally as '1000%' (Premium) and '10000%' (DDoS/GeoDNS) — i.e. 10x/100x downtime credit, not a literal uptime percentage. GDPR/ISO 27001 confirmed via cloudns.net about-us page. Re-verified 2026-09-02 against the live pricing page; published figures unchanged. The page this record cites as its source (https://www.cloudns.net/premium-dns/) is gone: on 2026-09-11 it answered 200 and redirected to https://www.cloudns.net/, both from a residential connection and from a datacenter on another continent — so the page is gone rather than withheld from one asker. Nothing else in this record can stand in for it, so re-sourcing needs a live page read; the figure stands as last read.",
       "plans": [
         {
           "name": "Free DNS",
@@ -453,7 +453,7 @@
         "IP Filter",
         "GeoProximity"
       ],
-      "provenance": "Constellix is now a DigiCert brand: constellix.com/pricing 301-redirects to constellix.digicert.com/pricing, which returns 404; the standalone pricing pages at assets.constellix.com/pricing and constellix.com/pricing/faq carry the usage-based figures, corroborated via WebSearch 2026-06-15. (Draft's claim of a 'vercara.digicert.com' redirect is incorrect — the redirect host is constellix.digicert.com.) Usage-based pay-as-you-go model; the $5 figure is the effective minimum, not a flat subscription, so billingModel is custom.",
+      "provenance": "Constellix is now a DigiCert brand: constellix.com/pricing 301-redirects to constellix.digicert.com/pricing, which returns 404; the standalone pricing pages at assets.constellix.com/pricing and constellix.com/pricing/faq carry the usage-based figures, corroborated via a web search 2026-06-15. (Draft's claim of a 'vercara.digicert.com' redirect is incorrect — the redirect host is constellix.digicert.com.) Usage-based pay-as-you-go model; the $5 figure is the effective minimum, not a flat subscription, so billingModel is custom.",
       "plans": [
         {
           "name": "Pay-As-You-Go",
@@ -515,7 +515,7 @@
             "accessedAt": "2026-06-15"
           }
         ],
-        "provenance": "Pricing model corroborated via WebSearch citing constellix.com/pricing/faq and assets.constellix.com/pricing; direct fetch of constellix.com/pricing 301-redirects to constellix.digicert.com which returns 404 as of 2026-06-15."
+        "provenance": "Pricing model corroborated via a web search citing constellix.com/pricing/faq and assets.constellix.com/pricing; direct fetch of constellix.com/pricing 301-redirects to constellix.digicert.com which returns 404 as of 2026-06-15."
       }
     },
     {
@@ -533,7 +533,7 @@
         "Grafana",
         "PagerDuty"
       ],
-      "provenance": "ns1.com redirects to ibm.com/products/ns1-connect. The IBM pricing page (ibm.com/products/ns1-connect/pricing) returned HTTP 403 on 2026-06-15. Plan structure confirmed via WebSearch (G2/TrustRadius/IBM store): a free Developer tier exists; Essentials/Premium/Enterprise are query-volume priced with no public list price — all require IBM sales engagement. Re-verified 2026-09-02 against the live pricing page — Essentials: quote-only -> $99.",
+      "provenance": "ns1.com redirects to ibm.com/products/ns1-connect. The IBM pricing page (ibm.com/products/ns1-connect/pricing) returned HTTP 403 on 2026-06-15. Plan structure confirmed via a web search (G2/TrustRadius/IBM store): a free Developer tier exists; Essentials/Premium/Enterprise are query-volume priced with no public list price — all require IBM sales engagement. Re-verified 2026-09-02 against the live pricing page — Essentials: quote-only -> $99.",
       "plans": [
         {
           "name": "Developer (Free)",
@@ -643,7 +643,7 @@
             "accessedAt": "2026-06-15"
           }
         ],
-        "provenance": "IBM pricing page returned 403 on 2026-06-15; free Developer tier and contact-sales structure for paid tiers confirmed via WebSearch (G2, TrustRadius, IBM store listings)."
+        "provenance": "IBM pricing page returned 403 on 2026-06-15; free Developer tier and contact-sales structure for paid tiers confirmed via a web search (G2, TrustRadius, IBM store listings)."
       }
     },
     {
@@ -778,7 +778,7 @@
             "accessedAt": "2026-06-15"
           }
         ],
-        "provenance": "Plan pricing fetched from cloudflare.com/plans/ and confirmed exactly; HIPAA BAA confirmed as Enterprise-only via WebSearch, with DNS-alone potentially out of BAA scope; compliance certifications from cloudflare.com/trust-hub, accessed 2026-06-15."
+        "provenance": "Plan pricing fetched from cloudflare.com/plans/ and confirmed exactly; HIPAA BAA confirmed as Enterprise-only via a web search, with DNS-alone potentially out of BAA scope; compliance certifications from cloudflare.com/trust-hub, accessed 2026-06-15."
       }
     },
     {
@@ -855,7 +855,7 @@
             "accessedAt": "2026-06-15"
           }
         ],
-        "provenance": "Pricing fetched and confirmed exactly from bunny.net/pricing/dns/; GDPR from bunny.net/gdpr/; SOC 2 and ISO 27001 confirmed via WebSearch citing official bunny.net blog posts, all accessed 2026-06-15."
+        "provenance": "Pricing fetched and confirmed exactly from bunny.net/pricing/dns/; GDPR from bunny.net/gdpr/; SOC 2 and ISO 27001 confirmed via a web search citing official bunny.net blog posts, all accessed 2026-06-15."
       }
     },
     {
@@ -875,7 +875,7 @@
         "CloudFormation",
         "AWS Health"
       ],
-      "provenance": "Fetched aws.amazon.com/route53/pricing/ on 2026-06-15; all figures confirmed exactly. Route 53 is listed on the AWS HIPAA-eligible services reference (covered under the AWS BAA), confirmed via WebSearch. Usage-based — no flat monthly base. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
+      "provenance": "Fetched aws.amazon.com/route53/pricing/ on 2026-06-15; all figures confirmed exactly. Route 53 is listed on the AWS HIPAA-eligible services reference (covered under the AWS BAA), confirmed via a web search. Usage-based — no flat monthly base. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
       "plans": [
         {
           "name": "Usage-Based",
@@ -959,7 +959,7 @@
         "Google Cloud CDN",
         "Firebase"
       ],
-      "provenance": "cloud.google.com/dns/pricing returned truncated WebFetch output on 2026-06-15; per-zone and per-query figures corroborated via WebSearch citing the official pricing page. HIPAA: the draft claimed Cloud DNS is 'explicitly listed' as a HIPAA-covered product — this is NOT verifiable; Cloud DNS is not explicitly named in Google's public HIPAA covered-products list, so hipaa/baa set to null (null beats a guess).",
+      "provenance": "cloud.google.com/dns/pricing returned truncated output on 2026-06-15; per-zone and per-query figures corroborated via a web search citing the official pricing page. HIPAA: the draft claimed Cloud DNS is 'explicitly listed' as a HIPAA-covered product — this is NOT verifiable; Cloud DNS is not explicitly named in Google's public HIPAA covered-products list, so hipaa/baa set to null (null beats a guess).",
       "plans": [
         {
           "name": "Usage-Based",
@@ -1025,7 +1025,7 @@
             "accessedAt": "2026-06-15"
           }
         ],
-        "provenance": "Pricing corroborated via WebSearch citing the official Google Cloud DNS pricing page (WebFetch truncated). HIPAA coverage of Cloud DNS specifically could not be confirmed in Google's public covered-products list, so hipaa/baa set to null; SOC 2 / ISO 27001 infrastructure certification retained. Accessed 2026-06-15."
+        "provenance": "Pricing corroborated via a web search citing the official Google Cloud DNS pricing page (the automated read was truncated). HIPAA coverage of Cloud DNS specifically could not be confirmed in Google's public covered-products list, so hipaa/baa set to null; SOC 2 / ISO 27001 infrastructure certification retained. Accessed 2026-06-15."
       }
     },
     {

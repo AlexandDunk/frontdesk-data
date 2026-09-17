@@ -1,0 +1,1006 @@
+{
+  "vertical": "veterinary-practice-software",
+  "generatedAt": "2026-09-10",
+  "methodologyNotes": "Adversarial re-verification pass. Every figure was re-read off the vendor's own live page on 2026-09-10, and in addition each page's RAW HTML was downloaded and grepped for currency symbols so that a silently client-rendered or missing price could not pass as a confirmed one: ezyvet.com/pricing/us (exactly one currency match, $260.50), provet.com/pricing ($0/$40/$99/$129/$249/$299 plus GBP), digitail.com/plans (ZERO currency matches across 600KB - the absence of prices is deliberate, not a rendering failure), vetport.com/pricing plus vetport.com/faqs, navetor.com/pricing ($0/$200/$300/$350/$400/$550), onwardvet.com/pricing ($300 only), daysmart.com/vet/pricing ($123 only), shepherd.vet, vetspire.ai, and go.covetrus.com/why-pulse-cloud-veterinary-software. Month-to-month vs annual was checked on every priced vendor: not one of these vendors publishes an annual-billing toggle or an annual discount, so no annual rate is sitting in a monthly field. DaySmart's $123 is confirmed monthly by the page's own JSON-LD UnitPriceSpecification (unitText MONTH, unitCode MON); VETport's $229 carries no frequency label on the pricing page at all and is confirmed monthly only by the FAQ's \"All the plans of VETport are of monthly basis. There is no option for Annual Subscription\". Per-vet, per-seat and per-location rates are kept in notes and never folded into monthlyUsd; Provet's monthlyUsd is the platform fee (the true single-vet floor), with the per-vet rate in notes. HIPAA governs human health information and does not cover veterinary records; raw-HTML greps returned zero hits for HIPAA, SOC 2 and GDPR on all ten pages, so those fields are null everywhere. The only compliance claim in the vertical is Provet's \"PCI level 1 compliance\", stated about Provet Pay rather than the platform, so it is noted but populates no compliance field. Hippo Manager stays dropped - hippomanager.com now serves an Indonesian online-gambling page, not a vendor site - and ImproMed stays dropped because covetrus.com returns a 212-byte body and software.covetrus.com returns HTTP 403, leaving nothing official to cite. No further vendor was removed. Unsupported marketing claims that the draft had attributed to vendor pages were struck: Shepherd's \"Shepherd Pay\" and wellness-plan module (both absent from the fetched HTML) and Covetrus's \"SOAP notes, 6+ hours a week\" (the cited page's only quantified claim is a 30-minutes-per-day testimonial). accessedAt 2026-09-10 throughout.",
+  "vendors": [
+    {
+      "slug": "ezyvet",
+      "name": "ezyVet",
+      "domain": "ezyvet.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "IDEXX diagnostics",
+        "Vet Radar",
+        "Vello",
+        "CareCredit"
+      ],
+      "provenance": "Re-fetched https://www.ezyvet.com/pricing/us on 2026-09-10 and grepped the raw HTML for currency: exactly ONE match on the whole page, $260.50, so there is no competing annual figure and no monthly/annual trap. The published string is \"Get started for as little as $260.50 per month\"; the page never states what the price is per, so no per-user or per-vet unit was inferred. Grep for HIPAA returned 0 and the only \"SOC\" hit was inside markup, not body text. Change from draft: added Vello to integrations (listed in the page's own integrations navigation).",
+      "plans": [
+        {
+          "name": "Cloud subscription (published entry price)",
+          "monthlyUsd": 260.5,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Published as \"as little as $260.50 per month\" - an entry price, not a tier, and the only currency figure anywhere in the page source. ezyVet publishes no named plans and scopes the real figure to the clinic, and the page never states the unit (not per user, not per vet - unstated). Verified month-to-month: the page offers no annual toggle and no annual discount, so this is not an annual rate. Two buyer traps: the monthly price explicitly does NOT include implementation or data conversion, which are \"scoped based on the size and structure of your clinic\" with the amount unpublished; and the contract is a six-month initial term followed by three-month rolling terms, so this is not cancel-anytime monthly. Includes 24/7 support, hosting and feature upgrades. Enterprise pricing for corporate groups is on request only.",
+          "source": {
+            "url": "https://www.ezyvet.com/pricing/us",
+            "accessedAt": "2026-09-10"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": {
+            "url": "https://www.ezyvet.com/pricing/us",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "IDEXX diagnostics",
+          "Vet Radar",
+          "Vello",
+          "CareCredit"
+        ],
+        "limits": [
+          "Implementation and data conversion are scoped separately and not priced publicly",
+          "Six-month initial term, then three-month rolling contract - not cancel-anytime",
+          "No published tier structure - a single \"from\" price only, with no stated unit",
+          "No free trial mentioned anywhere on the pricing page"
+        ],
+        "keyFeatures": [
+          "Vet Radar paperless whiteboard/treatment-sheet companion product",
+          "\"100+ top veterinary software solutions integrate directly with ezyVet\" (verbatim on the page)",
+          "24/7 support and data hosting bundled into the subscription"
+        ],
+        "bestFor": [
+          "Multi-vet general practices and specialty/referral hospitals",
+          "Corporate veterinary groups needing enterprise terms"
+        ],
+        "sources": [
+          {
+            "url": "https://www.ezyvet.com/pricing/us",
+            "accessedAt": "2026-09-10"
+          }
+        ],
+        "provenance": "Official pricing page fetched and raw-HTML grepped; compliance left null because HIPAA, SOC 2 and GDPR each return zero body-text matches. Vello added to integrations on this pass."
+      }
+    },
+    {
+      "slug": "provet",
+      "name": "Provet (Provet Cloud)",
+      "domain": "provet.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "IDEXX",
+        "Antech",
+        "Zoetis",
+        "MWI",
+        "NVS",
+        "Covetrus",
+        "VetCove",
+        "Amazon Web Services"
+      ],
+      "provenance": "Re-fetched https://www.provet.com/pricing on 2026-09-10 and re-parsed the raw HTML to text to separate the platform fee from the per-vet rate. Verbatim: \"Core ... $99 per vet / month ... Platform fee (includes 1 Vet): $249/month\" and \"Pro ... $129 per vet / month ... Platform fee (includes 1 Vet): $299/month\". Confirmed month-to-month: zero occurrences of \"annual\" and zero of \"free trial\" on the page, so no annual rate is in play. Correction carried forward: Provet is NOT a single per-user rate as third-party listings report - it is a platform fee that already includes one vet plus a per-vet rate for each additional vet, hence hybrid. Corrections applied on this pass: the AI add-on's real product name is \"Clinical Agent\", not \"AI Scribe + Actions\"; Core's Ask Provet allowance (30 questions/month) and Enterprise's single sign on were added from the page's comparison table.",
+      "plans": [
+        {
+          "name": "Core",
+          "monthlyUsd": 249,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "hybrid",
+          "notes": "Published verbatim as \"$99 per vet / month\" plus \"Platform fee (includes 1 Vet): $249/month\". monthlyUsd is the $249 platform fee, the true floor for a single-vet practice; each additional vet adds $99/month (2 vets = $348, 3 vets = $447). The headline $99 is NOT the entry cost. All non-vet staff are free. For single-site practices; includes free Provet Academy, fast implementation and unified payments. Tier limit from the page's own comparison table: Ask Provet is capped at 30 questions/month on Core. No annual billing option and no annual discount published. UK list is GBP 99/vet plus a GBP 99/month platform fee - a far cheaper platform fee than the US, so do not read across currencies.",
+          "source": {
+            "url": "https://www.provet.com/pricing",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 299,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "hybrid",
+          "notes": "Published verbatim as \"$129 per vet / month\" plus \"Platform fee (includes 1 Vet): $299/month\"; monthlyUsd is the platform fee and each additional vet adds $129/month. For multi-site practices. Everything in Core plus Referral Portal, multi-location management, Triage board and a dedicated Customer Success contact, and Ask Provet without the Core question cap. UK list is GBP 119/vet plus a GBP 159/month platform fee. Month-to-month; no annual discount published.",
+          "source": {
+            "url": "https://www.provet.com/pricing",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only - the page shows \"Custom\" with \"Flexible billing\", and the CTA is \"Contact us\". Everything in Pro plus a dedicated account manager, a service level agreement, custom terms and single sign on. The Clinical Agent add-on is shown on this tier as \"from $40 per user/month\" (UK \"from GBP 30 per user/month\") rather than a fixed $40.",
+          "source": {
+            "url": "https://www.provet.com/pricing",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Clinical Agent (AI Scribe + AI Actions) (add-on)",
+          "monthlyUsd": 40,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Provet's own name for this product is \"Clinical Agent\"; the page prices it at \"$40 / GBP 30 per seat / month\" on top of Core or Pro. The unit is per seat per month, not per clinic. Dictation on desktop, tablet and mobile that fills the medical chart, unlimited usage, custom templates and charge capture, no implementation required. Priced \"from $40 per user/month\" on Enterprise. Not a standalone PIMS plan.",
+          "source": {
+            "url": "https://www.provet.com/pricing",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Provet Pay (add-on)",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "Published verbatim as \"No monthly fee, competitive processing rates\", \"No setup charges or hidden fees\" and \"$0 / GBP 0 (Share of revenue)\" - Provet is paid through a share of payment-processing revenue instead, so the real cost sits in the processing rate, which is NOT published. In-clinic and online payments, cards on file, natively built in Provet. This is where the page's sole compliance claim lives: \"PCI level 1 compliance\" applies to Provet Pay, not to the PIMS platform. Not a standalone PIMS plan.",
+          "source": {
+            "url": "https://www.provet.com/pricing",
+            "accessedAt": "2026-09-10"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": {
+            "url": "https://www.provet.com/pricing",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "IDEXX",
+          "Antech",
+          "Zoetis",
+          "MWI",
+          "NVS",
+          "Covetrus",
+          "VetCove"
+        ],
+        "limits": [
+          "A platform fee is charged on top of per-vet seats - the headline $99 is not the entry cost",
+          "Ask Provet is limited to 30 questions/month on Core",
+          "Clinical Agent AI is a paid per-seat add-on, not included in any tier",
+          "Provet Pay's $0 is funded by an unpublished processing-rate revenue share",
+          "No annual billing option and no annual discount published; no free trial published",
+          "US and UK platform fees differ sharply ($249 vs GBP 99 on Core)"
+        ],
+        "keyFeatures": [
+          "Per-vet licensing with all non-vet staff included free",
+          "Referral Portal and multi-location management on Pro for referral hospitals",
+          "Clinical Agent AI that writes into the chart and captures charges",
+          "Claims 150+ integrations and 100% customer data ownership; 3,000+ practices"
+        ],
+        "bestFor": [
+          "Multi-site and referral practices",
+          "Practices with large support-staff-to-vet ratios, since non-vet users cost nothing"
+        ],
+        "sources": [
+          {
+            "url": "https://www.provet.com/pricing",
+            "accessedAt": "2026-09-10"
+          }
+        ],
+        "provenance": "Official pricing page fetched and its raw HTML re-parsed to separate platform fees from per-vet rates and to confirm the add-on's real name (Clinical Agent). PCI level 1 is the only compliance claim and it is scoped to Provet Pay, so hipaa/soc2/gdpr remain null."
+      }
+    },
+    {
+      "slug": "digitail",
+      "name": "Digitail",
+      "domain": "digitail.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "VetCove",
+        "IDEXX",
+        "VetSource"
+      ],
+      "provenance": "Re-fetched https://digitail.com/plans/ on 2026-09-10 and grepped the raw ~600KB HTML for $, GBP and EUR symbols - ZERO matches in any currency, confirming Digitail genuinely publishes no prices rather than rendering them client-side. All four tier names (Mobile, Growth, Growth AI, Enterprise) are present. HIPAA, SOC 2 and GDPR each return zero matches. Correction upheld: widely repeated third-party figures of \"$300/month per DVM\" appear nowhere on Digitail's own page and are not recorded.",
+      "plans": [
+        {
+          "name": "Mobile",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only; no price published in any currency. Positioned as \"simple, essential tools to get your mobile clinic running quickly\" for mobile/house-call practices. Feature lists are published per tier but every price requires booking a demo.",
+          "source": {
+            "url": "https://digitail.com/plans/",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Growth",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only; no price published. \"Everything a modern brick & mortar practice needs\" - the standard single-clinic tier, including integrations (VetCove, IDEXX, VetSource and 40+ more), consent forms and eSignature.",
+          "source": {
+            "url": "https://digitail.com/plans/",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Growth AI",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only; no price published. Adds the Tails AI suite - AI Scribe, AI Assistant, and AI Intake & Practice Manager - each marked \"Free Trial for 1 Month\" on the plans table, which means the AI components are a paid add-on layer after that first month, at an unpublished rate.",
+          "source": {
+            "url": "https://digitail.com/plans/",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only, explicitly contact-sales. \"Operate with scalability, control, and security\" for multi-clinic groups. Security features named are two-factor authentication, regular backups and role-based access - no certification is claimed anywhere on the page.",
+          "source": {
+            "url": "https://digitail.com/plans/",
+            "accessedAt": "2026-09-10"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": {
+            "url": "https://digitail.com/plans/",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "VetCove",
+          "IDEXX",
+          "VetSource"
+        ],
+        "limits": [
+          "No prices published at any tier in any currency - every plan requires a demo",
+          "The one-month free trial covers only the Tails AI add-ons, not the platform, so no platform trial length is published",
+          "The Tails AI features are trial-then-paid at an unpublished rate, not included",
+          "Compliance posture stated only as 2FA, backups and role-based access"
+        ],
+        "keyFeatures": [
+          "Tails AI suite: AI scribe, AI assistant and AI intake/practice manager",
+          "Dedicated pet-owner mobile app with online booking and notifications",
+          "Mobile-clinic-specific tier alongside brick-and-mortar and enterprise",
+          "40+ integrations referenced on the plans table"
+        ],
+        "bestFor": [
+          "Mobile and new practices wanting an app-first client experience",
+          "Clinics that want AI scribing native to the PIMS rather than bolted on"
+        ],
+        "sources": [
+          {
+            "url": "https://digitail.com/plans/",
+            "accessedAt": "2026-09-10"
+          }
+        ],
+        "provenance": "Official plans page fetched and its raw HTML searched for every currency symbol to prove the absence of prices is deliberate. freeTrialDays stays null because the published one-month trial applies to the Tails AI add-ons only, not to the platform."
+      }
+    },
+    {
+      "slug": "shepherd-veterinary-software",
+      "name": "Shepherd Veterinary Software",
+      "domain": "shepherd.vet",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "IDEXX Laboratories",
+        "IDEXX Web PACS",
+        "Antech",
+        "Heska",
+        "Moichor",
+        "CUBEX",
+        "Inventory Ally",
+        "CareCredit",
+        "Greenline",
+        "Koala Health",
+        "Blue Rabbit",
+        "PetDesk",
+        "AllyDVM",
+        "Dragon Veterinary",
+        "CoVet",
+        "AKC Reunite",
+        "HomeAgain",
+        "PetLink",
+        "LifeLearn ClientEd",
+        "Pawlicy Advisor",
+        "iVET360"
+      ],
+      "provenance": "Re-fetched https://www.shepherd.vet/ and https://www.shepherd.vet/integrations/ on 2026-09-10 and re-probed the pricing URLs with HTTP status checks: /pricing, /pricing/ and /plans/ all return 404, and the site navigation has no pricing link - the only \"pricing\" string in the homepage HTML is a CSS class name (carousel__row--pricing). All 21 integration names were individually confirmed present in the integrations page HTML. Corrections applied on this pass: the draft's claimed \"Shepherd Pay\" and wellness-plan module are NOT supported - \"Shepherd Pay\", \"wellness\" and \"payments\" each return zero matches in the homepage HTML, and \"Wellness plans\" appears on the integrations page only as a third-party partner-category filter. Correction upheld: third-party listings quote \"$299/month single vet, $99 per additional vet\", but Shepherd publishes no such page, so monthlyUsd is null.",
+      "plans": [
+        {
+          "name": "Quote-only subscription",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Shepherd publishes no pricing page and no plan names - /pricing, /pricing/ and /plans/ all return HTTP 404 and the nav offers only \"Schedule a demo\". Review sites circulate a single-vet figure around $299/month with additional vets around $99, but none of that appears on Shepherd's own site and it is NOT recorded here. Buyers must request a quote; expect pricing to scale with doctor count.",
+          "source": {
+            "url": "https://www.shepherd.vet/",
+            "accessedAt": "2026-09-10"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": {
+            "url": "https://www.shepherd.vet/integrations/",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "IDEXX Laboratories",
+          "Antech",
+          "CUBEX",
+          "CareCredit",
+          "Koala Health",
+          "PetDesk"
+        ],
+        "limits": [
+          "No published pricing of any kind - demo required, and /pricing returns 404",
+          "No published plan names or tier structure",
+          "No free trial stated on the site",
+          "No compliance certifications stated on the site"
+        ],
+        "keyFeatures": [
+          "Unusually broad published integration directory spanning labs, imaging, inventory, pharmacy and client comms",
+          "Integrations are browsable by workflow category, including treatment workflow and wellness plans, with named third-party partners for each",
+          "Dragon Veterinary and CoVet dictation partners documented as integrations rather than charged as a native AI tier"
+        ],
+        "bestFor": [
+          "Independent small-animal clinics that want many third-party integrations documented up front",
+          "Practices willing to trade published pricing for a broad partner ecosystem"
+        ],
+        "sources": [
+          {
+            "url": "https://www.shepherd.vet/",
+            "accessedAt": "2026-09-10"
+          },
+          {
+            "url": "https://www.shepherd.vet/integrations/",
+            "accessedAt": "2026-09-10"
+          }
+        ],
+        "provenance": "Homepage and integrations directory fetched, pricing URLs confirmed 404 by HTTP status, and every integration name verified against the integrations page HTML. Two keyFeatures from the draft (Shepherd Pay, a native wellness-plans module) were removed as unsupported by either fetched page."
+      }
+    },
+    {
+      "slug": "vetspire",
+      "name": "Vetspire",
+      "domain": "vetspire.ai",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "Re-fetched https://www.vetspire.ai/ on 2026-09-10 and re-probed the old URLs by HTTP status: vetspire.com and vetspire.com/pricing both 301-redirect to https://www.vetspire.ai/, and https://www.vetspire.ai/pricing returns 404, so no pricing page exists to read. A raw-HTML currency grep of the homepage returns exactly one match, \"$200+\", and it is a claimed cost SAVING, not a price. Correction upheld: the vendor's primary domain has moved from vetspire.com to vetspire.ai, and the domain field reflects that.",
+      "plans": [
+        {
+          "name": "Quote-only subscription",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "No numeric price is published anywhere on the site and the former /pricing URL no longer resolves to a pricing page (301 to the homepage; /pricing on the new domain is 404). The only currency figure on the site is a cost-avoidance claim: \"Cut $200+ in monthly costs per location by eliminating third-party platforms\" - a claimed saving, NOT a price, and deliberately not recorded in monthlyUsd. Expect a per-seat or per-location quote; demo required.",
+          "source": {
+            "url": "https://www.vetspire.ai/",
+            "accessedAt": "2026-09-10"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": {
+            "url": "https://www.vetspire.ai/",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [],
+        "limits": [
+          "No pricing page exists; the old vetspire.com/pricing URL 301-redirects away and the new /pricing is 404",
+          "The only published dollar figure is a claimed saving, not a price",
+          "No integration partners named on the site - only a link to an integrations manual",
+          "No compliance certifications stated"
+        ],
+        "keyFeatures": [
+          "AI Suite marketed as saving \"up to 90 minutes per day\" on documentation",
+          "Customizable client pricing by clinic, service and department for multi-location groups",
+          "Positioned to replace separate client-communication and online-booking vendors"
+        ],
+        "bestFor": [
+          "AI-forward practices and groups willing to negotiate a custom contract",
+          "Multi-location clinics consolidating several point solutions into one platform"
+        ],
+        "sources": [
+          {
+            "url": "https://www.vetspire.ai/",
+            "accessedAt": "2026-09-10"
+          }
+        ],
+        "provenance": "Homepage fetched after the 301 and the 404 were both confirmed by HTTP status check; every field that would need a published price is null, and the $200+ figure is held in notes as a saving claim."
+      }
+    },
+    {
+      "slug": "vetport",
+      "name": "VETport",
+      "domain": "vetport.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "IDEXX",
+        "Google Calendar",
+        "Apple Calendar"
+      ],
+      "provenance": "Re-fetched https://www.vetport.com/pricing and https://www.vetport.com/faqs on 2026-09-10. The pricing page computes its figure in a client-side jQuery calculator, so a plain fetch renders \"$ 0\"; the recorded numbers come from the page's OWN script, read out of the raw HTML: the branch `if (user <= 2 && location == 1) $(\".price\").text(\"$ 229\")`, then `Base_Price = 229`, `Additional_Users_Price = (user - 2) * 112`, `Additional_Locations_Price = (location - 1) * 140`, all inside `if (user <= 10 && location <= 5)` with the else branch un-hiding \"Get a Quote\". TWO corrections applied on this pass. (1) UNIT: the calculator's own label is \"No. of Vets\", not users - the script variable is merely named `user` - so the increments and the cap are per VET. (2) BILLING FREQUENCY: the pricing page contains zero occurrences of \"month\", \"monthly\" or \"annual\", so the $229 is unlabelled there; monthly billing is established only by the FAQ, verbatim \"VETport charges it's customer on monthly basis. All the plans of VETport are of monthly basis. There is no option for Annual Subscription or long term contract.\" The 15-day trial and the $49 online-booking charge are likewise quoted from the FAQ.",
+      "plans": [
+        {
+          "name": "Base subscription (up to 2 vets, 1 location)",
+          "monthlyUsd": 229,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "hybrid",
+          "notes": "$229/month covers up to 2 VETS at 1 location - the calculator's slider is labelled \"No. of Vets\". Beyond that it adds $112/month per additional vet (from the 3rd) and $140/month per additional location (from the 2nd), so 4 vets at 1 location is $453/month and 2 vets at 2 locations is $369/month. Hard ceiling: above 10 vets or 5 locations the calculator hides the price and switches to \"Get a Quote\". Monthly billing is confirmed by the FAQ, not the pricing page - the pricing page never prints \"month\" at all: \"All the plans of VETport are of monthly basis. There is no option for Annual Subscription or long term contract.\" So there is no annual rate to confuse this with, and no minimum contract. Caveat: an \"initial setup fee\" exists - the FAQ says initial training and setup are included in it - but the amount is never published anywhere.",
+          "source": {
+            "url": "https://www.vetport.com/pricing",
+            "accessedAt": "2026-09-10"
+          },
+          "corroboration": {
+            "url": "https://www.vetport.com/faqs",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Online Booking (add-on)",
+          "monthlyUsd": 49,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Published in VETport's own FAQ, not on the pricing page: \"Online booking is a premium service offered by VETport ... This service is chargeable at $49/month.\" It must be installed from the VETport Marketplace. A buyer comparing the $229 base against rivals that bundle online booking is not comparing like with like. Not a standalone plan.",
+          "source": {
+            "url": "https://www.vetport.com/faqs",
+            "accessedAt": "2026-09-10"
+          },
+          "corroboration": {
+            "url": "https://www.vetport.com/pricing",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Large practice / multi-location (quote)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only by design: the calculator's own guard is `if (user <= 10 && location <= 5)`, and past that threshold it stops returning a figure and un-hides \"Get a Quote\" / \"Contact Now\". No published rate card above 10 vets or 5 locations.",
+          "source": {
+            "url": "https://www.vetport.com/pricing",
+            "accessedAt": "2026-09-10"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": {
+            "url": "https://www.vetport.com/faqs",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 15,
+        "keyIntegrations": [
+          "IDEXX",
+          "Google Calendar",
+          "Apple Calendar"
+        ],
+        "limits": [
+          "Price is shown only through a client-side calculator, not a static rate card - a plain page load shows \"$ 0\"",
+          "Calculator caps out at 10 vets / 5 locations, then forces a quote",
+          "Online booking costs an extra $49/month and must be installed from the Marketplace",
+          "An initial setup fee exists but the amount is unpublished",
+          "The pricing page itself never labels the figure per month; only the FAQ confirms monthly billing",
+          "Third-party integrations cannot be added during the free trial"
+        ],
+        "keyFeatures": [
+          "Transparent vet/location calculator - unusual in this vertical",
+          "Monthly billing with no minimum contract and no annual subscription option",
+          "15-day free trial with no credit card required at signup",
+          "Marketplace of lab, SMS and payment-gateway integrations, most of them free"
+        ],
+        "bestFor": [
+          "Small practices of one or two vets wanting a visible, low entry price",
+          "Clinics that dislike annual lock-in"
+        ],
+        "sources": [
+          {
+            "url": "https://www.vetport.com/pricing",
+            "accessedAt": "2026-09-10"
+          },
+          {
+            "url": "https://www.vetport.com/faqs",
+            "accessedAt": "2026-09-10"
+          }
+        ],
+        "provenance": "Pricing calculator script and FAQ both read from raw HTML. freeTrialDays 15 comes from the FAQ verbatim (\"You can use VETport for 15 days without paying anything\", no credit card at signup), as does the $49 online-booking charge and the monthly-only billing statement."
+      }
+    },
+    {
+      "slug": "covetrus-pulse",
+      "name": "Covetrus Pulse",
+      "domain": "covetrus.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "Re-fetched https://go.covetrus.com/why-pulse-cloud-veterinary-software on 2026-09-10 and extracted the full page text: no numeric price, no tiers, no setup fee, only a \"Request Demo\" form and a \"Contact Us\" call to action; a currency grep of the raw HTML returns no price. www.covetrus.com returns a 212-byte body and software.covetrus.com returns HTTP 403, so nothing was taken from them. Corrections applied on this pass: the draft's claims that \"Covetrus AI auto-generates SOAP notes, claimed to save 6+ hours a week\" and that payments are embedded are NOT on this page - it contains no SOAP, AI or payments claim, and its only quantified figure is a customer testimonial of \"saving around 30 minutes per day\". Those claims were struck and replaced with the page's actual wording.",
+      "plans": [
+        {
+          "name": "Quote-only subscription",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Covetrus publishes no price, no plan names and no setup fee for Pulse - the official page offers only \"Request Demo\" and \"Contact Us\". Pulse is the successor to eVetPractice (\"eVetPractice is now Pulse\") and is marketed as \"designed to scale from one person to more than 100\", which implies seat-based quoting, but no rate is published. The page's only quantified claim is a customer testimonial: \"saving around 30 minutes per day\" (Dr. Stacy Enke, Martinez Animal Hospital) - not a price and not a vendor-wide guarantee. Review sites circulate $100-$169/month starting figures; none of that appears on a Covetrus page and it is NOT recorded here.",
+          "source": {
+            "url": "https://go.covetrus.com/why-pulse-cloud-veterinary-software",
+            "accessedAt": "2026-09-10"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": {
+            "url": "https://go.covetrus.com/why-pulse-cloud-veterinary-software",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [],
+        "limits": [
+          "No published pricing, plan names, tiers or fees",
+          "No free plan and no free trial mentioned",
+          "Integration partners not named on the fetched official page",
+          "The wider covetrus.com product pages return no readable content (212-byte body) and software.covetrus.com returns HTTP 403, so nothing more can be cited",
+          "Buying Pulse draws the practice into the wider Covetrus add-on ecosystem for prescriptions, client comms and in-clinic supplies"
+        ],
+        "keyFeatures": [
+          "Marketed as \"the industry's first veterinary operating system (vOS)\" with practice management at its core",
+          "Covetrus add-ons available in the same cloud environment: prescription management, client communications and in-clinic supplies",
+          "App-ecosystem integrations and personalizable dashboards; stated to scale \"from one person to more than 100\""
+        ],
+        "bestFor": [
+          "Practices already buying from Covetrus for pharmacy and supplies",
+          "Former eVetPractice customers migrating to the current platform"
+        ],
+        "sources": [
+          {
+            "url": "https://go.covetrus.com/why-pulse-cloud-veterinary-software",
+            "accessedAt": "2026-09-10"
+          }
+        ],
+        "provenance": "The one fetchable official Covetrus page confirmed quote-only status and supplied every feature claim now listed; two draft keyFeatures that the page does not support (SOAP-note AI saving 6+ hours a week, embedded payment processing) were removed."
+      }
+    },
+    {
+      "slug": "daysmart-vet",
+      "name": "DaySmart Vet (formerly Vetter Software)",
+      "domain": "daysmart.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "IDEXX",
+        "Antech",
+        "VetSource",
+        "VetCove",
+        "PeerLogic",
+        "Koala"
+      ],
+      "provenance": "Re-fetched https://www.daysmart.com/vet/pricing/ on 2026-09-10 and grepped the 300KB raw HTML: $123 is the only price on the page, published as \"Plans starting at $123/month. Built for practices of every size.\" Confirmed month-to-month rather than an annual-billed rate by the page's own JSON-LD: `priceSpecification: UnitPriceSpecification, price 123, priceCurrency USD, unitText MONTH, referenceQuantity 1 MON`, and the page contains no annual toggle and no \"billed annually\" string. Correction applied on this pass: the pricing page DOES publish a trial length - its meta description and JSON-LD both read \"Get a 14-day free trial today!\" - so freeTrialDays is 14, not null as the draft had it. Correction upheld: Vetter Software has been rebranded DaySmart Vet, so the record is filed under the current vendor name and domain.",
+      "plans": [
+        {
+          "name": "Published entry plan",
+          "monthlyUsd": 123,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "The page says only \"Plans starting at $123/month. Built for practices of every size\" - $123 is the single currency figure in the page source, and no tier names, seat counts or per-user rates are published, so the unit behind the price is unstated. Verified as a true monthly rate, not an annual-billed one: the page's JSON-LD marks it UnitPriceSpecification, unitText MONTH, referenceQuantity 1 MON, and no annual option or discount appears anywhere. Every plan is said to include cloud access, product updates, 24/7 chat-email-phone support, integrated payments, client communication (email, texting, PetCare mobile app) and integrated AI; the Daisy Voice AI feature is a separately priced add-on. A 14-day free trial is offered. Larger practices are told to \"contact our team to discuss custom pricing\".",
+          "source": {
+            "url": "https://www.daysmart.com/vet/pricing/",
+            "accessedAt": "2026-09-10"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": {
+            "url": "https://www.daysmart.com/vet/pricing/",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "IDEXX",
+          "Antech",
+          "VetSource",
+          "VetCove",
+          "PeerLogic",
+          "Koala"
+        ],
+        "limits": [
+          "Only a \"starting at\" figure is published - no tiers, no seat unit, no statement of what $123 buys",
+          "Daisy Voice AI is a separately priced add-on, not included",
+          "Larger practices are quoted custom",
+          "The 14-day trial is a trial, not a free tier - there is no forever-free plan"
+        ],
+        "keyFeatures": [
+          "PetCare client mobile app plus two-way texting included in the subscription",
+          "Daisy Voice AI add-on for AI-powered SOAP note generation",
+          "24/7 chat, email and phone support and integrated payments bundled in",
+          "40+ partner integrations across labs, pharmacy and phones"
+        ],
+        "bestFor": [
+          "Small to mid-size general practices wanting the lowest published entry price here",
+          "Clinics that want client communication bundled rather than bought separately"
+        ],
+        "sources": [
+          {
+            "url": "https://www.daysmart.com/vet/pricing/",
+            "accessedAt": "2026-09-10"
+          }
+        ],
+        "provenance": "Official pricing page fetched and raw HTML grepped to confirm $123 is the only published figure and that its JSON-LD unit is MONTH. freeTrialDays corrected from null to 14 on this pass from the page's own \"Get a 14-day free trial today!\" string. The Vetter Software to DaySmart Vet rename was verified by the dead vettersoftware.com/pricing URL."
+      }
+    },
+    {
+      "slug": "navetor",
+      "name": "NaVetor",
+      "domain": "navetor.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "IDEXX",
+        "Antech",
+        "Zoetis",
+        "CareCredit",
+        "PetLink",
+        "HomeAgain"
+      ],
+      "provenance": "Re-fetched https://www.navetor.com/pricing on 2026-09-10 and grepped the raw HTML: the currency set is exactly {$0, $200, $300, $350, $400, $550}, matching the six recorded entries with nothing extra and nothing missing. The page states \"Simple monthly plans for every practice size\" and \"No add-ons, no contracts\", and contains zero occurrences of \"annual\" and zero of \"trial\" - so these are genuine month-to-month prices with no annual rate to confuse them with. The most transparent rate card in this vertical. Change from draft: the no-contract point is upgraded from \"not mentioned\" to the page's affirmative \"No add-ons, no contracts\".",
+      "plans": [
+        {
+          "name": "Patterson Pay bundle",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Published verbatim as \"NaVetor is free when you use Patterson payment services. Process payments through Patterson Pay and pay $0/month for NaVetor. Full feature access included.\" This is NOT a forever-free tier: the $0 is conditional on routing card processing through Patterson, so the software cost is recovered in processing rates that are not published on this page. Compare the effective processing spread against the $200-$550 band prices before assuming it is cheaper.",
+          "source": {
+            "url": "https://www.navetor.com/pricing",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "1-3 Users | Solo Practice",
+          "monthlyUsd": 200,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "\"$200 /mo\" for the whole practice, not per user - the band covers 1 to 3 users. \"For solo vets and small teams just getting started.\" The page states \"Simple monthly plans\" and \"No add-ons, no contracts\", and publishes no annual discount. Includes free data conversion, free training and 90-day onboarding support, and every feature - \"the only difference is team size\".",
+          "source": {
+            "url": "https://www.navetor.com/pricing",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "4-10 Users | Growing Practice",
+          "monthlyUsd": 300,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "\"$300 /mo\" flat for 4 to 10 users. \"For established practices ready to scale.\" Watch the band edges: the 4th user triggers a $100/month step up from the solo band. Free data conversion, training and 90-day onboarding included; no contract.",
+          "source": {
+            "url": "https://www.navetor.com/pricing",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "11-20 Users | Mid-Size Clinic",
+          "monthlyUsd": 350,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "\"$350 /mo\" flat for 11 to 20 users. \"Multi-doctor practices that need power and flexibility.\" Free data conversion, training and 90-day onboarding included; no contract.",
+          "source": {
+            "url": "https://www.navetor.com/pricing",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "21-30 Users | Large Practice",
+          "monthlyUsd": 400,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "\"$400 /mo\" flat for 21 to 30 users. \"High-volume practices running a full team.\" Free data conversion, training and 90-day onboarding included; no contract.",
+          "source": {
+            "url": "https://www.navetor.com/pricing",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "31+ Users | Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Published as \"Custom pricing starting at $550/mo.\" for 31 or more users - $550 is a floor, not the final figure, and the page does not say what drives it above that, so monthlyUsd is left null and the floor is recorded here. Quote required via the sales line.",
+          "source": {
+            "url": "https://www.navetor.com/pricing",
+            "accessedAt": "2026-09-10"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": {
+            "url": "https://www.navetor.com/pricing",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "IDEXX",
+          "Antech",
+          "Zoetis",
+          "CareCredit",
+          "PetLink",
+          "HomeAgain"
+        ],
+        "limits": [
+          "The $0/month option requires processing payments through Patterson Pay at unpublished rates - not a true free tier",
+          "Prices step at band edges, so adding one user can cost $100/month more",
+          "Enterprise above 30 users is custom from $550/mo, with no published driver",
+          "No annual discount and no free trial published"
+        ],
+        "keyFeatures": [
+          "Fully published rate card with five user-count bands - rare in veterinary PIMS",
+          "Every feature included in every plan; \"the only difference is team size\"",
+          "Free data conversion, free training and 90-day onboarding support on every plan",
+          "\"No add-ons, no contracts\" stated outright, with monthly billing",
+          "$0 software cost when bundled with Patterson payment processing"
+        ],
+        "bestFor": [
+          "Buyers who want a price without talking to sales",
+          "Practices already using Patterson for payments or distribution"
+        ],
+        "sources": [
+          {
+            "url": "https://www.navetor.com/pricing",
+            "accessedAt": "2026-09-10"
+          }
+        ],
+        "provenance": "Single official pricing page fetched and currency-grepped; all six entries are transcribed verbatim. freeTier is false because the $0 option is conditional on a payments contract, not a forever-free plan. The Enterprise band keeps monthlyUsd null because $550 is a published floor on a custom quote."
+      }
+    },
+    {
+      "slug": "onward-vet",
+      "name": "Onward Vet",
+      "domain": "onwardvet.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "Re-fetched https://onwardvet.com/pricing/ on 2026-09-10 and grepped the raw HTML: $300 is the only currency figure on the page, published as \"from $300 per month\" for independent clinics, with the two larger segments marked \"Custom\". Zero occurrences of \"annual\" and zero of \"trial\", so this is not an annual rate. No integrations and no compliance claims appear on the page, so both are left empty rather than filled from elsewhere. Corrections applied on this pass: the draft described the institutional tier's audience as teaching hospitals and shelters, but the page names \"universities, research facilities, and corporate R&D centers\" - shelters appear nowhere; and the page's \"Optional add-ons can be tailored to your needs\" was added as an unpriced cost the draft omitted.",
+      "plans": [
+        {
+          "name": "Independent Clinics",
+          "monthlyUsd": 300,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Published as \"from $300 per month\" with \"Pricing scales based on the number of doctors and users\" - the scaling rates themselves are not published, so $300 is a floor for a single-location clinic rather than a complete price. Includes all-in-one practice management, AI note-taking and automation, cloud hosting and backups, and email support and onboarding, with \"Training and onboarding support included during rollout\". Two unpriced extras: \"Optional add-ons can be tailored to your needs\", and data conversion, which the page says feeds into the quote but never prices. The page states \"Your exact quote depends on the number of locations, users, and any data conversion.\" No annual option or discount is published.",
+          "source": {
+            "url": "https://onwardvet.com/pricing/",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Hospital Groups",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Marked \"Custom\" - no price published. Adds multi-location dashboards, standardized data and reporting, role-based permissions and dedicated implementation support. The page states pricing \"considers number of locations, users, and integrations\" and that rollout is planned by region or wave.",
+          "source": {
+            "url": "https://onwardvet.com/pricing/",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Universities & Institutions",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Marked \"Custom\" - no price published. \"Flexible, custom arrangements for universities, research facilities, and corporate R&D centers\": custom workflows and templates, institution-level governance, integration with existing systems, scoping sessions, and custom roles for students, residents, faculty and staff.",
+          "source": {
+            "url": "https://onwardvet.com/pricing/",
+            "accessedAt": "2026-09-10"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": {
+            "url": "https://onwardvet.com/pricing/",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        "freeTier": false,
+        "freeTrialDays": null,
+        "keyIntegrations": [],
+        "limits": [
+          "$300/month is a starting figure; the per-doctor and per-user scaling rates are unpublished",
+          "\"Optional add-ons can be tailored to your needs\" - add-on prices are not disclosed",
+          "Data conversion feeds into the quote but its cost is not disclosed",
+          "Group and institutional tiers are entirely quote-based",
+          "No integration partners named on the pricing page; no free trial published"
+        ],
+        "keyFeatures": [
+          "AI note-taking and automation included in the base clinic plan",
+          "Institution tier with institution-level governance and custom roles for students, residents and faculty",
+          "Multi-location dashboards and standardized reporting for hospital groups, pitched as reducing overlapping third-party systems"
+        ],
+        "bestFor": [
+          "Single-location independent clinics wanting AI documentation included in the base price",
+          "Universities, research facilities and corporate R&D centers needing custom workflows and governance"
+        ],
+        "sources": [
+          {
+            "url": "https://onwardvet.com/pricing/",
+            "accessedAt": "2026-09-10"
+          }
+        ],
+        "provenance": "Official pricing page fetched and currency-grepped ($300 is the only figure). The institutional audience was corrected to the page's own wording and the unpriced optional add-ons were added; fields the page does not state are left null or empty."
+      }
+    }
+  ]
+}

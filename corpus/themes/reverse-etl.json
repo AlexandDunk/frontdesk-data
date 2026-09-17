@@ -1,7 +1,7 @@
 {
   "vertical": "reverse-etl",
   "generatedAt": "2026-06-15",
-  "methodologyNotes": "Re-verified adversarially via direct WebFetch on each vendor's official pricing page (hightouch.com/pricing, rudderstack.com/pricing, fivetran.com/pricing, polytomic.com/pricing, omnata.com/pricing/sync-for-snowflake, skyvia.com/pricing) plus each vendor's security page for compliance. All paid-plan monthlyUsd values were confirmed against published prices; quote-only/usage-based tiers are recorded as monthlyUsd:null with billingModel custom (a null beats a guess). KEY CORRECTIONS vs the draft: (1) Polytomic's 'Basic $500/month flat' plan was FABRICATED — the page publishes only 'Pricing begins at $500/month' as a floor, and the real tiers (Standard, Enterprise) are both contact-sales; replaced with a null-priced Standard tier. (2) Skyvia Basic additional-records overage corrected from $0.06/1K (which is the Free-tier rate) to $0.02/1K. Census (getcensus.com -> 301 fivetran.com) was acquired by Fivetran (announced May 1, 2025) and is sold as Fivetran Activations; Grouparoo (acquired by Airbyte, 2022) excluded. No vendors removed (both already excluded by writer). accessedAt 2026-06-15.",
+  "methodologyNotes": "Re-verified adversarially via direct a direct read on each vendor's official pricing page (hightouch.com/pricing, rudderstack.com/pricing, fivetran.com/pricing, polytomic.com/pricing, omnata.com/pricing/sync-for-snowflake, skyvia.com/pricing) plus each vendor's security page for compliance. All paid-plan monthlyUsd values were confirmed against published prices; quote-only/usage-based tiers are recorded as monthlyUsd:null with billingModel custom (a null beats a guess). KEY CORRECTIONS vs the draft: (1) Polytomic's 'Basic $500/month flat' plan was FABRICATED — the page publishes only 'Pricing begins at $500/month' as a floor, and the real tiers (Standard, Enterprise) are both contact-sales; replaced with a null-priced Standard tier. (2) Skyvia Basic additional-records overage corrected from $0.06/1K (which is the Free-tier rate) to $0.02/1K. Census (getcensus.com -> 301 fivetran.com) was acquired by Fivetran (announced May 1, 2025) and is sold as Fivetran Activations; Grouparoo (acquired by Airbyte, 2022) excluded. No vendors removed (both already excluded by writer). accessedAt 2026-06-15.",
   "vendors": [
     {
       "slug": "hightouch",
@@ -696,11 +696,11 @@
           "overagePerCall": null,
           "annualDiscountPct": 20,
           "billingModel": "flat",
-          "notes": "Data Integration: once-daily scheduling, 5 scheduled integrations, basic scenarios, simple mapping. $99.79/month billed monthly; $79/month billed annually (20% discount). Additional records: $0.02 per 1K (corrected from the draft's $0.06).",
+          "notes": "Data Integration: once-daily scheduling, 5 scheduled integrations, basic scenarios, simple mapping. $99/mo billed monthly; $79/mo billed annually (20% less). Additional records: $0.02 per 1K (corrected from the draft's $0.06).",
           "setupFeeUsd": 0,
           "source": {
             "url": "https://skyvia.com/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-12"
           }
         },
         {

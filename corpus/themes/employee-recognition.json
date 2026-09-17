@@ -1,7 +1,7 @@
 {
   "vertical": "employee-recognition",
   "generatedAt": "2026-06-15",
-  "methodologyNotes": "Re-verified 2026-06-15 (adversarial pass) by direct WebFetch of each official pricing page: bonusly.com/pricing, guusto.com/pricing, matterapp.com/pricing, joinassembly.com/pricing, awardco.com/pricing, nectarhr.com/pricing, plus kudos.com/pricing (HTTP 404 -> quote-only) and workhuman.com (quote-only). Published per-user prices confirmed for Bonusly ($5/user/mo monthly, $50/user/yr annual), Matter ($1/$3 per user/mo billed annually, save 25%), Assembly Empower ($3/user/mo billed yearly), and Guusto (Lite $150/mo flat; Essential $4.00 sender + $0.70 recipient annual / $6.72 both monthly; Premium $5.00 sender + $1.00 recipient annual). Quote-only vendors (Awardco, Nectar, Kudos, Workhuman) have monthlyUsd=null. Compliance set true only where explicitly stated on official security/trust pages: Bonusly SOC2; Awardco SOC2+HIPAA+GDPR; Matter SOC2+GDPR; Nectar SOC2(Nov 30 2024)+GDPR (HIPAA explicitly excluded); Kudos SOC2+ISO27001+CSA-STAR+GDPR. Workhuman's official security page returned no substantive cert text on fetch, so its compliance is set null (prior ISO/PCI/GDPR claims came only from unverified third-party search). accessedAt 2026-06-15.",
+  "methodologyNotes": "Re-verified 2026-06-15 (adversarial pass) by a direct read of each official pricing page: bonusly.com/pricing, guusto.com/pricing, matterapp.com/pricing, joinassembly.com/pricing, awardco.com/pricing, nectarhr.com/pricing, plus kudos.com/pricing (HTTP 404 -> quote-only) and workhuman.com (quote-only). Published per-user prices confirmed for Bonusly ($5/user/mo monthly, $50/user/yr annual), Matter ($1/$3 per user/mo billed annually, save 25%), Assembly Empower ($3/user/mo billed yearly), and Guusto (Lite $150/mo flat; Essential $4.00 sender + $0.70 recipient annual / $6.72 both monthly; Premium $5.00 sender + $1.00 recipient annual). Quote-only vendors (Awardco, Nectar, Kudos, Workhuman) have monthlyUsd=null. Compliance set true only where explicitly stated on official security/trust pages: Bonusly SOC2; Awardco SOC2+HIPAA+GDPR; Matter SOC2+GDPR; Nectar SOC2(Nov 30 2024)+GDPR (HIPAA explicitly excluded); Kudos SOC2+ISO27001+CSA-STAR+GDPR. Workhuman's official security page returned no substantive cert text on fetch, so its compliance is set null (prior ISO/PCI/GDPR claims came only from unverified third-party search). accessedAt 2026-06-15.",
   "vendors": [
     {
       "slug": "bonusly",
@@ -182,7 +182,7 @@
           "notes": "Recognition and rewards module. Per-user pricing via sales quote only. No public price listed as of 2026-06-15.",
           "setupFeeUsd": 0,
           "source": {
-            "url": "https://nectarhr.com/pricing",
+            "url": "https://nectarhr.com/get-pricing",
             "accessedAt": "2026-09-02"
           }
         },
@@ -198,7 +198,7 @@
           "notes": "Employee listening and surveys module (bundled with Recognize). Pricing via sales quote only.",
           "setupFeeUsd": 0,
           "source": {
-            "url": "https://nectarhr.com/pricing",
+            "url": "https://nectarhr.com/get-pricing",
             "accessedAt": "2026-09-02"
           }
         },
@@ -214,7 +214,7 @@
           "notes": "Internal communications module (bundled with Recognize). Pricing via sales quote only.",
           "setupFeeUsd": 0,
           "source": {
-            "url": "https://nectarhr.com/pricing",
+            "url": "https://nectarhr.com/get-pricing",
             "accessedAt": "2026-09-02"
           }
         },
@@ -230,7 +230,7 @@
           "notes": "All-in-one bundle (Recognize + Engage + Comms). Labeled 'Best Value'. Pricing via sales quote only.",
           "setupFeeUsd": 0,
           "source": {
-            "url": "https://nectarhr.com/pricing",
+            "url": "https://nectarhr.com/get-pricing",
             "accessedAt": "2026-09-02"
           }
         }
@@ -274,7 +274,7 @@
         ],
         "sources": [
           {
-            "url": "https://nectarhr.com/pricing",
+            "url": "https://nectarhr.com/get-pricing",
             "accessedAt": "2026-06-15"
           },
           {
@@ -624,9 +624,9 @@
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
-          "annualDiscountPct": 25,
+          "annualDiscountPct": null,
           "billingModel": "per_seat",
-          "notes": "$1/user/month billed annually (monthly-equivalent; monthly-billing rate not published). Adds celebrations, custom kudos, analytics and reporting. Annual billing saves 25% vs monthly.",
+          "notes": "$1/user/month billed annually (monthly-equivalent; monthly-billing rate not published). Adds celebrations, custom kudos, analytics and reporting. Annual billing saves 25% vs monthly. annualDiscountPct is null: the figure in monthlyUsd is itself the annual rate, and a saving cannot be a percentage of a price this record does not hold.",
           "setupFeeUsd": 0,
           "source": {
             "url": "https://matterapp.com/pricing",
@@ -640,9 +640,9 @@
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
-          "annualDiscountPct": 25,
+          "annualDiscountPct": null,
           "billingModel": "per_seat",
-          "notes": "$3/user/month billed annually (monthly-equivalent; monthly-billing rate not published). Most popular. Adds 10,000+ eGift cards across 200+ countries, branded rewards, challenges and incentives. Annual billing saves 25% vs monthly.",
+          "notes": "$3/user/month billed annually (monthly-equivalent; monthly-billing rate not published). Most popular. Adds 10,000+ eGift cards across 200+ countries, branded rewards, challenges and incentives. Annual billing saves 25% vs monthly. annualDiscountPct is null: the figure in monthlyUsd is itself the annual rate, and a saving cannot be a percentage of a price this record does not hold.",
           "setupFeeUsd": 0,
           "source": {
             "url": "https://matterapp.com/pricing",

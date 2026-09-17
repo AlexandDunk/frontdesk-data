@@ -37,14 +37,14 @@
         },
         {
           "name": "Plus",
-          "monthlyUsd": 9.5,
+          "monthlyUsd": 12,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
-          "annualDiscountPct": 20,
+          "annualDiscountPct": 17,
           "billingModel": "per_seat",
-          "notes": "9.50 per member/mo at the annual-billing rate (page states up to 20% off vs monthly). Everything in Free plus custom forms, custom sites, unlimited charts, unlimited collaborative blocks, unlimited file uploads, basic connections, 30-day page history.",
+          "notes": "Month-to-month $12/member/mo; billed annually the page states up to 20% off. Three other readings of this vendor in this record give the annual rate as $10/member/mo, two give $9.50; unresolved, and a euro-serving vantage could not settle it. Everything in Free plus custom forms, custom sites, unlimited charts, unlimited collaborative blocks, unlimited file uploads, basic connections, 30-day page history.",
           "source": {
             "url": "https://www.notion.com/pricing",
             "accessedAt": "2026-09-03"
@@ -52,14 +52,14 @@
         },
         {
           "name": "Business",
-          "monthlyUsd": 19.5,
+          "monthlyUsd": 24,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
-          "annualDiscountPct": 20,
+          "annualDiscountPct": 17,
           "billingModel": "per_seat",
-          "notes": "19.50 per member/mo at the annual-billing rate (labeled Recommended; page states up to 20% off vs monthly). Adds Notion Agent, AI Meeting Notes, Enterprise Search, SAML SSO, granular database permissions, private teamspaces, premium connections, 90-day page history.",
+          "notes": "Month-to-month $24/member/mo; billed annually the page states up to 20% off. Three other readings of this vendor in this record give the annual rate as $20/member/mo, two give $19.50; unresolved, and a euro-serving vantage could not settle it. Adds Notion Agent, AI Meeting Notes, Enterprise Search, SAML SSO, granular database permissions, private teamspaces, premium connections, 90-day page history.",
           "source": {
             "url": "https://www.notion.com/pricing",
             "accessedAt": "2026-09-03"
@@ -549,6 +549,1071 @@
           }
         ],
         "provenance": "No HIPAA, SOC 2, or GDPR certifications found on bear.app or bear.app/faq (2026-06-15). Free trial confirmed as 7 days from bear.app FAQ page (2026-06-15); note the original plan provenance stated 14 days — current FAQ page states 7 days. Export formats, feature list, and free-tier limits confirmed from bear.app homepage and FAQ. Compliance fields set to null — no certification claims found."
+      }
+    },
+    {
+      "slug": "evernote",
+      "name": "Evernote",
+      "domain": "evernote.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Google Gmail",
+        "Google Drive",
+        "Google Calendar",
+        "Microsoft Outlook (email and calendar)",
+        "Slack",
+        "MCP (Claude, ChatGPT and other MCP-compatible tools)"
+      ],
+      "provenance": "VERIFIED against https://evernote.com/compare-plans. The comparison table renders plan names and limits but injects prices client-side, so USD figures were parsed from the same page's embedded context.pricingPerServiceLevel payload and match the draft exactly: STARTER MONTHLY 14.99 / ANNUAL 99 (priceAsMonthly 8.25) / WEEKLY 3.99; ADVANCED MONTHLY 24.99 / ANNUAL 249.99 (priceAsMonthly 20.83) / WEEKLY 6.99. The draft's exclusion of legacy SKUs is confirmed correct: the payload also carries PERSONAL (14.99/129.99), PROFESSIONAL (17.99/169.99), PLUS (5.49/49.99), BUSINESS and TEAMS (24.99/249.99), none of which appear in the live table — the page renders exactly four tier headings (Free, Starter, Advanced, Enterprise). New disclosure added this pass: the payload also carries an ENTERPRISE ANNUAL USD figure of 26522.5, which is NOT a published list price (the Enterprise column prints 'Custom' in all eight capacity rows and routes to sales), so monthlyUsd stays null. FAQ text confirmed verbatim: 'free trials of Evernote last for 7 days', 'You can try Enterprise free for 14 days', and 'Eligible college students can get 40% off a one-year subscription to Evernote Advanced'.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Priced per account, forever free. Hard caps stated in the comparison table: 50 notes, 1 notebook, 5 spaces, 20 tags, 200 attachments, sync on 1 device only, 1 GB storage, 1 external calendar connection. The single-device sync cap is the catch — a phone plus a laptop already breaks this tier.",
+          "source": {
+            "url": "https://evernote.com/compare-plans",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Starter",
+          "monthlyUsd": 14.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Per account. Month-to-month is $14.99/month (payload MONTHLY/USD price 14.99); paying yearly is $99.00/year, which the payload labels an $8.25/month equivalent. The page prints no saving percentage, so annualDiscountPct is left null. Includes 1,000 notes, 20 notebooks, 10 spaces, 100 tags, 1,000 attachments, 3 synced devices, 5 GB storage, 5 external calendars. The same payload carries a weekly Starter SKU at $3.99/week, which works out dearer than monthly. Paid plans carry a 7-day free trial.",
+          "source": {
+            "url": "https://evernote.com/compare-plans",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Advanced",
+          "monthlyUsd": 24.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Per account. Month-to-month is $24.99/month (payload MONTHLY/USD price 24.99); paying yearly is $249.99/year, labelled $20.83/month-equivalent in the payload. No saving percentage is published. Unlimited notes, notebooks, spaces, tags, attachments, device sync and storage — but the page footnotes that 'unlimited' is subject to safeguard limits applied to protect performance and prevent abuse. Adds AI Assistant, semantic search, AI Transcribe, AI Edit and the MCP connector. A weekly SKU at $6.99/week also sits in the payload. Eligible college students get 40% off a one-year Advanced subscription.",
+          "source": {
+            "url": "https://evernote.com/compare-plans",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only: the page prints 'Custom' in every capacity row and routes to sales rather than self-serve checkout, so monthlyUsd is null. Verified this pass: the page's embedded pricing payload does contain an ENTERPRISE ANNUAL USD value of 26522.5, but that figure is never displayed and is not a per-seat list price, so it was deliberately not used. Adds business data ownership, centralised account administration, user activity history with detailed logs, Single Sign-On, a dedicated Customer Success Manager and a priority support queue. The FAQ states 'You can try Enterprise free for 14 days'.",
+          "source": {
+            "url": "https://evernote.com/compare-plans",
+            "accessedAt": "2026-09-10"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": {
+            "url": "https://evernote.com/security",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": 7,
+        "keyIntegrations": [
+          "Google (Gmail, Drive, Calendar)",
+          "Microsoft Outlook (email, calendar)",
+          "Slack",
+          "MCP server for Claude / ChatGPT"
+        ],
+        "limits": [
+          "Free tier syncs to one device only and caps at 50 notes / 1 notebook / 1 GB",
+          "Starter caps at 1,000 notes, 3 devices and 5 GB",
+          "External calendar connections capped at 1 (Free) and 5 (Starter, Advanced)",
+          "Advanced 'unlimited' rows are footnoted as subject to anti-abuse safeguard limits",
+          "Weekly SKUs exist ($3.99 Starter, $6.99 Advanced) and cost more than monthly billing",
+          "Subscriptions bought via iTunes or Google Play must be managed through those stores"
+        ],
+        "keyFeatures": [
+          "Web Clipper plus document scanning with searchable OCR",
+          "AI Transcribe, AI Edit, AI Cleanup and semantic search across the note library",
+          "MCP connector so Claude, ChatGPT or any MCP client can read and use your notes",
+          "ISO 27001 certified as of November 2025 (certificate published on the security page)"
+        ],
+        "bestFor": [
+          "Long-standing Evernote libraries that are too large to migrate",
+          "Capture-heavy workflows needing OCR and clipping",
+          "Buyers who want an independently certified note vendor"
+        ],
+        "sources": [
+          {
+            "url": "https://evernote.com/compare-plans",
+            "accessedAt": "2026-09-10"
+          },
+          {
+            "url": "https://evernote.com/security",
+            "accessedAt": "2026-09-10"
+          }
+        ],
+        "provenance": "Plan limits, the 7-day trial, the 14-day Enterprise trial and the 40% student discount were re-read from the compare-plans table and its FAQ; prices come from that page's embedded USD pricing payload. The security page states ISO 27001 certification as of November 2025 and makes no SOC 2, HIPAA or GDPR claim, so all three compliance flags stay null rather than guessed."
+      }
+    },
+    {
+      "slug": "roam-research",
+      "name": "Roam Research",
+      "domain": "roamresearch.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "VERIFIED, no changes. roamresearch.com renders pricing entirely client-side — a direct fetch of the homepage returns only the tagline 'A note taking tool for networked thought' with no prices — so plan strings were re-read from the application bundle the site itself serves at https://roamresearch.com/js/compiled/main.js (2.99 MB, fetched today). The draft's quoted strings were confirmed byte-for-byte in the bundle's pricing UI: '$15' + '/ month' + '$180 / year' for the monthly Pro option, '$165' + '/ year' + '$13.75 / month' for the yearly option, and '$500' + '/ 5 years' + '$8.33 / month, $100 / year' for Believer. Trial copy also confirmed verbatim: \"You'll be charged after 31 days\" and '* Trial only valid if you've never had a plan'. Prices are printed with a bare '$' (Roam bills in USD).",
+      "plans": [
+        {
+          "name": "Pro",
+          "monthlyUsd": 15,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Per account. Month-to-month is $15/month, which the page annotates as $180/year at that rate; the yearly option is a separate $165/year, shown as $13.75/month. The saving is not printed as a percentage, so annualDiscountPct is null. Includes unlimited private or public Roam graphs, unlimited collaborators, and 'API access and Apps'. 31-day free trial (\"You'll be charged after 31 days\"), and the bundle states the trial is 'only valid if you've never had a plan' — returning users pay from day one.",
+          "source": {
+            "url": "https://roamresearch.com/js/compiled/main.js",
+            "accessedAt": "2026-09-10"
+          },
+          "corroboration": {
+            "url": "https://roamresearch.com/",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Believer",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "A five-year prepay, not a monthly subscription: '$500' '/ 5 years', with checkout copy confirming a single $500 charge today. The page labels the equivalent as '$8.33 / month, $100 / year', but no month-to-month Believer rate is sold, so monthlyUsd is null rather than $8.33. Everything in Pro plus First Access to New Features, Community Calls with the Team and Priority Support. A promotional-code field is offered on this tier.",
+          "source": {
+            "url": "https://roamresearch.com/js/compiled/main.js",
+            "accessedAt": "2026-09-10"
+          },
+          "corroboration": {
+            "url": "https://roamresearch.com/",
+            "accessedAt": "2026-09-10"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": 31,
+        "keyIntegrations": [
+          "Roam API (the Pro feature list reads 'API access and Apps')"
+        ],
+        "limits": [
+          "No forever-free plan — the only free access is the 31-day trial",
+          "Trial is valid only if the account has never had a plan",
+          "Believer cannot be bought monthly; it is a single $500 charge covering five years",
+          "Pro's yearly option ($165/year) is a distinct SKU from the $15/month rate"
+        ],
+        "keyFeatures": [
+          "Daily notes with bidirectional links and block-level references",
+          "Unlimited private or public graphs on the paid tier",
+          "Unlimited collaborators at no per-seat charge",
+          "Believer tier buys first access to features plus community calls with the team"
+        ],
+        "bestFor": [
+          "Networked-thought power users who work in daily notes",
+          "Researchers who want block references and public graphs",
+          "Buyers willing to prepay five years for the lowest effective rate"
+        ],
+        "sources": [
+          {
+            "url": "https://roamresearch.com/js/compiled/main.js",
+            "accessedAt": "2026-09-10"
+          },
+          {
+            "url": "https://roamresearch.com/",
+            "accessedAt": "2026-09-10"
+          }
+        ],
+        "provenance": "All plan names, prices, feature bullets and the 31-day trial wording were re-read from Roam's own application bundle because the marketing page is a client-rendered shell that serves no prices. Roam publishes no reachable compliance page, so hipaa, soc2 and gdpr are null."
+      }
+    },
+    {
+      "slug": "capacities",
+      "name": "Capacities",
+      "domain": "capacities.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Raycast",
+        "Web Highlights",
+        "WhatsApp",
+        "Telegram",
+        "Twitter/X",
+        "Email-to-Capacities",
+        "Calendar integrations",
+        "Public API"
+      ],
+      "provenance": "VERIFIED and the draft's annual-vs-monthly correction CONFIRMED. On https://capacities.io/pricing the 'Billed yearly' button carries the active styling (bg-white / shadow-sm) while 'Billed monthly' renders inactive, so the page's visible '$9.99 /month', 'from $12.49 /month' and '$8.33 /month' are ANNUAL-BILLED rates. The true month-to-month USD figures were read from the USD price table in that same page's own JS chunk at https://capacities.io/_nuxt/DREYll4_.js and match the draft exactly: currency 'USD' with capacities-pro-monthly {period:'month',price:11.99}, capacities-pro-yearly {period:'year',price:119.88}, capacities-believer-15-monthly {period:'month',price:14.99}, capacities-believer-15-yearly {period:'year',price:149.88}, turboPlusMonthlyPrice:10 and turboPlusYearlyPrice:100. Note 119.88/12 = 9.99, exactly the figure the page displays — independent proof the visible number is the annual rate. Also re-confirmed on the page: the '-16%' yearly badge, the Plus add-on's '2 months free' label, the free tier's '5 GB total, 100 MB per month afterwards', the 'Fair-use applies' footnote, and Paddle.com as Merchant of Record.",
+      "plans": [
+        {
+          "name": "Capacities Basic",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Forever free, and the page promises the core product 'is and will remain free'. Unlimited spaces, objects and blocks, sync across all devices, unlimited custom object types, full import/export, full-text search, offline support, view-only sharing, and capture from WhatsApp, Telegram, Twitter or email. The catch is media: the page states uploads up to '5 GB total, 100 MB per month afterwards'.",
+          "source": {
+            "url": "https://capacities.io/pricing",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Capacities Pro",
+          "monthlyUsd": 11.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 16,
+          "billingModel": "flat",
+          "notes": "Per user. Month-to-month is $11.99/month (USD price table: capacities-pro-monthly, price 11.99) — NOT the $9.99 the page shows, which is the annual-billed rate because the page loads with the yearly toggle active. Billed yearly it is $119.88/year, displayed as $9.99/month and badged -16%. Adds task management, AI assistant, calendar integrations, smart queries, task actions, related content, weblink and image analysis, version history, smart search, formulas for tables, Raycast/Web Highlights extensions and API access. 'Unlimited media uploads' is footnoted 'Fair-use applies', and the monthly AI budget is capped unless you add the Plus power-up. A free trial is offered in-app with no length stated and no card required. Paddle.com is the merchant of record.",
+          "source": {
+            "url": "https://capacities.io/pricing",
+            "accessedAt": "2026-09-10"
+          },
+          "corroboration": {
+            "url": "https://capacities.io/_nuxt/DREYll4_.js",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Capacities Believer",
+          "monthlyUsd": 14.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 16,
+          "billingModel": "flat",
+          "notes": "Per user, and priced 'from': month-to-month from $14.99/month (USD table: capacities-believer-15-monthly, price 14.99), or $149.88/year billed yearly, which the page displays as 'from $12.49/month'. The $12.49 is the annual rate, not the monthly one. Feature-identical to Pro — the FAQ says so explicitly — and what you buy is beta access to major new features plus supporting an independent team. Early Believers keep their old price while their subscription stays active, and Believer cannot be combined with a discount.",
+          "source": {
+            "url": "https://capacities.io/pricing",
+            "accessedAt": "2026-09-10"
+          },
+          "corroboration": {
+            "url": "https://capacities.io/_nuxt/DREYll4_.js",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Plus AI Power-Up (add-on)",
+          "monthlyUsd": 10,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "An add-on, NOT a standalone plan: it must be attached to Pro or Believer at checkout (choosing Pro+ or Believer+), so its cost rides on top of a base subscription and is deliberately never folded into the Pro or Believer monthlyUsd above. $10/month month-to-month (turboPlusMonthlyPrice:10), or $100/year billed annually (turboPlusYearlyPrice:100), which the page shows as $8.33/month and markets as '2 months free' rather than a percentage. It buys a much larger monthly AI budget and is the only way to top up AI usage beyond the included ceiling.",
+          "source": {
+            "url": "https://capacities.io/pricing",
+            "accessedAt": "2026-09-10"
+          },
+          "corroboration": {
+            "url": "https://capacities.io/_nuxt/DREYll4_.js",
+            "accessedAt": "2026-09-10"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Raycast",
+          "Web Highlights",
+          "WhatsApp / Telegram / Twitter capture",
+          "Email-to-Capacities",
+          "Calendar integrations",
+          "Public API"
+        ],
+        "limits": [
+          "The pricing page defaults to the yearly toggle, so its headline per-month prices sit ~16% below the true month-to-month rate",
+          "Free plan: 5 GB total media, then 100 MB per month",
+          "Paid 'unlimited media uploads' is subject to a stated fair-use policy",
+          "AI is budgeted monthly; exceeding it requires the paid $10/month Plus add-on on top of Pro or Believer, and top-ups are Plus-only",
+          "Trial exists in-app but no trial length is published",
+          "Billing runs through Paddle as merchant of record, which handles refunds"
+        ],
+        "keyFeatures": [
+          "Object-based PKM: typed objects and collections instead of folders",
+          "Daily notes with an AI assistant, smart queries and task actions",
+          "Weblink and image analysis that enriches saved content automatically",
+          "Formulas for tables plus version history on paid tiers"
+        ],
+        "bestFor": [
+          "People who want structure (typed objects) without building a database from scratch",
+          "Daily-note users who want AI search over their own library",
+          "Supporters who prefer funding a small independent team"
+        ],
+        "sources": [
+          {
+            "url": "https://capacities.io/pricing",
+            "accessedAt": "2026-09-10"
+          },
+          {
+            "url": "https://capacities.io/_nuxt/DREYll4_.js",
+            "accessedAt": "2026-09-10"
+          }
+        ],
+        "provenance": "Features, limits, the -16% yearly badge and the Paddle detail come from the rendered pricing page; the month-to-month USD amounts come from that page's own USD price table in its JS chunk, because the page ships with the yearly toggle preselected. No compliance claims appear anywhere on the pricing page, so all three flags are null."
+      }
+    },
+    {
+      "slug": "anytype",
+      "name": "Anytype",
+      "domain": "anytype.io",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "VERIFIED and the draft's annual-vs-monthly correction CONFIRMED with direct evidence. A raw fetch of https://anytype.io/pricing renders ONLY the dollar amounts $4, $8 and $16 — the yearly-billed rates — and the 'Yearly' toggle is the one carrying the '-20%' badge, so the visible per-month figures are annual rates. The month-to-month prices were read from the variants table in that page's own chunk at https://anytype.io/_nuxt/B3W-mPZd.js, which lists per tier: Plus monthly {price:5} / annual {price:4}; Pro monthly {price:10} / annual {price:8}; Ultra monthly {price:20} / annual {price:16}. The draft's $5 / $10 / $20 are therefore correct. Remote-storage tiers (100 MB / 1 GB / 10 GB / 100 GB), the '-20%' badge and the 30-day money-back guarantee were all re-confirmed in the rendered page.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Forever free. 100 MB of remote storage, 10 shared channels, unlimited private channels. Remote storage is the binding limit — local-first data is unmetered, but anything synced or shared counts against the 100 MB.",
+          "source": {
+            "url": "https://anytype.io/pricing",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Plus",
+          "monthlyUsd": 5,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "Per member. Month-to-month is $5/month (chunk variants table: monthly {price:5}) — NOT the $4 the page displays, which is the yearly-billed rate at the published -20%. 1 GB of remote storage, unlimited shared and private channels, and an ANY ID name of 9+ symbols. 30-day money-back guarantee, no free trial. Purchases made inside the iOS or Android app are processed by the App Store or Play Store, which convert to local currency, so the mobile price may differ from $5.",
+          "source": {
+            "url": "https://anytype.io/pricing",
+            "accessedAt": "2026-09-10"
+          },
+          "corroboration": {
+            "url": "https://anytype.io/_nuxt/B3W-mPZd.js",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 10,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "Per member. Month-to-month is $10/month (chunk: monthly {price:10}); the page's visible $8/month is the yearly-billed rate at -20%. 10 GB of remote storage, unlimited shared and private channels, ANY ID of 7+ symbols, 30-day money-back guarantee. Teammates and extra storage can be added at any time, so the real bill scales with people as well as tier.",
+          "source": {
+            "url": "https://anytype.io/pricing",
+            "accessedAt": "2026-09-10"
+          },
+          "corroboration": {
+            "url": "https://anytype.io/_nuxt/B3W-mPZd.js",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Ultra",
+          "monthlyUsd": 20,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "Per member. Month-to-month is $20/month (chunk: monthly {price:20}); the page's visible $16/month is the yearly-billed rate at -20%. 100 GB of remote storage, unlimited shared and private channels, ANY ID of 5+ symbols (shorter names cost more), 30-day money-back guarantee.",
+          "source": {
+            "url": "https://anytype.io/pricing",
+            "accessedAt": "2026-09-10"
+          },
+          "corroboration": {
+            "url": "https://anytype.io/_nuxt/B3W-mPZd.js",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Anytype for Business",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only. The pricing page describes it as one workspace for knowledge, projects, CRM and chat with SSO, an admin panel and self-hosting when needed, but prints no price and routes to an 'Explore Business' page instead of checkout, so monthlyUsd is null. Education buyers are pointed at a separate discount application.",
+          "source": {
+            "url": "https://anytype.io/pricing",
+            "accessedAt": "2026-09-10"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [],
+        "limits": [
+          "The pricing page renders the yearly toggle by default, so its headline $4/$8/$16 sit 20% below the true month-to-month $5/$10/$20",
+          "Remote storage is the metered resource: 100 MB free, 1 GB Plus, 10 GB Pro, 100 GB Ultra",
+          "Free tier caps shared channels at 10 (private channels are unlimited on every tier)",
+          "Shorter ANY ID names are gated behind higher tiers (9+/7+/5+ symbols)",
+          "No free trial — the page offers a 30-day money-back guarantee instead",
+          "App Store / Play Store purchases are repriced in local currency by the platform"
+        ],
+        "keyFeatures": [
+          "Local-first, end-to-end encrypted object graph — data stays on the device",
+          "Unlimited private channels even on the free tier",
+          "Named ANY ID identity whose minimum length is a paid perk",
+          "Self-hosting offered on the Business tier"
+        ],
+        "bestFor": [
+          "Privacy-first users who want local-first storage with optional sync",
+          "Small groups that need shared channels without per-seat SaaS pricing",
+          "Buyers who want typed objects without a cloud database"
+        ],
+        "sources": [
+          {
+            "url": "https://anytype.io/pricing",
+            "accessedAt": "2026-09-10"
+          },
+          {
+            "url": "https://anytype.io/_nuxt/B3W-mPZd.js",
+            "accessedAt": "2026-09-10"
+          }
+        ],
+        "provenance": "Tier names, storage limits, the -20% yearly badge, the 30-day money-back guarantee and the payment FAQ are from the rendered pricing page; the monthly/annual price pairs are from that page's own JS chunk because the page renders only the yearly figures. The pricing page names no third-party integrations and makes no compliance claims, so integrations is empty and all compliance flags are null."
+      }
+    },
+    {
+      "slug": "standard-notes",
+      "name": "Standard Notes",
+      "domain": "standardnotes.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "VERIFIED with a correction ADDED. a direct read is blocked with HTTP 403, so https://standardnotes.com/plans was retrieved directly and cross-checked against the page's own Gatsby data at https://standardnotes.com/page-data/plans/page-data.json, which holds the authoritative pricing arrays: CORE_PLAN 'Standard' pricing [{period:'month',price:0},{period:'year',price:0}]; PLUS_PLAN 'Productivity' pricing [{price:90,period:'year'},{price:299,period:'5 years'}]; PRO_PLAN 'Professional' pricing [{price:120,period:'year'},{price:349,period:'5 years'}]. CORRECTION the draft missed: both paid tiers also sell a FIVE-YEAR PREPAY — $299 Productivity and $349 Professional — omitted entirely from the draft. These are multi-year prepays, not monthly prices, so monthlyUsd correctly stays null on both tiers and the figures are recorded in notes. The draft's central claim survives: there is still no month-to-month price for either paid tier. Also re-confirmed verbatim: 'We don't have a trial system at present for our paid features', '100% refunds on any plan within 14 days (Productivity Plan) or 90 days (Professional Plan)', 'We offer students a 30% discount', 'Subscription sharing with up to 5 accounts' and 'No limit on file size (tested up to 2GB)'.",
+      "plans": [
+        {
+          "name": "Standard",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "A genuine forever-free account, not a trial. Verified this pass: the page's own data publishes $0 for BOTH a 'month' and a 'year' period, so monthlyUsd 0 is a literally published figure rather than a derived one. End-to-end encryption, unlimited device sync on web, desktop and mobile, plain-text notes, offline access, tags, per-note password protection, full encrypted or plaintext export, two-factor authentication, daily encrypted email backups, community support. The catch: plain text only (no Super notes, markdown editor or spreadsheets) and note revision history covers the current session only.",
+          "source": {
+            "url": "https://standardnotes.com/plans",
+            "accessedAt": "2026-09-10"
+          },
+          "corroboration": {
+            "url": "https://standardnotes.com/page-data/plans/page-data.json",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Productivity",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Per account, sold on two terms only: $90 / year, or a five-year prepay of $299 / 5 years (the 5-year option was missing from the draft and was added this pass). No month-to-month price is offered anywhere on the page, so monthlyUsd is null; the $299 is a multi-year prepay and likewise never a monthly figure. Adds the Super note type (markdown, rich text, checklists, code), spreadsheets with formulas, Daily Notebooks journaling, a built-in 2FA authenticator, folders, the Web Clipper, 1-year note revision history, sign-in email notifications and dedicated support. There is no free trial — the page states 'We don't have a trial system at present' and substitutes a 14-day 100% refund period. Students get 30% off.",
+          "source": {
+            "url": "https://standardnotes.com/plans",
+            "accessedAt": "2026-09-10"
+          },
+          "corroboration": {
+            "url": "https://standardnotes.com/page-data/plans/page-data.json",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Professional",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Per account, sold as $120 / year or a five-year prepay of $349 / 5 years (the 5-year option was missing from the draft and was added this pass). No monthly rate exists, so monthlyUsd is null. Everything in Productivity plus 100 GB encrypted cloud storage, subscription sharing with up to 5 accounts, no file-size limit (the page says tested up to 2 GB), offline file access, local file backups, Moments daily self-photos, maximum note revision history and hardware security key support. The refund window extends to 90 days on this tier. Shared across 5 accounts it is the cheapest family option here, but it is still annual-or-longer only.",
+          "source": {
+            "url": "https://standardnotes.com/plans",
+            "accessedAt": "2026-09-10"
+          },
+          "corroboration": {
+            "url": "https://standardnotes.com/page-data/plans/page-data.json",
+            "accessedAt": "2026-09-10"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [],
+        "limits": [
+          "Paid plans are sold on yearly or five-year terms only — no monthly option is published",
+          "A five-year prepay is offered on both paid tiers ($299 Productivity, $349 Professional)",
+          "No free trial at all; the page substitutes 14-day (Productivity) and 90-day (Professional) full-refund windows",
+          "Free tier is plain-text notes with revision history limited to the current session",
+          "Encrypted file storage exists only on Professional (100 GB); lower tiers have none",
+          "Subscription sharing caps at 5 accounts"
+        ],
+        "keyFeatures": [
+          "End-to-end encryption across all notes, tags and data",
+          "Super note type plus spreadsheets and Daily Notebooks on paid tiers",
+          "Doubles as a 2FA authenticator, with hardware security key support on Professional",
+          "Open-source clients and server"
+        ],
+        "bestFor": [
+          "Privacy-first note takers who want encryption as the default, not an add-on",
+          "Journalists, legal professionals and writers handling sensitive material",
+          "Families willing to share one Professional subscription across 5 accounts"
+        ],
+        "sources": [
+          {
+            "url": "https://standardnotes.com/plans",
+            "accessedAt": "2026-09-10"
+          },
+          {
+            "url": "https://standardnotes.com/page-data/plans/page-data.json",
+            "accessedAt": "2026-09-10"
+          }
+        ],
+        "provenance": "Prices come from the page's own Gatsby pricing arrays and are corroborated by the rendered text ('Professional $ 120 / year'). Feature lists, refund windows, the 30% student discount and the explicit no-trial statement come from the rendered page. The page makes no SOC 2, HIPAA or GDPR claim, so those flags are null despite the heavy security positioning."
+      }
+    },
+    {
+      "slug": "joplin",
+      "name": "Joplin",
+      "domain": "joplinapp.org",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Joplin Cloud sync",
+        "Dropbox sync",
+        "OneDrive sync",
+        "Joplin Web Clipper (Chrome, Firefox)",
+        "Email to Note",
+        "Plugin / Extension API"
+      ],
+      "provenance": "VERIFIED, no changes. https://joplinapp.org/plans/ was re-fetched and every figure matches the draft exactly, all printed in EUR with no USD list price and no currency switcher: Basic 2.99€/month or 2.40€/month yearly (28.69€/year); Pro 5.99€ or 4.79€ yearly (57.48€/year); Pro 100 GB 9.99€ or 7.99€ yearly (95.88€/year); Teams 7.99€ or 6.69€ yearly per user (80.28€/user/year); Server Business 3.33€ / 2.92€ / 2.50€ per user per month by seat band. monthlyUsd therefore stays null on every paid row and the EUR figures live in notes, unconverted. The 14-day trial and the GDPR sentence were confirmed verbatim.",
+      "plans": [
+        {
+          "name": "Joplin app (self-managed sync)",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "The app itself is free and open source on Windows, macOS, Linux, Android, iOS and terminal, funded by Joplin Cloud subscriptions and donations. Notes are stored in an open format with optional end-to-end encryption, and sync can run through third-party services — the homepage names Dropbox and OneDrive alongside Joplin Cloud — so you can use Joplin indefinitely at $0 and bring your own storage. Publishing notes to the web and notebook sharing are Joplin Cloud features, not app features.",
+          "source": {
+            "url": "https://joplinapp.org/plans/",
+            "accessedAt": "2026-09-10"
+          },
+          "corroboration": {
+            "url": "https://joplinapp.org/",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Joplin Cloud Basic",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Priced in EUR only: 2.99€/month month-to-month, or 2.40€/month billed yearly (28.69€/year). No USD price is published anywhere on the page, so monthlyUsd is null and no FX conversion was applied. Includes 2 GB storage, a 10 MB cap per note or attachment, publishing notes to the internet, unlimited device sync, the Joplin Web App, collaborating on a notebook someone shares with you, and Joplin Cloud AI (beta). Note the asymmetry a buyer gets caught by: Basic can collaborate on a notebook but cannot share one out — that needs Pro. 14-day free trial. No annual saving percentage is printed.",
+          "source": {
+            "url": "https://joplinapp.org/plans/",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Joplin Cloud Pro",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "EUR only: 5.99€/month, or 4.79€/month billed yearly (57.48€/year); monthlyUsd null because no USD price exists. 30 GB storage (upgradeable to 100 GB), 200 MB per note or attachment, plus Email to Note, a customisable publishing banner, sharing notebooks with others, share permissions and priority support. 14-day free trial.",
+          "source": {
+            "url": "https://joplinapp.org/plans/",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Joplin Cloud Pro 100 GB",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "EUR only: 9.99€/month, or 7.99€/month billed yearly (95.88€/year); monthlyUsd null. Identical to Pro except storage rises to 100 GB (the page presents it as a storage upgrade of Pro, toggled with 'Upgrade to 100 GB' / 'Back to 30 GB'). 200 MB per note or attachment. 14-day free trial.",
+          "source": {
+            "url": "https://joplinapp.org/plans/",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Joplin Cloud Teams",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "EUR only and charged per user: 7.99€/user/month, or 6.69€/user/month billed yearly (80.28€/user/year); monthlyUsd null. Minimum of 2 users, so the real floor is about 15.98€/month. 50 GB storage per user, 200 MB per note or attachment, all Pro features plus managing multiple users, consolidated billing and share permissions. 14-day free trial.",
+          "source": {
+            "url": "https://joplinapp.org/plans/",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Joplin Server Business (self-hosted)",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_seat",
+          "notes": "Self-hosted licence, EUR only, billed annually with no monthly option: 3.33€/user/month for 2-10 users, 2.92€/user/month for 11-50, 2.50€/user/month for 51+ — stated on the page as 40.00 / 35.00 / 30.00 EUR per user per year respectively. Unlimited storage and unlimited attachment size, source code available, all enterprise features; the Joplin Web App is the one feature marked unavailable on this tier. 14-day free trial. Bulk discounts for companies, associations and nonprofits are offered on request.",
+          "source": {
+            "url": "https://joplinapp.org/plans/",
+            "accessedAt": "2026-09-10"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": true,
+          "source": {
+            "url": "https://joplinapp.org/plans/",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        "freeTier": true,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Joplin Cloud",
+          "Dropbox sync",
+          "OneDrive sync",
+          "Web Clipper for Chrome and Firefox",
+          "Email to Note (Pro and above)",
+          "Plugin / Extension API"
+        ],
+        "limits": [
+          "All Joplin Cloud and Server prices are published in EUR only — no USD list price exists, so none was invented",
+          "Basic caps at 2 GB storage and 10 MB per note or attachment, and cannot share a notebook out (only receive)",
+          "Teams requires a minimum of 2 users",
+          "Joplin Server Business is billed annually only and excludes the Joplin Web App",
+          "Joplin Cloud AI is explicitly beta"
+        ],
+        "keyFeatures": [
+          "Fully open-source app with an open note format and optional end-to-end encryption",
+          "Self-host the server yourself, or use Joplin Cloud hosted in Paris, France",
+          "Publish any note to a public URL and collaborate on shared notebooks",
+          "Plugins, custom themes and a choice of Rich Text or Markdown editors"
+        ],
+        "bestFor": [
+          "Open-source purists who want an exit hatch from any vendor",
+          "EU buyers who need data resident in France under GDPR",
+          "Teams that would rather self-host the sync server than rent it"
+        ],
+        "sources": [
+          {
+            "url": "https://joplinapp.org/plans/",
+            "accessedAt": "2026-09-10"
+          },
+          {
+            "url": "https://joplinapp.org/",
+            "accessedAt": "2026-09-10"
+          }
+        ],
+        "provenance": "Prices, storage tiers, the feature comparison table and the 14-day trial come from joplinapp.org/plans/; the open-source, sync-target and E2EE claims come from the homepage. The gdpr flag stays true on the strength of an explicit statement re-read verbatim on the plans page today: 'Joplin Cloud data and servers are all located in France (Paris), thus your data benefits from strong data protection regulations including GDPR'. HIPAA and SOC 2 are never mentioned and stay null."
+      }
+    },
+    {
+      "slug": "amplenote",
+      "name": "Amplenote",
+      "domain": "amplenote.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Google Calendar (two-way task sync)",
+        "Microsoft Outlook calendar",
+        "Amplecap extension (Chrome, Firefox)",
+        "Desktop MCP Server",
+        "Amplenote API (by application)",
+        "Amplenote plugin directory"
+      ],
+      "provenance": "VERIFIED, no price changes. a direct read is blocked with HTTP 403, so https://www.amplenote.com/subscriptions/new was retrieved directly. The page's own markup confirms every figure AND its billing term verbatim — each price sits in a 'plan-billing-summary' block reading, for example, '$5.84<span>/month</span>' followed by '+ tax' and '• billed annually'. Prices confirmed: Pro $5.84, Unlimited $10.00, Founder $20.00, all annual-billed, plus the $96 Ample Agent Pro value claim. Plan names confirmed as Personal, Pro, Unlimited, Founder. Because all three paid prices are annual-billed rates with no month-to-month figure anywhere on the page, monthlyUsd stays null on all three — the draft was right. The draft's exclusion of the stale /help/plans_and_prices_billing lineup (Basic $6.99, Pro $11.99, Founder $29.99) is upheld: those plan names no longer match the live page.",
+      "plans": [
+        {
+          "name": "Personal",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Labelled 'Free forever' on the pricing page. Notes, tasks and calendar, mobile apps, and installation on Windows or macOS as a PWA. Two caveats printed right on the card: file uploads are capped at 5 MB and the plan is 'licensed for non-commercial use' — and customer support is explicitly marked 'not included'. Every new account also starts with a free two-week trial of Pro features.",
+          "source": {
+            "url": "https://www.amplenote.com/subscriptions/new",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Published as '$5.84/month + tax • billed annually' (wording confirmed verbatim in the page markup); the page shows no month-to-month rate, so monthlyUsd is null rather than 5.84. Adds the native desktop app, Graph View, the Peek/sidebar note viewer, two-way sync with a Google or Outlook calendar, 6 colour themes, tag sharing for group collaboration, Table of Contents insertion and file uploads larger than 5 MB. No annual saving percentage is printed on the live page. Downgrading or switching billing cycle requires emailing support rather than self-serve.",
+          "source": {
+            "url": "https://www.amplenote.com/subscriptions/new",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Unlimited",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Published as '$10.00/month + tax • billed annually'; no month-to-month rate is shown, so monthlyUsd is null. Everything in Pro plus Vault Notes (client-side encryption of sensitive content), publishing notes as web pages, access to the desktop MCP Server so an LLM can read and write to the account, and 8 colour themes. If the MCP server or published notes matter to you, this is the floor tier.",
+          "source": {
+            "url": "https://www.amplenote.com/subscriptions/new",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Founder",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Published as '$20.00/month + tax • billed annually'; monthlyUsd null for want of a published monthly rate. Everything in Unlimited plus a bundled install of the Ample Agent Pro plugin, which the page values at $96/year of savings, 10 colour themes, early access to new features, 10x votes on the feature roadmap, a dedicated Discord channel and a 1-on-1 onboarding call.",
+          "source": {
+            "url": "https://www.amplenote.com/subscriptions/new",
+            "accessedAt": "2026-09-10"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Two-way task sync with Google Calendar or Outlook",
+          "Amplecap clipper for Chrome and Firefox",
+          "Desktop MCP Server for LLM read/write access",
+          "Amplenote API (access by application)",
+          "Third-party plugin directory"
+        ],
+        "limits": [
+          "The pricing page publishes annual-billed rates only (+ tax); no month-to-month price is shown for any paid tier",
+          "Free Personal plan caps uploads at 5 MB, is licensed non-commercial, and excludes customer support",
+          "Vault Notes, published notes and the MCP server all require Unlimited or above",
+          "Native desktop app and calendar sync start at Pro",
+          "Plan downgrades and billing-cycle switches require emailing support",
+          "The vendor's own help page still lists a stale, higher price lineup that no longer matches checkout"
+        ],
+        "keyFeatures": [
+          "Task scheduling with scored, recurring tasks tied to the notes that created them",
+          "Vault Notes encrypted client-side with a key the servers never receive",
+          "Peek viewer for drag-and-dropping content between several open notes",
+          "Desktop MCP server exposing the account to LLM clients"
+        ],
+        "bestFor": [
+          "People who want notes and a real task scheduler in one app",
+          "Power users who miss a multi-note peek view",
+          "Buyers who want LLM access to their notes without a cloud AI add-on"
+        ],
+        "sources": [
+          {
+            "url": "https://www.amplenote.com/subscriptions/new",
+            "accessedAt": "2026-09-10"
+          },
+          {
+            "url": "https://www.amplenote.com/help/plans_and_prices_billing",
+            "accessedAt": "2026-09-10"
+          }
+        ],
+        "provenance": "Plan names, prices, billing terms and the two-week Pro trial come from the live pricing page markup; the billing mechanics (downgrade-by-email, refund policy) come from the official help page. That help page's own monthly prices are stale and were excluded. No compliance claims are published, so all three flags are null."
+      }
+    },
+    {
+      "slug": "reflect",
+      "name": "Reflect",
+      "domain": "reflect.app",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Readwise",
+        "Google Calendar",
+        "Microsoft Outlook",
+        "Chrome extension",
+        "Safari extension",
+        "Kindle highlights sync"
+      ],
+      "provenance": "VERIFIED, no changes. Confirmed this pass that https://reflect.app/pricing returns HTTP 404, so the site's 'Pricing' nav link resolves to the #pricing section of the homepage. That section's markup reads verbatim: 'One plan one price.' then a pricing-amount of '$10' with a pricing-period of '/month (billed annually)'. That is the only price on the site and it is explicitly an annual-billed rate with no month-to-month figure, so monthlyUsd is null rather than 10 — the draft was right. Trial copy confirmed verbatim as 'Start your 14-day trial'.",
+      "plans": [
+        {
+          "name": "Reflect",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "The single plan, marketed as 'One plan one price': the page prints '$10' and '/month (billed annually)'. Because that is an annual-billed rate and no month-to-month price is published, monthlyUsd is null; annualDiscountPct is null too because no saving percentage is printed. A buyer should expect to be charged for a year up front. Includes networked note-taking, Chrome and Safari web clipper, Kindle offline sync and highlights sync, end-to-end encryption, the iOS app, and the AI integration the site banners. There is no free tier; the only free access is the 14-day trial ('Start your 14-day trial').",
+          "source": {
+            "url": "https://reflect.app/#pricing",
+            "accessedAt": "2026-09-10"
+          },
+          "corroboration": {
+            "url": "https://reflect.app/",
+            "accessedAt": "2026-09-10"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": false,
+        "freeTrialDays": 14,
+        "keyIntegrations": [
+          "Readwise (reading highlights and notes)",
+          "Google and Outlook contacts and calendars",
+          "Chrome and Safari web clipper",
+          "Kindle highlights sync"
+        ],
+        "limits": [
+          "Single plan only — no tiers, and no feature-gated upgrade path",
+          "Price is published as an annual-billed monthly rate; no month-to-month option is shown",
+          "reflect.app/pricing returns 404 — the only pricing surface is the homepage #pricing section",
+          "No forever-free tier; 14-day trial only",
+          "Team or multi-seat pricing is not published on the site"
+        ],
+        "keyFeatures": [
+          "Networked note-taking with daily notes and backlinks",
+          "End-to-end encryption on notes",
+          "Kindle offline sync plus Readwise highlight import",
+          "Built-in AI assistant integration"
+        ],
+        "bestFor": [
+          "Daily-note users who want one price and no tier decisions",
+          "Heavy readers syncing Kindle and Readwise highlights into notes",
+          "Calendar-driven note takers who want meetings pulled in automatically"
+        ],
+        "sources": [
+          {
+            "url": "https://reflect.app/",
+            "accessedAt": "2026-09-10"
+          },
+          {
+            "url": "https://reflect.app/#pricing",
+            "accessedAt": "2026-09-10"
+          }
+        ],
+        "provenance": "The single price and its '(billed annually)' qualifier, the 14-day trial copy and the integration list were re-read from the homepage markup, which is where the site's Pricing link resolves because /pricing 404s. Reflect publishes no compliance page, so hipaa, soc2 and gdpr are null even though the page advertises end-to-end encryption."
+      }
+    },
+    {
+      "slug": "supernotes",
+      "name": "Supernotes",
+      "domain": "supernotes.app",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [
+        "Supernotes API (full API access on Unlimited)"
+      ],
+      "provenance": "VERIFIED with a notes refinement. https://supernotes.app/pricing renders with the 'Yearly' term preselected and shows Unlimited as '£6' '/ month' with '£72 billed annually'; the Yearly term carries a 25% saving badge and the 4-Year licence a 50% badge. Confirmed the page's currency control lists GBP as the selected base (with EUR, USD, CAD, AUD, NZD, BRL, JPY, CNY, CHF as display options only) and the FAQ states: 'We're based in London, UK. Stripe transactions are charged in Great British Pound, but we accept most currencies... automatically converted using today's exchange rates.' There is therefore no fixed USD list price and monthlyUsd stays null rather than an FX estimate. The month-to-month and 4-Year amounts are computed client-side and were absent from the fetched HTML, so no monthly figure was invented. Free-tier copy confirmed verbatim as 'Start with 100 cards' / 'Earn by completing achievements', and the 1200-character soft limit confirmed. CORRECTION to the draft's notes: the student discount is not a single 'up to 63%' — the FAQ specifies 50% off with the Student Yearly plan and 63% off with the Student 4-Year licence.",
+      "plans": [
+        {
+          "name": "Starter",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free forever (£0), and the page stresses 'all essential features are free'. Mobile, desktop and web apps for Mac, Windows, Linux, Android and iOS, fast sync, full offline create/edit, heatmap calendar, realtime collaboration and publishing, plus '49 more features'. The one real limit is cards: the page says 'Start with 100 cards', earned by completing achievements, and the cap can be raised by referring friends — the FAQ states each referral adds 20 cards. Hit the cap and you keep viewing and editing existing cards but can no longer create, like or join new ones.",
+          "source": {
+            "url": "https://supernotes.app/pricing",
+            "accessedAt": "2026-09-10"
+          }
+        },
+        {
+          "name": "Unlimited",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 25,
+          "billingModel": "flat",
+          "notes": "Published in GBP: £6/month billed annually, i.e. £72 billed annually, as displayed with the Yearly term preselected. The page badges Yearly as 25% off and a 4-Year licence as 50% off (annualDiscountPct 25 is the page's own printed figure, not a derived one). The month-to-month and 4-Year amounts render client-side and were not present in the fetched page, and because Supernotes charges through Stripe in GBP and converts other currencies at daily exchange rates, no fixed USD list price exists — so monthlyUsd is null and no conversion was applied. Unlimited cards, AI superpowers, full API and integrations, flashcards/tables/maps, supporter badge and priority support — note that priority support is promised only on the Unlimited Yearly plan or the 4-Year licence, not on monthly. Students get 50% off with the Student Yearly plan or 63% off with the Student 4-Year licence (.edu or .ac.uk address).",
+          "source": {
+            "url": "https://supernotes.app/pricing",
+            "accessedAt": "2026-09-10"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [
+          "Supernotes full API (Unlimited tier gains trusted status and higher API limits)"
+        ],
+        "limits": [
+          "Free Starter starts at 100 cards, earned through achievements; referrals add 20 cards each",
+          "Cards carry a soft limit of 1200 characters to push you toward smaller notes",
+          "Prices are set and charged in GBP by Stripe; all other currencies are daily FX conversions, so no fixed USD price exists",
+          "App Store / Play Store prices are fixed separately and may differ",
+          "Priority support applies only to Unlimited Yearly or the 4-Year licence, not monthly",
+          "The month-to-month price is computed client-side and is not present in the page source"
+        ],
+        "keyFeatures": [
+          "Card-based atomic notes with realtime multiplayer editing and publishing",
+          "Heatmap calendar that ties thoughts to days",
+          "Flashcards, tables and maps as paid layout types",
+          "Offline-first sync across Mac, Windows, Linux, Android, iOS and web with no plugins to configure"
+        ],
+        "bestFor": [
+          "Students and revisers who want flashcards built into their notes",
+          "People who think in small atomic cards rather than long documents",
+          "Buyers happy to pay a two-person indie team in GBP"
+        ],
+        "sources": [
+          {
+            "url": "https://supernotes.app/pricing",
+            "accessedAt": "2026-09-10"
+          }
+        ],
+        "provenance": "The 100-card free allowance, the 1200-character soft limit, the 25%/50% term badges, the 50%/63% student discounts, the priority-support caveat and the GBP-with-daily-FX policy were all re-read from the pricing page and its FAQ today. No compliance claims appear, so all three flags are null, and the integrations list is limited to the API the page actually names."
       }
     }
   ]

@@ -1,7 +1,7 @@
 {
   "vertical": "whatsapp-business",
   "generatedAt": "2026-06-18",
-  "methodologyNotes": "Pricing re-verified by fetching each vendor's official pricing page via WebFetch (wati.io/pricing, respond.io/pricing + respond.io/security, trengo.com/pricing, aisensy.com/pricing/usd, gallabox.com/pricing, doubletick.io/pricing, zoko.io/pricing, 360dialog.com/pricing + docs.360dialog.com/docs/get-started/pricing, twilio.com/en-us/whatsapp/pricing). WATI's pricing page renders prices via dynamic JS not extractable by WebFetch; prices were corroborated across multiple independent analyses (costbench.com, flowcart.ai) plus WATI help-center references and corrected from the draft's outdated $29/$99/$249 to the current $59/$119/$279 (annual-billing headline). Interakt's USD page (interakt.shop/pricing-us) returns navigation-only content via WebFetch; entry plan ~$12/mo is corroborated, but the Growth-tier USD figure is reported inconsistently across third-party sources ($35, $41, and $55) and could not be confirmed on an official live page, so it is set to null per NULL-BEATS-A-GUESS rather than asserting an unverified number. Monthly prices reflect base platform fee only; Meta per-conversation/template charges are excluded from monthlyUsd and noted per plan. Trengo prices are EUR as published; no official USD price exists so monthlyUsd is null with EUR in notes. 360dialog USD prices taken from the official USD toggle in docs.360dialog.com. accessedAt 2026-06-18.",
+  "methodologyNotes": "Pricing re-verified by fetching each vendor's official pricing page (wati.io/pricing, respond.io/pricing + respond.io/security, trengo.com/pricing, aisensy.com/pricing/usd, gallabox.com/pricing, doubletick.io/pricing, zoko.io/pricing, 360dialog.com/pricing + docs.360dialog.com/docs/get-started/pricing, twilio.com/en-us/whatsapp/pricing). WATI's pricing page renders prices via dynamic JS not extractable; prices were corroborated across multiple independent analyses (costbench.com, flowcart.ai) plus WATI help-center references and corrected from the draft's outdated $29/$99/$249 to the current $59/$119/$279 (annual-billing headline). Interakt's USD page (interakt.shop/pricing-us) returns navigation-only content; entry plan ~$12/mo is corroborated, but the Growth-tier USD figure is reported inconsistently across third-party sources ($35, $41, and $55) and could not be confirmed on an official live page, so it is set to null per NULL-BEATS-A-GUESS rather than asserting an unverified number. Monthly prices reflect base platform fee only; Meta per-conversation/template charges are excluded from monthlyUsd and noted per plan. Trengo prices are EUR as published; no official USD price exists so monthlyUsd is null with EUR in notes. 360dialog USD prices taken from the official USD toggle in docs.360dialog.com. accessedAt 2026-06-18.",
   "vendors": [
     {
       "slug": "wati",
@@ -19,7 +19,7 @@
         "Google Sheets",
         "Zoho CRM"
       ],
-      "provenance": "Plan prices corrected from outdated draft values; current WATI tiers are $59/$119/$279 (annual-billing headline) per costbench.com and flowcart.ai analyses and WATI help center, since wati.io/pricing renders dynamically and is not WebFetch-extractable. GDPR confirmed via support.wati.io help article. Re-verified 2026-09-03 against the live pricing page; published figures unchanged.",
+      "provenance": "Plan prices corrected from outdated draft values; current WATI tiers are $59/$119/$279 (annual-billing headline) per costbench.com and flowcart.ai analyses and WATI help center, since wati.io/pricing renders dynamically and is not a direct read-extractable. GDPR confirmed via support.wati.io help article. Re-verified 2026-09-03 against the live pricing page; published figures unchanged.",
       "plans": [
         {
           "name": "Growth",
@@ -31,10 +31,10 @@
           "annualDiscountPct": 14,
           "billingModel": "flat",
           "setupFeeUsd": 0,
-          "notes": "$59/month is the annual-billing headline; month-to-month is reported higher (~$69). 3 users hard cap (no expansion). Broadcasts and automation triggers capped; AI co-pilot credits included. Meta per-message charges apply separately (WATI applies ~20% markup on Meta rates). Draft's $29/month was outdated/incorrect.",
+          "notes": "$69/month month-to-month; $59/month on an annual term (6900 monthly / 70800 a year, in cents, from WATI's geo endpoint). 3 users hard cap (no expansion). Broadcasts and automation triggers capped; AI co-pilot credits included. Meta per-message charges apply separately (WATI applies ~20% markup on Meta rates). wati.io/pricing ships every price node empty and fills it in the browser from WATI's own geo endpoint, which answers in the reader's local currency, so the same page prints a euro figure for a European reader where it prints this dollar one for an American. The figure here is read straight from that endpoint with countryCode=US, in cents, so it is WATI's own number on the month-to-month basis this field records. An earlier draft of this record carried $29/month, which was wrong.",
           "source": {
-            "url": "https://www.wati.io/pricing/",
-            "accessedAt": "2026-09-09"
+            "url": "https://live-mt-server.wati.io/wati/api/v1/pricing/getPlansByGeo?countryCode=US",
+            "accessedAt": "2026-09-10"
           }
         },
         {
@@ -47,10 +47,10 @@
           "annualDiscountPct": 20,
           "billingModel": "flat",
           "setupFeeUsd": 0,
-          "notes": "$119/month annual-billing headline; month-to-month reported ~$149. 5 users included; additional users $24/user/month; unlimited broadcasts; AI co-pilot credits; integrations including HubSpot. Meta per-message charges apply separately. Draft's $99/month was outdated/incorrect.",
+          "notes": "$149/month month-to-month; $119/month on an annual term (14900 monthly / 142800 a year, in cents, from WATI's geo endpoint). 5 users included; additional users $24/user/month; unlimited broadcasts; AI co-pilot credits; integrations including HubSpot. Meta per-message charges apply separately. wati.io/pricing ships every price node empty and fills it in the browser from WATI's own geo endpoint, which answers in the reader's local currency, so the same page prints a euro figure for a European reader where it prints this dollar one for an American. The figure here is read straight from that endpoint with countryCode=US, in cents, so it is WATI's own number on the month-to-month basis this field records. An earlier draft of this record carried $99/month, which was wrong.",
           "source": {
-            "url": "https://www.wati.io/pricing/",
-            "accessedAt": "2026-09-09"
+            "url": "https://live-mt-server.wati.io/wati/api/v1/pricing/getPlansByGeo?countryCode=US",
+            "accessedAt": "2026-09-10"
           }
         },
         {
@@ -63,10 +63,10 @@
           "annualDiscountPct": 20,
           "billingModel": "flat",
           "setupFeeUsd": 0,
-          "notes": "$279/month annual-billing headline; month-to-month reported ~$349. 5 users included; additional users $69/user/month; unlimited broadcasts with volume discounts; highest AI co-pilot credits; unlimited integrations including Salesforce. Meta per-message charges apply separately. Draft's $249/month was outdated/incorrect.",
+          "notes": "$349/month month-to-month; $279/month on an annual term (34900 monthly / 334800 a year, in cents, from WATI's geo endpoint). 5 users included; additional users $69/user/month; unlimited broadcasts with volume discounts; highest AI co-pilot credits; unlimited integrations including Salesforce. Meta per-message charges apply separately. wati.io/pricing ships every price node empty and fills it in the browser from WATI's own geo endpoint, which answers in the reader's local currency, so the same page prints a euro figure for a European reader where it prints this dollar one for an American. The figure here is read straight from that endpoint with countryCode=US, in cents, so it is WATI's own number on the month-to-month basis this field records. An earlier draft of this record carried $249/month, which was wrong.",
           "source": {
-            "url": "https://www.wati.io/pricing/",
-            "accessedAt": "2026-09-09"
+            "url": "https://live-mt-server.wati.io/wati/api/v1/pricing/getPlansByGeo?countryCode=US",
+            "accessedAt": "2026-09-10"
           }
         }
       ],
@@ -116,7 +116,7 @@
             "accessedAt": "2026-06-18"
           }
         ],
-        "provenance": "Prices corrected to current $59/$119/$279 (annual headline) per costbench.com and flowcart.ai; compliance from WATI help center."
+        "provenance": "Prices read first-party from WATI's own geo pricing endpoint with countryCode=US on 2026-09-10, in cents: Growth 6900/70800, Pro 14900/142800, Business 34900/334800 — month-to-month and annual respectively. This replaces two third-party comparison sites (costbench.com, now 404; flowcart.ai, which publishes the annual figures as $49/$99 and disagrees with the vendor). The public pricing page carries no figure in its HTML at all. Compliance from WATI help center."
       }
     },
     {
@@ -149,7 +149,7 @@
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
-          "annualDiscountPct": 20,
+          "annualDiscountPct": null,
           "billingModel": "flat",
           "setupFeeUsd": 0,
           "notes": "5 users included; additional users $12/month each; unlimited MACs; team inboxes, mobile app, AI Prompt, basic reports, 2FA. Annual billing saves up to 20% ($948/year). WhatsApp/Meta fees charged separately.",
@@ -165,7 +165,7 @@
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
-          "annualDiscountPct": 20,
+          "annualDiscountPct": null,
           "billingModel": "flat",
           "setupFeeUsd": 0,
           "notes": "10 users included; additional users $20/month each; 1,000 Monthly Active Contacts (MACs) included; overage $12/100 MACs; broadcasts, workflows, AI Agents, advanced reports, Zapier/Make, developer API. Annual saves up to 20% ($1,908/year). Meta fees separate.",
@@ -181,7 +181,7 @@
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
-          "annualDiscountPct": 20,
+          "annualDiscountPct": null,
           "billingModel": "flat",
           "setupFeeUsd": 0,
           "notes": "10 users included; additional users $24/month each; 1,000 MACs included; overage $15/100 MACs; phone/email masking, multiple workspaces, webhooks, SSO, custom channels. Annual saves up to 20% ($3,348/year). Meta fees separate.",
@@ -275,7 +275,7 @@
         "Razorpay",
         "Google Sheets"
       ],
-      "provenance": "Official USD pricing page (interakt.shop/pricing-us) returns navigation-only content via WebFetch. Entry plan ~$12/mo corroborated by multiple third parties. Growth-tier USD figure reported inconsistently ($35, $41, $55 across sources) with no official live confirmation, so it is set to null. Plan naming also differs across sources (Home vs Starter); kept as published in draft. Re-verified 2026-09-03 against the live pricing page — Growth: quote-only -> $55 (third-party figure).",
+      "provenance": "Official USD pricing page (interakt.shop/pricing-us) returns navigation-only content. Entry plan ~$12/mo corroborated by multiple third parties. Growth-tier USD figure reported inconsistently ($35, $41, $55 across sources) with no official live confirmation, so it is set to null. Plan naming also differs across sources (Home vs Starter); kept as published in draft. Re-verified 2026-09-03 against the live pricing page — Growth: quote-only -> $55 (third-party figure).",
       "plans": [
         {
           "name": "Home",
@@ -303,7 +303,7 @@
           "annualDiscountPct": 20,
           "billingModel": "flat",
           "setupFeeUsd": 0,
-          "notes": "USD monthly price could NOT be verified — third-party sources report $35, $41, and $55 with no agreement and the official USD page is not WebFetch-extractable, so monthlyUsd is set to null (draft's $55 was unverified). India pricing is ~Rs 2,499-2,799/month. Advanced automation, chatbots, rich media templates, WhatsApp Payments, conversion analytics. Meta per-message charges apply separately with a markup on Meta base rates.",
+          "notes": "USD monthly price could NOT be verified — third-party sources report $35, $41, and $55 with no agreement and the official USD page is not a direct read-extractable, so monthlyUsd is set to null (draft's $55 was unverified). India pricing is ~Rs 2,499-2,799/month. Advanced automation, chatbots, rich media templates, WhatsApp Payments, conversion analytics. Meta per-message charges apply separately with a markup on Meta base rates.",
           "source": {
             "url": "https://www.interakt.shop/pricing-us/",
             "accessedAt": "2026-09-03"
@@ -349,7 +349,7 @@
             "accessedAt": "2026-06-18"
           }
         ],
-        "provenance": "Entry plan ~$12/mo corroborated by third-party sources; Growth USD set to null due to conflicting unverified figures; official USD page not WebFetch-extractable."
+        "provenance": "Entry plan ~$12/mo corroborated by third-party sources; Growth USD set to null due to conflicting unverified figures; official USD page not a direct read-extractable."
       }
     },
     {
@@ -615,54 +615,54 @@
         "LeadSquared",
         "WebEngage"
       ],
-      "provenance": "Pricing fetched from gallabox.com/pricing on 2026-06-18; USD annual-billing prices Basic $89, Essential $197, Advanced $377 all confirmed; quarterly figures and AI credits confirmed. Re-verified 2026-09-03 against the live pricing page — Basic: $89 -> $112; Essential: $197 -> $248; Advanced: $377 -> $474.",
+      "provenance": "https://gallabox.com/pricing, re-read 2026-09-10. The record previously held the annual-billed rate in the month-to-month field — $112, $248 and $474 — which the page labels \"per month, billed annually\". Gallabox publishes no month-to-month term: the shortest is quarterly, at $150, $331 and $632 per month, and those are now the recorded figures, with the annual rate and its 25% saving in each plan's notes. Enterprise remains quote-only. (Previous provenance: Pricing fetched from gallabox.com/pricing on 2026-06-18; USD annual-billing prices Basic $89, Essential $197, Advanced $377 all confirmed; quarterly figures and AI credits confirmed. Re-verified 2026-09-03 against the li)",
       "plans": [
         {
           "name": "Basic",
-          "monthlyUsd": 112,
+          "monthlyUsd": 150,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
-          "annualDiscountPct": 26,
+          "annualDiscountPct": 25,
           "billingModel": "flat",
           "setupFeeUsd": 0,
-          "notes": "3 users hard cap; 500 AI credits/month; 1 WhatsApp channel, 1 Instagram, 1 web widget; 10K broadcast contacts. Annual price $89/month (quarterly $120/month). Meta per-message charges apply separately.",
+          "notes": "$150/mo billed quarterly — the shortest term Gallabox publishes; there is no month-to-month option. $112/mo billed annually (25% off). The page also prints INR and AED cards at the same terms. Meta per-message charges apply separately.",
           "source": {
             "url": "https://gallabox.com/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-12"
           }
         },
         {
           "name": "Essential",
-          "monthlyUsd": 248,
+          "monthlyUsd": 331,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
-          "annualDiscountPct": 26,
+          "annualDiscountPct": 25,
           "billingModel": "flat",
           "setupFeeUsd": 0,
-          "notes": "6 users included; additional users $18/month each; 2,000 AI credits/month; 500K broadcast contacts. Annual price $197/month (quarterly $267/month). Meta per-message charges apply separately.",
+          "notes": "$331/mo billed quarterly — the shortest term Gallabox publishes; there is no month-to-month option. $248/mo billed annually (25% off). The page also prints INR and AED cards at the same terms. Meta per-message charges apply separately.",
           "source": {
             "url": "https://gallabox.com/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-12"
           }
         },
         {
           "name": "Advanced",
-          "monthlyUsd": 474,
+          "monthlyUsd": 632,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
-          "annualDiscountPct": 26,
+          "annualDiscountPct": 25,
           "billingModel": "flat",
           "setupFeeUsd": 0,
-          "notes": "10 users included; additional users $24/month each; 8,000 AI credits/month; unlimited channels; 1M broadcast contacts. Annual price $377/month (quarterly $507/month). Meta per-message charges apply separately.",
+          "notes": "$632/mo billed quarterly — the shortest term Gallabox publishes; there is no month-to-month option. $474/mo billed annually (25% off). The page also prints INR and AED cards at the same terms. Meta per-message charges apply separately.",
           "source": {
             "url": "https://gallabox.com/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-12"
           }
         },
         {

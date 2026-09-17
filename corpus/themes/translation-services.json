@@ -1,7 +1,7 @@
 {
   "vertical": "translation-services",
   "generatedAt": "2026-06-15",
-  "methodologyNotes": "Pricing fetched from official vendor pricing pages and reputable 2026 comparison sources via WebFetch/WebSearch on 2026-06-16/17. Access notes by vendor: (1) DeepL — official page (deepl.com/en/pro) JS-renders and returned nav shell only; prices sourced from eesel.ai/blog/deepl-pricing and checkthat.ai/brands/deepl/pricing, two independent 2026 aggregators that both independently confirm Individual $8.74/mo, Team $28.74/user/mo, Business $57.49/user/mo (annual-only billing). DeepL is annual-only for paid plans; no month-to-month option published. (2) Google Cloud Translation — official GCP pricing page rendered cleanly; all figures direct from cloud.google.com/translate/pricing. (3) Smartling — official pricing page returned 404; vendr.com, saasworthy.com, and crozdesk.com all confirm no published self-serve pricing; Smartling operates entirely on custom quotes; all plans set monthlyUsd=null. (4) Lokalise — official page (lokalise.com/pricing) confirmed Explorer $144/mo, Growth $499/mo, Advanced $999/mo monthly prices; corroborated by aiproductivity.ai and the G2 listing; annual discount rate not published; the new plan structure (2025 migration from key-based to word-based billing) confirmed via docs.lokalise.com/en/articles/11694835. (5) Phrase — official phrase.com/pricing rendered with clear prices; Freelancer $27/mo, Software UI/UX $525/mo, Professional $525/mo, Team $1245/mo all billed annually only; corroborated by saasworthy. (6) Crowdin — official page (crowdin.com/pricing) JS-renders; prices sourced from tekpon.com/software/crowdin/pricing which independently confirms Pro $59/mo ($50/mo annual), Team $179/mo ($150/mo annual), Team+ $450/mo (same monthly/annual); corroborated by costbench.com/software/localization/crowdin. Crowdin does not charge per seat. (7) Weglot — official weglot.com/pricing rendered cleanly; annual discount is exactly 2 months free (16.67%), confirmed by the page itself. monthlyUsd for annually-billed plans is the per-month equivalent derived from annual total. annualDiscountPct calculated from published monthly vs. annual-monthly rates. minutesIncluded, callsIncluded, overagePerMin, overagePerCall are null on all plans (non-telephony services). setupFeeUsd not applicable to any vendor. For Google Cloud Translation (usage-metered API): monthlyUsd=0 represents the free tier (500K chars/month at no charge); unit rates recorded in notes.",
+  "methodologyNotes": "Pricing fetched from official vendor pricing pages and reputable 2026 comparison sources on 2026-06-16/17. Access notes by vendor: (1) DeepL — official page (deepl.com/en/pro) JS-renders and returned nav shell only; prices sourced from eesel.ai/blog/deepl-pricing and checkthat.ai/brands/deepl/pricing, two independent 2026 aggregators that both independently confirm Individual $8.74/mo, Team $28.74/user/mo, Business $57.49/user/mo (annual-only billing). DeepL is annual-only for paid plans; no month-to-month option published. (2) Google Cloud Translation — official GCP pricing page rendered cleanly; all figures direct from cloud.google.com/translate/pricing. (3) Smartling — official pricing page returned 404; vendr.com, saasworthy.com, and crozdesk.com all confirm no published self-serve pricing; Smartling operates entirely on custom quotes; all plans set monthlyUsd=null. (4) Lokalise — official page (lokalise.com/pricing) confirmed Explorer $144/mo, Growth $499/mo, Advanced $999/mo monthly prices; corroborated by aiproductivity.ai and the G2 listing; annual discount rate not published; the new plan structure (2025 migration from key-based to word-based billing) confirmed via docs.lokalise.com/en/articles/11694835. (5) Phrase — official phrase.com/pricing rendered with clear prices; Freelancer $27/mo, Software UI/UX $525/mo, Professional $525/mo, Team $1245/mo all billed annually only; corroborated by saasworthy. (6) Crowdin — official page (crowdin.com/pricing) JS-renders; prices sourced from tekpon.com/software/crowdin/pricing which independently confirms Pro $59/mo ($50/mo annual), Team $179/mo ($150/mo annual), Team+ $450/mo (same monthly/annual); corroborated by costbench.com/software/localization/crowdin. Crowdin does not charge per seat. (7) Weglot — official weglot.com/pricing rendered cleanly; annual discount is exactly 2 months free (16.67%), confirmed by the page itself. monthlyUsd for annually-billed plans is the per-month equivalent derived from annual total. annualDiscountPct calculated from published monthly vs. annual-monthly rates. minutesIncluded, callsIncluded, overagePerMin, overagePerCall are null on all plans (non-telephony services). setupFeeUsd not applicable to any vendor. For Google Cloud Translation (usage-metered API): monthlyUsd=0 represents the free tier (500K chars/month at no charge); unit rates recorded in notes.",
   "vendors": [
     {
       "slug": "deepl",
@@ -46,9 +46,9 @@
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
-          "annualDiscountPct": 16,
+          "annualDiscountPct": null,
           "billingModel": "flat",
-          "notes": "Annual-only billing at $8.74/month (billed annually). Single user. 300,000 characters/month, 3 file translations/month (30 MB max). No month-to-month option published.",
+          "notes": "Annual-only billing at $8.74/month (billed annually). Single user. 300,000 characters/month, 3 file translations/month (30 MB max). No month-to-month option published. The vendor sells no month-to-month term, so annualDiscountPct is null: there is no undiscounted price for a saving to be a percentage of.",
           "source": {
             "url": "https://www.deepl.com/en/pro",
             "accessedAt": "2026-09-05"
@@ -65,9 +65,9 @@
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
-          "annualDiscountPct": 16,
+          "annualDiscountPct": null,
           "billingModel": "per_seat",
-          "notes": "Annual-only billing at $28.74/user/month (billed annually). Per-seat pricing. 1,000,000 characters/user/month, 20 file translations/month (30 MB max). No month-to-month option published.",
+          "notes": "Annual-only billing at $28.74/user/month (billed annually). Per-seat pricing. 1,000,000 characters/user/month, 20 file translations/month (30 MB max). No month-to-month option published. The vendor sells no month-to-month term, so annualDiscountPct is null: there is no undiscounted price for a saving to be a percentage of.",
           "source": {
             "url": "https://www.deepl.com/en/pro",
             "accessedAt": "2026-09-05"
@@ -84,9 +84,9 @@
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
-          "annualDiscountPct": 16,
+          "annualDiscountPct": null,
           "billingModel": "per_seat",
-          "notes": "Annual-only billing at $57.49/user/month (billed annually). Per-seat pricing. Unlimited characters (fair usage policy), 100 file translations/month (30 MB max). Includes Write Pro add-on. No month-to-month option published.",
+          "notes": "Annual-only billing at $57.49/user/month (billed annually). Per-seat pricing. Unlimited characters (fair usage policy), 100 file translations/month (30 MB max). Includes Write Pro add-on. No month-to-month option published. The vendor sells no month-to-month term, so annualDiscountPct is null: there is no undiscounted price for a saving to be a percentage of.",
           "source": {
             "url": "https://www.deepl.com/en/pro",
             "accessedAt": "2026-09-05"
@@ -187,7 +187,7 @@
           "billingModel": "flat",
           "notes": "First 500,000 characters/month free (as a $10/month credit applied collectively to Basic and Advanced). Credit does not roll over. Overage: $20/million characters (up to 1B chars/month). Usage-metered; no flat subscription. Charges per character (code point) including whitespace.",
           "source": {
-            "url": "https://cloud.google.com/translate/pricing",
+            "url": "https://cloud.google.com/products/translate/pricing",
             "accessedAt": "2026-09-03"
           }
         },
@@ -202,7 +202,7 @@
           "billingModel": "flat",
           "notes": "First 500,000 characters/month free (shared $10/month credit with Basic). Overage: $20/million characters. Document translation: $0.08/page. Usage-metered pay-as-you-go; no flat subscription. LLM Text Translation: $10/million input characters + $10/million output characters.",
           "source": {
-            "url": "https://cloud.google.com/translate/pricing",
+            "url": "https://cloud.google.com/products/translate/pricing",
             "accessedAt": "2026-09-03"
           }
         },
@@ -217,7 +217,7 @@
           "billingModel": "custom",
           "notes": "Custom model text translation: $80/million chars (500K–250M), $60/million (250M–2.5B), $40/million (2.5B–4B), $30/million (4B+). First 500K chars/month free via $40/month credit. Training: $45/hour (max $300/job). Document translation: $0.25/page. No flat monthly fee.",
           "source": {
-            "url": "https://cloud.google.com/translate/pricing",
+            "url": "https://cloud.google.com/products/translate/pricing",
             "accessedAt": "2026-09-03"
           }
         }
@@ -261,7 +261,7 @@
         ],
         "sources": [
           {
-            "url": "https://cloud.google.com/translate/pricing",
+            "url": "https://cloud.google.com/products/translate/pricing",
             "accessedAt": "2026-06-15"
           },
           {
