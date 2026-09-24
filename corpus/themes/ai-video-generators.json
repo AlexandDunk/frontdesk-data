@@ -1083,6 +1083,126 @@
         ],
         "provenance": "Features from lumalabs.ai/dream-machine and /dream-machine/pricing on 2026-06-15. No compliance certifications found on public pages (privacy page returned 404). No free tier — confirmed on pricing page. Third-party model integrations (Kling, Veo, ElevenLabs) confirmed from product descriptions."
       }
+    },
+    {
+      "slug": "magic-hour",
+      "name": "Magic Hour",
+      "domain": "magichour.ai",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "provenance": "Added 2026-09-22 after the vendor wrote to contact@frontdeskreview.com asking to be evaluated for this comparison; every figure here was read from magichour.ai/pricing, not from the mail. The page prices in EUR to every connection we have — datacenters in Denmark and France and a residential line in Russia, all on 2026-09-22 — and publishes no USD figure, so this schema's USD-only money field is left empty rather than converted. Plan figures: Creator €17/mo or €10.75/mo yearly (€129), Pro €36 or €23 yearly (€276), Business €84 or €56 yearly (€672); the page states 37%/36%/33% off for yearly billing. A Free plan exists ('Free daily credits', 'try our basic features for free'); the page does not state its credit amount, so none is recorded. USD figures were also looked for on the vendor's docs and blog and were not found. Updated 2026-09-23: the vendor replied to our note pointing to its own article (magichour.ai/blog/ai-video-generators-pricing), which publishes the Creator plan in USD — $19/month, $144/year — and states its prices were checked on 9 Sep 2026; we read it ourselves on 2026-09-23 and Creator now carries $19/mo from that page, with the EUR pricing page as corroboration. The article gives no USD for Pro or Business, so those stay EUR-only with no modelled price. The vendor also confirmed there is no first-party page stating the free daily credit amount, so it remains unrecorded.",
+      "plans": [
+        {
+          "name": "Free",
+          "monthlyUsd": 0,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Free daily credits for the basic features; the page does not publish the amount. Exports and resolution limits of the free tier are not stated on the pricing page.",
+          "source": {
+            "url": "https://magichour.ai/pricing",
+            "accessedAt": "2026-09-22"
+          }
+        },
+        {
+          "name": "Creator",
+          "monthlyUsd": 19,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 37,
+          "billingModel": "flat",
+          "notes": "$19/mo billed monthly; $144/year on yearly billing ($12/mo equivalent; the pricing page states '37% off' for yearly). USD figures read from the vendor's own article magichour.ai/blog/ai-video-generators-pricing on 2026-09-23, which states its prices were checked on 9 Sep 2026; the pricing page itself shows this plan as €17/mo or €10.75/mo yearly (€129) to every connection we have and publishes no USD. 144,000 credits per year (page: about 1.7 hours of video or 28,800 images). 1024px resolution. All tools, watermark-free exports, commercial use, 3 generations at once, priority queue and support, uploads up to 2 GB, full API access.",
+          "source": {
+            "url": "https://magichour.ai/blog/ai-video-generators-pricing",
+            "accessedAt": "2026-09-23"
+          },
+          "corroboration": {
+            "url": "https://magichour.ai/pricing",
+            "accessedAt": "2026-09-22"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 36,
+          "billingModel": "flat",
+          "unmodelable": "Priced in EUR on the vendor's own page; this dataset carries USD only, so the figure is shown in the notes, not modeled.",
+          "notes": "€36/mo billed monthly; €23/mo billed yearly (€276/year, page says '36% off'). 300,000 credits per year (page: about 3.5 hours of video or 60,000 images). 1472px resolution. All tools, watermark-free exports, commercial use, 5 generations at once, priority queue and support, uploads up to 5 GB, full API access. The page prices in EUR to every connection we have — datacenters in Denmark and France and a residential line in Russia, all on 2026-09-22 — and publishes no USD figure, so this schema's USD-only money field is left empty rather than converted.",
+          "source": {
+            "url": "https://magichour.ai/pricing",
+            "accessedAt": "2026-09-22"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 33,
+          "billingModel": "flat",
+          "unmodelable": "Priced in EUR on the vendor's own page; this dataset carries USD only, so the figure is shown in the notes, not modeled.",
+          "notes": "€84/mo billed monthly; €56/mo billed yearly (€672/year, page says '33% off'). 840,000 credits per year (page: about 9.7 hours of video or 168,000 images). 4K resolution. All tools, watermark-free exports, commercial use, unlimited generations at once, priority queue and support, uploads up to 10 GB, full API access. The page prices in EUR to every connection we have — datacenters in Denmark and France and a residential line in Russia, all on 2026-09-22 — and publishes no USD figure, so this schema's USD-only money field is left empty rather than converted.",
+          "source": {
+            "url": "https://magichour.ai/pricing",
+            "accessedAt": "2026-09-22"
+          }
+        }
+      ],
+      "enrichment": {
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "freeTier": true,
+        "freeTrialDays": null,
+        "keyIntegrations": [],
+        "limits": [
+          "Creator: 144,000 credits/year, 1024px, 3 generations at once, 2 GB uploads",
+          "Pro: 300,000 credits/year, 1472px, 5 generations at once, 5 GB uploads",
+          "Business: 840,000 credits/year, 4K, unlimited generations at once, 10 GB uploads",
+          "Free: daily credits only; amount not published",
+          "Prices published in EUR on the pricing page; USD only for Creator, in the vendor's own article"
+        ],
+        "keyFeatures": [
+          "Text-to-video and image-to-video across several underlying models",
+          "Face swap and lip sync",
+          "Post-generation editing tools in the same workspace",
+          "AI image and AI audio tools on the same credit balance",
+          "API access on every paid plan",
+          "Watermark-free exports with commercial use on paid plans"
+        ],
+        "bestFor": [
+          "Creators who want generation and editing in one place",
+          "Teams comparing multi-model access rather than one vendor's model",
+          "Buyers billed in euros"
+        ],
+        "sources": [
+          {
+            "url": "https://magichour.ai/pricing",
+            "accessedAt": "2026-09-22"
+          },
+          {
+            "url": "https://magichour.ai/products/ai-video-generator",
+            "accessedAt": "2026-09-22"
+          }
+        ],
+        "provenance": "Features read from magichour.ai/pricing and the product page on 2026-09-22. No compliance page found on the public site; nothing recorded."
+      }
     }
   ]
 }
