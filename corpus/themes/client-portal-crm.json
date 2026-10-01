@@ -1,6 +1,6 @@
 {
   "vertical": "client-portal-crm",
-  "generatedAt": "2026-06-18",
+  "generatedAt": "2026-09-28",
   "methodologyNotes": "Re-verified on each vendor's official pricing page on 2026-06-18: honeybook.com/pricing, dubsado.com/pricing + /pricing-table, hellobonsai.com/pricing, 17hats.com/pricing, plutio.com/pricing, withmoxie.com/pricing, weareindy.com/pricing (+ help.weareindy.com), agencyhandy.com/pricing-plan/. Dubsado monthly ($35/$55) confirmed on /pricing-table; /pricing shows annual-only. Bonsai is per-seat; monthlyUsd = per-user rack rate. Agency Handy annual prices require the publicly advertised 'Yearly70' promo (70% off); monthly = undiscounted rack rate; annualDiscountPct=null because discount needs a coupon, not an automatic toggle. INDY CAVEAT: the live weareindy.com/pricing page now surfaces only a biennial display ($12.50/mo billed $300 every 2 years); the help-center article (last updated Oct 2024) still states $25/mo month-to-month and $225/yr annual. monthlyUsd retained as the corroborated month-to-month rate ($25) but the live page no longer publishes a separate annual figure, so annualDiscountPct softened to null and notes flag the conflict. Compliance set true only where vendor explicitly states it (Bonsai SOC 2 Type II 2025-07-03; GDPR via DPAs/privacy policies); else null. accessedAt 2026-06-18.",
   "vendors": [
     {
@@ -26,22 +26,22 @@
         "Pic-Time",
         "Acuity"
       ],
-      "provenance": "Prices fetched and confirmed from honeybook.com/pricing on 2026-06-18 (Starter $29, Essentials $59/$49 annual, Premium $129/$109 annual). Integrations confirmed live on honeybook.com/product/integrations. HoneyBook markets 25% off annual for Essentials/Premium; annualDiscountPct reflects the true computed monthly savings from published prices (~17% / ~15%). Compliance not stated on public pages; null. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
+      "provenance": "Prices fetched and confirmed from honeybook.com/pricing on 2026-06-18 (Starter $29, Essentials $59/$49 annual, Premium $129/$109 annual). Integrations confirmed live on honeybook.com/product/integrations. HoneyBook markets 25% off annual for Essentials/Premium; the annual discount recorded here reflects the true computed monthly savings from published prices (~17% / ~15%). Compliance not stated on public pages; not recorded. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
       "plans": [
         {
           "name": "Starter",
-          "monthlyUsd": 29,
+          "monthlyUsd": 36,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
-          "annualDiscountPct": null,
+          "annualDiscountPct": 19,
           "billingModel": "flat",
           "setupFeeUsd": 0,
-          "notes": "Unlimited clients and projects, invoices and payments, proposals and contracts, client portal, calendar, basic reports, up to 2 live lead forms, HoneyBook AI. Same $29/mo monthly or annual.",
+          "notes": "Unlimited clients and projects, invoices and payments, proposals and contracts, client portal, calendar, basic reports, up to 2 live lead forms, HoneyBook AI. $36/mo billed monthly; $29/mo billed yearly.",
           "source": {
             "url": "https://www.honeybook.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -57,7 +57,7 @@
           "notes": "Everything in Starter plus scheduler, automations, QuickBooks, up to 2 team members, up to 10 live lead forms, SMS reminders, remove HoneyBook branding, standard reports. Annual billing: $49/mo ($588/yr); HoneyBook markets this as 25% off.",
           "source": {
             "url": "https://www.honeybook.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -73,7 +73,7 @@
           "notes": "Everything in Essentials plus unlimited team members, priority support, multiple companies, advanced reports, unlimited live lead forms. Annual billing: $109/mo ($1,308/yr); HoneyBook markets this as 25% off.",
           "source": {
             "url": "https://www.honeybook.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -377,24 +377,8 @@
         "Google Calendar",
         "Gmail"
       ],
-      "provenance": "Confirmed from 17hats.com/pricing 2026-06-18. Single all-inclusive plan with monthly/yearly/bi-yearly cycles plus a limited free CRM plan. Yearly $600/yr; promotional first-year $300 (50% off) advertised when bypassing trial. Bi-yearly $800/2yr. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
+      "provenance": "Confirmed from 17hats.com/pricing 2026-06-18. Single all-inclusive plan with monthly/yearly/bi-yearly cycles. Yearly $600/yr; promotional first-year $300 (50% off) advertised when bypassing trial. Bi-yearly $800/2yr. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
       "plans": [
-        {
-          "name": "Free CRM",
-          "monthlyUsd": 0,
-          "minutesIncluded": null,
-          "callsIncluded": null,
-          "overagePerMin": null,
-          "overagePerCall": null,
-          "annualDiscountPct": null,
-          "billingModel": "flat",
-          "setupFeeUsd": 0,
-          "notes": "Forever free. Unlimited contacts and projects, but limited to 4 invoices per quarter. Includes email templates and sales tax reporting. No client portal, workflows, or scheduling.",
-          "source": {
-            "url": "https://www.17hats.com/pricing",
-            "accessedAt": "2026-09-02"
-          }
-        },
         {
           "name": "Monthly",
           "monthlyUsd": 60,
@@ -408,7 +392,7 @@
           "notes": "All-inclusive plan billed month to month. Unlimited contacts, projects, invoices, quotes, contracts, questionnaires, client portal, workflows, scheduler, Zapier, payments via Stripe and Square. 7-day free trial.",
           "source": {
             "url": "https://www.17hats.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -451,7 +435,7 @@
           "gdpr": null,
           "source": null
         },
-        "freeTier": true,
+        "freeTier": null,
         "freeTrialDays": 7,
         "keyIntegrations": [
           "Stripe",
@@ -461,7 +445,6 @@
           "Gmail"
         ],
         "limits": [
-          "Free plan: 4 invoices per quarter only",
           "Paid plans: unlimited documents, contacts, and projects"
         ],
         "keyFeatures": [
@@ -483,7 +466,7 @@
             "accessedAt": "2026-06-18"
           }
         ],
-        "provenance": "Pricing and plan structure confirmed from 17hats.com/pricing 2026-06-18. Free CRM plan exists. No compliance certifications on public pages; null."
+        "provenance": "Pricing and plan structure confirmed from 17hats.com/pricing 2026-06-18. No compliance certifications on public pages; null."
       }
     },
     {
@@ -533,7 +516,7 @@
           "notes": "Up to 9 active clients/month, 800 AI credits, 900 workflow actions, 100GB storage. Unlimited projects, invoices, contracts, schedulers, forms. No team contributors. Annual: ~$15/mo. White-label add-on.",
           "source": {
             "url": "https://www.plutio.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -549,7 +532,7 @@
           "notes": "Unlimited active clients, 30 contributors, 2,500 AI credits, 5,500 workflow actions, 500GB storage. All integrations included. Annual: ~$39/mo. White-label and SSO add-ons.",
           "source": {
             "url": "https://www.plutio.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -565,7 +548,7 @@
           "notes": "Unlimited everything including contributors and clients, 10,000 AI credits, 50,000 workflow actions, 2TB storage. White-label and SSO included. Annual: ~$159/mo.",
           "source": {
             "url": "https://www.plutio.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -655,7 +638,7 @@
           "notes": "Client management, project management, invoicing and payments, proposals/quotes/contracts, time tracking, sales pipeline, basic accounting, form builder, meeting schedulers, calendar/inbox, AI assistant. Annual: $10/mo ($120/yr). 14-day free trial.",
           "source": {
             "url": "https://www.withmoxie.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -671,7 +654,7 @@
           "notes": "Everything in Starter plus custom domain, white-labeled client portal, support ticketing, workflow automation, Communicator phone line (US/CA/UK), Zapier/Make/Webhooks/API, QuickBooks, unlimited project collaborators. Annual: $20/mo ($240/yr). 14-day free trial.",
           "source": {
             "url": "https://www.withmoxie.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -687,7 +670,7 @@
           "notes": "Everything in Pro plus up to 5 team members, one additional Communicator phone line, enhanced support. Annual: $32/mo ($385/yr). 14-day free trial.",
           "source": {
             "url": "https://www.withmoxie.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -751,7 +734,7 @@
         "Google Calendar",
         "Gmail"
       ],
-      "provenance": "weareindy.com/pricing fetched 2026-06-18: the live page now surfaces only the biennial display for Pro ($12.50/mo billed $300 every 2 years). The help-center article (help.weareindy.com, last updated Oct 2024) still states $25/mo month-to-month and $225/yr annual. monthlyUsd retained at the corroborated month-to-month rate ($25; help center + third-party reviews), but the live page no longer publishes a separate annual/monthly breakdown, so annualDiscountPct=null and notes flag the conflict. indy.app is a parked GoDaddy page; product operates at weareindy.com. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
+      "provenance": "weareindy.com/pricing fetched 2026-06-18: the live page now surfaces only the biennial display for Pro ($12.50/mo billed $300 every 2 years). The help-center article (help.weareindy.com, last updated Oct 2024) still states $25/mo month-to-month and $225/yr annual. The monthly price is retained at the corroborated month-to-month rate ($25; help center + third-party reviews), but the live page no longer publishes a separate annual/monthly breakdown, so the annual discount is not recorded and notes flag the conflict. indy.app is a parked GoDaddy page; product operates at weareindy.com. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
       "plans": [
         {
           "name": "Free",
@@ -766,7 +749,7 @@
           "notes": "Forever free. Up to 3 clients; 3 proposals/contracts/invoices per month (limits do not roll over); projects, calendar, forms, tasks, time tracker; 10GB storage (200MB max per file).",
           "source": {
             "url": "https://weareindy.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -782,7 +765,7 @@
           "notes": "Unlimited proposals, contracts, invoices, and clients. AI assistant, branded client portal, customizable templates, 1TB storage, recurring invoices, Zapier, Google Calendar sync, embedded forms, white labeling, Gmail, live chat. CONFLICT: live weareindy.com/pricing shows only $12.50/mo billed $300 every 2 years (biennial); help center (Oct 2024) states $25/mo monthly and $225/yr annual. 7-day free trial auto-enrolls into Pro; 30-day money-back guarantee.",
           "source": {
             "url": "https://weareindy.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -843,11 +826,11 @@
         "Webhooks",
         "API"
       ],
-      "provenance": "Confirmed from agencyhandy.com/pricing-plan/ 2026-06-18. Monthly $109/$359/$719 are undiscounted rack rates; annual $349/$1,189/$2,389 require the 'Yearly70' promo (70% off). annualDiscountPct=null because the discount needs a coupon, not an automatic toggle. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
+      "provenance": "Confirmed from agencyhandy.com/pricing-plan/ 2026-06-18. Monthly $109/$359/$719 are undiscounted rack rates; annual $349/$1,189/$2,389 require the 'Yearly70' promo (70% off). The annual discount is not recorded because the discount needs a coupon, not an automatic toggle. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
       "plans": [
         {
           "name": "Freelancer",
-          "monthlyUsd": 109,
+          "monthlyUsd": 29,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
@@ -855,15 +838,15 @@
           "annualDiscountPct": null,
           "billingModel": "flat",
           "setupFeeUsd": 0,
-          "notes": "1 user, 1 workspace, up to 100 leads. Client portal, CRM, unlimited clients and projects, productized and custom services, project and task management, invoicing and subscriptions, proposals, tickets, custom branding, time tracking, file feedback and approval, custom forms. Annual $349/yr with 'Yearly70' code. 7-day free trial, no credit card.",
+          "notes": "1 user, 1 workspace, up to 100 leads. Client portal, CRM, unlimited clients and projects, productized and custom services, project and task management, invoicing and subscriptions, proposals, tickets, custom branding, time tracking, file feedback and approval, custom forms. Annual $169/yr with 'Yearly52' code. 7-day free trial, no credit card.",
           "source": {
             "url": "https://www.agencyhandy.com/pricing-plan/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
           "name": "Team Starter",
-          "monthlyUsd": 359,
+          "monthlyUsd": 99,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
@@ -871,15 +854,15 @@
           "annualDiscountPct": null,
           "billingModel": "flat",
           "setupFeeUsd": 0,
-          "notes": "10 users, 1 workspace, up to 300 leads. Everything in Freelancer plus custom domain and email, app embeds, sidebar customization, custom scripts, API key, webhook, priority support, Slack. Annual $1,189/yr with 'Yearly70' code. 7-day free trial.",
+          "notes": "10 users, 1 workspace, up to 300 leads. Everything in Freelancer plus custom domain and email, app embeds, sidebar customization, custom scripts, API key, webhook, priority support, Slack. Annual $569/yr with 'Yearly52' code. 7-day free trial.",
           "source": {
             "url": "https://www.agencyhandy.com/pricing-plan/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
           "name": "Business Pro",
-          "monthlyUsd": 719,
+          "monthlyUsd": 199,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
@@ -887,10 +870,10 @@
           "annualDiscountPct": null,
           "billingModel": "flat",
           "setupFeeUsd": 0,
-          "notes": "30 users, 5 workspaces, up to 10,000 leads. Everything in Team Starter plus dedicated account manager. Annual $2,389/yr with 'Yearly70' code. Custom plans available. 7-day free trial.",
+          "notes": "30 users, 5 workspaces, up to 10,000 leads. Everything in Team Starter plus dedicated account manager. Annual $1149/yr with 'Yearly52' code. Custom plans available. 7-day free trial.",
           "source": {
             "url": "https://www.agencyhandy.com/pricing-plan/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         }
       ],

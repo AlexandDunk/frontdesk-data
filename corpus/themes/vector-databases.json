@@ -1,6 +1,6 @@
 {
   "vertical": "vector-databases",
-  "generatedAt": "2026-06-14",
+  "generatedAt": "2026-09-29",
   "methodologyNotes": "Published self-serve USD pricing collected directly from each vendor's official pricing page, accessed 2026-06-14. Telephony fields (minutesIncluded, callsIncluded, overagePerMin, overagePerCall) are null on every plan — non-telephony vertical. Pinecone: all four pricing points (Builder $20, Standard $50 min, Enterprise $500 min, HIPAA add-on $190) confirmed via two separate fetches of pinecone.io/pricing. Weaviate: four-tier structure (Free $0, Flex $45, Plus $280, Premium $400) confirmed on two fetches of weaviate.io/pricing; HIPAA confirmed as 'Enterprise Cloud on AWS'. Qdrant Cloud: pricing page at qdrant.tech/pricing renders JS-only — no USD amounts are published on the public page; the site directs users to a JS calculator at cloud.qdrant.io/calculator which also did not yield amounts; Free tier resource specs (0.5 vCPU / 1GB RAM / 4GB Disk) confirmed; paid tiers marked null per methodology. MongoDB Atlas Vector Search: dedicated search node hourly rates ($0.12–$3.26/hr) confirmed from mongodb.com/pricing; Vector Search runs on dedicated S20–S80 search nodes separate from standard cluster tiers; M0 Free and Flex cluster pricing also confirmed. Chroma: Starter ($0 + usage), Team ($250/mo + usage), Enterprise (custom) confirmed from trychroma.com/pricing; usage unit rates ($2.50/GiB write, $0.33/GiB/mo storage, $0.0075/TiB query) confirmed. Redis Cloud: Free ($0), Essentials (from $5/mo at $0.007/hr), Pro (from $200/mo at $0.014/hr) confirmed from redis.io/pricing; vector search is included in Redis Search feature, no separate cost. Supabase (pgvector): Free ($0), Pro ($25/mo), Team ($599/mo), Enterprise (custom) confirmed from supabase.com/pricing; pgvector/vector search is a built-in Postgres extension included at no extra cost. Zilliz Cloud: pricing page at zilliz.com/pricing is fully JS-rendered and returned only a page title on all fetch attempts; no USD amounts could be verified from the official page or any accessible documentation URL; excluded to avoid fabrication. Benchmark estimate source (benchmark.vectorview.ai/vectordbs.html) used as corroboration reference for realistic workload costs where noted.",
   "vendors": [
     {
@@ -31,7 +31,7 @@
           "notes": "2 GB storage, 2M write units/mo, 1M read units/mo. Assistant: 500K input tokens, 300K output tokens, 500K context tokens, 1K ingestion units/mo. Inference: 5M embedding tokens, 500 reranking requests/mo. AWS us-east-1 only. No HIPAA.",
           "source": {
             "url": "https://www.pinecone.io/pricing/",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://benchmark.vectorview.ai/vectordbs.html",
@@ -50,7 +50,7 @@
           "notes": "10 GB storage, 5M write units/mo, 2M read units/mo. Assistant: 2M input tokens, 1M output tokens, 2M context tokens, 10K ingestion units. Inference: 10M embedding tokens, 1K reranking requests. SOC 2, GDPR, ISO 27001. AWS only (multi-cloud 'coming soon'). No HIPAA.",
           "source": {
             "url": "https://www.pinecone.io/pricing/",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -65,7 +65,7 @@
           "notes": "$50/mo minimum; pay-as-you-go beyond minimum. Storage $0.33/GB/mo. Write units $4–$4.50/M, read units $16–$18/M. HIPAA available as $190/mo add-on. Backup/restore included. AWS, Azure, GCP all regions.",
           "source": {
             "url": "https://www.pinecone.io/pricing/",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -80,7 +80,7 @@
           "notes": "$500/mo minimum; pay-as-you-go with tiered rates beyond minimum. HIPAA compliance included (no add-on fee). Premium support included. Unlimited storage and usage with tiered pricing. AWS, Azure, GCP.",
           "source": {
             "url": "https://www.pinecone.io/pricing/",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -182,7 +182,7 @@
           "notes": "100,000 objects, 1 GB memory, 10 GB disk. 2,000 embedding requests/day. 1,000 Query Agent requests/mo. 1 collection, up to 3 tenants. Best-effort SLA.",
           "source": {
             "url": "https://weaviate.io/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://benchmark.vectorview.ai/vectordbs.html",
@@ -201,22 +201,7 @@
           "notes": "Starts at $45/mo. Pay-as-you-go beyond minimum. Unlimited objects and collections (up to 1,000). Vector dimensions from $0.00465/1M, storage from $0.12/GiB. 7-day backup retention. 99.5% uptime SLA. No commitment required.",
           "source": {
             "url": "https://weaviate.io/pricing",
-            "accessedAt": "2026-09-03"
-          }
-        },
-        {
-          "name": "Plus",
-          "monthlyUsd": 280,
-          "minutesIncluded": null,
-          "callsIncluded": null,
-          "overagePerMin": null,
-          "overagePerCall": null,
-          "annualDiscountPct": null,
-          "billingModel": "custom",
-          "notes": "Starts at $280/mo. Prepaid contract with predictable spend. Vector dimensions from $0.003875/1M, storage from $0.10/GiB. 30-day backup retention. 99.9% uptime SLA. SSO/SAML support. Query Agent $30/org/mo (4,000 requests included).",
-          "source": {
-            "url": "https://weaviate.io/pricing",
-            "accessedAt": "2026-06-14"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -327,7 +312,7 @@
           "notes": "Single node cluster. 0.5 vCPU, 1 GB RAM, 4 GB disk. Free cloud inference with selected models. Free forever.",
           "source": {
             "url": "https://qdrant.tech/pricing/",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-26"
           }
         },
         {
@@ -342,7 +327,7 @@
           "notes": "Usage-based pricing billed per vCPU, GB RAM, and GB storage consumed hourly. Highly available setups, backup and disaster recovery, free tokens for paid inference models, 99.5% uptime SLA. No published USD rates on pricing page — use cloud.qdrant.io/calculator for estimates.",
           "source": {
             "url": "https://qdrant.tech/pricing/",
-            "accessedAt": "2026-06-14"
+            "accessedAt": "2026-09-26"
           }
         },
         {
@@ -357,7 +342,7 @@
           "notes": "Minimum spend required (amount not published). Adds SSO authentication, private VPC links, 99.9% uptime SLA, enhanced support. Contact sales for pricing.",
           "source": {
             "url": "https://qdrant.tech/pricing/",
-            "accessedAt": "2026-06-14"
+            "accessedAt": "2026-09-26"
           }
         },
         {
@@ -372,7 +357,7 @@
           "notes": "Deploy Qdrant in your own infrastructure. Custom enterprise pricing. Contact sales.",
           "source": {
             "url": "https://qdrant.tech/pricing/",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-26"
           }
         }
       ],
@@ -450,10 +435,17 @@
         "Kafka",
         "Terraform"
       ],
-      "provenance": "https://www.mongodb.com/pricing accessed 2026-06-14. Vector Search is a feature of Atlas — it runs on dedicated Search Nodes (S20–S80 tiers) separate from database nodes, or on standard Atlas clusters. Search node hourly rates confirmed: High CPU S20 at $0.12/hr (~$87.60/mo), up to High CPU S80 at $3.26/hr (~$2,379.80/mo). M0 Free cluster ($0) supports Vector Search. Vector Search is not separately priced — it is included with cluster cost. HIPAA not mentioned on pricing page. Re-verified 2026-09-03 against the live pricing page; published figures unchanged.",
+      "provenance": "https://www.mongodb.com/pricing accessed 2026-06-14. Vector Search is a feature of Atlas — it runs on dedicated Search Nodes (S20–S80 tiers) separate from database nodes, or on standard Atlas clusters. Search node hourly rates confirmed: High CPU S20 at $0.12/hr (~$87.60/mo), up to High CPU S80 at $3.26/hr (~$2,379.80/mo). The Free cluster ($0) supports Vector Search. Vector Search is not separately priced — it is included with cluster cost. HIPAA not mentioned on pricing page. Re-verified 2026-09-03 against the live pricing page; published figures unchanged.",
       "plans": [
         {
-          "name": "M0 Free",
+          "name": "Free",
+          "formerNames": [
+            {
+              "name": "M0 Free",
+              "lastSeen": "2026-09-03",
+              "absentOn": "2026-09-27"
+            }
+          ],
           "monthlyUsd": 0,
           "minutesIncluded": null,
           "callsIncluded": null,
@@ -464,7 +456,7 @@
           "notes": "512 MB storage, shared RAM/vCPU. Vector Search included. 100 ops/sec max. Free forever.",
           "source": {
             "url": "https://www.mongodb.com/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -484,17 +476,17 @@
         },
         {
           "name": "Dedicated M10",
-          "monthlyUsd": 58,
+          "monthlyUsd": 56.94,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "flat",
-          "notes": "~$58.40/mo (hourly billing). 10–128 GB storage, 2 GB RAM, 2 vCPUs. Vector Search included on cluster. Dedicated Search Nodes add separate cost: High CPU S20 at $0.12/hr (~$87.60/mo per node, minimum 2 nodes recommended).",
+          "notes": "Dedicated tier printed as $0.08/hour, \"Starts at $56.94/month\" (hourly billing). 10–128 GB storage, 2 GB RAM, 2 vCPUs. Vector Search included on cluster. Dedicated Search Nodes add separate cost: High CPU S20 at $0.12/hr (~$87.60/mo per node, minimum 2 nodes recommended).",
           "source": {
             "url": "https://www.mongodb.com/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-26"
           }
         },
         {
@@ -566,7 +558,7 @@
           "Voyage AI"
         ],
         "limits": [
-          "M0 Free: 512 MB storage, shared resources, 100 ops/sec max, free forever",
+          "Free: 512 MB storage, shared resources, 100 ops/sec max, free forever",
           "Dedicated Search Nodes require minimum 2 nodes for high availability",
           "Vector Search supports up to 4,096 embedding dimensions"
         ],
@@ -596,7 +588,7 @@
             "accessedAt": "2026-06-15"
           }
         ],
-        "provenance": "Fetched mongodb.com/cloud/trust (2026-06-15): HIPAA, HITRUST, SOC 2, ISO 27001, GDPR, FedRAMP Moderate, PCI DSS, and multiple other certifications explicitly listed. Fetched atlas-vector-search product page for key features and integrations. M0 Free cluster confirmed from pricing page (monthlyUsd: 0). freeTrialDays null — no time-limited trial structure found, M0 is free forever."
+        "provenance": "Fetched mongodb.com/cloud/trust (2026-06-15): HIPAA, HITRUST, SOC 2, ISO 27001, GDPR, FedRAMP Moderate, PCI DSS, and multiple other certifications explicitly listed. Fetched atlas-vector-search product page for key features and integrations. Free cluster confirmed from pricing page (monthlyUsd: 0). freeTrialDays null — no time-limited trial structure found, the Free cluster is free forever."
       }
     },
     {
@@ -621,7 +613,7 @@
           "notes": "$0 base + usage charges. $5 in initial free credits. 10 databases, 10 team members, community Slack. Usage: Write $2.50/GiB, Storage $0.33/GiB/mo, Query $0.0075/TiB queried, Network $0.09/GiB returned.",
           "source": {
             "url": "https://www.trychroma.com/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -636,7 +628,7 @@
           "notes": "$250/mo base + usage charges. $100/mo in included usage credits. 100 databases, 30 team members, Slack support, SOC II compliance, volume-based discounts. Same usage unit rates as Starter.",
           "source": {
             "url": "https://www.trychroma.com/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -651,7 +643,7 @@
           "notes": "Custom pricing. Unlimited databases, unlimited team members, dedicated support, single-tenant clusters, BYOC clusters, custom SLAs. Contact sales.",
           "source": {
             "url": "https://www.trychroma.com/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -738,7 +730,7 @@
           "notes": "Up to 30 MB capacity. Shared cloud deployment. Single database. Best-effort SLA. Community support only. Redis Search (vector search) included.",
           "source": {
             "url": "https://redis.io/pricing/",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -753,7 +745,7 @@
           "notes": "From $5/mo ($0.007/hr). 250 MB–100 GB RAM & SSD. Single database. Shared deployment. SAML SSO, RBAC, encryption in transit and at rest. Up to 99.99% uptime. Redis Flex at 10% RAM for lowest cost. Vector search included.",
           "source": {
             "url": "https://redis.io/pricing/",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -768,7 +760,7 @@
           "notes": "From $200/mo ($0.014/hr). Unlimited RAM. Multiple databases. Dedicated cloud deployment. Active-Active multi-region. Auto-tiering. Private connectivity. Up to 99.999% uptime. Redis Flex for TBs of data. Vector search included.",
           "source": {
             "url": "https://redis.io/pricing/",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -855,7 +847,7 @@
           "notes": "50,000 MAUs, 500 MB database, 5 GB egress, 1 GB file storage. pgvector/vector search included as Postgres extension. Community support. Project pauses after 1 week inactivity. Max 2 active projects.",
           "source": {
             "url": "https://supabase.com/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -870,7 +862,7 @@
           "notes": "$25/mo base + compute ($10/mo credit included). 100,000 MAUs ($0.00325/additional MAU). 8 GB disk ($0.125/GB overage). 250 GB egress ($0.09/GB overage). 100 GB storage ($0.0213/GB overage). Email support. 7-day backups and log retention. pgvector included.",
           "source": {
             "url": "https://supabase.com/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -885,7 +877,7 @@
           "notes": "$599/mo base + compute ($10/mo credit included). SOC2 and ISO 27001 compliance. Project-scoped access. Priority support with SLAs. 14-day backups. 28-day log retention. HIPAA available as paid add-on. pgvector included.",
           "source": {
             "url": "https://supabase.com/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -900,7 +892,7 @@
           "notes": "Custom pricing. Designated support manager, uptime SLAs, Bring Your Own Cloud, 24x7x365 support, private Slack channel. HIPAA available. pgvector included.",
           "source": {
             "url": "https://supabase.com/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         }
       ],

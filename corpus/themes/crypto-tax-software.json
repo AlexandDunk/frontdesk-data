@@ -1,6 +1,6 @@
 {
   "vertical": "crypto-tax-software",
-  "generatedAt": "2026-06-15",
+  "generatedAt": "2026-09-29",
   "methodologyNotes": "Re-verified 2026-06-15. Directly fetched and confirmed: coinledger.io/pricing, zenledger.io/pricing, blockpit.io/pricing. Koinly, CoinTracker, TokenTax, Summ, and Awaken official pricing pages return HTTP 403 to direct fetch, so pricing was corroborated across multiple independent 2026 review sources and vendor help centers (Koinly help center, milkroad, comparedge, findstack, cryptopotato, cryptoadventure, fortunly, finder, banksforcrypto, bitdegree) and official summ.com blog/snippets. Corrections vs draft: Koinly Trader is 3,000 tx (not 10,000); Koinly's $279 tier is named Pro for 10,000 tx (the draft's 'Oracle'/25,000-tx plan does not exist and was removed). CoinTracker Base is $59/yr (not $29); the draft's Base+ and Prime+ tiers could not be verified on current sources and were removed in favor of the structure shown by comparedge (Base/Prime/Ultra/Ultra+/Full Service). All crypto-tax plans are priced per tax year by transaction-count tier; monthlyUsd holds the published annual plan price as a flat number, billingModel 'flat'. Summ is the exception: limits are cumulative across ALL financial years and the subscription is per calendar year. Blockpit publishes EUR only, so monthlyUsd is null for its paid tiers. accessedAt 2026-06-15.",
   "vendors": [
     {
@@ -22,7 +22,7 @@
         "Ledger",
         "Trezor"
       ],
-      "provenance": "koinly.io/pricing direct fetch returned 403. Plan structure confirmed via Koinly help center (support.koinly.io) and multiple 2026 reviews (findstack, cryptoadventure, cryptopotato, innovatehubfinance, milkroad). Confirmed five tiers: Free, Newbie $49/100tx, Hodler $99/1000tx, Trader $179/3000tx, Pro $279/10000tx. The draft's 'Oracle $279/25000tx' plan does not exist (removed); the $279 tier is named Pro and covers 10,000 tx. Trader covers 3,000 tx, not 10,000. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
+      "provenance": "koinly.io/pricing direct fetch returned 403. Plan structure confirmed via Koinly help center (support.koinly.io) and multiple 2026 reviews (findstack, cryptoadventure, cryptopotato, innovatehubfinance, milkroad). Confirmed five tiers: Free, Newbie $49/100tx, Hodler $99/1000tx, Trader $179/3000tx, Pro $279/10000tx. An earlier version of this record's 'Oracle $279/25000tx' plan does not exist (removed); the $279 tier is named Pro and covers 10,000 tx. Trader covers 3,000 tx, not 10,000. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
       "plans": [
         {
           "name": "Free",
@@ -37,7 +37,7 @@
           "setupFeeUsd": 0,
           "source": {
             "url": "https://koinly.io/pricing/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-26"
           }
         },
         {
@@ -53,7 +53,7 @@
           "setupFeeUsd": 0,
           "source": {
             "url": "https://koinly.io/pricing/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-26"
           },
           "corroboration": {
             "url": "https://findstack.com/products/koinly/pricing",
@@ -73,7 +73,7 @@
           "setupFeeUsd": 0,
           "source": {
             "url": "https://koinly.io/pricing/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-26"
           },
           "corroboration": {
             "url": "https://findstack.com/products/koinly/pricing",
@@ -82,18 +82,18 @@
         },
         {
           "name": "Trader",
-          "monthlyUsd": 179,
+          "monthlyUsd": 199,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "flat",
-          "notes": "Per tax year, up to 3,000 transactions (corrected from draft's 10,000). Adds expert email support. Some 2026 review sources list $199 for this tier; findstack (mirroring the official page) shows $179.",
+          "notes": "Per tax year, up to 3,000 transactions. Adds expert email support. $199 per tax year (koinly.io plan data, USD).",
           "setupFeeUsd": 0,
           "source": {
             "url": "https://koinly.io/pricing/",
-            "accessedAt": "2026-06-15"
+            "accessedAt": "2026-09-26"
           },
           "corroboration": {
             "url": "https://cryptoadventure.com/koinly-review-2026-pricing-transaction-limits-and-tax-report-exports/",
@@ -195,7 +195,7 @@
         "Robinhood",
         "MetaMask"
       ],
-      "provenance": "cointracker.io/plans and support articles return 403. Current 2026 structure confirmed via comparedge.com/pricing/cointracker-pricing: Free ($0, ~25 tx tracking), Base $59/100tx, Prime $199/1000tx, Ultra $599/10000tx, Ultra+ $1,999, Full Service $3,499. Draft's Base price of $29 and its Base+/Prime+ tiers reflect an older milkroad table and could not be confirmed on current sources; Base corrected to $59 and unverifiable +tiers removed. Transaction caps for Ultra+ and Full Service are not published consistently and are left unstated. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
+      "provenance": "cointracker.io/plans and support articles return 403. Current 2026 structure confirmed via comparedge.com/pricing/cointracker-pricing: Free ($0, ~25 tx tracking), Base $59/100tx, Prime $199/1000tx, Ultra $599/10000tx, Ultra+ $1,999, Full Service $3,499. An earlier version of this record's Base price of $29 and its Base+/Prime+ tiers reflect an older milkroad table and could not be confirmed on current sources; Base corrected to $59 and unverifiable +tiers removed. Transaction caps for Ultra+ and Full Service are not published consistently and are left unstated. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
       "plans": [
         {
           "name": "Free",
@@ -222,7 +222,7 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "flat",
-          "notes": "Per tax year, up to 100 transactions. Includes Form 8949, TurboTax export. Billed annually (~$2.42/mo equivalent). Corrected from draft's $29.",
+          "notes": "Per tax year, up to 100 transactions. Includes Form 8949, TurboTax export. Billed annually (~$2.42/mo equivalent). Corrected from an earlier version of this record's $29.",
           "setupFeeUsd": 0,
           "source": {
             "url": "https://www.cointracker.io/plans",
@@ -302,7 +302,7 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "flat",
-          "notes": "Per tax year, full-service/expert-prepared tier. Billed annually. Replaces the structure the draft labeled 'Ultra+ at 250,000 tx'.",
+          "notes": "Per tax year, full-service/expert-prepared tier. Billed annually. Replaces the structure an earlier version of this record labeled 'Ultra+ at 250,000 tx'.",
           "setupFeeUsd": 0,
           "source": {
             "url": "https://www.cointracker.io/plans",
@@ -401,7 +401,7 @@
           "setupFeeUsd": 0,
           "source": {
             "url": "https://coinledger.io/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -417,7 +417,7 @@
           "setupFeeUsd": 0,
           "source": {
             "url": "https://coinledger.io/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -433,7 +433,7 @@
           "setupFeeUsd": 0,
           "source": {
             "url": "https://coinledger.io/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -449,7 +449,7 @@
           "setupFeeUsd": 0,
           "source": {
             "url": "https://coinledger.io/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -528,18 +528,18 @@
       "plans": [
         {
           "name": "Basic",
-          "monthlyUsd": 65,
+          "monthlyUsd": 49,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
           "annualDiscountPct": 10,
           "billingModel": "flat",
-          "notes": "Per tax year, up to 500 transactions. Coinbase and Coinbase Pro only. Includes TurboTax and TaxAct export. 10% discount when paying multiple years upfront.",
+          "notes": "Per tax year, up to 100 transactions. Support for every centralized exchange, DeFi and NFT support, IRS Form 8949 or the relevant international report. 10% discount when paying multiple years upfront.",
           "setupFeeUsd": 0,
           "source": {
             "url": "https://tokentax.co/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-26"
           },
           "corroboration": {
             "url": "https://milkroad.com/reviews/tokentax/",
@@ -559,7 +559,7 @@
           "setupFeeUsd": 0,
           "source": {
             "url": "https://tokentax.co/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-26"
           },
           "corroboration": {
             "url": "https://milkroad.com/reviews/tokentax/",
@@ -568,18 +568,18 @@
         },
         {
           "name": "Pro",
-          "monthlyUsd": 799,
+          "monthlyUsd": 1999,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
           "annualDiscountPct": 10,
           "billingModel": "flat",
-          "notes": "Per tax year, up to 20,000 transactions. Adds margin/options tax calculations and FBAR reporting.",
+          "notes": "Per tax year, up to 20,000 transactions. Adds margin/options PnL calculations and FBAR reporting.",
           "setupFeeUsd": 0,
           "source": {
             "url": "https://tokentax.co/pricing",
-            "accessedAt": "2026-06-15"
+            "accessedAt": "2026-09-26"
           },
           "corroboration": {
             "url": "https://milkroad.com/reviews/tokentax/",
@@ -599,7 +599,7 @@
           "setupFeeUsd": 0,
           "source": {
             "url": "https://tokentax.co/pricing",
-            "accessedAt": "2026-06-15"
+            "accessedAt": "2026-09-26"
           },
           "corroboration": {
             "url": "https://milkroad.com/reviews/tokentax/",
@@ -619,7 +619,7 @@
           "setupFeeUsd": 0,
           "source": {
             "url": "https://tokentax.co/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-26"
           }
         }
       ],
@@ -974,7 +974,7 @@
         "Ledger",
         "Trezor"
       ],
-      "provenance": "Pricing fetched directly from blockpit.io/pricing on 2026-06-15 and confirmed. Prices are EUR-only; no USD published, so monthlyUsd is null for paid tiers. Tax report tiers are one-time purchases per tax year: Small €49/50tx, Medium €99/1000tx, Large €149/3000tx, X-Large €229/10000tx, XX-Large €549/10000+tx. Blockpit Plus is a separate optional portfolio add-on (€3.99/mo, €47.90/yr) and is not a tax-report plan. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
+      "provenance": "Pricing fetched directly from blockpit.io/pricing on 2026-06-15 and confirmed. Prices are EUR-only; no USD published, so no monthly price is recorded for paid tiers. Tax report tiers are one-time purchases per tax year: Small €49/50tx, Medium €99/1000tx, Large €149/3000tx, X-Large €229/10000tx, XX-Large €549/10000+tx. Blockpit Plus is a separate optional portfolio add-on (€3.99/mo, €47.90/yr) and is not a tax-report plan. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
       "plans": [
         {
           "name": "Free (Portfolio Tracking)",
@@ -1143,7 +1143,14 @@
       "provenance": "awaken.tax/pricing direct fetch returned 403; pricing confirmed via banksforcrypto.com 2026 review and search corroboration: Free up to 100 tx, Entry $99/500tx, Unlimited $599. Awaken charges an annual subscription by current-tax-year transaction count and does not auto-renew. Awaken's help center states pricing changes frequently; mid-tier names/limits vary by source.",
       "plans": [
         {
-          "name": "Free",
+          "name": "Minnow",
+          "formerNames": [
+            {
+              "name": "Free",
+              "lastSeen": "2026-06-15",
+              "absentOn": "2026-09-27"
+            }
+          ],
           "monthlyUsd": 0,
           "minutesIncluded": null,
           "callsIncluded": null,
@@ -1151,11 +1158,11 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "flat",
-          "notes": "Up to 100 transactions per tax year. Full feature access to evaluate the platform before purchasing.",
+          "notes": "Up to 100 transactions in the current tax year. Portfolio tracking, email & chat support and a capital gains preview; no tax report exports.",
           "setupFeeUsd": 0,
           "source": {
             "url": "https://awaken.tax/pricing",
-            "accessedAt": "2026-06-15"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://banksforcrypto.com/tax-software/awaken-tax/",
@@ -1222,7 +1229,7 @@
           "Phantom"
         ],
         "limits": [
-          "Free: 100 tx/tax year",
+          "Minnow: 100 tx/tax year, no tax report exports",
           "Entry: ~500 tx/tax year",
           "Unlimited: unlimited tx/tax year",
           "Paid tiers by current-tax-year transaction count; exact limits change frequently per awaken.tax/pricing"

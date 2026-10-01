@@ -1,6 +1,6 @@
 {
   "vertical": "log-management",
-  "generatedAt": "2026-06-14",
+  "generatedAt": "2026-09-29",
   "methodologyNotes": "Pricing fetched directly from each vendor's official pricing page on 2026-06-14. Where the official page returned HTTP 403 or rendered prices via JS templates only, a reputable aggregator (GetApp, Sematext blog, SolarWinds Slashdot listing) was used as primary source, noted in each vendor's provenance. All USD figures reflect self-serve published rates. 'monthlyUsd' for annual plans is the annualized monthly rate; month-to-month rates noted where published. Loggly official pricing page returned HTTP 403; starting price sourced from GetApp (reputable aggregator). Papertrail official pricing page returned HTTP 403 on both /plans/ and /pricing/ paths; plans sourced from GetApp aggregator and corroborated by Slashdot starting-price listing. Sematext Logs official pricing page renders prices via JS templates; concrete plan prices sourced from Sematext's own blog comparison article. Sumo Logic publishes no public self-serve USD prices; all plans listed as null with contact-sales notes. Mezmo publishes no public self-serve USD prices. minutesIncluded, callsIncluded, overagePerMin, and overagePerCall are null on all plans as this is a non-telephony vertical.",
   "vendors": [
     {
@@ -28,7 +28,7 @@
         "Java",
         "Node.js"
       ],
-      "provenance": "Official pricing page https://www.datadoghq.com/pricing/?product=log-management fetched 2026-06-14. HIPAA/BAA confirmed via Datadog Trust Center. Usage-based model with no flat tier; all plans use 'custom' billingModel. Annual commitment prices listed; on-demand rates are 1.5x annual. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
+      "provenance": "Official pricing page https://www.datadoghq.com/pricing/?product=log-management fetched 2026-06-14. HIPAA/BAA confirmed via Datadog Trust Center. Usage-based model with no flat tier; all plans use a 'custom' billing model. Annual commitment prices listed; on-demand rates are 1.5x annual. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
       "plans": [
         {
           "name": "Ingest",
@@ -42,7 +42,7 @@
           "notes": "$0.10/GB ingested or scanned (annual) or $0.10/GB on-demand. Covers processing, enrichment, live tail, archiving, and dynamic routing. No flat monthly price — pure usage-based.",
           "source": {
             "url": "https://www.datadoghq.com/pricing/?product=log-management",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://www.datadoghq.com/pricing/",
@@ -61,7 +61,7 @@
           "notes": "$1.70/million log events/month (annual) or $2.55 on-demand. 15-day default retention; 3, 7, 30+ day options available. Real-time exploration, alerting, Watchdog Insights included.",
           "source": {
             "url": "https://www.datadoghq.com/pricing/?product=log-management",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://www.datadoghq.com/pricing/",
@@ -195,7 +195,7 @@
           "notes": "3 GB logs/month, 3-day retention. Also includes 10 uptime monitors, 1 status page, 100,000 exceptions/month, 5,000 session replays.",
           "source": {
             "url": "https://betterstack.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -633,7 +633,7 @@
           "notes": "Contact sales for pricing. Targeted at small-to-medium DevOps/SecOps teams. Unlimited log capacity, up to 50,000 metrics/day, up to 5 GB tracing/day, up to 365-day retention, up to 500 real-time monitors.",
           "source": {
             "url": "https://www.sumologic.com/pricing/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -648,7 +648,7 @@
           "notes": "Contact sales. Unlimited logs, metrics, and tracing. Cloud-native SIEM, threat intelligence, 24/7 support, HIPAA eligibility.",
           "source": {
             "url": "https://www.sumologic.com/pricing/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -747,7 +747,7 @@
           "notes": "$0.92/GB ingested per day. Retention options: 3, 7, 14, or 30 days hot storage. Additional warm storage $0.015/GB/day, cold $0.001/GB/day. No flat monthly price — pure usage-based.",
           "source": {
             "url": "https://logz.io/pricing/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -877,7 +877,7 @@
           "notes": "50 GB ingested logs/month, 14-day retention. Community support only. Also includes metrics, traces, and profiling at no cost.",
           "source": {
             "url": "https://grafana.com/pricing/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -889,10 +889,10 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "flat",
-          "notes": "$19/month platform fee. Usage above free tier billed at: $0.40/GB write + $0.05/GB process + $0.10/GB retain. 30-day retention standard. 8x5 email support. 50 GB logs/month included in base. 'monthlyUsd' is the platform fee; total cost scales with usage.",
+          "notes": "$19/month platform fee. Usage above free tier billed at: $0.40/GB write + $0.05/GB process + $0.10/GB retain. 30-day retention standard. 8x5 email support. 50 GB logs/month included in base. The monthly price recorded here is the platform fee; total cost scales with usage.",
           "source": {
             "url": "https://grafana.com/pricing/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -907,7 +907,7 @@
           "notes": "Custom pricing; $25,000/year minimum commitment. Customizable retention beyond 30 days. Deployment flexibility: public cloud, Federal Cloud, or BYOC. Premium support + Observability Architect.",
           "source": {
             "url": "https://grafana.com/pricing/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -1007,7 +1007,7 @@
           "notes": "100 GB/month data ingest (logs + all telemetry), 8-day default retention. 1 full platform user + unlimited basic users. 500 synthetic checks. No credit card required.",
           "source": {
             "url": "https://newrelic.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -1022,22 +1022,22 @@
           "notes": "$10/month first full platform user; $99/month each additional user (max 5 total). 100 GB/month free ingest, then $0.40/GB. Ticketed support, 2 business-day SLA. SAML SSO included.",
           "source": {
             "url": "https://newrelic.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
           "name": "Pro",
-          "monthlyUsd": 349,
+          "monthlyUsd": 418.8,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
-          "annualDiscountPct": null,
+          "annualDiscountPct": 17,
           "billingModel": "per_seat",
           "notes": "$349/user/month on annual commitment; $418.80/user/month pay-as-you-go. Unlimited full platform users. 100 GB/month free ingest, then $0.40/GB. 2-hour critical response SLA. Data Plus eligibility, extended retention options.",
           "source": {
             "url": "https://newrelic.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -1052,7 +1052,7 @@
           "notes": "Contact sales. FedRAMP Moderate and HIPAA eligibility. 1-hour critical response SLA, 24/7 priority support. Data Plus included. Custom commitment options.",
           "source": {
             "url": "https://newrelic.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -1136,44 +1136,55 @@
         "Syslog",
         "Journald"
       ],
-      "provenance": "Official pricing page https://sematext.com/pricing/ fetched 2026-06-14 but Standard and Pro plan prices render via JavaScript templates (values not in HTML). Basic plan prices ($0.10/GB received, $0.15/GB stored at 500 MB/day) confirmed from official page. Starting prices for paid plans ($50/month for 1 GB/day, 1-week retention) sourced from Sematext's own blog comparison article at https://sematext.com/blog/best-log-management-tools/ (fetched 2026-06-14). Annual plans receive 10% discount per official pricing page. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
+      "provenance": "Official pricing page https://sematext.com/pricing/ fetched 2026-06-14 but Standard and Pro plan prices render via JavaScript templates (values not in HTML). Basic plan prices ($0.10/GB received, $0.15/GB stored at 500 MB/day) confirmed from official page. Starting prices for paid plans ($50/month for 1 GB/day, 1-week retention) sourced from Sematext's own blog comparison article at https://sematext.com/blog/best-log-management-tools/ (fetched 2026-06-14). Annual plans receive 10% discount per official pricing page. Re-verified 2026-09-02 against the live pricing page; published figures unchanged. On 2026-09-27 the pricing page rendered its Logs plans: Basic $5/month (500 MB/day, 7-day retention), Standard $50/month and Pro $60/month, with a 14-day trial.",
       "plans": [
         {
-          "name": "Free",
-          "monthlyUsd": 0,
-          "minutesIncluded": null,
-          "callsIncluded": null,
-          "overagePerMin": null,
-          "overagePerCall": null,
-          "annualDiscountPct": null,
-          "billingModel": "flat",
-          "notes": "500 MB/day log volume, 7-day retention. 14-day free trial for paid features. No credit card required.",
-          "source": {
-            "url": "https://sematext.com/pricing/",
-            "accessedAt": "2026-06-14"
-          },
-          "corroboration": {
-            "url": "https://sematext.com/blog/best-log-management-tools/",
-            "accessedAt": "2026-06-14"
-          }
-        },
-        {
           "name": "Basic (entry paid)",
-          "monthlyUsd": 50,
+          "monthlyUsd": 5,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
           "annualDiscountPct": 10,
           "billingModel": "flat",
-          "notes": "Starting paid tier: ~$50/month for 1 GB/day ingestion, 1-week retention. $0.10/GB data received + $0.15/GB stored. Annual plans 10% cheaper. Spike-friendly pricing; configurable overage. Exact price JS-rendered on official page; figure sourced from Sematext's own blog comparison.",
+          "notes": "$5/month on the page's monthly billing: data received $0.1/GB, data stored $0.15/GB, 7-day retention, 500 MB/day. Price depends on daily log volume and retention. The page offers annual billing at -10%. 14-day free trial, no credit card needed.",
           "source": {
-            "url": "https://sematext.com/blog/best-log-management-tools/",
-            "accessedAt": "2026-09-02"
+            "url": "https://sematext.com/pricing/",
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://sematext.com/pricing/",
             "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Standard",
+          "monthlyUsd": 50,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$50/month on the page's monthly billing at its default selection; price depends on daily log volume (1, 5 or 10 GB/day) and retention (7 or 15 days). Data received $0.1/GB, data stored $1.57/GB. Adds email alerting, scheduled reporting and live tail. 14-day free trial, no credit card needed.",
+          "source": {
+            "url": "https://sematext.com/pricing/",
+            "accessedAt": "2026-09-27"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 60,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$60/month on the page's monthly billing at its default selection; price depends on daily log volume (1 to 1,000 GB/day) and retention (7 to 365 days). Data received $0.1/GB, data stored $1.9/GB. Adds ChatOps and webhook integrations, anomaly detection, log archiving, logs pipelines and phone support. 14-day free trial, no credit card needed.",
+          "source": {
+            "url": "https://sematext.com/pricing/",
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -1184,7 +1195,7 @@
           "gdpr": null,
           "source": null
         },
-        "freeTier": true,
+        "freeTier": null,
         "freeTrialDays": 14,
         "keyIntegrations": [
           "Elasticsearch",
@@ -1199,8 +1210,7 @@
           "PagerDuty"
         ],
         "limits": [
-          "Free: 500 MB/day, 7-day retention, no credit card required",
-          "Basic (paid): ~$50/month for 1 GB/day, 1-week retention",
+          "Basic: $5/month for 500 MB/day with 7-day retention; Standard from $50/month and Pro from $60/month, priced by daily log volume and retention",
           "Annual plans 10% cheaper than monthly",
           "14-day free trial for paid features"
         ],
@@ -1230,7 +1240,7 @@
             "accessedAt": "2026-06-15"
           }
         ],
-        "provenance": "Sematext's dedicated security page returned HTTP 404, privacy page contained no compliance certifications, terms-of-service mentioned none, and the docs and integrations pages made no reference to SOC 2, HIPAA, or GDPR certifications. No compliance information was confirmed from any accessible Sematext-owned page — HIPAA, SOC 2, and GDPR all set to null. Free tier (500 MB/day) confirmed from existing pricing provenance. 14-day trial confirmed from pricing page. Key features sourced from sematext.com/logs/ and sematext.com/blog/log-management/ fetched 2026-06-15."
+        "provenance": "Sematext's dedicated security page returned HTTP 404, privacy page contained no compliance certifications, terms-of-service mentioned none, and the docs and integrations pages made no reference to SOC 2, HIPAA, or GDPR certifications. No compliance information was confirmed from any accessible Sematext-owned page — HIPAA, SOC 2, and GDPR all set to null. 14-day trial confirmed from pricing page. Key features sourced from sematext.com/logs/ and sematext.com/blog/log-management/ fetched 2026-06-15."
       }
     },
     {
@@ -1285,7 +1295,7 @@
           "notes": "$49/month base includes ~163 GB of logs or traces usage. Logs billed at $0.30/GB ingested beyond included amount. No per-user or per-host pricing. Retention options: 15, 30, 90, 180 days, or 1 year.",
           "source": {
             "url": "https://signoz.io/pricing/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {

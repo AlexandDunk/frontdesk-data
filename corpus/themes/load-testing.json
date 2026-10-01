@@ -1,6 +1,6 @@
 {
   "vertical": "load-testing",
-  "generatedAt": "2026-06-15",
+  "generatedAt": "2026-09-29",
   "methodologyNotes": "Published self-serve USD pricing was collected directly from each vendor's official pricing page on 2026-06-15. Gatling Enterprise publishes prices in EUR only (no USD equivalent on the pricing page); because monthlyUsd must hold a confirmed USD figure, Gatling's Basic (€89) and Team (€356) plans are recorded with monthlyUsd null and the EUR amount captured in notes (verified on gatling.io/pricing 2026-06-15). BlazeMeter 'Annual' prices (e.g. $99, $499) are interpreted as per-month rates when billed annually, consistent with the pricing page layout showing monthly vs. annual toggles. LoadNinja does not offer monthly subscriptions; pricing is per 25-hour block purchased ad hoc; monthlyUsd reflects the smallest block price as an effective one-time unit cost. OctoPerf Unlimited plan is priced at $999/month; Pay-Per-Test at $99/test-hour is not a recurring subscription so is recorded separately. Artillery annual pricing is 20% off published monthly rates per their pricing page. Loadero Subscription plan is $399/month billed monthly; PAYG tiers have a floor but are usage-metered. All telephony fields (minutesIncluded, callsIncluded, overagePerMin, overagePerCall) are null throughout — non-telephony vertical. hipaa/baa/bilingual set to null unless explicitly stated on the vendor's official pages.",
   "vendors": [
     {
@@ -50,7 +50,7 @@
           "notes": "500 virtual user hours (VUh) per month included. No credit card required. Community support. Access to all Grafana Cloud free-tier features.",
           "source": {
             "url": "https://grafana.com/products/cloud/performance-load-testing-k6/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -65,7 +65,7 @@
           "notes": "$19/month platform fee plus $0.15 per VUh (volume discounts available). First 500 VUh/month included (shared with Free tier allocation). 8x5 email support. Usage-metered above the free allocation; unit rate $0.15/VUh.",
           "source": {
             "url": "https://grafana.com/products/cloud/performance-load-testing-k6/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -80,7 +80,7 @@
           "notes": "Annual commit minimum $25,000/year. VUh rate as low as $0.05. Supports up to 1 million concurrent VUs. Deployment options: Public Cloud, Federal Cloud, or Bring Your Own Cloud. Premium support.",
           "source": {
             "url": "https://grafana.com/products/cloud/performance-load-testing-k6/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -193,7 +193,7 @@
           "notes": "$99/month billed annually; $149/month billed month-to-month. 1,000 concurrent users, 200 tests/year, 1 virtual service, 1-hour max test duration.",
           "source": {
             "url": "https://www.blazemeter.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://sourceforge.net/software/product/BlazeMeter/",
@@ -212,7 +212,7 @@
           "notes": "$499/month billed annually; $649/month billed month-to-month. 5,000 concurrent users, 80,000 VUH/year, 2 virtual services, 5-hour max test duration.",
           "source": {
             "url": "https://www.blazemeter.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -227,7 +227,7 @@
           "notes": "Contact sales. Volume discounts, unlimited plans, dedicated IPs, on-premise options, priority support.",
           "source": {
             "url": "https://www.blazemeter.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -370,7 +370,7 @@
           "notes": "Contact sales. Custom VU count, plans start at 25 hours, unlimited team members.",
           "source": {
             "url": "https://loadninja.com/pricing/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -457,7 +457,7 @@
         "sbt",
         "npm"
       ],
-      "provenance": "https://gatling.io/pricing/ fetched directly 2026-06-15. Prices published in EUR only (Basic €89/mo, Team €356/mo); no USD equivalent on page, so monthlyUsd is null for paid tiers and the EUR figure is preserved in notes. Integrations from https://gatling.io/integrations/ fetched 2026-06-15. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
+      "provenance": "https://gatling.io/pricing/ fetched directly 2026-06-15. Prices published in EUR only (Basic €89/mo, Team €356/mo); no USD equivalent on page, so no monthly price is recorded for paid tiers, and the EUR figure is preserved in notes. Integrations from https://gatling.io/integrations/ fetched 2026-06-15. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
       "plans": [
         {
           "name": "Basic",
@@ -468,7 +468,7 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "flat",
-          "notes": "Price published in EUR only (€89/month verified on pricing page 2026-06-15); no USD figure is published, so monthlyUsd is null (USD amount unconfirmed). Annual billing: €1,068/year (no per-month discount vs. monthly rate shown). Up to 60,000 VUs, 1 hour of testing/month, 1 load generator, 2 seats, community support.",
+          "notes": "Price published in EUR only (€89/month verified on pricing page 2026-06-15); no USD figure is published, so no monthly price is recorded (USD amount unconfirmed). Annual billing: €1,068/year (no per-month discount vs. monthly rate shown). Up to 60,000 VUs, 1 hour of testing/month, 1 load generator, 2 seats, community support.",
           "source": {
             "url": "https://gatling.io/pricing/",
             "accessedAt": "2026-09-02"
@@ -483,7 +483,7 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "flat",
-          "notes": "Price published in EUR only (€356/month verified on pricing page 2026-06-15); no USD figure is published, so monthlyUsd is null (USD amount unconfirmed). Annual billing: €4,272/year. Up to 180,000 VUs, 5 hours of testing/month, 3 load generators, 10 seats, distributed testing, professional support (3 business-day response).",
+          "notes": "Price published in EUR only (€356/month verified on pricing page 2026-06-15); no USD figure is published, so no monthly price is recorded (USD amount unconfirmed). Annual billing: €4,272/year. Up to 180,000 VUs, 5 hours of testing/month, 3 load generators, 10 seats, distributed testing, professional support (3 business-day response).",
           "source": {
             "url": "https://gatling.io/pricing/",
             "accessedAt": "2026-09-02"
@@ -593,7 +593,7 @@
           "notes": "10,000 clients per test, 1 target host, 2 URLs per test, 1-minute minimum test duration. Perpetual free tier.",
           "source": {
             "url": "https://loader.io/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -608,7 +608,7 @@
           "notes": "$99.95/month, month-to-month only (no annual contract). 100,000 clients per test, unlimited target hosts, 10 URLs per test, unlimited 10-min tests, advanced analytics, concurrent tests, DNS verification, team features, priority loaders, priority support.",
           "source": {
             "url": "https://loader.io/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -660,7 +660,14 @@
       "provenance": "https://loadero.com/pricing/ fetched directly 2026-06-15. ISO certification badge noted in footer but not specified. No HIPAA/BAA mention. No specific third-party integrations listed on pricing or features pages. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
       "plans": [
         {
-          "name": "PAYG Essential",
+          "name": "Pay as you go Essential",
+          "formerNames": [
+            {
+              "name": "PAYG Essential",
+              "lastSeen": "2026-09-02",
+              "absentOn": "2026-09-27"
+            }
+          ],
           "monthlyUsd": 250,
           "minutesIncluded": null,
           "callsIncluded": null,
@@ -671,11 +678,18 @@
           "notes": "Pay-as-you-go, from $250/month floor. 200,000 compute units/month cap. Max 45-min test duration, up to 20,000 concurrent participants. Tiered unit rates: $0.050 (first 10K), $0.045 (next 10K), $0.040 (next 20K), $0.0375 (above 40K).",
           "source": {
             "url": "https://loadero.com/pricing/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
-          "name": "PAYG Ultimate",
+          "name": "Pay as you go Ultimate",
+          "formerNames": [
+            {
+              "name": "PAYG Ultimate",
+              "lastSeen": "2026-09-02",
+              "absentOn": "2026-09-27"
+            }
+          ],
           "monthlyUsd": 375,
           "minutesIncluded": null,
           "callsIncluded": null,
@@ -686,7 +700,7 @@
           "notes": "Pay-as-you-go, from $375/month floor. 200,000 compute units/month cap. Max 2-hour test duration, up to 50,000 concurrent participants. Tiered unit rates: $0.075 (first 10K), $0.070 (next 10K), $0.065 (next 20K), $0.060 (above 40K).",
           "source": {
             "url": "https://loadero.com/pricing/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -701,7 +715,7 @@
           "notes": "$399/month billed monthly. 10,000 compute units included. Max 45-min test duration, up to 10,000 concurrent participants. Overage at $0.045 per additional compute unit. Annual subscription also available (same unit structure).",
           "source": {
             "url": "https://loadero.com/pricing/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -716,7 +730,7 @@
           "notes": "Contact sales. Max 8-hour test duration, unlimited concurrent participants, tailored terms.",
           "source": {
             "url": "https://loadero.com/pricing/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -795,7 +809,7 @@
           "notes": "30 reports/month, 1-month data retention, 2 team members, up to 5 workers per test, 30-minute max duration, 25 E2E test cases.",
           "source": {
             "url": "https://www.artillery.io/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -918,7 +932,7 @@
           "notes": "Up to 50 concurrent VUs, unlimited tests, 20-minute max test duration, 1 parallel run, 1 real browser VU, 24-month data retention, all platform features, unlimited workspaces. Perpetual free account.",
           "source": {
             "url": "https://octoperf.com/pricing/saas-and-on-premise-load-testing/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -930,7 +944,7 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "flat",
-          "notes": "$99 per test-hour (one-time per-test purchase, not a monthly subscription). Starting at 1,000 concurrent VUs, 1-hour max duration, 1 parallel run, 5 real browser VUs, 24-month data retention. monthlyUsd reflects the per-test-hour unit cost.",
+          "notes": "$99 per test-hour (one-time per-test purchase, not a monthly subscription). Starting at 1,000 concurrent VUs, 1-hour max duration, 1 parallel run, 5 real browser VUs, 24-month data retention. The monthly price recorded here reflects the per-test-hour unit cost.",
           "source": {
             "url": "https://octoperf.com/pricing/saas-and-on-premise-load-testing/",
             "accessedAt": "2026-09-02"

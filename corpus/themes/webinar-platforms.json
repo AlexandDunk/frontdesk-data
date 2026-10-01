@@ -1,6 +1,6 @@
 {
   "vertical": "webinar-platforms",
-  "generatedAt": "2026-06-14",
+  "generatedAt": "2026-09-29",
   "methodologyNotes": "Self-serve USD pricing collected from each vendor's official pricing page where accessible on 2026-06-14. Zoom's pricing page (zoom.us/pricing/events) renders JS-only and returned empty content; Zapier's best-webinar-software guide (Dec 2025) was used as primary source for Zoom with corroboration from the GetApp listing. GoTo Webinar's official pricing page (goto.com/webinar/pricing) returned HTTP 403; GetApp and SoftwareAdvice listings were used instead, both confirming the same per-user figures. Livestorm's official page serves EUR pricing; GetApp was used for USD amounts. All non-telephony fields (minutesIncluded, callsIncluded, overagePerMin, overagePerCall) are null on every plan. annualDiscountPct is populated only when both monthly and annual rates appear in the same source. Quote-only/enterprise tiers carry monthlyUsd: null and billingModel: 'custom'.",
   "vendors": [
     {
@@ -126,7 +126,14 @@
       "provenance": "Official pricing page demio.com/pricing fetched 2026-06-14 (Starter monthly confirmed at $63; Growth monthly confirmed at placeholder '$/mo' on raw page). GetApp listing https://www.getapp.com/content-management-software/a/demio/pricing/ returned complete figures: Starter $63/mo or $534/yr, Growth $117/mo or $962/yr, Premium $2354/yr, Unlimited $23540/yr. Premium monthly rate not published; annual-only billing confirmed. Re-verified 2026-09-03 against the live pricing page; published figures unchanged.",
       "plans": [
         {
-          "name": "Starter Monthly",
+          "name": "Starter",
+          "formerNames": [
+            {
+              "name": "Starter Monthly",
+              "lastSeen": "2026-09-03",
+              "absentOn": "2026-09-27"
+            }
+          ],
           "monthlyUsd": 63,
           "minutesIncluded": null,
           "callsIncluded": null,
@@ -137,7 +144,7 @@
           "notes": "1 host, 50 attendees per event, 3-hour session limit. Month-to-month billing.",
           "source": {
             "url": "https://demio.com/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://www.getapp.com/content-management-software/a/demio/pricing/",
@@ -153,7 +160,7 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "flat",
-          "notes": "$534/year ($44.50/month effective). 1 host, 50 attendees per event, 3-hour session limit. Zapier guide cites $45/month billed annually (minor rounding). annualDiscountPct is null: the figure in monthlyUsd is itself the annual rate, and a saving cannot be a percentage of a price this record does not hold.",
+          "notes": "$534/year ($44.50/month effective). 1 host, 50 attendees per event, 3-hour session limit. Zapier guide cites $45/month billed annually (minor rounding). The annual discount is not recorded: the figure recorded as the monthly price is itself the annual rate, and a saving cannot be a percentage of a price this record does not hold.",
           "source": {
             "url": "https://demio.com/pricing",
             "accessedAt": "2026-09-05"
@@ -164,7 +171,14 @@
           }
         },
         {
-          "name": "Growth Monthly",
+          "name": "Growth",
+          "formerNames": [
+            {
+              "name": "Growth Monthly",
+              "lastSeen": "2026-09-05",
+              "absentOn": "2026-09-27"
+            }
+          ],
           "monthlyUsd": 117,
           "minutesIncluded": null,
           "callsIncluded": null,
@@ -175,7 +189,7 @@
           "notes": "1 host at base price (additional hosts billed separately). Attendee options: 150, 500, 1000, or 3000 per event. 8-hour session limit. Automated events, custom branding.",
           "source": {
             "url": "https://demio.com/pricing",
-            "accessedAt": "2026-09-05"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://demio.com/pricing",
@@ -373,7 +387,7 @@
           "notes": "Up to 3000 live attendees, 12-hour sessions, SAML SSO, Salesforce/Marketo/Pardot integrations, dedicated CSM. Price not publicly listed.",
           "source": {
             "url": "https://livestorm.co/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-26"
           }
         }
       ],
@@ -517,7 +531,7 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "custom",
-          "notes": "Pricing available upon request. SoftwareAdvice listed $499/user/month but this conflicts with 'request' language on other sources; recorded as null to be safe.",
+          "notes": "Pricing available upon request. SoftwareAdvice listed $499/user/month but this conflicts with 'request' language on other sources; not recorded, to be safe.",
           "source": {
             "url": "https://www.getapp.com/conference-management-software/a/gotowebinar/",
             "accessedAt": "2026-06-14"
@@ -602,7 +616,7 @@
           "notes": "$49/month or $39/month billed annually ($468/year). 1 host, up to 100 attendees, 1-hour session limit, unlimited webinars.",
           "source": {
             "url": "https://webinarjam.com/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://www.getapp.com/conference-management-software/a/webinarjam/pricing/",
@@ -621,7 +635,7 @@
           "notes": "$99/month or $79/month billed annually ($948/year, saves $240). 2 hosts, up to 500 attendees, 2-hour session limit. Most popular plan. Includes EverWebinar (automated webinars).",
           "source": {
             "url": "https://webinarjam.com/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://www.getapp.com/conference-management-software/a/webinarjam/pricing/",
@@ -640,7 +654,7 @@
           "notes": "$299/month or $229/month billed annually ($2748/year, saves $840). 4 hosts, up to 2000 attendees, 3-hour session limit. Includes EverWebinar.",
           "source": {
             "url": "https://webinarjam.com/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://www.getapp.com/conference-management-software/a/webinarjam/pricing/",
@@ -659,7 +673,7 @@
           "notes": "$499/month or $379/month billed annually ($4548/year, saves $1440). 6 hosts, up to 5000 attendees, 4-hour session limit. Includes EverWebinar.",
           "source": {
             "url": "https://webinarjam.com/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://www.getapp.com/conference-management-software/a/webinarjam/pricing/",
@@ -753,7 +767,7 @@
           "notes": "$99/month or ~$84/month billed annually ($1010/year, 15% discount per official page; Zapier guide cites $84/month annually). Up to 1 active eWebinar, 1000 registrants/month, unlimited recurring sessions and team members.",
           "source": {
             "url": "https://ewebinar.com/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://www.getapp.com/conference-management-software/a/ewebinar/pricing/",
@@ -772,7 +786,7 @@
           "notes": "$199/month or ~$169/month billed annually ($2030/year, 15% discount). Up to 5 active eWebinars, 3000 registrants/month.",
           "source": {
             "url": "https://ewebinar.com/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://www.getapp.com/conference-management-software/a/ewebinar/pricing/",
@@ -791,7 +805,7 @@
           "notes": "$299/month or ~$254/month billed annually ($3050/year, 15% discount). Up to 15 active eWebinars, 5000 registrants/month. Additional eWebinars: $15/month per 5.",
           "source": {
             "url": "https://ewebinar.com/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://www.getapp.com/conference-management-software/a/ewebinar/pricing/",
@@ -810,7 +824,7 @@
           "notes": "Custom features by request. Contact sales for pricing.",
           "source": {
             "url": "https://ewebinar.com/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -893,7 +907,7 @@
           "notes": "$49/month or $34.30/month billed annually (30% savings). 1 host seat, 100+ live attendees, 10 streaming hours/month, 2-hour session limit, 1GB studio storage. Overage: $0.15/extra attendee, $20/5 extra hours. Stripe transaction fee: 5%.",
           "source": {
             "url": "https://crowdcast.io/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://www.getapp.com/conference-management-software/a/crowdcast/pricing/",
@@ -912,7 +926,7 @@
           "notes": "$89/month or $62.30/month billed annually (30% savings). 2 host seats, 250+ live attendees, 20 streaming hours/month, 4-hour session limit, multistream to 1 destination, 5GB storage. Stripe fee: 5%.",
           "source": {
             "url": "https://crowdcast.io/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://www.getapp.com/conference-management-software/a/crowdcast/pricing/",
@@ -931,7 +945,7 @@
           "notes": "$195/month or $136.50/month billed annually (30% savings). 4 host seats, 1000+ live attendees, 40 streaming hours/month, 6-hour session limit, multistream to 3 destinations, 10GB storage. Stripe fee: 2%.",
           "source": {
             "url": "https://crowdcast.io/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://www.getapp.com/conference-management-software/a/crowdcast/pricing/",
@@ -1016,7 +1030,7 @@
           "notes": "Up to 1000 live attendees, 1 host license. Webinars, chat/polls/Q&A, recording, registration, email automation, basic integrations. Quote-only.",
           "source": {
             "url": "https://get.bigmarker.com/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -1031,7 +1045,7 @@
           "notes": "Up to 10000 live attendees, 4 host licenses. Adds virtual events, simulive/evergreen webinars, breakout rooms, certificates, API access, dedicated CSM. Quote-only.",
           "source": {
             "url": "https://get.bigmarker.com/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -1046,7 +1060,7 @@
           "notes": "Up to 500000 live attendees, 6 host licenses. Adds white-label domains, custom designers, live captions, SSO, MFA, mobile SDK. Quote-only.",
           "source": {
             "url": "https://get.bigmarker.com/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         }
       ],

@@ -23,7 +23,7 @@
       "category": "wall-ovens",
       "releaseDate": null,
       "priceUsd": null,
-      "priceNote": "No US price could be sourced verbatim from a fetched page. The official Bosch product page states \"Product is no longer available\" (no price), and the US Appliance retailer page marks the item \"THIS ITEM IS DISCONTINUED\" and hides price behind sign-in. Retailer pages that might list a price (Home Depot, Best Buy, AJ Madison, Abt, Designer Appliances) all returned HTTP 403 and could not be fetched, so price is left null rather than guessed.",
+      "priceNote": "No US price could be sourced verbatim from a page we checked. The official Bosch product page states \"Product is no longer available\" (no price), and the US Appliance retailer page marks the item \"THIS ITEM IS DISCONTINUED\" and hides price behind sign-in. Retailer pages that might list a price (Home Depot, Best Buy, AJ Madison, Abt, Designer Appliances) all blocked access and could not be read, so no price is listed rather than a guess.",
       "specs": {
         "configuration": "single",
         "widthInches": 30,
@@ -51,7 +51,7 @@
         "license": "© Bosch",
         "accessedAt": "2026-07-12"
       },
-      "provenance": "The official Bosch US product page (source) confirms the exact model \"HBL8453UC Single Wall Oven\" with \"Cavity Capacity 4.6 Cu Ft\", an \"Integrated Temperature Probe\", and \"Remote monitor and control\" (Home Connect), and notes the product is no longer available so no price is shown. The US Appliance retailer page (corroboration) independently confirms the same model number HBL8453UC as a \"30\\\" 800 Series Single Electric Wall Oven with Genuine European Convection\", \"4.6 cu. ft. capacity\", and \"2 standard racks and 1 telescopic rack\" (3 racks total) with the Home Connect app — matching the exact model, not a sibling or different capacity. Neither page publishes a US price (Bosch: discontinued; US Appliance: item discontinued, price behind sign-in), and all price-bearing retailers (Home Depot, Best Buy, AJ Madison, Abt) returned HTTP 403, so priceUsd is left null."
+      "provenance": "The official Bosch US product page (source) confirms the exact model \"HBL8453UC Single Wall Oven\" with \"Cavity Capacity 4.6 Cu Ft\", an \"Integrated Temperature Probe\", and \"Remote monitor and control\" (Home Connect), and notes the product is no longer available so no price is shown. The US Appliance retailer page (corroboration) independently confirms the same model number HBL8453UC as a \"30\\\" 800 Series Single Electric Wall Oven with Genuine European Convection\", \"4.6 cu. ft. capacity\", and \"2 standard racks and 1 telescopic rack\" (3 racks total) with the Home Connect app — matching the exact model, not a sibling or different capacity. Neither page publishes a US price (Bosch: discontinued; US Appliance: item discontinued, price behind sign-in), and all price-bearing retailers (Home Depot, Best Buy, AJ Madison, Abt) returned HTTP 403, so the price is left blank."
     },
     {
       "slug": "cafe-cts70dp2ns1",
@@ -60,7 +60,7 @@
       "category": "wall-ovens",
       "releaseDate": "2019",
       "priceUsd": 3093,
-      "priceNote": "US Appliance retailer listing for CTS70DP2NS1 shows \"Now: $3,093.00\" (sale price; \"Was\" not populated). This is a typical US street price, not a stated MSRP; the official Café page (which would list MSRP) returned HTTP 403 and Amazon showed no featured offer/price.",
+      "priceNote": "US Appliance retailer listing for CTS70DP2NS1 shows \"Now: $3,093.00\" (sale price; \"Was\" not populated). This is a typical US street price, not a stated MSRP; the official Café page (which would list MSRP) blocked access and Amazon showed no featured offer/price.",
       "specs": {
         "configuration": "single",
         "widthInches": 30,
@@ -88,7 +88,7 @@
         "license": "© Café",
         "accessedAt": "2026-07-12"
       },
-      "provenance": "The official Café product page (cafeappliances.com) returned HTTP 403, but GE Appliances' own owner-support page (products.geappliances.com/appliance/gea-specs/CTS70DP2NS1/support) confirmed the exact model as the \"CAFÉ™ 30\\\" Smart Single Wall Oven with Convection,\" manufactured beginning May 2019. The cited source, the Café brand-store Amazon listing (model CTS70DP2NS1, UPC 084691842231), states verbatim Fuel Type Electric, 5 cu. ft. capacity, Convection, Self-cleaning, and Wi-fi. The US Appliance retailer page corroborated the same model and supplied the price (\"Now: $3,093.00\") plus top-down true convection, Air Fry, an integrated temperature probe, and a steam-clean-plus-self-clean cycle; numRacks and maxBakeTempF were not stated verbatim on any fetched page and are left null."
+      "provenance": "The official Café product page (cafeappliances.com) returned HTTP 403, but GE Appliances' own owner-support page (products.geappliances.com/appliance/gea-specs/CTS70DP2NS1/support) confirmed the exact model as the \"CAFÉ™ 30\\\" Smart Single Wall Oven with Convection,\" manufactured beginning May 2019. The cited source, the Café brand-store Amazon listing (model CTS70DP2NS1, UPC 084691842231), states verbatim Fuel Type Electric, 5 cu. ft. capacity, Convection, Self-cleaning, and Wi-fi. The US Appliance retailer page corroborated the same model and supplied the price (\"Now: $3,093.00\") plus top-down true convection, Air Fry, an integrated temperature probe, and a steam-clean-plus-self-clean cycle; num racks and max bake temp (°F) were not stated verbatim on any fetched page and are left blank."
     },
     {
       "slug": "ge-profile-pts7000snss",
@@ -158,7 +158,7 @@
         "license": "© Frigidaire",
         "accessedAt": "2026-07-12"
       },
-      "provenance": "The Town Appliance product page (source) is explicitly for model FCWS3027AS — a Frigidaire 30\" Single Electric Wall Oven with Fan Convection — and carries a full manufacturer spec sheet: Oven Capacity 5.3 Cu. Ft., Convection Type Fan with 1 convection fan, Rack Type 1 Quantity 2 (two flat racks), high-heat Self Clean in 2/3/4-hour cycles, and a List Price (MSRP) of $2,249.00. The Express Kitchens page corroborates the same exact model (SKU FCWS3027AS, 30\" single electric, 5.3 cu. ft.) and an MSRP \"Price Range: $2000 - $3000\" plus a street price of $1,095.99. The official Frigidaire product/owner-center pages are JavaScript-rendered SPAs that the text fetcher returned empty (\"Frigidaire\" only), so both cited URLs are retailer pages for this exact model; maxBakeTempF (only a broil range of 400–550 was listed, not a max bake temp) and releaseDate were not stated on either page and are left null."
+      "provenance": "The Town Appliance product page (source) is explicitly for model FCWS3027AS — a Frigidaire 30\" Single Electric Wall Oven with Fan Convection — and carries a full manufacturer spec sheet: Oven Capacity 5.3 Cu. Ft., Convection Type Fan with 1 convection fan, Rack Type 1 Quantity 2 (two flat racks), high-heat Self Clean in 2/3/4-hour cycles, and a List Price (MSRP) of $2,249.00. The Express Kitchens page corroborates the same exact model (SKU FCWS3027AS, 30\" single electric, 5.3 cu. ft.) and an MSRP \"Price Range: $2000 - $3000\" plus a street price of $1,095.99. The official Frigidaire product/owner-center pages are JavaScript-rendered SPAs that the text fetcher returned empty (\"Frigidaire\" only), so both cited URLs are retailer pages for this exact model; max bake temp (°F) (only a broil range of 400–550 was listed, not a max bake temp) and release date were not stated on either page and are left blank."
     },
     {
       "slug": "kitchenaid-koes530pss",
@@ -167,7 +167,7 @@
       "category": "wall-ovens",
       "releaseDate": null,
       "priceUsd": 3199,
-      "priceNote": "priceUsd 3199 = AAA Appliance Center (aaappliancecenter.com, corroboration) listed price \"$3,199.00\" for KOES530PSS. KitchenAid.com (source) displayed no price — \"Temporarily out of stock\". US Appliance separately listed \"$2,998.00\" (sale) / \"$3,332.00\" (was). No figure explicitly labeled MSRP was found on any fetched page.",
+      "priceNote": "The listed $3,199 is AAA Appliance Center's (aaappliancecenter.com, the corroborating page) listed price \"$3,199.00\" for KOES530PSS. KitchenAid.com (source) displayed no price — \"Temporarily out of stock\". US Appliance separately listed \"$2,998.00\" (sale) / \"$3,332.00\" (was). No figure explicitly labeled MSRP was found on any page checked.",
       "specs": {
         "configuration": "single",
         "widthInches": 30,
@@ -195,7 +195,7 @@
         "license": "© KitchenAid",
         "accessedAt": "2026-07-12"
       },
-      "provenance": "The KitchenAid manufacturer page (source) confirms the exact model KOES530PSS — a 30\" single wall oven with Air Fry Mode, 5.0 Cu. Ft. capacity, Even-Heat True Convection (heating element plus fan), an Integrated Meat Thermometer, and a high-temperature Self-Cleaning Cycle; it showed no price (\"Temporarily out of stock\"). AAA Appliance Center (corroboration) lists the same model number with a full structured spec table confirming Fuel Type: Electric, Total Capacity 5.0 cu. ft., Class Width 30\", 3 Oven Racks, Wi-Fi: Yes, and a listed price of $3,199.00. The Maytag/KitchenAid owner's center for KOES530PSS separately lists an \"Internet Connectivity Guide\" and \"Temp Probe Guide\", corroborating the Wi-Fi and meat-probe specs; no fetched page stated a maximum bake temperature, so that field is left null."
+      "provenance": "The KitchenAid manufacturer page (source) confirms the exact model KOES530PSS — a 30\" single wall oven with Air Fry Mode, 5.0 Cu. Ft. capacity, Even-Heat True Convection (heating element plus fan), an Integrated Meat Thermometer, and a high-temperature Self-Cleaning Cycle; it showed no price (\"Temporarily out of stock\"). AAA Appliance Center (corroboration) lists the same model number with a full structured spec table confirming Fuel Type: Electric, Total Capacity 5.0 cu. ft., Class Width 30\", 3 Oven Racks, Wi-Fi: Yes, and a listed price of $3,199.00. The Maytag/KitchenAid owner's center for KOES530PSS separately lists an \"Internet Connectivity Guide\" and \"Temp Probe Guide\", corroborating the Wi-Fi and meat-probe specs; no fetched page stated a maximum bake temperature, so that field is left blank."
     },
     {
       "slug": "lg-wsep4727f",
@@ -204,7 +204,7 @@
       "category": "wall-ovens",
       "releaseDate": null,
       "priceUsd": 3199,
-      "priceNote": "LG US product page (lg.com/us) lists WSEP4727F regular price as $3,199.00 (shown verbatim as \"$1,350.00 OFF $3,199.00\"), currently discounted to $1,849.00. priceUsd uses the MSRP figure $3,199.00 per methodology (\"typical US MSRP\").",
+      "priceNote": "LG US product page (lg.com/us) lists WSEP4727F regular price as $3,199.00 (shown verbatim as \"$1,350.00 OFF $3,199.00\"), currently discounted to $1,849.00. The listed price is the MSRP figure $3,199.00, per our method (\"typical US MSRP\").",
       "specs": {
         "configuration": "single",
         "widthInches": 30,
@@ -232,7 +232,7 @@
         "license": "© LG",
         "accessedAt": "2026-07-12"
       },
-      "provenance": "The LG US manufacturer page confirms the exact model WSEP4727F (\"4.7 cu. ft. Smart Wall Oven with InstaView®, True Convection, Air Fry, and Steam Sous Vide\") and lists its regular price as $3,199.00 (\"$1,350.00 OFF $3,199.00\"), currently on sale at $1,849.00. The LG official product page for the same model number (lg.com/ca_en) provided the detailed spec table used here: Type \"Single Wall Oven\", 4.7 cu. ft. total capacity, Convection Type \"True Convection\" (third heating element attached to the fan), Heavy Duty Rack \"2\", Self Clean + EasyClean® cleaning, Temp Probe \"Yes\", Air Fry \"Yes\", and Wi-Fi Connectivity \"Yes\"; power spec is 120/240VAC (electric, no gas). Max bake temperature and release date were not stated on either fetched page, so both are left null; all US/third-party retailer pages blocked automated fetching."
+      "provenance": "The LG US manufacturer page confirms the exact model WSEP4727F (\"4.7 cu. ft. Smart Wall Oven with InstaView®, True Convection, Air Fry, and Steam Sous Vide\") and lists its regular price as $3,199.00 (\"$1,350.00 OFF $3,199.00\"), currently on sale at $1,849.00. The LG official product page for the same model number (lg.com/ca_en) provided the detailed spec table used here: Type \"Single Wall Oven\", 4.7 cu. ft. total capacity, Convection Type \"True Convection\" (third heating element attached to the fan), Heavy Duty Rack \"2\", Self Clean + EasyClean® cleaning, Temp Probe \"Yes\", Air Fry \"Yes\", and Wi-Fi Connectivity \"Yes\"; power spec is 120/240VAC (electric, no gas). Max bake temperature and release date were not stated on either fetched page, so both are left blank; all US/third-party retailer pages blocked automated fetching."
     },
     {
       "slug": "whirlpool-woes5030lz",
@@ -269,7 +269,7 @@
         "license": "© Whirlpool",
         "accessedAt": "2026-07-12"
       },
-      "provenance": "The Whirlpool manufacturer page confirmed the exact model identity (WOES5030LZ, \"30-Inch Single Wall Oven with Air Fry When Connected - 5.0 Cu. Ft.\") and stated the 6-in-1 Fan Convection design where \"Convect Bake uses a third heating element and a fan\" (mapped to true-convection), the Air Fry Mode When Connected, both a \"high temperature self-clean cycle\" and a \"Steam Clean Option\" (mapped to pyrolytic-and-steam), and a Smart Wall Oven with WiFi. D&S Home Appliances corroborated the same model's full factory spec sheet verbatim: Fuel Type Electric, Oven Type Single, Nominal Width 30 / Product Width 29.75, Oven Capacity 5.0, a dedicated Convection Element (2500 W, \"Single Fan\") distinct from the 2800 W bake and 3600 W broil elements, Number of Oven Racks 2, Self-Cleaning, and Smart Appliance / WiFi. The price ($1,599.00, In Stock, authorized reseller) came from D&S because Whirlpool.com showed the unit temporarily out of stock with no price; maxBakeTempF and an integrated meat probe were not stated on any fetched page and are left null."
+      "provenance": "The Whirlpool manufacturer page confirmed the exact model identity (WOES5030LZ, \"30-Inch Single Wall Oven with Air Fry When Connected - 5.0 Cu. Ft.\") and stated the 6-in-1 Fan Convection design where \"Convect Bake uses a third heating element and a fan\" (mapped to true-convection), the Air Fry Mode When Connected, both a \"high temperature self-clean cycle\" and a \"Steam Clean Option\" (mapped to pyrolytic-and-steam), and a Smart Wall Oven with WiFi. D&S Home Appliances corroborated the same model's full factory spec sheet verbatim: Fuel Type Electric, Oven Type Single, Nominal Width 30 / Product Width 29.75, Oven Capacity 5.0, a dedicated Convection Element (2500 W, \"Single Fan\") distinct from the 2800 W bake and 3600 W broil elements, Number of Oven Racks 2, Self-Cleaning, and Smart Appliance / WiFi. The price ($1,599.00, In Stock, authorized reseller) came from D&S because Whirlpool.com showed the unit temporarily out of stock with no price; max bake temp (°F) and an integrated meat probe were not stated on any fetched page and are left blank."
     },
     {
       "slug": "samsung-nv51k6650ds",
@@ -278,7 +278,7 @@
       "category": "wall-ovens",
       "releaseDate": null,
       "priceUsd": null,
-      "priceNote": "No US MSRP or retail price could be sourced verbatim from any fetched page. us-appliance.com lists NV51K6650DS as discontinued and hides its price behind account login (\"Sign In To See Best Price\"); the Samsung product page redirected to the wall-ovens category, and the Best Buy listing could not be fetched. Price left null rather than guessed.",
+      "priceNote": "No US MSRP or retail price could be sourced verbatim from any page checked. us-appliance.com lists NV51K6650DS as discontinued and hides its price behind account login (\"Sign In To See Best Price\"); the Samsung product page redirected to the wall-ovens category, and the Best Buy listing could not be opened. No price is listed rather than a guess.",
       "specs": {
         "configuration": "double",
         "widthInches": 30,
@@ -306,7 +306,7 @@
         "license": "© Samsung",
         "accessedAt": "2026-07-12"
       },
-      "provenance": "The official Samsung spec sheet PDF (image-us.samsung.com) confirmed this exact model NV51K6650DS as a \"5.1 cu. ft. Double Wall Oven\" with total capacity 5.1 cu ft (Upper 2.8 / Lower 2.2), a 30\" cabinet, electric power (KW rating 240V 9.3 / 208V 7.0, 40A breaker), Dual Convection (\"Two fans circulate air\"), 3 heavy-duty racks, Bake range 175°F–550°F, a WiFi-Enabled Temperature Probe, WiFi Connectivity, and \"Hybrid and Self Clean\" (steam plus high-heat). The us-appliance.com retailer page corroborated the same model number and specs (5.1 cu ft split 2.8/2.2, 30\", 3 racks, Steam Cook, Dual Convection, WiFi temperature probe, Hybrid Self-Clean using steam) but marked the unit discontinued with no visible price. Because no fetched page stated a US price, priceUsd is left null; convectionType is set to fan-convection since only fans (no dedicated third element) are stated, and airFryMode is false as it is absent from the exhaustive cooking-mode list."
+      "provenance": "The official Samsung spec sheet PDF (image-us.samsung.com) confirmed this exact model NV51K6650DS as a \"5.1 cu. ft. Double Wall Oven\" with total capacity 5.1 cu ft (Upper 2.8 / Lower 2.2), a 30\" cabinet, electric power (KW rating 240V 9.3 / 208V 7.0, 40A breaker), Dual Convection (\"Two fans circulate air\"), 3 heavy-duty racks, Bake range 175°F–550°F, a WiFi-Enabled Temperature Probe, WiFi Connectivity, and \"Hybrid and Self Clean\" (steam plus high-heat). The us-appliance.com retailer page corroborated the same model number and specs (5.1 cu ft split 2.8/2.2, 30\", 3 racks, Steam Cook, Dual Convection, WiFi temperature probe, Hybrid Self-Clean using steam) but marked the unit discontinued with no visible price. Because no fetched page stated a US price, the price is left blank; convection type is set to fan-convection since only fans (no dedicated third element) are stated, and air fry mode is false as it is absent from the exhaustive cooking-mode list."
     }
   ]
 }

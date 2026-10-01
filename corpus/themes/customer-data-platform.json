@@ -1,6 +1,6 @@
 {
   "vertical": "customer-data-platform",
-  "generatedAt": "2026-06-14",
+  "generatedAt": "2026-09-29",
   "methodologyNotes": "Published self-serve USD pricing collected from each vendor's official pricing page (accessed 2026-06-14 where reachable) and cross-checked against reputable aggregators (GetApp, SoftwareAdvice). Where the official page is JS-rendered or returns non-USD content the provenance field notes the fallback source used. Quote-only tiers are recorded with monthlyUsd = null — no prices are guessed. Usage-metered plans record the lowest published committed tier as monthlyUsd where available, with per-unit rates in notes. Hull.io was excluded: the domain returns a TLS certificate error and appears to be dormant/defunct. Twilio Engage has no self-serve pricing page; its plans are all custom/quote-only. minutesIncluded, callsIncluded, overagePerMin, overagePerCall are null on every plan because this is a non-telephony vertical.",
   "vendors": [
     {
@@ -167,22 +167,7 @@
           "notes": "250,000 monthly events, 16+ SDK sources, 200+ cloud destinations, warehouse destinations, Reverse ETL. Data processing halts after second consecutive overage month. Max 10 team members.",
           "source": {
             "url": "https://rudderstack.com/pricing/",
-            "accessedAt": "2026-09-02"
-          }
-        },
-        {
-          "name": "Starter",
-          "monthlyUsd": 220,
-          "minutesIncluded": null,
-          "callsIncluded": null,
-          "overagePerMin": null,
-          "overagePerCall": null,
-          "annualDiscountPct": null,
-          "billingModel": "flat",
-          "notes": "1 million monthly events. Everything in Free plus unlimited tracking plans, email support, 99.95% uptime SLA. Max 10 team members. Overage billed at difference to next tier.",
-          "source": {
-            "url": "https://rudderstack.com/pricing/",
-            "accessedAt": "2026-06-14"
+            "accessedAt": "2026-09-28"
           }
         },
         {
@@ -212,7 +197,7 @@
           "notes": "Custom pricing, contact sales. Everything in Growth plus Python transformations, Profiles and Data Apps access, HIPAA compliance, SSO, VPC deployment, PII masking, user suppression/deletion API.",
           "source": {
             "url": "https://rudderstack.com/pricing/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-28"
           }
         }
       ],
@@ -242,14 +227,12 @@
         ],
         "limits": [
           "Free: 250,000 monthly events, max 10 team members, 1 tracking plan (5 events), community support only",
-          "Free: data processing halts after second consecutive overage month",
-          "Starter: 1 million events/mo, max 10 team members, 10 JS transformations",
-          "Free and Starter: max 10 team members"
+          "Free: data processing halts after second consecutive overage month"
         ],
         "keyFeatures": [
           "300+ source and destination integrations including Kafka and Azure Event Hubs",
           "Server-side event streaming with 16+ SDK sources",
-          "Python transformations (Enterprise) and JavaScript transformations (Starter+)",
+          "Python transformations (Enterprise) and JavaScript transformations",
           "Profiles and Data Apps for warehouse-native identity resolution",
           "VPC deployment option for full data residency control (Enterprise)",
           "RudderAI agentic layer for natural-language pipeline management"
@@ -392,7 +375,7 @@
           "notes": "Pricing customized based on Monthly Tracked Users (MTU) volume. Includes Unify (identity resolution), Engage (audience activation), Protocols (data governance). HIPAA-eligible. Add-ons: AI Recommendations, AI Predictions, Profile Enrichment from Warehouse.",
           "source": {
             "url": "https://www.twilio.com/en-us/pricing/customer-data",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -606,7 +589,7 @@
           "notes": "Free forever. Up to 2 active syncs, unlimited destination count, unlimited user seats. Entry point for Reverse ETL use case only.",
           "source": {
             "url": "https://hightouch.com/pricing/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -621,7 +604,7 @@
           "notes": "Usage-based pricing, no published rates. Includes Reverse ETL, Events, Customer Studio, Real-time Personalization, Identity Resolution, Match Booster. 300+ integrations. No MTU limits. HIPAA compliance and BAA available. ISO 27001, SOC 2 Type 2 certified.",
           "source": {
             "url": "https://hightouch.com/pricing/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -636,7 +619,7 @@
           "notes": "Usage-based pricing, no published rates. Includes Ad Studio, AI Decisioning, pre-set monthly personalized actions. Designed for AI-driven marketing automation.",
           "source": {
             "url": "https://hightouch.com/pricing/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         }
       ],

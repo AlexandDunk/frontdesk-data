@@ -69,7 +69,7 @@
         "license": "© Kungber",
         "accessedAt": "2026-08-01"
       },
-      "provenance": "Amazon-marketplace brand, model marked SPS3010B on the retailer listing under the 'Kungber DC30V10A' name. 0-30V/0-10A/300W switching-regulated single output, 0.01V/0.01A (10mV/10mA) resolution, 4-digit backlit LED display confirmed via ibspot.com product page. The unit's USB port is a fixed 5V/2A charging output only (no PC data/control protocol), so usb_interface and programmable are both marked false, unlike the SCPI/serial-capable units in this set."
+      "provenance": "Amazon-marketplace brand, model marked SPS3010B on the retailer listing under the 'Kungber DC30V10A' name. 0-30V/0-10A/300W switching-regulated single output, 0.01V/0.01A (10mV/10mA) resolution, 4-digit backlit LED display confirmed via ibspot.com product page. The unit's USB port is a fixed 5V/2A charging output only (no PC data/control protocol), so USB interface and programmable are both marked false, unlike the SCPI/serial-capable units in this set."
     },
     {
       "slug": "korad-ka3005p",
@@ -78,7 +78,7 @@
       "category": "bench-power-supplies",
       "releaseDate": null,
       "priceUsd": 120.04,
-      "priceNote": "US price, DigiKey (distributed in the US under the SRA Soldering Products / KD3005P-family listing; Korad's own site returned 403 to automated access).",
+      "priceNote": "US price, DigiKey (distributed in the US under the SRA Soldering Products / KD3005P-family listing; Korad's own site blocked outside access).",
       "specs": {
         "output_channels": 1,
         "max_voltage_v": 30,
@@ -153,7 +153,7 @@
       },
       "source": {
         "url": "https://www.lcsc.com/product-detail/power-supply_owon-spe6103_C22392858.html",
-        "accessedAt": "2026-09-23"
+        "accessedAt": "2026-09-30"
       },
       "corroboration": {
         "url": "https://www.digikey.com/en/products/detail/owon-technology-lilliput-electronics-usa-inc/SPE6103/15911703",
@@ -233,7 +233,7 @@
         "license": "© B&K Precision",
         "accessedAt": "2026-08-01"
       },
-      "provenance": "A high-precision, low-current single output (0-30V / 0-999.9mA, rounded here to 1A) rather than a high-power supply — its niche is 0.1mA-resolution current settability for sensitive calibration/test work, which explains its premium price relative to its modest 30W max output. Manual title itself is 'Model 1739 DC Power Supply with 0.1mA Settable Resolution', confirming the headline spec directly. Remote control is via RS-232 (an official USB2RS adapter accessory exists, but there is no native USB port), so usb_interface=false while programmable=true."
+      "provenance": "A high-precision, low-current single output (0-30V / 0-999.9mA, rounded here to 1A) rather than a high-power supply — its niche is 0.1mA-resolution current settability for sensitive calibration/test work, which explains its premium price relative to its modest 30W max output. Manual title itself is 'Model 1739 DC Power Supply with 0.1mA Settable Resolution', confirming the headline spec directly. Remote control is via RS-232 (an official USB2RS adapter accessory exists, but there is no native USB port), so USB interface=false while programmable=true."
     },
     {
       "slug": "rigol-dp712",
@@ -263,7 +263,7 @@
         "license": "© Rigol Technologies",
         "accessedAt": "2026-08-01"
       },
-      "provenance": "0-50V/0-3A single output, 150W, $349 MSRP confirmed directly on Rigol's own US store page. The page markets a paid HIRES-DP700 upgrade ($59) that adds 1mV/1mA resolution, implying the stock/base resolution is coarser (10mV, consistent with the sibling DP832's base-model resolution per its official datasheet); base resolution is not stated as explicitly on this product page as it is for the DP800 datasheet, so treat resolution_mv here as an inference from the same product family's documented pattern rather than a directly-quoted DP712 figure. USB and SCPI programmability are supported per Rigol's UltraPower/VISA software references on the page; no LAN is included standard on the DP700 series (unlike DP800)."
+      "provenance": "0-50V/0-3A single output, 150W, $349 MSRP confirmed directly on Rigol's own US store page. The page markets a paid HIRES-DP700 upgrade ($59) that adds 1mV/1mA resolution, implying the stock/base resolution is coarser (10mV, consistent with the sibling DP832's base-model resolution per its official datasheet); base resolution is not stated as explicitly on this product page as it is for the DP800 datasheet, so treat resolution (mV) here as an inference from the same product family's documented pattern rather than a directly-quoted DP712 figure. USB and SCPI programmability are supported per Rigol's UltraPower/VISA software references on the page; no LAN is included standard on the DP700 series (unlike DP800)."
     },
     {
       "slug": "siglent-spd3303x-e",
@@ -285,7 +285,7 @@
       },
       "source": {
         "url": "https://siglentna.com/product/spd3303x-e/",
-        "accessedAt": "2026-09-23"
+        "accessedAt": "2026-09-30"
       },
       "image": {
         "url": "https://img.frontdeskreview.com/products/siglent-spd3303x-e.jpg?v=12413a3280",
@@ -385,7 +385,7 @@
         "url": "https://www.keysight.com/us/en/assets/7018-05629/data-sheets/5992-2124.pdf",
         "accessedAt": "2026-08-01"
       },
-      "provenance": "CH1: 0-6V/0-10A; CH2/CH3: 0-25V/0-2A each; 160W total. USB and LAN standard, GPIB optional. 4-wire remote sensing on all channels, data logging, list mode/sequencing per the official datasheet. The datasheet states programming/readback ACCURACY (e.g. ±0.03%+3-5mV) but does not spell out a separate setting-RESOLUTION figure in the sections retrieved, so resolution_mv is left null rather than inferred from the accuracy spec, which measures a different thing. keysight.com blocked automated access directly (403); data drawn from Keysight's own support/datasheet documents and cross-checked against Newark/RS/Amplicon distributor listings for price and imagery."
+      "provenance": "CH1: 0-6V/0-10A; CH2/CH3: 0-25V/0-2A each; 160W total. USB and LAN standard, GPIB optional. 4-wire remote sensing on all channels, data logging, list mode/sequencing per the official datasheet. The datasheet states programming/readback ACCURACY (e.g. ±0.03%+3-5mV) but does not spell out a separate setting-RESOLUTION figure in the sections retrieved, so resolution (mV) is left blank rather than inferred from the accuracy spec, which measures a different thing. keysight.com blocked automated access directly (403); data drawn from Keysight's own support/datasheet documents and cross-checked against Newark/RS/Amplicon distributor listings for price and imagery."
     }
   ]
 }

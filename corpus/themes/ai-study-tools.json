@@ -1,6 +1,6 @@
 {
   "vertical": "ai-study-tools",
-  "generatedAt": "2026-06-15",
+  "generatedAt": "2026-09-29",
   "methodologyNotes": "Re-verified June 2026 against official pricing pages where fetchable (knowt.com/plans, jungleai.com/pricing, quizgecko.com/plans). Quizlet, StudyFetch, Quizgecko pricing pages return HTTP 403; gizmo.ai and revisely.com render no prices server-side; jungleai.com/pricing shows the free-plan caps and 'Yearly 50% off' framing but not the Super Learner dollar amount. For those, prices were triangulated from at least two independent 2026 review sources and cross-checked. Wisdolia has rebranded to Jungle (jungleai.com). All prices USD, self-serve consumer plans; custom/enterprise tiers carry monthlyUsd=null. accessedAt 2026-06-15. Corrections vs draft: Revisely Pro 8.99->9.00 and removed the uncorroborated annual ($3.99/mo, 56% off); StudyFetch trial 5->7 days and annual structure flagged as source-inconsistent. Knowt, Quizgecko, Quizlet, TurboLearn, Gizmo, Jungle prices confirmed.",
   "vendors": [
     {
@@ -157,7 +157,7 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "flat",
-          "notes": "100 Spark.E chats, 100 study sets, 5 AI-generated quizzes/flashcard sets, 5 video/audio uploads. Annual pricing reported inconsistently across sources ($4.99/mo annual per dupple vs $99.99/yr bundle per toolsforhumans); annualDiscountPct left null. 7-day trial of premium features reported.",
+          "notes": "100 Spark.E chats, 100 study sets, 5 AI-generated quizzes/flashcard sets, 5 video/audio uploads. Annual pricing reported inconsistently across sources ($4.99/mo annual per dupple vs $99.99/yr bundle per toolsforhumans); the annual discount is not recorded. 7-day trial of premium features reported.",
           "source": {
             "url": "https://www.studyfetch.com/",
             "accessedAt": "2026-09-02"
@@ -177,7 +177,7 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "flat",
-          "notes": "Unlimited Spark.E chats, unlimited study sets, unlimited AI quizzes/flashcards, unlimited video/audio uploads, Live Lecture Assistant, handwritten notes/photo uploader, group study. Annual pricing inconsistent across sources; annualDiscountPct null. 7-day trial.",
+          "notes": "Unlimited Spark.E chats, unlimited study sets, unlimited AI quizzes/flashcards, unlimited video/audio uploads, Live Lecture Assistant, handwritten notes/photo uploader, group study. Annual pricing inconsistent across sources; the annual discount is not recorded. 7-day trial.",
           "source": {
             "url": "https://www.studyfetch.com/",
             "accessedAt": "2026-09-02"
@@ -259,7 +259,7 @@
           "notes": "Unlimited flashcard creation, AI generation from notes and PDFs, all core study modes (Learn, matching, practice tests, Knowt Play), basic AI features with monthly limits, cross-device sync. No credit card required.",
           "source": {
             "url": "https://knowt.com/plans",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           },
           "setupFeeUsd": 0
         },
@@ -295,7 +295,7 @@
           "notes": "Everything in Free plus unlimited AI summaries, teacher tools, unlimited AI chat with Kai, unlimited auto-graded assessments, AP Mock exams and practice assignments. Annual plan: $149.99/year (~$12.49/month, Save 50%).",
           "source": {
             "url": "https://knowt.com/plans",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           },
           "setupFeeUsd": 0
         }
@@ -410,26 +410,10 @@
           "notes": "Everything in Premium, 50 podcasts/month, custom prompt input, 50MB file limit, most powerful AI model.",
           "source": {
             "url": "https://quizgecko.com/plans",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://www.futurepedia.io/tool/quizgecko",
-            "accessedAt": "2026-06-15"
-          },
-          "setupFeeUsd": 0
-        },
-        {
-          "name": "Organization",
-          "monthlyUsd": null,
-          "minutesIncluded": null,
-          "callsIncluded": null,
-          "overagePerMin": null,
-          "overagePerCall": null,
-          "annualDiscountPct": null,
-          "billingModel": "custom",
-          "notes": "Custom pricing for schools, families, and businesses. Includes team management, LMS export, invoice payments, and security controls.",
-          "source": {
-            "url": "https://quizgecko.com/plans",
             "accessedAt": "2026-06-15"
           },
           "setupFeeUsd": 0
@@ -495,7 +479,7 @@
       "integrations": [
         "Anki"
       ],
-      "provenance": "jungleai.com/pricing fetched live (free caps + '50% off' framing); Super Learner dollar amounts from toolsforhumans.ai. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
+      "provenance": "jungleai.com/pricing fetched live. The page read on 2026-09-27 lists Free ($0), Pro ($15 per month, or $6 per month billed yearly) and Elite ($37 per month, or $15 per month billed yearly).",
       "plans": [
         {
           "name": "Free",
@@ -509,29 +493,39 @@
           "notes": "~10 AI content generations per month, 30 pages per document, 30 minutes per video (YouTube or uploaded), 4 advanced question types/month, 1 diagram question/month, 8 AI explanations/chats per hour while studying.",
           "source": {
             "url": "https://jungleai.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           },
           "setupFeeUsd": 0
         },
         {
-          "name": "Super Learner",
-          "monthlyUsd": 10,
+          "name": "Pro",
+          "monthlyUsd": 15,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
-          "annualDiscountPct": 50,
+          "annualDiscountPct": 60,
           "billingModel": "flat",
-          "notes": "Unlimited content generations, document pages, video minutes, and diagram questions; 3x more questions; AI explanations on every question; unlimited document chats; Anki export. Annual plan: $5/month (50% off). Official page did not display the monthly list price; $10/mo inferred from the page's '50% off' framing (one source quoted $12/mo).",
+          "notes": "$15 per month paid monthly; $6 per month billed yearly ($72 per year). Unlimited generations on documents of any size, 3x more questions per generation, unlimited advanced question types, unlimited AI explanations, unlimited lecture recordings, export cards to Anki.",
           "source": {
             "url": "https://jungleai.com/pricing",
-            "accessedAt": "2026-06-15"
-          },
-          "corroboration": {
-            "url": "https://www.toolsforhumans.ai/ai-tools/jungle-ai",
-            "accessedAt": "2026-06-15"
-          },
-          "setupFeeUsd": 0
+            "accessedAt": "2026-09-27"
+          }
+        },
+        {
+          "name": "Elite",
+          "monthlyUsd": 37,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 59,
+          "billingModel": "flat",
+          "notes": "$37 per month paid monthly; $15 per month billed yearly ($180 per year). Everything in Pro plus a 30% boost in question quality, question style templates like Step 1 and MCAT, auto image occlusion, unlimited AI voice tutor calls.",
+          "source": {
+            "url": "https://jungleai.com/pricing",
+            "accessedAt": "2026-09-27"
+          }
         }
       ],
       "enrichment": {
@@ -547,8 +541,7 @@
           "Anki"
         ],
         "limits": [
-          "Free: ~10 generations/month, 30 pages/doc, 30 min/video",
-          "Super Learner: all limits removed"
+          "Free: ~10 generations/month, 30 pages/doc, 30 min/video"
         ],
         "keyFeatures": [
           "Flashcard generation from lecture slides and PDFs",
@@ -576,7 +569,7 @@
             "accessedAt": "2026-06-15"
           }
         ],
-        "provenance": "Pricing page fetched live; free caps confirmed. Super Learner annual $5/mo (50% off) confirmed; monthly list $10/mo inferred, medium confidence."
+        "provenance": "Pricing page fetched live; free caps confirmed."
       }
     },
     {
@@ -601,7 +594,7 @@
           "notes": "Limited flashcards per month, basic quiz generation, standard AI summaries.",
           "source": {
             "url": "https://www.revisely.com/plans",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           },
           "setupFeeUsd": 0
         },
@@ -614,7 +607,7 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "flat",
-          "notes": "Unlimited flashcards, advanced quiz generation, unlimited AI summaries, priority support. No published annual rate found; the draft's $3.99/mo annual (56% off) was uncorroborated and removed.",
+          "notes": "Unlimited flashcards, advanced quiz generation, unlimited AI summaries, priority support. No published annual rate found; an earlier version of this record's $3.99/mo annual figure (56% off) was uncorroborated and removed.",
           "source": {
             "url": "https://www.revisely.com/plans",
             "accessedAt": "2026-09-02"
@@ -813,7 +806,7 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "flat",
-          "notes": "Billed at $13.99/week (or $6.99/week with student discount). Unlimited lives, AI quizzes, AI tutor, flashcards, hearts, and imports. monthlyUsd null because billing is weekly, not monthly. Best for short-term exam cramming.",
+          "notes": "Billed at $13.99/week (or $6.99/week with student discount). Unlimited lives, AI quizzes, AI tutor, flashcards, hearts, and imports. No monthly price is recorded because billing is weekly, not monthly. Best for short-term exam cramming.",
           "source": {
             "url": "https://gizmo.ai/",
             "accessedAt": "2026-06-15"
@@ -833,7 +826,7 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "flat",
-          "notes": "Billed at $155.22/year (~$2.98/week or ~$12.94/month). Student discount: $77.22/year (~$1.48/week). Includes all Unlimited features. monthlyUsd is the annual cost divided by 12 (derived, not a billed monthly rate).",
+          "notes": "Billed at $155.22/year (~$2.98/week or ~$12.94/month). Student discount: $77.22/year (~$1.48/week). Includes all Unlimited features. The monthly price recorded here is the annual cost divided by 12 (derived, not a billed monthly rate).",
           "source": {
             "url": "https://gizmo.ai/",
             "accessedAt": "2026-09-02"

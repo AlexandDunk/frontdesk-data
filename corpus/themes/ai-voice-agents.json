@@ -1,6 +1,6 @@
 {
   "vertical": "ai-voice-agents",
-  "generatedAt": "2026-06-15",
+  "generatedAt": "2026-09-29",
   "methodologyNotes": "Official pricing pages were fetched directly for Vapi (vapi.ai/pricing, security.vapi.ai), Retell AI (retellai.com/pricing, docs.retellai.com/general/compliance), Bland AI (bland.ai/pricing, bland.ai/integrations), and Synthflow (synthflow.ai/pricing). Two vendors were REMOVED as not purchasable: (1) Air AI — the autonomous voice agent is defunct (services dark since late 2024; FTC complaint Aug 2025; March 2026 settlement with $18M judgment), and the air.ai domain now hosts an unrelated military/defense platform whose FedRAMP/IL5 certs do not belong to the voice product. (2) PlayAI — acquired by Meta July 2025, API shut down 2025-07-26, platform retired 2025-12-31; play.ai/pricing returns connection-refused and no plan can be purchased. billingModel='per_minute' for all retained vendors because all charge usage-based per-minute rates; monthlyUsd carries the published platform/seat fee where one exists and is null for contact-sales tiers. accessedAt 2026-06-15.",
   "vendors": [
     {
@@ -15,7 +15,7 @@
         "Telnyx",
         "WebRTC"
       ],
-      "provenance": "Pricing fetched from vapi.ai/pricing; compliance from security.vapi.ai (Trust Center). HIPAA add-on is $2,000/month on Build; included on Scale. SOC2, GDPR, PCI DSS v4.0.1, and CCPA confirmed via Trust Center. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
+      "provenance": "Pricing fetched from vapi.ai/pricing; compliance from security.vapi.ai (Trust Center). HIPAA compliance is listed as a $2,000/month add-on. SOC2, GDPR, PCI DSS v4.0.1, and CCPA confirmed via Trust Center. Re-verified 2026-09-02 against the live pricing page; published figures unchanged. Read again 2026-09-27: the page sells usage with an optional success package (No Success Package, Core, Pro, Premier).",
       "plans": [
         {
           "name": "Build",
@@ -26,6 +26,7 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "per_minute",
+          "unmodelable": "Build's $0.05 a minute is Vapi's platform fee alone; the speech, language-model and telephony providers a call runs on are billed on top at their own rates, and Vapi publishes no all-in rate, so a monthly cost at a call volume is not modelled.",
           "notes": "No upfront cost; pay-as-you-go at $0.05/min for call hosting. Model provider costs passed through at actual cost (or $0 with own API key). SMS/Chat: $0.005/message. 10 concurrent calls included; additional at $10/month each. HIPAA add-on $2,000/month. Zero Data Retention add-on $1,000/month. 14-day call history retention.",
           "setupFeeUsd": 0,
           "source": {
@@ -34,19 +35,50 @@
           }
         },
         {
-          "name": "Scale",
+          "name": "Core",
+          "monthlyUsd": 29,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "unmodelable": "Core's $29 is a plan fee charged on top of Vapi's per-minute usage, which this record prices only on Build; a monthly cost at a call volume is not modelled for Core.",
+          "notes": "$29 per month success package, pre-paid and auto-renewing, on top of usage; models passed through at cost. 2 organizations, 5 included Vapi phone numbers, 10 concurrent calls, 30 days raw data retention, ZDR included, email support with a 2 business day response SLA.",
+          "source": {
+            "url": "https://vapi.ai/pricing",
+            "accessedAt": "2026-09-27"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 999,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "hybrid",
+          "unmodelable": "Pro's $999 is a minimum on a share of Vapi's per-minute hosting fee, charged on top of usage, which this record prices only on Build; a monthly cost at a call volume is not modelled for Pro.",
+          "notes": "10% of the Vapi hosting fee with a $999/mo minimum, on top of usage; models passed through at cost; bought through sales. 10 organizations, 10 included Vapi phone numbers, 30 concurrent calls, 180 days raw data retention, RBAC + ZDR, email and dedicated Slack support, 1 business day response SLA, 99% uptime SLA.",
+          "source": {
+            "url": "https://vapi.ai/pricing",
+            "accessedAt": "2026-09-27"
+          }
+        },
+        {
+          "name": "Premier",
           "monthlyUsd": null,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
           "annualDiscountPct": null,
-          "billingModel": "per_minute",
-          "notes": "Annual contract with fixed platform fee plus committed volume. Volume-based per-minute pricing (negotiated). Includes SOC2, HIPAA, PCI, SSO, RBAC, enterprise SLA, and custom data retention. Price is custom / contact sales.",
-          "setupFeeUsd": 0,
+          "billingModel": "custom",
+          "notes": "Custom pricing, direct sales only; models passed through at cost. Elevated organizations, concurrency and data retention; custom number of Vapi phone numbers; named support team; 1 hour P0 response SLA; 99.9% uptime SLA; custom RBAC + ZDR + SSO; dedicated SIP available.",
           "source": {
             "url": "https://vapi.ai/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -96,7 +128,7 @@
             "accessedAt": "2026-06-15"
           }
         ],
-        "provenance": "Pricing from vapi.ai/pricing; compliance certifications (SOC2, GDPR, CCPA, PCI DSS v4.0.1) from Vapi Trust Center at security.vapi.ai. HIPAA available as add-on on Build and included on Scale."
+        "provenance": "Pricing from vapi.ai/pricing; compliance certifications (SOC2, GDPR, CCPA, PCI DSS v4.0.1) from Vapi Trust Center at security.vapi.ai. HIPAA compliance is listed as a $2,000/month add-on."
       }
     },
     {
@@ -129,7 +161,7 @@
           "setupFeeUsd": 0,
           "source": {
             "url": "https://www.retellai.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -145,7 +177,7 @@
           "setupFeeUsd": 0,
           "source": {
             "url": "https://www.retellai.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -225,7 +257,7 @@
         "Slack",
         "Notion"
       ],
-      "provenance": "Pricing fetched from bland.ai/pricing; integrations from bland.ai/integrations. SOC2 Type I & II, HIPAA-eligible with signed BAA, GDPR, and PCI DSS all confirmed on the pricing page. Build $299/mo and Scale $499/mo corroborated by multiple 2026 sources. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
+      "provenance": "Pricing fetched from bland.ai/pricing; integrations from bland.ai/integrations. SOC2 Type I & II, HIPAA-eligible with signed BAA, GDPR, and PCI DSS all confirmed on the pricing page. Build $299/mo corroborated by multiple 2026 sources. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
       "plans": [
         {
           "name": "Start",
@@ -240,7 +272,7 @@
           "setupFeeUsd": 0,
           "source": {
             "url": "https://www.bland.ai/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -256,23 +288,7 @@
           "setupFeeUsd": 0,
           "source": {
             "url": "https://www.bland.ai/pricing",
-            "accessedAt": "2026-09-02"
-          }
-        },
-        {
-          "name": "Scale",
-          "monthlyUsd": 499,
-          "minutesIncluded": null,
-          "callsIncluded": null,
-          "overagePerMin": 0.11,
-          "overagePerCall": null,
-          "annualDiscountPct": null,
-          "billingModel": "per_minute",
-          "notes": "$499/month platform fee (does not include minutes; usage billed on top). $0.11/min talk time, $0.04/min transfer time. For high-volume use. Limits: 100 concurrent calls, 5,000 calls/day, 15 voice clones, 100 knowledge bases.",
-          "setupFeeUsd": 0,
-          "source": {
-            "url": "https://www.bland.ai/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -288,7 +304,7 @@
           "setupFeeUsd": 0,
           "source": {
             "url": "https://www.bland.ai/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -323,7 +339,6 @@
         "limits": [
           "Start: 10 concurrent calls, 100 calls/day",
           "Build: 50 concurrent calls, 2,000 calls/day",
-          "Scale: 100 concurrent calls, 5,000 calls/day",
           "Subscription fees do not include minutes; usage billed on top"
         ],
         "keyFeatures": [
@@ -349,7 +364,7 @@
             "accessedAt": "2026-06-15"
           }
         ],
-        "provenance": "Pricing and compliance from bland.ai/pricing; full integration list from bland.ai/integrations. All four compliance standards (SOC2 Type I & II, HIPAA-eligible with BAA, GDPR, PCI DSS) stated directly on the pricing page. Build $299/mo and Scale $499/mo verified."
+        "provenance": "Pricing and compliance from bland.ai/pricing; full integration list from bland.ai/integrations. All four compliance standards (SOC2 Type I & II, HIPAA-eligible with BAA, GDPR, PCI DSS) stated directly on the pricing page. Build $299/mo verified."
       }
     },
     {
@@ -367,24 +382,8 @@
         "Zapier",
         "WhatsApp"
       ],
-      "provenance": "Pricing and compliance fetched directly from synthflow.ai/pricing. SOC2 and GDPR on all plans; HIPAA listed as Enterprise-only. Enterprise adds on-premise hosting. No fixed monthly subscription tiers (Starter/Pro/Growth) exist — usage-based Pay As You Go only. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
+      "provenance": "Pricing and compliance fetched directly from synthflow.ai/pricing. SOC2 and GDPR on all plans; HIPAA listed as Enterprise-only. Enterprise adds on-premise hosting. No fixed monthly subscription tiers (Starter/Pro/Growth) exist. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
       "plans": [
-        {
-          "name": "Pay As You Go",
-          "monthlyUsd": 0,
-          "minutesIncluded": null,
-          "callsIncluded": null,
-          "overagePerMin": 0.09,
-          "overagePerCall": null,
-          "annualDiscountPct": null,
-          "billingModel": "per_minute",
-          "notes": "Free to start; usage-based billing. Voice Engine: $0.09/min. LLM add-ons range $0.02–$0.05/min depending on model. Synthflow Twilio telephony $0.02/min or BYOT $0.00/min. Total typical range $0.15–$0.24/min. 5 concurrent calls included; additional concurrency $20/unit/month. Phone numbers $1.50 each. White-Label + Custom Domain add-on $2,000/month. Performance Routing $0.04/min. Global Low Latency Edge $0.04/min.",
-          "setupFeeUsd": 0,
-          "source": {
-            "url": "https://synthflow.ai/pricing",
-            "accessedAt": "2026-06-15"
-          }
-        },
         {
           "name": "Enterprise",
           "monthlyUsd": null,
@@ -398,7 +397,7 @@
           "setupFeeUsd": 0,
           "source": {
             "url": "https://synthflow.ai/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -412,7 +411,7 @@
             "accessedAt": "2026-06-15"
           }
         },
-        "freeTier": true,
+        "freeTier": null,
         "freeTrialDays": null,
         "keyIntegrations": [
           "Cal.com",
@@ -423,7 +422,6 @@
           "WhatsApp"
         ],
         "limits": [
-          "5 concurrent calls on Pay As You Go (additional $20/unit/month)",
           "10,000 min/month minimum for Enterprise",
           "White-label add-on $2,000/month extra",
           "HIPAA available on Enterprise only"
@@ -467,7 +465,7 @@
         "WebRTC",
         "WebSocket API"
       ],
-      "provenance": "Re-verified against elevenlabs.io/pricing/agents and elevenlabs.io/pricing on 2026-09-10. No figure required correction. Confirmed the agents pricing page defaults to the MONTHLY view, so $0 / $6 / $22 / $99 / $299 / $990 are genuine month-to-month prices rather than annual-billed rates. Confirmed the draft's two judgement calls were both right: Creator's displayed $11 is a 'First month 50% off' promo and the ongoing rate is $22, and $5 / $18.33 / $82.50 / $249.17 / $825 are the annual-billed monthly equivalents, which belong in notes and not in monthlyUsd. The 16.67% annualDiscountPct is confirmed by the pricing-page FAQ, which states annual billing is two months free because you pay for ten months.",
+      "provenance": "Re-verified against elevenlabs.io/pricing/agents and elevenlabs.io/pricing on 2026-09-10. No figure required correction. Confirmed the agents pricing page defaults to the MONTHLY view, so $0 / $6 / $22 / $99 / $299 / $990 are genuine month-to-month prices rather than annual-billed rates. Confirmed that an earlier version of this record's two judgement calls were both right: Creator's displayed $11 is a 'First month 50% off' promo and the ongoing rate is $22, and $5 / $18.33 / $82.50 / $249.17 / $825 are the annual-billed monthly equivalents, which belong in notes and not in the monthly price. The 16.67% annual discount is confirmed by the pricing-page FAQ, which states annual billing is two months free because you pay for ten months.",
       "plans": [
         {
           "name": "Free",
@@ -592,7 +590,7 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "custom",
-          "notes": "Quote-only, so monthlyUsd is null. Elevated concurrency, custom terms and assurance around DPA/SLAs, and BAAs for HIPAA customers are offered at this tier only, confirmed verbatim in the Enterprise column. A buyer handling PHI cannot self-serve.",
+          "notes": "Quote-only, so no monthly price is recorded. Elevated concurrency, custom terms and assurance around DPA/SLAs, and BAAs for HIPAA customers are offered at this tier only, confirmed verbatim in the Enterprise column. A buyer handling PHI cannot self-serve.",
           "source": {
             "url": "https://elevenlabs.io/pricing/agents",
             "accessedAt": "2026-09-10"
@@ -622,7 +620,7 @@
           "Concurrency is capped per tier (4 to 40 calls); exceeding it does not fail the call but doubles the rate to $0.160/min under burst pricing",
           "LLM tokens and telephony are explicitly NOT in the minute rate: they pass through at cost, so the real per-minute cost exceeds $0.080",
           "BAAs for HIPAA are Enterprise-only; no self-serve tier is PHI-ready",
-          "SOC 2 and GDPR are not asserted on either ElevenLabs pricing page, so both are recorded null rather than assumed",
+          "SOC 2 and GDPR are not asserted on either ElevenLabs pricing page, so neither is recorded, rather than assumed",
           "The advertised $11 Creator price is a first-month promo only and reverts to $22"
         ],
         "keyFeatures": [
@@ -666,7 +664,7 @@
         "LiveKit",
         "Pipecat"
       ],
-      "provenance": "Re-verified against deepgram.com/pricing on 2026-09-10. The draft's central correction holds: the headline $0.056/min Standard rate is promotional through 2026-09-12 and the regular rate is $0.075/min, which is what overagePerMin stores. The Growth plan's '$4K+ / year' commitment was confirmed verbatim, so monthlyUsd stays null. ONE MATERIAL CORRECTION: the draft implied a BAA is obtainable on self-serve pricing. The page states verbatim 'We sign Business Associate Agreements (BAA) for Enterprise customers handling electronic Protected Health Information (ePHI)' — BAAs are Enterprise-only, and the limits and bestFor text have been rewritten accordingly. Two rate lines the draft omitted were added: 'Custom - BYO LLM + TTS' and 'Advanced - BYO TTS'. GDPR was confirmed with a named EU endpoint.",
+      "provenance": "Re-verified against deepgram.com/pricing on 2026-09-10. An earlier version of this record's central correction holds: the headline $0.056/min Standard rate is promotional through 2026-09-12 and the regular rate is $0.075/min, which is what the per-minute overage rate stores. The Growth plan's '$4K+ / year' commitment was confirmed verbatim, so no monthly price is recorded. ONE MATERIAL CORRECTION: an earlier version of this record implied a BAA is obtainable on self-serve pricing. The page states verbatim 'We sign Business Associate Agreements (BAA) for Enterprise customers handling electronic Protected Health Information (ePHI)' — BAAs are Enterprise-only, and the limits and best-fit description have been rewritten accordingly. Two rate lines that an earlier version of this record omitted were added: 'Custom - BYO LLM + TTS' and 'Advanced - BYO TTS'. GDPR was confirmed with a named EU endpoint.",
       "plans": [
         {
           "name": "Pay As You Go",
@@ -696,7 +694,7 @@
           "overagePerCall": null,
           "annualDiscountPct": 20,
           "billingModel": "per_minute",
-          "notes": "No month-to-month price is published. Deepgram sells this as a prepaid annual commitment stated on the page as '$4K+ / year', which is a commitment and not a subscription fee, so monthlyUsd is null by design. Saves up to 20% versus pay-as-you-go. Regular rates with promotional rates through 2026-09-12 in brackets: Standard $0.068/min ($0.051), Standard BYO-TTS $0.051/min, Custom BYO-LLM $0.059/min ($0.041), Custom BYO-LLM+TTS $0.041/min, Advanced $0.146/min ($0.110), Advanced BYO-TTS $0.110/min. Credits are prepaid, so unused commitment is the buyer's risk. Still no BAA at this tier.",
+          "notes": "No month-to-month price is published. Deepgram sells this as a prepaid annual commitment stated on the page as '$4K+ / year', which is a commitment and not a subscription fee, so no monthly price is recorded, by design. Saves up to 20% versus pay-as-you-go. Regular rates with promotional rates through 2026-09-12 in brackets: Standard $0.068/min ($0.051), Standard BYO-TTS $0.051/min, Custom BYO-LLM $0.059/min ($0.041), Custom BYO-LLM+TTS $0.041/min, Advanced $0.146/min ($0.110), Advanced BYO-TTS $0.110/min. Credits are prepaid, so unused commitment is the buyer's risk. Still no BAA at this tier.",
           "source": {
             "url": "https://deepgram.com/pricing",
             "accessedAt": "2026-09-10"
@@ -711,7 +709,7 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "custom",
-          "notes": "Quote-only, so monthlyUsd is null. Adds self-hosted and on-prem deployment, regional data residency and isolated runtimes — the route for buyers who cannot send audio to a shared cloud. This is also the ONLY tier at which Deepgram signs a BAA for ePHI, making it the mandatory path for any PHI workload.",
+          "notes": "Quote-only, so no monthly price is recorded. Adds self-hosted and on-prem deployment, regional data residency and isolated runtimes — the route for buyers who cannot send audio to a shared cloud. This is also the ONLY tier at which Deepgram signs a BAA for ePHI, making it the mandatory path for any PHI workload.",
           "source": {
             "url": "https://deepgram.com/pricing",
             "accessedAt": "2026-09-10"
@@ -791,7 +789,7 @@
         "Python SDK",
         "Node.js SDK"
       ],
-      "provenance": "Re-verified against livekit.com/pricing and livekit.com/security on 2026-09-10. Every plan price, allowance and overage confirmed unchanged; no correction was needed. The security page independently confirms the tier-gating of BAAs and adds two compliance facts the draft did not record (CCPA/CPRA compliance and EU-US Data Privacy Framework certification), now included. PCI DSS and ISO 27001 remain stated as in progress, which the draft correctly flagged. Inference credits are published in dollars on the page and are kept that way in notes rather than converted.",
+      "provenance": "Re-verified against livekit.com/pricing and livekit.com/security on 2026-09-10. Every plan price, allowance and overage confirmed unchanged; no correction was needed. The security page independently confirms the tier-gating of BAAs and adds two compliance facts that an earlier version of this record omitted (CCPA/CPRA compliance and EU-US Data Privacy Framework certification), now included. PCI DSS and ISO 27001 remain stated as in progress, which an earlier version of this record correctly flagged. Inference credits are published in dollars on the page and are kept that way in notes rather than converted.",
       "plans": [
         {
           "name": "Build",
@@ -851,7 +849,7 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "custom",
-          "notes": "Quote-only, so monthlyUsd is null. Negotiated per requirements with custom allotments, volume discounts and dedicated support. BAAs available here and on Scale.",
+          "notes": "Quote-only, so no monthly price is recorded. Negotiated per requirements with custom allotments, volume discounts and dedicated support. BAAs available here and on Scale.",
           "source": {
             "url": "https://livekit.com/pricing",
             "accessedAt": "2026-09-10"
@@ -927,7 +925,7 @@
         "Python SDK",
         "Node.js SDK"
       ],
-      "provenance": "Re-verified against cartesia.ai/pricing on 2026-09-10. All four published monthly prices confirmed unchanged ($0 / $5 / $49 / $299) with no annual toggle on the page. ONE MATERIAL CORRECTION: the draft treated the per-tier concurrent-TTS-request cap (2/3/5/15) as the ceiling on simultaneous calls. The page publishes a SEPARATE and substantially higher concurrent-call limit per tier — 8 / 12 / 20 / 60 — plus separate STT concurrency of 8/12/20/60, so the TTS cap does not gate call concurrency. Plan notes and limits corrected. The pricing page's compliance FAQ renders client-side and returned only question headings, so compliance flags come from Cartesia's own GDPR-compliance post, which was independently fetched and verified; it states GDPR, SOC 2 Type II, PCI-DSS and HIPAA with optional Zero Data Retention, and does NOT mention a BAA, so baa stays null.",
+      "provenance": "Re-verified against cartesia.ai/pricing on 2026-09-10. All four published monthly prices confirmed unchanged ($0 / $5 / $49 / $299) with no annual toggle on the page. ONE MATERIAL CORRECTION: an earlier version of this record treated the per-tier concurrent-TTS-request cap (2/3/5/15) as the ceiling on simultaneous calls. The page publishes a SEPARATE and substantially higher concurrent-call limit per tier — 8 / 12 / 20 / 60 — plus separate STT concurrency of 8/12/20/60, so the TTS cap does not gate call concurrency. Plan notes and limits corrected. The pricing page's compliance FAQ renders client-side and returned only question headings, so compliance flags come from Cartesia's own GDPR-compliance post, which was independently fetched and verified; it states GDPR, SOC 2 Type II, PCI-DSS and HIPAA with optional Zero Data Retention, and does NOT mention a BAA, so no BAA is recorded.",
       "plans": [
         {
           "name": "Free",
@@ -998,7 +996,7 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "custom",
-          "notes": "Quote-only, so monthlyUsd is null: custom allowances, custom concurrency and negotiated rates. Optional zero-data-retention is the enterprise-relevant control Cartesia advertises.",
+          "notes": "Quote-only, so no monthly price is recorded: custom allowances, custom concurrency and negotiated rates. Optional zero-data-retention is the enterprise-relevant control Cartesia advertises.",
           "source": {
             "url": "https://cartesia.ai/pricing",
             "accessedAt": "2026-09-10"
@@ -1070,7 +1068,7 @@
         "Node.js SDK",
         "Model Context Protocol (MCP)"
       ],
-      "provenance": "Re-verified against ultravox.ai/pricing on 2026-09-10. All three tiers, the $0.05/min rate, the $100 Pro platform fee and both SIP rates confirmed unchanged. ONE CORRECTION: the draft recorded token pricing ($2.00 per 1M uncached input, $15.00 per 1M output) on the Pro plan only; the live page applies the same token rates to Pay as You Go as well, so they are now recorded on both. Compliance stays null across the board because the pricing page makes no HIPAA, SOC 2 or GDPR claim.",
+      "provenance": "Re-verified against ultravox.ai/pricing on 2026-09-10. All three tiers, the $0.05/min rate, the $100 Pro platform fee and both SIP rates confirmed unchanged. ONE CORRECTION: an earlier version of this record recorded token pricing ($2.00 per 1M uncached input, $15.00 per 1M output) on the Pro plan only; the live page applies the same token rates to Pay as You Go as well, so they are now recorded on both. Compliance stays unrecorded across the board because the pricing page makes no HIPAA, SOC 2 or GDPR claim.",
       "plans": [
         {
           "name": "Pay as You Go",
@@ -1096,7 +1094,7 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "hybrid",
-          "notes": "$100/month platform fee buys unlimited concurrency, an outbound call scheduler, 5 custom voices and 20 RAG corpora. Minutes are NOT included: usage still bills at $0.05/min on top of the fee, with SIP at the slightly lower $0.0048/min. Text and thread usage metered at $2.00 per 1M input tokens (uncached) and $15.00 per 1M output tokens. minutesIncluded is null because the page publishes no bundled allowance at this tier.",
+          "notes": "$100/month platform fee buys unlimited concurrency, an outbound call scheduler, 5 custom voices and 20 RAG corpora. Minutes are NOT included: usage still bills at $0.05/min on top of the fee, with SIP at the slightly lower $0.0048/min. Text and thread usage metered at $2.00 per 1M input tokens (uncached) and $15.00 per 1M output tokens. Included minutes are not recorded because the page publishes no bundled allowance at this tier.",
           "source": {
             "url": "https://www.ultravox.ai/pricing",
             "accessedAt": "2026-09-10"
@@ -1111,7 +1109,7 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "custom",
-          "notes": "Quote-only, so monthlyUsd is null: priority SLA, organizational support and fully customizable configuration. Rates negotiated.",
+          "notes": "Quote-only, so no monthly price is recorded: priority SLA, organizational support and fully customizable configuration. Rates negotiated.",
           "source": {
             "url": "https://www.ultravox.ai/pricing",
             "accessedAt": "2026-09-10"
@@ -1180,7 +1178,7 @@
         "Webhooks",
         "Custom LLM endpoints"
       ],
-      "provenance": "Re-verified against docs.millis.ai/pricing on 2026-09-10, which is Millis' only pricing page. The $0.02/min base rate and the STT and LLM per-minute rates are confirmed verbatim. ONE MATERIAL CORRECTION: the draft stated TTS as '$0.0005/min to $0.125/min'. The page publishes TTS per 1,000 CHARACTERS, not per minute — ElevenLabs $0.10, PlayHT $0.25, Rime $0.075, Cartesia $0.0392, OpenAI $0.015, Deepgram $0.015, Neets $0.001 per 1,000 characters. The draft's per-minute range was an unpublished conversion and has been replaced with the published units. Three keyFeatures claims the draft carried (a 600ms latency figure, no-code/low-code builders, and phone numbers in 100+ countries) do not appear on this page and were removed rather than sourced to marketing copy. Millis publishes no monthly tier, no free-tier allowance and no concurrency limit, so one pay-as-you-go plan is listed rather than an invented ladder.",
+      "provenance": "Re-verified against docs.millis.ai/pricing on 2026-09-10, which is Millis' only pricing page. The $0.02/min base rate and the STT and LLM per-minute rates are confirmed verbatim. ONE MATERIAL CORRECTION: an earlier version of this record stated TTS as '$0.0005/min to $0.125/min'. The page publishes TTS per 1,000 CHARACTERS, not per minute — ElevenLabs $0.10, PlayHT $0.25, Rime $0.075, Cartesia $0.0392, OpenAI $0.015, Deepgram $0.015, Neets $0.001 per 1,000 characters. That per-minute range was an unpublished conversion and has been replaced with the published units. Three key features claims that an earlier version of this record carried (a 600ms latency figure, no-code/low-code builders, and phone numbers in 100+ countries) do not appear on this page and were removed rather than sourced to marketing copy. Millis publishes no monthly tier, no free-tier allowance and no concurrency limit, so one pay-as-you-go plan is listed rather than an invented ladder.",
       "plans": [
         {
           "name": "Pay as you go",
@@ -1191,7 +1189,7 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "per_minute",
-          "notes": "Millis publishes exactly one platform rate: 'We charge a base rate of $0.02 per minute for using the Millis AI platform.' There is no monthly subscription tier and no published included-minute bundle, so monthlyUsd is 0 and minutesIncluded is null. That $0.02 is orchestration ONLY — STT, LLM and TTS bill separately on top. STT: $0.0043/min. LLM, per minute: GPT-3.5 Turbo ~$0.0004, Meta Llama-3 ~$0.00018, GPT-4o ~$0.004, GPT-4 Turbo ~$0.008, and no charge for a custom LLM endpoint. TTS is priced PER 1,000 CHARACTERS, not per minute: Neets $0.001, OpenAI $0.015, Deepgram $0.015, Cartesia $0.0392, Rime $0.075, ElevenLabs $0.10, PlayHT $0.25. Because TTS is character-metered, all-in cost depends on how much the agent actually speaks, and voice choice is the dominant variable. No free-tier allowance, trial length or concurrency limit is published.",
+          "notes": "Millis publishes exactly one platform rate: 'We charge a base rate of $0.02 per minute for using the Millis AI platform.' There is no monthly subscription tier and no published included-minute bundle, so the monthly price is 0 and included minutes are not recorded. That $0.02 is orchestration ONLY — STT, LLM and TTS bill separately on top. STT: $0.0043/min. LLM, per minute: GPT-3.5 Turbo ~$0.0004, Meta Llama-3 ~$0.00018, GPT-4o ~$0.004, GPT-4 Turbo ~$0.008, and no charge for a custom LLM endpoint. TTS is priced PER 1,000 CHARACTERS, not per minute: Neets $0.001, OpenAI $0.015, Deepgram $0.015, Cartesia $0.0392, Rime $0.075, ElevenLabs $0.10, PlayHT $0.25. Because TTS is character-metered, all-in cost depends on how much the agent actually speaks, and voice choice is the dominant variable. No free-tier allowance, trial length or concurrency limit is published.",
           "source": {
             "url": "https://docs.millis.ai/pricing",
             "accessedAt": "2026-09-10"
@@ -1225,7 +1223,7 @@
           "The $0.02/min headline is orchestration only; STT, LLM and TTS are three further meters on top",
           "TTS is billed per 1,000 characters rather than per minute, and the spread is 250x between the cheapest and dearest voice vendor ($0.001 to $0.25 per 1,000 characters), so voice choice dominates the real bill and is hard to forecast from a per-minute budget",
           "No monthly plans, no published concurrency limits, and no published free-tier or trial allowance",
-          "No HIPAA, SOC 2 or GDPR statement published anywhere, so all three are null",
+          "No HIPAA, SOC 2 or GDPR statement published anywhere, so none of the three is recorded",
           "Pricing lives only in developer docs, not on a commercial pricing page, so terms can change without a versioned announcement"
         ],
         "keyFeatures": [
@@ -1270,7 +1268,7 @@
         "Murf",
         "Qwen3TTS"
       ],
-      "provenance": "Re-verified against telnyx.com/pricing/voice-ai-agents on 2026-09-10. The $0.05/min voice-engine rate, the ~$0.004/min Kimi LLM rate, the $0.0032/min US local inbound telephony floor, and both commitment minimums ($500/month and $5,000/month) are confirmed unchanged. ONE CORRECTION: the draft presented Telnyx's '$0.056/min' all-in figure as unconditional; the page states it at roughly 230,000 monthly minutes with a typical configuration, and that qualifier has been added. Both minimums are spend floors rather than subscription fees, so monthlyUsd stays null on Committed and Enterprise. HIPAA is asserted as standard on every plan; BAA, SOC 2 and GDPR are not asserted on this page and stay null.",
+      "provenance": "Re-verified against telnyx.com/pricing/voice-ai-agents on 2026-09-10. The $0.05/min voice-engine rate, the ~$0.004/min Kimi LLM rate, the $0.0032/min US local inbound telephony floor, and both commitment minimums ($500/month and $5,000/month) are confirmed unchanged. ONE CORRECTION: an earlier version of this record presented Telnyx's '$0.056/min' all-in figure as unconditional; the page states it at roughly 230,000 monthly minutes with a typical configuration, and that qualifier has been added. Both minimums are spend floors rather than subscription fees, so no monthly price is recorded on Committed and Enterprise. HIPAA is asserted as standard on every plan; BAA, SOC 2 and GDPR are not asserted on this page and are not recorded.",
       "plans": [
         {
           "name": "Pay as you go",
@@ -1296,7 +1294,7 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "custom",
-          "notes": "No month-to-month price is published. Telnyx lists a $500/month minimum SPEND commitment that unlocks volume discounts, with the discounted per-minute rates not disclosed. monthlyUsd is null because $500 is a spend floor, not a subscription fee: a buyer committing to it still pays usage and does not receive $500 of defined allowance. overagePerMin is null because the discounted rates are unpublished.",
+          "notes": "No month-to-month price is published. Telnyx lists a $500/month minimum SPEND commitment that unlocks volume discounts, with the discounted per-minute rates not disclosed. No monthly price is recorded because $500 is a spend floor, not a subscription fee: a buyer committing to it still pays usage and does not receive $500 of defined allowance. The per-minute overage rate is not recorded because the discounted rates are unpublished.",
           "source": {
             "url": "https://telnyx.com/pricing/voice-ai-agents",
             "accessedAt": "2026-09-10"
@@ -1311,7 +1309,7 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "custom",
-          "notes": "Quote-only with a published $5,000/month minimum spend. Adds custom pricing and dedicated infrastructure. monthlyUsd is null for the same reason as Committed: the figure is a spend floor, not a subscription price. Rates negotiated.",
+          "notes": "Quote-only with a published $5,000/month minimum spend. Adds custom pricing and dedicated infrastructure. No monthly price is recorded, for the same reason as Committed: the figure is a spend floor, not a subscription price. Rates negotiated.",
           "source": {
             "url": "https://telnyx.com/pricing/voice-ai-agents",
             "accessedAt": "2026-09-10"
@@ -1342,7 +1340,7 @@
           "The $0.05/min excludes both LLM and telephony; Telnyx's own $0.056/min all-in estimate assumes roughly 230,000 monthly minutes and a typical configuration, and carrier minutes start at $0.0032/min on top",
           "Volume discounts require a $500/month minimum spend, and the discounted per-minute rates are not published, so the saving cannot be modelled before talking to sales",
           "Enterprise carries a $5,000/month minimum spend",
-          "The page asserts HIPAA is standard but does not state BAA availability, and makes no SOC 2 or GDPR claim, so those three stay null",
+          "The page asserts HIPAA is standard but does not state BAA availability, and makes no SOC 2 or GDPR claim, so none of those three is recorded",
           "Sign-up is free but no free usage allowance or starter credit is published, so there is no forever-free tier"
         ],
         "keyFeatures": [
@@ -1383,7 +1381,7 @@
         "Amazon Bedrock",
         "WebSocket API"
       ],
-      "provenance": "Re-verified against twilio.com/en-us/products/conversational-ai/pricing on 2026-09-10. The $0.07/min ConversationRelay rate is confirmed, with no monthly fee, no included minutes and no free allowance published, and the page confirms voice costs are calculated separately. ONE ADDITION: the draft omitted the other Conversational AI meters published on the same page, which a real agent build will touch — Conversation Orchestrator, Conversation Intelligence, Conversation Memory and Enterprise Knowledge. These are now itemised in notes. They are separate products rather than ConversationRelay plan tiers, so the single usage-based plan is retained. Compliance stays null: the page makes no HIPAA, SOC 2 or GDPR claim for this product.",
+      "provenance": "Re-verified against twilio.com/en-us/products/conversational-ai/pricing on 2026-09-10. The $0.07/min ConversationRelay rate is confirmed, with no monthly fee, no included minutes and no free allowance published, and the page confirms voice costs are calculated separately. ONE ADDITION: an earlier version of this record omitted the other Conversational AI meters published on the same page, which a real agent build will touch — Conversation Orchestrator, Conversation Intelligence, Conversation Memory and Enterprise Knowledge. These are now itemised in notes. They are separate products rather than ConversationRelay plan tiers, so the single usage-based plan is retained. Compliance is not recorded: the page makes no HIPAA, SOC 2 or GDPR claim for this product.",
       "plans": [
         {
           "name": "ConversationRelay (usage-based)",
@@ -1424,7 +1422,7 @@
           "Does not transcribe calls itself — voice transcription is a separate Twilio charge",
           "The surrounding Conversational AI products (Orchestrator, Intelligence, Memory, Enterprise Knowledge) are each separately metered, several by the 1,000 characters, so a full agent build accumulates five or more line items",
           "No monthly plan, no free allowance and no volume pricing published on the page",
-          "The pricing page makes no HIPAA, SOC 2 or GDPR claim for this product specifically, so all three are null"
+          "The pricing page makes no HIPAA, SOC 2 or GDPR claim for this product specifically, so none of the three is recorded"
         ],
         "keyFeatures": [
           "Sits directly on Twilio's Programmable Voice stack, so existing Twilio numbers, SIP trunks and call flows need no migration",
@@ -1465,7 +1463,7 @@
         "Anthropic",
         "Krisp VIVA"
       ],
-      "provenance": "Re-verified against daily.co/pricing/pipecat-cloud on 2026-09-10. All three active container rates ($0.01 / $0.02 / $0.03 per agent-minute) and all three reserved rates ($0.0005 / $0.0010 / $0.0015) confirmed unchanged, as are the transport, telephony and storage figures. Two corrections: the recording line was incomplete, and audio-and-video recording at $0.01349/min is now included alongside the $0.005/min audio-only and $0.003/min storage rates; and the Krisp VIVA allowance is free only to 10,000 minutes/month, after which it is $0.0015/min, which the draft omitted while calling the feature free. The unlimited-concurrency claim was also softened because the page directs buyers to make contact rather than publishing a self-serve ceiling. Pipecat Cloud publishes no subscription tiers, so each compute profile is listed as its own usage plan with monthlyUsd 0 rather than being collapsed into an invented ladder.",
+      "provenance": "Re-verified against daily.co/pricing/pipecat-cloud on 2026-09-10. All three active container rates ($0.01 / $0.02 / $0.03 per agent-minute) and all three reserved rates ($0.0005 / $0.0010 / $0.0015) confirmed unchanged, as are the transport, telephony and storage figures. Two corrections: the recording line was incomplete, and audio-and-video recording at $0.01349/min is now included alongside the $0.005/min audio-only and $0.003/min storage rates; and the Krisp VIVA allowance is free only to 10,000 minutes/month, after which it is $0.0015/min, which an earlier version of this record omitted while calling the feature free. The unlimited-concurrency claim was also softened because the page directs buyers to make contact rather than publishing a self-serve ceiling. Pipecat Cloud publishes no subscription tiers, so each compute profile is listed as its own usage plan with the monthly price recorded as 0 rather than being collapsed into an invented ladder.",
       "plans": [
         {
           "name": "agent-1x (pay as you go)",
@@ -1521,7 +1519,7 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "per_minute",
-          "notes": "Reserved capacity drops the compute rate roughly 20x: agent-1x $0.0005/min, agent-2x $0.0010/min, agent-3x $0.0015/min. No month-to-month subscription price is published for reserving capacity and neither the commitment size nor the term is disclosed on the page, so monthlyUsd is null. Reserved capacity is paid for whether or not agents run, so idle time is the buyer's cost.",
+          "notes": "Reserved capacity drops the compute rate roughly 20x: agent-1x $0.0005/min, agent-2x $0.0010/min, agent-3x $0.0015/min. No month-to-month subscription price is published for reserving capacity and neither the commitment size nor the term is disclosed on the page, so no monthly price is recorded. Reserved capacity is paid for whether or not agents run, so idle time is the buyer's cost.",
           "source": {
             "url": "https://www.daily.co/pricing/pipecat-cloud/",
             "accessedAt": "2026-09-10"
@@ -1536,7 +1534,7 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "custom",
-          "notes": "Quote-only, so monthlyUsd is null. Adds enterprise support and the option to bundle AI inference (transcription, LLM, voice models) into a single Pipecat bill instead of paying each provider directly. The page also directs enterprise security questions to sales rather than publishing certifications.",
+          "notes": "Quote-only, so no monthly price is recorded. Adds enterprise support and the option to bundle AI inference (transcription, LLM, voice models) into a single Pipecat bill instead of paying each provider directly. The page also directs enterprise security questions to sales rather than publishing certifications.",
           "source": {
             "url": "https://www.daily.co/pricing/pipecat-cloud/",
             "accessedAt": "2026-09-10"
@@ -1567,8 +1565,8 @@
           "Reserved pricing has no published commitment size or term, and idle reserved capacity is still billed",
           "Recording and storage are priced add-ons: $0.005/min audio-only, $0.01349/min audio and video, $0.003/min storage",
           "Krisp VIVA is free only to 10,000 minutes/month and $0.0015/min beyond",
-          "No HIPAA, SOC 2 or GDPR statement on the pricing page; security features are a contact-sales item, so all three flags are null",
-          "The page invites you to start building for free but publishes no forever-free allowance, so freeTier is null rather than true"
+          "No HIPAA, SOC 2 or GDPR statement on the pricing page; security features are a contact-sales item, so none of the three is recorded",
+          "The page invites you to start building for free but publishes no forever-free allowance, so no free tier is recorded, rather than one assumed"
         ],
         "keyFeatures": [
           "Managed hosting for Pipecat, the widely used open-source voice-agent framework, so there is a credible exit path to self-hosting",

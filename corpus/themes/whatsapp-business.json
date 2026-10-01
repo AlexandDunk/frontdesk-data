@@ -1,6 +1,6 @@
 {
   "vertical": "whatsapp-business",
-  "generatedAt": "2026-06-18",
+  "generatedAt": "2026-09-29",
   "methodologyNotes": "Pricing re-verified by fetching each vendor's official pricing page (wati.io/pricing, respond.io/pricing + respond.io/security, trengo.com/pricing, aisensy.com/pricing/usd, gallabox.com/pricing, doubletick.io/pricing, zoko.io/pricing, 360dialog.com/pricing + docs.360dialog.com/docs/get-started/pricing, twilio.com/en-us/whatsapp/pricing). WATI's pricing page renders prices via dynamic JS not extractable; prices were corroborated across multiple independent analyses (costbench.com, flowcart.ai) plus WATI help-center references and corrected from the draft's outdated $29/$99/$249 to the current $59/$119/$279 (annual-billing headline). Interakt's USD page (interakt.shop/pricing-us) returns navigation-only content; entry plan ~$12/mo is corroborated, but the Growth-tier USD figure is reported inconsistently across third-party sources ($35, $41, and $55) and could not be confirmed on an official live page, so it is set to null per NULL-BEATS-A-GUESS rather than asserting an unverified number. Monthly prices reflect base platform fee only; Meta per-conversation/template charges are excluded from monthlyUsd and noted per plan. Trengo prices are EUR as published; no official USD price exists so monthlyUsd is null with EUR in notes. 360dialog USD prices taken from the official USD toggle in docs.360dialog.com. accessedAt 2026-06-18.",
   "vendors": [
     {
@@ -144,50 +144,50 @@
       "plans": [
         {
           "name": "Starter",
-          "monthlyUsd": 79,
+          "monthlyUsd": 99,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
-          "annualDiscountPct": null,
+          "annualDiscountPct": 20,
           "billingModel": "flat",
           "setupFeeUsd": 0,
-          "notes": "5 users included; additional users $12/month each; unlimited MACs; team inboxes, mobile app, AI Prompt, basic reports, 2FA. Annual billing saves up to 20% ($948/year). WhatsApp/Meta fees charged separately.",
+          "notes": "5 users included; additional users $15/month ($12 billed annually) each; unlimited MACs; team inboxes, mobile app, AI Prompt, basic reports, 2FA. Annual billing saves up to 20% ($948/year). WhatsApp/Meta fees charged separately.",
           "source": {
             "url": "https://respond.io/pricing/",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         },
         {
           "name": "Growth",
-          "monthlyUsd": 159,
+          "monthlyUsd": 199,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
-          "annualDiscountPct": null,
+          "annualDiscountPct": 20,
           "billingModel": "flat",
           "setupFeeUsd": 0,
-          "notes": "10 users included; additional users $20/month each; 1,000 Monthly Active Contacts (MACs) included; overage $12/100 MACs; broadcasts, workflows, AI Agents, advanced reports, Zapier/Make, developer API. Annual saves up to 20% ($1,908/year). Meta fees separate.",
+          "notes": "10 users included; additional users $25/month ($20 billed annually) each; 1,000 Monthly Active Contacts (MACs) included; overage $12/100 MACs; broadcasts, workflows, AI Agents, advanced reports, Zapier/Make, developer API. Annual saves up to 20% ($1,908/year). Meta fees separate.",
           "source": {
             "url": "https://respond.io/pricing/",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         },
         {
           "name": "Advanced",
-          "monthlyUsd": 279,
+          "monthlyUsd": 349,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
-          "annualDiscountPct": null,
+          "annualDiscountPct": 20,
           "billingModel": "flat",
           "setupFeeUsd": 0,
-          "notes": "10 users included; additional users $24/month each; 1,000 MACs included; overage $15/100 MACs; phone/email masking, multiple workspaces, webhooks, SSO, custom channels. Annual saves up to 20% ($3,348/year). Meta fees separate.",
+          "notes": "10 users included; additional users $30/month ($24 billed annually) each; 1,000 MACs included; overage $15/100 MACs; phone/email masking, multiple workspaces, webhooks, SSO, custom channels. Annual saves up to 20% ($3,348/year). Meta fees separate.",
           "source": {
             "url": "https://respond.io/pricing/",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -203,7 +203,7 @@
           "notes": "Unlimited users; higher workspace and API rate limits; contact sales for pricing.",
           "source": {
             "url": "https://respond.io/pricing/",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -275,24 +275,8 @@
         "Razorpay",
         "Google Sheets"
       ],
-      "provenance": "Official USD pricing page (interakt.shop/pricing-us) returns navigation-only content. Entry plan ~$12/mo corroborated by multiple third parties. Growth-tier USD figure reported inconsistently ($35, $41, $55 across sources) with no official live confirmation, so it is set to null. Plan naming also differs across sources (Home vs Starter); kept as published in draft. Re-verified 2026-09-03 against the live pricing page — Growth: quote-only -> $55 (third-party figure).",
+      "provenance": "Official USD pricing page interakt.shop/pricing-us read 2026-09-27 with its Monthly toggle: Starter $12/mo (Instagram only), Growth $55/mo, Advanced $69/mo, Enterprise on request; the Quarterly and Yearly toggles show discounted prices.",
       "plans": [
-        {
-          "name": "Home",
-          "monthlyUsd": 12,
-          "minutesIncluded": null,
-          "callsIncluded": null,
-          "overagePerMin": null,
-          "overagePerCall": null,
-          "annualDiscountPct": 20,
-          "billingModel": "flat",
-          "setupFeeUsd": 0,
-          "notes": "~$12/month entry tier (corroborated across respond.io review, hyperleap, prospeo). Unlimited team members; basic automation; basic segmentation; 1 third-party integration; WhatsApp Catalog. Annual discount ~20%. Meta per-message charges apply separately and may include a markup on Meta base rates.",
-          "source": {
-            "url": "https://www.interakt.shop/pricing-us/",
-            "accessedAt": "2026-06-18"
-          }
-        },
         {
           "name": "Growth",
           "monthlyUsd": 55,
@@ -303,10 +287,55 @@
           "annualDiscountPct": 20,
           "billingModel": "flat",
           "setupFeeUsd": 0,
-          "notes": "USD monthly price could NOT be verified — third-party sources report $35, $41, and $55 with no agreement and the official USD page is not a direct read-extractable, so monthlyUsd is set to null (draft's $55 was unverified). India pricing is ~Rs 2,499-2,799/month. Advanced automation, chatbots, rich media templates, WhatsApp Payments, conversion analytics. Meta per-message charges apply separately with a markup on Meta base rates.",
+          "notes": "USD monthly price could NOT be verified — third-party sources report $35, $41, and $55 with no agreement and the official USD page is not a direct read-extractable, so no monthly price is recorded (the $55 figure from an earlier version of this record was unverified). India pricing is ~Rs 2,499-2,799/month. Advanced automation, chatbots, rich media templates, WhatsApp Payments, conversion analytics. Meta per-message charges apply separately with a markup on Meta base rates.",
           "source": {
             "url": "https://www.interakt.shop/pricing-us/",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
+          }
+        },
+        {
+          "name": "Starter",
+          "monthlyUsd": 12,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$12/mo on the monthly toggle ($69 /qtr on the quarterly toggle, $239 /yr on the yearly toggle). Includes Instagram only: automated Insta quick-flows and a shared team inbox for Insta DMs and comments. Unlimited agents (owner roles).",
+          "source": {
+            "url": "https://www.interakt.shop/pricing-us/",
+            "accessedAt": "2026-09-27"
+          }
+        },
+        {
+          "name": "Advanced",
+          "monthlyUsd": 69,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$69/mo on the monthly toggle ($189 /qtr on the quarterly toggle, $649 /yr on the yearly toggle). WhatsApp and Instagram. Everything in Growth plus advanced chatbot flows with branching, API calls and conditions, chat auto-assignment and advanced webhooks. Unlimited agents (all roles).",
+          "source": {
+            "url": "https://www.interakt.shop/pricing-us/",
+            "accessedAt": "2026-09-27"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Price on request (Get In Touch). Everything in Advanced plus the RCS channel, higher rate limits, better campaign speeds, no template markups and personalised support.",
+          "source": {
+            "url": "https://www.interakt.shop/pricing-us/",
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -327,7 +356,7 @@
           "Razorpay"
         ],
         "limits": [
-          "Growth USD price unverified — sources disagree ($35/$41/$55)",
+          "Growth: $55/mo monthly, $149/qtr quarterly, $499/yr yearly",
           "Markup on Meta conversation rates reported on some plans",
           "Free 14-day trial only — no permanent free tier"
         ],
@@ -349,7 +378,7 @@
             "accessedAt": "2026-06-18"
           }
         ],
-        "provenance": "Entry plan ~$12/mo corroborated by third-party sources; Growth USD set to null due to conflicting unverified figures; official USD page not a direct read-extractable."
+        "provenance": "Plan prices from interakt.shop/pricing-us read 2026-09-27 on the monthly toggle (Starter $12/mo, Growth $55/mo, Advanced $69/mo; Enterprise on request)."
       }
     },
     {
@@ -373,7 +402,7 @@
         "ActiveCampaign",
         "Booking.com"
       ],
-      "provenance": "Pricing fetched from trengo.com/pricing on 2026-06-18 (Boost €299/€349, Pro €499/€599, Enterprise custom — all confirmed); prices are EUR as published, no official USD pricing found so monthlyUsd is null. Re-verified 2026-09-03 against the live pricing page; published figures unchanged.",
+      "provenance": "Pricing fetched from trengo.com/pricing on 2026-06-18 (Boost €299/€349, Pro €499/€599, Enterprise custom — all confirmed); prices are EUR as published, no official USD pricing found so no monthly price is recorded. Re-verified 2026-09-03 against the live pricing page; published figures unchanged.",
       "plans": [
         {
           "name": "Boost",
@@ -419,7 +448,7 @@
           "setupFeeUsd": 0,
           "notes": "Custom pricing and conversation allowance; tailored solutions with dedicated support.",
           "source": {
-            "url": "https://trengo.com/pricing",
+            "url": "https://trengo.com/prices",
             "accessedAt": "2026-09-03"
           }
         }
@@ -500,7 +529,7 @@
           "notes": "Genuine permanent free plan ($0 Forever). Free WhatsApp API access; $1 conversation credit on signup; unlimited free service conversations; up to 10 tags; 5 custom attributes; free Blue Tick application. Meta per-message charges apply separately; service conversations free per Meta policy.",
           "source": {
             "url": "https://aisensy.com/pricing/usd",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-26"
           }
         },
         {
@@ -516,7 +545,7 @@
           "notes": "1 owner + 5 agents included; additional agents $20/month each; broadcasting, multi-agent chat, smart audience segmentation, Shopify integration, 2,400 messages/minute. Annual price $40.50/month. Meta per-message charges apply separately.",
           "source": {
             "url": "https://aisensy.com/pricing/usd",
-            "accessedAt": "2026-06-18"
+            "accessedAt": "2026-09-26"
           }
         },
         {
@@ -532,7 +561,7 @@
           "notes": "1 owner + 5 agents included; additional agents $20/month each; all Basic features plus 100 tags, 20 custom attributes, campaign scheduler, click tracking, smart routing, API access. Annual price $89.10/month. Meta per-message charges apply separately.",
           "source": {
             "url": "https://aisensy.com/pricing/usd",
-            "accessedAt": "2026-06-18"
+            "accessedAt": "2026-09-26"
           }
         },
         {
@@ -548,7 +577,7 @@
           "notes": "Custom pricing for 500,000+ messages/month; dedicated account manager, priority support, webhooks, unlimited tags/attributes.",
           "source": {
             "url": "https://aisensy.com/pricing/usd",
-            "accessedAt": "2026-06-18"
+            "accessedAt": "2026-09-26"
           }
         }
       ],
@@ -678,7 +707,7 @@
           "notes": "Custom seats, AI credit pool, unlimited channels, multi-year contracts available.",
           "source": {
             "url": "https://gallabox.com/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -786,7 +815,7 @@
           "notes": "Custom pricing per agent; complex journeys, special customizations, AI/ChatGPT bot support; 100 broadcast schedules/month.",
           "source": {
             "url": "https://doubletick.io/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -862,7 +891,7 @@
           "notes": "Unlimited agents; $0.015/conversation markup on all conversations (no free conversation tier); Instagram add-on $9.99/month; 7-day free trial. Meta per-conversation charges apply separately on top of Zoko markup.",
           "source": {
             "url": "https://www.zoko.io/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -878,7 +907,7 @@
           "notes": "5 agents included; $15/agent additional; 5,000 conversations/month with no Zoko markup; $0.00199/conversation overage beyond 5K; 7-day free trial. Meta per-conversation charges apply separately.",
           "source": {
             "url": "https://www.zoko.io/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -894,7 +923,7 @@
           "notes": "10 agents included; $12/agent additional; 100,000 conversations/month with no Zoko markup; $0.00099/conversation overage beyond 100K; 7-day free trial. Meta per-conversation charges apply separately.",
           "source": {
             "url": "https://www.zoko.io/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -910,7 +939,7 @@
           "notes": "30 agents included; $9/agent additional; 5,000,000 conversations/month with no Zoko markup; $0.00049/conversation overage beyond 5M; 7-day free trial. Meta per-conversation charges apply separately.",
           "source": {
             "url": "https://www.zoko.io/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         }
       ],

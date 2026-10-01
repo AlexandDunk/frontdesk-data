@@ -1,6 +1,6 @@
 {
   "vertical": "sales-tax-automation",
-  "generatedAt": "2026-06-15",
+  "generatedAt": "2026-09-29",
   "methodologyNotes": "Official pricing pages were re-fetched and verified on 2026-06-15: taxjar.com/pricing, quaderno.io/pricing, stripe.com/tax/pricing plus the US support article support.stripe.com/questions/understanding-stripe-tax-pricing, anrok.com/pricing, numeral.com/pricing, vatcompliance.co/prices/sales-tax/, avalara.com/us/en/products/pricing.html, sovos.com, and vertexinc.com/integrations. Stripe Tax Complete USD tiers ($90/$430/$1000/$1500) and the $0.50 Transaction-API / $0.05 Calculation-API rates were confirmed against the US Stripe support article; the public stripe.com/tax/pricing page geolocates to EUR (€80/€400/€930/€1400, €0.45/€0.04), so USD figures are retained from the US article. LOVAT officially rebranded to Lappa effective 2026-03-20 (confirmed: vatcompliance.co/blog/lovat-is-now-lappa and lappa.org); vatcompliance.co remains the active pricing domain, so plan slug retained. Avalara, Sovos, and Vertex do not publish self-serve software prices and are listed with monthlyUsd:null; speculative third-party annual-price RANGES were removed from notes (never published by the vendor). All EUR-denominated plans (LOVAT/Lappa) and all per-filing/per-transaction models are captured in plan notes with monthlyUsd:null rather than converted/guessed. accessedAt 2026-06-15.",
   "vendors": [
     {
@@ -40,7 +40,7 @@
           "notes": "Starts at 200 orders/month; price scales up with order volume tiers. Up to 3 data-import integrations, 2 AutoFile credits/year ($50 each additional), email support, 10 team users. Annual plans save 10%+. Flex fees allow temporary tier upgrades. State registration $299 each.",
           "source": {
             "url": "https://www.taxjar.com/pricing/",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -55,7 +55,7 @@
           "notes": "Starts at 200 orders/month; price scales with volume. Up to 10 total integrations (data-import + API), real-time API calculations, 4 AutoFile credits/year ($55 each additional), phone + email support, dedicated onboarding and Customer Success Manager, 10 team users. Annual plans save 10%+.",
           "source": {
             "url": "https://www.taxjar.com/pricing/",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -146,7 +146,7 @@
           "notes": "25 transactions/month, 1 user, 1 jurisdiction, 1 integration. International tax calculations, nexus alerts, automatic invoicing, tax reports.",
           "source": {
             "url": "https://quaderno.io/pricing/",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -161,7 +161,7 @@
           "notes": "250 transactions/month, unlimited users/jurisdictions/integrations. Auto-upgrade to next tier if limit exceeded.",
           "source": {
             "url": "https://quaderno.io/pricing/",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -176,7 +176,7 @@
           "notes": "1,000 transactions/month, unlimited users/jurisdictions/integrations. Most popular plan.",
           "source": {
             "url": "https://quaderno.io/pricing/",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -191,7 +191,7 @@
           "notes": "2,500 transactions/month, unlimited users/jurisdictions/integrations.",
           "source": {
             "url": "https://quaderno.io/pricing/",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -206,7 +206,7 @@
           "notes": "For businesses exceeding 2,500 transactions/month. Custom pricing via sales.",
           "source": {
             "url": "https://quaderno.io/pricing/",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -446,7 +446,7 @@
         "ADP",
         "Rippling"
       ],
-      "provenance": "Pricing verified on anrok.com/pricing: core plans Starter $100/mo per market and Custom $400/mo per market; add-on packages Physical Nexus Monitoring $300/mo, Pro $500/mo, Enterprise $1,000/mo (all billed annually). Prior draft omitted the $300/mo Physical Nexus Monitoring add-on; added here. SOC 2 Type II per anrok.com/security. Re-verified 2026-09-03 against the live pricing page; published figures unchanged.",
+      "provenance": "Pricing verified on anrok.com/pricing: Starter $100 per market/month; Custom is quoted on total transaction volume. SOC 2 Type II per anrok.com/security. Re-verified 2026-09-03 against the live pricing page; published figures unchanged.",
       "plans": [
         {
           "name": "Starter",
@@ -460,67 +460,22 @@
           "notes": "$100/month per market (flat). Global exposure monitoring, real-time tax calculation, filing and remittance, exemption certificate management, physical nexus tracking. Additional fees may apply at high transaction volumes. Best for founders needing compliance handled.",
           "source": {
             "url": "https://www.anrok.com/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-26"
           }
         },
         {
           "name": "Custom",
-          "monthlyUsd": 400,
+          "monthlyUsd": null,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "flat",
-          "notes": "$400/month per market (Anrok cites ~0.25% per transaction where compliance enabled). Everything in Starter plus advanced integrations, multi-billing/multi-entity support, audit-ready reporting, reconciliation, priority support, global tax consults, SSO, MSA, Anrok Atlas AI assistant (beta). Best for teams at 10+ markets or enterprise scale.",
+          "notes": "Custom pricing per market; contact Anrok for a quote (no published figure). Everything in Starter plus advanced integrations, multi-billing/multi-entity support, audit-ready reporting, reconciliation, priority support, global tax consults, SSO, MSA, Anrok Atlas AI assistant (beta). Best for teams at 10+ markets or enterprise scale.",
           "source": {
             "url": "https://www.anrok.com/pricing",
-            "accessedAt": "2026-06-15"
-          }
-        },
-        {
-          "name": "Physical Nexus Monitoring (Add-On)",
-          "monthlyUsd": 300,
-          "minutesIncluded": null,
-          "callsIncluded": null,
-          "overagePerMin": null,
-          "overagePerCall": null,
-          "annualDiscountPct": null,
-          "billingModel": "flat",
-          "notes": "$300/month (billed annually). Add-on package. Tracks how remote employees impact compliance and physical nexus exposure in real time.",
-          "source": {
-            "url": "https://www.anrok.com/pricing",
-            "accessedAt": "2026-06-15"
-          }
-        },
-        {
-          "name": "Pro (Add-On)",
-          "monthlyUsd": 500,
-          "minutesIncluded": null,
-          "callsIncluded": null,
-          "overagePerMin": null,
-          "overagePerCall": null,
-          "annualDiscountPct": null,
-          "billingModel": "flat",
-          "notes": "$500/month (billed annually). Add-on for companies with $1M-$10M ARR. Exposure modeling, nexus/exposure expert review, ongoing tax support, unlimited historical US filings, API consultations.",
-          "source": {
-            "url": "https://www.anrok.com/pricing",
-            "accessedAt": "2026-06-15"
-          }
-        },
-        {
-          "name": "Enterprise (Add-On)",
-          "monthlyUsd": 1000,
-          "minutesIncluded": null,
-          "callsIncluded": null,
-          "overagePerMin": null,
-          "overagePerCall": null,
-          "annualDiscountPct": null,
-          "billingModel": "flat",
-          "notes": "$1,000/month (billed annually). Add-on for late-stage private or public companies. Custom integrations, dedicated onboarding manager, global tax expert access, SSO, MSA.",
-          "source": {
-            "url": "https://www.anrok.com/pricing",
-            "accessedAt": "2026-06-15"
+            "accessedAt": "2026-09-26"
           }
         }
       ],
@@ -547,7 +502,6 @@
         ],
         "limits": [
           "Starter/Custom priced per market per month",
-          "Add-on packages (Physical Nexus, Pro, Enterprise) billed annually",
           "Additional fees at high transaction volumes"
         ],
         "keyFeatures": [
@@ -576,7 +530,7 @@
             "accessedAt": "2026-06-15"
           }
         ],
-        "provenance": "All prices verified on anrok.com/pricing including the previously-omitted $300/mo Physical Nexus Monitoring add-on. SOC 2 confirmed on anrok.com/security; GDPR DPA available on request."
+        "provenance": "All prices verified on anrok.com/pricing. SOC 2 confirmed on anrok.com/security; GDPR DPA available on request."
       }
     },
     {
@@ -616,7 +570,7 @@
           "notes": "Forever free. Nexus audit, physical and economic nexus monitoring, state alerting when thresholds crossed, integrations with Shopify, Stripe, Amazon, Walmart and others. No filing or registration included.",
           "source": {
             "url": "https://www.numeral.com/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -635,7 +589,14 @@
           }
         },
         {
-          "name": "Pro",
+          "name": "Enterprise",
+          "formerNames": [
+            {
+              "name": "Pro",
+              "lastSeen": "2026-06-15",
+              "absentOn": "2026-09-27"
+            }
+          ],
           "monthlyUsd": null,
           "minutesIncluded": null,
           "callsIncluded": null,
@@ -646,7 +607,7 @@
           "notes": "Custom pricing via sales. Everything in Standard plus exemption certificate management, API access, voluntary disclosure agreements, sales tax expert access, global VAT coverage in 80+ countries.",
           "source": {
             "url": "https://www.numeral.com/pricing",
-            "accessedAt": "2026-06-15"
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -678,7 +639,7 @@
           "Per-filing pricing with no monthly subscription",
           "On-time filing guarantee (pays penalties if late)",
           "Virtual mailbox for government correspondence",
-          "Global VAT in 80+ countries (Pro tier)"
+          "Global coverage in 90+ countries (Enterprise tier)"
         ],
         "bestFor": [
           "ecommerce",
@@ -717,7 +678,7 @@
         "Zoho",
         "Oracle NetSuite"
       ],
-      "provenance": "Sales tax pricing verified on vatcompliance.co/prices/sales-tax/ (Free €0; Start-up €27; Standard €50; Premium €344). LOVAT officially rebranded to Lappa effective 2026-03-20 (confirmed: vatcompliance.co/blog/lovat-is-now-lappa and lappa.org); page still carries LOVAT branding during transition. Prices published in EUR, so monthlyUsd:null on all paid plans. Re-verified 2026-09-03 against the live pricing page; published figures unchanged.",
+      "provenance": "Sales tax pricing verified on vatcompliance.co/prices/sales-tax/ (Free €0; Start-up €27; Standard €50; Premium €344). LOVAT officially rebranded to Lappa effective 2026-03-20 (confirmed: vatcompliance.co/blog/lovat-is-now-lappa and lappa.org); page still carries LOVAT branding during transition. Prices published in EUR, so no monthly price is recorded for any paid plan. Re-verified 2026-09-03 against the live pricing page; published figures unchanged.",
       "plans": [
         {
           "name": "Free",

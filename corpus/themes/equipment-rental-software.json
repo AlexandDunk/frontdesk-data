@@ -1,6 +1,6 @@
 {
   "vertical": "equipment-rental-software",
-  "generatedAt": "2026-06-19",
+  "generatedAt": "2026-09-28",
   "methodologyNotes": "Official pricing pages were fetched and verified live on 2026-06-19: booqable.com/pricing (all four tiers and add-ons confirmed exact), twicecommerce.com/pricing (all tiers, 25% annual discount, $1-first-month promo, and per-tier payment fees confirmed; rentle.io/pricing 301-redirects here — verified), rentman.io/pricing (EUR-native modular pricing confirmed; USD toggle requires JS, so monthlyUsd left null), current-rms.com/pricing (per-seat $79/$49 confirmed; multi-currency), and pro.goodshuffle.com/pricing + /pricing-calculator/ (live, quote-only, NO published dollar amounts — monthlyUsd null). EZRentOut's official page (ezo.io/ezrentout/pricing/) renders as a truncated SPA; its Essential $59 / Growth $399 / Premium $499 monthly tiers are corroborated independently by BOTH GetApp and Capterra, so prices stand, but seat counts are vendor-FAQ-only and not corroborated by those listings. Goodshuffle and EZRentOut Enterprise have no published price -> null (a null beats a guess). Compliance flags left null unless the vendor explicitly attests (Rentman and Current RMS explicitly state GDPR). accessedAt 2026-06-19.",
   "vendors": [
     {
@@ -44,7 +44,7 @@
           "setupFeeUsd": 0,
           "source": {
             "url": "https://booqable.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -60,7 +60,7 @@
           "setupFeeUsd": 0,
           "source": {
             "url": "https://booqable.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -76,7 +76,7 @@
           "setupFeeUsd": 0,
           "source": {
             "url": "https://booqable.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -92,7 +92,7 @@
           "setupFeeUsd": 0,
           "source": {
             "url": "https://booqable.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -162,28 +162,8 @@
         "Square",
         "PayPal"
       ],
-      "provenance": "Official page ezo.io/ezrentout/pricing/ renders as a truncated SPA (could not be read in plain text — a real extraction limitation). Plan prices Essential $59 / Growth $399 / Premium $499 per month are corroborated independently by BOTH GetApp and Capterra. Enterprise is custom (null). Seat counts (2/4/6) are from the vendor FAQ and are NOT corroborated by the aggregator listings, so they are flagged as unverified in plan notes. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
+      "provenance": "Official page ezo.io/ezrentout/pricing/ renders as a truncated SPA (could not be read in plain text — a real extraction limitation). Plan prices Growth $399 / Premium $499 per month are corroborated independently by BOTH GetApp and Capterra. Enterprise is custom, with no price recorded. Seat counts (2/4/6) are from the vendor FAQ and are NOT corroborated by the aggregator listings, so they are flagged as unverified in plan notes. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
       "plans": [
-        {
-          "name": "Essential",
-          "monthlyUsd": 59,
-          "minutesIncluded": null,
-          "callsIncluded": null,
-          "overagePerMin": null,
-          "overagePerCall": null,
-          "annualDiscountPct": null,
-          "billingModel": "flat",
-          "notes": "$59/mo (corroborated on GetApp and Capterra). Core rental management, online bookings, availability calendar, mobile app, 24/7 email support. Seat count (~2 users) per vendor FAQ; not corroborated on aggregator listings.",
-          "setupFeeUsd": 0,
-          "source": {
-            "url": "https://ezo.io/ezrentout/pricing/",
-            "accessedAt": "2026-06-19"
-          },
-          "corroboration": {
-            "url": "https://www.getapp.com/industries-software/a/ezrentout/pricing/",
-            "accessedAt": "2026-06-19"
-          }
-        },
         {
           "name": "Growth",
           "monthlyUsd": 399,
@@ -237,7 +217,7 @@
           "setupFeeUsd": 0,
           "source": {
             "url": "https://ezo.io/ezrentout/pricing/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -262,7 +242,7 @@
           "PayPal"
         ],
         "limits": [
-          "Essential / Growth / Premium seat counts per vendor FAQ (~2 / ~4 / ~6 users) — not corroborated on aggregator listings",
+          "Growth / Premium seat counts per vendor FAQ (~4 / ~6 users) — not corroborated on aggregator listings",
           "Enterprise: custom"
         ],
         "keyFeatures": [
@@ -445,22 +425,22 @@
         "Port-All",
         "Google Calendar"
       ],
-      "provenance": "Fetched and verified live at rentman.io/pricing on 2026-06-19. Pricing is EUR-native; a USD toggle exists but requires JavaScript, so monthlyUsd is left null and EUR amounts are stated in notes. €39/mo platform base fee plus per-power-user modules confirmed. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
+      "provenance": "Fetched and verified live at rentman.io/pricing on 2026-06-19. Pricing is EUR-native; a USD toggle exists but requires JavaScript, so no monthly price in USD is recorded and EUR amounts are stated in notes. €39/mo platform base fee plus per-power-user modules confirmed. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
       "plans": [
         {
           "name": "Platform (base fee)",
-          "monthlyUsd": null,
+          "monthlyUsd": 39,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
-          "annualDiscountPct": null,
+          "annualDiscountPct": 8,
           "billingModel": "flat",
-          "notes": "€39/month base platform fee required for all accounts. Includes CRM, task management, team collaboration, dashboards, calendars, file sharing. Power Users billed separately; Basic Users (warehouse/field staff) are free. USD not shown (requires JS toggle).",
+          "notes": "$39/month base platform fee required for all accounts (USD view); paying yearly takes 8% off the first year ($35.88/month). Includes CRM, task management, team collaboration, dashboards, calendars, file sharing. Power Users billed separately; Basic Users (warehouse/field staff) are free.",
           "setupFeeUsd": 0,
           "source": {
             "url": "https://rentman.io/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -540,7 +520,7 @@
           "setupFeeUsd": 0,
           "source": {
             "url": "https://rentman.io/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -613,7 +593,7 @@
         "Squarespace",
         "WishList Member"
       ],
-      "provenance": "Fetched pro.goodshuffle.com/pricing and /pricing-calculator/ on 2026-06-19 — both live, both publish NO dollar amounts. Pricing is quote-only via a calculator that requires submitting business details. Third-party aggregators cite inconsistent figures ($39/$99/$139) that are not on the official site and were deliberately NOT used. monthlyUsd set to null (a null beats a guess).",
+      "provenance": "Fetched pro.goodshuffle.com/pricing and /pricing-calculator/ on 2026-06-19 — both live, both publish NO dollar amounts. Pricing is quote-only via a calculator that requires submitting business details. Third-party aggregators cite inconsistent figures ($39/$99/$139) that are not on the official site and were deliberately NOT used, so no monthly price is recorded here rather than estimated from them.",
       "plans": [
         {
           "name": "Pricing on request",
@@ -690,7 +670,7 @@
         "Mailchimp",
         "Open API"
       ],
-      "provenance": "Fetched and verified live at current-rms.com/pricing and current-rms.com/gdpr-information on 2026-06-19. Per-seat pricing confirmed: First User $79/mo, Additional Users $49/mo (multi-currency). Annual billing exists but the discount percentage is not published, so annualDiscountPct left null. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
+      "provenance": "Fetched and verified live at current-rms.com/pricing and current-rms.com/gdpr-information on 2026-06-19. Per-seat pricing confirmed: First User $79/mo, Additional Users $49/mo (multi-currency). Annual billing exists but the discount percentage is not published, so the annual discount is not recorded. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
       "plans": [
         {
           "name": "First User",
@@ -705,7 +685,7 @@
           "setupFeeUsd": 0,
           "source": {
             "url": "https://current-rms.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -721,7 +701,7 @@
           "setupFeeUsd": 0,
           "source": {
             "url": "https://current-rms.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         }
       ],

@@ -1,6 +1,6 @@
 {
   "vertical": "object-storage",
-  "generatedAt": "2026-06-14",
+  "generatedAt": "2026-09-29",
   "methodologyNotes": "Pricing fetched from each vendor's official pricing page. AWS S3 per-GB storage rates were confirmed directly from the AWS pricing CSV (pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonS3/current/us-east-1/index.csv, effective 2026-06-01); egress rate corroborated via cloudzero.com/blog/cloud-storage-pricing. Cloudflare R2 rates from developers.cloudflare.com/r2/pricing. Backblaze B2 and DigitalOcean Spaces from their respective official pricing pages. Wasabi pricing from wasabi.com/pricing (note: price increases to $7.99/TB on 2026-07-01). Storj from storj.io/pricing (note: minimum monthly fee increases to $50 on 2026-07-01). Akamai Cloud (formerly Linode) from akamai.com/cloud/pricing. Vultr from vultr.com/products/object-storage. Google Cloud Storage page was too large to extract pricing numbers; GCS was excluded rather than guessing. All prices are US-region, pay-as-you-go unless noted. monthlyUsd is null for purely usage-metered services (no flat tier). billingModel=custom for usage-metered services. billingModel=flat for fixed monthly plans.",
   "vendors": [
     {
@@ -153,7 +153,14 @@
       "provenance": "Official Cloudflare R2 pricing page at developers.cloudflare.com/r2/pricing fetched directly. Free tier and paid tier rates confirmed. Re-verified 2026-09-03 against the live pricing page; published figures unchanged.",
       "plans": [
         {
-          "name": "R2 Free Tier",
+          "name": "Free tier",
+          "formerNames": [
+            {
+              "name": "R2 Free Tier",
+              "lastSeen": "2026-09-03",
+              "absentOn": "2026-09-27"
+            }
+          ],
           "monthlyUsd": 0,
           "minutesIncluded": null,
           "callsIncluded": null,
@@ -164,7 +171,7 @@
           "notes": "Includes 10 GB-month storage, 1 million Class A operations/month, 10 million Class B operations/month. Zero egress fees always. Standard storage class only.",
           "source": {
             "url": "https://developers.cloudflare.com/r2/pricing/",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -179,7 +186,7 @@
           "notes": "Storage: $0.015/GB-month. Class A operations (PUT, DELETE, etc.): $4.50 per million. Class B operations (GET, HEAD): $0.36 per million. Egress to internet: free always. Above the free tier allowances.",
           "source": {
             "url": "https://developers.cloudflare.com/r2/pricing/",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -194,7 +201,7 @@
           "notes": "Storage: $0.01/GB-month. Class A operations: $9.00 per million. Class B operations: $0.90 per million. Data retrieval: $0.01/GB. Egress to internet: free. 30-day minimum storage duration.",
           "source": {
             "url": "https://developers.cloudflare.com/r2/pricing/",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -389,7 +396,7 @@
           "notes": "Storage: $0.00699/GB-month ($6.99/TB) as of June 2026. Price increases to $0.00799/GB-month ($7.99/TB) effective 2026-07-01. No egress fees. No API request fees. No minimum storage requirement. Basic support included. Free trial available (duration/limits not published).",
           "source": {
             "url": "https://wasabi.com/pricing/",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -404,7 +411,7 @@
           "notes": "Annual/multi-year commitment pricing for large volumes (25TB, 100TB, 250TB, 500TB, 1PB, 1.5PB, 5PB, 10PB units). Exact rates require contact with sales. Includes premium support and discounts off pay-as-you-go rate. 1-, 3-, or 5-year terms available.",
           "source": {
             "url": "https://wasabi.com/pricing/rcs",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -484,7 +491,14 @@
       "provenance": "Official DigitalOcean Spaces pricing fetched from docs.digitalocean.com/products/spaces/details/pricing. All base plan, overage, CDN, and transfer details confirmed directly. Re-verified 2026-09-03 against the live pricing page; published figures unchanged.",
       "plans": [
         {
-          "name": "Spaces Subscription",
+          "name": "Spaces Standard Storage",
+          "formerNames": [
+            {
+              "name": "Spaces Subscription",
+              "lastSeen": "2026-09-03",
+              "absentOn": "2026-09-27"
+            }
+          ],
           "monthlyUsd": 5,
           "minutesIncluded": null,
           "callsIncluded": null,
@@ -495,7 +509,7 @@
           "notes": "Includes 250 GiB storage and 1,024 GiB outbound data transfer per month. CDN included at no additional cost. Overage: $0.02/GiB additional storage; $0.01/GiB additional outbound transfer. S3-compatible API.",
           "source": {
             "url": "https://docs.digitalocean.com/products/spaces/details/pricing/",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://www.digitalocean.com/pricing",
@@ -588,7 +602,7 @@
           "notes": "25 GB storage for 30 days. No credit card required. Includes 2 Object Mount licenses. After trial, account converts to paid Standard plan.",
           "source": {
             "url": "https://storj.io/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         },
         {

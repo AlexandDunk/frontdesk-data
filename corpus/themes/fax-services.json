@@ -1,6 +1,6 @@
 {
   "vertical": "fax-services",
-  "generatedAt": "2026-06-14",
+  "generatedAt": "2026-09-29",
   "methodologyNotes": "Self-serve USD pricing was collected from each vendor's official pricing page or the closest reachable official page on 2026-06-14. eFax's pricing page geo-redirects to a German EUR page and also renders prices via JavaScript (placeholder '$  /mo'); plan tier names, page limits, and overage rates were obtained from efax.com/corporate. The entry-tier (Personal) self-serve price of $18.99/mo is independently corroborated by GetApp, G2, and multiple 2026 pricing reviews (all agreeing on $18.99/mo, 200 pages, $0.10/page overage) and is therefore recorded as 18.99 rather than null. The second tier (Business) price could not be confirmed — secondary sources disagree on both naming and price for the mid tier (variously $24.99, $31.99, $49.99 under names Pro/Protect with differing page counts that do not match the official 500-page/5-user Business tier) — so its monthlyUsd remains null. Corporate is quote-only (null). Dropbox Fax (formerly HelloFax) subscription plan prices are also JavaScript-rendered and not returned in page HTML; the pay-as-you-go rate was directly readable. RingCentral does not sell a standalone online-fax product — fax is bundled into RingEX unified-communications plans whose prices are also JavaScript-rendered; the plan is recorded as custom/null. SRFax pricing is from their official healthcare solutions page which rendered fully. FaxZero, MyFax, and iFax prices are from their respective official pricing pages. annualDiscountPct is recorded only when both monthly and annual rates are explicitly published. minutesIncluded, callsIncluded, overagePerMin, and overagePerCall are null on every plan (non-telephony product).",
   "vendors": [
     {
@@ -160,7 +160,7 @@
           "notes": "5 free fax pages included. Sending only (receiving requires paid plan). Additional faxes at $0.99/fax (up to 10 pages), then $0.20/page. No credit card required.",
           "source": {
             "url": "https://app.fax.dropbox.com/info/pricing",
-            "accessedAt": "2026-09-05"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://fax.dropbox.com",
@@ -168,18 +168,48 @@
           }
         },
         {
-          "name": "Paid Subscription Plans",
-          "monthlyUsd": null,
+          "name": "Home Office",
+          "monthlyUsd": 9.99,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
-          "annualDiscountPct": null,
+          "annualDiscountPct": 17,
           "billingModel": "flat",
-          "notes": "Paid subscription plans exist that include fax receiving, dedicated fax number (US/UK/Canada), and $0.05/page overage. Exact monthly USD prices are JavaScript-rendered on the pricing page and could not be retrieved. No setup or cancellation fees; monthly or annual billing available.",
+          "notes": "$9.99 per month on monthly billing, after a $2.50 first month. Billed yearly: $7.81/mo for the first year, then $99.99 billed yearly.",
           "source": {
             "url": "https://app.fax.dropbox.com/info/pricing",
-            "accessedAt": "2026-06-14"
+            "accessedAt": "2026-09-27"
+          }
+        },
+        {
+          "name": "Professional",
+          "monthlyUsd": 19.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "$19.99 per month on monthly billing, after a $5 first month. Billed yearly: $15.62/mo for the first year, then $199.99 billed yearly.",
+          "source": {
+            "url": "https://app.fax.dropbox.com/info/pricing",
+            "accessedAt": "2026-09-27"
+          }
+        },
+        {
+          "name": "Small Business",
+          "monthlyUsd": 39.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "$39.99 per month on monthly billing, after a $10 first month. Billed yearly: $31.24/mo for the first year, then $399.99 billed yearly.",
+          "source": {
+            "url": "https://app.fax.dropbox.com/info/pricing",
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -357,7 +387,7 @@
           "notes": "100 pages send + 100 pages receive per month. $12/month billed monthly; $8.25/month when billed annually. Promotional first month at $5. Domestic US overage $0.10/page.",
           "source": {
             "url": "https://www.myfax.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://www.getapp.com/content-management-software/a/myfax/pricing/",
@@ -376,7 +406,7 @@
           "notes": "300 pages send + 300 pages receive per month. $25/month billed monthly; $20.83/month when billed annually. Domestic US overage $0.10/page.",
           "source": {
             "url": "https://www.myfax.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://www.getapp.com/content-management-software/a/myfax/pricing/",
@@ -395,7 +425,7 @@
           "notes": "600 pages send + 600 pages receive per month. $45/month billed monthly; $37.50/month when billed annually. Domestic US overage $0.10/page.",
           "source": {
             "url": "https://www.myfax.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://www.getapp.com/content-management-software/a/myfax/pricing/",
@@ -481,7 +511,7 @@
           "notes": "200 pages/month. $12.60/month billed monthly; $10.70/month when billed annually ($128.40/year). Overage $0.05/page. HIPAA + Canadian PHIPA compliant. Includes PGP encryption, multiple user accounts, unlimited storage.",
           "source": {
             "url": "https://www.srfax.com/fax-plans/healthcare-solutions/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-26"
           }
         },
         {
@@ -496,7 +526,7 @@
           "notes": "500 pages/month. $16.05/month billed monthly; $13.65/month when billed annually ($163.80/year). Overage $0.05/page.",
           "source": {
             "url": "https://www.srfax.com/fax-plans/healthcare-solutions/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-26"
           }
         },
         {
@@ -511,7 +541,7 @@
           "notes": "800 pages/month. $22.95/month billed monthly; $19.50/month when billed annually ($234.00/year). Overage $0.05/page.",
           "source": {
             "url": "https://www.srfax.com/fax-plans/healthcare-solutions/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-26"
           }
         },
         {
@@ -526,7 +556,7 @@
           "notes": "1,500 pages/month. $41.35/month billed monthly; $35.15/month when billed annually ($421.80/year). Overage $0.05/page.",
           "source": {
             "url": "https://www.srfax.com/fax-plans/healthcare-solutions/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-26"
           }
         },
         {
@@ -541,7 +571,7 @@
           "notes": "2,500 pages/month. $68.95/month billed monthly; $58.60/month when billed annually ($703.20/year). Overage $0.05/page.",
           "source": {
             "url": "https://www.srfax.com/fax-plans/healthcare-solutions/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-26"
           }
         },
         {
@@ -556,7 +586,7 @@
           "notes": "5,000 pages/month. $137.90/month billed monthly; $117.20/month when billed annually ($1,406.40/year). Overage $0.05/page.",
           "source": {
             "url": "https://www.srfax.com/fax-plans/healthcare-solutions/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-26"
           }
         },
         {
@@ -571,7 +601,7 @@
           "notes": "10,000 pages/month. $275.75/month billed monthly; $234.35/month when billed annually ($2,812.20/year). Overage $0.045/page.",
           "source": {
             "url": "https://www.srfax.com/fax-plans/healthcare-solutions/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-26"
           }
         },
         {
@@ -586,7 +616,7 @@
           "notes": "20,000 pages/month. $551.55/month billed monthly; $468.80/month when billed annually ($5,625.60/year). Overage $0.04/page.",
           "source": {
             "url": "https://www.srfax.com/fax-plans/healthcare-solutions/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-26"
           }
         }
       ],
@@ -673,7 +703,7 @@
           "notes": "Up to 5 free faxes per day. Maximum 3 pages + cover per fax. FaxZero branding on cover page. No credit card required. International faxing available.",
           "source": {
             "url": "https://faxzero.com",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -688,7 +718,7 @@
           "notes": "No subscription — pay $3.29 per fax via PayPal. Up to 25 pages + optional cover per fax. Priority delivery over free tier. No FaxZero branding. Cover page optional. No monthly commitment.",
           "source": {
             "url": "https://faxzero.com",
-            "accessedAt": "2026-06-14"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://www.getapp.com/content-management-software/a/faxzero/pricing/",
@@ -822,7 +852,7 @@
           "notes": "Volume pricing with commitment-based discounts. Custom page limits, custom fax numbers. Contact sales.",
           "source": {
             "url": "https://www.ifaxapp.com/pricing/",
-            "accessedAt": "2026-06-14"
+            "accessedAt": "2026-09-27"
           }
         }
       ],

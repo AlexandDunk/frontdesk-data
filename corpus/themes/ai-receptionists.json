@@ -1,6 +1,6 @@
 {
   "vertical": "ai-voice-agents",
-  "generatedAt": "2026-06-10T00:00:00.000Z",
+  "generatedAt": "2026-09-29T00:00:00.000Z",
   "methodologyNotes": "Pricing figures were collected from each vendor's public pricing page on the accessedAt date recorded per source. Quote-only or demo-gated vendors carry null price fields with a stated reason; no figure is ever invented. Plans are normalized to the dataset shape regardless of the vendor's native billing model (flat, per-minute, per-call, or hybrid). For per-minute developer platforms, monthlyUsd is the recurring platform fee (0 when pure pay-as-you-go) and overagePerMin is the marginal per-minute rate; minutesIncluded/callsIncluded are null because nothing is bundled. For per-call plans, callsIncluded carries the included quota and overagePerCall the marginal per-call rate; minutesIncluded is null. The cost-at-200-calls normalizer converts every billing model to an effective monthly cost at a chosen call volume and average call length so flat, per-minute and per-call plans can be compared honestly. Annual discounts are recorded as a percentage off the monthly rate where the vendor publishes annual pricing. HIPAA/BAA and integration fields reflect what the vendor states publicly; 'null/unknown' means not published, not absence. AIRA and Upfirst publish byte-identical pricing tables and appear to share a pricing engine; both are recorded with their own sources and a provenance note. This dataset is a static snapshot intended to be refreshed from our scheduled public-page monitoring pipeline.",
   "vendors": [
     {
@@ -20,7 +20,7 @@
           "notes": "Unlimited minutes; capped at 100 unique customers/mo, $0.50 per additional unique customer.",
           "source": {
             "url": "https://www.goodcall.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://www.capterra.com/p/10031138/Goodcall/",
@@ -39,7 +39,7 @@
           "notes": "Unlimited minutes; 250 unique customers/mo, $0.50 per additional.",
           "source": {
             "url": "https://www.goodcall.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -54,7 +54,7 @@
           "notes": "Unlimited minutes; 500 unique customers/mo, $0.50 per additional.",
           "source": {
             "url": "https://www.goodcall.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -85,7 +85,7 @@
           "notes": "Annual = 2 months free (~17%). Overage rate not published.",
           "source": {
             "url": "https://heyrosie.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://www.cloudtalk.io/blog/rosie-ai-answering-service-pricing/",
@@ -104,7 +104,7 @@
           "notes": "Overage rate not published.",
           "source": {
             "url": "https://heyrosie.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -119,7 +119,7 @@
           "notes": "Overage rate not published.",
           "source": {
             "url": "https://heyrosie.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -270,7 +270,7 @@
           "billingModel": "flat",
           "source": {
             "url": "https://dialzara.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://www.cloudtalk.io/dialzara-pricing/",
@@ -288,7 +288,7 @@
           "billingModel": "flat",
           "source": {
             "url": "https://dialzara.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -302,7 +302,7 @@
           "billingModel": "flat",
           "source": {
             "url": "https://dialzara.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -316,7 +316,7 @@
           "billingModel": "flat",
           "source": {
             "url": "https://dialzara.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -335,27 +335,7 @@
       "slug": "synthflow",
       "name": "Synthflow",
       "domain": "synthflow.ai",
-      "plans": [
-        {
-          "name": "Pay As You Go",
-          "monthlyUsd": 0,
-          "minutesIncluded": null,
-          "callsIncluded": null,
-          "overagePerMin": 0.09,
-          "overagePerCall": null,
-          "annualDiscountPct": null,
-          "billingModel": "per_minute",
-          "notes": "Voice Engine $0.09/min; LLM ($0.02-$0.05/min) and telephony billed separately on top. White-label/reseller $2,000/mo add-on. Extra concurrency $20/unit/mo.",
-          "source": {
-            "url": "https://synthflow.ai/pricing",
-            "accessedAt": "2026-06-27"
-          },
-          "corroboration": {
-            "url": "https://www.g2.com/products/synthflow/pricing",
-            "accessedAt": "2026-08-24"
-          }
-        }
-      ],
+      "plans": [],
       "hipaa": null,
       "baa": null,
       "integrations": [
@@ -367,7 +347,7 @@
       ],
       "bilingual": null,
       "demoPhone": "+17402848845",
-      "provenance": "Per-minute developer platform; Voice Engine base $0.09/min from synthflow.ai/pricing (LLM + telephony additive). overagePerMin captures the base voice rate only. SOC2/GDPR/ISO27001 stated; HIPAA called out for Enterprise only (BAA not published). Enterprise is custom-quote and omitted."
+      "provenance": "synthflow.ai/pricing, read 2026-09-27, lists only sales-led Enterprise contracts: \"Enterprise contracts start at $30,000 annually. Final pricing is scoped around call volume, concurrency, telephony setup, integrations, security needs, and launch support. CONTACT SALES\". No self-serve or per-minute plan is listed, so no plan is recorded. SOC2/GDPR/ISO27001 stated; HIPAA called out for Enterprise only (BAA not published)."
     },
     {
       "slug": "slang",
@@ -438,7 +418,7 @@
           "notes": "100 free minutes/mo, no card required.",
           "source": {
             "url": "https://www.phonely.ai/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://softwarefinder.com/call-center/phonely",
@@ -457,7 +437,7 @@
           "notes": "Annual ~$33/mo (34% off). Overage $0.25-$0.35/min.",
           "source": {
             "url": "https://www.phonely.ai/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -503,7 +483,7 @@
           "notes": "Unlimited minutes within plan allowances; usage above allowances billed in arrears at rates not published.",
           "source": {
             "url": "https://thoughtly.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -534,7 +514,7 @@
           "billingModel": "per_call",
           "source": {
             "url": "https://upfirst.ai/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://www.capterra.com/p/10028341/Upfirst/",
@@ -552,7 +532,7 @@
           "billingModel": "per_call",
           "source": {
             "url": "https://upfirst.ai/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -566,7 +546,7 @@
           "billingModel": "per_call",
           "source": {
             "url": "https://upfirst.ai/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -580,7 +560,7 @@
           "billingModel": "per_call",
           "source": {
             "url": "https://upfirst.ai/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -636,7 +616,7 @@
           "notes": "200 voice min/mo; annual $79/mo (20% off). Overage $0.25/min.",
           "source": {
             "url": "https://www.myaifrontdesk.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-26"
           }
         }
       ],
@@ -718,7 +698,7 @@
           "notes": "Unlimited inbound calls, no per-minute fees. Annual up to ~17% off.",
           "source": {
             "url": "https://www.getnextphone.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -733,7 +713,7 @@
           "notes": "Unlimited inbound calls.",
           "source": {
             "url": "https://www.getnextphone.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -753,17 +733,17 @@
       "plans": [
         {
           "name": "Core",
-          "monthlyUsd": 39,
+          "monthlyUsd": 49,
           "minutesIncluded": 133,
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
           "annualDiscountPct": 20,
           "billingModel": "flat",
-          "notes": "2,000 credits/mo; voice = 15 credits/min. The pricing page states credits cost $0.02-$0.04 each, i.e. ~$0.30-$0.60 per voice-minute (larger bundles trend to the low end; Core is $39/2,000 = ~$0.02/credit). ~133 voice min if all credits go to voice. No flat per-minute overage is published; exceeding the bundle means buying more credits. Credits also fund SMS/ad features. Annual 20% off.",
+          "notes": "2,000 credits/mo; voice = 15 credits/min. The pricing page states credits cost $0.02-$0.04 each, i.e. ~$0.30-$0.60 per voice-minute (larger bundles trend to the low end). ~133 voice min if all credits go to voice. No flat per-minute overage is published; exceeding the bundle means buying more credits. Credits also fund SMS/ad features. Annual 20% off.",
           "source": {
             "url": "https://serviceagent.ai/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://www.stork.ai/en/serviceagent",
@@ -772,7 +752,7 @@
         },
         {
           "name": "Growth",
-          "monthlyUsd": 95,
+          "monthlyUsd": 119,
           "minutesIncluded": 400,
           "callsIncluded": null,
           "overagePerMin": null,
@@ -782,12 +762,12 @@
           "notes": "6,000 credits/mo (~400 voice min at 15 credits/min). Credits cost $0.02-$0.04 each (~$0.30-$0.60/voice-min). No flat per-minute overage published. Annual 20% off.",
           "source": {
             "url": "https://serviceagent.ai/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
           "name": "Franchise",
-          "monthlyUsd": 279,
+          "monthlyUsd": 349,
           "minutesIncluded": 1333,
           "callsIncluded": null,
           "overagePerMin": null,
@@ -797,7 +777,7 @@
           "notes": "20,000 credits/mo (~1,333 voice min at 15 credits/min). Credits cost $0.02-$0.04 each (~$0.30-$0.60/voice-min). No flat per-minute overage published. Annual 20% off.",
           "source": {
             "url": "https://serviceagent.ai/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -809,7 +789,7 @@
       ],
       "bilingual": null,
       "demoPhone": null,
-      "provenance": "Home-services credit-based plans from serviceagent.ai/pricing (re-verified 2026-06-22). minutesIncluded is derived as credits / 15 (15 credits = 1 voice min), an upper bound since credits are shared with SMS/ad-creative/review features; flagged. The page publishes a per-credit cost of $0.02-$0.04 (~$0.30-$0.60/voice-min); no flat per-minute overage is published, so overagePerMin is null. A free Launch ($0) tier and a Jobber integration are now listed; ServiceTitan/Housecall hooks, bilingual, HIPAA/BAA still not published. Re-verified 2026-09-02 against the live pricing page; all published figures unchanged."
+      "provenance": "Home-services credit-based plans from serviceagent.ai/pricing (re-verified 2026-06-22). The included-minutes figure is derived as credits / 15 (15 credits = 1 voice min), an upper bound since credits are shared with SMS/ad-creative/review features; flagged. The page publishes a per-credit cost of $0.02-$0.04 (~$0.30-$0.60/voice-min); no flat per-minute overage is published, so no per-minute overage rate is recorded. A free Launch ($0) tier and a Jobber integration are now listed; ServiceTitan/Housecall hooks, bilingual, HIPAA/BAA still not published. Re-verified 2026-09-02 against the live pricing page; all published figures unchanged."
     },
     {
       "slug": "loman",
@@ -818,7 +798,7 @@
       "plans": [
         {
           "name": "Starter",
-          "monthlyUsd": 199,
+          "monthlyUsd": null,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
@@ -826,10 +806,10 @@
           "annualDiscountPct": null,
           "billingModel": "flat",
           "setupFeeUsd": 149,
-          "notes": "No per-minute fees, no overage charges (vendor-stated). $149 one-time setup.",
+          "notes": "Pricing on request: the page lists Starter ('For basic call management') with 'Schedule a demo' and no figure, under 'Request Pricing from Loman!'. No per-minute fees (vendor-stated). The $149 one-time setup fee comes from an earlier read; the current page does not print it.",
           "source": {
             "url": "https://loman.ai/pricing",
-            "accessedAt": "2026-06-10"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://www.spotsaas.com/product/loman-ai/pricing",
@@ -838,7 +818,7 @@
         },
         {
           "name": "Premium",
-          "monthlyUsd": 399,
+          "monthlyUsd": null,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
@@ -846,10 +826,10 @@
           "annualDiscountPct": null,
           "billingModel": "flat",
           "setupFeeUsd": 149,
-          "notes": "No per-minute fees, no overage. $149 one-time setup.",
+          "notes": "Pricing on request: the page lists Premium ('For ordering & reservations') with 'Schedule a demo' and no figure, under 'Request Pricing from Loman!'. No per-minute fees (vendor-stated). The $149 one-time setup fee comes from an earlier read; the current page does not print it.",
           "source": {
             "url": "https://loman.ai/pricing",
-            "accessedAt": "2026-06-10"
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -881,6 +861,7 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "per_minute",
+          "unmodelable": "Build's $0.05 a minute is Vapi's platform fee alone; the speech, language-model and telephony providers a call runs on are billed on top at their own rates, and Vapi publishes no all-in rate, so a monthly cost at a call volume is not modelled.",
           "notes": "$0.05/min Vapi platform fee; LLM/STT/TTS passed through at cost (or BYO key). 10 concurrency lines included, +$10/line/mo. HIPAA add-on $2,000/mo.",
           "source": {
             "url": "https://vapi.ai/pricing",
@@ -889,6 +870,53 @@
           "corroboration": {
             "url": "https://www.cloudtalk.io/blog/vapi-ai-pricing/",
             "accessedAt": "2026-08-24"
+          }
+        },
+        {
+          "name": "Core",
+          "monthlyUsd": 29,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "unmodelable": "Core's $29 is a plan fee charged on top of Vapi's per-minute usage, which this record prices only on Build; a monthly cost at a call volume is not modelled for Core.",
+          "notes": "$29 per month success package, pre-paid and auto-renewing, on top of usage; models passed through at cost. 2 organizations, 5 included Vapi phone numbers, 10 concurrent calls, 30 days raw data retention, ZDR included, email support with a 2 business day response SLA.",
+          "source": {
+            "url": "https://vapi.ai/pricing",
+            "accessedAt": "2026-09-27"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 999,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "hybrid",
+          "unmodelable": "Pro's $999 is a minimum on a share of Vapi's per-minute hosting fee, charged on top of usage, which this record prices only on Build; a monthly cost at a call volume is not modelled for Pro.",
+          "notes": "10% of the Vapi hosting fee with a $999/mo minimum, on top of usage; models passed through at cost; bought through sales. 10 organizations, 10 included Vapi phone numbers, 30 concurrent calls, 180 days raw data retention, RBAC + ZDR, email and dedicated Slack support, 1 business day response SLA, 99% uptime SLA.",
+          "source": {
+            "url": "https://vapi.ai/pricing",
+            "accessedAt": "2026-09-27"
+          }
+        },
+        {
+          "name": "Premier",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Custom pricing, direct sales only; models passed through at cost. Elevated organizations, concurrency and data retention; custom number of Vapi phone numbers; named support team; 1 hour P0 response SLA; 99.9% uptime SLA; custom RBAC + ZDR + SSO; dedicated SIP available.",
+          "source": {
+            "url": "https://vapi.ai/pricing",
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -902,7 +930,7 @@
       ],
       "bilingual": null,
       "demoPhone": null,
-      "provenance": "Developer voice-agent platform; $0.05/min base platform fee from vapi.ai/pricing (model providers passed through). overagePerMin reflects the platform fee only — true end cost depends on chosen models. HIPAA/BAA available as $2,000/mo add-on. Scale tier is custom-volume and omitted. Re-verified 2026-09-02 against the live pricing page; all published figures unchanged."
+      "provenance": "Developer voice-agent platform, priced from vapi.ai/pricing. Build is pay-as-you-go at a $0.05/min platform fee (read 2026-09-02); Core ($29 a month) and Pro (10% of the hosting fee, $999 a month minimum) are success packages paid on top of usage, and Premier is custom (read 2026-09-27). The speech, language-model and telephony providers a call runs on are billed on top at their own rates, and Vapi publishes no all-in rate, so no monthly cost at a call volume is modelled. HIPAA/BAA available as a $2,000/mo add-on."
     },
     {
       "slug": "bland",
@@ -921,7 +949,7 @@
           "notes": "All-in $0.14/min talk time (LLM+STT+TTS+telephony). 10 concurrent calls.",
           "source": {
             "url": "https://www.bland.ai/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://www.cloudtalk.io/blog/bland-ai-pricing/",
@@ -940,22 +968,7 @@
           "notes": "$299/mo platform fee + $0.12/min all-in. 50 concurrent calls.",
           "source": {
             "url": "https://www.bland.ai/pricing",
-            "accessedAt": "2026-09-02"
-          }
-        },
-        {
-          "name": "Scale",
-          "monthlyUsd": 499,
-          "minutesIncluded": null,
-          "callsIncluded": null,
-          "overagePerMin": 0.11,
-          "overagePerCall": null,
-          "annualDiscountPct": null,
-          "billingModel": "per_minute",
-          "notes": "$499/mo platform fee + $0.11/min all-in. 100 concurrent calls.",
-          "source": {
-            "url": "https://www.bland.ai/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -984,10 +997,10 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "per_minute",
-          "notes": "Retell voice infra $0.055/min; total $0.07-$0.31/min depending on LLM. Telephony $0.015/min (US). overagePerMin = published floor.",
+          "notes": "Retell voice infra $0.055/min; total $0.07-$0.31/min depending on LLM. Telephony $0.015/min (US). The per-minute overage rate recorded is the published floor.",
           "source": {
             "url": "https://www.retellai.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://www.cloudtalk.io/retell-ai-pricing/",
@@ -1006,7 +1019,7 @@
       ],
       "bilingual": null,
       "demoPhone": null,
-      "provenance": "Developer voice platform; published all-in range $0.07-$0.31/min (infra $0.055 + LLM + telephony $0.015) from retellai.com/pricing. overagePerMin stores the floor; range preserved in notes. HIPAA/BAA available. Enterprise custom omitted. Re-verified 2026-09-02 against the live pricing page; all published figures unchanged."
+      "provenance": "Developer voice platform; published all-in range $0.07-$0.31/min (infra $0.055 + LLM + telephony $0.015) from retellai.com/pricing. The per-minute overage rate recorded is the floor of that range; the full range is preserved in the plan notes. HIPAA/BAA available. Enterprise custom omitted. Re-verified 2026-09-02 against the live pricing page; all published figures unchanged."
     },
     {
       "slug": "aira",
@@ -1024,7 +1037,7 @@
           "billingModel": "per_call",
           "source": {
             "url": "https://www.getaira.io/agents/receptionist/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -1038,7 +1051,7 @@
           "billingModel": "per_call",
           "source": {
             "url": "https://www.getaira.io/agents/receptionist/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -1052,7 +1065,7 @@
           "billingModel": "per_call",
           "source": {
             "url": "https://www.getaira.io/agents/receptionist/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -1066,7 +1079,7 @@
           "billingModel": "per_call",
           "source": {
             "url": "https://www.getaira.io/agents/receptionist/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -1101,8 +1114,8 @@
           "billingModel": "per_call",
           "notes": "$97/mo for 100 calls. Higher tiers exist (up to ~$249/mo per seed) but per-call quotas for them are not published on the page.",
           "source": {
-            "url": "https://www.simplephones.ai/pricing",
-            "accessedAt": "2026-09-02"
+            "url": "https://www.simplephones.ai/",
+            "accessedAt": "2026-09-26"
           },
           "corroboration": {
             "url": "https://www.g2.com/products/simple-phones/pricing",
@@ -1137,7 +1150,7 @@
           "notes": "Live human receptionists. $250 for 50 receptionist minutes; overage above plan billed at a higher per-minute rate (not published).",
           "source": {
             "url": "https://www.ruby.com/plans-and-pricing/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -1152,7 +1165,7 @@
           "notes": "$395 for 100 receptionist minutes.",
           "source": {
             "url": "https://www.ruby.com/plans-and-pricing/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -1167,7 +1180,7 @@
           "notes": "$720 for 200 receptionist minutes (most popular tier).",
           "source": {
             "url": "https://www.ruby.com/plans-and-pricing/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -1182,7 +1195,7 @@
           "notes": "$1,725 for 500 receptionist minutes.",
           "source": {
             "url": "https://www.ruby.com/plans-and-pricing/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -1302,7 +1315,7 @@
           "notes": "From $25/mo; per-call overage $1.99. Included call count not published.",
           "source": {
             "url": "https://www.receptionhq.com/pricing/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://www.g2.com/products/receptionhq/pricing",
@@ -1439,8 +1452,8 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "per_minute",
-          "unmodelable": "The first 30 seconds of every call are free, so the true bill depends on call count as well as minutes, and minutesIncluded is one stored constant that cannot carry half a minute per call. A modeled figure here overstates by $0.195 per call — a third at a two-minute average, double at one minute — so the cell is left empty. Requested by the publisher, 2026-09-11.",
-          "notes": "$22.95 per user per month, billed monthly — no annual term is published anywhere on the page, so there is no saving to record. Includes unlimited US calling, desktop and mobile softphones, voicemail transcription, CRM-smart routing and the Sage AI voice agent. NO bundled Sage minutes at all: minutesIncluded is 0 because the page says so outright. The first 30 seconds of EVERY call are free and billing is by the second with no rounding. That waiver cannot be expressed in this schema — the only value of minutesIncluded that reproduces it is half a minute times the number of calls, which is a function of the reader's own volume input rather than a stored constant — so THIS PLAN IS WITHHELD FROM THE COST MODEL (see unmodelable) instead of being modeled wrong. Modeling it overstated by exactly $0.195 per call: about +33% at a two-minute average and +100% at one minute, always against the vendor. The published rate stays recorded at $0.39 because that is what the page says; it is the derived figure that is withheld, not the source one. A second meter runs alongside: AI Transcription at $0.0198/min of live and recorded calls, on every plan, also billed by the second. Voicemail transcription is free. The page bills the two as separate meters — “Sage and AI Transcription come with every plan and are metered only as you use them” — and CallSprout's founder confirmed in writing on 2026-09-11 that Sage minutes do not include call transcription by default. Recorded as the publisher's statement, not as a figure read from the page. PRICED PER USER SEAT, which nothing else in this index is — every other vendor here prices per business. A five-person office pays five times this figure, so the headline number is not comparable with the others without that multiplication, and Sage is one included feature of a cloud phone system rather than a receptionist subscription sold on its own.",
+          "unmodelable": "The first 30 seconds of every call are free, so the true bill depends on call count as well as minutes, and the record's included-minutes figure is one stored constant that cannot carry half a minute per call. A modeled figure here overstates by $0.195 per call — a third at a two-minute average, double at one minute — so the cell is left empty. Requested by the publisher, 2026-09-11.",
+          "notes": "$22.95 per user per month, billed monthly — no annual term is published anywhere on the page, so there is no saving to record. Includes unlimited US calling, desktop and mobile softphones, voicemail transcription, CRM-smart routing and the Sage AI voice agent. NO bundled Sage minutes at all: the included-minutes figure is 0 because the page says so outright. The first 30 seconds of EVERY call are free and billing is by the second with no rounding. That waiver cannot be expressed in this schema — the only included-minutes figure that reproduces it is half a minute times the number of calls, which is a function of the reader's own volume input rather than a stored constant — so THIS PLAN IS WITHHELD FROM THE COST MODEL (not modelled) instead of being modeled wrong. Modeling it overstated by exactly $0.195 per call: about +33% at a two-minute average and +100% at one minute, always against the vendor. The published rate stays recorded at $0.39 because that is what the page says; it is the derived figure that is withheld, not the source one. A second meter runs alongside: AI Transcription at $0.0198/min of live and recorded calls, on every plan, also billed by the second. Voicemail transcription is free. The page bills the two as separate meters — “Sage and AI Transcription come with every plan and are metered only as you use them” — and CallSprout's founder confirmed in writing on 2026-09-11 that Sage minutes do not include call transcription by default. Recorded as the publisher's statement, not as a figure read from the page. PRICED PER USER SEAT, which nothing else in this index is — every other vendor here prices per business. A five-person office pays five times this figure, so the headline number is not comparable with the others without that multiplication, and Sage is one included feature of a cloud phone system rather than a receptionist subscription sold on its own.",
           "source": {
             "url": "https://callsprout.com/pricing",
             "accessedAt": "2026-09-09"
@@ -1459,8 +1472,8 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "per_minute",
-          "unmodelable": "The first 30 seconds of every call are free, so the true bill depends on call count as well as minutes, and minutesIncluded is one stored constant that cannot carry half a minute per call. A modeled figure here overstates by $0.195 per call — a third at a two-minute average, double at one minute — so the cell is left empty. Requested by the publisher, 2026-09-11.",
-          "notes": "$39.95 per user per month, billed monthly. Everything in Business plus call queues with hold and position, skills-based routing across agents, supervisor monitor/whisper/barge, live wallboards and queue analytics, advanced reporting, and Sage overflow and after-hours answering. Same Sage rate and the same absence of bundled minutes as Business. The first 30 seconds of EVERY call are free and billing is by the second with no rounding. That waiver cannot be expressed in this schema — the only value of minutesIncluded that reproduces it is half a minute times the number of calls, which is a function of the reader's own volume input rather than a stored constant — so THIS PLAN IS WITHHELD FROM THE COST MODEL (see unmodelable) instead of being modeled wrong. Modeling it overstated by exactly $0.195 per call: about +33% at a two-minute average and +100% at one minute, always against the vendor. The published rate stays recorded at $0.39 because that is what the page says; it is the derived figure that is withheld, not the source one. A second meter runs alongside: AI Transcription at $0.0198/min of live and recorded calls, on every plan, also billed by the second. Voicemail transcription is free. The page bills the two as separate meters — “Sage and AI Transcription come with every plan and are metered only as you use them” — and CallSprout's founder confirmed in writing on 2026-09-11 that Sage minutes do not include call transcription by default. Recorded as the publisher's statement, not as a figure read from the page. PRICED PER USER SEAT, which nothing else in this index is — every other vendor here prices per business. A five-person office pays five times this figure, so the headline number is not comparable with the others without that multiplication, and Sage is one included feature of a cloud phone system rather than a receptionist subscription sold on its own.",
+          "unmodelable": "The first 30 seconds of every call are free, so the true bill depends on call count as well as minutes, and the record's included-minutes figure is one stored constant that cannot carry half a minute per call. A modeled figure here overstates by $0.195 per call — a third at a two-minute average, double at one minute — so the cell is left empty. Requested by the publisher, 2026-09-11.",
+          "notes": "$39.95 per user per month, billed monthly. Everything in Business plus call queues with hold and position, skills-based routing across agents, supervisor monitor/whisper/barge, live wallboards and queue analytics, advanced reporting, and Sage overflow and after-hours answering. Same Sage rate and the same absence of bundled minutes as Business. The first 30 seconds of EVERY call are free and billing is by the second with no rounding. That waiver cannot be expressed in this schema — the only included-minutes figure that reproduces it is half a minute times the number of calls, which is a function of the reader's own volume input rather than a stored constant — so THIS PLAN IS WITHHELD FROM THE COST MODEL (not modelled) instead of being modeled wrong. Modeling it overstated by exactly $0.195 per call: about +33% at a two-minute average and +100% at one minute, always against the vendor. The published rate stays recorded at $0.39 because that is what the page says; it is the derived figure that is withheld, not the source one. A second meter runs alongside: AI Transcription at $0.0198/min of live and recorded calls, on every plan, also billed by the second. Voicemail transcription is free. The page bills the two as separate meters — “Sage and AI Transcription come with every plan and are metered only as you use them” — and CallSprout's founder confirmed in writing on 2026-09-11 that Sage minutes do not include call transcription by default. Recorded as the publisher's statement, not as a figure read from the page. PRICED PER USER SEAT, which nothing else in this index is — every other vendor here prices per business. A five-person office pays five times this figure, so the headline number is not comparable with the others without that multiplication, and Sage is one included feature of a cloud phone system rather than a receptionist subscription sold on its own.",
           "source": {
             "url": "https://callsprout.com/pricing",
             "accessedAt": "2026-09-09"
@@ -1476,7 +1489,71 @@
       "integrations": [],
       "bilingual": null,
       "demoPhone": null,
-      "provenance": "Added 2026-09-09 after CallSprout's founder wrote in with the published figures for Sage, saying plainly that he was not asking for a paid listing. Every one of his six claims was checked against his own pages before anything was published, and every one held: Sage included on both plans, Business $22.95 per user per month, Call Center $39.95, usage $0.39 per minute after the first 30 seconds of each call billed by the second, 24/7 answering that captures the caller's name, number and reason and transfers with that context, and booking that works only against a compatible scheduling API. Nothing had to be rejected, rounded or restated — which is worth recording, because it is unusual. Read from https://callsprout.com/pricing in a headless browser on 2026-09-09; that page carries schema.org Offer markup for both plans at those figures, which is why it is cited rather than the page the founder named. https://callsprout.com/ai/voice-agent carries the identical figures and is attached as a second capture, but it sits on the same host, so it is one publisher saying the same thing twice rather than independent corroboration. No annual term exists on either page — the words annual, yearly and per year appear nowhere and the FAQ states \"a simple per-seat price billed monthly\" — so annualDiscountPct is null by absence, not by ignorance. Neither page names a single integration partner or makes any compliance claim, so integrations is empty and HIPAA and BAA stay unstated; a free trial exists with no published duration. TWO THINGS A READER MUST NOT BE MISLED BY, both recorded in every plan note. The price is per SEAT while every other vendor in this index prices per business, so $22.95 would otherwise read as the cheapest entry price here when a five-person office pays $114.75. And the modeled cost ignores the 30-second per-call waiver, overstating by $0.195 a call."
+      "provenance": "Added 2026-09-09 after CallSprout's founder wrote in with the published figures for Sage, saying plainly that he was not asking for a paid listing. Every one of his six claims was checked against his own pages before anything was published, and every one held: Sage included on both plans, Business $22.95 per user per month, Call Center $39.95, usage $0.39 per minute after the first 30 seconds of each call billed by the second, 24/7 answering that captures the caller's name, number and reason and transfers with that context, and booking that works only against a compatible scheduling API. Nothing had to be rejected, rounded or restated — which is worth recording, because it is unusual. Read from https://callsprout.com/pricing in a headless browser on 2026-09-09; that page carries schema.org Offer markup for both plans at those figures, which is why it is cited rather than the page the founder named. https://callsprout.com/ai/voice-agent carries the identical figures and is attached as a second capture, but it sits on the same host, so it is one publisher saying the same thing twice rather than independent corroboration. No annual term exists on either page — the words annual, yearly and per year appear nowhere and the FAQ states \"a simple per-seat price billed monthly\" — so the annual discount is not recorded, because none exists to record — not because it was missed. Neither page names a single integration partner or makes any compliance claim, so integrations is empty and HIPAA and BAA stay unstated; a free trial exists with no published duration. TWO THINGS A READER MUST NOT BE MISLED BY, both recorded in every plan note. The price is per SEAT while every other vendor in this index prices per business, so $22.95 would otherwise read as the cheapest entry price here when a five-person office pays $114.75. And the modeled cost ignores the 30-second per-call waiver, overstating by $0.195 a call."
+    },
+    {
+      "slug": "kalyvox",
+      "name": "Kalyvox",
+      "domain": "kalyvox.ai",
+      "plans": [
+        {
+          "name": "Solo",
+          "monthlyUsd": 95,
+          "minutesIncluded": 0,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_minute",
+          "unmodelable": "Voice usage is published only in euros — €0.19 per minute of assistant conversation time, excl. tax, on top of the subscription and the same on every plan — and this schema carries usage rates in USD, so no modeled monthly total is shown rather than a converted one.",
+          "notes": "$95/mo excl. tax (the page's EUR view: €89/mo), plus voice usage billed on actual assistant conversation time at €0.19/min excl. tax — the page prints that rate in euros only. No prepaid minute bundle and no automatic upgrade when volume spikes. 1 user, 1 number; call qualification, dashboard with transcripts and summaries, appointment booking and calendar sync, email and SMS alerts; self-service onboarding, email support. 7-day free trial, no credit card.",
+          "source": {
+            "url": "https://kalyvox.ai/en/pricing",
+            "accessedAt": "2026-09-27"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 195,
+          "minutesIncluded": 0,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_minute",
+          "unmodelable": "Voice usage is published only in euros — €0.19 per minute of assistant conversation time, excl. tax, on top of the subscription and the same on every plan — and this schema carries usage rates in USD, so no modeled monthly total is shown rather than a converted one.",
+          "notes": "$195/mo excl. tax (the page's EUR view: €179/mo), plus voice usage billed on actual assistant conversation time at €0.19/min excl. tax — the page prints that rate in euros only. No prepaid minute bundle and no automatic upgrade when volume spikes. Up to 5 users, 1 number; everything in Solo plus the Zapier integration; assisted onboarding option, priority support. 7-day free trial, no credit card.",
+          "source": {
+            "url": "https://kalyvox.ai/en/pricing",
+            "accessedAt": "2026-09-27"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 269,
+          "minutesIncluded": 0,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "per_minute",
+          "unmodelable": "Voice usage is published only in euros — €0.19 per minute of assistant conversation time, excl. tax, on top of the subscription and the same on every plan — and this schema carries usage rates in USD, so no modeled monthly total is shown rather than a converted one.",
+          "notes": "$269/mo excl. tax (the page's EUR view: €249/mo), plus voice usage billed on actual assistant conversation time at €0.19/min excl. tax — the page prints that rate in euros only. No prepaid minute bundle and no automatic upgrade when volume spikes. Unlimited users, numbers on request; dedicated onboarding and account manager. The page's button reads Contact us, but the price is published. 7-day free trial, no credit card.",
+          "source": {
+            "url": "https://kalyvox.ai/en/pricing",
+            "accessedAt": "2026-09-27"
+          }
+        }
+      ],
+      "hipaa": null,
+      "baa": null,
+      "integrations": [
+        "Google Calendar",
+        "Zapier",
+        "ChatGPT"
+      ],
+      "bilingual": null,
+      "provenance": "Added 2026-09-27 after the founder wrote asking to be tracked; every figure was read from kalyvox.ai/en/pricing on 2026-09-27, not taken from the mail. The page toggles EUR/USD and prints Solo $95 / €89, Pro $195 / €179 and Business $269 / €249 per month excl. tax. Voice usage is printed only in euros — €0.19/min of actual assistant conversation time, the same on every plan, no prepaid minutes — so every plan is withheld from the cost model (not modelled) rather than converted. The mail mentions multilingual conversations; the pricing page does not state languages, so bilingual stays unrecorded. HIPAA/BAA not published. Integrations from kalyvox.ai/en/integrations: Google Calendar natively, Zapier from Pro, ChatGPT for analysis of call data."
     }
   ]
 }

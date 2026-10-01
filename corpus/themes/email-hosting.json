@@ -1,6 +1,6 @@
 {
   "vertical": "email-hosting",
-  "generatedAt": "2026-06-13",
+  "generatedAt": "2026-09-29",
   "methodologyNotes": "Published self-serve pricing was collected from each provider's own pricing/plans page on the accessed date; where the official page geolocated outside the USA (rendering EUR) or rendered prices client-side, the USD figures were corroborated against the provider's US compare page or a dedicated 2026 pricing source recorded as corroboration. Business-email tiers are billed per user/mailbox in USD (billingModel per_seat) with the per-seat USD price and an annual-vs-monthly note; flat per-account plans use billingModel flat, and quote-only/Enterprise tiers are recorded with monthlyUsd null. HIPAA/BAA are noted only where a provider publicly offers a BAA, and minutes/calls/overage fields are null for every tier since they do not apply to email hosting.",
   "vendors": [
     {
@@ -88,7 +88,7 @@
           "notes": "Quote-only / contact sales; S/MIME encryption, DLP, 1000-participant meetings, Cloud Identity Premium, unlimited users, 5 TB+ storage with the option to request more.",
           "source": {
             "url": "https://workspace.google.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-26"
           }
         }
       ],
@@ -180,7 +180,7 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "per_seat",
-          "notes": "$7.00 per user/month, paid yearly — the only term this page publishes. It carries no billing switch and every figure on it is annual, so annualDiscountPct is null rather than a saving off this same figure. A paid-monthly rate of $7.20 was recorded on 2026-09-02 beside a $6.00 yearly rate; the yearly rate is now $7.00 and the monthly one is not published, so it is not carried forward. custom Exchange business email, 1 TB OneDrive per user, Teams, web/mobile Office apps only. Up to 300 users. Official compare page states 'save up to 16%' with yearly payment.",
+          "notes": "$7.00 per user/month, paid yearly — the only term this page publishes. It carries no billing switch and every figure on it is annual, so no annual discount is recorded, rather than a saving off this same figure. A paid-monthly rate of $7.20 was recorded on 2026-09-02 beside a $6.00 yearly rate; the yearly rate is now $7.00 and the monthly one is not published, so it is not carried forward. custom Exchange business email, 1 TB OneDrive per user, Teams, web/mobile Office apps only. Up to 300 users. Official compare page states 'save up to 16%' with yearly payment.",
           "source": {
             "url": "https://www.microsoft.com/en-us/microsoft-365/business/microsoft-365-plans-and-pricing",
             "accessedAt": "2026-09-14"
@@ -195,7 +195,7 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "per_seat",
-          "notes": "$14 per user/month, paid yearly, as read on 2026-09-02. The page has since been rebuilt around Copilot: it now leads with \"Business Standard with Copilot\" at $23.50 user/month paid yearly and does not show the plain tier at all. No monthly term is published, so annualDiscountPct is null. everything in Basic plus desktop Office apps, custom business email, 1 TB OneDrive, Teams. Up to 300 users.",
+          "notes": "$14 per user/month, paid yearly, as read on 2026-09-02. The page has since been rebuilt around Copilot: it now leads with \"Business Standard with Copilot\" at $23.50 user/month paid yearly and does not show the plain tier at all. No monthly term is published, so no annual discount is recorded. everything in Basic plus desktop Office apps, custom business email, 1 TB OneDrive, Teams. Up to 300 users.",
           "source": {
             "url": "https://www.microsoft.com/en-us/microsoft-365/business/microsoft-365-plans-and-pricing",
             "accessedAt": "2026-09-14"
@@ -210,7 +210,7 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "per_seat",
-          "notes": "$22 per user/month, paid yearly, as read on 2026-09-02. The page now leads with \"Business Premium with Copilot\" at $32.00 user/month paid yearly and does not show the plain tier. No monthly term is published, so annualDiscountPct is null. all Standard features plus advanced security with Microsoft Defender, device management and threat protection, 1 TB OneDrive. Up to 300 users.",
+          "notes": "$22 per user/month, paid yearly, as read on 2026-09-02. The page now leads with \"Business Premium with Copilot\" at $32.00 user/month paid yearly and does not show the plain tier. No monthly term is published, so no annual discount is recorded. all Standard features plus advanced security with Microsoft Defender, device management and threat protection, 1 TB OneDrive. Up to 300 users.",
           "source": {
             "url": "https://www.microsoft.com/en-us/microsoft-365/business/microsoft-365-plans-and-pricing",
             "accessedAt": "2026-09-14"
@@ -296,7 +296,14 @@
       "provenance": "https://www.zoho.com/mail/zohomail-pricing.html (official pricing page; the page renders prices client-side in a non-USD locale, so the per-user USD figures were corroborated on live third-party pricing pages: Mail tiers via TopAdvisor and neo.space, Workplace tiers via StackScored. Re-checked 2026-06-23: storage tiers (5/10 GB, 50 GB, 30 GB, 100 GB), annual-only billing, and the forever-free 5-user plan re-confirmed on the live page; HIPAA + Business-Associate (BAA) status re-confirmed via zoho.com/compliance.html. USD prices stay geo-locked on the live page, so the plan-level verified dates are intentionally NOT advanced past their last USD-confirmed value.) Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
       "plans": [
         {
-          "name": "Mail Free",
+          "name": "Free",
+          "formerNames": [
+            {
+              "name": "Mail Free",
+              "lastSeen": "2026-09-02",
+              "absentOn": "2026-09-27"
+            }
+          ],
           "monthlyUsd": 0,
           "minutesIncluded": null,
           "callsIncluded": null,
@@ -307,7 +314,7 @@
           "notes": "Forever-free for up to 5 users; 5 GB mail storage per user, custom domain email, web access only (no IMAP/POP/ActiveSync).",
           "source": {
             "url": "https://www.zoho.com/mail/zohomail-pricing.html",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -322,7 +329,7 @@
           "notes": "Per user/month, billed annually only (no monthly option); 5 GB (or 10 GB) mail storage per user, custom business email, IMAP/POP/ActiveSync, mobile apps, MFA.",
           "source": {
             "url": "https://www.zoho.com/mail/zohomail-pricing.html",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://www.topadvisor.com/products/zoho-mail/pricing",
@@ -341,7 +348,7 @@
           "notes": "Per user/month, billed annually only; 50 GB mail + 50 GB archival storage per user, S/MIME, email archiving and eDiscovery, mobile access management, white labeling.",
           "source": {
             "url": "https://www.zoho.com/mail/zohomail-pricing.html",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://www.topadvisor.com/products/zoho-mail/pricing",
@@ -350,17 +357,17 @@
         },
         {
           "name": "Workplace Standard",
-          "monthlyUsd": 3,
+          "monthlyUsd": 4,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
-          "annualDiscountPct": null,
+          "annualDiscountPct": 25,
           "billingModel": "per_seat",
-          "notes": "Per user/month, billed annually ($36/user/year); bundles Mail with the Workplace suite (WorkDrive, Writer, Sheet, Show, Meeting, Cliq), 30 GB mail per user plus 100 GB team storage for 3-10 users.",
+          "notes": "Per user/month, billed monthly ($3 per user/month billed annually, $36/user/year); bundles Mail with the Workplace suite (WorkDrive, Writer, Sheet, Show, Meeting, Cliq), 30 GB mail per user plus 100 GB team storage for 3-10 users.",
           "source": {
             "url": "https://www.zoho.com/workplace/pricing.html",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://www.stackscored.com/pricing/workspace-suites/zoho-workplace/",
@@ -369,21 +376,36 @@
         },
         {
           "name": "Workplace Professional",
-          "monthlyUsd": 6,
+          "monthlyUsd": 7,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 14,
+          "billingModel": "per_seat",
+          "notes": "Per user/month, billed monthly ($6 per user/month billed annually, $72/user/year); full Workplace suite with 100 GB mail + 100 GB retention per user and 1 TB team storage for 3-10 users.",
+          "source": {
+            "url": "https://www.zoho.com/workplace/pricing.html",
+            "accessedAt": "2026-09-27"
+          },
+          "corroboration": {
+            "url": "https://www.stackscored.com/pricing/workspace-suites/zoho-workplace/",
+            "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Workplace Enterprise",
+          "monthlyUsd": null,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
           "annualDiscountPct": null,
-          "billingModel": "per_seat",
-          "notes": "Per user/month, billed annually ($72/user/year); full Workplace suite with 100 GB mail + 100 GB retention per user and 1 TB team storage for 3-10 users.",
+          "billingModel": "custom",
+          "notes": "Contact sales for custom pricing. Highest plans and custom limits of the included Workplace products; identity management and Microsoft Active Directory cloud sync using Zoho Directory; Virtual Private Cloud for isolated hosting; additional security and administration features via endpoint control; custom plans with other Zoho products; pooled storage for Mail.",
           "source": {
-            "url": "https://www.zoho.com/workplace/pricing.html",
-            "accessedAt": "2026-09-02"
-          },
-          "corroboration": {
-            "url": "https://www.stackscored.com/pricing/workspace-suites/zoho-workplace/",
-            "accessedAt": "2026-06-13"
+            "url": "https://www.zoho.com/mail/zohomail-pricing.html",
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -447,7 +469,7 @@
             "accessedAt": "2026-06-15"
           }
         ],
-        "provenance": "SOC 2 Type 2 + HIPAA confirmed via zoho.com/compliance.html (SOC 2 + HIPAA Type 2 audit scope explicitly stated; annual audits Dec-Nov). ISO/IEC 27001, 27017, 27018, 27701 certifications confirmed on the same page with expiry dates. GDPR compliance confirmed via Zoho compliance page (72-hour notification commitment stated). Free forever plan (Mail Free, up to 5 users, $0) confirmed on zoho.com/mail/zohomail-pricing.html."
+        "provenance": "SOC 2 Type 2 + HIPAA confirmed via zoho.com/compliance.html (SOC 2 + HIPAA Type 2 audit scope explicitly stated; annual audits Dec-Nov). ISO/IEC 27001, 27017, 27018, 27701 certifications confirmed on the same page with expiry dates. GDPR compliance confirmed via Zoho compliance page (72-hour notification commitment stated). Free forever plan (Free, up to 5 users, $0) confirmed on zoho.com/mail/zohomail-pricing.html."
       }
     },
     {
@@ -496,7 +518,7 @@
           "notes": "Per user/month on monthly billing; encrypted Mail, Calendar, Drive and VPN with 1 TB storage per user and 15 custom domains. Annual billing is $12.99/user/mo (~13% off).",
           "source": {
             "url": "https://proton.me/business/plans",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://tekpon.com/software/protonmail/pricing/",
@@ -515,11 +537,26 @@
           "notes": "Per user/month on monthly billing; full encrypted suite (Mail, Calendar, Drive, VPN, Pass) with 3 TB storage per user, 20 custom domains and Lumo AI access. Annual billing is $19.99/user/mo (20% off).",
           "source": {
             "url": "https://proton.me/business/plans",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://tekpon.com/software/protonmail/pricing/",
             "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only (\"Let's talk\"). Dedicated account manager, all Proton services, customizable solution.",
+          "source": {
+            "url": "https://proton.me/business/plans",
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -613,8 +650,8 @@
           "billingModel": "per_seat",
           "notes": "Per user/month on monthly billing; 6 GB storage per user (5 GB mail + 1 GB files), shared addresses, calendars and company address book. Annual billing is $3/user/mo (25% off).",
           "source": {
-            "url": "https://www.fastmail.com/pricing/",
-            "accessedAt": "2026-09-02"
+            "url": "https://www.fastmail.com/pricing/us/",
+            "accessedAt": "2026-09-26"
           },
           "corroboration": {
             "url": "https://tekpon.com/software/fastmail/pricing/",
@@ -632,8 +669,8 @@
           "billingModel": "per_seat",
           "notes": "Per user/month on monthly billing; 60 GB storage per user (50 GB mail + 10 GB files), custom domains, Scheduled Send, third-party app support. Annual billing is $5/user/mo (~17% off).",
           "source": {
-            "url": "https://www.fastmail.com/pricing/",
-            "accessedAt": "2026-09-02"
+            "url": "https://www.fastmail.com/pricing/us/",
+            "accessedAt": "2026-09-26"
           },
           "corroboration": {
             "url": "https://tekpon.com/software/fastmail/pricing/",
@@ -651,8 +688,8 @@
           "billingModel": "per_seat",
           "notes": "Per user/month on monthly billing; 150 GB storage per user (100 GB mail + 50 GB files), adds email retention archive for legal compliance. Annual billing is $9/user/mo (10% off).",
           "source": {
-            "url": "https://www.fastmail.com/pricing/",
-            "accessedAt": "2026-09-02"
+            "url": "https://www.fastmail.com/pricing/us/",
+            "accessedAt": "2026-09-26"
           },
           "corroboration": {
             "url": "https://tekpon.com/software/fastmail/pricing/",
@@ -743,10 +780,10 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "flat",
-          "notes": "Billed $59/year (monthlyUsd is the annual price divided by 12); 10 GB total storage, unlimited domains and email accounts, full SMTP/IMAP/POP3, 400 emails/hr per account. Flat account pricing, not per-seat.",
+          "notes": "Billed $59/year (the monthly price recorded here is the annual price divided by 12); 10 GB total storage, unlimited domains and email accounts, full SMTP/IMAP/POP3, 400 emails/hr per account. Flat account pricing, not per-seat.",
           "source": {
             "url": "https://mxroute.com/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-26"
           }
         },
         {
@@ -758,10 +795,10 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "flat",
-          "notes": "Billed $69/year (monthlyUsd is the annual price divided by 12); 25 GB total storage, unlimited domains and accounts, full SMTP/IMAP/POP3. Most popular tier.",
+          "notes": "Billed $69/year (the monthly price recorded here is the annual price divided by 12); 25 GB total storage, unlimited domains and accounts, full SMTP/IMAP/POP3. Most popular tier.",
           "source": {
             "url": "https://mxroute.com/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-26"
           }
         },
         {
@@ -773,10 +810,10 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "flat",
-          "notes": "Billed $79/year (monthlyUsd is the annual price divided by 12); 50 GB total storage, unlimited domains and accounts, full SMTP/IMAP/POP3.",
+          "notes": "Billed $79/year (the monthly price recorded here is the annual price divided by 12); 50 GB total storage, unlimited domains and accounts, full SMTP/IMAP/POP3.",
           "source": {
             "url": "https://mxroute.com/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-26"
           }
         }
       ],
@@ -841,21 +878,21 @@
         "imap-smtp",
         "desktop-client"
       ],
-      "provenance": "https://www.icewarp.com/pricing/ (official pricing page, accessed 2026-06-13; the cloud plans rendered in EUR and the self-hosted license rendered in USD; cloud USD equivalents are not published so cloud per-user prices are recorded as null with the EUR figure noted, and only the published USD self-hosted license is given a numeric price)",
+      "provenance": "https://www.icewarp.com/pricing/ (official pricing page, accessed 2026-06-13; the cloud plans rendered in EUR and the self-hosted license rendered in USD; cloud USD equivalents are not published so cloud per-user prices are left blank, with the EUR figure noted, and only the published USD self-hosted license is given a numeric price)",
       "plans": [
         {
           "name": "Business (Cloud)",
-          "monthlyUsd": null,
+          "monthlyUsd": 4.5,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
-          "annualDiscountPct": null,
+          "annualDiscountPct": 10,
           "billingModel": "per_seat",
-          "notes": "Most-popular cloud tier listed at EUR 3.50/user/month on the official page; 200 GB email + 1 TB file storage per user, webmail, TeamChat, conferences, documents, desktop client and desktop Office apps. No published USD price, so monthlyUsd is null.",
+          "notes": "Most-popular cloud tier: $4.50/user/month, or $4.05/user/month on an annual subscription, with the USA (Reston VA) data center selected (4.50€ on the default EU data center). 200 GB email + 1 TB file storage per user, webmail, TeamChat, conferences, documents, desktop client and desktop Office apps.",
           "source": {
             "url": "https://www.icewarp.com/pricing/",
-            "accessedAt": "2026-06-13"
+            "accessedAt": "2026-09-26"
           }
         },
         {
@@ -867,7 +904,7 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "per_seat",
-          "notes": "Published at $30/user/year (monthlyUsd is the annual price divided by 12) for self-hosted deployment; 200 GB email per mailbox, full collaboration feature set, one month free.",
+          "notes": "Published at $30/user/year (the monthly price recorded here is the annual price divided by 12) for self-hosted deployment; 200 GB email per mailbox, full collaboration feature set, one month free.",
           "source": {
             "url": "https://www.icewarp.com/pricing/",
             "accessedAt": "2026-06-13"

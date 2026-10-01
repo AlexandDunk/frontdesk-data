@@ -1,6 +1,6 @@
 # The Front Desk Review — open pricing & product-facts corpus
 
-An independent, methodologically documented **transparency dataset** of published pricing and buyer-critical product facts across **271 software, SaaS and subscription categories** (**2198 vendors**, **7491 plan records**), last updated 2026-09-23.
+An independent, methodologically documented **transparency dataset** of published pricing and buyer-critical product facts across **271 software, SaaS and subscription categories** (**2201 vendors**, **7439 plan records**), last updated 2026-09-30.
 
 Built for price-transparency research and reproducibility: every figure is traced to the public page it was captured from (the vendor's own wherever the vendor publishes the number, otherwise the named public source) with the date we captured it, and, where possible, corroborated by a second independent source. Quote-only and enterprise tiers are recorded with a **null** price rather than a guessed value. Selected categories also carry verified product facts beyond price — HIPAA/SOC 2/GDPR compliance, free-tier availability, usage limits, key integrations and differentiating features — each with its own provenance.
 
@@ -19,3 +19,6 @@ Each record carries `source.url` + `source.accessedAt`. Counts and date ranges a
 [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/). Attribution: "The Front Desk Review" (https://frontdeskreview.com).
 
 Canonical, continuously updated version and full methodology: https://frontdeskreview.com/data
+
+## Plans no longer listed
+157 plan record(s) whose source page no longer lists them are left out of every file here, which carry current figures only. Each is shown, with the dates its page last listed it and stopped listing it, on its vendor's page at https://frontdeskreview.com.

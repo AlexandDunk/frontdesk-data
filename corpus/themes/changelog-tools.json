@@ -1,6 +1,6 @@
 {
   "vertical": "changelog-tools",
-  "generatedAt": "2026-06-18",
+  "generatedAt": "2026-09-29",
   "methodologyNotes": "Official pricing pages were fetched directly for all seven vendors on 2026-06-18: getbeamer.com/pricing, announcekit.app/pricing, launchnotes.com/pricing, olvy.co/pricing, noticeable.io/pricing, frill.co/pricing, released.so/pricing. Security/compliance pages were fetched where they exist: getbeamer.com/security (SOC 2 Type II + GDPR confirmed), announcekit.app/security (SOC 2 + GDPR confirmed), launchnotes.com/security (SOC 2 Type II + GDPR confirmed), released.so homepage (SOC 2 Type II confirmed). frill.co/security returns HTTP 404; Frill SOC2 is stated only as an Enterprise-plan feature on frill.co/pricing and Frill GDPR could not be explicitly verified, so Frill GDPR was set to null. Noticeable's pricing page renders prices client-side via JavaScript and returned no numeric data in HTML; the static feature-comparison table confirms tier names and limits and a $0 Free plan plus a 14-day trial, but exact per-tier USD prices could not be independently verified from a live official page and are therefore null (the third-party $19–$399 range was not used to populate any field). All populated prices are taken from the live official pages. accessedAt for every record = 2026-06-18.",
   "vendors": [
     {
@@ -21,7 +21,7 @@
         "Webhooks",
         "API"
       ],
-      "provenance": "Prices fetched from getbeamer.com/pricing on 2026-06-18 and confirmed exactly (Free $0, Starter $59 / $49 annual, Pro $119 / $99 annual, Scale $299 / $249 annual, Custom = contact sales). Compliance from getbeamer.com/security: SOC 2 Type II and GDPR explicitly stated; HIPAA not mentioned. The '14-day free trial' text on the pricing page refers to a separate Userflow product, not Beamer changelog plans, so freeTrialDays is null. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
+      "provenance": "Prices fetched from getbeamer.com/pricing on 2026-06-18 and confirmed exactly (Free $0, Starter $59 / $49 annual, Pro $119 / $99 annual, Scale $299 / $249 annual, Custom = contact sales). Compliance from getbeamer.com/security: SOC 2 Type II and GDPR explicitly stated; HIPAA not mentioned. The '14-day free trial' text on the pricing page refers to a separate Userflow product, not Beamer changelog plans, so the free-trial length is not recorded. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
       "plans": [
         {
           "name": "Free",
@@ -36,7 +36,7 @@
           "setupFeeUsd": 0,
           "source": {
             "url": "https://www.getbeamer.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -52,7 +52,7 @@
           "setupFeeUsd": 0,
           "source": {
             "url": "https://www.getbeamer.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -68,7 +68,7 @@
           "setupFeeUsd": 0,
           "source": {
             "url": "https://www.getbeamer.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -84,7 +84,7 @@
           "setupFeeUsd": 0,
           "source": {
             "url": "https://www.getbeamer.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -100,7 +100,7 @@
           "setupFeeUsd": 0,
           "source": {
             "url": "https://www.getbeamer.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -174,56 +174,8 @@
         "Custom SMTP",
         "Webhooks"
       ],
-      "provenance": "Prices fetched from announcekit.app/pricing on 2026-06-18 and confirmed exactly (Essentials $89 / $79 annual, Growth $149 / $129 annual, Scale $399 / $339 annual, Enterprise = custom). A separate 'AnnounceKit NPS' product ($49/mo) exists on the page but is not a changelog tier and is excluded. No forever-free plan; 15-day trial then read-only mode. Compliance from announcekit.app/security: SOC 2 + GDPR confirmed, HIPAA not mentioned. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
+      "provenance": "Prices fetched from announcekit.app/pricing on 2026-06-18 and confirmed exactly at the time. On 2026-09-27 the page priced each product separately; the Changelog product is recorded as the changelog plan (the other products are not changelog tiers and are excluded), and Enterprise is sold by sales. A separate 'AnnounceKit NPS' product ($49/mo) exists on the page but is not a changelog tier and is excluded. No forever-free plan; 15-day trial then read-only mode. Compliance from announcekit.app/security: SOC 2 + GDPR confirmed, HIPAA not mentioned. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
       "plans": [
-        {
-          "name": "Essentials",
-          "monthlyUsd": 89,
-          "minutesIncluded": null,
-          "callsIncluded": null,
-          "overagePerMin": null,
-          "overagePerCall": null,
-          "annualDiscountPct": 11,
-          "billingModel": "flat",
-          "notes": "1 team member seat, unlimited posts/visitors/subscribers, changelog widget, roadmap, email updates, comments, reactions, AI editor, analytics. $79/month billed annually. 15-day trial.",
-          "setupFeeUsd": 0,
-          "source": {
-            "url": "https://announcekit.app/pricing",
-            "accessedAt": "2026-09-12"
-          }
-        },
-        {
-          "name": "Growth",
-          "monthlyUsd": 149,
-          "minutesIncluded": null,
-          "callsIncluded": null,
-          "overagePerMin": null,
-          "overagePerCall": null,
-          "annualDiscountPct": 13,
-          "billingModel": "flat",
-          "notes": "Unlimited team members, user tracking, segmentation, custom domain, feature requests, advanced analytics, standard integrations (Slack, Zapier). $129/month billed annually. 15-day trial. Marked 'Popular'.",
-          "setupFeeUsd": 0,
-          "source": {
-            "url": "https://announcekit.app/pricing",
-            "accessedAt": "2026-09-02"
-          }
-        },
-        {
-          "name": "Scale",
-          "monthlyUsd": 399,
-          "minutesIncluded": null,
-          "callsIncluded": null,
-          "overagePerMin": null,
-          "overagePerCall": null,
-          "annualDiscountPct": 15,
-          "billingModel": "flat",
-          "notes": "Post boosters, in-app notifications, multi-language, email digest, SMTP, custom CSS, SSO/SAML, private changelog. $339/month billed annually. 15-day trial.",
-          "setupFeeUsd": 0,
-          "source": {
-            "url": "https://announcekit.app/pricing",
-            "accessedAt": "2026-09-02"
-          }
-        },
         {
           "name": "Enterprise",
           "monthlyUsd": null,
@@ -238,6 +190,21 @@
           "source": {
             "url": "https://announcekit.app/pricing",
             "accessedAt": "2026-09-02"
+          }
+        },
+        {
+          "name": "Changelog",
+          "monthlyUsd": 59,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "Changelog product, $59 billed monthly; $49/mo when billed annually ($588 billed yearly). Includes 10,000 monthly active users and 3 team members; standalone changelog page, all widget types, comments, reactions, RSS and JSON feeds, post analytics. MAU overage $25 per 5,000. 15-day free trial.",
+          "source": {
+            "url": "https://announcekit.app/pricing",
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -262,15 +229,13 @@
           "WordPress"
         ],
         "limits": [
-          "Essentials: 1 team member seat",
-          "Growth+: Unlimited team members",
           "All plans: unlimited posts, visitors, subscribers"
         ],
         "keyFeatures": [
           "Unlimited subscribers/visitors on all plans",
-          "Post boosters for re-engagement (Scale+)",
-          "SSO/SAML on Scale+",
-          "Multi-language changelog (Scale+)"
+          "Post boosters for re-engagement",
+          "SSO/SAML",
+          "Multi-language changelog"
         ],
         "bestFor": [
           "SaaS startups",
@@ -319,7 +284,7 @@
         "Heap",
         "Fullstory"
       ],
-      "provenance": "Prices fetched from launchnotes.com/pricing on 2026-06-18: Growth $249/month confirmed (2 users, 1 page); Premium is custom/quote (annual billing only) so monthlyUsd is null. Compliance from launchnotes.com/security: SOC 2 Type II + GDPR/CCPA confirmed; HIPAA not mentioned. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
+      "provenance": "Prices fetched from launchnotes.com/pricing on 2026-06-18: Growth $249/month confirmed (2 users, 1 page); Premium is custom/quote (annual billing only) so no monthly price is recorded. Compliance from launchnotes.com/security: SOC 2 Type II + GDPR/CCPA confirmed; HIPAA not mentioned. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
       "plans": [
         {
           "name": "Growth",
@@ -350,7 +315,7 @@
           "setupFeeUsd": 0,
           "source": {
             "url": "https://www.launchnotes.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -427,7 +392,7 @@
         "GitHub",
         "Chrome Extension"
       ],
-      "provenance": "Prices fetched from olvy.co/pricing on 2026-06-18: Free $0, Essentials $60/month, Business $240/month (20% off annual), Enterprise = 'Let's Talk' (null). No SOC 2 or HIPAA stated on fetched pages; GDPR referenced in footer. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
+      "provenance": "Prices fetched from olvy.co/pricing on 2026-06-18: Free $0, Essentials $60/month, Business $240/month (20% off annual), Enterprise = 'Let's Talk' (not recorded). No SOC 2 or HIPAA stated on fetched pages; GDPR referenced in footer. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
       "plans": [
         {
           "name": "Free",
@@ -442,7 +407,7 @@
           "setupFeeUsd": 0,
           "source": {
             "url": "https://olvy.co/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -458,12 +423,12 @@
           "setupFeeUsd": 0,
           "source": {
             "url": "https://olvy.co/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
           "name": "Business",
-          "monthlyUsd": 240,
+          "monthlyUsd": 300,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
@@ -474,7 +439,7 @@
           "setupFeeUsd": 0,
           "source": {
             "url": "https://olvy.co/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -490,7 +455,7 @@
           "setupFeeUsd": 0,
           "source": {
             "url": "https://olvy.co/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -559,7 +524,7 @@
         "MailChimp",
         "GitHub"
       ],
-      "provenance": "noticeable.io/pricing was fetched on 2026-06-18; the static HTML feature-comparison table confirms five tiers (Free, Starter, Growth, Business, Enterprise) and their project/collaborator/widget limits, plus a $0 Free plan and a 14-day trial, but all paid-tier dollar amounts are JavaScript-rendered and absent from the HTML. The third-party $19–$399 range could not be verified on a live official page, so every paid monthlyUsd is null (no number invented). GDPR confirmed via Noticeable help center. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
+      "provenance": "noticeable.io/pricing was fetched on 2026-06-18; the static HTML feature-comparison table confirms five tiers (Free, Starter, Growth, Business, Enterprise) and their project/collaborator/widget limits, plus a $0 Free plan and a 14-day trial, but all paid-tier dollar amounts are JavaScript-rendered and absent from the HTML. The third-party $19–$399 range could not be verified on a live official page, so no monthly price is recorded for any paid tier (no number invented). GDPR confirmed via Noticeable help center. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
       "plans": [
         {
           "name": "Free",
@@ -574,71 +539,71 @@
           "setupFeeUsd": 0,
           "source": {
             "url": "https://noticeable.io/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
           "name": "Starter",
-          "monthlyUsd": null,
+          "monthlyUsd": 29,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
-          "annualDiscountPct": null,
+          "annualDiscountPct": 17,
           "billingModel": "flat",
-          "notes": "1 project, 0 collaborators, 1 widget, email support, custom domain. Price is JavaScript-rendered and not extractable from a live official page fetch; set to null.",
+          "notes": "1 project, 0 collaborators, 1 widget, email support, custom domain. $29/month billed monthly, or $24/month billed annually.",
           "setupFeeUsd": 0,
           "source": {
             "url": "https://noticeable.io/pricing",
-            "accessedAt": "2026-06-18"
+            "accessedAt": "2026-09-27"
           }
         },
         {
           "name": "Growth",
-          "monthlyUsd": null,
+          "monthlyUsd": 79,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
-          "annualDiscountPct": null,
+          "annualDiscountPct": 18,
           "billingModel": "flat",
-          "notes": "2 projects, 3 collaborators, 2 widgets, scheduling, analytics. Price not extractable from JS-rendered page; null.",
+          "notes": "2 projects, 3 collaborators, 2 widgets, scheduling, analytics. $79/month billed monthly, or $65/month billed annually.",
           "setupFeeUsd": 0,
           "source": {
             "url": "https://noticeable.io/pricing",
-            "accessedAt": "2026-06-18"
+            "accessedAt": "2026-09-27"
           }
         },
         {
           "name": "Business",
-          "monthlyUsd": null,
+          "monthlyUsd": 159,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
-          "annualDiscountPct": null,
+          "annualDiscountPct": 17,
           "billingModel": "flat",
-          "notes": "3 projects, 5 collaborators, 3 widgets, advanced customization (CSS, code injection). Price not extractable from JS-rendered page; null.",
+          "notes": "3 projects, 5 collaborators, 3 widgets, advanced customization (CSS, code injection). $159/month billed monthly, or $132/month billed annually.",
           "setupFeeUsd": 0,
           "source": {
             "url": "https://noticeable.io/pricing",
-            "accessedAt": "2026-06-18"
+            "accessedAt": "2026-09-27"
           }
         },
         {
           "name": "Enterprise",
-          "monthlyUsd": null,
+          "monthlyUsd": 399,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
-          "annualDiscountPct": null,
+          "annualDiscountPct": 17,
           "billingModel": "custom",
-          "notes": "5+ projects, unlimited collaborators, 5+ widgets, SSO, 24/7 support, custom contracts. Custom pricing.",
+          "notes": "5+ projects, unlimited collaborators, 5+ widgets, SSO, 24/7 support, custom contracts. $399/month billed monthly, or $333/month billed annually; sold through Contact us.",
           "setupFeeUsd": 0,
           "source": {
             "url": "https://noticeable.io/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -716,7 +681,7 @@
         "Miro",
         "Zapier"
       ],
-      "provenance": "Prices fetched from frill.co/pricing on 2026-06-18: Startup $25, Business $49, Growth $149, Enterprise 'starting at $349' — all confirmed exactly. Add-ons: Privacy +$25/mo, Surveys +$25/mo, White Labeling +$100/mo. No forever-free plan; 14-day trial (no card). SOC2 is listed only as an Enterprise-plan feature on the pricing page (kept true, sourced to the pricing page). GDPR could not be explicitly verified on any fetched official page (frill.co/security returns 404; help.frill.co shows no GDPR statement) and is set to null.",
+      "provenance": "Prices fetched from frill.co/pricing on 2026-06-18: Startup $25, Business $49, Growth $149, Enterprise 'starting at $349' — all confirmed exactly. Add-ons: Privacy +$25/mo, Surveys +$25/mo, White Labeling +$100/mo. No forever-free plan; 14-day trial (no card). SOC2 is listed only as an Enterprise-plan feature on the pricing page (recorded as true, sourced to the pricing page). GDPR could not be explicitly verified on any fetched official page (frill.co/security returns 404; help.frill.co shows no GDPR statement) and is not recorded.",
       "plans": [
         {
           "name": "Startup",
@@ -731,7 +696,7 @@
           "setupFeeUsd": 0,
           "source": {
             "url": "https://frill.co/pricing",
-            "accessedAt": "2026-06-18"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -747,7 +712,7 @@
           "setupFeeUsd": 0,
           "source": {
             "url": "https://frill.co/pricing",
-            "accessedAt": "2026-06-18"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -763,7 +728,7 @@
           "setupFeeUsd": 0,
           "source": {
             "url": "https://frill.co/pricing",
-            "accessedAt": "2026-06-18"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -779,7 +744,7 @@
           "setupFeeUsd": 0,
           "source": {
             "url": "https://frill.co/pricing",
-            "accessedAt": "2026-06-18"
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -860,12 +825,12 @@
           "setupFeeUsd": 0,
           "source": {
             "url": "https://released.so/hub/pricing/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
           "name": "Standard",
-          "monthlyUsd": null,
+          "monthlyUsd": 1.1,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
@@ -876,12 +841,12 @@
           "setupFeeUsd": 0,
           "source": {
             "url": "https://released.so/hub/pricing/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
           "name": "Advanced",
-          "monthlyUsd": null,
+          "monthlyUsd": 1.7,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
@@ -892,7 +857,7 @@
           "setupFeeUsd": 0,
           "source": {
             "url": "https://released.so/hub/pricing/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         }
       ],

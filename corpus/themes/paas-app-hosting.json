@@ -1,6 +1,6 @@
 {
   "vertical": "paas-app-hosting",
-  "generatedAt": "2026-06-14",
+  "generatedAt": "2026-09-29",
   "methodologyNotes": "Published self-serve USD pricing was collected directly from each vendor's official pricing page by reading the page live on 2026-06-14 (accessedAt field) or from the vendor's official changelog/docs when the pricing page rendered JS-only. Render's pricing page returned JS-rendered content with no prices extractable; current prices were obtained from render.com/changelog (April 23, 2026 entry confirming Hobby free / Pro $25/month flat / Scale $499/month flat). Fly.io operates purely usage-metered with no flat tiers; the lowest published committed compute rate is recorded and unit rates are in notes. Quote-only and contact-sales tiers are recorded with monthlyUsd = null — no figures were guessed. Telephony fields (minutesIncluded, callsIncluded, overagePerMin, overagePerCall) are null on every plan because this is a non-telephony vertical. Heroku has many dyno SKUs; only the primary Cedar platform dyno tiers are recorded to keep the dataset tractable. Railway's free Trial plan is one-time $5 credit (not a recurring plan) and is excluded; the Hobby and Pro recurring plans are recorded. Sevalla (formerly Kinsta App Hosting after redirect) is included as an additional vendor with clear published pricing.",
   "vendors": [
     {
@@ -297,8 +297,8 @@
           "billingModel": "flat",
           "notes": "Free workspace plan. 750 free instance hours/month for web services. Free Postgres (expires 30 days after creation, 1 GB). Free static sites. Services spin down after inactivity. Usage overages billed at standard compute rates.",
           "source": {
-            "url": "https://render.com/changelog",
-            "accessedAt": "2026-09-03"
+            "url": "https://render.com/pricing",
+            "accessedAt": "2026-09-29"
           },
           "corroboration": {
             "url": "https://render.com/docs/free",
@@ -316,8 +316,8 @@
           "billingModel": "flat",
           "notes": "Flat $25/month regardless of team size (unlimited members). Includes SOC 2 and ISO 27001 audit logs. Custom domains $0.25/month each over included allowance. Build pipeline overages $5 per 1,000 minutes. Bandwidth overages $0.15/GB (was $30/100 GB, reduced to $15/100 GB Aug 2025). No HIPAA on this tier.",
           "source": {
-            "url": "https://render.com/changelog",
-            "accessedAt": "2026-09-03"
+            "url": "https://render.com/pricing",
+            "accessedAt": "2026-09-29"
           }
         },
         {
@@ -331,8 +331,8 @@
           "billingModel": "flat",
           "notes": "Flat $499/month, unlimited team members. Includes SSO (Okta/SAML), SCIM, advanced RBAC, HIPAA-enabled workspaces, BAA available. Dedicated IPs $100/month per set.",
           "source": {
-            "url": "https://render.com/changelog",
-            "accessedAt": "2026-09-03"
+            "url": "https://render.com/pricing",
+            "accessedAt": "2026-09-29"
           }
         },
         {
@@ -346,8 +346,8 @@
           "billingModel": "custom",
           "notes": "Custom pricing. Full compliance capabilities, contractual SLAs, dedicated support.",
           "source": {
-            "url": "https://render.com/changelog",
-            "accessedAt": "2026-09-03"
+            "url": "https://render.com/pricing",
+            "accessedAt": "2026-09-29"
           }
         }
       ]
@@ -436,7 +436,7 @@
           "notes": "Includes $5 of resource usage/month. Max 6 replicas per service, 48 GB RAM, 48 vCPU, 100 GB ephemeral storage. Usage beyond $5 credit billed at RAM $10/GB/month, CPU $20/vCPU/month, network egress $0.05/GB.",
           "source": {
             "url": "https://railway.com/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://docs.railway.com/pricing/plans",
@@ -455,7 +455,7 @@
           "notes": "$20/seat/month. Includes $20 of resource usage per seat. Max 42 replicas, 1 TB RAM, 1,000 vCPU per service. Volume storage up to 1 TB. Annual committed spend discounts available (rate not published). Network egress $0.05/GB.",
           "source": {
             "url": "https://railway.com/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://docs.railway.com/pricing/plans",
@@ -474,7 +474,7 @@
           "notes": "Custom pricing. Contractual SLAs, SSO, dedicated support, procurement flexibility. Max 50 replicas, 2.4 TB RAM, 2,400 vCPU, 5 TB volume storage.",
           "source": {
             "url": "https://railway.com/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         }
       ]
@@ -628,6 +628,21 @@
             "url": "https://fly.io/docs/about/pricing/",
             "accessedAt": "2026-09-03"
           }
+        },
+        {
+          "name": "Custom plan",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Committed spend, volume discounts, invoicing and dedicated capacity, by contact with the sales team.",
+          "source": {
+            "url": "https://fly.io/pricing",
+            "accessedAt": "2026-09-27"
+          }
         }
       ]
     },
@@ -711,7 +726,7 @@
           "notes": "3 apps with static sites. 1 GiB data transfer per app per month. GitHub/GitLab deployment, automatic HTTPS, custom domains, global CDN, DDoS mitigation. No container instances (static only).",
           "source": {
             "url": "https://www.digitalocean.com/pricing/app-platform",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -878,7 +893,7 @@
           "notes": "Free for personal projects. 1M edge requests/month, 100 GB data transfer/month, 1M function invocations/month, 3 custom firewall rules. Web Application Firewall, global CDN, DDoS mitigation, automatic CI/CD. No teams, no HIPAA.",
           "source": {
             "url": "https://vercel.com/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -893,7 +908,7 @@
           "notes": "$20/user/month plus usage overages beyond included $20 monthly credit. 10M edge requests/month, 1 TB data transfer/month, 40 custom firewall rules. Team collaboration, faster builds, cold start prevention, advanced spend management. HIPAA BAA available as add-on for $350/month extra. Compute overage $0.128/CPU-hour.",
           "source": {
             "url": "https://vercel.com/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -923,7 +938,7 @@
           "notes": "Custom pricing. Critical security, performance, observability, 99.99% SLA, SCIM/directory sync, managed WAF rulesets, multi-region compute with failover, advanced support, audit logs, SAML SSO. HIPAA BAA included.",
           "source": {
             "url": "https://vercel.com/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         }
       ]
@@ -964,7 +979,7 @@
           "Git-based auto-deploy"
         ],
         "limits": [
-          "Hobby H1: 0.3 CPU, 0.3 GB RAM at $5/month",
+          "H1 (Hobby pod): 0.3 CPU, 0.3 GB RAM at $5/month, no custom domain support",
           "Build pods: $0.02/minute",
           "External bandwidth: $0.10/GB",
           "Static site hosting listed as free (separate product from application hosting)"
@@ -995,11 +1010,18 @@
             "accessedAt": "2026-06-14"
           }
         ],
-        "provenance": "Fetched https://sevalla.com/ and https://sevalla.com/application-hosting/ on 2026-06-15: homepage lists SOC II Type 2, ISO 27001, GDPR, CCPA certifications. HIPAA=null: no mention of HIPAA or BAA found on any fetched Sevalla page; direct fetch of sevalla.com/security/ returned an error. trust.kinsta.com (referenced as trust center) did not return extractable compliance data. freeTier=false: application hosting plans start at $5/month (Hobby H1); static site hosting is a separate product. freeTrialDays=null: no trial found."
+        "provenance": "Fetched https://sevalla.com/ and https://sevalla.com/application-hosting/ on 2026-06-15: homepage lists SOC II Type 2, ISO 27001, GDPR, CCPA certifications. HIPAA=null: no mention of HIPAA or BAA found on any fetched Sevalla page; direct fetch of sevalla.com/security/ returned an error. trust.kinsta.com (referenced as trust center) did not return extractable compliance data. freeTier=false: application hosting plans start at $5/month (H1, Hobby pod); static site hosting is a separate product. freeTrialDays=null: no trial found."
       },
       "plans": [
         {
-          "name": "Hobby H1",
+          "name": "H1",
+          "formerNames": [
+            {
+              "name": "Hobby H1",
+              "lastSeen": "2026-09-03",
+              "absentOn": "2026-09-27"
+            }
+          ],
           "monthlyUsd": 5,
           "minutesIncluded": null,
           "callsIncluded": null,
@@ -1007,14 +1029,21 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "flat",
-          "notes": "0.3 CPU, 0.3 GB RAM. Build pods $0.02/minute. External bandwidth $0.10/GB.",
+          "notes": "Hobby pod (CPU to RAM ratio 1:1), no custom domain support. 0.3 CPU, 0.3 GB RAM. Build pods $0.02/minute. External bandwidth $0.10/GB.",
           "source": {
             "url": "https://sevalla.com/application-hosting/pricing/",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         },
         {
-          "name": "Standard S1",
+          "name": "S1",
+          "formerNames": [
+            {
+              "name": "Standard S1",
+              "lastSeen": "2026-09-03",
+              "absentOn": "2026-09-27"
+            }
+          ],
           "monthlyUsd": 10,
           "minutesIncluded": null,
           "callsIncluded": null,
@@ -1022,14 +1051,21 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "flat",
-          "notes": "0.5 CPU, 1 GB RAM.",
+          "notes": "Standard pod (CPU to RAM ratio 1:2). 0.5 CPU, 1 GB RAM.",
           "source": {
             "url": "https://sevalla.com/application-hosting/pricing/",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         },
         {
-          "name": "Standard S2",
+          "name": "S2",
+          "formerNames": [
+            {
+              "name": "Standard S2",
+              "lastSeen": "2026-09-03",
+              "absentOn": "2026-09-27"
+            }
+          ],
           "monthlyUsd": 40,
           "minutesIncluded": null,
           "callsIncluded": null,
@@ -1037,14 +1073,21 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "flat",
-          "notes": "1 CPU, 2 GB RAM.",
+          "notes": "Standard pod (CPU to RAM ratio 1:2). 1 CPU, 2 GB RAM.",
           "source": {
             "url": "https://sevalla.com/application-hosting/pricing/",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         },
         {
-          "name": "Standard S3",
+          "name": "S3",
+          "formerNames": [
+            {
+              "name": "Standard S3",
+              "lastSeen": "2026-09-03",
+              "absentOn": "2026-09-27"
+            }
+          ],
           "monthlyUsd": 80,
           "minutesIncluded": null,
           "callsIncluded": null,
@@ -1052,14 +1095,21 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "flat",
-          "notes": "2 CPU, 4 GB RAM.",
+          "notes": "Standard pod (CPU to RAM ratio 1:2). 2 CPU, 4 GB RAM.",
           "source": {
             "url": "https://sevalla.com/application-hosting/pricing/",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         },
         {
-          "name": "Memory M1",
+          "name": "M1",
+          "formerNames": [
+            {
+              "name": "Memory M1",
+              "lastSeen": "2026-09-03",
+              "absentOn": "2026-09-27"
+            }
+          ],
           "monthlyUsd": 20,
           "minutesIncluded": null,
           "callsIncluded": null,
@@ -1067,14 +1117,21 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "flat",
-          "notes": "Memory optimized. 0.5 CPU, 2 GB RAM.",
+          "notes": "Memory optimized pod (CPU to RAM ratio 1:4). 0.5 CPU, 2 GB RAM.",
           "source": {
             "url": "https://sevalla.com/application-hosting/pricing/",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         },
         {
-          "name": "CPU C1",
+          "name": "C1",
+          "formerNames": [
+            {
+              "name": "CPU C1",
+              "lastSeen": "2026-09-03",
+              "absentOn": "2026-09-27"
+            }
+          ],
           "monthlyUsd": 18,
           "minutesIncluded": null,
           "callsIncluded": null,
@@ -1082,10 +1139,145 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "flat",
-          "notes": "CPU optimized. 1 CPU, 1 GB RAM.",
+          "notes": "CPU optimized pod (CPU to RAM ratio 1:1). 1 CPU, 1 GB RAM.",
           "source": {
             "url": "https://sevalla.com/application-hosting/pricing/",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
+          }
+        },
+        {
+          "name": "S4",
+          "monthlyUsd": 160,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Standard pod (CPU to RAM ratio 1:2). 4 CPU, 8 GB RAM. Usage-based: monthly prices are based on average estimations; prices exclude tax.",
+          "source": {
+            "url": "https://sevalla.com/application-hosting/pricing/",
+            "accessedAt": "2026-09-27"
+          }
+        },
+        {
+          "name": "S5",
+          "monthlyUsd": 320,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Standard pod (CPU to RAM ratio 1:2). 8 CPU, 16 GB RAM. Usage-based: monthly prices are based on average estimations; prices exclude tax.",
+          "source": {
+            "url": "https://sevalla.com/application-hosting/pricing/",
+            "accessedAt": "2026-09-27"
+          }
+        },
+        {
+          "name": "M2",
+          "monthlyUsd": 70,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Memory optimized pod (CPU to RAM ratio 1:4). 1 CPU, 4 GB RAM. Usage-based: monthly prices are based on average estimations; prices exclude tax.",
+          "source": {
+            "url": "https://sevalla.com/application-hosting/pricing/",
+            "accessedAt": "2026-09-27"
+          }
+        },
+        {
+          "name": "M3",
+          "monthlyUsd": 135,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Memory optimized pod (CPU to RAM ratio 1:4). 2 CPU, 8 GB RAM. Usage-based: monthly prices are based on average estimations; prices exclude tax.",
+          "source": {
+            "url": "https://sevalla.com/application-hosting/pricing/",
+            "accessedAt": "2026-09-27"
+          }
+        },
+        {
+          "name": "M4",
+          "monthlyUsd": 250,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Memory optimized pod (CPU to RAM ratio 1:4). 4 CPU, 16 GB RAM. Usage-based: monthly prices are based on average estimations; prices exclude tax.",
+          "source": {
+            "url": "https://sevalla.com/application-hosting/pricing/",
+            "accessedAt": "2026-09-27"
+          }
+        },
+        {
+          "name": "M5",
+          "monthlyUsd": 480,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Memory optimized pod (CPU to RAM ratio 1:4). 8 CPU, 32 GB RAM. Usage-based: monthly prices are based on average estimations; prices exclude tax.",
+          "source": {
+            "url": "https://sevalla.com/application-hosting/pricing/",
+            "accessedAt": "2026-09-27"
+          }
+        },
+        {
+          "name": "C2",
+          "monthlyUsd": 68,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "CPU optimized pod (CPU to RAM ratio 1:1). 2 CPU, 2 GB RAM. Usage-based: monthly prices are based on average estimations; prices exclude tax.",
+          "source": {
+            "url": "https://sevalla.com/application-hosting/pricing/",
+            "accessedAt": "2026-09-27"
+          }
+        },
+        {
+          "name": "C3",
+          "monthlyUsd": 135,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "CPU optimized pod (CPU to RAM ratio 1:1). 4 CPU, 4 GB RAM. Usage-based: monthly prices are based on average estimations; prices exclude tax.",
+          "source": {
+            "url": "https://sevalla.com/application-hosting/pricing/",
+            "accessedAt": "2026-09-27"
+          }
+        },
+        {
+          "name": "C4",
+          "monthlyUsd": 270,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "CPU optimized pod (CPU to RAM ratio 1:1). 8 CPU, 8 GB RAM. Usage-based: monthly prices are based on average estimations; prices exclude tax.",
+          "source": {
+            "url": "https://sevalla.com/application-hosting/pricing/",
+            "accessedAt": "2026-09-27"
           }
         }
       ]

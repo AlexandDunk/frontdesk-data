@@ -1,6 +1,6 @@
 {
   "vertical": "managed-postgres",
-  "generatedAt": "2026-06-14",
+  "generatedAt": "2026-09-29",
   "methodologyNotes": "Prices sourced by fetching each vendor's official pricing page on 2026-06-14. Supabase (supabase.com/pricing): all plan prices fetched directly; HIPAA confirmed as paid add-on on Team/Enterprise. Neon (neon.com/pricing and neon.com/docs/introduction/plans): Free confirmed at $0; Launch and Scale are pure pay-as-you-go with no monthly minimum — monthlyUsd recorded as null per billing-model rules; HIPAA confirmed available on Scale with additional charge. PlanetScale (planetscale.com/pricing): pricing is per-SKU metered (arm64/x86-64, HA vs Non-HA), no flat tier — smallest entry is $5/mo for PS-5 Non-HA; recorded as custom billing. Aiven (aiven.io/postgresql): Free=$0, Developer=$5/mo, Startup from $75/mo, Business from $180/mo confirmed; Premium plan exists but specific price not shown on fetched page — recorded as null; HIPAA compliance confirmed since 2018 via aiven.io/security-compliance; BAA not explicitly confirmed on page — baa=null. Railway (railway.com/pricing + docs.railway.com/reference/pricing/plans): Hobby=$5/mo, Pro=$20/mo/seat confirmed; resource rates confirmed ($10/GB-mo RAM, $20/vCPU-mo, $0.15/GB-mo volume, $0.05/GB egress). Render (render.com/docs/postgresql-legacy-instance-types): legacy instance pricing Starter=$7, Standard=$20, Pro=$95, Pro Plus=$185 confirmed; the newer flexible-plan pricing page renders no dollar amounts; legacy prices noted as applicable to existing databases (new databases use flexible plans whose exact instance prices were not retrievable). CockroachDB (cockroachlabs.com/pricing): Basic free tier confirmed (50M RUs + 10 GiB/mo free); Standard at $0.18/hr per 2 vCPUs and Advanced at $0.60/hr per 4 vCPUs confirmed; HIPAA-ready confirmed on Advanced plan. All telephony fields (minutesIncluded, callsIncluded, overagePerMin, overagePerCall) are null — this is a non-telephony vertical.",
   "vendors": [
     {
@@ -11,7 +11,7 @@
       "baa": null,
       "bilingual": null,
       "integrations": [],
-      "provenance": "Prices fetched directly from https://supabase.com/pricing on 2026-06-14. Free=$0, Pro=$25/mo, Team=$599/mo, Enterprise=custom confirmed. HIPAA confirmed as 'available as paid add-on' for Team and Enterprise tiers. No BAA language explicitly stated on the pricing page (baa=null). No annual discount percentage published on page. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
+      "provenance": "Prices fetched directly from https://supabase.com/pricing on 2026-06-14. Free=$0, Pro=$25/mo, Team=$599/mo, Enterprise=custom confirmed. HIPAA confirmed as 'available as paid add-on' for Team and Enterprise tiers. No BAA language explicitly stated on the pricing page — no BAA is recorded. No annual discount percentage published on page. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
       "plans": [
         {
           "name": "Free",
@@ -25,7 +25,7 @@
           "notes": "2 active projects max; 500 MB database size; 50,000 monthly active users; 5 GB egress; 1 GB file storage. Project pauses after 1 week inactivity.",
           "source": {
             "url": "https://supabase.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-26"
           }
         },
         {
@@ -40,7 +40,7 @@
           "notes": "8 GB disk size per project included ($0.125/GB overage); 100,000 MAU ($0.00325/MAU overage); 250 GB egress; 100 GB file storage; $10/mo compute credits (one Micro instance) included.",
           "source": {
             "url": "https://supabase.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-26"
           }
         },
         {
@@ -55,7 +55,7 @@
           "notes": "SOC2 & ISO 27001; 28-day log retention; HIPAA available as paid add-on; $10/mo compute credits included. Same storage/egress quotas as Pro.",
           "source": {
             "url": "https://supabase.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-26"
           }
         },
         {
@@ -70,7 +70,7 @@
           "notes": "Contact sales. Designated support manager, 24×7×365 premium support, HIPAA available as paid add-on.",
           "source": {
             "url": "https://supabase.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-26"
           }
         }
       ],
@@ -142,7 +142,7 @@
         "PostGIS",
         "TimescaleDB"
       ],
-      "provenance": "Prices fetched from https://neon.com/pricing on 2026-06-14 (neon.tech/pricing redirects 308 to neon.com/pricing). Free=$0 confirmed. Launch and Scale are purely pay-as-you-go with no monthly minimum; per-page statement: 'no monthly minimum' — recorded as monthlyUsd=null with billingModel=custom. HIPAA confirmed available on Scale plan with BAA required (self-serve, no additional cost stated on pricing page but docs note 'an additional charge'). Corroborated by https://neon.com/docs/introduction/plans. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
+      "provenance": "Prices fetched from https://neon.com/pricing on 2026-06-14 (neon.tech/pricing redirects 308 to neon.com/pricing). Free=$0 confirmed. Launch and Scale are purely pay-as-you-go with no monthly minimum; per-page statement: 'no monthly minimum' — no monthly price is recorded here, and the billing model is recorded as custom. HIPAA confirmed available on Scale plan with BAA required (self-serve, no additional cost stated on pricing page but docs note 'an additional charge'). Corroborated by https://neon.com/docs/introduction/plans. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
       "plans": [
         {
           "name": "Free",
@@ -156,7 +156,7 @@
           "notes": "0.5 GB storage per project; 100 CU-hours/project/month; 5 GB public egress; permanent free plan, no credit card required.",
           "source": {
             "url": "https://neon.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://neon.com/docs/introduction/plans",
@@ -175,7 +175,7 @@
           "notes": "Pure pay-as-you-go, no monthly minimum. Compute: $0.106/CU-hour; Storage: $0.35/GB-month; Egress: 500 GB included then $0.10/GB; Instant restore: $0.20/GB-month; Extra branches: $1.50/branch-month.",
           "source": {
             "url": "https://neon.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://neon.com/docs/introduction/plans",
@@ -194,7 +194,7 @@
           "notes": "Pure pay-as-you-go, no monthly minimum. Compute: $0.222/CU-hour; Storage: $0.35/GB-month; Egress: 500 GB included then $0.10/GB; Private network transfer: $0.01/GB; HIPAA available (BAA required). Higher availability and compliance vs Launch.",
           "source": {
             "url": "https://neon.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://neon.com/docs/introduction/plans",
@@ -270,7 +270,14 @@
       "provenance": "Prices fetched directly from https://planetscale.com/pricing on 2026-06-14. PlanetScale pivoted from a Vitess/MySQL product to also offering native Postgres (EBS and Metal tiers). Pricing is per-SKU and metered — no flat monthly tier exists; the smallest entry point is $5/mo for a PS-5 Non-HA arm64 node. Plans below represent the smallest self-serve entry points per architecture; full SKU range runs to $94,429/mo for large Metal deployments. No HIPAA or annual discount information on the pricing page. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
       "plans": [
         {
-          "name": "Postgres EBS Non-HA (PS-5, arm64)",
+          "name": "Single node",
+          "formerNames": [
+            {
+              "name": "Postgres EBS Non-HA (PS-5, arm64)",
+              "lastSeen": "2026-09-02",
+              "absentOn": "2026-09-27"
+            }
+          ],
           "monthlyUsd": 5,
           "minutesIncluded": null,
           "callsIncluded": null,
@@ -281,7 +288,7 @@
           "notes": "Single node, 512 MiB memory. Prices based on AWS us-east-1. No high availability; production use not recommended.",
           "source": {
             "url": "https://planetscale.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -300,7 +307,14 @@
           }
         },
         {
-          "name": "Postgres Metal HA (M-10)",
+          "name": "Metal",
+          "formerNames": [
+            {
+              "name": "Postgres Metal HA (M-10)",
+              "lastSeen": "2026-09-02",
+              "absentOn": "2026-09-27"
+            }
+          ],
           "monthlyUsd": 50,
           "minutesIncluded": null,
           "callsIncluded": null,
@@ -311,7 +325,7 @@
           "notes": "3-node bare-metal cluster, 10 GiB storage included. Prices based on AWS us-east-1.",
           "source": {
             "url": "https://planetscale.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -379,7 +393,7 @@
         "pgvector",
         "Apache Kafka"
       ],
-      "provenance": "Prices fetched from https://aiven.io/postgresql on 2026-06-14. Free=$0, Developer=$5/mo, Startup from $75/mo, Business from $180/mo confirmed. Premium plan tier exists (per backup-retention docs) but specific monthly price was not shown on the fetched pricing page — recorded as null. HIPAA compliance confirmed since 2018 via https://aiven.io/security-compliance (ISO 27001, SOC 2, PCI DSS, HIPAA). BAA not explicitly confirmed on fetched pages — baa=null. 'Starting from' prices reflect entry-level cloud/region configurations; actual price varies by cloud provider and region. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
+      "provenance": "Prices fetched from https://aiven.io/postgresql on 2026-06-14. Free=$0, Developer=$5/mo, Startup from $75/mo, Business from $180/mo confirmed. Premium plan tier exists (per backup-retention docs) but specific monthly price was not shown on the fetched pricing page — no monthly price is recorded. HIPAA compliance confirmed since 2018 via https://aiven.io/security-compliance (ISO 27001, SOC 2, PCI DSS, HIPAA). BAA not explicitly confirmed on fetched pages — no BAA is recorded. 'Starting from' prices reflect entry-level cloud/region configurations; actual price varies by cloud provider and region. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
       "plans": [
         {
           "name": "Free",
@@ -393,7 +407,7 @@
           "notes": "Single node, 1 CPU, 1 GB RAM, 1 GB storage. No backup retention. Subject to acceptable use policy.",
           "source": {
             "url": "https://aiven.io/postgresql",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -408,7 +422,7 @@
           "notes": "For test and personal projects. No backup retention. Single node.",
           "source": {
             "url": "https://aiven.io/postgresql",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -423,7 +437,7 @@
           "notes": "Starting from $75/mo; actual price varies by cloud and region. 2-day backup retention. For test environments with high-performance needs.",
           "source": {
             "url": "https://aiven.io/postgresql",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -438,7 +452,7 @@
           "notes": "Starting from $180/mo; actual price varies by cloud and region. 14-day backup retention. 2-node HA with optional synchronous replication. For business-critical production workloads.",
           "source": {
             "url": "https://aiven.io/postgresql",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -538,7 +552,7 @@
           "notes": "Includes $5/mo usage credit toward resource consumption. Additional usage billed on top: RAM $10/GB-mo, CPU $20/vCPU-mo, Volume $0.15/GB-mo, Egress $0.05/GB. Postgres service billed by actual resource consumption.",
           "source": {
             "url": "https://railway.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://docs.railway.com/pricing/plans",
@@ -576,7 +590,7 @@
           "notes": "Custom pricing. Contractual SLAs, SSO, dedicated support, procurement options. Annual committed spend discounts available.",
           "source": {
             "url": "https://railway.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -658,7 +672,7 @@
           "notes": "1 GB fixed storage; expires 30 days after creation (14-day grace period to upgrade); one free database per workspace; no backups.",
           "source": {
             "url": "https://render.com/docs/free#free-postgresql-databases",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-26"
           }
         },
         {
@@ -673,7 +687,7 @@
           "notes": "Legacy instance type — not available for new databases. 256 MB RAM, 0.1 vCPU, 1 GB storage, up to 97 connections. Existing databases only.",
           "source": {
             "url": "https://render.com/docs/postgresql-legacy-instance-types",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-26"
           }
         },
         {
@@ -688,7 +702,7 @@
           "notes": "Legacy instance type — not available for new databases. 1 GB RAM, 1 vCPU, 16 GB storage, up to 97 connections. Existing databases only.",
           "source": {
             "url": "https://render.com/docs/postgresql-legacy-instance-types",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-26"
           }
         },
         {
@@ -703,7 +717,7 @@
           "notes": "Legacy instance type — not available for new databases. 4 GB RAM, 2 vCPU, 96 GB storage, up to 97 connections. Existing databases only.",
           "source": {
             "url": "https://render.com/docs/postgresql-legacy-instance-types",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-26"
           }
         },
         {
@@ -718,7 +732,7 @@
           "notes": "Legacy instance type — not available for new databases. 8 GB RAM, 4 vCPU, 256 GB storage, up to 197 connections. Existing databases only.",
           "source": {
             "url": "https://render.com/docs/postgresql-legacy-instance-types",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-26"
           }
         },
         {
@@ -808,7 +822,7 @@
         "New Relic",
         "Terraform"
       ],
-      "provenance": "Prices fetched directly from https://www.cockroachlabs.com/pricing/ on 2026-06-14. Basic free tier confirmed (50M RUs + 10 GiB/mo free). Standard: 2 vCPUs at $0.18/hr confirmed (~$130/mo at 730hrs). Advanced: 4 vCPUs at $0.60/hr confirmed (~$438/mo at 730hrs). HIPAA-ready confirmed on Advanced plan page. BAA not explicitly stated on pricing page (baa=null). Corroborated by https://cockroachlabs.com/docs/cockroachcloud/plan-your-cluster/. Note: CockroachDB is wire-compatible with PostgreSQL but is a distributed SQL engine, not vanilla Postgres. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
+      "provenance": "Prices fetched directly from https://www.cockroachlabs.com/pricing/ on 2026-06-14. Basic free tier confirmed (50M RUs + 10 GiB/mo free). Standard: 2 vCPUs at $0.18/hr confirmed (~$130/mo at 730hrs). Advanced: 4 vCPUs at $0.60/hr confirmed (~$438/mo at 730hrs). HIPAA-ready confirmed on Advanced plan page. BAA not explicitly stated on pricing page — no BAA is recorded. Corroborated by https://cockroachlabs.com/docs/cockroachcloud/plan-your-cluster/. Note: CockroachDB is wire-compatible with PostgreSQL but is a distributed SQL engine, not vanilla Postgres. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
       "plans": [
         {
           "name": "Basic",
@@ -838,10 +852,10 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "custom",
-          "notes": "Currently in Preview. $0.18/hr per 2 vCPUs (approximately $130/mo at continuous use); usage-metered, no flat monthly minimum. Up to 200 vCPUs, on-demand storage up to 3 TiB, 99.99% SLA. monthlyUsd=null because no flat fee — pure hourly consumption.",
+          "notes": "Currently in Preview. $0.18/hr per 2 vCPUs (approximately $130/mo at continuous use); usage-metered, no flat monthly minimum. Up to 200 vCPUs, on-demand storage up to 3 TiB, 99.99% SLA. No monthly price is recorded here, because there is no flat fee — pure hourly consumption.",
           "source": {
             "url": "https://www.cockroachlabs.com/pricing/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://docs.cockroachlabs.com/docs/cockroachcloud/plan-your-cluster/",
@@ -857,7 +871,7 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "custom",
-          "notes": "$0.60/hr per 4 vCPUs (approximately $438/mo at continuous use); usage-metered, no flat monthly minimum. Unlimited scaling, up to 99.999% availability (multi-region), HIPAA-ready, PCI DSS, CMEK, unlimited storage. monthlyUsd=null because no flat fee — pure hourly consumption.",
+          "notes": "$0.60/hr per 4 vCPUs (approximately $438/mo at continuous use); usage-metered, no flat monthly minimum. Unlimited scaling, up to 99.999% availability (multi-region), HIPAA-ready, PCI DSS, CMEK, unlimited storage. No monthly price is recorded here, because there is no flat fee — pure hourly consumption.",
           "source": {
             "url": "https://www.cockroachlabs.com/pricing/",
             "accessedAt": "2026-09-02"

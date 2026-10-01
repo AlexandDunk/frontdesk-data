@@ -1,6 +1,6 @@
 {
   "vertical": "payment-processors",
-  "generatedAt": "2026-06-13",
+  "generatedAt": "2026-09-29",
   "methodologyNotes": "Published self-serve payment-processing pricing was collected from each provider's own pricing page on the accessed date; because this vertical prices per transaction (percentage + fixed fee) rather than per seat, the per-transaction rate is recorded in each plan's notes and monthlyUsd holds only a genuine published recurring fee (Authorize.net gateway $25/mo, Square Plus/Premium, Stax subscription) or null when the plan is pure pay-as-you-go with no monthly fee. Quote-only / custom-negotiated tiers and any rate not printed on the fetched page are recorded with monthlyUsd null, and the minutes/calls/overage fields are null throughout since they do not apply to this vertical.",
   "vendors": [
     {
@@ -52,7 +52,7 @@
           "notes": "Card-present transactions via Stripe Terminal at 2.7% + $0.05 per successful charge. No monthly fee; reader hardware purchased separately.",
           "source": {
             "url": "https://stripe.com/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://stripe.com/resources/more/credit-card-terminal-rates",
@@ -60,7 +60,14 @@
           }
         },
         {
-          "name": "Customized / Enterprise",
+          "name": "Custom",
+          "formerNames": [
+            {
+              "name": "Customized / Enterprise",
+              "lastSeen": "2026-09-03",
+              "absentOn": "2026-09-27"
+            }
+          ],
           "monthlyUsd": null,
           "minutesIncluded": null,
           "callsIncluded": null,
@@ -71,7 +78,7 @@
           "notes": "Quote-only. Volume discounts, interchange-plus (IC+) pricing, multi-product discounts, and country-specific rates negotiated with sales (typically for businesses processing over $100K/month). No published price.",
           "source": {
             "url": "https://stripe.com/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -156,7 +163,7 @@
           "notes": "Standard online checkout / commercial transactions at 3.49% + $0.49 per transaction (USD domestic). +1.50% for international transactions. No monthly fee.",
           "source": {
             "url": "https://www.paypal.com/us/business/paypal-business-fees",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -171,7 +178,7 @@
           "notes": "Advanced (hosted/custom) card processing at 2.89% + $0.29 per transaction (USD domestic). No separate monthly fee, unlike legacy Payments Pro ($30/mo) and Payments Advanced ($5/mo).",
           "source": {
             "url": "https://www.paypal.com/us/business/paypal-business-fees",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -283,7 +290,7 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "flat",
-          "notes": "Paid monthly subscription (varies by product; exact $/mo not printed on the fees page). Lower in-person rate 2.5% + $0.15; online/e-commerce 2.9% + $0.30; invoices (ACH) 1% ($1 min, $10 cap); keyed 3.5% + $0.15. 30-day free trial. monthlyUsd null because the subscription fee is not published on the fetched fees page.",
+          "notes": "Paid monthly subscription (varies by product; exact $/mo not printed on the fees page). Lower in-person rate 2.5% + $0.15; online/e-commerce 2.9% + $0.30; invoices (ACH) 1% ($1 min, $10 cap); keyed 3.5% + $0.15. 30-day free trial. No monthly price is recorded because the subscription fee is not published on the fetched fees page.",
           "source": {
             "url": "https://squareup.com/us/en/payments/our-fees",
             "accessedAt": "2026-09-03"
@@ -298,7 +305,7 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "flat",
-          "notes": "Paid monthly subscription (varies by product; exact $/mo not printed on the fees page). Lowest in-person rate 2.4% + $0.15; online/e-commerce 2.9% + $0.30; invoices (ACH) 1% ($1 min, $10 cap); keyed 3.5% + $0.15. 30-day free trial. monthlyUsd null because the subscription fee is not published on the fetched fees page.",
+          "notes": "Paid monthly subscription (varies by product; exact $/mo not printed on the fees page). Lowest in-person rate 2.4% + $0.15; online/e-commerce 2.9% + $0.30; invoices (ACH) 1% ($1 min, $10 cap); keyed 3.5% + $0.15. 30-day free trial. No monthly price is recorded because the subscription fee is not published on the fetched fees page.",
           "source": {
             "url": "https://squareup.com/us/en/payments/our-fees",
             "accessedAt": "2026-09-03"
@@ -506,7 +513,7 @@
           "notes": "Per-transaction fixed processing fee of $0.13 plus payment-method fees on an interchange++ basis: Visa/Mastercard/Maestro interchange + 0.60%; American Express 3.30% + $0.10 (North America). No setup, monthly, or closure fees. A minimum monthly invoice applies (amount not published).",
           "source": {
             "url": "https://www.adyen.com/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -712,7 +719,7 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "flat",
-          "notes": "Membership pricing at 0% markup over direct-cost interchange. For annual processing up to $150K: $99/month subscription plus per-transaction interchange + $0.08 in-person (EMV terminal) or interchange + $0.15 online/keyed. No percentage markup. monthlyUsd corroborated via review since the official page returned 403.",
+          "notes": "Membership pricing at 0% markup over direct-cost interchange. For annual processing up to $150K: $99/month subscription plus per-transaction interchange + $0.08 in-person (EMV terminal) or interchange + $0.15 online/keyed. No percentage markup. The monthly price was corroborated via review since the official page returned 403.",
           "source": {
             "url": "https://staxpayments.com/pricing/",
             "accessedAt": "2026-09-03"
@@ -731,7 +738,7 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "flat",
-          "notes": "Membership pricing at 0% markup over interchange. For annual processing $150K-$250K: $139/month subscription plus interchange + $0.08 in-person or interchange + $0.15 online/keyed. monthlyUsd corroborated via review since the official page returned 403.",
+          "notes": "Membership pricing at 0% markup over interchange. For annual processing $150K-$250K: $139/month subscription plus interchange + $0.08 in-person or interchange + $0.15 online/keyed. The monthly price was corroborated via review since the official page returned 403.",
           "source": {
             "url": "https://staxpayments.com/pricing/",
             "accessedAt": "2026-09-03"
@@ -750,7 +757,7 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "flat",
-          "notes": "Membership pricing at 0% markup over interchange. For annual processing $250K+: from $199/month subscription plus interchange + $0.08 in-person or interchange + $0.15 online/keyed. monthlyUsd corroborated via review since the official page returned 403.",
+          "notes": "Membership pricing at 0% markup over interchange. For annual processing $250K+: from $199/month subscription plus interchange + $0.08 in-person or interchange + $0.15 online/keyed. The monthly price was corroborated via review since the official page returned 403.",
           "source": {
             "url": "https://staxpayments.com/pricing/",
             "accessedAt": "2026-09-03"
@@ -835,7 +842,7 @@
           "notes": "$25/month gateway fee plus 2.9% + $0.30 per transaction (Authorize.net acts as both gateway and merchant account). No setup fee.",
           "source": {
             "url": "https://www.authorize.net/sign-up/pricing.html",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         },
         {

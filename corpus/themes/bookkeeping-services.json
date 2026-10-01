@@ -1,6 +1,6 @@
 {
   "vertical": "bookkeeping-services",
-  "generatedAt": "2026-06-15",
+  "generatedAt": "2026-09-29",
   "methodologyNotes": "Six vendor pricing pages fetched directly on 2026-06-15/16. QuickBooks Live (quickbooks.intuit.com/live/) returned HTTP timeout on every attempt (JS-heavy SPA) and all known alternate Intuit pricing URLs either 404'd or timed out; QuickBooks Live is excluded rather than guessed. Pilot Core plan shows '$0/month billed annually' for pre-revenue startups only; for revenue-generating companies the price requires contacting sales, so Core is recorded as null. Botkeeper is priced per accounting-firm license (one license = one client entity), so billingModel is per_seat. Bench annual prices confirmed as $1,910/$3,830/$5,750/year with 20% discount versus $199/$399/$599 month-to-month. All minutesIncluded/callsIncluded/overagePerMin/overagePerCall fields are null (non-telephony vertical). hipaa/baa/bilingual set to null unless explicitly stated on vendor pages.",
   "vendors": [
     {
@@ -163,22 +163,22 @@
           "notes": "AI-assisted bookkeeping: automated categorization, reconciliation, monthly closing, basic reporting. No human bookkeeper included at this tier.",
           "source": {
             "url": "https://pilot.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
           "name": "Core",
-          "monthlyUsd": null,
+          "monthlyUsd": 399,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
-          "annualDiscountPct": null,
+          "annualDiscountPct": 25,
           "billingModel": "custom",
-          "notes": "Billed annually. Price shown as $0/mo for pre-revenue startups only (contact sales for discount); revenue-generating companies must contact sales for pricing. Includes US-based bookkeeper, accrual/cash basis, bill management, custom chart of accounts, 10th business day monthly close.",
+          "notes": "Starts at $399/month billed monthly, $299/month billed annually. Pre-revenue startups can contact sales for a discount. Includes US-based bookkeeper, accrual/cash basis, bill management, custom chart of accounts, 10th business day monthly close.",
           "source": {
             "url": "https://pilot.com/pricing",
-            "accessedAt": "2026-06-15"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -193,7 +193,7 @@
           "notes": "Contact sales. Includes QuickBooks integration, complex entity structures, custom workflows, 6th business day close, AR/AP, payroll, CFO advisory.",
           "source": {
             "url": "https://pilot.com/pricing",
-            "accessedAt": "2026-06-15"
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -378,38 +378,6 @@
             "url": "https://www.1800accountant.com/pricing",
             "accessedAt": "2026-09-02"
           }
-        },
-        {
-          "name": "Core Accounting",
-          "monthlyUsd": 249,
-          "minutesIncluded": null,
-          "callsIncluded": null,
-          "overagePerMin": null,
-          "overagePerCall": null,
-          "annualDiscountPct": null,
-          "billingModel": "flat",
-          "setupFeeUsd": 0,
-          "notes": "Billed annually. Most popular. Includes annual income tax return filing (Schedule C/1065/1120/1120S), AI-automated filing, ClientBooks bookkeeping subscription, expert review, proactive tax advisory, quarterly reviews, annual tax plan.",
-          "source": {
-            "url": "https://www.1800accountant.com/pricing",
-            "accessedAt": "2026-06-15"
-          }
-        },
-        {
-          "name": "Core Accounting+",
-          "monthlyUsd": 419,
-          "minutesIncluded": null,
-          "callsIncluded": null,
-          "overagePerMin": null,
-          "overagePerCall": null,
-          "annualDiscountPct": null,
-          "billingModel": "flat",
-          "setupFeeUsd": 0,
-          "notes": "Billed annually. Everything in Core Accounting plus full-service bookkeeping with dedicated bookkeeper.",
-          "source": {
-            "url": "https://www.1800accountant.com/pricing",
-            "accessedAt": "2026-06-15"
-          }
         }
       ],
       "enrichment": {
@@ -428,8 +396,8 @@
           "ClientBooks (proprietary)"
         ],
         "limits": [
-          "Core Accounting: 1 entity annual tax filing included",
-          "Core Accounting+ adds full-service bookkeeping",
+          "Starter: annual income tax return filing for one entity included",
+          "Business Complete adds full-service bookkeeping with a dedicated bookkeeper",
           "Add-ons: entity formation, payroll, audit defense sold separately"
         ],
         "keyFeatures": [

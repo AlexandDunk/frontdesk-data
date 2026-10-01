@@ -1,6 +1,6 @@
 {
   "vertical": "web-analytics",
-  "generatedAt": "2026-06-15",
+  "generatedAt": "2026-09-29",
   "methodologyNotes": "Self-serve USD pricing fetched from each vendor's official pricing page on 2026-06-15. Plausible's pricing page is fully JS-rendered and returned locked-dashboard HTML on every attempt; prices confirmed from multiple secondary pages (wordpress-analytics-plugin page stated '$9/month', homepage stated Starter=$9, Growth=$14, Business=$19 for 10k PV base) and corroborated by kinsta.com blog ($9/month starting price, May 2024). Pirsch pricing was captured from the first successful fetch of pirsch.io/pricing (Standard $6/mo, Plus $12/mo); the page subsequently returned 404 on retries, so alternativeto.net was used for corroboration (range $5–$799/mo confirmed). Matomo Cloud is priced in EUR only (€29/mo starter); USD equivalent ~$31.60 at 1.09 EUR/USD is noted but monthlyUsd records the published EUR-converted approximation with a caveat in notes. Cloudflare Web Analytics is free standalone. GA4 360 is contact-sales only. All minutesIncluded / callsIncluded / overagePerMin / overagePerCall fields are null (non-telephony vertical). Annual discount of ~17% ('2 months free') is consistent across Plausible, Fathom, Matomo, and Simple Analytics. accessedAt='2026-06-15' on all source records.",
   "vendors": [
     {
@@ -140,7 +140,7 @@
           "notes": "Entry tier at 10k pageviews/month. 1 site, solo use, no team sharing. 3-year data retention. Email/Slack reports, GA import, goals, segments. Price scales with pageview volume (slider-based). Annual billing saves ~2 months (~17% off). 30-day free trial, no credit card.",
           "source": {
             "url": "https://plausible.io/",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://kinsta.com/blog/plausible-analytics/",
@@ -159,7 +159,7 @@
           "notes": "Entry tier at 10k pageviews/month; scales with traffic. Up to 3 sites, 3 team members. Team management, shared links, embedded dashboards. 3-year data retention. Annual billing saves ~2 months (~17%).",
           "source": {
             "url": "https://plausible.io/",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -174,7 +174,7 @@
           "notes": "Entry tier at 10k pageviews/month; scales with traffic. Up to 10 sites, 10 team members. 5-year data retention. Custom properties, Stats API, Looker Studio connector, ecommerce revenue tracking, funnels. Annual billing saves ~2 months (~17%).",
           "source": {
             "url": "https://plausible.io/",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -189,7 +189,7 @@
           "notes": "Contact sales / quote-only. 10+ sites, 600+ API requests/hour, SSO, managed proxy, raw data exports, priority support. Custom pageview limits.",
           "source": {
             "url": "https://plausible.io/enterprise-web-analytics",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -452,7 +452,7 @@
         "Zapier",
         "Slack"
       ],
-      "provenance": "https://matomo.org/pricing/ accessed 2026-06-15. Cloud plans priced in EUR only; USD approximate at 1.09 EUR/USD noted in plan notes. HIPAA available on-premise only (Matomo Cloud is not HIPAA compliant per matomo.org/matomo-analytics-hipaa-compliance/). hipaa=true reflects on-premise capability; baa=false because Matomo explicitly states no BAA is needed/offered. Re-verified 2026-09-03 against the live pricing page; published figures unchanged.",
+      "provenance": "https://matomo.org/pricing/ accessed 2026-06-15; read again 2026-09-27, when the Cloud tab listed Business at USD 26 per month (excl. tax) for 50,000 hits and Enterprise by contact. HIPAA available on-premise only (Matomo Cloud is not HIPAA compliant per matomo.org/matomo-analytics-hipaa-compliance/). hipaa=true reflects on-premise capability; baa=false because Matomo explicitly states no BAA is needed/offered.",
       "plans": [
         {
           "name": "On-Premise Community",
@@ -466,37 +466,7 @@
           "notes": "Free open-source self-hosted edition. Unlimited websites, unlimited users, unlimited hits. Community forum support only. HIPAA-capable when self-hosted on compliant infrastructure.",
           "source": {
             "url": "https://matomo.org/pricing/",
-            "accessedAt": "2026-09-03"
-          }
-        },
-        {
-          "name": "Cloud Starter",
-          "monthlyUsd": null,
-          "minutesIncluded": null,
-          "callsIncluded": null,
-          "overagePerMin": null,
-          "overagePerCall": null,
-          "annualDiscountPct": 17,
-          "billingModel": "flat",
-          "notes": "Priced at €29/month (ex tax) — Matomo Cloud is billed in EUR only and does not publish a USD price, so monthlyUsd is null (USD equivalent is ~$32 at ~1.09 EUR/USD but that is a derived approximation, not a confirmable published figure). 50,000 hits/month. Annual billing gives 2 months free (~17% discount). Unlimited websites. Hosted in Frankfurt, Germany. Cloud is NOT HIPAA compliant. 21-day free trial, no credit card. Verified at matomo.org/pricing 2026-06-15 (€29/mo, '2 months free' annual).",
-          "source": {
-            "url": "https://matomo.org/pricing/",
-            "accessedAt": "2026-06-15"
-          }
-        },
-        {
-          "name": "Cloud Business",
-          "monthlyUsd": null,
-          "minutesIncluded": null,
-          "callsIncluded": null,
-          "overagePerMin": null,
-          "overagePerCall": null,
-          "annualDiscountPct": null,
-          "billingModel": "custom",
-          "notes": "Contact sales / quote-only. Higher hit limits (100k–600k+ hits/month). Custom pricing for larger traffic volumes.",
-          "source": {
-            "url": "https://matomo.org/pricing/",
-            "accessedAt": "2026-06-15"
+            "accessedAt": "2026-09-26"
           }
         },
         {
@@ -511,7 +481,22 @@
           "notes": "Contact sales / quote-only. 1M+ hits/month, dedicated infrastructure, SLA, advanced support.",
           "source": {
             "url": "https://matomo.org/pricing/",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-26"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 26,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "Matomo Cloud. USD 26 per month (excl. tax) for 50,000 hits per month; the price follows the monthly traffic chosen. Annual billing: USD 260 per year (2 months free, save 17% compared to monthly billing). Additional hits: 5,000 for USD 2.6 (excl. tax). Hosted in Europe; 30 websites, 30 team members, 24 months raw data retention, email support; free trial available.",
+          "source": {
+            "url": "https://matomo.org/pricing/",
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -542,7 +527,7 @@
           "Cookiebot"
         ],
         "limits": [
-          "Self-hosted Community plan: free forever, unlimited users and hits; Cloud Starter: €29/mo for 50K hits; On-premise Team: €275/yr, 4 users, 5M hits; Business: €1,450/yr, 20 users, 30M hits; Enterprise: €3,400/yr, 50 users, 100M hits"
+          "Self-hosted Community plan: free forever, unlimited users and hits; Cloud: Business USD 26/mo (excl. tax) for 50K hits; On-premise Team: €275/yr, 4 users, 5M hits; Business: €1,450/yr, 20 users, 30M hits; Enterprise: €3,400/yr, 50 users, 100M hits"
         ],
         "keyFeatures": [
           "100% data ownership — self-host or EU cloud, no third-party data sharing",
@@ -603,7 +588,7 @@
           "notes": "Free forever with privacy-preserving badge required. Unlimited pageviews (fair use). 30-day data history. 1 user, 5 websites. 14-day full-feature trial included.",
           "source": {
             "url": "https://www.simpleanalytics.com/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-28"
           }
         },
         {
@@ -633,7 +618,7 @@
           "notes": "Contact sales / quote-only. Custom traffic limits, SOC 2, SSO/SAML, role-based access, priority support, manual invoicing available (min $500 invoice).",
           "source": {
             "url": "https://www.simpleanalytics.com/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-28"
           }
         }
       ],
@@ -721,7 +706,7 @@
           "notes": "Starting at $6/month for 10,000 monthly pageviews. Up to 50 websites. Annual billing available with savings (exact % not published on pricing page). Payment: credit card, PayPal, SEPA direct debit (EUR). Prices ex applicable sales taxes. 30-day free trial (or 100k pageviews, whichever first), no credit card.",
           "source": {
             "url": "https://pirsch.io/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://alternativeto.net/software/pirsch-analytics/about/",
@@ -740,7 +725,7 @@
           "notes": "Best value tier at $12/month. Unlimited websites. Custom domains, white-label dashboard, advanced features. Annual billing available with savings. Price scales with pageview volume.",
           "source": {
             "url": "https://pirsch.io/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         },
         {
@@ -755,7 +740,7 @@
           "notes": "Contact sales / quote-only. Custom pageview limits, dedicated infrastructure, SLA, on-premise/self-hosted license options. Price depends on size and needs.",
           "source": {
             "url": "https://pirsch.io/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -846,7 +831,7 @@
           "notes": "Cloudflare Web Analytics is free and included with all Cloudflare plans including the free tier. No pageview limits published. Privacy-first, cookieless, no personal data collection. Works on any website (not just those proxied through Cloudflare). Core Web Vitals, referrer, country, device, page views, visitors.",
           "source": {
             "url": "https://www.cloudflare.com/web-analytics/",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://www.cloudflare.com/plans/",

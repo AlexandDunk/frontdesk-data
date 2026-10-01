@@ -1,6 +1,6 @@
 {
   "vertical": "video-interview",
-  "generatedAt": "2026-06-15",
+  "generatedAt": "2026-09-29",
   "methodologyNotes": "Official pricing pages were re-fetched and adversarially verified for each vendor on 2026-06-15: sparkhire.com/pricing/ (all USD prices confirmed exactly, SOC 2 Type II stated on-page), willo.video/pricing returns HTTP 404 so willo.video/pricing-g2 (the live official Willo page publishing the same Growth/Scale USD tiers) was used and confirmed, hireflix.com/pricing (annual-billed USD prices confirmed; SOC 2 Type I confirmed via the live official blog post), jobma.com/pricing (quote-only confirmed), hirevue.com/pricing (quote-only; Essential/Premium are real package names with no published price; FedRAMP confirmed), vidcruiter.com/pricing/ (quote-only contact form; compliance from vidcruiter.com/security/), talview.com/en/pricing (quote-only unit-based; compliance badges on page), and Capterra (capterra.com/p/132345/RecRight/pricing/) for RecRight because recright.com pricing redirects to a contact form. RecRight prices are published in EUR only; monthlyUsd is left null rather than fabricating a USD conversion. Willo soc2 is left null because Willo's own security documentation lists only ISO 27001:2022 and GDPR — a third-party aggregator's 'SOC 2' claim was not corroborated by the vendor. myInterview was excluded: it has been absorbed into Radancy (acquisition announced Sept 2025) with no standalone public pricing page; aggregator price figures are inconsistent and unauthoritative. accessedAt 2026-06-15.",
   "vendors": [
     {
@@ -68,7 +68,7 @@
           "notes": "ATS plan for companies up to 200 employees, billed annually only. Includes 6,000 AI Resume Reviews/year, one-way video interviews, automated reference checks.",
           "source": {
             "url": "https://www.sparkhire.com/pricing/",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           },
           "setupFeeUsd": 0
         },
@@ -84,7 +84,7 @@
           "notes": "ATS plan for companies up to 500 employees, billed annually only. Includes 24,000 AI Resume Reviews/year, predictive behavioral assessment, automated reference checks.",
           "source": {
             "url": "https://www.sparkhire.com/pricing/",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           },
           "setupFeeUsd": 0
         },
@@ -100,7 +100,7 @@
           "notes": "For companies 500+ employees. Custom pricing, dedicated support, custom data retention.",
           "source": {
             "url": "https://www.sparkhire.com/pricing/",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           },
           "setupFeeUsd": 0
         }
@@ -179,38 +179,6 @@
       "provenance": "Main pricing page willo.video/pricing returns HTTP 404 (verified 2026-06-15); USD prices confirmed on the live official willo.video/pricing-g2 page. Compliance confirmed on Willo's own data-security knowledge base article (ISO 27001:2022 + GDPR; SOC 2 not stated).",
       "plans": [
         {
-          "name": "Growth",
-          "monthlyUsd": 279,
-          "minutesIncluded": null,
-          "callsIncluded": null,
-          "overagePerMin": null,
-          "overagePerCall": null,
-          "annualDiscountPct": 25,
-          "billingModel": "flat",
-          "notes": "2 active assessments, up to 4 users. $279/mo monthly; $209/mo billed annually (25% off). Includes assessment library, email/SMS invites, 18+ languages.",
-          "source": {
-            "url": "https://www.willo.video/pricing-g2",
-            "accessedAt": "2026-06-15"
-          },
-          "setupFeeUsd": 0
-        },
-        {
-          "name": "Scale",
-          "monthlyUsd": 409,
-          "minutesIncluded": null,
-          "callsIncluded": null,
-          "overagePerMin": null,
-          "overagePerCall": null,
-          "annualDiscountPct": 25,
-          "billingModel": "flat",
-          "notes": "10 active assessments, up to 20 users. $409/mo monthly; $307/mo billed annually (25% off). Adds custom scorecards, custom branding.",
-          "source": {
-            "url": "https://www.willo.video/pricing-g2",
-            "accessedAt": "2026-06-15"
-          },
-          "setupFeeUsd": 0
-        },
-        {
           "name": "Enterprise",
           "monthlyUsd": null,
           "minutesIncluded": null,
@@ -219,12 +187,27 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "custom",
-          "notes": "Unlimited assessments and users, enterprise SSO, dedicated success manager, all Scale features. Requires booking a demo.",
+          "notes": "Unlimited assessments and users, enterprise SSO, dedicated success manager. Requires booking a demo.",
           "source": {
             "url": "https://www.willo.video/pricing-g2",
             "accessedAt": "2026-06-15"
           },
           "setupFeeUsd": 0
+        },
+        {
+          "name": "Willo Lite",
+          "monthlyUsd": 59,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$59 per live role; pay only for the live roles you use each month. No contract — pay as you go. Up to 5 live roles, 150 assessed candidates per live role, up to 5 users. ID, right-to-work and background checks are add-ons.",
+          "source": {
+            "url": "https://www.willo.video/pricing-g2",
+            "accessedAt": "2026-09-27"
+          }
         }
       ],
       "enrichment": {
@@ -252,8 +235,7 @@
           "UKG"
         ],
         "limits": [
-          "Growth plan: 2 assessments, 4 users",
-          "Scale plan: 10 assessments, 20 users"
+          "Willo Lite: up to 5 live roles, 150 assessed candidates per live role, up to 5 users"
         ],
         "keyFeatures": [
           "Async video, audio, and text interviews",
@@ -307,33 +289,33 @@
       "plans": [
         {
           "name": "Small",
-          "monthlyUsd": 75,
-          "minutesIncluded": null,
-          "callsIncluded": null,
-          "overagePerMin": null,
-          "overagePerCall": null,
-          "annualDiscountPct": null,
-          "billingModel": "flat",
-          "notes": "For companies with fewer than 50 employees, billed annually ($75/mo). Unlimited user seats, positions, and interview responses. 1-month free trial available.",
-          "source": {
-            "url": "https://www.hireflix.com/pricing",
-            "accessedAt": "2026-09-03"
-          },
-          "setupFeeUsd": 0
-        },
-        {
-          "name": "Medium",
           "monthlyUsd": 150,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
-          "annualDiscountPct": null,
+          "annualDiscountPct": 50,
           "billingModel": "flat",
-          "notes": "For companies with 50–250 employees, billed annually ($150/mo). Unlimited user seats, positions, and interview responses. 1-month free trial available.",
+          "notes": "For companies with fewer than 50 employees, $150 per month billed monthly or $75 per month billed yearly. Unlimited user seats, positions, and interview responses. 1-month free trial available.",
           "source": {
             "url": "https://www.hireflix.com/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
+          },
+          "setupFeeUsd": 0
+        },
+        {
+          "name": "Medium",
+          "monthlyUsd": 300,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 50,
+          "billingModel": "flat",
+          "notes": "For companies with 50–250 employees, $300 per month billed monthly or $150 per month billed yearly. Unlimited user seats, positions, and interview responses. 1-month free trial available.",
+          "source": {
+            "url": "https://www.hireflix.com/pricing",
+            "accessedAt": "2026-09-27"
           },
           "setupFeeUsd": 0
         },
@@ -349,7 +331,7 @@
           "notes": "For corporates, high-volume processes, and recruitment agencies. Contact for quote. Tailored features, dedicated support.",
           "source": {
             "url": "https://www.hireflix.com/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           },
           "setupFeeUsd": 0
         }
@@ -428,7 +410,7 @@
           "notes": "All pricing is custom based on volume, integrations, and feature needs. Contact sales for a quote.",
           "source": {
             "url": "https://www.jobma.com/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           },
           "setupFeeUsd": 0
         }
@@ -772,7 +754,7 @@
       "baa": null,
       "bilingual": null,
       "integrations": [],
-      "provenance": "Pricing confirmed from Capterra (capterra.com/p/132345/RecRight/pricing/) on 2026-06-15 because recright.com pricing redirects to a contact form. Prices are published in EUR only (monthlyUsd left null — no USD fabricated). Compliance from get.recright.com/privacy-security. Re-verified 2026-09-03 against the live pricing page; published figures unchanged.",
+      "provenance": "Pricing confirmed from Capterra (capterra.com/p/132345/RecRight/pricing/) on 2026-06-15 because recright.com pricing redirects to a contact form. Prices are published in EUR only (no monthly price is recorded — no USD fabricated). Compliance from get.recright.com/privacy-security. Re-verified 2026-09-03 against the live pricing page; published figures unchanged.",
       "plans": [
         {
           "name": "Easy",

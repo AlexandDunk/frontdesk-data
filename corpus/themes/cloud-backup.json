@@ -1,6 +1,6 @@
 {
   "vertical": "cloud-backup",
-  "generatedAt": "2026-06-13",
+  "generatedAt": "2026-09-29",
   "methodologyNotes": "Published self-serve pricing was collected from each provider's own pricing/plans page on the accessed date; cloud-backup vendors typically headline an annual price, so the per-month USD figure is the published annual rate divided by 12 (the annual rate and any first-year/renewal split are stated in notes). Where the official page rendered EUR/GBP or blocked direct access, the USD figures were corroborated against a provider support page or a dedicated 2026 pricing-review source recorded as corroboration; per-user/per-device tiers carry the per-seat USD price with billingModel per_seat and a note, and quote-only tiers are recorded with monthlyUsd null. HIPAA/BAA are null except where the provider explicitly markets compliance, annualDiscountPct is recorded only where a separate annual rate is published, and minutes/calls/overage fields are null for every tier.",
   "vendors": [
     {
@@ -25,7 +25,7 @@
           "notes": "Month-to-month $9/mo per computer; $99/yr billed annually (~8% less). Unlimited backup for one computer (and attached external drives), continuous automated backup, dedicated restore app, web restores up to 500 GB per request, free mailed-drive restores, private-key encryption and 2FA. Billed $99/year (the page shows the annual rate; forever version history is an added fee).",
           "source": {
             "url": "https://www.backblaze.com/cloud-backup/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-26"
           }
         },
         {
@@ -40,7 +40,7 @@
           "notes": "Month-to-month $9/mo per computer; $99/yr billed annually (~8% less). Everything in Personal per computer plus multi-user management, centralized web admin, MSI/JAMF/Munki deployment, centralized billing and SSO via Google and Microsoft.",
           "source": {
             "url": "https://www.backblaze.com/cloud-backup/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-26"
           }
         },
         {
@@ -55,7 +55,7 @@
           "notes": "Everything in Business plus advanced support, enhanced backup lockdowns, OIDC SSO (Okta, Azure AD) and restricted restore access. Custom pricing - listed as Contact us, so no published self-serve price.",
           "source": {
             "url": "https://www.backblaze.com/cloud-backup/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-26"
           }
         }
       ],
@@ -732,7 +732,7 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "flat",
-          "notes": "10 TB of storage for one user, listed on the pricing page only as a $1,190 one-time lifetime plan (EUR1190 on the geolocated page); no monthly/annual subscription rate is published for this tier, so monthlyUsd is null.",
+          "notes": "10 TB of storage for one user, listed on the pricing page only as a $1,190 one-time lifetime plan (EUR1190 on the geolocated page); no monthly/annual subscription rate is published for this tier, so no monthly price is recorded.",
           "source": {
             "url": "https://www.pcloud.com/cloud-storage-pricing-plans.html",
             "accessedAt": "2026-09-02"
@@ -924,41 +924,22 @@
           "notes": "5 GB of free backup storage for a single user.",
           "source": {
             "url": "https://jottacloud.com/en/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           }
         },
         {
           "name": "Home 1 TB",
-          "monthlyUsd": 6.99,
+          "monthlyUsd": 7.99,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
-          "annualDiscountPct": null,
+          "annualDiscountPct": 17,
           "billingModel": "flat",
-          "notes": "1 TB of backup storage shared across up to 5 users. $6.99/month (EUR6.90 on the geolocated official page); annual $69.90/year. USD rate confirmed on Cloudwards' 2026 Jottacloud review.",
+          "notes": "1 TB of backup storage shared across up to 5 users, no bandwidth limitation. USD 7.99/month billed monthly, or USD 79.90/year billed yearly.",
           "source": {
             "url": "https://jottacloud.com/en/pricing",
-            "accessedAt": "2026-06-13"
-          },
-          "corroboration": {
-            "url": "https://www.cloudwards.net/review/jottacloud/",
-            "accessedAt": "2026-06-13"
-          }
-        },
-        {
-          "name": "Personal Unlimited",
-          "monthlyUsd": 11.99,
-          "minutesIncluded": null,
-          "callsIncluded": null,
-          "overagePerMin": null,
-          "overagePerCall": null,
-          "annualDiscountPct": null,
-          "billingModel": "flat",
-          "notes": "Unlimited backup storage for one user (upload speed reduced after 5 TB). $11.99/month (EUR11.90 on the geolocated official page); annual $119.90/year. USD rate confirmed on Cloudwards' 2026 Jottacloud review.",
-          "source": {
-            "url": "https://jottacloud.com/en/pricing",
-            "accessedAt": "2026-06-13"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://www.cloudwards.net/review/jottacloud/",
@@ -977,11 +958,26 @@
           "notes": "5 TB of backup storage shared across up to 5 users. $15.99/month (EUR14.90/month, EUR149/year on the geolocated official page); annual $159.90/year. USD rate confirmed on Cloudwards' 2026 Jottacloud review.",
           "source": {
             "url": "https://jottacloud.com/en/pricing",
-            "accessedAt": "2026-06-13"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://www.cloudwards.net/review/jottacloud/",
             "accessedAt": "2026-06-13"
+          }
+        },
+        {
+          "name": "Unlimited",
+          "monthlyUsd": 12.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "Unlimited backup storage for one user; upload speed gradually reduced after 5 TB. USD 12.99/month billed monthly, or USD 129.90/year billed yearly.",
+          "source": {
+            "url": "https://jottacloud.com/en/pricing",
+            "accessedAt": "2026-09-27"
           }
         }
       ],
@@ -1000,7 +996,7 @@
         "keyIntegrations": [],
         "limits": [
           "Free plan capped at 5 GB for 1 user",
-          "Personal Unlimited plan: upload speed gradually reduced after 5 TB uploaded",
+          "Unlimited plan: upload speed gradually reduced after 5 TB",
           "File version history: last 5 versions of all files",
           "No documented third-party integrations (backup is native client-based)"
         ],

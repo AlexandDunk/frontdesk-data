@@ -1,6 +1,6 @@
 {
   "vertical": "procurement",
-  "generatedAt": "2026-06-15",
+  "generatedAt": "2026-09-29",
   "methodologyNotes": "Official pricing pages were re-fetched directly for each vendor on 2026-06-15: precoro.com/pricing/, tradogram.com/pricing, spendwise.com/pricing, procuredesk.com/pricing/, procurify.com/pricing/, fraxion.biz/pricing/, kissflow.com/procurement/pricing/, and order.co/procurement-software/. Coupa's pricing/product pages returned 403; quote-only status and compliance were confirmed via web search citing official Coupa compliance pages. Published flat/per-seat prices were captured verbatim; 'starts at' figures for Precoro and Tradogram reflect minimum annual billing (shown as monthly-equivalent). Quote-only vendors (Procurify, Order.co, Coupa, Kissflow, Fraxion) have monthlyUsd=null. Compliance is asserted true only when explicitly stated on a vendor security/compliance page; otherwise null. accessedAt 2026-06-15.",
   "vendors": [
     {
@@ -34,7 +34,7 @@
           "notes": "Starts at $499/month billed annually; includes purchase requisitions, POs, receipts, invoices, 2- and 3-way matching, automated approvals, custom fields/workflows, item/service catalog, vendor management, contract repository, expense management, QuickBooks Online/Xero/Slack integrations, mobile app. Tier-based user limits.",
           "source": {
             "url": "https://precoro.com/pricing/",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           },
           "setupFeeUsd": 0
         },
@@ -50,7 +50,7 @@
           "notes": "Starts at $999/month billed annually; everything in Core plus intelligent AP automation, e-invoicing, intake management, inventory, PunchOuts, AI document scanning, vendor onboarding, supplier portal, RFPs, real-time budget tracking, AI assistant, advanced integrations, API access, SSO.",
           "source": {
             "url": "https://precoro.com/pricing/",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           },
           "setupFeeUsd": 0
         },
@@ -66,7 +66,7 @@
           "notes": "Starts at $499/month billed annually; standalone AP module covering invoice management, intelligent AP automation, e-invoicing, budget management, AI expenses, payments, AI assistant, vendor management, accounting integrations, API access, SSO, mobile app.",
           "source": {
             "url": "https://precoro.com/pricing/",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           },
           "setupFeeUsd": 0
         },
@@ -82,7 +82,7 @@
           "notes": "Custom pricing billed annually; unlimited users, advanced admin controls, ERP integrations, custom integrations, regional server selection (US/EU), IP whitelisting, enterprise-grade data protection.",
           "source": {
             "url": "https://precoro.com/pricing/",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           },
           "setupFeeUsd": 0
         }
@@ -154,58 +154,26 @@
         "API",
         "PunchOuts"
       ],
-      "provenance": "Pricing fetched from tradogram.com/pricing on 2026-06-15 (Free Basic $0, PRO $225/mo billed annually, PREMIUM $425/mo billed annually, Enterprise custom). Footer shows PCI DSS, ISO 27001, and AICPA SOC badges, but SOC 2 attainment (Type I/II) is not explicitly stated, so soc2 left null.",
+      "provenance": "Pricing fetched from tradogram.com/pricing on 2026-06-15 (then three tiers: $225/mo and $425/mo billed annually, plus a custom-quote tier). Read again on 2026-09-27: the page lists Essentials ($99/month billed monthly, $950.40/year billed yearly), Premium (custom quote, 20+ users) and Scale (custom quote, unlimited users). Footer shows PCI DSS, ISO 27001, and AICPA SOC badges, but SOC 2 attainment (Type I/II) is not explicitly stated, so SOC 2 is not recorded.",
       "plans": [
         {
-          "name": "Free Basic",
-          "monthlyUsd": 0,
-          "minutesIncluded": null,
-          "callsIncluded": null,
-          "overagePerMin": null,
-          "overagePerCall": null,
-          "annualDiscountPct": null,
-          "billingModel": "flat",
-          "notes": "Forever free; 1 user only, 5 transactions per month, limited items and suppliers; includes PO management, receiving tracking, and AP invoice matching.",
-          "source": {
-            "url": "https://www.tradogram.com/pricing",
-            "accessedAt": "2026-06-15"
-          },
-          "setupFeeUsd": 0
-        },
-        {
-          "name": "PRO",
-          "monthlyUsd": 225,
-          "minutesIncluded": null,
-          "callsIncluded": null,
-          "overagePerMin": null,
-          "overagePerCall": null,
-          "annualDiscountPct": null,
-          "billingModel": "flat",
-          "notes": "$225/month billed annually; starts at 1 user; unlimited transactions, items, suppliers and categories; full module access including requisitions, POs, expenses, sourcing, receiving, invoicing, project and contract management, inventory, mobile apps.",
-          "source": {
-            "url": "https://www.tradogram.com/pricing",
-            "accessedAt": "2026-06-15"
-          },
-          "setupFeeUsd": 0
-        },
-        {
           "name": "PREMIUM",
-          "monthlyUsd": 425,
+          "monthlyUsd": null,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "flat",
-          "notes": "$425/month billed annually; starts at 10 users; everything in PRO plus priority support, multiple companies/locations, custom white-label options.",
+          "notes": "Custom quote; 20+ users, additional user fee applies. Everything in Essentials plus requisitions, sourcing RFx, receiving (GRN), real-time budget tracking, contract management, custom approvals, multi-entity & locations.",
           "source": {
             "url": "https://www.tradogram.com/pricing",
-            "accessedAt": "2026-06-15"
+            "accessedAt": "2026-09-27"
           },
           "setupFeeUsd": 0
         },
         {
-          "name": "Enterprise",
+          "name": "Scale",
           "monthlyUsd": null,
           "minutesIncluded": null,
           "callsIncluded": null,
@@ -213,12 +181,26 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "custom",
-          "notes": "Custom quote; starts at 20 users; assigned account manager, unlimited users, custom integrations, custom features, multi-region hosting, private cloud and on-premise options.",
+          "notes": "Custom quote; unlimited users. Everything in Premium plus custom SLA, feature customizations, multi-region hosting and dedicated support.",
           "source": {
             "url": "https://www.tradogram.com/pricing",
-            "accessedAt": "2026-06-15"
-          },
-          "setupFeeUsd": 0
+            "accessedAt": "2026-09-27"
+          }
+        },
+        {
+          "name": "Essentials",
+          "monthlyUsd": 99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "$99/month billed monthly, or $950.40/year billed yearly (save 20%). 1+ users; additional user fee applies. Purchase orders, supplier management, AP invoices, TradoPay, TradoScan AI, expense management, mobile apps; other modules available as add-ons.",
+          "source": {
+            "url": "https://www.tradogram.com/pricing",
+            "accessedAt": "2026-09-27"
+          }
         }
       ],
       "enrichment": {
@@ -231,7 +213,7 @@
             "accessedAt": "2026-06-15"
           }
         },
-        "freeTier": true,
+        "freeTier": null,
         "freeTrialDays": null,
         "keyIntegrations": [
           "QuickBooks Online",
@@ -243,18 +225,15 @@
           "Power BI"
         ],
         "limits": [
-          "Free plan: 1 user, 5 transactions/month",
-          "PRO starts at 1 user (minimum); PREMIUM starts at 10 users"
+          "Essentials starts at 1+ users, Premium at 20+ users, Scale has unlimited users; an additional user fee applies"
         ],
         "keyFeatures": [
-          "Forever-free single-user plan",
           "Full P2P module suite on paid plans",
           "Custom white-label options on PREMIUM",
           "No setup fees"
         ],
         "bestFor": [
           "small-to-mid procurement teams",
-          "cost-conscious buyers wanting free entry tier",
           "multi-entity organizations"
         ],
         "sources": [
@@ -292,7 +271,7 @@
           "notes": "$9 per user/month; minimum 1 user, up to 5 users; 10 transactions/month; includes accounts payable, purchasing, receiving, reports.",
           "source": {
             "url": "https://www.spendwise.com/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           },
           "setupFeeUsd": 0
         },
@@ -308,7 +287,7 @@
           "notes": "$19 per user/month; minimum 5 users, up to 50 users; unlimited transactions; adds multiple dashboards, approval limits and workflows, custom user roles, budgets, currency conversions; optional add-ons: implementation package, inventory management, Amazon integration, accounting integrations.",
           "source": {
             "url": "https://www.spendwise.com/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           },
           "setupFeeUsd": 0
         },
@@ -324,7 +303,7 @@
           "notes": "Contact for pricing; minimum 5 users, unlimited users; unlimited transactions; implementation package included, priority support; add-ons: inventory management, Amazon integration, accounting integrations, SSO.",
           "source": {
             "url": "https://www.spendwise.com/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           },
           "setupFeeUsd": 0
         }
@@ -432,7 +411,7 @@
           "notes": "Custom quote; dedicated account manager, vendor portal, SSO, custom integrations, all purchasing automation features; for organizations exceeding 250 users.",
           "source": {
             "url": "https://www.procuredesk.com/pricing/",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           },
           "setupFeeUsd": 0
         }
@@ -521,7 +500,7 @@
           "notes": "Quote-only; flexible pricing based on features and support needs; all customers start with Platform + Purchasing; add-on modules available: Accounts Payable, Contracts, Expense & Card; one-time implementation fee also applies.",
           "source": {
             "url": "https://www.procurify.com/pricing/",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-09-27"
           },
           "setupFeeUsd": 0
         }
@@ -586,7 +565,7 @@
         "Ping Identity",
         "API"
       ],
-      "provenance": "order.co/procurement-software/ fetched on 2026-06-15 — no published pricing; quote-only (Schedule a demo / Get started). Integrations from order.co/accounting-integrations/. SOC 2 and GDPR claims could not be corroborated on any official Order.co page, so compliance left null. Re-verified 2026-09-03 against the live pricing page; published figures unchanged.",
+      "provenance": "order.co/procurement-software/ fetched on 2026-06-15 — no published pricing; quote-only (Schedule a demo / Get started). Integrations from order.co/accounting-integrations/. SOC 2 and GDPR claims could not be corroborated on any official Order.co page, so compliance is left blank. Re-verified 2026-09-03 against the live pricing page; published figures unchanged.",
       "plans": [
         {
           "name": "Custom / Contact Sales",
@@ -741,7 +720,7 @@
         "G Suite",
         "API"
       ],
-      "provenance": "Kissflow procurement pricing page fetched at kissflow.com/procurement/pricing/ on 2026-06-15 — no prices published; quote-only with fixed annual agreements and no AI/API surcharges. Only a GDPR footer link appears; SOC 2 and HIPAA not stated, so all compliance left null. Re-verified 2026-09-03 against the live pricing page; published figures unchanged.",
+      "provenance": "Kissflow procurement pricing page fetched at kissflow.com/procurement/pricing/ on 2026-06-15 — no prices published; quote-only with fixed annual agreements and no AI/API surcharges. Only a GDPR footer link appears; SOC 2 and HIPAA not stated, so all compliance fields are left blank. Re-verified 2026-09-03 against the live pricing page; published figures unchanged.",
       "plans": [
         {
           "name": "Enterprise / Contact Sales",
@@ -834,7 +813,7 @@
       "provenance": "Pricing fetched from fraxion.biz/pricing/ on 2026-06-15 — quote-only, no published prices; sized by business category (small 10-25, mid 25-100, large 100+ employees). Pricing page displays a SOC 2 badge; HIPAA and GDPR not stated. Re-verified 2026-09-03 against the live pricing page; published figures unchanged.",
       "plans": [
         {
-          "name": "Custom / Contact Sales",
+          "name": "Procurement",
           "monthlyUsd": null,
           "minutesIncluded": null,
           "callsIncluded": null,
@@ -842,12 +821,41 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "custom",
-          "notes": "Quote-only; sized by user count and business category (small 10-25, mid-size 25-100, large 100+); pricing depends on integrations, features, AP automation scope. No free trial mentioned.",
+          "notes": "Quote-only (\"Request pricing\"): priced by user count, functionality and ERP integration requirements. Purchase requisitions and approval workflows, real-time budget and policy controls, PO automation, vendor management and ratings, goods receiving, PunchOut and catalog purchasing, expense and travel management, native mobile app, AI spend analysis and reporting, ERP and accounting system integration.",
           "source": {
             "url": "https://www.fraxion.biz/procurement-software-pricing",
-            "accessedAt": "2026-09-03"
-          },
-          "setupFeeUsd": 0
+            "accessedAt": "2026-09-27"
+          }
+        },
+        {
+          "name": "AP Automation",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only (\"Request pricing\"): priced by user count, functionality and ERP integration requirements. Instant intake, AI-powered invoice data extraction and review, rules-based GL coding and cost center allocation, automated approval routing, exception management and audit trails, native mobile app for invoice approvals, AI spend analysis and reporting, ERP and accounting system integration.",
+          "source": {
+            "url": "https://www.fraxion.biz/procurement-software-pricing",
+            "accessedAt": "2026-09-27"
+          }
+        },
+        {
+          "name": "Procure-to-Pay",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Quote-only (\"Request pricing\"): priced by user count, functionality and ERP integration requirements. Everything in the Procurement and AP Automation plans, fully connected: a single approval engine across purchasing and payables, end-to-end budget and policy controls, two and three-way matching, real-time available, committed vs. actual spend visibility, full audit trail from requisition to payment.",
+          "source": {
+            "url": "https://www.fraxion.biz/procurement-software-pricing",
+            "accessedAt": "2026-09-27"
+          }
         }
       ],
       "enrichment": {

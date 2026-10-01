@@ -1,6 +1,6 @@
 {
   "vertical": "employee-scheduling",
-  "generatedAt": "2026-09-05",
+  "generatedAt": "2026-09-29",
   "methodologyNotes": "Pricing fetched directly from each vendor's official pricing page on 2026-06-14. 7shifts' official pricing page (7shifts.com/pricing) rendered JS-only with no extractable content; prices for 7shifts were taken from two independent aggregators: GetApp and SoftwareAdvice (both corroborating $39.99/$69.99/$149.99/mo flat and a free Comp tier). Homebase annual-discount rate: official site shows $30→$24 monthly (20% off), corroborated by GetApp stating '20% discount'. Sling annual-discount rate: official site states 15% savings. All monthlyUsd values reflect the lowest recurring per-billing-cycle amount (annualized monthly rate where annual billing is the basis). Per-seat products use billingModel=per_seat; per-location flat products use billingModel=flat; quote-only tiers use billingModel=custom with monthlyUsd=null. minutesIncluded, callsIncluded, overagePerMin, overagePerCall are null throughout (non-telephony vertical). hipaa/baa set to null unless explicitly stated on the vendor site. bilingual set to null throughout.",
   "vendors": [
     {
@@ -23,7 +23,7 @@
         "GoCo",
         "Clair"
       ],
-      "provenance": "Official pricing page: https://wheniwork.com/pricing fetched 2026-06-14. Three-tier structure (Essentials/Pro/Premium at $2.50/$5.00/$8.00 per user/month) confirmed. Aggregators (GetApp, SoftwareAdvice) show an older two-tier structure; official page is authoritative. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
+      "provenance": "Official pricing page: https://wheniwork.com/pricing fetched 2026-06-14. Three-tier structure at $2.50/$5.00/$8.00 per user/month confirmed at that fetch; on 2026-09-27 the page listed two plans, Single location or schedule at $2.50 and Multiple locations or schedules at $5 per user per month. Aggregators (GetApp, SoftwareAdvice) show an older two-tier structure; official page is authoritative. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
       "plans": [
         {
           "name": "Essentials",
@@ -45,7 +45,14 @@
           }
         },
         {
-          "name": "Pro",
+          "name": "Multiple locations or schedules",
+          "formerNames": [
+            {
+              "name": "Pro",
+              "lastSeen": "2026-09-02",
+              "absentOn": "2026-09-27"
+            }
+          ],
           "monthlyUsd": 5,
           "minutesIncluded": null,
           "callsIncluded": null,
@@ -56,26 +63,11 @@
           "notes": "Per user per month. Adds advanced scheduling rules, permissions, labor sharing, custom forecasting, callout reporting, custom reports, timezone toggling.",
           "source": {
             "url": "https://wheniwork.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://www.softwareadvice.com/scheduling/when-i-work-profile/",
             "accessedAt": "2026-06-14"
-          }
-        },
-        {
-          "name": "Premium",
-          "monthlyUsd": 8,
-          "minutesIncluded": null,
-          "callsIncluded": null,
-          "overagePerMin": null,
-          "overagePerCall": null,
-          "annualDiscountPct": null,
-          "billingModel": "per_seat",
-          "notes": "Per user per month. Adds API access, webhooks, SAML/SSO on top of Pro.",
-          "source": {
-            "url": "https://wheniwork.com/pricing",
-            "accessedAt": "2026-09-02"
           }
         }
       ],
@@ -105,9 +97,7 @@
           "Clair"
         ],
         "limits": [
-          "No free forever plan — 14-day trial only",
-          "API access and webhooks restricted to Premium tier ($8/user/mo)",
-          "SAML/SSO requires Premium tier"
+          "No free forever plan — 14-day trial only"
         ],
         "keyFeatures": [
           "Auto-scheduling with demand forecasting",
@@ -123,7 +113,7 @@
           "Shift-based businesses in food service, retail, healthcare, and hospitality",
           "Teams needing per-seat pricing that scales with headcount",
           "Businesses wanting integrated scheduling and messaging in one app",
-          "Multi-location operators on Pro or Premium tiers"
+          "Multi-location operators on the Multiple locations or schedules plan"
         ],
         "sources": [
           {
@@ -161,17 +151,17 @@
       "plans": [
         {
           "name": "Lite",
-          "monthlyUsd": 5,
+          "monthlyUsd": 5.5,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
-          "annualDiscountPct": null,
+          "annualDiscountPct": 9,
           "billingModel": "per_seat",
           "notes": "Per user per month, excl. taxes. Minimum spend $30 USD/month. Scheduling and time tracking basics.",
           "source": {
             "url": "https://www.deputy.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-28"
           },
           "corroboration": {
             "url": "https://www.getapp.com/operations-management-software/a/deputy/pricing/",
@@ -180,17 +170,17 @@
         },
         {
           "name": "Core",
-          "monthlyUsd": 6.5,
+          "monthlyUsd": 7.25,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
-          "annualDiscountPct": null,
+          "annualDiscountPct": 10,
           "billingModel": "per_seat",
           "notes": "Per user per month, excl. taxes. Most popular plan. Advanced operations and productivity tools.",
           "source": {
             "url": "https://www.deputy.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-28"
           },
           "corroboration": {
             "url": "https://www.getapp.com/operations-management-software/a/deputy/pricing/",
@@ -199,17 +189,17 @@
         },
         {
           "name": "Pro",
-          "monthlyUsd": 9,
+          "monthlyUsd": 10,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
-          "annualDiscountPct": null,
+          "annualDiscountPct": 10,
           "billingModel": "per_seat",
           "notes": "Per user per month, excl. taxes. Includes Analytics+ and Messaging+ add-ons, priority support, advanced automation and insights.",
           "source": {
             "url": "https://www.deputy.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-28"
           },
           "corroboration": {
             "url": "https://www.getapp.com/operations-management-software/a/deputy/pricing/",
@@ -328,7 +318,7 @@
           "notes": "Free forever. Limited to 1 location and up to 10 employees. Core scheduling and time tracking.",
           "source": {
             "url": "https://joinhomebase.com/pricing/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://www.getapp.com/human-resources-software/a/homebase/pricing/",
@@ -347,7 +337,7 @@
           "notes": "Per location per month when billed annually ($24/mo); $30/mo billed monthly. Unlimited employees. Scheduling, time tracking, team messaging.",
           "source": {
             "url": "https://joinhomebase.com/pricing/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://www.getapp.com/human-resources-software/a/homebase/pricing/",
@@ -366,7 +356,7 @@
           "notes": "Per location per month when billed annually ($56/mo); $70/mo billed monthly. Unlimited employees. Adds hiring, PTO policies, departments.",
           "source": {
             "url": "https://joinhomebase.com/pricing/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://www.getapp.com/human-resources-software/a/homebase/pricing/",
@@ -385,7 +375,7 @@
           "notes": "Per location per month when billed annually ($96/mo); $120/mo billed monthly. Unlimited employees. Full suite including onboarding, performance, and advanced reporting.",
           "source": {
             "url": "https://joinhomebase.com/pricing/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://www.getapp.com/human-resources-software/a/homebase/pricing/",
@@ -488,7 +478,7 @@
           "notes": "Free for up to 30 users. Core scheduling, shift organization, time-off requests, announcements, private messaging.",
           "source": {
             "url": "https://getsling.com/pricing/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-26"
           },
           "corroboration": {
             "url": "https://www.getapp.com/operations-management-software/a/sling/pricing/",
@@ -507,7 +497,7 @@
           "notes": "Per user per month billed annually ($1.70/user); $2.00/user/month billed monthly. Adds time tracking, labor cost management, overtime tracking.",
           "source": {
             "url": "https://getsling.com/pricing/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-26"
           },
           "corroboration": {
             "url": "https://www.getapp.com/operations-management-software/a/sling/pricing/",
@@ -526,7 +516,7 @@
           "notes": "Per user per month billed annually ($3.40/user); $4.00/user/month billed monthly. Adds kiosk time clock, payroll reports, no-shows and sick call-out tracking, PTO management.",
           "source": {
             "url": "https://getsling.com/pricing/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-26"
           },
           "corroboration": {
             "url": "https://www.getapp.com/operations-management-software/a/sling/pricing/",
@@ -624,7 +614,7 @@
           "notes": "Free for life for up to 10 employees. All hubs and features included.",
           "source": {
             "url": "https://connecteam.com/pricing/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://www.getapp.com/operations-management-software/a/connecteam/pricing/",
@@ -803,7 +793,7 @@
           "notes": "Free plan. Includes schedule templates, PTO/break/overtime tracking. Targeted at single-location restaurants.",
           "source": {
             "url": "https://www.7shifts.com/pricing",
-            "accessedAt": "2026-09-05"
+            "accessedAt": "2026-09-28"
           },
           "corroboration": {
             "url": "https://www.softwareadvice.com/scheduling/7shifts-profile/",
@@ -821,7 +811,7 @@
           "billingModel": "flat",
           "notes": "Flat per location per month. Unlimited scheduling, labor budgeting, sales forecasting, reporting. Official site JS-blocked; price from two aggregators.",
           "source": {
-            "url": "https://www.getapp.com/operations-management-software/a/7shifts/pricing/",
+            "url": "https://www.7shifts.com/pricing/",
             "accessedAt": "2026-09-02"
           },
           "corroboration": {
@@ -840,7 +830,7 @@
           "billingModel": "flat",
           "notes": "Flat per location per month. Advanced budgeting, labor alerts, manager logbook, payroll integration, compliance tools. Official site JS-blocked; price from two aggregators.",
           "source": {
-            "url": "https://www.getapp.com/operations-management-software/a/7shifts/pricing/",
+            "url": "https://www.7shifts.com/pricing/",
             "accessedAt": "2026-06-14"
           },
           "corroboration": {
@@ -960,7 +950,7 @@
           "notes": "Flat monthly rate for teams of up to 19 staff. All features included. No contracts, no setup fees.",
           "source": {
             "url": "https://schedulefly.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://www.softwareadvice.com/scheduling/schedulefly-profile/",
@@ -979,7 +969,7 @@
           "notes": "Flat monthly rate for teams of 20–39 staff. All features included.",
           "source": {
             "url": "https://schedulefly.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://www.softwareadvice.com/scheduling/schedulefly-profile/",
@@ -998,7 +988,7 @@
           "notes": "Flat monthly rate for teams of 40–59 staff. All features included.",
           "source": {
             "url": "https://schedulefly.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://www.softwareadvice.com/scheduling/schedulefly-profile/",
@@ -1017,7 +1007,7 @@
           "notes": "Flat monthly rate for teams of 60–79 staff. All features included.",
           "source": {
             "url": "https://schedulefly.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-09-27"
           },
           "corroboration": {
             "url": "https://www.softwareadvice.com/scheduling/schedulefly-profile/",
@@ -1089,7 +1079,7 @@
         "HRIS & AD sync (Premium)",
         "Enterprise SSO (Premium)"
       ],
-      "provenance": "Vendor (Pebb) wrote in on 2026-09-04 asking for a row; every figure below was then read directly on pebb.io/pricing on 2026-09-05, not taken from the email. The page shows 'Basic — Essential Operations & Communications — $2.5 User / Monthly' and 'Premium — Advanced Operations, Communications, Collaborations, Engagement — $4 User / Monthly'. No annual-billing rate is published. The 'Start free trial' / 'Start free' buttons are a trial with no credit card required, not a free plan; the trial length is not stated. Compliance attestations are not published on the pages checked — left null rather than assumed.",
+      "provenance": "Vendor (Pebb) wrote in on 2026-09-04 asking for a row; every figure below was then read directly on pebb.io/pricing on 2026-09-05, not taken from the email. The page shows 'Basic — Essential Operations & Communications — $2.5 User / Monthly' and 'Premium — Advanced Operations, Communications, Collaborations, Engagement — $4 User / Monthly'. No annual-billing rate is published. The 'Start free trial' / 'Start free' buttons are a trial with no credit card required, not a free plan; the trial length is not stated. Compliance attestations are not published on the pages checked — left blank rather than assumed.",
       "plans": [
         {
           "name": "Basic",
