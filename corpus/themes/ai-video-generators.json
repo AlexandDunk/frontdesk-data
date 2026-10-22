@@ -1,6 +1,6 @@
 {
   "vertical": "ai-video-generators",
-  "generatedAt": "2026-10-13",
+  "generatedAt": "2026-10-15",
   "methodologyNotes": "Published self-serve USD pricing for AI video-generation tools (Runway, Synthesia, HeyGen, Pika, Descript, Captions, Luma Dream Machine) was collected from each vendor's official pricing page on 2026-06-14. Runway, Pika, and Luma display prices with an annual-billing default toggle; monthlyUsd records the annual-equivalent monthly rate (the smallest published self-serve price), with the estimated month-to-month rate noted in the plan notes and annualDiscountPct set to the published discount. Synthesia and Descript clearly publish both monthly and annual rates; monthlyUsd is the month-to-month list price. HeyGen's pricing page geo-redirected to EUR; USD figures were taken from USD price references embedded in the site's German-language FAQ section (heygen.com/pricing) and cross-checked against an independent aggregator; Creator annual rate ($24/mo) confirmed by FAQ text. Captions publishes month-to-month USD prices only with no specific annual amounts shown; annualDiscountPct is null for all Captions plans. Enterprise / contact-sales tiers carry monthlyUsd null. These are not telephony products; minutesIncluded, callsIncluded, overagePerMin, and overagePerCall are null on every plan. hipaa, baa, and bilingual are null unless explicitly stated by the vendor.",
   "vendors": [
     {
@@ -11,7 +11,7 @@
       "baa": null,
       "bilingual": null,
       "integrations": [],
-      "provenance": "Prices read directly from runwayml.com/pricing on 2026-06-14. Page defaults to annual billing with '20% off' toggle. The $12/$28/$76 figures are the annual-equivalent monthly rates; estimated month-to-month rates ($15/$35/$95) are not published on the page — derived from the stated 20% discount. Enterprise requires scheduling a demo. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
+      "provenance": "Prices read directly from runwayml.com/pricing on 2026-06-14. Page defaults to annual billing with '20% off' toggle. The $12/$28/$76 figures are the annual-equivalent monthly rates; estimated month-to-month rates ($15/$35/$95) are not published on the page — derived from the stated 20% discount. Enterprise requires scheduling a demo.",
       "plans": [
         {
           "name": "Free",
@@ -164,7 +164,7 @@
         "Synthesia API",
         "SCORM Export"
       ],
-      "provenance": "Prices read directly from synthesia.io/pricing on 2026-06-14. Both monthly and annual rates are published on the page. Page explicitly states 'NEW LOWER PRICES' with Starter annual saving '38%'. Creator annual discount calculated from published figures ($89 monthly vs $64 annual = ~28%). Enterprise is custom quote only. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
+      "provenance": "Prices read directly from synthesia.io/pricing on 2026-06-14. Both monthly and annual rates are published on the page. Page explicitly states 'NEW LOWER PRICES' with Starter annual saving '38%'. Creator annual discount calculated from published figures ($89 monthly vs $64 annual = ~28%). Enterprise is custom quote only.",
       "plans": [
         {
           "name": "Free",
@@ -302,7 +302,7 @@
       "baa": null,
       "bilingual": null,
       "integrations": [],
-      "provenance": "HeyGen's pricing page (heygen.com/pricing) geo-redirected to EUR pricing in German. USD prices extracted from the FAQ section embedded in the same page, which explicitly states Creator at $29/mo ($24/mo billed annually), Pro at $49/mo, and Business at $149/mo plus $20/seat/mo. These USD figures were cross-checked against the SoftwareAdvice aggregator listing (which showed an older plan structure). The FAQ-sourced USD prices on the official page are treated as authoritative. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
+      "provenance": "HeyGen's pricing page (heygen.com/pricing) geo-redirected to EUR pricing in German. USD prices extracted from the FAQ section embedded in the same page, which explicitly states Creator at $29/mo ($24/mo billed annually), Pro at $49/mo, and Business at $149/mo plus $20/seat/mo. These USD figures were cross-checked against the SoftwareAdvice aggregator listing (which showed an older plan structure). The FAQ-sourced USD prices on the official page are treated as authoritative.",
       "plans": [
         {
           "name": "Free",
@@ -469,7 +469,7 @@
       "baa": null,
       "bilingual": null,
       "integrations": [],
-      "provenance": "Prices read directly from pika.art/pricing on 2026-06-14. Page defaults to annual billing with 'Yearly -20% off' toggle; month-to-month prices are not explicitly shown. The monthly price recorded here is the annual-equivalent monthly rate. Estimated month-to-month rates (20% higher) noted in plan notes. No enterprise or contact-sales tier was shown on the page. CORRECTION (verifier 2026-06-14): the three paid tiers were originally mislabeled Basic/Standard/Pro; Pika's actual paid tiers at these prices/credits are named Standard/Pro/Fancy (the real 'Basic' is the free 80-credit tier). Names corrected and cross-checked against magichour.ai/blog/pika-labs-pricing and the live pika.art/pricing extraction; prices ($8/$28/$76 annual) and credits (700/2,300/6,000) were already correct. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
+      "provenance": "Prices first read directly from pika.art/pricing on 2026-06-14, when the page defaulted to annual billing with a 'Yearly -20% off' toggle and did not show month-to-month prices; no enterprise or contact-sales tier was shown then. CORRECTION (verifier 2026-06-14): the three paid tiers were originally mislabeled Basic/Standard/Pro; at the time Pika named them Standard/Pro/Fancy (the real 'Basic' was the free 80-credit tier), cross-checked against magichour.ai/blog/pika-labs-pricing and the live pika.art/pricing extraction. Read again 2026-10-12: the page lists Free, Starter, Creator, Fancy and Enterprise, and Standard and Pro are now named Starter and Creator at the same prices. Billed monthly, Starter is $10, Creator $35 and Fancy from $95 a month; billed annually, they are $8, $28 and from $76 a month. The monthly prices recorded here are the month-to-month ones.",
       "plans": [
         {
           "name": "Free",
@@ -480,14 +480,21 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "flat",
-          "notes": "80 monthly video credits (labeled 'Basic' on the page). 480p resolution only. Access to Pika 2.5, Pikascenes, Pikadditions, Pikaswaps, Pikatwists, Pikaffects. Watermarked downloads.",
+          "notes": "No monthly credits; credits come from packs bought separately ('0 credits / month · packs only' on the page). 480p resolution only. Access to Pika 2.5, Pikascenes, Pikadditions, Pikaswaps, Pikatwists, Pikaffects. No watermark.",
           "source": {
             "url": "https://pika.art/pricing",
             "accessedAt": "2026-09-26"
           }
         },
         {
-          "name": "Standard",
+          "name": "Starter",
+          "formerNames": [
+            {
+              "name": "Standard",
+              "lastSeen": "2026-09-09",
+              "absentOn": "2026-10-12"
+            }
+          ],
           "monthlyUsd": 10,
           "minutesIncluded": null,
           "callsIncluded": null,
@@ -495,10 +502,10 @@
           "overagePerCall": null,
           "annualDiscountPct": 20,
           "billingModel": "flat",
-          "notes": "$8/mo billed annually; estimated ~$10/mo on monthly billing (20% premium, exact monthly rate not published on page). 700 credits/month. All resolutions. No watermark. Commercial use.",
+          "notes": "$10/mo billed monthly; $8/mo billed annually (save 20%). 900 credits/month. All resolutions. No watermark. No commercial license.",
           "source": {
             "url": "https://pika.art/pricing",
-            "accessedAt": "2026-09-09"
+            "accessedAt": "2026-10-12"
           },
           "corroboration": {
             "url": "https://magichour.ai/blog/pika-labs-pricing",
@@ -506,7 +513,14 @@
           }
         },
         {
-          "name": "Pro",
+          "name": "Creator",
+          "formerNames": [
+            {
+              "name": "Pro",
+              "lastSeen": "2026-09-09",
+              "absentOn": "2026-10-12"
+            }
+          ],
           "monthlyUsd": 35,
           "minutesIncluded": null,
           "callsIncluded": null,
@@ -514,10 +528,10 @@
           "overagePerCall": null,
           "annualDiscountPct": 20,
           "billingModel": "flat",
-          "notes": "$28/mo billed annually (labeled 'Best value'); estimated ~$35/mo on monthly billing (20% premium, exact monthly rate not published). 2,300 credits/month. Faster generation speeds. All resolutions. No watermark. Commercial use.",
+          "notes": "Labeled 'Best Value'. $35/mo billed monthly; $28/mo billed annually (save 20%). 3,150 credits/month. Faster generation speeds. All resolutions. No watermark. Commercial use.",
           "source": {
             "url": "https://pika.art/pricing",
-            "accessedAt": "2026-09-09"
+            "accessedAt": "2026-10-12"
           },
           "corroboration": {
             "url": "https://magichour.ai/blog/pika-labs-pricing",
@@ -533,7 +547,7 @@
           "overagePerCall": null,
           "annualDiscountPct": 20,
           "billingModel": "flat",
-          "notes": "$76/mo billed annually; estimated ~$95/mo on monthly billing (20% premium, exact monthly rate not published). 6,000 credits/month. Fastest generation speeds. All resolutions. No watermark. Commercial use. Includes Pikaframes.",
+          "notes": "From $95/mo billed monthly; from $76/mo billed annually (save 20%), for 8,550 credits/month. More credits cost more, up to $880/mo billed monthly ($704/mo billed annually). Fastest generation speeds. All resolutions. No watermark. Commercial use. Includes Pikaframes.",
           "source": {
             "url": "https://pika.art/pricing",
             "accessedAt": "2026-10-12"
@@ -570,13 +584,12 @@
         "freeTrialDays": null,
         "keyIntegrations": [],
         "limits": [
-          "Free: 80 credits/month (recurring), 480p resolution only, watermarked downloads",
+          "Free: no monthly credits (credit packs only), 480p resolution only",
           "Free: commercial use not permitted",
-          "Standard: 700 credits/month",
-          "Pro: 2,300 credits/month",
-          "Fancy: 6,000 credits/month",
-          "Video duration: 5–25 seconds per generation depending on feature",
-          "Pikaframes (frame extension) restricted to Standard plan and above"
+          "Starter: 900 credits/month",
+          "Creator: 3,150 credits/month",
+          "Fancy: from 8,550 credits/month",
+          "Video duration: 5–25 seconds per generation depending on feature"
         ],
         "keyFeatures": [
           "Pika 2.5 text-to-video and image-to-video generation",
@@ -626,7 +639,7 @@
         "Final Cut Pro",
         "DaVinci Resolve"
       ],
-      "provenance": "Prices read directly from descript.com/pricing on 2026-06-14. Both monthly and annual rates are explicitly published. Integrations list pulled from descript.com/integrations on same date. Enterprise requires contacting the sales team. Discount percentages vary per tier despite page advertising 'up to 35% savings'. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
+      "provenance": "Prices read directly from descript.com/pricing on 2026-06-14. Both monthly and annual rates are explicitly published. Integrations list pulled from descript.com/integrations on same date. Enterprise requires contacting the sales team. Discount percentages vary per tier despite page advertising 'up to 35% savings'.",
       "plans": [
         {
           "name": "Free",
@@ -813,7 +826,7 @@
       "baa": null,
       "bilingual": null,
       "integrations": [],
-      "provenance": "Prices read directly from captions.ai/pricing on 2026-06-14. Page notes 'Features and prices reflect iOS plans only' — web/Android pricing may differ. Annual billing is offered at a discount but specific annual rates were not published on the pricing page. The annual discount is not recorded for any plan. Re-verified 2026-09-02 against the live pricing page; published figures unchanged.",
+      "provenance": "Prices read directly from captions.ai/pricing on 2026-06-14. Page notes 'Features and prices reflect iOS plans only' — web/Android pricing may differ. Annual billing is offered at a discount but specific annual rates were not published on the pricing page. The annual discount is not recorded for any plan.",
       "plans": [
         {
           "name": "Free",
@@ -965,7 +978,7 @@
       "baa": null,
       "bilingual": null,
       "integrations": [],
-      "provenance": "Prices read directly from lumalabs.ai/dream-machine/pricing on 2026-06-14. Page displays monthly prices and notes 'Save up to 20% with yearly' but does not show the specific annual amounts — annual-equivalent rates of $25/$75/$250 are derived from the stated 20% discount and are estimates, not confirmed figures on the page. Team and Enterprise tiers show 'Contact us' with no published price. Re-verified 2026-09-02 against the live pricing page; published figures unchanged. The page this record cites as its source (https://lumalabs.ai/dream-machine/pricing) is gone: on 2026-09-11 it answered 200 and redirected to https://lumalabs.ai/app, both from a residential connection and from a datacenter on another continent — so the page is gone rather than withheld from one asker. Nothing else in this record can stand in for it, so re-sourcing needs a live page read; the figure stands as last read.",
+      "provenance": "Prices read directly from lumalabs.ai/dream-machine/pricing on 2026-06-14. Page displays monthly prices and notes 'Save up to 20% with yearly' but does not show the specific annual amounts — annual-equivalent rates of $25/$75/$250 are derived from the stated 20% discount and are estimates, not confirmed figures on the page. Team and Enterprise tiers show 'Contact us' with no published price. The page this record cites as its source (https://lumalabs.ai/dream-machine/pricing) is gone: on 2026-09-11 it answered 200 and redirected to https://lumalabs.ai/app, both from a residential connection and from a datacenter on another continent — so the page is gone rather than withheld from one asker. Nothing else in this record can stand in for it, so re-sourcing needs a live page read; the figure stands as last read.",
       "plans": [
         {
           "name": "Plus",
