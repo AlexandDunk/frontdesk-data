@@ -1,6 +1,6 @@
 {
   "vertical": "marketplace-management",
-  "generatedAt": "2026-06-18",
+  "generatedAt": "2026-11-05",
   "methodologyNotes": "Each vendor's official pricing page was re-verified on 2026-06-18: sellbrite.com/pricing-pro/ and sellbrite.com/pricing-power/, linnworks.com/pricing/, zentail.com/pricing, sellercloud.com/pricing/, and rithum.com (pricing page returns 404). Compliance pages were fetched directly: linnworks.com/security/, rithum.com/rithum-security/, rithum.com/gdpr-faq/. a web search was used to corroborate plan-level details. Corrections from the draft: (1) Sellbrite's pricing page has a monthly/annual billing toggle and the displayed prices ($29/$79/$179 etc.) are the standard MONTHLY rates, not annual-billing rates as the draft claimed; annual billing is CHEAPER (~17% off). monthlyUsd now records the published monthly rate. (2) The Sellbrite Shopify edition has lower platform-specific pricing (e.g. Pro 100 ~$19/mo) but is not a separate vendor; noted only. (3) Zentail 'pricing-zentail-launch' is not a real/separate plan page — removed; no 'Launch' tier exists. (4) Linnworks compliance source corrected to the live security page (linnworks.com/security/); the blog URL in the draft was not used. Zentail Base/Pro monthlyUsd are 'starting at' published floors on annual-contract-only billing (noted). Rithum and Linnworks lower tiers are quote-only so monthlyUsd is null. No vendors were fabricated; all five exist. accessedAt 2026-06-18.",
   "vendors": [
     {
@@ -30,7 +30,14 @@
       "provenance": "Plans and prices re-verified directly from sellbrite.com/pricing-pro/ and sellbrite.com/pricing-power/ on 2026-06-18. Correction versus an earlier version of this record: the pricing page has a 'Monthly Billing / Annual Billing' toggle and the displayed prices ($29/$79/$179/$399/$699/$999/$1,699) are the standard MONTHLY rates; annual billing is cheaper (~17% off). The monthly price recorded here reflects the published monthly rate. Forever Free plan (up to 30 orders/mo) confirmed as a real forever-free tier. 14-day full-access free trial, no credit card.",
       "plans": [
         {
-          "name": "Forever Free",
+          "name": "Free",
+          "formerNames": [
+            {
+              "name": "Forever Free",
+              "lastSeen": "2026-09-26",
+              "absentOn": "2026-11-01"
+            }
+          ],
           "monthlyUsd": 0,
           "minutesIncluded": null,
           "callsIncluded": null,
@@ -42,7 +49,7 @@
           "setupFeeUsd": 0,
           "source": {
             "url": "https://www.sellbrite.com/pricing-pro/",
-            "accessedAt": "2026-09-26"
+            "accessedAt": "2026-11-01"
           }
         },
         {
@@ -461,7 +468,14 @@
       "provenance": "Pricing re-fetched from sellercloud.com/pricing/ on 2026-06-18. Published starting price is $1,349/month on an annual subscription based on order volume, per-order fee model (no revenue share). Private Cloud and Enterprise Support are custom-quote. Per-order rate details corroborated by third-party reviews. No compliance certifications disclosed on the pricing page.",
       "plans": [
         {
-          "name": "Standard",
+          "name": "Essentials",
+          "formerNames": [
+            {
+              "name": "Standard",
+              "lastSeen": "2026-09-02",
+              "absentOn": "2026-11-01"
+            }
+          ],
           "monthlyUsd": 1349,
           "minutesIncluded": null,
           "callsIncluded": null,
@@ -473,7 +487,7 @@
           "setupFeeUsd": 0,
           "source": {
             "url": "https://sellercloud.com/pricing/",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-11-01"
           }
         },
         {
@@ -490,6 +504,21 @@
           "source": {
             "url": "https://sellercloud.com/pricing/",
             "accessedAt": "2026-09-27"
+          }
+        },
+        {
+          "name": "Growth",
+          "monthlyUsd": 1998,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "hybrid",
+          "notes": "Starting at $1,998 a month. Everything in Essentials, plus advanced warehouse management with the Skustack WMS module, mobile picking, packing, receiving and inventory workflows. The page says plans are typically offered through an annual subscription and the final price depends on order volume, fulfillment mix, selected capabilities and add-ons.",
+          "source": {
+            "url": "https://sellercloud.com/pricing/",
+            "accessedAt": "2026-11-01"
           }
         }
       ],

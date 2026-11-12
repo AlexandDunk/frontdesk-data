@@ -1,6 +1,6 @@
 {
   "vertical": "online-booking-scheduling",
-  "generatedAt": "2026-09-28",
+  "generatedAt": "2026-11-05",
   "methodologyNotes": "Online booking / appointment-scheduling software (Calendly / Acuity / Square Appointments / Setmore / Booksy class) for the local-service SMB front office. Published self-serve pricing was collected from each vendor's public pricing page on the accessedAt date recorded per source and normalized to USD per month; where a vendor publishes per-user pricing, the per-seat list price is recorded in monthlyUsd (billingModel per_seat), and flat-priced tools record the flat monthly fee (billingModel flat). Quote-only / enterprise / contact-sales tiers carry a null price rather than an estimate, and vendors whose live official page renders no confirmable USD figure (EUR-only or JavaScript-gated) are recorded with a null price and an explicit provenance note — never a guessed number. Booking tools are not telephony: there is no per-minute or per-call concept, so minutesIncluded, callsIncluded, overagePerMin and overagePerCall are null for every plan. annualDiscountPct reflects the published annual saving where the page states one. Every figure is sourced to the vendor pricing page on the accessed date, with a second corroborating source attached where one independently confirmed the figure. HIPAA/BAA and bilingual fields reflect what each vendor states publicly; null means not published, not absence.",
   "vendors": [
     {
@@ -502,7 +502,14 @@
           }
         },
         {
-          "name": "Custom / Enterprise",
+          "name": "Custom",
+          "formerNames": [
+            {
+              "name": "Custom / Enterprise",
+              "lastSeen": "2026-09-02",
+              "absentOn": "2026-11-01"
+            }
+          ],
           "monthlyUsd": null,
           "minutesIncluded": null,
           "callsIncluded": null,
@@ -514,7 +521,7 @@
           "notes": "Quote-only. Page states 'Need Larger Plans? Have more Enterprise Needs?' with Contact Us / Get a Demo. No public price, so no monthly price is recorded.",
           "source": {
             "url": "https://www.greminders.com/pricing/individual/us",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-11-01"
           }
         }
       ],

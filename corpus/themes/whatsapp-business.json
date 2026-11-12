@@ -1,6 +1,6 @@
 {
   "vertical": "whatsapp-business",
-  "generatedAt": "2026-09-29",
+  "generatedAt": "2026-11-05",
   "methodologyNotes": "Pricing re-verified by fetching each vendor's official pricing page (wati.io/pricing, respond.io/pricing + respond.io/security, trengo.com/pricing, aisensy.com/pricing/usd, gallabox.com/pricing, doubletick.io/pricing, zoko.io/pricing, 360dialog.com/pricing + docs.360dialog.com/docs/get-started/pricing, twilio.com/en-us/whatsapp/pricing). WATI's pricing page renders prices via dynamic JS not extractable; prices were corroborated across multiple independent analyses (costbench.com, flowcart.ai) plus WATI help-center references and corrected from the draft's outdated $29/$99/$249 to the current $59/$119/$279 (annual-billing headline). Interakt's USD page (interakt.shop/pricing-us) returns navigation-only content; entry plan ~$12/mo is corroborated, but the Growth-tier USD figure is reported inconsistently across third-party sources ($35, $41, and $55) and could not be confirmed on an official live page, so it is set to null per NULL-BEATS-A-GUESS rather than asserting an unverified number. Monthly prices reflect base platform fee only; Meta per-conversation/template charges are excluded from monthlyUsd and noted per plan. Trengo prices are EUR as published; no official USD price exists so monthlyUsd is null with EUR in notes. 360dialog USD prices taken from the official USD toggle in docs.360dialog.com. accessedAt 2026-06-18.",
   "vendors": [
     {
@@ -876,7 +876,7 @@
         "Facebook",
         "Instagram"
       ],
-      "provenance": "Pricing fetched from zoko.io/pricing on 2026-06-18; Starter $49.99, Plus $79.99, Elite $139.99, Max $499.99 all confirmed including conversation allowances and overage rates.",
+      "provenance": "Pricing fetched from zoko.io/pricing on 2026-06-18; Starter $49.99, Plus $79.99 and Elite $139.99 all confirmed including conversation allowances and overage rates. On 2026-11-01 the pricing page lists those three plans.",
       "plans": [
         {
           "name": "Starter",
@@ -925,22 +925,6 @@
             "url": "https://www.zoko.io/pricing",
             "accessedAt": "2026-11-01"
           }
-        },
-        {
-          "name": "Max",
-          "monthlyUsd": 499.99,
-          "minutesIncluded": null,
-          "callsIncluded": null,
-          "overagePerMin": null,
-          "overagePerCall": null,
-          "annualDiscountPct": null,
-          "billingModel": "flat",
-          "setupFeeUsd": 0,
-          "notes": "30 agents included; $9/agent additional; 5,000,000 conversations/month with no Zoko markup; $0.00049/conversation overage beyond 5M; 7-day free trial. Meta per-conversation charges apply separately.",
-          "source": {
-            "url": "https://www.zoko.io/pricing",
-            "accessedAt": "2026-09-27"
-          }
         }
       ],
       "enrichment": {
@@ -962,8 +946,7 @@
         "limits": [
           "Starter: $0.015/conversation markup on all; unlimited agents",
           "Plus: 5K free conversations; $0.00199 overage",
-          "Elite: 100K free conversations; $0.00099 overage",
-          "Max: 5M free conversations; $0.00049 overage"
+          "Elite: 100K free conversations; $0.00099 overage"
         ],
         "keyFeatures": [
           "Transparent conversation-based pricing with tiered markup model",
@@ -1036,7 +1019,14 @@
           }
         },
         {
-          "name": "High Throughput Channel",
+          "name": "Higher Throughput",
+          "formerNames": [
+            {
+              "name": "High Throughput Channel",
+              "lastSeen": "2026-09-03",
+              "absentOn": "2026-11-01"
+            }
+          ],
           "monthlyUsd": 299,
           "minutesIncluded": null,
           "callsIncluded": null,
@@ -1048,7 +1038,7 @@
           "notes": "$299/month (€249/month) per WhatsApp number; up to 1,000 messages/second throughput; for very high-volume senders. Meta per-message fees charged separately.",
           "source": {
             "url": "https://docs.360dialog.com/docs/get-started/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-11-01"
           }
         }
       ],

@@ -1,6 +1,6 @@
 {
   "vertical": "sales-engagement",
-  "generatedAt": "2026-06-14",
+  "generatedAt": "2026-11-05",
   "methodologyNotes": "Published self-serve USD pricing was collected directly from each vendor's official pricing page (or, where the vendor page returned 403/JS-only or redirected to a non-pricing landing, from a reputable 2026 comparison source) on 2026-06-14, then adversarially re-verified against current 2026 sources. Outreach (outreach.ai) and Salesloft both confirmed quote-only models with no public per-seat figures — all tiers carry null monthlyUsd. Apollo.io's pricing page renders JS-only; current 2026 rates (Free/$0, Basic/$49, Professional/$79, Organization/$119 per user/mo annual) verified via CloudTalk's 2026 Apollo guide and corroborated by Warmly 2026 — Organization is a published self-serve tier. (An earlier draft used a March-2024 bardeen.ai guide that listed a stale $39 Basic and treated Organization as custom; corrected.) Reply.io's pricing page returned HTTP 403; Email Volume/$49 and Multichannel/$89 per user/mo are ANNUAL rates (Multichannel ~$99 monthly), verified via Amplemarket's 2026 cost guide — an earlier draft mislabeled these as month-to-month rates and was corrected. Groove was acquired by Clari (groove.co redirects to clari.com) and Clari publishes no self-serve pricing; included with null plans. Klenty (Starter $50/Growth $70/Plus $99 per user/mo annual), lemlist, and Yesware pricing fetched from official pages and confirmed. Woodpecker uses usage-based pricing at $4.80 per 100 contacted prospects/month with a free base tier; the included plan reflects an estimated ~$29/mo for 500 prospects on monthly billing (annual saves 33%). All telephony fields (minutesIncluded, callsIncluded, overagePerMin, overagePerCall) are null — this is a non-telephony vertical. monthlyUsd reflects the per-seat or flat MONTH-TO-MONTH cost at the smallest billable unit; annual-billing rates are noted with the saving in annualDiscountPct. This field carried the annual-billing figure until 2026-09-09. Rows recorded on the annual basis were re-based to the month-to-month price on 2026-09-09, each against the pair of figures its own notes already named, and logged in data/corrections.jsonl.",
   "vendors": [
     {
@@ -995,25 +995,66 @@
         "Hunter",
         "Aircall"
       ],
-      "provenance": "Official pricing page at woodpecker.co/pricing fetched directly. Woodpecker uses a usage-based model priced per 100 contacted prospects (not per seat or flat). Annual billing saves 33% vs monthly. The interactive calculator is JS-rendered and did not return specific dollar totals; monthly-billing rate of $4.80 per 100 prospects (annual: ~$3.22 per 100 after 33% discount) confirmed from the page. Entry-level price of $29/month for 500 contacted prospects (monthly billing) sourced from Woodpecker's own blog post at woodpecker.co/blog/cold-email-tools. No HIPAA or BAA mentioned; ISO-certified, GDPR, CCPA, CASA tier 2. Re-verified 2026-09-03 against the live pricing page — Contacted Prospects (500/mo, monthly billing): $29 -> $35 (third-party figure).",
+      "provenance": "Official pricing page at woodpecker.co/pricing read 2026-11-01. It lists four plans: Email at $39 a month, Multichannel at $68 a month, LinkedIn at $29 a month (monthly billing) and Scale (custom, book a call). Annual billing saves 33% on Email and 19% on Multichannel. No HIPAA or BAA mentioned; ISO-certified, GDPR, CCPA, CASA tier 2.",
       "plans": [
         {
-          "name": "Contacted Prospects (500/mo, monthly billing)",
-          "monthlyUsd": 35,
+          "name": "Email",
+          "monthlyUsd": 39,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
-          "annualDiscountPct": 17,
+          "annualDiscountPct": 33,
           "billingModel": "flat",
-          "notes": "Usage-based pricing: $4.80 per 100 contacted prospects/month (monthly billing). At 500 prospects/month: ~$24-29/month. Annual billing saves 33%; estimated ~$24/mo for 500 prospects annually. Price scales linearly with contacted prospects volume. Includes unlimited email accounts, unlimited team members, free email verification, 4 free warm-ups, 100 Lead Finder credits, 16,000 emails/month, 4,000 stored prospects. Add-ons: LinkedIn Outreach +$29/connected account, Agency Panel +$27/active client.",
+          "notes": "Email outreach campaigns. Includes 5,000 emails sent, unlimited contacts storage, unlimited email verification, 3 warm-ups, 100 Lead Finder credits, and unlimited team members and email accounts. $26 a month when billed annually.",
           "source": {
             "url": "https://woodpecker.co/pricing/",
-            "accessedAt": "2026-09-27"
-          },
-          "corroboration": {
-            "url": "https://woodpecker.co/blog/cold-email-tools/",
-            "accessedAt": "2026-06-14"
+            "accessedAt": "2026-11-01"
+          }
+        },
+        {
+          "name": "Multichannel",
+          "monthlyUsd": 68,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 19,
+          "billingModel": "flat",
+          "notes": "Email and LinkedIn in one campaign. Includes 5,000 emails sent, 1 LinkedIn account, all LinkedIn actions, unlimited contacts storage, unlimited email verification, 3 warm-ups, 100 Lead Finder credits, and unlimited team members and email accounts. $55 a month when billed annually.",
+          "source": {
+            "url": "https://woodpecker.co/pricing/",
+            "accessedAt": "2026-11-01"
+          }
+        },
+        {
+          "name": "LinkedIn",
+          "monthlyUsd": 29,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "LinkedIn outreach and automation. Includes 1 LinkedIn account, unlimited contacts storage, up to 250 direct messages a day, up to 50 InMail messages a month, up to 30 connection requests a day, up to 500 profile visits a day, 100 Lead Finder credits and unlimited team members.",
+          "source": {
+            "url": "https://woodpecker.co/pricing/",
+            "accessedAt": "2026-11-01"
+          }
+        },
+        {
+          "name": "Scale",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "For teams with more to build. Custom pricing; the page offers a call for higher email or LinkedIn limits, a setup shaped around the team and add-ons chosen for its needs.",
+          "source": {
+            "url": "https://woodpecker.co/pricing/",
+            "accessedAt": "2026-11-01"
           }
         }
       ],
@@ -1041,21 +1082,21 @@
           "Dux-Soup"
         ],
         "limits": [
-          "No free forever tier; 14-day or 100 cold emails trial (whichever comes first)",
-          "Usage-based: $4.80 per 100 contacted prospects/month (monthly billing)",
-          "Annual billing saves 33%",
-          "Base allocation at ~500 prospects: 16,000 emails/month, 4,000 stored prospects, 100 Lead Finder credits, 4 free warm-ups",
-          "Unlimited email accounts and team members on all paid tiers"
+          "No free forever tier listed; free trial of 14 days or 500 cold emails, whichever limit is reached first",
+          "Fixed plans: Email $39, Multichannel $68 and LinkedIn $29 a month on monthly billing; Scale is custom",
+          "Annual billing saves 33% on Email and 19% on Multichannel",
+          "Email and Multichannel: 5,000 emails sent, unlimited contacts storage, 100 Lead Finder credits and 3 warm-ups",
+          "Unlimited team members on every plan; unlimited email accounts on Email and Multichannel"
         ],
         "keyFeatures": [
-          "Usage-based pricing scales linearly with contacted prospects (no per-seat cost)",
-          "Unlimited email accounts and team seats included",
+          "Fixed monthly plans for email, LinkedIn or both, with unlimited team members",
+          "Unlimited team members on every plan and unlimited email accounts on Email and Multichannel",
           "Inbox rotation and adaptive sending to protect deliverability",
           "Condition-based multi-step campaigns with up to 16 steps and A/B testing (up to 5 variants)",
           "MCP server and CLI for developer automation"
         ],
         "bestFor": [
-          "Small teams and agencies wanting unlimited seats with pay-per-prospect scaling",
+          "Small teams and agencies wanting unlimited seats on fixed monthly plans",
           "Cold email specialists prioritizing deliverability and inbox rotation",
           "Technical teams wanting API/webhook/MCP integration into their outreach stack"
         ],
@@ -1073,7 +1114,7 @@
             "accessedAt": "2026-06-15"
           }
         ],
-        "provenance": "GDPR and CCPA confirmed from woodpecker.co/security and legal page. SOC 2 not mentioned on any accessible page — set to null. HIPAA not mentioned — set to false (vendor states ISO-certified, GDPR, CCPA, CASA Tier 2 per existing provenance). 14-day / 100 email trial confirmed from pricing page; no free forever tier. Usage-based pricing and limits from pricing page."
+        "provenance": "GDPR and CCPA confirmed from woodpecker.co/security and the legal page. SOC 2 is not mentioned on any accessible page. HIPAA is not mentioned; the vendor states ISO-certified, GDPR, CCPA, CASA Tier 2. The pricing page offers a free trial of 14 days or 500 cold emails, and lists no free forever tier. Plans and limits from the pricing page, read 2026-11-01."
       }
     }
   ]

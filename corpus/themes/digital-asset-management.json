@@ -1,6 +1,6 @@
 {
   "vertical": "digital-asset-management",
-  "generatedAt": "2026-06-15",
+  "generatedAt": "2026-11-08",
   "methodologyNotes": "Pricing re-verified on each vendor's official pricing page (cloudinary.com/pricing, filecamp.com/pricing, dash.app/pricing, pics.io/pricing, help.air.inc pricing article, canto.com/pricing, mediavalet.com/pricing, bynder.com/en/pricing, brandfolder.com/pricing, acquia.com/products/acquia-dam/pricing-plans). Daminion was NOT in the draft vendor list (mentioned in methodology only) and is not present. Quote-only vendors (Canto, MediaValet, Bynder, Brandfolder, Acquia DAM) plus the Enterprise tiers of Cloudinary/Pics.io/Air carry monthlyUsd=null. Dash publishes natively in GBP (Start up £79 / Small team £179 / Growing brand £299 / Established brand £449) with an on-page currency selector; the entry-tier USD ($109) is corroborated by Dash's own blog ('from £79 or $109 a month'), and the three higher USD figures are approximations derived from the same rate and flagged in notes. Compliance set true only where the vendor explicitly claims it on a trust/security page: Cloudinary HIPAA DOWNGRADED to null (trust page references the 'HIPAA Security Rule' only inside SOC 2 scope, no standalone HIPAA claim); Filecamp GDPR DOWNGRADED to null (page attributes SOC/HIPAA/GDPR posture to Azure, no direct Filecamp claim). Dash 'ISO 27001:2013 certified' claim REMOVED (security overview attributes certifications to AWS, not Dash). accessedAt 2026-06-15.",
   "vendors": [
     {
@@ -1199,6 +1199,93 @@
           }
         ],
         "provenance": "Pricing from acquia.com/products/acquia-dam/pricing-plans (contact-only for all tiers). Acquia DAM docs confirm HIPAA-ready (2024) with BAA signing (baa=true), ISO 27001:2022, CSA STAR, and SOC 1 Type 2; GDPR/CCPA compliant. SOC type is SOC 1 Type 2 per docs (kept soc2=true as Acquia markets SOC compliance; flagged in issues)."
+      }
+    },
+    {
+      "slug": "jam-content",
+      "name": "Jam Content",
+      "domain": "jamcontent.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "plans": [
+        {
+          "name": "Standard",
+          "monthlyUsd": 99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "USD billed monthly. 500GB storage, 2 social accounts, 40 posts/month. 14-day full-platform trial, no card required. Annual billing advertises 10% savings.",
+          "source": {
+            "url": "https://jamcontent.com/pricing",
+            "accessedAt": "2026-11-08"
+          }
+        },
+        {
+          "name": "Growth",
+          "monthlyUsd": 299,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 10,
+          "billingModel": "flat",
+          "notes": "USD billed monthly. 2TB storage, 5 social accounts, unlimited posts and 3 workspaces. 14-day trial, no card required. Annual billing advertises 10% savings.",
+          "source": {
+            "url": "https://jamcontent.com/pricing",
+            "accessedAt": "2026-11-08"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "monthlyUsd": null,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "custom",
+          "notes": "Contact sales: custom storage, unlimited social accounts, custom workspaces and integrations; no public enterprise price.",
+          "source": {
+            "url": "https://jamcontent.com/pricing",
+            "accessedAt": "2026-11-08"
+          }
+        }
+      ],
+      "provenance": "Pricing and plan limits read with FrontDeskReviewBot on 2026-11-08, after a vendor request. The public changelog describes collections, media updates and integrations from April 2025 onward, supporting more than six months of product history. No account was created and the application was not tested; named customers and feature claims remain vendor claims, not independent recommendations.",
+      "enrichment": {
+        "freeTier": null,
+        "freeTrialDays": 14,
+        "keyFeatures": [
+          "Media library with collections and folders",
+          "AI tagging and search",
+          "Shareable collections",
+          "Social scheduling"
+        ],
+        "sources": [
+          {
+            "url": "https://jamcontent.com/pricing",
+            "accessedAt": "2026-11-08"
+          },
+          {
+            "url": "https://jamcontent.com/changelog",
+            "accessedAt": "2026-11-08"
+          }
+        ],
+        "provenance": "Pricing and product history from the vendor public pages; no hands-on test.",
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "keyIntegrations": [],
+        "limits": [],
+        "bestFor": []
       }
     }
   ]

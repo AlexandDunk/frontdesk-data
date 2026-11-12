@@ -1,6 +1,6 @@
 {
   "vertical": "inventory-management",
-  "generatedAt": "2026-06-15",
+  "generatedAt": "2026-11-08",
   "methodologyNotes": "Each vendor's official pricing page was re-fetched on 2026-06-15: zoho.com/us/inventory/pricing/, katanamrp.com/pricing/, inflowinventory.com/software-pricing, sortly.com/pricing/, cin7.com/pricing/, fishbowlinventory.com/pricing, ordoro.com/inventory-management-pricing, finaleinventory.com/pricing, extensiv.com/ecosystem/integrations/pricing, brightpearl.com/pricing. Where a page rendered EUR (Zoho /us/), USD figures were corroborated via Capterra/G2 and Zoho's own KB (per-organization flat pricing confirmed: $39/$99/$159/$299 monthly). Finale Inventory's named tiers ($99-$949) were found ONLY on third-party aggregators (Capterra/G2) and are contradicted by the official finaleinventory.com page, which is quote-only (~$499 starting, custom) since the Descartes acquisition — Finale collapsed to a single Custom plan with monthlyUsd=null. Quote-only tiers (Brightpearl all, Cin7 Omni, Fishbowl Advanced, inFlow Enterprise, Sortly Enterprise, Katana Advantage) carry monthlyUsd=null. Promotional prices noted in plan notes; regular monthly used as monthlyUsd. accessedAt 2026-06-15.",
   "vendors": [
     {
@@ -1184,6 +1184,78 @@
           }
         ],
         "provenance": "Live brightpearl.com/pricing confirms quote-only model with no published tiers since Sage acquisition. monthlyUsd null (no invented estimates)."
+      }
+    },
+    {
+      "slug": "ofisx",
+      "name": "Ofisx Inventory",
+      "domain": "ofisx.com",
+      "hipaa": null,
+      "baa": null,
+      "bilingual": null,
+      "integrations": [],
+      "plans": [
+        {
+          "name": "Monthly Subscription",
+          "monthlyUsd": 10.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "US App Store in-app subscription: $10.99/month; annual subscription $39.99/year. Store prices are for iOS in the United States, not a verified Android or web tariff. No permanent free tier is claimed; a free download or trial is not a free plan.",
+          "source": {
+            "url": "https://apps.apple.com/us/app/id6714467505",
+            "accessedAt": "2026-11-08"
+          }
+        },
+        {
+          "name": "Premium Monthly Subscription",
+          "monthlyUsd": 18.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "US App Store Premium subscription: $18.99/month; Premium annual subscription $59.99/year. Premium includes staff accounts according to the developer description; store-specific USD pricing, not a verified Android or web tariff.",
+          "source": {
+            "url": "https://apps.apple.com/us/app/id6714467505",
+            "accessedAt": "2026-11-08"
+          }
+        }
+      ],
+      "provenance": "Added from the US App Store listing read with FrontDeskReviewBot on 2026-11-08, after a vendor request. The current product has a public version history back to December 2024, including inventory and customer-account updates; Google Play lists 10K+ downloads as observed on 2026-11-08. These establish a maintained product, not independently tested reliability. The application was not installed or tested; no quality rating or endorsement is inferred. The separate offline application is not included.",
+      "enrichment": {
+        "freeTier": null,
+        "freeTrialDays": null,
+        "keyFeatures": [
+          "Inventory and barcode sales",
+          "Customer and supplier balances",
+          "Excel import and export",
+          "Premium staff accounts"
+        ],
+        "sources": [
+          {
+            "url": "https://apps.apple.com/us/app/id6714467505",
+            "accessedAt": "2026-11-08"
+          },
+          {
+            "url": "https://play.google.com/store/apps/details?id=com.ofisx.stok",
+            "accessedAt": "2026-11-08"
+          }
+        ],
+        "provenance": "Features are developer-stated in the official store descriptions. No hands-on test or independent performance claim.",
+        "compliance": {
+          "hipaa": null,
+          "soc2": null,
+          "gdpr": null,
+          "source": null
+        },
+        "keyIntegrations": [],
+        "limits": [],
+        "bestFor": []
       }
     }
   ]

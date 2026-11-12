@@ -1,7 +1,7 @@
 {
   "category": "external-hard-drives",
   "generatedAt": "2026-06-19",
-  "methodologyNotes": "Adversarially re-verified roster of 12 external HDD models (portable and desktop) across Seagate, WD, Toshiba, and LaCie. Re-checked against manufacturer pages (Seagate.com, WesternDigital.com, storage.toshiba.com), major retailers (Best Buy, Staples, Newegg, Walmart, B&H Photo, CDW, Dell), and WD's encryption compatibility matrix. Key correction theme: Seagate One Touch ships in two distinct lines — standard 'One Touch HDD' (STKC/STKB suffix, NO hardware encryption) and 'One Touch with Password' (STKZ/STKY suffix, AES-256). The draft conflated them; encryption is now false for the standard STKC/STKB models that are actually named. RPM is set null for portable One Touch and desktop Expansion/Elements/easystore enclosures because the manufacturer does not publicly disclose RPM for those retail enclosures (a null beats a 5400/7200 guess). capacity_tb and rpm are unitless numbers; dimensions_in is a string with units; boolean fields reflect confirmed yes/no as sourced. accessedAt 2026-06-19.",
+  "methodologyNotes": "External hard drives are compared by capacity in decimal TB, physical form factor, interface and connector arrangement, spindle speed, power, hardware encryption and dimensions in inches. A connector on the drive and the supplied computer-end connector are distinguished when the sources establish both. Software password protection is not automatically treated as hardware encryption. Model numbers and generations distinguish similarly named drives. priceUsd and priceNote identify the exact US capacity/model and the recorded price basis. Null means the cited pages did not establish a value. Source access dates and release evidence are recorded per product rather than asserted for the whole category.",
   "specKeys": [
     "capacity_tb",
     "form_factor",
@@ -494,6 +494,39 @@
         "accessedAt": "2026-10-15"
       },
       "provenance": "CDW advertised the SDPHG1H-026T-NBAAD at $1,439.99 (4-6+ weeks) on 2026-10-15, listing Thunderbolt 3 plus USB 3.2 Gen 2, 7200 rpm and an included AC adapter. Western Digital's own product page lists the same part at $2,114.99 with Notify Me (sold out), Thunderbolt 3 with USB 3.2 Gen 2, a 7200RPM Ultrastar drive, a 19VDC power adapter in the box and 8.27 x 5.24 x 2.01 in (L x W x H); the G-DRIVE PROJECT data sheet prints the height as 3.01 in but its own 51 mm and CDW's 2 in agree with 2.01. Its March 11, 2025 release added the 26TB capacity at a $999.99 US MSRP; no page read states hardware encryption, so it is left blank."
+    },
+    {
+      "slug": "seagate-expansion-desktop-8tb-stnp8000400-2026",
+      "name": "Seagate Expansion Desktop 8TB (STNP8000400, 2026)",
+      "brand": "Seagate",
+      "category": "external-hard-drives",
+      "releaseDate": "2026",
+      "priceUsd": 279.99,
+      "priceNote": "Seagate US store advertised $279.99 for the in-stock 8TB Expansion Desktop STNP8000400 with USB-C connectivity. This is the 2026 redesign, distinct from the older STKP8000400 and the 30TB configuration.",
+      "specs": {
+        "capacity_tb": 8,
+        "form_factor": "3.5-inch desktop",
+        "interface": "USB Micro-B on drive to USB-C on computer",
+        "rpm": null,
+        "power": null,
+        "hardware_encryption": null,
+        "dimensions_in": "7.48 x 1.69 x 5.24 in",
+        "release": "2026"
+      },
+      "source": {
+        "url": "https://www.seagate.com/products/personal-storage-devices/expansion-desktop-external-hard-drive/?sku=STNP8000400&store=1",
+        "accessedAt": "2026-11-08"
+      },
+      "corroboration": {
+        "url": "https://www.computerbase.de/news/storage/seagate-expansion-serie-erhaelt-usb-c-neues-design-und-bis-zu-30-tb.99757/",
+        "accessedAt": "2026-11-08"
+      },
+      "releaseSource": {
+        "url": "https://www.seagate.com/stories/articles/seagate-expands-lineup-as-personal-data-continues-to-grow/",
+        "accessedAt": "2026-11-08",
+        "quote": "September 30, 2026"
+      },
+      "provenance": "Seagate’s US product snapshot identifies STNP8000400 as an 8TB 3.5-inch desktop drive and shows an in-stock $279.99 USD offer. Seagate’s September 2026 announcement introduces the refreshed Expansion Desktop family. ComputerBase describes its 2026 redesign, lists an 8TB model, and distinguishes the USB-C computer connection from the Micro-B port on the drive. The existing roster model is STKP8000400, the preceding generation. ComputerBase lists 190 x 43 x 133 mm; dividing by 25.4 and rounding to two decimals yields 7.48 x 1.69 x 5.24 inches. RPM, power and hardware encryption remain null. The release is year precision, not an inferred first US delivery day."
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "vertical": "employee-recognition",
-  "generatedAt": "2026-06-15",
+  "generatedAt": "2026-11-05",
   "methodologyNotes": "Re-verified 2026-06-15 (adversarial pass) by a direct read of each official pricing page: bonusly.com/pricing, guusto.com/pricing, matterapp.com/pricing, joinassembly.com/pricing, awardco.com/pricing, nectarhr.com/pricing, plus kudos.com/pricing (HTTP 404 -> quote-only) and workhuman.com (quote-only). Published per-user prices confirmed for Bonusly ($5/user/mo monthly, $50/user/yr annual), Matter ($1/$3 per user/mo billed annually, save 25%), Assembly Empower ($3/user/mo billed yearly), and Guusto (Lite $150/mo flat; Essential $4.00 sender + $0.70 recipient annual / $6.72 both monthly; Premium $5.00 sender + $1.00 recipient annual). Quote-only vendors (Awardco, Nectar, Kudos, Workhuman) have monthlyUsd=null. Compliance set true only where explicitly stated on official security/trust pages: Bonusly SOC2; Awardco SOC2+HIPAA+GDPR; Matter SOC2+GDPR; Nectar SOC2(Nov 30 2024)+GDPR (HIPAA explicitly excluded); Kudos SOC2+ISO27001+CSA-STAR+GDPR. Workhuman's official security page returned no substantive cert text on fetch, so its compliance is set null (prior ISO/PCI/GDPR claims came only from unverified third-party search). accessedAt 2026-06-15.",
   "vendors": [
     {
@@ -37,26 +37,17 @@
         "ScreenCloud",
         "AXOMO"
       ],
-      "provenance": "Pricing fetched from bonusly.com/pricing on 2026-06-15 and re-verified (Free up to 8 users; Team + Bizy AI $5/user/mo or $50/user/yr; Organization custom). SOC 2 Type II confirmed via official Bonusly announcement post (live). HIPAA explicitly excluded per Bonusly ToS (no PHI).",
+      "provenance": "Pricing fetched from bonusly.com/pricing on 2026-06-15 and re-verified; the page read on 2026-11-01 lists Team + Bizy at $5/user/mo or $50/user/yr and Organization + Bizy with custom pricing. SOC 2 Type II confirmed via official Bonusly announcement post (live). HIPAA explicitly excluded per Bonusly ToS (no PHI).",
       "plans": [
         {
-          "name": "Free",
-          "monthlyUsd": 0,
-          "minutesIncluded": null,
-          "callsIncluded": null,
-          "overagePerMin": null,
-          "overagePerCall": null,
-          "annualDiscountPct": null,
-          "billingModel": "flat",
-          "notes": "Up to 8 users, peer recognition, Slack/Teams integrations, mobile apps. Forever free, no credit card required.",
-          "setupFeeUsd": 0,
-          "source": {
-            "url": "https://bonusly.com/pricing",
-            "accessedAt": "2026-10-12"
-          }
-        },
-        {
-          "name": "Team + Bizy AI",
+          "name": "Team + Bizy",
+          "formerNames": [
+            {
+              "name": "Team + Bizy AI",
+              "lastSeen": "2026-09-02",
+              "absentOn": "2026-11-01"
+            }
+          ],
           "monthlyUsd": 5,
           "minutesIncluded": null,
           "callsIncluded": null,
@@ -68,11 +59,18 @@
           "setupFeeUsd": 0,
           "source": {
             "url": "https://bonusly.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-11-01"
           }
         },
         {
-          "name": "Organization + Bizy AI",
+          "name": "Organization + Bizy",
+          "formerNames": [
+            {
+              "name": "Organization + Bizy AI",
+              "lastSeen": "2026-09-02",
+              "absentOn": "2026-11-01"
+            }
+          ],
           "monthlyUsd": null,
           "minutesIncluded": null,
           "callsIncluded": null,
@@ -84,7 +82,7 @@
           "setupFeeUsd": 0,
           "source": {
             "url": "https://bonusly.com/pricing",
-            "accessedAt": "2026-09-02"
+            "accessedAt": "2026-11-01"
           }
         }
       ],
@@ -98,7 +96,7 @@
             "accessedAt": "2026-06-15"
           }
         },
-        "freeTier": true,
+        "freeTier": null,
         "freeTrialDays": 30,
         "keyIntegrations": [
           "Slack",
@@ -111,7 +109,6 @@
           "Zapier"
         ],
         "limits": [
-          "Free plan capped at 8 users",
           "Rewards budget separate from subscription fee"
         ],
         "keyFeatures": [
@@ -122,8 +119,7 @@
         ],
         "bestFor": [
           "SMBs wanting instant peer recognition with real rewards",
-          "Teams already in Slack or Teams",
-          "Companies wanting a free tier to pilot before scaling"
+          "Teams already in Slack or Teams"
         ],
         "sources": [
           {

@@ -1,7 +1,7 @@
 {
   "category": "wireless-earbuds",
   "generatedAt": "2026-06-15",
-  "methodologyNotes": "Products were selected as 12 notable true-wireless earbuds a buyer compares in 2026, spanning flagship ANC, prosumer, and mid-tier segments. Seeds provided in the brief were verified and expanded. Apple AirPods Pro 3 confirmed released September 2025; AirPods 4 covers the ANC variant at $179. Sony WF-1000XM5 released June 2023. Bose QuietComfort Ultra Earbuds: the 2nd-generation model (July 2025) is the current in-market version and is included rather than the 2023 original. Samsung Galaxy Buds 3 Pro released July 2024. Google Pixel Buds Pro 2 released September 2024. Nothing Ear refers to the 2024 model (Nothing Ear (2024), released April 2024 at $149) — an earlier draft mislabeled it as a non-existent '2025' model at $109; corrected. Sennheiser Momentum True Wireless 4 released March 2024 (US MSRP $299.95; an earlier draft over-estimated $350 from the UK price; corrected). Additional products added for coverage: AirPods 4 (ANC model), Samsung Galaxy Buds 3, and Jabra Evolve2 Buds. Primary sources were manufacturer spec pages (apple.com/airpods-pro/specs/, samsung.com/us/mobile-audio/galaxy-buds3-pro/, us.nothing.tech/products/ear, bose.com). Corroboration via specialist review sites (9to5google.com, digitaltrends.com, headphonecheck.com, expertreviews.co.uk). Many large sites (sony.com electronics.sony.com, gsmarena.com, rtings.com, cnet.com, theverge.com, pcmag.com, best-buy.com, bhphotovideo.com) blocked automated access (429, 403, or site-level block). specKeys: anc (bool), driver_mm (numeric, driver diameter in mm; null if not publicly stated), battery_buds_hr (numeric, rated earbud-only playtime at ANC-on where available, else rated maximum; null if unconfirmed), battery_case_hr (numeric, total playback hours including case charges at ANC-on; null if unconfirmed), bluetooth (string, version), ip_rating (string, stated IP/IPX class; null if not rated), wireless_charging (bool, whether the case supports wireless charging), codecs (string, comma-separated supported BT audio codecs), weight_per_bud_g (numeric, single earbud mass in grams; null if not confirmed), release (YYYY-MM or YYYY). battery_buds_hr and battery_case_hr use ANC-on figures where available. priceUsd is the US launch MSRP in USD; null where no primary-source confirmation was achievable. accessedAt is 2026-06-15 on all entries. Adversarial note: Apple does not publish driver sizes or codec details beyond AAC+SBC for AirPods; those fields are null for Apple products. Samsung Galaxy Buds 3 Pro driver is a dual-driver (10.5mm dynamic + 6.1mm planar) per makeuseof.com review; listed as 10.5 (dominant woofer) with a note. Nothing Ear (2024) uses an 11mm dynamic driver with ceramic diaphragm (confirmed via SoundGuys/search). Verifier corrections (2026-06-15): Sony XM5 weight 5.9g added; Bose QC Ultra 2nd-Gen case battery 18→24h, weight 7.2→7.3g, release 2025-07→2025-06, source URL fixed to QCUE2; Samsung Buds3 Pro weight 5.4g added; Pixel Buds Pro 2 codecs LC3 removed (SBC+AAC only); Nothing Ear relabeled 2024 ($149, was bogus 2025/$109), driver 11mm, weight 4.6g, case 24h; Sennheiser MTW4 price $350→$300 ($299.95); Jabra Evolve2 Buds price $449→$349, battery 7/23→8/33h, release 2022-11.",
+  "methodologyNotes": "Prices describe the cited US color and configuration on the individual observation date; current offers and launch prices are distinguished in priceNote. Earbud playback uses the rated ANC-on figure where available, otherwise a clearly described rated maximum. Case playback is total playback including case charges with ANC on; unknown conditions remain unconfirmed. Driver diameter is mm and weight is per earbud in grams. Bluetooth versions, codecs, IP protection and wireless case charging require model-specific evidence. Unknown specifications remain null. Source dates are individual and do not imply category-wide re-verification.",
   "specKeys": [
     "anc",
     "driver_mm",
@@ -37,7 +37,7 @@
       },
       "source": {
         "url": "https://www.apple.com/shop/buy-airpods/airpods-pro-3",
-        "accessedAt": "2026-11-05"
+        "accessedAt": "2026-11-11"
       },
       "corroboration": {
         "url": "https://9to5mac.com/2025/09/15/airpods-pro-3-review/",
@@ -529,11 +529,11 @@
       },
       "source": {
         "url": "https://www.bowerswilkins.com/en-us/product/wireless-earbuds/pi8/300965.html",
-        "accessedAt": "2026-11-05"
+        "accessedAt": "2026-11-11"
       },
       "corroboration": {
         "url": "https://www.amazon.com/Bowers-Wilkins-Anthracite-Bluetooth-Cancelling/dp/B0DCPZC735",
-        "accessedAt": "2026-10-31",
+        "accessedAt": "2026-11-11",
         "via": "api-read"
       },
       "image": {
@@ -796,6 +796,76 @@
         "accessedAt": "2026-07-08"
       },
       "provenance": "The official Bose.com product page (ULT-HEADPHONEOPN) confirmed verbatim: price \"$299.00\", \"Up to 7 hours of play time\" (battery buds (hr)=7), \"IPX4 rating for water resistance\" (IP rating=IPX4), \"Open-ear design\", \"Noise Cancelling No\" (anc=false), \"up to an extra 19.5 hours of battery life in the charging case\" (battery case (hr)=19.5), and Bluetooth multipoint connectivity; it publishes no driver size (only \"Dynamic Driver\"), Bluetooth version, per-bud weight, or release date. The Amazon retailer listing (Bose Store, Model Number 881046-0010, Model Name \"Bose Ultra Open Earbuds, Black\") corroborates the exact model and its product-information table states verbatim \"Bluetooth Version 5.3\" (bluetooth=5.3), \"Noise Control None\" (anc=false), \"WATER RESISTANCE WITH IPX4\", and \"Carrying Case Battery Average Life 19.5 Hours\" (battery case (hr)=19.5). wireless charging=false because the included case is charged via the bundled \"USB-C (A to C) cable\" (\"USB-C cable included to charge the case\"), with wireless charging offered only as a separately sold Wireless Charging Case Cover accessory ($49.00). driver (mm), codecs, weight per bud (g), and release are left blank: no fetched page states them (Amazon's \"60 Grams\" is total item weight, not per-bud, and no launch date appears on either page). Note: Amazon's Bose-supplied specs list 7.5h buds / Product Description 7.5h, but the manufacturer product page states 7h, so battery buds (hr) uses the manufacturer page's 7."
+    },
+    {
+      "slug": "samsung-galaxy-buds4-pro",
+      "name": "Samsung Galaxy Buds4 Pro",
+      "brand": "Samsung",
+      "releaseDate": "2026",
+      "releaseSource": {
+        "url": "https://api.samsungmobilepress.com/press-releases/samsung-unveils-new-galaxy-buds4-series-ultimate-sound",
+        "accessedAt": "2026-11-08",
+        "quote": "February 26, 2026"
+      },
+      "priceUsd": 249.99,
+      "priceNote": "Samsung US advertised $249.99 for in-stock Galaxy Buds4 Pro in black, SKU SM-R640NZKAXAR.",
+      "source": {
+        "url": "https://www.samsung.com/us/audio-sound/galaxy-buds4-pro/buy/galaxy-buds4-pro-black-sku-sm-r640nzkaxar/",
+        "accessedAt": "2026-11-08"
+      },
+      "corroboration": {
+        "url": "https://www.soundguys.com/samsung-galaxy-buds-4-pro-review-153435/",
+        "accessedAt": "2026-11-08"
+      },
+      "provenance": "Samsung US selected black SKU and Samsung Mobile Press announcement, corroborated by a SoundGuys hands-on review. Battery figures are manufacturer-rated music playback with ANC on, including case for the 26-hour figure. Bluetooth, IP rating, per-earbud weight and wireless case charging are supported by the review. Samsung announcement publication is February 26, 2026; its body is datelined February 25 and states general availability begins March 11, so release precision is year only.",
+      "specs": {
+        "anc": true,
+        "driver_mm": null,
+        "battery_buds_hr": 6,
+        "battery_case_hr": 26,
+        "bluetooth": "6.1",
+        "ip_rating": "IP57",
+        "wireless_charging": true,
+        "codecs": null,
+        "weight_per_bud_g": 5.1,
+        "release": "2026"
+      },
+      "category": "wireless-earbuds"
+    },
+    {
+      "slug": "sennheiser-momentum-true-wireless-5",
+      "name": "Sennheiser MOMENTUM True Wireless 5",
+      "brand": "Sennheiser",
+      "releaseDate": "2026",
+      "releaseSource": {
+        "url": "https://newsroom.sennheiser.com/introducing-sennheiser-momentum-true-wireless-5-the-flagship-momentum-experience-in-your-pocket-3bq5c0",
+        "accessedAt": "2026-11-08",
+        "quote": "August 20, 2026"
+      },
+      "priceUsd": 299.95,
+      "priceNote": "Sennheiser US advertised $299.95 for in-stock MOMENTUM True Wireless 5 in copper, SKU 700352.",
+      "source": {
+        "url": "https://us.sennheiser-hearing.com/collections/in-ear-headphones/products/momentum-true-wireless-5?variant=63841210237299",
+        "accessedAt": "2026-11-11"
+      },
+      "corroboration": {
+        "url": "https://www.soundguys.com/sennheiser-momentum-true-wireless-5-review-161261/",
+        "accessedAt": "2026-11-08"
+      },
+      "provenance": "Sennheiser US selected copper variant, Sonova Sennheiser newsroom announcement and SoundGuys independent review. Twelve hours is the manufacturer’s stated maximum per charge; ANC-on conditions are not specified. The case total remains null because ANC-on total is not established. The review lists weight 7.2 g alongside a separate case weight but does not explicitly label that value per earbud, so per-earbud weight remains null.",
+      "specs": {
+        "anc": true,
+        "driver_mm": 7,
+        "battery_buds_hr": 12,
+        "battery_case_hr": null,
+        "bluetooth": "6.0",
+        "ip_rating": "IP54",
+        "wireless_charging": true,
+        "codecs": "SBC, AAC, aptX, aptX Adaptive, aptX Lossless",
+        "weight_per_bud_g": null,
+        "release": "2026"
+      },
+      "category": "wireless-earbuds"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "vertical": "ai-music-generators",
-  "generatedAt": "2026-06-14",
+  "generatedAt": "2026-11-05",
   "methodologyNotes": "Published self-serve pricing for leading AI music generators was collected from each vendor's official pricing page where accessible. Pages that rendered via JavaScript only (Mubert Render, Loudly, Soundraw, Udio) could not be fully parsed by automated fetch; for these, figures were taken from independent 2026 pricing-comparison sources (unite.ai, beebom.com, futurepedia.io, elegantthemes.com, slashdot.org) and cross-checked across at least two sources before inclusion. AIVA publishes prices exclusively in EUR; no USD self-serve price exists on their official page, so monthlyUsd is null for all AIVA plans with EUR figures recorded in notes. monthlyUsd records the month-to-month list price for flat tiers; where a vendor only publishes annual billing, monthlyUsd is the per-month equivalent at annual billing and the month-to-month rate (if known) is in notes. annualDiscountPct is set when both billing periods are publicly confirmed. These are non-telephony products: minutesIncluded, callsIncluded, overagePerMin, and overagePerCall are null on every plan. hipaa/baa/bilingual are null unless explicitly advertised. quote-only tiers carry monthlyUsd: null.",
   "vendors": [
     {
@@ -535,7 +535,7 @@
         "Instagram Reels",
         "Podcasts"
       ],
-      "provenance": "Official pricing page mubert.com/render/pricing is JavaScript-rendered; no pricing table was retrievable. Starting price of $11.69/mo for paid plans sourced from elegantthemes.com 2026 review. Ambassador (free) plan details from same source. Corroborated by toolpilot.ai which confirms '4 membership packages' starting at $11.69/mo. Full plan breakdown unavailable from verifiable sources; only the entry-level paid price is recorded.",
+      "provenance": "Pricing read from mubert.com/render/pricing on 2026-11-01 with the monthly and annual switch both used: Ambassador is free; Creator, Pro and Business are priced per month. Earlier entries came from an elegantthemes.com 2026 review and a toolpilot.ai listing, before the page could be read.",
       "plans": [
         {
           "name": "Ambassador",
@@ -557,22 +557,48 @@
           }
         },
         {
-          "name": "Paid (entry)",
-          "monthlyUsd": 11.69,
+          "name": "Creator",
+          "monthlyUsd": 14,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
-          "annualDiscountPct": null,
+          "annualDiscountPct": 17,
           "billingModel": "flat",
-          "notes": "Starting price for first paid tier per elegantthemes.com aggregator review. Official page is JS-only; individual plan names and full tier breakdown could not be retrieved. Mubert offers up to 25% savings on annual billing per their page header text. Higher tiers exist but prices unverified.",
+          "notes": "Non-commercial use. 500 tracks a month, up to 25 minutes per track, lossless download, unlimited downloads, stem and duration editing. $11.69 a month when billed annually.",
           "source": {
             "url": "https://mubert.com/render/pricing",
-            "accessedAt": "2026-09-05"
-          },
-          "corroboration": {
-            "url": "https://toolpilot.ai/products/mubert",
-            "accessedAt": "2026-06-14"
+            "accessedAt": "2026-11-01"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 39,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "Commercial usage included. 500 tracks a month, up to 25 minutes per track, lossless download, unlimited downloads, full track editor. $32.49 a month when billed annually.",
+          "source": {
+            "url": "https://mubert.com/render/pricing",
+            "accessedAt": "2026-11-01"
+          }
+        },
+        {
+          "name": "Business",
+          "monthlyUsd": 199,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 25,
+          "billingModel": "flat",
+          "notes": "For apps and agency work. 1,000 tracks a month, up to 25 minutes per track, lossless download, unlimited downloads, full track editor. $149.29 a month when billed annually.",
+          "source": {
+            "url": "https://mubert.com/render/pricing",
+            "accessedAt": "2026-11-01"
           }
         }
       ],
@@ -597,7 +623,7 @@
         "limits": [
           "Free (Ambassador): personal use only — public reproduction, recording, and distribution prohibited",
           "Free: limited generation features; track duration and download caps not publicly specified",
-          "Paid tracks: not licensed for Content ID, standalone streaming platform release, or stock music sites",
+          "Creator, Pro and Business tracks: not licensed for Content ID, standalone streaming platform release, or stock music sites",
           "API: priced separately (Trial $49, Startup $199, Startup+ $499, Enterprise custom)"
         ],
         "keyFeatures": [
@@ -607,7 +633,7 @@
           "Real-time streaming music via WebRTC with sub-second latency (API tier)",
           "12,000+ curated pre-generated track library",
           "Mubert Fuse tool for blending music segments",
-          "DMCA-free and cleared for social media monetization (paid plans)",
+          "DMCA-free and cleared for social media monetization (plans with commercial usage)",
           "Each download includes a license certificate"
         ],
         "bestFor": [

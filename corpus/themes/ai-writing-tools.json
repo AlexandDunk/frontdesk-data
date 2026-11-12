@@ -1,6 +1,6 @@
 {
   "vertical": "ai-writing-tools",
-  "generatedAt": "2026-06-13",
+  "generatedAt": "2026-11-05",
   "methodologyNotes": "Published self-serve pricing for AI writing-assistant tools (Jasper, Copy.ai, Writesonic, Grammarly, Notion, Rytr, Sudowrite, Anyword, HyperWrite) was collected directly from each vendor's public pricing page on the accessedAt date and normalized to USD. Where a vendor prices per seat/user, monthlyUsd records the per-seat MONTH-TO-MONTH list price (billingModel per_seat), with the annual-billing rate in the plan notes and the saving in annualDiscountPct; flat-priced tiers record the flat monthly fee (billingModel flat). This file recorded the annual-billing rate in that field until 2026-09-09, which made annualDiscountPct offer a discount off a price that already had it applied. Rows recorded on the annual basis were re-based to the month-to-month price on 2026-09-09, each against the pair of figures its own notes already named, and logged in data/corrections.jsonl. Quote-only / contact-sales / Enterprise tiers carry a null price rather than an estimate. These are not telephony products, so minutesIncluded, callsIncluded, overagePerMin and overagePerCall are null on every plan, and HIPAA/BAA/bilingual are null unless a vendor states otherwise. Every figure is sourced to the vendor pricing page on the accessed date; where the live page rendered a non-USD currency, the published USD figure is recorded with an independent corroborating source attached.",
   "vendors": [
     {
@@ -699,7 +699,14 @@
           }
         },
         {
-          "name": "Unlimited",
+          "name": "Lite",
+          "formerNames": [
+            {
+              "name": "Unlimited",
+              "lastSeen": "2026-09-27",
+              "absentOn": "2026-11-01"
+            }
+          ],
           "monthlyUsd": 9,
           "minutesIncluded": null,
           "callsIncluded": null,
@@ -710,22 +717,37 @@
           "notes": "$7.50/mo at annual-billing rate (page shows annual rate with 2 months free; month-to-month rate $9/m). Unlimited characters, 1 tone match, 50 plagiarism checks/month, 1 language, standard character input limit, Chrome extension, 20+ pre-programmed tones.",
           "source": {
             "url": "https://rytr.me/pricing",
-            "accessedAt": "2026-09-27"
+            "accessedAt": "2026-11-01"
           }
         },
         {
-          "name": "Premium",
-          "monthlyUsd": 29,
+          "name": "Personal",
+          "monthlyUsd": 19,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
-          "annualDiscountPct": 17,
+          "annualDiscountPct": 21,
           "billingModel": "flat",
-          "notes": "$24.16/mo at annual-billing rate (page shows annual rate with 2 months free; month-to-month rate $29/m). Unlimited characters, multiple tone matches, 100 plagiarism checks/month, 35+ languages, tripled character input limit, custom use cases, priority support, exclusive community access.",
+          "notes": "$19 a month billed monthly, or $15 a month billed yearly. Everything in Lite, plus 2 connected sources, 250 active relationships, 250 Engage actions a month and 10 person research runs a month.",
           "source": {
             "url": "https://rytr.me/pricing",
-            "accessedAt": "2026-09-27"
+            "accessedAt": "2026-11-01"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 49,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "$49 a month billed monthly, or $39 a month billed yearly. Everything in Personal, plus all connected sources, 1,000 active relationships, 2,000 Engage actions a month, 50 person research runs a month, morning and evening briefings and custom use cases.",
+          "source": {
+            "url": "https://rytr.me/pricing",
+            "accessedAt": "2026-11-01"
           }
         }
       ],
@@ -742,23 +764,22 @@
           "Chrome extension"
         ],
         "limits": [
-          "Free: 10K characters/month, 1 language, no plagiarism checks",
-          "Unlimited: unlimited characters, 1 tone match, 50 plagiarism checks/mo, 1 language",
-          "Premium: unlimited characters, 35+ languages, 100 plagiarism checks/mo, tripled input limit"
+          "Free: 10,000 characters a month",
+          "Lite: unlimited characters a month"
         ],
         "keyFeatures": [
-          "AI content generation in 35+ languages (Premium)",
+          "AI content generation in 30+ languages",
           "20+ pre-programmed writing tones",
           "Tone of Voice matching",
           "Plagiarism detection (50-100 checks/mo depending on plan)",
-          "Custom use-case creation (Premium)",
+          "Custom use cases (Pro)",
           "Chrome extension for in-browser writing",
           "Use-case templates for email, SEO titles, review responses, social captions"
         ],
         "bestFor": [
           "Budget-conscious freelancers and solo content creators",
           "Bloggers and small businesses needing short-form copy fast",
-          "Non-English content creators (35+ languages on Premium)",
+          "Non-English content creators (30+ languages)",
           "Users wanting a free forever tier with no credit card required"
         ],
         "sources": [

@@ -1,6 +1,6 @@
 {
   "vertical": "ai-voice-agents",
-  "generatedAt": "2026-09-29T00:00:00.000Z",
+  "generatedAt": "2026-11-08",
   "methodologyNotes": "Pricing figures were collected from each vendor's public pricing page on the accessedAt date recorded per source. Quote-only or demo-gated vendors carry null price fields with a stated reason; no figure is ever invented. Plans are normalized to the dataset shape regardless of the vendor's native billing model (flat, per-minute, per-call, or hybrid). For per-minute developer platforms, monthlyUsd is the recurring platform fee (0 when pure pay-as-you-go) and overagePerMin is the marginal per-minute rate; minutesIncluded/callsIncluded are null because nothing is bundled. For per-call plans, callsIncluded carries the included quota and overagePerCall the marginal per-call rate; minutesIncluded is null. The cost-at-200-calls normalizer converts every billing model to an effective monthly cost at a chosen call volume and average call length so flat, per-minute and per-call plans can be compared honestly. Annual discounts are recorded as a percentage off the monthly rate where the vendor publishes annual pricing. HIPAA/BAA and integration fields reflect what the vendor states publicly; 'null/unknown' means not published, not absence. AIRA and Upfirst publish byte-identical pricing tables and appear to share a pricing engine; both are recorded with their own sources and a provenance note. This dataset is a static snapshot intended to be refreshed from our scheduled public-page monitoring pipeline.",
   "vendors": [
     {
@@ -407,25 +407,6 @@
       "domain": "phonely.ai",
       "plans": [
         {
-          "name": "Free",
-          "monthlyUsd": 0,
-          "minutesIncluded": 100,
-          "callsIncluded": null,
-          "overagePerMin": null,
-          "overagePerCall": null,
-          "annualDiscountPct": null,
-          "billingModel": "flat",
-          "notes": "100 free minutes/mo, no card required.",
-          "source": {
-            "url": "https://www.phonely.ai/pricing",
-            "accessedAt": "2026-10-12"
-          },
-          "corroboration": {
-            "url": "https://softwarefinder.com/call-center/phonely",
-            "accessedAt": "2026-08-24"
-          }
-        },
-        {
           "name": "Starter",
           "monthlyUsd": 50,
           "minutesIncluded": 250,
@@ -464,7 +445,7 @@
       ],
       "bilingual": null,
       "demoPhone": null,
-      "provenance": "Free/Starter/Pro tiers with included minutes and per-minute overage from phonely.ai/pricing. HIPAA with BAA signature available on Enterprise. Spanish support not published. Enterprise ($0.05/min custom) omitted."
+      "provenance": "Starter/Pro tiers with included minutes and per-minute overage from phonely.ai/pricing. HIPAA with BAA signature available on Enterprise. Spanish support not published. Enterprise ($0.05/min custom) omitted."
     },
     {
       "slug": "thoughtly",
@@ -1792,10 +1773,10 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "flat",
-          "notes": "$199/mo billed monthly, no contract and no setup fee; AI receptionist answering 24/7 with 500 minutes a month, a business number, a website built for you, online booking, and customers, jobs, estimates and invoices in one system. The page publishes no rate past 500 minutes. 30-day free trial, card required.",
+          "notes": "$199/mo billed monthly, no contract and no setup fee; AI receptionist answering 24/7 with 500 minutes a month, a business number, a website built for you, online booking, and customers, jobs, estimates and invoices in one system. No overage bill: at 500 minutes the receptionist pauses until the next billing month and calls ring the backup number supplied by the owner; without one, callers may not get through. 30-day free trial, no card required.",
           "source": {
             "url": "https://fasite.org/pricing",
-            "accessedAt": "2026-11-01"
+            "accessedAt": "2026-11-08"
           }
         }
       ],

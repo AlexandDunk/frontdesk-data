@@ -1,6 +1,6 @@
 {
   "vertical": "headless-cms",
-  "generatedAt": "2026-09-28",
+  "generatedAt": "2026-11-05",
   "methodologyNotes": "Pricing fetched from official vendor pricing pages on 2026-06-14 and independently re-verified on 2026-06-14. Contentful prices are EUR on their pricing page (Lite €300/mo); GetApp lists the USD self-serve price as $300/month for Lite, which is the figure used. Sanity Free $0 / Growth $15-per-seat / Enterprise custom confirmed from sanity.io/pricing. Storyblok Growth $99/mo and Growth Plus $349/mo confirmed (annual $90.75 / $319.91 via the 'one month free' model, ~8.3% discount). Strapi Cloud: the official page is JS-rendered and returns no figures, but the current self-serve tiers (Free $0, Essential $18, Pro $90, Scale $450, 20% annual discount) are confirmed via Strapi's own blog and costbench.com — corrected from a prior version that listed an invented 'Team' plan with null prices. Hygraph Hobby $0 / Growth $199 / Enterprise custom confirmed. Prismic prices are per-repository, billed annually (Free $0, Starter $10, Small $25, Medium $150, Platinum $675), confirmed from prismic.io/pricing. Directus Core $0 / Team $499 annual ($599 monthly, ~17% discount) / Open Innovation Grant $99 / Enterprise custom confirmed from directus.com/pricing. Builder.io Free $0 confirmed; Pro and Team per-user prices are rendered as images on the official page and no single credible current self-serve figure could be confirmed, so they remain null with a provenance note. All telephony fields (minutesIncluded, callsIncluded, overagePerMin, overagePerCall) are null for all plans as this is a non-telephony vertical.",
   "vendors": [
     {
@@ -468,7 +468,14 @@
           }
         },
         {
-          "name": "Scale",
+          "name": "Business",
+          "formerNames": [
+            {
+              "name": "Scale",
+              "lastSeen": "2026-06-14",
+              "absentOn": "2026-11-01"
+            }
+          ],
           "monthlyUsd": 450,
           "minutesIncluded": null,
           "callsIncluded": null,
@@ -479,7 +486,7 @@
           "notes": "$450/month billed monthly; ~20% discount with yearly billing. ~10M API requests/month, 1,000 GB storage, unlimited database entries. Best for high-scale applications.",
           "source": {
             "url": "https://strapi.io/pricing-cloud",
-            "accessedAt": "2026-06-14"
+            "accessedAt": "2026-11-01"
           },
           "corroboration": {
             "url": "https://costbench.com/software/headless-cms/strapi/",
@@ -499,6 +506,21 @@
           "source": {
             "url": "https://strapi.io/pricing-cloud",
             "accessedAt": "2026-09-27"
+          }
+        },
+        {
+          "name": "Starter",
+          "monthlyUsd": 35,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "notes": "$35 per project per month billed monthly; $29 per month with yearly billing. 100,000 API requests a month, 50 GB asset storage, 50 GB asset bandwidth and unlimited database entries.",
+          "source": {
+            "url": "https://strapi.io/pricing-cloud",
+            "accessedAt": "2026-11-01"
           }
         }
       ],

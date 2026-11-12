@@ -1,6 +1,6 @@
 {
   "vertical": "video-api",
-  "generatedAt": "2026-06-15",
+  "generatedAt": "2026-11-05",
   "methodologyNotes": "Re-verified on each official pricing page (mux.com/pricing, agora.io/en/pricing, daily.co/pricing/video-sdk, 100ms.live/pricing, developers.cloudflare.com/stream/pricing, api.video/pricing, twilio.com/en-us/video/pricing, bitmovin.com/pricing) and compliance/security pages. Vonage direct pricing page returned HTTP 403; its numbers were corroborated via Vonage API Support articles and a web search. Twilio Programmable Video EOL (originally Dec 5 2024, then Dec 5 2026) was REVERSED on 2024-10-21 per twilio.com changelog — Video remains a standalone product accepting new customers, so it is retained. monthlyUsd is 0 only for a genuine forever-free/dev tier; null for usage-only or enterprise/quote tiers; published usage rates live in plan.notes. Compliance flags set true only where the vendor explicitly states the certification on an official page; otherwise null. accessedAt 2026-06-15. All vendors verified real; removedCount=0.",
   "vendors": [
     {
@@ -436,7 +436,14 @@
       "provenance": "Pricing verified at 100ms.live/pricing (free tier with 10K conferencing + 10K streaming + 1K encoding min/month; PAYG conferencing $0.004/min, streaming $0.0012/min/viewer, encoding $0.04/min, etc.; HIPAA $500/mo add-on on Developer; Premium $1,500, Enterprise $2,500 support; custom >$5K/mo; audio 75% off). Compliance from 100ms.live/security: SOC 2 Type II and HIPAA with BAA explicitly stated; GDPR NOT explicitly stated (not recorded).",
       "plans": [
         {
-          "name": "Free Tier",
+          "name": "Free",
+          "formerNames": [
+            {
+              "name": "Free Tier",
+              "lastSeen": "2026-09-03",
+              "absentOn": "2026-11-01"
+            }
+          ],
           "monthlyUsd": 0,
           "minutesIncluded": null,
           "callsIncluded": null,
@@ -448,7 +455,7 @@
           "notes": "10,000 conferencing minutes/month, 10,000 streaming minutes/month, 1,000 encoding minutes/month, 300 minutes each for transcription, recording, RTMP out, post-call transcription, AI summaries.",
           "source": {
             "url": "https://www.100ms.live/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-11-01"
           }
         },
         {

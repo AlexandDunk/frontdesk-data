@@ -1,6 +1,6 @@
 {
   "vertical": "reviews-management",
-  "generatedAt": "2026-06-14",
+  "generatedAt": "2026-11-05",
   "methodologyNotes": "Pricing fetched directly from each vendor's official pricing page. Where the official page returned no prices (JS-only render, configurator-gated, or quote-only), reputable third-party comparison sources (GetApp, SoftwareAdvice) were used and noted in provenance. accessedAt set to 2026-06-14 per dataset convention. monthlyUsd for annual-only plans is the annualized monthly rate; month-to-month rates noted where available. Birdeye and Podium publish no self-serve prices (configurator/quote-only); Yotpo's main pricing page is JS-only so SoftwareAdvice data used as primary with GetApp corroboration. BrightLocal's standard plans are quote-on-request as of June 2026 (price increase announced July 2026). Grade.us official page (grade.us/home/plans/) is authoritative over third-party per-user data.",
   "vendors": [
     {
@@ -301,10 +301,17 @@
       "baa": null,
       "bilingual": null,
       "integrations": [],
-      "provenance": "Official pricing page podium.com/pricing and podium.com/getpricing both show no self-serve prices. Custom quote only — call 1-801-438-4425 or request demo.",
+      "provenance": "Official pricing page podium.com/pricing read 2026-11-01. It lists Core at $399 per month and Pro at $599 per month, each with a Talk to Sales button, and Signature with custom pricing. Plans are designed to fit specific business needs; HVAC businesses should contact sales for applicable pricing.",
       "plans": [
         {
-          "name": "Custom",
+          "name": "Signature",
+          "formerNames": [
+            {
+              "name": "Custom",
+              "lastSeen": "2026-09-03",
+              "absentOn": "2026-11-01"
+            }
+          ],
           "monthlyUsd": null,
           "minutesIncluded": null,
           "callsIncluded": null,
@@ -312,14 +319,44 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "custom",
-          "notes": "No self-serve pricing published. Plans are designed per business needs; contact sales for a quote. Includes AI Employee add-on option.",
+          "notes": "Talk to sales for custom pricing. Everything in Pro, plus AI Scheduler, AI Salesperson and AI Marketer, advanced multi-location management, custom billing and custom processing rates. AI Employee can be added to any plan.",
           "source": {
             "url": "https://www.podium.com/pricing/",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-11-01"
           },
           "corroboration": {
             "url": "https://www.getapp.com/customer-management-software/a/podium/pricing/",
             "accessedAt": "2026-06-14"
+          }
+        },
+        {
+          "name": "Core",
+          "monthlyUsd": 399,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Essential AI features to respond to and convert more leads. Includes a consolidated lead conversion platform, review management with AI responses, basic automations and reporting, 200+ integrations, 250 bulk message credits a month and 5 phone numbers. The price is shown with a Talk to Sales button; HVAC businesses should contact sales for pricing.",
+          "source": {
+            "url": "https://www.podium.com/pricing/",
+            "accessedAt": "2026-11-01"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 599,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "Everything in Core, plus advanced AI and automations such as AI Concierge, AI Reputation Specialist, lead capture forms, surveys, text marketing and advanced customer segmentation. Includes 500 bulk message credits a month and 15 phone numbers. The price is shown with a Talk to Sales button; HVAC businesses should contact sales for pricing.",
+          "source": {
+            "url": "https://www.podium.com/pricing/",
+            "accessedAt": "2026-11-01"
           }
         }
       ],
@@ -346,7 +383,7 @@
           "Salesforce"
         ],
         "limits": [
-          "No free tier; all plans are custom quote-only",
+          "No free tier; Core and Pro list a monthly price with a Talk to Sales button, and Signature is custom-priced",
           "No trial period published; demo available on request",
           "Trusted by 60,000+ businesses"
         ],
@@ -666,7 +703,14 @@
       "provenance": "nicejob.com/pricing redirects to get.nicejob.co (which further redirects to get.nicejob.com — JS-only, no prices). Prices sourced from get.nicejob.com/pricing (confirmed $75 Reviews, $125 Pro) and corroborated by GetApp and SoftwareAdvice listing same amounts.",
       "plans": [
         {
-          "name": "Reviews",
+          "name": "Starter",
+          "formerNames": [
+            {
+              "name": "Reviews",
+              "lastSeen": "2026-09-03",
+              "absentOn": "2026-11-01"
+            }
+          ],
           "monthlyUsd": 75,
           "minutesIncluded": null,
           "callsIncluded": null,
@@ -677,7 +721,7 @@
           "notes": "Automates review invites, connects 10+ review channels, custom campaign templates, Facebook marketing, Google/Facebook reviews, SMS messages, premium integrations, review replies, smart review distribution. 14-day free trial, no credit card required. Annual pricing not published.",
           "source": {
             "url": "https://get.nicejob.com/pricing",
-            "accessedAt": "2026-09-03"
+            "accessedAt": "2026-11-01"
           },
           "corroboration": {
             "url": "https://www.getapp.com/customer-management-software/a/nicejob/pricing/",
@@ -693,7 +737,7 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "flat",
-          "notes": "All Reviews features plus automated booking reminders, automated gifting campaigns, AI review replies, customer referral campaigns, competitor insights, topics tracking. Annual pricing not published.",
+          "notes": "All Starter features plus automated booking reminders, automated gifting campaigns, AI review replies, customer referral campaigns, competitor insights, topics tracking. Annual pricing not published.",
           "source": {
             "url": "https://get.nicejob.com/pricing",
             "accessedAt": "2026-11-01"
@@ -761,7 +805,7 @@
         ],
         "limits": [
           "No forever-free $0 plan; 14-day free trial, no credit card required",
-          "Reviews plan: flat rate per business (not per seat or location count)",
+          "Starter plan: flat rate per business (not per seat or location count)",
           "Connects 10+ review channels",
           "Serves 50,000+ businesses; 1.7M+ reviews generated"
         ],

@@ -1,6 +1,6 @@
 {
   "vertical": "grammar-checkers",
-  "generatedAt": "2026-06-15",
+  "generatedAt": "2026-11-05",
   "methodologyNotes": "Self-serve USD pricing for 8 leading grammar-checker vendors was collected by fetching each vendor's official pricing page on 2026-06-15. Where the live page rendered a non-USD currency or failed (403/JS-only), the figure was sourced from a reputable 2025/2026 comparison page (fixthephoto.com/best-grammar-checker.html, slashdot.org software profiles, getapp.com, sourceforge.net) and flagged in provenance. monthlyUsd records the MONTH-TO-MONTH cost at the smallest self-serve unit; the annualised monthly equivalent (annual total ÷ 12) is recorded in notes and its saving in annualDiscountPct. Until 2026-09-09 this field held the annualised figure, so a row could read $12 beside a published 60% annual discount when $12 was itself the annual rate. Rows recorded on the annual basis were re-based to the month-to-month price on 2026-09-09, each against the pair of figures its own notes already named, and logged in data/corrections.jsonl. Quote-only / contact-sales tiers carry monthlyUsd=null. minutesIncluded, callsIncluded, overagePerMin, overagePerCall are null on every plan (non-telephony). hipaa/baa/bilingual are null unless the vendor explicitly states otherwise on their public site.",
   "vendors": [
     {
@@ -226,6 +226,21 @@
           "source": {
             "url": "https://prowritingaid.com/pricing",
             "accessedAt": "2026-09-05"
+          }
+        },
+        {
+          "name": "Premium Pro",
+          "monthlyUsd": 36,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": null,
+          "billingModel": "flat",
+          "notes": "$36 per month, billed monthly. Everything in Premium, plus 30 chapter critiques a day, 15 creative nudges a day, 50 Sparks a day, live workshops, a workshop library, cowriting sprints and group critique sessions.",
+          "source": {
+            "url": "https://prowritingaid.com/pricing",
+            "accessedAt": "2026-11-01"
           }
         }
       ],

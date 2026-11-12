@@ -1,7 +1,7 @@
 {
   "category": "treadmills",
   "generatedAt": "2026-06-15",
-  "methodologyNotes": "Ten models independently re-verified against official manufacturer pages (nordictrack.com, onepeloton.com, soletreadmills.com/solefitnessstore.com, horizonfitness.com, bowflex.com, echelonfit.com, proform.com), major retailers (wellbots.com, johnsonfitness.com, abt.com, rcwilley.com, lowes.com, academy.com), and independent reviews (barbend.com, treadmillreviewguru.com, treadmillreviews.net, garagegymreviews.com). priceUsd = US MSRP / published list price as of access date; observed sale prices noted in priceNote. Motor HP = manufacturer-published CHP where disclosed (Bowflex Treadmill 10 does not publish this, kept null). folding is boolean (true = SpaceSaver/Auto-Fold/equivalent). touchscreen_in is null for LCD/LED-readout consoles that are not touchscreens. Corrections this pass: ProForm Carbon Pro 9000 min_incline_pct -3→0 (the current Carbon Pro 9000 has NO decline; the -3% decline belonged to the prior 'Pro 9000' generation, per treadmillreviewguru and proform.com), and Carbon Pro 9000 priceUsd 1799→1999 (the official MSRP is $1,999; $1,799/$1,599 are common sale prices). All other draft values were corroborated. accessedAt 2026-06-15.",
+  "methodologyNotes": "Prices describe the cited US configuration and observation date; priceNote distinguishes current offers from published list prices and bundles. Motor horsepower is continuous horsepower only when explicitly disclosed; maximum or peak horsepower does not establish CHP. Deck dimensions are inches, speed mph, incline percent and user weight pounds. Unknown specifications remain null. Citation dates belong to individual records; adding a model does not re-verify earlier entries.",
   "specKeys": [
     "motor_hp",
     "max_speed_mph",
@@ -169,7 +169,7 @@
       },
       "source": {
         "url": "https://www.soletreadmills.com/products/sole-f80-treadmill",
-        "accessedAt": "2026-11-05"
+        "accessedAt": "2026-11-11"
       },
       "corroboration": {
         "url": "https://barbend.com/sole-f80-treadmill-review/",
@@ -237,7 +237,7 @@
       },
       "source": {
         "url": "https://www.horizonfitness.com/products/horizon-7-0-at-treadmill",
-        "accessedAt": "2026-11-05"
+        "accessedAt": "2026-11-11"
       },
       "corroboration": {
         "url": "https://barbend.com/horizon-7-at-treadmill-review/",
@@ -373,7 +373,7 @@
       },
       "source": {
         "url": "https://www.soletreadmills.com/products/sole-tt8",
-        "accessedAt": "2026-11-05"
+        "accessedAt": "2026-11-11"
       },
       "corroboration": {
         "url": "https://barbend.com/sole-tt8-treadmill-review/",
@@ -411,7 +411,7 @@
       },
       "corroboration": {
         "url": "https://treadmilloutlet.com/bowflex-t6-treadmill/",
-        "accessedAt": "2026-11-05"
+        "accessedAt": "2026-11-07"
       },
       "image": {
         "url": "https://img.frontdeskreview.com/products/bowflex-t6.jpg?v=01c3dbeffc",
@@ -441,7 +441,7 @@
       },
       "source": {
         "url": "https://www.horizonfitness.com/products/t101-treadmill",
-        "accessedAt": "2026-11-05"
+        "accessedAt": "2026-11-11"
       },
       "corroboration": {
         "url": "https://www.360fitnesssuperstore.com/products/t101",
@@ -475,7 +475,7 @@
       },
       "source": {
         "url": "https://www.horizonfitness.com/products/horizon-7-8-at-treadmill",
-        "accessedAt": "2026-11-05"
+        "accessedAt": "2026-11-11"
       },
       "corroboration": {
         "url": "https://www.360fitnesssuperstore.com/products/horizon-7-8-at-treadmill",
@@ -611,7 +611,7 @@
       },
       "source": {
         "url": "https://www.soletreadmills.com/products/sole-f85-treadmill",
-        "accessedAt": "2026-11-05"
+        "accessedAt": "2026-11-11"
       },
       "corroboration": {
         "url": "https://barbend.com/sole-f85-treadmill-review/",
@@ -683,7 +683,7 @@
       },
       "corroboration": {
         "url": "https://www.wellbots.com/products/proform-carbon-pro-2000-treadmill",
-        "accessedAt": "2026-11-05"
+        "accessedAt": "2026-11-11"
       },
       "image": {
         "url": "https://img.frontdeskreview.com/products/proform-carbon-pro-2000.png?v=b9469aa362",
@@ -726,6 +726,39 @@
         "accessedAt": "2026-07-10"
       },
       "provenance": "Re-fetched two onepeloton.com pages via fetch-clean.mjs and verified every value against the exact \"Cross Training Tread+\" (Powered by Peloton IQ) = Peloton's Tread+ model. Source (onepeloton.com/tread-plus) confirms verbatim: 23.8\" Full HD swivel screen, rubberized slat belt \"67\\\" of cushioned running space\", \"climb up to a 15% incline\", and price \"As low as $6,695\" / Affirm \"Based on a price of $6,695\". Corroboration compare table (onepeloton.com/treadmills), reading ONLY the Tread+ column: Motor \"2 HP AC\", Screen \"23.8\\\" diagonal\", Belt \"67\\\" L x 20\\\" W\" (→ running_deck_in \"20 x 67\", width×length per catalog convention matching sibling peloton-tread \"20 x 59\"), Speed \"1 to 12.5 mph\", Incline \"0 to 15% grade with 0.5% increments\" (→ min 0, max 15), Weight range \"105 - 300 lbs\" (→ max_user_weight_lb 300). Base-Tread-only figures (3 HP DC motor, 21.5\" screen, 0-12.5% incline) were correctly excluded, cleanly distinguishing Tread+ from Tread. folding left null: no fetched page states any folding mechanism. releaseDate null: no model year appears on any fetched page. Corroboration is Peloton's own detailed compare spec table (no third-party retailer fetchable for exact Tread+); motor rating and all other figures independently verifiable there. 7 of 8 specKeys carry verbatim-sourced values."
+    },
+    {
+      "slug": "urevo-cybermega-smart-treadmill",
+      "name": "UREVO CyberMega Smart Treadmill",
+      "brand": "UREVO",
+      "category": "treadmills",
+      "releaseDate": "2026",
+      "releaseSource": {
+        "url": "https://www.urevo.com/blogs/news/urevo-cybermega-smart-treadmill-marathon-training",
+        "accessedAt": "2026-11-08",
+        "quote": "Feb. 11, 2026 UREVO Official\nUREVO Unveils Cyber Mega: The First Smart Treadmill Engineered for Marathon Training at Home"
+      },
+      "priceUsd": 899.99,
+      "priceNote": "UREVO US offer recorded 2026-11-08: $899.99 for the black CyberMega treadmill, SKU SPFTMFD1USBK01. The recovery bundle is excluded.",
+      "source": {
+        "url": "https://www.urevo.com/products/urevo-cybermega-smart-treadmill?variant=53870255079708",
+        "accessedAt": "2026-11-11"
+      },
+      "corroboration": {
+        "url": "https://www.tomsguide.com/wellness/running/urevo-cybermega-smart-treadmill-review",
+        "accessedAt": "2026-11-08"
+      },
+      "provenance": "UREVO US product and dated 2026 manufacturer announcement snapshots, plus an independent hands-on review. The manufacturer lists maximum horsepower but does not specify continuous horsepower, so continuous horsepower is unconfirmed; touchscreen size is also unconfirmed.",
+      "specs": {
+        "motor_hp": null,
+        "max_speed_mph": 12.5,
+        "max_incline_pct": 12,
+        "min_incline_pct": 0,
+        "running_deck_in": "51.18 x 18.9",
+        "folding": true,
+        "max_user_weight_lb": 300,
+        "touchscreen_in": null
+      }
     }
   ]
 }

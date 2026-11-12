@@ -1,6 +1,6 @@
 {
   "vertical": "property-management",
-  "generatedAt": "2026-09-28",
+  "generatedAt": "2026-11-05",
   "methodologyNotes": "Pricing was re-verified by fetching each vendor's official pricing page (buildium.com/pricing, doorloop.com/pricing, rentredi.com/pricing, hemlane.com/pricing, rentecdirect.com/pricing, propertyware.com/pricing, yardibreeze.com/pricing, avail.com/pricing) on 2026-06-15. Corrections applied: Rentec Direct base prices were wrong in the draft and were fixed to the live page ($55 Pro, $65 PM). AppFolio publishes no per-unit prices and directs visitors to request a quote, so all AppFolio monthlyUsd values are null (a null beats a guess; third-party per-unit estimates are noted but not used as confirmed prices). TurboTenant's pricing page returns HTTP 403; the free-forever tier and the $149/yr ($12.42/mo) Premium entry price were corroborated via TurboTenant's official Premium page/announcement and support center, with the clarification that Premium now scales by unit count (Essentials $149–$349/yr, Pro $199–$999/yr) rather than being a single flat plan. Yardi Breeze and Propertyware use per-unit pricing with monthly minimums and no single flat monthly fee, so their monthlyUsd values are null with per-unit rates and minimums recorded in notes. All prices are USD, monthly basis; where only an annual total was published the monthly equivalent is shown. accessedAt 2026-06-15.",
   "vendors": [
     {
@@ -238,55 +238,52 @@
         "Stripe",
         "PayPal"
       ],
-      "provenance": "Prices fetched directly from doorloop.com/pricing on 2026-06-15. Plans show a $3/unit label with flat monthly minimums; Starter is capped at 10 units; portfolios over 300 units require a custom demo. A '30% off for 3 months' promo banner was active but the base list prices below are the standard rates. Aggregators show lower legacy monthly figures; deferred to live official page.",
+      "provenance": "Prices read from doorloop.com/pricing on 2026-11-01. The page lists three plans, DoorLoop One, DoorLoop Connect and DoorLoop Multiply, each priced per unit per month with a monthly minimum; the figures recorded are the month-to-month rates. Aggregators show older figures; deferred to the live official page.",
       "plans": [
         {
-          "name": "Starter",
-          "monthlyUsd": 99,
+          "name": "DoorLoop One",
+          "monthlyUsd": 3,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
-          "annualDiscountPct": 30,
-          "billingModel": "flat",
-          "notes": "$99/month billed monthly or $69/month billed annually (save ~30%). Capped at 10 units. Includes rent collection, tenant portal, maintenance, text communications, accounting, rental applications with screening, lease management, basic support. No phone/Zoom support.",
+          "annualDiscountPct": 17,
+          "billingModel": "per_seat",
+          "notes": "$3.00 per unit per month billed monthly ($2.50 per unit per month with yearly billing), $1.80 per unit above 100 units, with a minimum of $239 per month. The complete platform with the AI Assistant, unlimited users and storage, and full API access.",
           "source": {
             "url": "https://www.doorloop.com/pricing",
-            "accessedAt": "2026-09-03"
-          },
-          "setupFeeUsd": 0
+            "accessedAt": "2026-11-01"
+          }
         },
         {
-          "name": "Pro",
-          "monthlyUsd": 189,
+          "name": "DoorLoop Connect",
+          "monthlyUsd": 4.8,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
-          "annualDiscountPct": 21,
-          "billingModel": "flat",
-          "notes": "$189/month billed monthly or $149/month billed annually (~21% off). Unlimited units. Adds AI capabilities, QuickBooks integration, bank sync, workflow automations, vendor payments, budgeting, phone/Zoom support, property listings, user role controls.",
+          "annualDiscountPct": 17,
+          "billingModel": "per_seat",
+          "notes": "$4.80 per unit per month billed monthly ($4.00 per unit per month with yearly billing), with a minimum of $359 per month. Everything in DoorLoop One, plus the Receptionist Agent, free incoming ACH payments and VIP priority support.",
           "source": {
             "url": "https://www.doorloop.com/pricing",
-            "accessedAt": "2026-09-03"
-          },
-          "setupFeeUsd": 0
+            "accessedAt": "2026-11-01"
+          }
         },
         {
-          "name": "Premium",
-          "monthlyUsd": 239,
+          "name": "DoorLoop Multiply",
+          "monthlyUsd": 6,
           "minutesIncluded": null,
           "callsIncluded": null,
           "overagePerMin": null,
           "overagePerCall": null,
-          "annualDiscountPct": 13,
-          "billingModel": "flat",
-          "notes": "$239/month billed monthly or $209/month billed annually (~13% off). Unlimited units. Adds VIP priority support, free ACH payments, free property websites, Zapier integration, unlimited eSignatures, unlimited users, unlimited storage, affordable housing reporting.",
+          "annualDiscountPct": 17,
+          "billingModel": "per_seat",
+          "notes": "$6.00 per unit per month billed monthly ($5.00 per unit per month with yearly billing), with a minimum of $479 per month. Everything in DoorLoop Connect, plus the Maintenance Ops Agent and the Lease Renewal Agent; new agents are included as they launch.",
           "source": {
             "url": "https://www.doorloop.com/pricing",
-            "accessedAt": "2026-09-03"
-          },
-          "setupFeeUsd": 0
+            "accessedAt": "2026-11-01"
+          }
         }
       ],
       "enrichment": {
@@ -306,15 +303,13 @@
           "Stripe"
         ],
         "limits": [
-          "Starter limited to 10 units",
           "Portfolios over 300 units require custom demo quote",
           "Per-unit overage applies above included units"
         ],
         "keyFeatures": [
-          "AI-assisted property management on Pro+",
+          "AI Assistant included in every plan",
           "Full accounting with bank sync and QuickBooks",
-          "Affordable housing reporting on Premium",
-          "Free property websites on Premium"
+          "Company website, owner and tenant portals included in every plan"
         ],
         "bestFor": [
           "small-to-mid residential landlords",

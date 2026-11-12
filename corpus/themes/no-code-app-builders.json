@@ -1,6 +1,6 @@
 {
   "vertical": "no-code-app-builders",
-  "generatedAt": "2026-09-29",
+  "generatedAt": "2026-11-05",
   "methodologyNotes": "Published self-serve USD pricing collected from each vendor's official pricing page and, where the official page rendered JS-only/empty or returned 403/404 to automated fetch, from reputable aggregator sources (GetApp, Slashdot, AlternativeTo) cited in each vendor's provenance. accessedAt is 2026-06-14 on all sources. minutesIncluded, callsIncluded, overagePerMin, and overagePerCall are null on every plan because this is a non-telephony vertical. monthlyUsd reflects the effective per-unit (per seat or flat plan) monthly cost; for annual-billing-only prices the annualized monthly rate is recorded and annualDiscountPct is set where both billing cycles are published. Quote-only and enterprise tiers carry monthlyUsd: null. Vendors with no self-serve public price are still included with null plans and an explaining provenance.",
   "vendors": [
     {
@@ -334,7 +334,7 @@
         "Google Maps",
         "Airtable"
       ],
-      "provenance": "Adalo official pricing page (adalo.com/pricing) fetched successfully. Prices confirmed: monthly billing toggle shows $45/$65/$200 for Starter/Professional/Team; annual billing toggle shows $36/$52/$160 (saves 20%). Free plan confirmed at $0. HIPAA/BAA not mentioned.",
+      "provenance": "Adalo official pricing page (adalo.com/pricing) read on 2026-11-01: Free is $0, Builder is $65 a month and Business is $200 a month on monthly billing; annual billing shows $52 and $160 a month (saves 20%). HIPAA/BAA not mentioned.",
       "plans": [
         {
           "name": "Free",
@@ -356,26 +356,14 @@
           }
         },
         {
-          "name": "Starter",
-          "monthlyUsd": 45,
-          "minutesIncluded": null,
-          "callsIncluded": null,
-          "overagePerMin": null,
-          "overagePerCall": null,
-          "annualDiscountPct": 20,
-          "billingModel": "flat",
-          "notes": "$36/month billed annually; $45/month billed monthly (20% annual discount). 1 published app, custom domain, app store publishing.",
-          "source": {
-            "url": "https://www.adalo.com/pricing",
-            "accessedAt": "2026-10-12"
-          },
-          "corroboration": {
-            "url": "https://www.getapp.com/website-ecommerce-software/a/adalo/pricing/",
-            "accessedAt": "2026-06-14"
-          }
-        },
-        {
-          "name": "Professional",
+          "name": "Builder",
+          "formerNames": [
+            {
+              "name": "Professional",
+              "lastSeen": "2026-10-12",
+              "absentOn": "2026-11-01"
+            }
+          ],
           "monthlyUsd": 65,
           "minutesIncluded": null,
           "callsIncluded": null,
@@ -386,7 +374,7 @@
           "notes": "$52/month billed annually; $65/month billed monthly (20% annual discount). 2 published apps, 5 editors, custom integrations, push notifications, geolocation.",
           "source": {
             "url": "https://www.adalo.com/pricing",
-            "accessedAt": "2026-10-12"
+            "accessedAt": "2026-11-01"
           },
           "corroboration": {
             "url": "https://www.getapp.com/website-ecommerce-software/a/adalo/pricing/",
@@ -394,7 +382,14 @@
           }
         },
         {
-          "name": "Team",
+          "name": "Business",
+          "formerNames": [
+            {
+              "name": "Team",
+              "lastSeen": "2026-10-12",
+              "absentOn": "2026-11-01"
+            }
+          ],
           "monthlyUsd": 200,
           "minutesIncluded": null,
           "callsIncluded": null,
@@ -405,7 +400,7 @@
           "notes": "$160/month billed annually; $200/month billed monthly (20% annual discount). 5 published apps, 10 editors, priority support, API access, Xano integration.",
           "source": {
             "url": "https://www.adalo.com/pricing",
-            "accessedAt": "2026-10-12"
+            "accessedAt": "2026-11-01"
           },
           "corroboration": {
             "url": "https://www.getapp.com/website-ecommerce-software/a/adalo/pricing/",
@@ -435,18 +430,17 @@
         ],
         "limits": [
           "Free plan: 500 records per app, cannot publish to app stores or custom domain",
-          "Starter plan: 1 published app only",
-          "Professional plan: 2 published apps, 5 editors",
-          "Team plan: 5 published apps, 10 editors",
+          "Builder plan: 2 published apps, 5 editors",
+          "Business plan: 5 published apps, 10 editors",
           "No per-action or usage-based overage fees on any plan",
-          "Web apps only on Free; native iOS/Android publishing requires Starter and above"
+          "Web apps only on Free; native iOS/Android publishing requires Builder and above"
         ],
         "keyFeatures": [
           "Native iOS and Android app builder with drag-and-drop components",
           "Built-in relational database (hosted Postgres) — no external DB required",
           "Ada AI assistant included on all plans at no additional token cost",
           "50+ marketplace components extending core functionality",
-          "Push notifications and geolocation on Professional and above",
+          "Push notifications and geolocation on Builder and above",
           "Direct Google Sheets, Excel, and Airtable data-to-app conversion",
           "App Store and Google Play publishing via Adalo's automated pipeline"
         ],
@@ -858,7 +852,52 @@
           }
         },
         {
-          "name": "Paid plans",
+          "name": "Essential",
+          "monthlyUsd": 25,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 20,
+          "billingModel": "flat",
+          "notes": "For solo developers. $25 a month billed monthly, or $20 a month billed annually. 10M AI tokens a month, export code and self-host, sync with GitHub, daily editor auto-backups. WeWeb Cloud hosting is billed per app.",
+          "source": {
+            "url": "https://pricing.weweb.io/",
+            "accessedAt": "2026-11-01"
+          }
+        },
+        {
+          "name": "Pro",
+          "monthlyUsd": 60,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "per_seat",
+          "notes": "For teams, priced per developer: $60 a developer per month billed monthly, or $50 billed annually. 25M AI tokens a month, seats and collaboration, hourly editor auto-backups, unlimited manual backups, unlimited WeWeb MCP Server.",
+          "source": {
+            "url": "https://pricing.weweb.io/",
+            "accessedAt": "2026-11-01"
+          }
+        },
+        {
+          "name": "Partner",
+          "monthlyUsd": 95,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "per_seat",
+          "notes": "For agencies and freelancers, priced per developer from $95 a month billed monthly, or from $79 billed annually. Everything in Pro, plus staging on a WeWeb subdomain, free access to client workspaces, project transfers, a partner directory listing and a 20% referral commission.",
+          "source": {
+            "url": "https://pricing.weweb.io/",
+            "accessedAt": "2026-11-01"
+          }
+        },
+        {
+          "name": "Enterprise",
           "monthlyUsd": null,
           "minutesIncluded": null,
           "callsIncluded": null,
@@ -866,14 +905,10 @@
           "overagePerCall": null,
           "annualDiscountPct": null,
           "billingModel": "custom",
-          "notes": "Official pricing page is JS-only and did not render plan details. Aggregators report paid plans range approximately $12–$480/month; starting price ~$16/month. Individual plan names and exact tier prices could not be confirmed — visit pricing.weweb.io for current prices.",
+          "notes": "For large organizations. Custom pricing and invoicing; contact the vendor for a quote. Everything in Pro, plus custom limits, editor SSO, an SLA, payment by invoice, priority support and training, development requests and access to the WeWeb team.",
           "source": {
             "url": "https://pricing.weweb.io/",
-            "accessedAt": "2026-06-14"
-          },
-          "corroboration": {
-            "url": "https://alternativeto.net/software/weweb/about/",
-            "accessedAt": "2026-06-14"
+            "accessedAt": "2026-11-01"
           }
         }
       ],
