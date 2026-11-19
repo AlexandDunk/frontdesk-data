@@ -1,6 +1,6 @@
 {
   "vertical": "ai-voice-agents",
-  "generatedAt": "2026-11-08",
+  "generatedAt": "2026-11-08T00:00:00.000Z",
   "methodologyNotes": "Pricing figures were collected from each vendor's public pricing page on the accessedAt date recorded per source. Quote-only or demo-gated vendors carry null price fields with a stated reason; no figure is ever invented. Plans are normalized to the dataset shape regardless of the vendor's native billing model (flat, per-minute, per-call, or hybrid). For per-minute developer platforms, monthlyUsd is the recurring platform fee (0 when pure pay-as-you-go) and overagePerMin is the marginal per-minute rate; minutesIncluded/callsIncluded are null because nothing is bundled. For per-call plans, callsIncluded carries the included quota and overagePerCall the marginal per-call rate; minutesIncluded is null. The cost-at-200-calls normalizer converts every billing model to an effective monthly cost at a chosen call volume and average call length so flat, per-minute and per-call plans can be compared honestly. Annual discounts are recorded as a percentage off the monthly rate where the vendor publishes annual pricing. HIPAA/BAA and integration fields reflect what the vendor states publicly; 'null/unknown' means not published, not absence. AIRA and Upfirst publish byte-identical pricing tables and appear to share a pricing engine; both are recorded with their own sources and a provenance note. This dataset is a static snapshot intended to be refreshed from our scheduled public-page monitoring pipeline.",
   "vendors": [
     {
@@ -1785,6 +1785,68 @@
       "integrations": [],
       "bilingual": null,
       "provenance": "Added 2026-11-01 after the founder wrote to contact@frontdeskreview.com on 2026-10-29; every figure was read with our crawler from fasite.org/pricing on 2026-11-01, not taken from the mail. One all-in-one plan for service businesses, of which the AI receptionist is a part; the price cannot be split out."
+    },
+    {
+      "slug": "veradial",
+      "name": "VeraDial",
+      "domain": "veradial.com",
+      "plans": [
+        {
+          "name": "Vera Lite",
+          "monthlyUsd": 14.99,
+          "minutesIncluded": 100,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "US$14.99/mo: 1 line, 100 Vera-answering minutes (about 170 calls) and 150 calling minutes a month. No overage rate is published. Yearly billing saves 17%. 7-day free trial, card required; no seat fees, no contract. US and Canadian numbers only.",
+          "source": {
+            "url": "https://veradial.com/pricing",
+            "accessedAt": "2026-11-15"
+          }
+        },
+        {
+          "name": "Vera Plus",
+          "monthlyUsd": 29.99,
+          "minutesIncluded": 300,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "US$29.99/mo: 1 line (a second for US$9.99/mo), 300 Vera-answering and 300 calling minutes a month, Google Calendar booking, live call translation in 13 languages, 1 teammate. No overage rate is published. Yearly billing saves 17%. 7-day free trial, card required; no seat fees, no contract. US and Canadian numbers only.",
+          "source": {
+            "url": "https://veradial.com/pricing",
+            "accessedAt": "2026-11-15"
+          }
+        },
+        {
+          "name": "Vera Business",
+          "monthlyUsd": 59.99,
+          "minutesIncluded": null,
+          "callsIncluded": null,
+          "overagePerMin": null,
+          "overagePerCall": null,
+          "annualDiscountPct": 17,
+          "billingModel": "flat",
+          "setupFeeUsd": 0,
+          "notes": "US$59.99/mo: 3 lines (up to 2 more at US$9.99/mo each), unlimited AI answering under fair use, 900 calling minutes a month, up to 3 teammates. No overage rate is published. Yearly billing saves 17%. 7-day free trial, card required; no seat fees, no contract. US and Canadian numbers only.",
+          "source": {
+            "url": "https://veradial.com/pricing",
+            "accessedAt": "2026-11-15"
+          }
+        }
+      ],
+      "hipaa": null,
+      "baa": null,
+      "integrations": [
+        "Google Calendar"
+      ],
+      "bilingual": null,
+      "provenance": "Added 2026-11-15 after the founder wrote to contact@frontdeskreview.com on 2026-11-14; every figure was read with our crawler from veradial.com/pricing on 2026-11-15, not taken from the mail. An AI receptionist and business phone line in one, with a real US or Canadian number and mobile apps. Its domain was registered on 2026-03-13 and the site first archived on 2026-04-16, so it passed six months on 2026-10-16. The 13-language translation is for outbound calls, so no answering language other than English is recorded."
     }
   ]
 }
